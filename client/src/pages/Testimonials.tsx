@@ -1,0 +1,203 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { useI18n } from "@/lib/i18n";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Star, Quote, MapPin } from "lucide-react";
+import { Link } from "wouter";
+
+const TESTIMONIALS = [
+  {
+    name: "Carolina Mendez",
+    location: { es: "Bogota, Colombia", en: "Bogota, Colombia" },
+    trip: { es: "Luna de Miel en Italia", en: "Honeymoon in Italy" },
+    text: { 
+      es: "Nuestra luna de miel fue absolutamente perfecta. Desde el momento en que los contactamos, Maria y su equipo se encargaron de cada detalle. Los hoteles eran increibles, los tours privados nos permitieron evitar las multitudes, y las recomendaciones de restaurantes fueron exquisitas. Sin duda, superaron todas nuestras expectativas.",
+      en: "Our honeymoon was absolutely perfect. From the moment we contacted them, Maria and her team took care of every detail. The hotels were incredible, the private tours allowed us to avoid crowds, and the restaurant recommendations were exquisite. They definitely exceeded all our expectations."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=70&w=200&auto=format&fit=crop",
+    date: "Noviembre 2024"
+  },
+  {
+    name: "Roberto Gonzalez",
+    location: { es: "Medellin, Colombia", en: "Medellin, Colombia" },
+    trip: { es: "Tour por 5 paises", en: "5 Country Tour" },
+    text: { 
+      es: "Viaje con mi familia (4 personas) por Francia, Suiza, Italia, Austria y Alemania. La logistica fue impecable, todos los traslados puntuales, hoteles centricos y de excelente calidad. Lo mejor fue el soporte 24/7, siempre estuvieron disponibles cuando los necesitamos.",
+      en: "I traveled with my family (4 people) through France, Switzerland, Italy, Austria and Germany. The logistics were impeccable, all transfers on time, hotels centrally located and of excellent quality. The best part was the 24/7 support, they were always available when we needed them."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=70&w=200&auto=format&fit=crop",
+    date: "Octubre 2024"
+  },
+  {
+    name: "Ana Maria Torres",
+    location: { es: "Cali, Colombia", en: "Cali, Colombia" },
+    trip: { es: "Escapada a Paris", en: "Paris Getaway" },
+    text: { 
+      es: "Siempre sone con conocer Paris y Trips Europa hizo ese sueno realidad. Me ayudaron con todo el proceso de visa (que parecia complicado) y planificaron un itinerario perfecto de 7 dias. Cada experiencia fue magica, desde subir a la Torre Eiffel hasta los paseos por Montmartre.",
+      en: "I always dreamed of visiting Paris and Trips Europa made that dream come true. They helped me with the entire visa process (which seemed complicated) and planned a perfect 7-day itinerary. Every experience was magical, from climbing the Eiffel Tower to walks through Montmartre."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=70&w=200&auto=format&fit=crop",
+    date: "Septiembre 2024"
+  },
+  {
+    name: "Miguel Hernandez",
+    location: { es: "Barranquilla, Colombia", en: "Barranquilla, Colombia" },
+    trip: { es: "Crucero Mediterraneo", en: "Mediterranean Cruise" },
+    text: { 
+      es: "El crucero por el Mediterraneo fue espectacular. La asesoria para elegir el mejor camarote, los excursiones en cada puerto, todo fue primera clase. Trips Europa negocio un upgrade que no esperabamos. Totalmente recomendados para viajes de lujo.",
+      en: "The Mediterranean cruise was spectacular. The advice for choosing the best cabin, the excursions at each port, everything was first class. Trips Europa negotiated an upgrade we didn't expect. Totally recommended for luxury travel."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=70&w=200&auto=format&fit=crop",
+    date: "Agosto 2024"
+  },
+  {
+    name: "Laura Sanchez",
+    location: { es: "Caracas, Venezuela", en: "Caracas, Venezuela" },
+    trip: { es: "Tour de Castillos en Alemania", en: "Castle Tour in Germany" },
+    text: { 
+      es: "Como venezolana, tenia muchas dudas sobre el proceso de visa y viaje. El equipo de Trips Europa me guio paso a paso, resolviendo todas mis preguntas con paciencia. El tour por los castillos de Baviera fue un cuento de hadas hecho realidad.",
+      en: "As a Venezuelan, I had many doubts about the visa and travel process. The Trips Europa team guided me step by step, answering all my questions with patience. The tour of Bavarian castles was a fairy tale come true."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=70&w=200&auto=format&fit=crop",
+    date: "Julio 2024"
+  },
+  {
+    name: "Pedro Ramirez",
+    location: { es: "Bucaramanga, Colombia", en: "Bucaramanga, Colombia" },
+    trip: { es: "Viaje de negocios + turismo", en: "Business + tourism trip" },
+    text: { 
+      es: "Necesitaba combinar una conferencia en Londres con vacaciones familiares. Trips Europa organizo todo perfectamente: vuelos, hoteles ejecutivos para mis dias de trabajo y luego un hotel familiar para las vacaciones. Increible atencion al detalle.",
+      en: "I needed to combine a conference in London with family vacation. Trips Europa organized everything perfectly: flights, executive hotels for my work days and then a family hotel for the vacation. Incredible attention to detail."
+    },
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=70&w=200&auto=format&fit=crop",
+    date: "Junio 2024"
+  }
+];
+
+export default function Testimonials() {
+  const { language } = useI18n();
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Header />
+      
+      <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-testimonials-hero">
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1200&auto=format&fit=crop" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-testimonials">
+            {language === "es" ? "Testimonios" : "Testimonials"}
+          </Badge>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-testimonials-title">
+            {language === "es" ? "Lo Que Dicen Nuestros Viajeros" : "What Our Travelers Say"}
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-testimonials-subtitle">
+            {language === "es" 
+              ? "Mas de 5,000 viajeros felices nos respaldan. Lee sus experiencias" 
+              : "More than 5,000 happy travelers support us. Read their experiences"}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20" data-testid="section-testimonials-grid">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {TESTIMONIALS.map((testimonial, index) => (
+              <Card key={index} className="relative" data-testid={`card-testimonial-${index}`}>
+                <CardContent className="p-6">
+                  <Quote className="w-10 h-10 text-accent/20 absolute top-4 right-4" />
+                  
+                  <div className="flex items-center gap-4 mb-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name} 
+                      className="w-14 h-14 rounded-full object-cover"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3 className="font-bold">{testimonial.name}</h3>
+                      <div className="flex items-center gap-1 text-muted-foreground text-sm">
+                        <MapPin className="w-3 h-3" />
+                        {testimonial.location[language]}
+                      </div>
+                    </div>
+                  </div>
+
+                  <Badge variant="secondary" className="mb-3">{testimonial.trip[language]}</Badge>
+                  
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-accent fill-accent" />
+                    ))}
+                  </div>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    "{testimonial.text[language]}"
+                  </p>
+
+                  <p className="text-xs text-muted-foreground">{testimonial.date}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-accent/10" data-testid="section-testimonials-stats">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-4xl font-display font-bold text-primary mb-2">5,000+</p>
+              <p className="text-muted-foreground">{language === "es" ? "Viajeros felices" : "Happy travelers"}</p>
+            </div>
+            <div>
+              <p className="text-4xl font-display font-bold text-primary mb-2">4.9</p>
+              <p className="text-muted-foreground">{language === "es" ? "Calificacion promedio" : "Average rating"}</p>
+            </div>
+            <div>
+              <p className="text-4xl font-display font-bold text-primary mb-2">98%</p>
+              <p className="text-muted-foreground">{language === "es" ? "Nos recomiendan" : "Recommend us"}</p>
+            </div>
+            <div>
+              <p className="text-4xl font-display font-bold text-primary mb-2">85%</p>
+              <p className="text-muted-foreground">{language === "es" ? "Clientes recurrentes" : "Returning customers"}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-primary" data-testid="section-testimonials-cta">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+            {language === "es" ? "Se Parte de Nuestra Historia" : "Be Part of Our Story"}
+          </h2>
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
+            {language === "es" 
+              ? "Unete a miles de viajeros satisfechos y vive tu propia experiencia europea" 
+              : "Join thousands of satisfied travelers and live your own European experience"}
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-testimonials-contact">
+              {language === "es" ? "Planificar mi viaje" : "Plan my trip"}
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

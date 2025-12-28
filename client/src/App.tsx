@@ -12,6 +12,13 @@ import Login from "@/pages/Login";
 import Dashboard from "@/pages/Dashboard";
 import Tools from "@/pages/Tools";
 import Policies from "@/pages/Policies";
+import Destinations from "@/pages/Destinations";
+import Packages from "@/pages/Packages";
+import Blog from "@/pages/Blog";
+import Contact from "@/pages/Contact";
+import About from "@/pages/About";
+import Testimonials from "@/pages/Testimonials";
+import Privacy from "@/pages/Privacy";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -36,6 +43,13 @@ function Router() {
       <Route path="/login" component={Login} />
       <Route path="/tools" component={Tools} />
       <Route path="/policies" component={Policies} />
+      <Route path="/destinations" component={Destinations} />
+      <Route path="/packages" component={Packages} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/about" component={About} />
+      <Route path="/testimonios" component={Testimonials} />
+      <Route path="/privacy" component={Privacy} />
       
       {/* Protected Routes */}
       <Route path="/app/profile">
