@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPin, Mail, Phone, Youtube } from "lucide-react";
+import { SiWhatsapp, SiTiktok } from "react-icons/si";
 
 export function Footer() {
   return (
@@ -8,82 +9,118 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary font-bold font-display">
-                T
-              </div>
-              <span className="font-display font-bold text-2xl tracking-tight">
-                Trips<span className="text-accent">Europa</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Trips Europa" 
+                className="h-14 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-white/60 leading-relaxed max-w-xs">
-              Curating exceptional European travel experiences for the discerning explorer. Luxury tailored to your dreams.
+              Expertos en viajes a Europa desde Colombia. Paquetes exclusivos, vuelos, hoteles y experiencias únicas diseñadas para ti.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+            <div className="flex gap-3">
+              <a href="https://facebook.com/tripseuropa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" data-testid="link-social-facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+              <a href="https://instagram.com/tripseuropa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" data-testid="link-social-instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" data-testid="link-social-whatsapp">
+                <SiWhatsapp className="w-5 h-5" />
+              </a>
+              <a href="https://youtube.com/@tripseuropa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" data-testid="link-social-youtube">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://tiktok.com/@tripseuropa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" data-testid="link-social-tiktok">
+                <SiTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Destinos Populares */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-display">Discover</h4>
-            <ul className="space-y-4">
-              <li><Link href="/destinations" className="text-white/60 hover:text-accent transition-colors">Destinations</Link></li>
-              <li><Link href="/services" className="text-white/60 hover:text-accent transition-colors">Services</Link></li>
-              <li><Link href="/blog" className="text-white/60 hover:text-accent transition-colors">Travel Blog</Link></li>
-              <li><Link href="/about" className="text-white/60 hover:text-accent transition-colors">About Us</Link></li>
+            <h4 className="text-lg font-bold mb-6 font-display">Destinos Populares</h4>
+            <ul className="space-y-3">
+              <li><Link href="/destinations/paris" className="text-white/60 hover:text-accent transition-colors">París, Francia</Link></li>
+              <li><Link href="/destinations/roma" className="text-white/60 hover:text-accent transition-colors">Roma, Italia</Link></li>
+              <li><Link href="/destinations/barcelona" className="text-white/60 hover:text-accent transition-colors">Barcelona, España</Link></li>
+              <li><Link href="/destinations/amsterdam" className="text-white/60 hover:text-accent transition-colors">Ámsterdam, Holanda</Link></li>
+              <li><Link href="/destinations/santorini" className="text-white/60 hover:text-accent transition-colors">Santorini, Grecia</Link></li>
+              <li><Link href="/destinations/london" className="text-white/60 hover:text-accent transition-colors">Londres, Inglaterra</Link></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Servicios */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-display">Contact Us</h4>
+            <h4 className="text-lg font-bold mb-6 font-display">Nuestros Servicios</h4>
+            <ul className="space-y-3">
+              <li><Link href="/services/vuelos" className="text-white/60 hover:text-accent transition-colors">Vuelos a Europa</Link></li>
+              <li><Link href="/services/paquetes" className="text-white/60 hover:text-accent transition-colors">Paquetes Todo Incluido</Link></li>
+              <li><Link href="/services/hoteles" className="text-white/60 hover:text-accent transition-colors">Hoteles de Lujo</Link></li>
+              <li><Link href="/services/luna-miel" className="text-white/60 hover:text-accent transition-colors">Lunas de Miel</Link></li>
+              <li><Link href="/services/cruceros" className="text-white/60 hover:text-accent transition-colors">Cruceros Europeos</Link></li>
+              <li><Link href="/services/visa" className="text-white/60 hover:text-accent transition-colors">Asesoría de Visa</Link></li>
+            </ul>
+          </div>
+
+          {/* Contacto */}
+          <div>
+            <h4 className="text-lg font-bold mb-6 font-display">Contáctanos</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>Via del Corso 123<br/>00186 Roma, Italy</span>
+                <div>
+                  <span className="font-medium text-white/80">Bogotá:</span><br/>
+                  Cra 7 #71-21, Of. 501
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-white/60">
+                <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-medium text-white/80">Madrid:</span><br/>
+                  Gran Vía 42, 3º
+                </div>
               </li>
               <li className="flex items-center gap-3 text-white/60">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <span>+39 06 1234 5678</span>
+                <div>
+                  <span>+57 601 123 4567</span><br/>
+                  <span>+34 91 123 4567</span>
+                </div>
               </li>
               <li className="flex items-center gap-3 text-white/60">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <span>concierge@tripseuropa.com</span>
+                <span>info@tripseuropa.com</span>
               </li>
             </ul>
           </div>
+        </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-bold mb-6 font-display">Newsletter</h4>
-            <p className="text-white/60 mb-4">Subscribe for exclusive offers and travel inspiration.</p>
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors"
-              />
-              <button className="w-full bg-accent text-primary font-bold py-3 rounded-lg hover:bg-accent/90 transition-colors">
-                Subscribe
-              </button>
-            </form>
+        {/* Certifications & Trust */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-white/40 text-sm">
+            <span className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-xs font-bold">IATA</span>
+              Agencia Acreditada IATA
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-xs font-bold">SSL</span>
+              Pagos 100% Seguros
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-xs font-bold">24/7</span>
+              Soporte en Español
+            </span>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">© 2025 TripsEuropa. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© 2025 TripsEuropa.com - Todos los derechos reservados.</p>
           <div className="flex gap-6 text-sm text-white/40">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Política de Privacidad</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Términos y Condiciones</Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">Política de Cookies</Link>
           </div>
         </div>
       </div>
