@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trips Europa - Agencia de viajes premium desde Colombia hacia Europa">
+    <title>Trips Europa | Viajes Premium desde Colombia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ================== VARIABLES CORPORATIVAS ================== */
+        :root {
+            --primary-color: #0f172a;      /* Azul Marino Profundo */
+            --accent-color: #d4af37;       /* Dorado Corporativo */
+            --accent-hover: #b5952f;       /* Dorado Hover */
+            --secondary-color: #1e293b;    /* Azul Oscuro */
+            --bg-color: #f8fafc;           /* Blanco Roto */
+            --text-color: #334155;         /* Gris Oscuro */
+            --text-light: #64748b;         /* Gris Claro */
+            --border-color: #e2e8f0;       /* Gris Borde */
+            --white: #ffffff;
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ================== RESET & BASE ================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ================== UTILIDADES ================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gold {
+            color: var(--accent-color);
+        }
+
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 2rem; }
+
+        /* ================== BOTONES ================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* ================== HEADER ================== */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-color);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* ================== HERO SECTION ================== */
+        .hero {
+            position: relative;
+            height: 85vh;
+            min-height: 550px;
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), 
+                        url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* ================== SEARCH BOX ================== */
+        .search-container {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        .search-tabs {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary-color);
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .search-btn {
+            height: 44px;
+            grid-column: span 1;
+        }
+
+        /* ================== SERVICIOS ================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        /* ================== PROMOCIONES ================== */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .promo-content {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .promo-tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .promo-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .promo-content p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .promo-price {
+            flex: 0 1 auto;
+            text-align: center;
+        }
+
+        .promo-price .old {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .promo-price .new {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        /* ================== FOOTER ================== */
+        footer {
+            background: var(--primary-color);
+            color: #94a3b8;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 18px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            font-size: 1.3rem;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* ================== CHATBOT ================== */
+        .chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            cursor: pointer;
+            border: none;
+            z-index: 2000;
+            transition: var(--transition);
+        }
+
+        .chat-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 8px 28px rgba(212, 175, 55, 0.5);
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 105px;
+            right: 30px;
+            width: 360px;
+            max-height: 520px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .chat-header-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-header h3 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .chat-status {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+        .chat-close {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .chat-msg {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        .msg-bot {
+            align-self: flex-start;
+            background: var(--white);
+            color: var(--text-color);
+            border-bottom-left-radius: 2px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .msg-user {
+            align-self: flex-end;
+            background: var(--primary-color);
+            color: var(--white);
+            border-bottom-right-radius: 2px;
+        }
+
+        .chat-footer {
+            padding: 14px;
+            border-top: 1px solid var(--border-color);
+            background: var(--white);
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .chat-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .chat-send {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ================== RESPONSIVE ================== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .search-form { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .chat-window { width: 88%; right: 6%; bottom: 85px; }
+            .promo-banner { flex-direction: column; text-align: center; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 15px; }
+            .section-padding { padding: 50px 0; }
+            .btn { padding: 10px 20px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================== HEADER ======================== -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="#d4af37" stroke-width="2"/>
+                    <path d="M20 8L28 28H12Z" fill="#d4af37"/>
+                </svg>
+                <span>TripsEuropa</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" class="text-gold">VIP Club</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Iniciar Sesión</button>
+                <button class="btn btn-primary"><i class="fas fa-user"></i> Mi Cuenta</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre Europa desde Colombia</h1>
+            <p>Agencia de viajes premium. Vuelos directos, hoteles exclusivos y experiencias curadas para el viajero exigente.</p>
+
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active" onclick="switchTab(event, 'vuelos')"><i class="fas fa-plane"></i> Vuelos</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'hoteles')"><i class="fas fa-hotel"></i> Hoteles</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'paquetes')"><i class="fas fa-suitcase-rolling"></i> Paquetes</button>
+                </div>
+
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <div class="form-group">
+                        <label>Origen (Colombia)</label>
+                        <select class="form-input" id="origin">
+                            <option value="BOG">Bogotá (BOG)</option>
+                            <option value="MDE">Medellín (MDE)</option>
+                            <option value="CLO">Cali (CLO)</option>
+                            <option value="CTG">Cartagena (CTG)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Destino (Europa)</label>
+                        <select class="form-input" id="destination">
+                            <option value="MAD">Madrid (MAD)</option>
+                            <option value="BCN">Barcelona (BCN)</option>
+                            <option value="CDG">París (CDG)</option>
+                            <option value="LHR">Londres (LHR)</option>
+                            <option value="FCO">Roma (FCO)</option>
+                            <option value="AMS">Ámsterdam (AMS)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fechas</label>
+                        <input type="date" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Viajeros</label>
+                        <select class="form-input">
+                            <option>1 Adulto</option>
+                            <option>2 Adultos</option>
+                            <option>Familia</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary search-btn">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== MAIN CONTENT ======================== -->
+    <main class="container section-padding" id="servicios">
+        <div class="text-center mb-2">
+            <h2 style="font-family: var(--font-heading); font-size: 2.3rem; color: var(--primary-color);">Servicios Exclusivos</h2>
+            <p class="text-gold">Todo lo que necesitas para tu viaje europeo de lujo</p>
+        </div>
+
+        <section class="services-grid">
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
+                <h3>Vuelos Directos</h3>
+                <p>Acceso a tarifas corporativas y rutas exclusivas desde Colombia a toda Europa.</p>
+                <button class="btn btn-outline">Cotizar</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-concierge-bell"></i></div>
+                <h3>Hoteles Boutique</h3>
+                <p>Selección de hoteles 5 estrellas, castillos y resorts en las mejores ubicaciones.</p>
+                <button class="btn btn-outline">Ver Catálogo</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-car"></i></div>
+                <h3>Alquiler de Autos</h3>
+                <p>Porsche, Mercedes o vehículos familiares con seguro todo riesgo incluido.</p>
+                <button class="btn btn-outline">Reservar</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-sim-card"></i></div>
+                <h3>eSIM Europa</h3>
+                <p>Internet ilimitado en 30+ países europeos. Actívalo antes de salir.</p>
+                <button class="btn btn-outline">Comprar</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Seguro VIP</h3>
+                <p>Cobertura médica internacional y cancelación por cualquier motivo.</p>
+                <button class="btn btn-outline">Proteger</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3>Tours Privados</h3>
+                <p>Skip-the-line en el Louvre y tours gastronómicos en Italia.</p>
+                <button class="btn btn-outline">Explorar</button>
+            </article>
+        </section>
+
+        <!-- PROMOTIONAL BANNER -->
+        <section class="promo-banner" id="ofertas">
+            <div class="promo-content">
+                <span class="promo-tag">Oferta Flash</span>
+                <h2>Bogotá - Madrid</h2>
+                <p>Vuelo + 4 noches en Hotel 5★ + Traslados.</p>
+            </div>
+            <div class="promo-price">
+                <div class="old">USD $3,200</div>
+                <div class="new">USD $2,450</div>
+                <button class="btn btn-primary">Ver Detalles</button>
+            </div>
+        </section>
+
+        <!-- TRUST & PAYMENT -->
+        <div class="text-center mt-2" style="margin-top: 60px;">
+            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 25px;">
+                <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i> 
+                Pagos 100% seguros - Certificado SSL
+            </p>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; opacity: 0.7;">
+                <span style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-light);">
+                    <i class="fab fa-stripe"></i> Stripe
+                </span>
+                <span style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-light);">
+                    <i class="fab fa-paypal"></i> PayPal
+                </span>
+                <span style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-light);">
+                    <i class="fas fa-wallet"></i> Scalapay (Cuotas)
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Trips Europa</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.5;">Expertos en viajes de lujo desde Colombia hacia Europa. Servicio personalizado 24/7.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Destinos</h4>
+                    <ul>
+                        <li><a href="#">España</a></li>
+                        <li><a href="#">Francia</a></li>
+                        <li><a href="#">Italia</a></li>
+                        <li><a href="#">Grecia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Políticas</a></li>
+                        <li><a href="#">Requisitos Visa</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 12px;"><i class="fas fa-envelope"></i> reservas@tripseuropa.com</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                &copy; 2025 Tripseuropa.com | Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================== CHATBOT CONCIERGE ======================== -->
+    <button class="chat-btn" id="chatBtn" onclick="toggleChat()" title="Chat con Concierge VIP">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-header-content">
+                <i class="fas fa-user-tie"></i>
+                <div>
+                    <h3>Concierge VIP</h3>
+                    <span class="chat-status">En línea 24/7</span>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="handleChatKey(event)">
+            <button class="chat-send" onclick="sendChatMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ================== FUNCIONES PRINCIPALES ==================
+
+        // Mensaje inicial del chat
+        window.addEventListener('DOMContentLoaded', () => {
+            addChatMessage('¡Hola! Soy tu asistente VIP. Puedo ayudarte a buscar vuelos desde Colombia, hoteles de lujo y más. ¿En qué te ayudo?', 'bot');
+        });
+
+        // Switch tabs
+        function switchTab(e, tabName) {
+            e.preventDefault();
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            e.target.closest('.tab-btn').classList.add('active');
+        }
+
+        // Buscar
+        function handleSearch(e) {
+            e.preventDefault();
+            const origin = document.getElementById('origin').value;
+            const dest = document.getElementById('destination').value;
+            const btn = e.target.querySelector('button');
+
+            btn.disabled = true;
+            btn.innerText = '⏳ Buscando...';
+
+            setTimeout(() => {
+                alert(`🔍 Buscando rutas de ${origin} a ${dest}...\n\nConectando con servidor...`);
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-search"></i> Buscar';
+            }, 1200);
+        }
+
+        // Chat functions
+        function toggleChat() {
+            document.getElementById('chatWindow').classList.toggle('active');
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') sendChatMessage();
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            addChatMessage(msg, 'user');
+            input.value = '';
+
+            setTimeout(() => {
+                let response = 'Perfecto, déjame revisar eso...';
+                const lower = msg.toLowerCase();
+
+                if (lower.includes('vuelo')) {
+                    response = '✈️ Tenemos excelentes ofertas: BOG→MAD desde USD $850, BOG→CDG desde USD $920. ¿Qué fechas te interesan?';
+                } else if (lower.includes('hotel')) {
+                    response = '🏨 Recomiendo el Ritz Madrid o el Crillon París. ¿Cuántas noches necesitas?';
+                } else if (lower.includes('precio')) {
+                    response = '💰 Nuestro paquete más popular: Vuelo + 4 noches + Tours = desde USD $2,450.';
+                } else if (lower.includes('contacto') || lower.includes('agente')) {
+                    response = '👤 Conectándote con un agente humano... O llama al +57 300 123 4567.';
+                }
+
+                addChatMessage(response, 'bot');
+            }, 700);
+        }
+
+        function addChatMessage(text, sender) {
+            const chatBody = document.getElementById('chatBody');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-msg ${sender === 'bot' ? 'msg-bot' : 'msg-user'}`;
+            msgDiv.textContent = text;
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>

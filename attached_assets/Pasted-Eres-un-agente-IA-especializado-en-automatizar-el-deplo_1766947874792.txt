@@ -1,0 +1,359 @@
+Eres un agente IA especializado en automatizar el deployment de Trips Europa - una agencia de viajes premium (Colombia → Europa).
+
+Tu objetivo: Ejecutar las 3 aplicaciones (Landing, App React, Blog SEO) en Replit con integraciones de pago y automáticamente.
+
+📋 TAREAS PRINCIPALES (ORDEN CRÍTICO)
+1️⃣ SETUP INICIAL
+bash
+# Crear estructura de carpetas
+mkdir -p public public/blog src components pages store
+touch server.js .env package.json
+
+# Instalar dependencias principales
+npm install express cors dotenv stripe axios supabase-js
+npm install --save-dev tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+2️⃣ CREAR SERVER.JS
+Crear archivo server.js con:
+
+Express servidor
+
+CORS habilitado
+
+Static files desde /public
+
+Rutas: GET / (landing), GET /blog (blog), POST /api/reservar (booking)
+
+Variables de entorno (.env): STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, SUPABASE_URL, SUPABASE_KEY
+
+Error handling completo
+
+3️⃣ DESPLEGAR LANDING PAGE
+Crear public/index.html con contenido HTML mejorado
+
+Incluir: Hero, buscador 3-tabs, 8 servicios, chatbot, newsletter
+
+Integrar Stripe públicamente (botón pagar)
+
+Meta tags SEO
+
+CSS inline (Dorado #d4af37 + Azul marino #0f172a)
+
+Responsive 100% (mobile-first)
+
+4️⃣ DESPLEGAR BLOG SEO
+Crear public/blog/index.html con 10 artículos
+
+Estructura: Grid de artículos → Click abre detalle → CTA "Reservar Ahora"
+
+Categorías: Destinos (5), Lujo (2), Tips (2), Documentos (1)
+
+Palabras clave integradas: "viajes europa", "colombia paris", "visa schengen"
+
+Meta tags por artículo
+
+Internal linking entre posts
+
+5️⃣ CREAR APP REACT (CARPETA SRC)
+Estructura modular: componentes + páginas + store
+
+Usar Zustand para estado global
+
+Páginas: SearchPage, CartPage, LoyaltyPage, ProfilePage
+
+Bottom navigation bar (4 secciones)
+
+Persistencia con localStorage (carrito, favoritos)
+
+Integración Stripe en checkout
+
+PWA ready
+
+6️⃣ INTEGRAR PAGOS
+Stripe: Botón pagar en landing y app
+
+Scalapay: BNPL 3-12 cuotas
+
+Supabase: Guardar reservaciones en BD
+
+SendGrid: Email confirmación automática
+
+7️⃣ SETUP ANALYTICS & SEO
+Google Analytics: Tracking code en <head>
+
+Google Search Console: Sitemap.xml automático
+
+Robots.txt optimizado
+
+Meta tags canónicos
+
+8️⃣ TESTING AUTOMÁTICO
+Verificar que landing cargue <3 segundos
+
+Verificar buscador funciona (3 tabs)
+
+Verificar blog muestra 10 artículos
+
+Verificar app React inicia en localhost:3000
+
+Verificar Stripe conectado (test mode)
+
+🎨 ESPECIFICACIONES DE DISEÑO
+Colores Corporativos:
+
+Primary: #0f172a (Azul Marino)
+
+Accent: #d4af37 (Dorado)
+
+Secondary: #1e293b (Azul Oscuro)
+
+Background: #f8fafc (Blanco)
+
+Text: #334155 (Gris)
+
+Tipografía:
+
+Headings: Playfair Display (serif) - elegancia
+
+Body: Lato (sans-serif) - legibilidad
+
+Estilo:
+
+Minimalismo sofisticado
+
+Espacios en blanco generosos
+
+Sombras sutiles (0 2px 8px rgba(0,0,0,0.1))
+
+Transiciones suaves (0.3s ease)
+
+Accesibilidad WCAG 2.1 AA
+
+📦 ESTRUCTURA FINAL
+text
+tripseuropa-replit/
+├── server.js                 ← Express
+├── package.json              ← Dependencies
+├── .env                       ← Variables de entorno
+├── public/
+│   ├── index.html            ← Landing Page
+│   ├── blog/
+│   │   └── index.html        ← Blog SEO (10 artículos)
+│   ├── sitemap.xml           ← Para SEO
+│   └── robots.txt            ← Para buscadores
+├── src/                       ← React App
+│   ├── App.jsx
+│   ├── components/
+│   │   ├── Navigation.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── FlightCard.jsx
+│   │   └── ChatWidget.jsx
+│   ├── pages/
+│   │   ├── SearchPage.jsx
+│   │   ├── CartPage.jsx
+│   │   ├── LoyaltyPage.jsx
+│   │   └── ProfilePage.jsx
+│   └── store/
+│       └── useStore.js       ← Zustand state
+└── tailwind.config.js        ← CSS utilities
+🔑 INTEGRACIONES REQUERIDAS
+Stripe:
+
+Modo TEST (pk_test_... y sk_test_...)
+
+Botón checkout
+
+Webhook confirmación
+
+Supabase:
+
+Tabla "reservaciones" (id, email, vuelo, fecha, monto, estado)
+
+Tabla "usuarios" (id, email, puntos_vip, nivel)
+
+Auth con email
+
+SendGrid:
+
+Email template "Confirmación de reserva"
+
+Email template "Bienvenida newsletter"
+
+Google Analytics:
+
+Tracking ID en <head>
+
+Event tracking: búsqueda, carrito, checkout
+
+✅ CHECKLIST DE CALIDAD
+ Landing page carga sin errores
+
+ Buscador filtra por origen/destino/fecha
+
+ Botón Stripe muestra modal de pago
+
+ Blog muestra 10 artículos con filtros
+
+ App React inicia con npm start
+
+ Carrito guarda items en localStorage
+
+ VIP Club muestra puntos y niveles
+
+ Responsive en móvil (320px), tablet (768px), desktop (1920px)
+
+ Performance >90 (Lighthouse)
+
+ No hay errores en consola
+
+ Meta tags correctos para SEO
+
+🚀 COMANDOS PARA EJECUTAR
+bash
+# Setup inicial
+npm install
+
+# Iniciar servidor (landing + blog)
+npm start
+
+# Test en otra terminal
+npm run test-landing    # Verifica que / funciona
+npm run test-blog       # Verifica que /blog funciona
+
+# Iniciar app React (en carpeta src)
+npm run dev-react       # http://localhost:3000
+
+# Build para producción
+npm run build
+📊 MÉTRICAS DE ÉXITO
+Después de 1 hora:
+
+✅ Landing page LIVE en https://[tu-proyecto].replit.dev
+
+✅ Blog accesible en /blog
+
+✅ App React corriendo en puerto 3000
+
+✅ Stripe conectado (modo test)
+
+✅ Analytics rastreando
+
+Después de 24 horas:
+
+✅ Aparecer en Google Search (submit sitemap)
+
+✅ 10-100 visitantes primeros
+
+✅ Primeros leads en newsletter
+
+Después de 7 días:
+
+✅ Ranking posición 50-100 en keywords principales
+
+✅ 500-1,000 visitantes
+
+✅ 5-10 leads calificados
+
+💡 NOTAS IMPORTANTES
+Stripe TEST MODE: Los pagos son simulados, perfecto para desarrollo
+
+Supabase GRATUITO: Incluye 500,000 filas gratis/mes
+
+Replit FREE: Suficiente para MVP, escala después
+
+SEO: Tarda 30 días en indexar completamente
+
+Blog: Es 80% del tráfico futuro, invierte en contenido
+
+Monetización: Comienza con affiliate links mientras rankeas
+
+🎯 PRÓXIMAS FASES (Semanas 2-4)
+Semana 2:
+
+Agregar 5 artículos más al blog
+
+Setup email marketing (Mailchimp)
+
+Social media content plan
+
+Semana 3:
+
+API real Amadeus (vuelos verdaderos)
+
+Integrar Scalapay (BNPL)
+
+Dashboard admin
+
+Semana 4:
+
+App móvil nativa (iOS/Android con React Native)
+
+Programa de afiliados
+
+Campañas Google Ads
+
+📞 CUANDO ALGO FALLA
+Error "Cannot find module express"
+→ npm install express cors dotenv stripe
+
+Error "Port 3000 already in use"
+→ Kill el proceso: lsof -ti:3000 | xargs kill -9
+
+Error "Stripe not connected"
+→ Verifica .env tiene STRIPE_PUBLIC_KEY
+
+Error "Blog no carga"
+→ Verifica ruta es /blog (con slash)
+
+Imágenes no cargan en blog
+→ URLs de Unsplash deben incluir ?w=600&h=400
+
+🔒 SEGURIDAD
+✅ HTTPS (Replit lo incluye)
+✅ CORS configurado
+✅ Variables de entorno protegidas (.env)
+✅ XSS protection (sanitizar inputs)
+✅ CSRF tokens en formularios
+✅ Rate limiting en API
+
+📈 RESULTADO ESPERADO
+En 1 hora tendrás:
+
+Landing page premium LIVE
+
+Blog SEO con 10 artículos
+
+App React móvil funcional
+
+Pagos con Stripe integrados
+
+Analytics rastreando
+
+Código listo para producción
+
+Inversión:
+
+Tiempo: 1 hora setup
+
+Dinero: $0 (todo free tier)
+
+Retorno:
+
+Mes 1: $500-1,000
+
+Mes 3: $15,000-25,000
+
+Año 1: $200,000-500,000
+
+📚 RECURSOS INCLUIDOS
+✅ HTML mejorado (31.6 KB)
+✅ App React (12 KB)
+✅ Blog SEO (75 KB)
+✅ 5 prompts para IA
+✅ 6 códigos copy & paste
+✅ Roadmap 12 meses
+✅ Proyecciones financieras
+
+ESTADO: ✅ LISTO PARA EJECUCIÓN INMEDIATA
+
+Ejecuta este prompt en Replit con un agente IA y tendrás todo en 1 hora.
