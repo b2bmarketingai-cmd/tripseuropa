@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
+import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Menu, X, User, ShoppingBag, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -14,7 +15,7 @@ import {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [language, setLanguage] = useState<"es" | "en">("es");
+  const { language, setLanguage, t } = useI18n();
   const { user, isAuthenticated, logout } = useAuth();
   const [location] = useLocation();
 
@@ -27,10 +28,10 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { name: language === "es" ? "Destinos" : "Destinations", href: "/destinations" },
-    { name: language === "es" ? "Paquetes" : "Packages", href: "/packages" },
-    { name: language === "es" ? "Blog" : "Blog", href: "/blog" },
-    { name: language === "es" ? "Contacto" : "Contact", href: "/contact" },
+    { name: t("nav.destinations"), href: "/destinations" },
+    { name: t("nav.packages"), href: "/packages" },
+    { name: t("nav.blog"), href: "/blog" },
+    { name: t("nav.contact"), href: "/contact" },
   ];
 
   const isActive = (path: string) => location === path;
@@ -57,7 +58,7 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link 
-                key={link.name} 
+                key={link.href} 
                 href={link.href}
                 className={cn(
                   "text-sm font-medium tracking-wide hover:text-accent transition-colors relative py-1",
@@ -85,12 +86,24 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-white">
-                <DropdownMenuItem onClick={() => setLanguage("es")} className="gap-2 cursor-pointer" data-testid="button-lang-es">
-                  <span className="text-lg">🇪🇸</span>
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("es")} 
+                  className={cn("gap-2 cursor-pointer", language === "es" && "bg-accent/10")} 
+                  data-testid="button-lang-es"
+                >
+                  <span className="w-5 h-4 rounded-sm overflow-hidden flex items-center justify-center bg-red-600">
+                    <span className="text-yellow-400 text-xs font-bold">ES</span>
+                  </span>
                   <span>Español</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("en")} className="gap-2 cursor-pointer" data-testid="button-lang-en">
-                  <span className="text-lg">🇬🇧</span>
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("en")} 
+                  className={cn("gap-2 cursor-pointer", language === "en" && "bg-accent/10")} 
+                  data-testid="button-lang-en"
+                >
+                  <span className="w-5 h-4 rounded-sm overflow-hidden flex items-center justify-center bg-blue-800">
+                    <span className="text-white text-xs font-bold">EN</span>
+                  </span>
                   <span>English</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -106,7 +119,7 @@ export function Header() {
                 <Link href="/app/profile">
                   <Button variant="outline" className="border-accent/50 text-accent hover:bg-accent hover:text-primary gap-2" data-testid="button-profile">
                     <User className="w-4 h-4" />
-                    <span>{language === "es" ? "Mi Cuenta" : "My Account"}</span>
+                    <span>{t("nav.myAccount")}</span>
                   </Button>
                 </Link>
               </div>
@@ -116,7 +129,7 @@ export function Header() {
                 className="bg-accent text-primary hover:bg-accent/90 font-semibold px-6 shadow-lg shadow-accent/20"
                 data-testid="button-signin"
               >
-                {language === "es" ? "Iniciar Sesión" : "Sign In"}
+                {t("nav.signin")}
               </Button>
             )}
           </div>
@@ -138,10 +151,11 @@ export function Header() {
           <div className="container px-4 py-8 flex flex-col gap-6">
             {navLinks.map((link) => (
               <Link 
-                key={link.name} 
+                key={link.href} 
                 href={link.href}
                 className="text-lg font-medium text-white/90 hover:text-accent"
                 onClick={() => setIsOpen(false)}
+                data-testid={`link-mobile-nav-${link.href.replace("/", "")}`}
               >
                 {link.name}
               </Link>
@@ -151,45 +165,61 @@ export function Header() {
             <div className="flex gap-4 py-2">
               <button 
                 onClick={() => setLanguage("es")}
-                className={cn("text-lg", language === "es" ? "opacity-100" : "opacity-50")}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-1 rounded",
+                  language === "es" ? "bg-accent/20 text-accent" : "text-white/60"
+                )}
+                data-testid="button-mobile-lang-es"
               >
-                🇪🇸 Español
+                <span className="w-5 h-4 rounded-sm bg-red-600 flex items-center justify-center">
+                  <span className="text-yellow-400 text-xs font-bold">ES</span>
+                </span>
+                Español
               </button>
               <button 
                 onClick={() => setLanguage("en")}
-                className={cn("text-lg", language === "en" ? "opacity-100" : "opacity-50")}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-1 rounded",
+                  language === "en" ? "bg-accent/20 text-accent" : "text-white/60"
+                )}
+                data-testid="button-mobile-lang-en"
               >
-                🇬🇧 English
+                <span className="w-5 h-4 rounded-sm bg-blue-800 flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">EN</span>
+                </span>
+                English
               </button>
             </div>
 
             <div className="h-px bg-white/10 my-2"></div>
             {isAuthenticated ? (
               <div className="flex flex-col gap-4">
-                <Link href="/app/bookings" onClick={() => setIsOpen(false)}>
+                <Link href="/app/bookings" onClick={() => setIsOpen(false)} data-testid="link-mobile-bookings">
                   <span className="text-lg font-medium text-white/90 hover:text-accent">
-                    {language === "es" ? "Mis Reservas" : "My Bookings"}
+                    {t("nav.myBookings")}
                   </span>
                 </Link>
-                <Link href="/app/profile" onClick={() => setIsOpen(false)}>
+                <Link href="/app/profile" onClick={() => setIsOpen(false)} data-testid="link-mobile-profile">
                   <span className="text-lg font-medium text-white/90 hover:text-accent">
-                    {language === "es" ? "Perfil" : "Profile"}
+                    {t("nav.profile")}
                   </span>
                 </Link>
                 <Button 
                   onClick={() => logout()}
                   variant="outline" 
                   className="w-full border-white/20 text-white hover:bg-white/10"
+                  data-testid="button-mobile-signout"
                 >
-                  {language === "es" ? "Cerrar Sesión" : "Sign Out"}
+                  {t("nav.signout")}
                 </Button>
               </div>
             ) : (
               <Button 
                 onClick={() => window.location.href = "/api/login"}
                 className="w-full bg-accent text-primary font-bold"
+                data-testid="button-mobile-signin"
               >
-                {language === "es" ? "Iniciar Sesión" : "Sign In"}
+                {t("nav.signin")}
               </Button>
             )}
           </div>

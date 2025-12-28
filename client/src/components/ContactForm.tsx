@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/lib/i18n";
 import { Send, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
 import {
@@ -24,16 +25,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
-  email: z.string().email("Ingresa un correo electrónico válido"),
-  phone: z.string().optional(),
-  serviceInterest: z.string().optional(),
-  message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
-
 interface ContactFormProps {
   variant?: "hero" | "footer" | "page";
   title?: string;
@@ -43,7 +34,18 @@ interface ContactFormProps {
 export function ContactForm({ variant = "page", title, subtitle }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
+  const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
+
+  const contactSchema = z.object({
+    name: z.string().min(2, t("form.validation.nameMin")),
+    email: z.string().email(t("form.validation.emailInvalid")),
+    phone: z.string().optional(),
+    serviceInterest: z.string().optional(),
+    message: z.string().min(10, t("form.validation.messageMin")),
+  });
+
+  type ContactFormData = z.infer<typeof contactSchema>;
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -61,8 +63,8 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
       onSuccess: () => {
         setSubmitted(true);
         toast({
-          title: "Mensaje enviado",
-          description: "Nos pondremos en contacto contigo pronto.",
+          title: t("contact.success"),
+          description: t("contact.successMessage"),
         });
         form.reset();
         setTimeout(() => setSubmitted(false), 5000);
@@ -70,7 +72,7 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
       onError: () => {
         toast({
           title: "Error",
-          description: "No se pudo enviar el mensaje. Intenta de nuevo.",
+          description: t("form.errorSend"),
           variant: "destructive",
         });
       },
@@ -79,11 +81,11 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
 
   if (submitted) {
     return (
-      <div className={`flex flex-col items-center justify-center py-12 text-center ${variant === "hero" ? "text-white" : ""}`}>
+      <div className={`flex flex-col items-center justify-center py-12 text-center ${variant === "hero" ? "text-white" : ""}`} data-testid="contact-success-message">
         <CheckCircle className="w-16 h-16 text-accent mb-4" />
-        <h3 className="text-2xl font-display font-bold mb-2">¡Gracias por contactarnos!</h3>
+        <h3 className="text-2xl font-display font-bold mb-2">{t("contact.success")}</h3>
         <p className={variant === "hero" ? "text-white/70" : "text-muted-foreground"}>
-          Un asesor de viajes te contactará en las próximas 24 horas.
+          {t("contact.successMessage")}
         </p>
       </div>
     );
@@ -92,27 +94,37 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
   const isHero = variant === "hero";
   const isFooter = variant === "footer";
 
+  const serviceOptions = [
+    { value: "vuelos", label: t("contact.services.flights") },
+    { value: "paquetes", label: t("contact.services.packages") },
+    { value: "hoteles", label: t("contact.services.hotels") },
+    { value: "luna-miel", label: t("contact.services.honeymoon") },
+    { value: "grupos", label: t("contact.services.groups") },
+    { value: "corporativo", label: t("contact.services.corporate") },
+    { value: "otro", label: t("contact.services.other") },
+  ];
+
   return (
-    <div className={`${isHero ? "glass-panel rounded-2xl p-6 md:p-8" : isFooter ? "" : "bg-white rounded-2xl shadow-xl p-8"}`}>
+    <div className={`${isHero ? "glass-panel rounded-2xl p-6 md:p-8" : isFooter ? "" : "bg-white rounded-2xl shadow-xl p-8"}`} data-testid="contact-form-container">
       {(title || subtitle) && (
         <div className={`mb-6 ${isHero ? "text-center" : ""}`}>
-          {title && <h3 className={`text-2xl font-display font-bold mb-2 ${isHero ? "text-primary" : ""}`}>{title}</h3>}
-          {subtitle && <p className={isHero ? "text-gray-600" : "text-muted-foreground"}>{subtitle}</p>}
+          {title && <h3 className={`text-2xl font-display font-bold mb-2 ${isHero ? "text-primary" : ""}`} data-testid="text-contact-title">{title}</h3>}
+          {subtitle && <p className={isHero ? "text-gray-600" : "text-muted-foreground"} data-testid="text-contact-subtitle">{subtitle}</p>}
         </div>
       )}
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" data-testid="form-contact">
           <div className={`grid ${isFooter ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"} gap-4`}>
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>Nombre Completo</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.name")}</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="Tu nombre" 
+                      placeholder={t("form.namePlaceholder")} 
                       {...field} 
                       className={isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}
                       data-testid="input-contact-name"
@@ -127,11 +139,11 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>Correo Electrónico</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.email")}</FormLabel>
                   <FormControl>
                     <Input 
                       type="email" 
-                      placeholder="tu@email.com" 
+                      placeholder={t("form.emailPlaceholder")} 
                       {...field} 
                       className={isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}
                       data-testid="input-contact-email"
@@ -149,10 +161,10 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>Teléfono (Opcional)</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.phone")}</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="+57 300 123 4567" 
+                      placeholder={t("form.phonePlaceholder")} 
                       {...field} 
                       className={isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}
                       data-testid="input-contact-phone"
@@ -167,24 +179,22 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               name="serviceInterest"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>Servicio de Interés</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.service")}</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger 
                         className={isFooter ? "bg-white/5 border-white/10 text-white" : ""}
                         data-testid="select-contact-service"
                       >
-                        <SelectValue placeholder="Selecciona un servicio" />
+                        <SelectValue placeholder={t("contact.selectService")} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="vuelos">Vuelos a Europa</SelectItem>
-                      <SelectItem value="paquetes">Paquetes Todo Incluido</SelectItem>
-                      <SelectItem value="hoteles">Reserva de Hoteles</SelectItem>
-                      <SelectItem value="luna-miel">Luna de Miel</SelectItem>
-                      <SelectItem value="grupos">Viajes en Grupo</SelectItem>
-                      <SelectItem value="corporativo">Viajes Corporativos</SelectItem>
-                      <SelectItem value="otro">Otro</SelectItem>
+                      {serviceOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value} data-testid={`option-service-${option.value}`}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -198,10 +208,10 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className={isFooter ? "text-white/70" : ""}>Mensaje</FormLabel>
+                <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.message")}</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Cuéntanos sobre tu viaje soñado a Europa..." 
+                    placeholder={t("contact.messagePlaceholder")} 
                     rows={4}
                     {...field} 
                     className={isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}
@@ -222,12 +232,12 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
             {isPending ? (
               <span className="flex items-center gap-2">
                 <span className="w-4 h-4 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
-                Enviando...
+                {t("contact.sending")}
               </span>
             ) : (
               <span className="flex items-center gap-2">
                 <Send className="w-5 h-5" />
-                Enviar Mensaje
+                {t("contact.submit")}
               </span>
             )}
           </Button>
@@ -238,14 +248,16 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
 }
 
 export function ContactInfo() {
+  const { t } = useI18n();
+  
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" data-testid="contact-info-section">
       <div className="flex items-start gap-4">
         <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
           <Phone className="w-5 h-5 text-accent" />
         </div>
         <div>
-          <h4 className="font-bold text-lg mb-1">Llámanos</h4>
+          <h4 className="font-bold text-lg mb-1">{t("contactInfo.call")}</h4>
           <p className="text-muted-foreground">+57 601 123 4567</p>
           <p className="text-muted-foreground">+34 91 123 4567</p>
         </div>
@@ -255,7 +267,7 @@ export function ContactInfo() {
           <Mail className="w-5 h-5 text-accent" />
         </div>
         <div>
-          <h4 className="font-bold text-lg mb-1">Escríbenos</h4>
+          <h4 className="font-bold text-lg mb-1">{t("contactInfo.write")}</h4>
           <p className="text-muted-foreground">info@tripseuropa.com</p>
           <p className="text-muted-foreground">reservas@tripseuropa.com</p>
         </div>
@@ -265,7 +277,7 @@ export function ContactInfo() {
           <MapPin className="w-5 h-5 text-accent" />
         </div>
         <div>
-          <h4 className="font-bold text-lg mb-1">Visítanos</h4>
+          <h4 className="font-bold text-lg mb-1">{t("contactInfo.visit")}</h4>
           <p className="text-muted-foreground">Bogotá: Cra 7 #71-21, Of. 501</p>
           <p className="text-muted-foreground">Madrid: Gran Vía 42, 3º</p>
         </div>
