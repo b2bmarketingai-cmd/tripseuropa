@@ -28,8 +28,8 @@ export function Footer() {
     { nameKey: "footer.aboutUs", href: "/about" },
     { nameKey: "footer.blog", href: "/blog" },
     { nameKey: "footer.testimonials", href: "/testimonios" },
-    { nameKey: "footer.careers", href: "/careers" },
-    { nameKey: "footer.terms", href: "/terms" },
+    { nameKey: "footer.tools", href: "/tools" },
+    { nameKey: "footer.policies", href: "/policies" },
     { nameKey: "footer.privacy", href: "/privacy" },
   ];
 

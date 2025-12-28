@@ -144,7 +144,8 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.support": "Soporte en Español",
     "footer.rights": "Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
-    "footer.terms": "Términos y Condiciones",
+    "footer.tools": "Herramientas de Viaje",
+    "footer.policies": "Políticas",
     "footer.cookies": "Política de Cookies",
     
     // Contact Info
@@ -514,7 +515,8 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.support": "Spanish Support",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy Policy",
-    "footer.terms": "Terms & Conditions",
+    "footer.tools": "Travel Tools",
+    "footer.policies": "Policies",
     "footer.cookies": "Cookie Policy",
     
     // Contact Info
