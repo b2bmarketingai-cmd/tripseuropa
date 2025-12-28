@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, User, ShoppingBag, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/logo_oficial_tripseuropa.com_1766951188994.png";
+import logoUrl from "@assets/logo_oficial_tripseuropa.com_1766964466383.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
