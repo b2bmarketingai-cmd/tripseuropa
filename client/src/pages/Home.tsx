@@ -12,8 +12,9 @@ import { useI18n } from "@/lib/i18n";
 import { useToast } from "@/hooks/use-toast";
 import { 
   ArrowRight, Star, Plane, Hotel, Users, Award, CheckCircle, Quote,
-  Car, Smartphone, Shield, MapPin, Truck, Tag, Clock, Send
+  Car, Smartphone, Shield, MapPin, Truck, Tag, Clock, Send, MessageCircle
 } from "lucide-react";
+import { SiVisa, SiMastercard, SiBinance } from "react-icons/si";
 import { Link } from "wouter";
 
 // Premium European destination images from Unsplash
@@ -283,6 +284,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Strategic Alliances Section */}
+      <AlliancesSection />
+
       {/* VIP Club Section */}
       <VIPClubSection />
 
@@ -307,6 +311,7 @@ export default function Home() {
 
       <Footer />
       <Chatbot />
+      <WhatsAppButton />
     </div>
   );
 }
@@ -482,5 +487,72 @@ function VIPClubSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function AlliancesSection() {
+  const { t } = useI18n();
+  
+  const alliances = [
+    { name: "Avianca", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Avianca_Logo.svg/200px-Avianca_Logo.svg.png" },
+    { name: "Iberia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Iberia_Logo.svg/200px-Iberia_Logo.svg.png" },
+    { name: "Air Europa", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Air_Europa_logo.svg/200px-Air_Europa_logo.svg.png" },
+    { name: "Booking.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/200px-Booking.com_logo.svg.png" },
+    { name: "Civitatis", logo: "https://www.civitatis.com/f/rs/logo.svg" },
+  ];
+
+  return (
+    <section className="py-16 bg-white" data-testid="section-alliances">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <Badge className="mb-4" data-testid="badge-alliances">{t("alliances.badge")}</Badge>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4" data-testid="text-alliances-title">{t("alliances.title")}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-alliances-subtitle">{t("alliances.subtitle")}</p>
+        </div>
+        
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          {alliances.map((alliance, idx) => (
+            <div key={idx} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" data-testid={`alliance-${idx}`}>
+              <img src={alliance.logo} alt={alliance.name} className="h-8 md:h-10 w-auto object-contain" />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-100">
+          <p className="text-center text-sm text-muted-foreground mb-4">{t("alliances.paymentMethods")}</p>
+          <div className="flex justify-center items-center gap-6 flex-wrap">
+            <SiVisa className="w-12 h-8 text-[#1A1F71]" />
+            <SiMastercard className="w-10 h-8 text-[#EB001B]" />
+            <div className="flex items-center gap-1 px-3 py-1 bg-purple-100 rounded-full">
+              <span className="text-purple-600 font-semibold text-sm">Scalapay</span>
+            </div>
+            <SiBinance className="w-8 h-8 text-[#F0B90B]" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhatsAppButton() {
+  const { t } = useI18n();
+  const whatsappNumber = "34612345678";
+  const message = encodeURIComponent(t("whatsapp.message"));
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+  return (
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+      data-testid="button-whatsapp"
+      aria-label={t("whatsapp.ariaLabel")}
+    >
+      <MessageCircle className="w-7 h-7 fill-white" />
+      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-gray-800 px-3 py-2 rounded-lg shadow-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        {t("whatsapp.tooltip")}
+      </span>
+    </a>
   );
 }

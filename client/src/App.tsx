@@ -10,6 +10,8 @@ import { I18nProvider } from "@/lib/i18n";
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import Dashboard from "@/pages/Dashboard";
+import Tools from "@/pages/Tools";
+import Policies from "@/pages/Policies";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -32,6 +34,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
+      <Route path="/tools" component={Tools} />
+      <Route path="/policies" component={Policies} />
       
       {/* Protected Routes */}
       <Route path="/app/profile">
