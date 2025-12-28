@@ -22,16 +22,17 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.signout": "Cerrar Sesión",
     
     // Hero
-    "hero.badge": "Agencia de Viajes Premium a Europa",
-    "hero.title1": "Descubre la",
-    "hero.titleHighlight": "Magia",
-    "hero.title2": "de Europa",
-    "hero.subtitle": "Viajes personalizados, experiencias exclusivas y el mejor servicio en español. Tu aventura europea comienza aquí.",
-    "hero.years": "+15 años",
-    "hero.experience": "de experiencia",
-    "hero.travelers": "+50,000",
-    "hero.happyTravelers": "viajeros felices",
-    "hero.rating": "calificación",
+    "hero.badge": "Agencia Premium #1 Colombia - Europa",
+    "hero.title1": "Vive Europa",
+    "hero.titleHighlight": "Como Nunca Antes",
+    "hero.title2": "",
+    "hero.subtitle": "Experiencias exclusivas diseñadas para colombianos exigentes. Vuelos directos, hoteles de lujo y momentos inolvidables.",
+    "hero.years": "15K+",
+    "hero.experience": "Viajeros Felices",
+    "hero.travelers": "50+",
+    "hero.happyTravelers": "Destinos Europa",
+    "hero.rating": "Satisfacción",
+    "hero.satisfaction": "98%",
     
     // Contact Form
     "contact.title": "Cotiza tu Viaje Gratis",
@@ -69,9 +70,9 @@ const translations: Record<Language, Record<string, string>> = {
     "features.paymentsDesc": "Financia tu viaje en cuotas sin intereses con tarjeta de crédito.",
     
     // Destinations
-    "destinations.badge": "Inspiración",
-    "destinations.title": "Destinos Populares",
-    "destinations.subtitle": "Los lugares más soñados por nuestros viajeros colombianos",
+    "destinations.badge": "Destinos Populares",
+    "destinations.title": "Descubre Europa",
+    "destinations.subtitle": "Los destinos más solicitados por viajeros colombianos. Paquetes todo incluido con vuelos directos.",
     "destinations.viewAll": "Ver Todos los Destinos",
     "destinations.days": "días",
     "destinations.from": "Desde",
@@ -88,7 +89,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Testimonials
     "testimonials.badge": "Testimonios",
-    "testimonials.title": "Lo que Dicen Nuestros Viajeros",
+    "testimonials.title": "Lo Que Dicen Nuestros Viajeros",
+    "testimonials.subtitle": "Miles de colombianos han confiado en nosotros para vivir experiencias inolvidables en Europa.",
     
     // Process
     "process.badge": "Cómo Funciona",
@@ -195,9 +197,21 @@ const translations: Record<Language, Record<string, string>> = {
     "pkg.tag.cultural": "Cultural",
     
     // Testimonials data
-    "testimonial.1.text": "Increíble experiencia! El equipo de Trips Europa organizó nuestra luna de miel perfecta. Cada detalle estuvo cuidado, desde los traslados hasta las reservas en restaurantes.",
-    "testimonial.2.text": "Viajamos en familia por primera vez a Europa y fue mágico. La asesoría para la visa fue invaluable y el itinerario estuvo perfecto para nuestros hijos.",
-    "testimonial.3.text": "Ya he viajado 3 veces con ellos. Siempre superan mis expectativas. Los precios son justos y la atención personalizada hace toda la diferencia.",
+    "testimonial.1.name": "María González",
+    "testimonial.1.location": "Bogotá, Colombia",
+    "testimonial.1.trip": "París & Ámsterdam",
+    "testimonial.1.tripLabel": "Viaje realizado",
+    "testimonial.1.text": "Increíble experiencia. El equipo de Trips Europa organizó cada detalle de nuestro viaje a París. Los hoteles fueron espectaculares y el servicio impecable.",
+    "testimonial.2.name": "Carlos Ramírez",
+    "testimonial.2.location": "Medellín, Colombia",
+    "testimonial.2.trip": "Tour Italia Completo",
+    "testimonial.2.tripLabel": "Viaje realizado",
+    "testimonial.2.text": "Viajamos en familia a Italia y fue perfecto. La atención personalizada y los tours privados hicieron la diferencia. 100% recomendado.",
+    "testimonial.3.name": "Ana Martínez",
+    "testimonial.3.location": "Cali, Colombia",
+    "testimonial.3.trip": "Barcelona & Madrid",
+    "testimonial.3.tripLabel": "Viaje realizado",
+    "testimonial.3.text": "El programa VIP Club es excelente. He viajado 3 veces con ellos y cada experiencia supera la anterior. Profesionalismo y lujo garantizado.",
     
     // Footer destinations
     "footer.dest.paris": "París",
@@ -308,16 +322,17 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.signout": "Sign Out",
     
     // Hero
-    "hero.badge": "Premium European Travel Agency",
-    "hero.title1": "Discover the",
-    "hero.titleHighlight": "Magic",
-    "hero.title2": "of Europe",
-    "hero.subtitle": "Personalized trips, exclusive experiences, and the best service. Your European adventure starts here.",
-    "hero.years": "+15 years",
-    "hero.experience": "of experience",
-    "hero.travelers": "+50,000",
-    "hero.happyTravelers": "happy travelers",
-    "hero.rating": "rating",
+    "hero.badge": "#1 Premium Agency Colombia - Europe",
+    "hero.title1": "Experience Europe",
+    "hero.titleHighlight": "Like Never Before",
+    "hero.title2": "",
+    "hero.subtitle": "Exclusive experiences designed for discerning Colombians. Direct flights, luxury hotels and unforgettable moments.",
+    "hero.years": "15K+",
+    "hero.experience": "Happy Travelers",
+    "hero.travelers": "50+",
+    "hero.happyTravelers": "European Destinations",
+    "hero.rating": "Satisfaction",
+    "hero.satisfaction": "98%",
     
     // Contact Form
     "contact.title": "Get a Free Quote",
@@ -355,9 +370,9 @@ const translations: Record<Language, Record<string, string>> = {
     "features.paymentsDesc": "Finance your trip in interest-free installments with credit card.",
     
     // Destinations
-    "destinations.badge": "Inspiration",
-    "destinations.title": "Popular Destinations",
-    "destinations.subtitle": "The most dreamed places by our Colombian travelers",
+    "destinations.badge": "Popular Destinations",
+    "destinations.title": "Discover Europe",
+    "destinations.subtitle": "The most requested destinations by Colombian travelers. All-inclusive packages with direct flights.",
     "destinations.viewAll": "View All Destinations",
     "destinations.days": "days",
     "destinations.from": "From",
@@ -375,6 +390,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Testimonials
     "testimonials.badge": "Testimonials",
     "testimonials.title": "What Our Travelers Say",
+    "testimonials.subtitle": "Thousands of Colombians have trusted us to live unforgettable experiences in Europe.",
     
     // Process
     "process.badge": "How It Works",
@@ -481,9 +497,21 @@ const translations: Record<Language, Record<string, string>> = {
     "pkg.tag.cultural": "Cultural",
     
     // Testimonials data
-    "testimonial.1.text": "Incredible experience! The Trips Europa team organized our perfect honeymoon. Every detail was taken care of, from transfers to restaurant reservations.",
-    "testimonial.2.text": "We traveled as a family to Europe for the first time and it was magical. The visa advice was invaluable and the itinerary was perfect for our children.",
-    "testimonial.3.text": "I've traveled with them 3 times now. They always exceed my expectations. Fair prices and personalized attention make all the difference.",
+    "testimonial.1.name": "María González",
+    "testimonial.1.location": "Bogotá, Colombia",
+    "testimonial.1.trip": "Paris & Amsterdam",
+    "testimonial.1.tripLabel": "Trip completed",
+    "testimonial.1.text": "Incredible experience. The Trips Europa team organized every detail of our trip to Paris. The hotels were spectacular and the service impeccable.",
+    "testimonial.2.name": "Carlos Ramírez",
+    "testimonial.2.location": "Medellín, Colombia",
+    "testimonial.2.trip": "Complete Italy Tour",
+    "testimonial.2.tripLabel": "Trip completed",
+    "testimonial.2.text": "We traveled as a family to Italy and it was perfect. The personalized attention and private tours made the difference. 100% recommended.",
+    "testimonial.3.name": "Ana Martínez",
+    "testimonial.3.location": "Cali, Colombia",
+    "testimonial.3.trip": "Barcelona & Madrid",
+    "testimonial.3.tripLabel": "Trip completed",
+    "testimonial.3.text": "The VIP Club program is excellent. I have traveled 3 times with them and each experience surpasses the previous one. Professionalism and luxury guaranteed.",
     
     // Footer destinations
     "footer.dest.paris": "Paris",

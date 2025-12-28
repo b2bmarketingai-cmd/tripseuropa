@@ -78,9 +78,9 @@ export default function Home() {
   ];
 
   const testimonials = [
-    { name: "María Fernanda López", location: "Bogotá, Colombia", textKey: "testimonial.1.text", rating: 5 },
-    { name: "Carlos Rodríguez", location: "Medellín, Colombia", textKey: "testimonial.2.text", rating: 5 },
-    { name: "Andrea Martínez", location: "Cali, Colombia", textKey: "testimonial.3.text", rating: 5 },
+    { nameKey: "testimonial.1.name", locationKey: "testimonial.1.location", tripKey: "testimonial.1.trip", tripLabelKey: "testimonial.1.tripLabel", textKey: "testimonial.1.text", rating: 5 },
+    { nameKey: "testimonial.2.name", locationKey: "testimonial.2.location", tripKey: "testimonial.2.trip", tripLabelKey: "testimonial.2.tripLabel", textKey: "testimonial.2.text", rating: 5 },
+    { nameKey: "testimonial.3.name", locationKey: "testimonial.3.location", tripKey: "testimonial.3.trip", tripLabelKey: "testimonial.3.tripLabel", textKey: "testimonial.3.text", rating: 5 },
   ];
 
   const services = [
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-6 pt-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
                 <StatItem icon={<Award className="w-6 h-6 text-accent" />} value={t("hero.years")} label={t("hero.experience")} testId="text-stat-years" />
                 <StatItem icon={<Users className="w-6 h-6 text-accent" />} value={t("hero.travelers")} label={t("hero.happyTravelers")} testId="text-stat-travelers" />
-                <StatItem icon={<Star className="w-6 h-6 text-accent fill-accent" />} value="4.9/5" label={t("hero.rating")} testId="text-stat-rating" />
+                <StatItem icon={<Star className="w-6 h-6 text-accent fill-accent" />} value={t("hero.satisfaction")} label={t("hero.rating")} testId="text-stat-rating" />
               </div>
             </div>
 
@@ -255,11 +255,12 @@ export default function Home() {
           <div className="text-center mb-16">
             <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-testimonials">{t("testimonials.badge")}</Badge>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4" data-testid="text-testimonials-title">{t("testimonials.title")}</h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto" data-testid="text-testimonials-subtitle">{t("testimonials.subtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} name={testimonial.name} location={testimonial.location} text={t(testimonial.textKey)} rating={testimonial.rating} testId={`card-testimonial-${index}`} />
+              <TestimonialCard key={index} name={t(testimonial.nameKey)} location={t(testimonial.locationKey)} trip={t(testimonial.tripKey)} tripLabel={t(testimonial.tripLabelKey)} text={t(testimonial.textKey)} rating={testimonial.rating} testId={`card-testimonial-${index}`} />
             ))}
           </div>
         </div>
@@ -401,13 +402,22 @@ function BlogCard({ image, title, description, category, date, readTime, minLabe
   );
 }
 
-function TestimonialCard({ name, location, text, rating, testId }: { name: string, location: string, text: string, rating: number, testId: string }) {
+function TestimonialCard({ name, location, trip, tripLabel, text, rating, testId }: { name: string, location: string, trip: string, tripLabel: string, text: string, rating: number, testId: string }) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10" data-testid={testId}>
       <Quote className="w-10 h-10 text-accent mb-4" />
-      <p className="text-white/90 leading-relaxed mb-6">{text}</p>
+      <p className="text-white/90 leading-relaxed mb-6" data-testid={`${testId}-text`}>{text}</p>
       <div className="flex items-center gap-1 mb-4">{Array.from({ length: rating }).map((_, i) => (<Star key={i} className="w-4 h-4 text-accent fill-accent" />))}</div>
-      <div><div className="font-bold text-white">{name}</div><div className="text-white/60 text-sm">{location}</div></div>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <div className="font-bold text-white" data-testid={`${testId}-name`}>{name}</div>
+          <div className="text-white/60 text-sm" data-testid={`${testId}-location`}>{location}</div>
+        </div>
+        <div className="text-right">
+          <div className="text-white/50 text-xs">{tripLabel}</div>
+          <div className="text-accent font-semibold text-sm" data-testid={`${testId}-trip`}>{trip}</div>
+        </div>
+      </div>
     </div>
   );
 }
