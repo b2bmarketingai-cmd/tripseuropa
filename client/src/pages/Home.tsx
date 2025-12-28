@@ -12,7 +12,8 @@ import { useI18n } from "@/lib/i18n";
 import { useToast } from "@/hooks/use-toast";
 import { 
   ArrowRight, Star, Plane, Hotel, Users, Award, CheckCircle, Quote,
-  Car, Smartphone, Shield, MapPin, Truck, Tag, Clock, Send, MessageCircle
+  Car, Smartphone, Shield, MapPin, Truck, Tag, Clock, Send, MessageCircle,
+  HeadphonesIcon, Briefcase, UserCheck, Compass
 } from "lucide-react";
 import { SiVisa, SiMastercard, SiBinance } from "react-icons/si";
 import { Link } from "wouter";
@@ -284,6 +285,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Complete Your Trip Section */}
+      <CompleteYourTripSection />
+
       {/* Strategic Alliances Section */}
       <AlliancesSection />
 
@@ -484,6 +488,68 @@ function VIPClubSection() {
             </Button>
           </form>
           <p className="text-xs text-muted-foreground mt-4" data-testid="text-vipclub-nospam">{t("vipClub.noSpam")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CompleteYourTripSection() {
+  const { t } = useI18n();
+  
+  const features = [
+    {
+      icon: <UserCheck className="w-8 h-8" />,
+      titleKey: "completeTrip.advisor.title",
+      descKey: "completeTrip.advisor.desc",
+    },
+    {
+      icon: <Compass className="w-8 h-8" />,
+      titleKey: "completeTrip.complete.title",
+      descKey: "completeTrip.complete.desc",
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      titleKey: "completeTrip.insurance.title",
+      descKey: "completeTrip.insurance.desc",
+    },
+    {
+      icon: <HeadphonesIcon className="w-8 h-8" />,
+      titleKey: "completeTrip.support.title",
+      descKey: "completeTrip.support.desc",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-br from-primary via-primary to-primary/90 relative overflow-hidden" data-testid="section-complete-trip">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-complete-trip">{t("completeTrip.badge")}</Badge>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6" data-testid="text-complete-trip-title">{t("completeTrip.title")}</h2>
+          <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed" data-testid="text-complete-trip-subtitle">{t("completeTrip.subtitle")}</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, idx) => (
+            <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 group" data-testid={`card-complete-feature-${idx}`}>
+              <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3 font-display">{t(feature.titleKey)}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">{t(feature.descKey)}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-3 bg-accent/20 border border-accent/30 rounded-full px-6 py-3">
+            <Briefcase className="w-5 h-5 text-accent" />
+            <span className="text-white font-medium">{t("completeTrip.luggage")}</span>
+          </div>
         </div>
       </div>
     </section>

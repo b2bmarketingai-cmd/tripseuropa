@@ -369,6 +369,20 @@ const translations: Record<Language, Record<string, string>> = {
     "policies.refunds": "Reembolsos",
     "policies.returns": "Devoluciones",
     
+    // Complete Your Trip
+    "completeTrip.badge": "Viaja Tranquilo",
+    "completeTrip.title": "Completa tu Viaje con Trips Europa",
+    "completeTrip.subtitle": "Nuestros asesores te acompanan desde la planificacion hasta el regreso, asegurandose de que cada detalle de tu viaje sea perfecto.",
+    "completeTrip.advisor.title": "Asesores Personalizados",
+    "completeTrip.advisor.desc": "Te acompanamos desde la planificacion hasta tu regreso, cuidando cada detalle.",
+    "completeTrip.complete.title": "Viaje Completo",
+    "completeTrip.complete.desc": "Vuelos, hospedaje y actividades disenadas a tu medida en un solo lugar.",
+    "completeTrip.insurance.title": "Seguro Incluido",
+    "completeTrip.insurance.desc": "Viaja protegido con seguros de viaje y equipaje incluidos en todos nuestros paquetes.",
+    "completeTrip.support.title": "Soporte 24/7",
+    "completeTrip.support.desc": "Estamos disponibles las 24 horas para cualquier emergencia o consulta durante tu viaje.",
+    "completeTrip.luggage": "Equipaje incluido en todos nuestros vuelos",
+    
     // Strategic Alliances
     "alliances.badge": "Alianzas Estratégicas",
     "alliances.title": "Trabajamos con los Mejores",
@@ -739,6 +753,20 @@ const translations: Record<Language, Record<string, string>> = {
     "policies.cancellations": "Cancellations",
     "policies.refunds": "Refunds",
     "policies.returns": "Returns",
+    
+    // Complete Your Trip
+    "completeTrip.badge": "Travel with Peace of Mind",
+    "completeTrip.title": "Complete Your Trip with Trips Europa",
+    "completeTrip.subtitle": "Our advisors accompany you from planning to return, ensuring every detail of your trip is perfect.",
+    "completeTrip.advisor.title": "Personal Advisors",
+    "completeTrip.advisor.desc": "We accompany you from planning to your return, taking care of every detail.",
+    "completeTrip.complete.title": "Complete Travel",
+    "completeTrip.complete.desc": "Flights, accommodations, and activities tailored to you, all in one place.",
+    "completeTrip.insurance.title": "Insurance Included",
+    "completeTrip.insurance.desc": "Travel protected with travel and luggage insurance included in all our packages.",
+    "completeTrip.support.title": "24/7 Support",
+    "completeTrip.support.desc": "We are available 24 hours a day for any emergency or inquiry during your trip.",
+    "completeTrip.luggage": "Luggage included on all our flights",
     
     // Strategic Alliances
     "alliances.badge": "Strategic Alliances",
