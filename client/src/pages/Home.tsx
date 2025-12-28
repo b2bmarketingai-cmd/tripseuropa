@@ -133,7 +133,7 @@ export default function Home() {
               </Badge>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight animate-fade-in" data-testid="text-hero-title">
-                {t("hero.title1")} <span className="text-accent italic">{t("hero.titleHighlight")}</span> {t("hero.title2")}
+                {t("hero.title1")} <span className="text-accent italic">{t("hero.titleHighlight")}</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }} data-testid="text-hero-subtitle">
