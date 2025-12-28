@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { Facebook, Instagram, MapPin, Mail, Phone, Youtube } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard } from "react-icons/si";
+import logoUrl from "@assets/logo_oficial_tripseuropa.com_1766951188994.png";
 
 export function Footer() {
   const { t } = useI18n();
@@ -39,12 +40,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center" data-testid="link-footer-logo">
-              <img 
-                src="/logo.png" 
-                alt="Trips Europa" 
-                className="h-14 w-auto object-contain brightness-0 invert"
-              />
+            <Link href="/" className="inline-block" data-testid="link-footer-logo">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 inline-block">
+                <img 
+                  src={logoUrl} 
+                  alt="Trips Europa" 
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
             </Link>
             <p className="text-white/60 leading-relaxed max-w-xs" data-testid="text-footer-description">
               {t("footer.description")}
