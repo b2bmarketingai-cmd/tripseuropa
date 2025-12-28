@@ -39,15 +39,11 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-xl font-display group-hover:scale-105 transition-transform">
-              T
-            </div>
-            <span className={cn(
-              "font-display font-bold text-2xl tracking-tight transition-colors",
-              scrolled || isOpen ? "text-white" : "text-white"
-            )}>
-              Trips<span className="text-accent">Europa</span>
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Trips Europa Logo" 
+              className="h-12 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" 
+            />
           </Link>
 
           {/* Desktop Nav */}

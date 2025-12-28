@@ -3,6 +3,9 @@ import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 import { relations } from "drizzle-orm";
 
+export * from "./models/auth";
+export * from "./models/chat";
+
 // === TABLE DEFINITIONS ===
 
 // Users table (extends auth user model conceptually)
