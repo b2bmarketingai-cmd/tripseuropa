@@ -18,26 +18,28 @@ import {
 import { SiVisa, SiMastercard, SiBinance } from "react-icons/si";
 import { Link } from "wouter";
 
-// Premium European destination images from Unsplash
-const HERO_IMAGE = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop";
-const DESTINATION_PARIS = "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop";
-const DESTINATION_ROME = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop";
-const DESTINATION_BARCELONA = "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop";
-const DESTINATION_SANTORINI = "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=1935&auto=format&fit=crop";
-const DESTINATION_AMSTERDAM = "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=2070&auto=format&fit=crop";
-const DESTINATION_LONDON = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop";
+// Optimized images with responsive sizes
+const HERO_IMAGE = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop";
+const HERO_IMAGE_SM = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=75&w=768&auto=format&fit=crop";
+const HERO_IMAGE_MD = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1280&auto=format&fit=crop";
+const DESTINATION_PARIS = "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=70&w=800&auto=format&fit=crop";
+const DESTINATION_ROME = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=70&w=800&auto=format&fit=crop";
+const DESTINATION_BARCELONA = "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=70&w=800&auto=format&fit=crop";
+const DESTINATION_SANTORINI = "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=70&w=800&auto=format&fit=crop";
+const DESTINATION_AMSTERDAM = "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=70&w=800&auto=format&fit=crop";
+const DESTINATION_LONDON = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=70&w=800&auto=format&fit=crop";
 
-const PACKAGE_ROMANTIC = "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1886&auto=format&fit=crop";
-const PACKAGE_ADVENTURE = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop";
-const PACKAGE_CULTURAL = "https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=2070&auto=format&fit=crop";
+const PACKAGE_ROMANTIC = "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=70&w=800&auto=format&fit=crop";
+const PACKAGE_ADVENTURE = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=70&w=800&auto=format&fit=crop";
+const PACKAGE_CULTURAL = "https://images.unsplash.com/photo-1541849546-216549ae216d?q=70&w=800&auto=format&fit=crop";
 
-const TESTIMONIAL_BG = "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=2031&auto=format&fit=crop";
+const TESTIMONIAL_BG = "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1000&auto=format&fit=crop";
 
-// Blog images
-const BLOG_VISA = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=600&auto=format&fit=crop";
-const BLOG_PARIS = "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop";
-const BLOG_MADRID = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop";
-const BLOG_ROME = "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop";
+// Blog images - smaller for thumbnails
+const BLOG_VISA = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=70&w=400&auto=format&fit=crop";
+const BLOG_PARIS = "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=70&w=400&auto=format&fit=crop";
+const BLOG_MADRID = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=70&w=400&auto=format&fit=crop";
+const BLOG_ROME = "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=70&w=400&auto=format&fit=crop";
 
 export default function Home() {
   const { t, language } = useI18n();
@@ -110,7 +112,15 @@ export default function Home() {
       {/* Hero Section with Contact Form */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" data-testid="section-hero">
         <div className="absolute inset-0 z-0">
-          <img src={HERO_IMAGE} alt={t("hero.badge")} className="w-full h-full object-cover" />
+          <img 
+            src={HERO_IMAGE} 
+            srcSet={`${HERO_IMAGE_SM} 768w, ${HERO_IMAGE_MD} 1280w, ${HERO_IMAGE} 1920w`}
+            sizes="100vw"
+            alt={t("hero.badge")} 
+            className="w-full h-full object-cover" 
+            loading="eager" 
+            fetchPriority="high" 
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/30"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/40"></div>
         </div>
@@ -251,7 +261,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-24 bg-primary relative overflow-hidden" data-testid="section-testimonials">
         <div className="absolute inset-0 opacity-10">
-          <img src={TESTIMONIAL_BG} alt="" className="w-full h-full object-cover" />
+          <img src={TESTIMONIAL_BG} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -345,7 +355,7 @@ function ServiceCard({ icon, title, description, testId }: { icon: React.ReactNo
 function DestinationCard({ image, title, country, price, rating, days, daysLabel, viewMoreLabel, testId }: { image: string, title: string, country: string, price: string, rating: number, days: number, daysLabel: string, viewMoreLabel: string, testId: string }) {
   return (
     <div className="group rounded-2xl overflow-hidden relative aspect-[4/5] cursor-pointer" data-testid={testId}>
-      <img src={image} alt={`${title}, ${country}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <img src={image} alt={`${title}, ${country}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent"></div>
       <div className="absolute top-4 left-4"><Badge className="bg-white/90 text-primary backdrop-blur-sm">{days} {daysLabel}</Badge></div>
       <div className="absolute bottom-0 left-0 w-full p-6 text-white">
@@ -365,7 +375,7 @@ function PackageCard({ image, title, description, price, features, tag, featured
   return (
     <Card className={`overflow-hidden group ${featured ? "ring-2 ring-accent shadow-xl" : ""}`} data-testid={testId}>
       <div className="relative h-56 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
         <Badge className="absolute top-4 left-4 bg-accent text-primary">{tag}</Badge>
         {featured && <Badge className="absolute top-4 right-4 bg-primary text-white">{bestSellerLabel}</Badge>}
       </div>
@@ -392,7 +402,7 @@ function BlogCard({ image, title, description, category, date, readTime, minLabe
   return (
     <div className="group rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300" data-testid={testId}>
       <div className="relative h-48 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-testid={`${testId}-image`} />
+        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" data-testid={`${testId}-image`} />
         <Badge className="absolute top-4 left-4 bg-accent text-primary" data-testid={`${testId}-category`}>{category}</Badge>
       </div>
       <div className="p-5">
@@ -579,7 +589,7 @@ function AlliancesSection() {
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {alliances.map((alliance, idx) => (
             <div key={idx} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" data-testid={`alliance-${idx}`}>
-              <img src={alliance.logo} alt={alliance.name} className="h-8 md:h-10 w-auto object-contain" />
+              <img src={alliance.logo} alt={alliance.name} className="h-8 md:h-10 w-auto object-contain" loading="lazy" />
             </div>
           ))}
         </div>

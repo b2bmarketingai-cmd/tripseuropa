@@ -37,15 +37,16 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white pt-20 pb-10" data-testid="footer">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 mb-16">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-2 space-y-6">
+          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-2 space-y-4 sm:space-y-6">
             <Link href="/" className="inline-block" data-testid="link-footer-logo">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 inline-block">
                 <img 
                   src={logoUrl} 
                   alt="Trips Europa" 
-                  className="h-12 w-auto object-contain"
+                  className="h-10 sm:h-12 w-auto object-contain"
+                  loading="lazy"
                 />
               </div>
             </Link>
