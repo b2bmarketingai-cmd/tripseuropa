@@ -780,13 +780,13 @@ export default function Blog() {
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/desde-brasil">
+            <Link href="/blog/brasil">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-brasil">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <MapPin className="w-5 h-5 text-white/60" />
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-white font-bold text-sm">Brasil</h3>
-                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
               </Card>
             </Link>
             <Link href="/blog/argentina">

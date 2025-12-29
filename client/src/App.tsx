@@ -34,6 +34,7 @@ import BlogCostaRica from "@/pages/BlogCostaRica";
 import BlogDominicana from "@/pages/BlogDominicana";
 import BlogCaribe from "@/pages/BlogCaribe";
 import BlogMexico from "@/pages/BlogMexico";
+import BlogBrasil from "@/pages/BlogBrasil";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -69,6 +70,7 @@ function Router() {
       <Route path="/blog/dominicana" component={BlogDominicana} />
       <Route path="/blog/caribe" component={BlogCaribe} />
       <Route path="/blog/mexico" component={BlogMexico} />
+      <Route path="/blog/brasil" component={BlogBrasil} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
