@@ -60,7 +60,7 @@ const DESTINATIONS = [
   },
   {
     id: "croatia",
-    image: "https://images.unsplash.com/photo-1555990538-1c7d85d68db2?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=80&w=800&auto=format&fit=crop",
     name: { es: "Croacia", en: "Croatia" },
     trips: 5,
   },
