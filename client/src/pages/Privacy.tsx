@@ -16,13 +16,13 @@ export default function Privacy() {
         es: [
           "Datos personales: nombre, correo electronico, telefono, direccion",
           "Informacion de viaje: pasaporte, preferencias, historial de viajes",
-          "Datos de pago: procesados de forma segura a traves de Stripe",
+          "Datos de pago: procesados de forma segura con encriptacion SSL",
           "Informacion de navegacion: cookies y datos de uso del sitio"
         ],
         en: [
           "Personal data: name, email, phone, address",
           "Travel information: passport, preferences, travel history",
-          "Payment data: securely processed through Stripe",
+          "Payment data: securely processed with SSL encryption",
           "Navigation information: cookies and site usage data"
         ]
       }
