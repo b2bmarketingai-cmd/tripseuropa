@@ -93,7 +93,7 @@ const BLOG_POSTS = [
   },
   {
     id: "mercados-navidenos",
-    image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Mercados Navidenos en Europa: Viena, Praga, Estrasburgo", en: "Christmas Markets in Europe: Vienna, Prague, Strasbourg" },
     excerpt: { es: "Vin chaud, artesanias, luces y magia invernal. Los mejores mercados navidenos europeos para visitar.", en: "Mulled wine, crafts, lights and winter magic. The best European Christmas markets to visit." },
     category: "destinos",
@@ -165,7 +165,7 @@ const BLOG_POSTS = [
   },
   {
     id: "madrid-vs-barcelona",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Madrid vs Barcelona: Cual Elegir para tu Primer Viaje?", en: "Madrid vs Barcelona: Which One to Choose for Your First Trip?" },
     excerpt: { es: "Comparativa completa: clima, costo, atracciones, gastronomia y ambiente. Te ayudamos a decidir.", en: "Complete comparison: weather, cost, attractions, gastronomy and atmosphere. We help you decide." },
     category: "destinos",
@@ -177,7 +177,7 @@ const BLOG_POSTS = [
   },
   {
     id: "seguro-viaje-europa",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Seguro de Viaje para Europa: Cual Elegir y Por Que es Obligatorio", en: "Travel Insurance for Europe: Which to Choose and Why It's Mandatory" },
     excerpt: { es: "Requisitos Schengen, coberturas necesarias, mejores companias y como reclamar si lo necesitas.", en: "Schengen requirements, necessary coverage, best companies and how to claim if you need it." },
     category: "planificacion",
@@ -561,7 +561,7 @@ const BLOG_POSTS = [
   },
   {
     id: "enchufes-europa-adaptadores",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Enchufes en Europa: Que Adaptador Necesitas", en: "Plugs in Europe: What Adapter Do You Need" },
     excerpt: { es: "Tipos de enchufes por pais, adaptadores universales y como cargar todos tus dispositivos.", en: "Plug types by country, universal adapters and how to charge all your devices." },
     category: "consejos",
@@ -657,7 +657,7 @@ const BLOG_POSTS = [
   },
   {
     id: "croatia-costa-dalmatia",
-    image: "https://images.unsplash.com/photo-1555990538-1e7c9c7a2b44?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555990538-1e6f13e0e101?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Croacia: Dubrovnik, Split y las Islas Dalmacias", en: "Croatia: Dubrovnik, Split and the Dalmatian Islands" },
     excerpt: { es: "El destino de moda en Europa. Playas, Game of Thrones y islas paradisiacas.", en: "Europe's trending destination. Beaches, Game of Thrones and paradise islands." },
     category: "destinos",
@@ -681,7 +681,7 @@ const BLOG_POSTS = [
   },
   {
     id: "malta-playas-historia",
-    image: "https://images.unsplash.com/photo-1555881400-69c5c47a40fd?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Malta: Playas, Historia y Cursos de Ingles", en: "Malta: Beaches, History and English Courses" },
     excerpt: { es: "La Valeta, Mdina, Blue Lagoon. El destino perfecto para combinar playa y cultura.", en: "Valletta, Mdina, Blue Lagoon. The perfect destination to combine beach and culture." },
     category: "destinos",
