@@ -26,7 +26,7 @@ const PACKAGES_COLOMBIA = [
   },
   {
     id: "espana-clasica-col",
-    title: "Espana Clasica desde Medellin",
+    title: "España Clasica desde Medellin",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     days: 12,
     price: 2100,
@@ -81,7 +81,7 @@ const TESTIMONIALS_COLOMBIA = [
   {
     name: "Maria Fernanda Lopez",
     city: "Cali",
-    trip: "Espana Total 12 dias",
+    trip: "España Total 12 dias",
     text: "Primera vez en Europa y quede encantada. La organizacion fue impecable y los precios muy justos.",
     rating: 5,
   },

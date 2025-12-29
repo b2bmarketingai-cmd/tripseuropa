@@ -25,7 +25,7 @@ const PACKAGES_MEXICO = [
   },
   {
     id: "espana-total-mx",
-    title: "Espana Total desde Cancun",
+    title: "España Total desde Cancun",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada", "Valencia"],
     days: 14,
     price: 2400,
@@ -66,7 +66,7 @@ const TESTIMONIALS_MEXICO = [
   {
     name: "Carlos Rodriguez",
     city: "Ciudad de Mexico",
-    trip: "Espana Total 14 dias",
+    trip: "España Total 14 dias",
     text: "Excelente servicio desde el inicio. Los hoteles fueron de primera y el guia en espanol muy profesional.",
     rating: 5,
   },

@@ -29,7 +29,7 @@ import { Label } from "@/components/ui/label";
 
 const DESTINATIONS_MENU = {
   es: [
-    { name: "Europa", href: "/destinations", items: ["Francia", "Italia", "Espana", "Alemania", "Portugal", "Grecia"] },
+    { name: "Europa", href: "/destinations", items: ["Francia", "Italia", "España", "Alemania", "Portugal", "Grecia"] },
   ],
   en: [
     { name: "Europe", href: "/destinations", items: ["France", "Italy", "Spain", "Germany", "Portugal", "Greece"] },
@@ -65,7 +65,7 @@ const OFFERS_MENU = {
 };
 
 const COUNTRY_FLAGS: Record<string, { flag: string; name: string; code: string }> = {
-  es: { flag: "🇪🇸", name: "Espana", code: "ES" },
+  es: { flag: "🇪🇸", name: "España", code: "ES" },
   en: { flag: "🇬🇧", name: "English", code: "EN" },
   pt: { flag: "🇧🇷", name: "Brasil", code: "PT" },
 };

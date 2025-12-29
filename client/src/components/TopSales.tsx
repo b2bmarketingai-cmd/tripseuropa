@@ -41,7 +41,7 @@ const TOP_SALES = [
     id: 4,
     image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
     title: { es: "Andalucia Magica", en: "Magical Andalusia" },
-    country: { es: "Espana en 9 Dias", en: "Spain in 9 Days" },
+    country: { es: "España en 9 Dias", en: "Spain in 9 Days" },
     currentPrice: 1749,
     originalPrice: 3499,
     discount: 50,

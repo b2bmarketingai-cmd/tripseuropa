@@ -44,7 +44,7 @@ const PACKAGES = [
     id: "espana-rapida",
     category: "express",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=70&w=800&auto=format&fit=crop",
-    title: { es: "Espana Rapida", en: "Quick Spain" },
+    title: { es: "España Rapida", en: "Quick Spain" },
     desc: { es: "Madrid y Barcelona en 7 dias. Arte, gastronomia, flamenco y playas mediterraneas.", en: "Madrid and Barcelona in 7 days. Art, gastronomy, flamenco and Mediterranean beaches." },
     priceUSD: 1350,
     days: 7,

@@ -38,7 +38,7 @@ const PACKAGES_ARGENTINA = [
   },
   {
     id: "espana-raices-ar",
-    title: "Espana de las Raices desde Rosario",
+    title: "España de las Raices desde Rosario",
     destinations: ["Madrid", "Galicia", "Asturias", "Pais Vasco"],
     days: 12,
     price: 2400,
@@ -73,7 +73,7 @@ const TESTIMONIALS_ARGENTINA = [
   {
     name: "Lucia Fernandez",
     city: "Cordoba", 
-    trip: "Espana de las Raices",
+    trip: "España de las Raices",
     text: "Conoci Galicia donde nacio mi bisabuelo. Los hoteles fueron excelentes y el guia muy conocedor.",
     rating: 5,
   },
@@ -101,7 +101,7 @@ const FAQ_ARGENTINA = [
   },
   {
     question: "Tienen paquetes para buscar raices italianas o espanolas?",
-    answer: "Si! Tenemos paquetes especiales para argentinos que buscan sus raices en Italia y Espana. Incluimos visitas a registros civiles, iglesias y pueblos de origen familiar."
+    answer: "Si! Tenemos paquetes especiales para argentinos que buscan sus raices en Italia y España. Incluimos visitas a registros civiles, iglesias y pueblos de origen familiar."
   },
 ];
 
@@ -125,7 +125,7 @@ export default function FromArgentina() {
     noVisa: { es: "Argentinos SIN visa!", en: "Argentines NO visa needed!" },
     noVisaDesc: { es: "Hasta 90 dias en Europa sin visa Schengen.", en: "Up to 90 days in Europe without Schengen visa." },
     ancestry: { es: "Tours de Raices", en: "Ancestry Tours" },
-    ancestryDesc: { es: "Italia, Espana - Busca tus origenes", en: "Italy, Spain - Find your origins" },
+    ancestryDesc: { es: "Italia, España - Busca tus origenes", en: "Italy, Spain - Find your origins" },
     days: { es: "dias", en: "days" },
     from: { es: "Desde", en: "From" },
     viewPackage: { es: "Ver Paquete", en: "View Package" },

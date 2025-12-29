@@ -76,7 +76,7 @@ const BLOG_POSTS = [
     date: "20 Dic 2024",
     readTime: 9,
     featured: false,
-    keywords: ["madrid o barcelona", "espana primer viaje", "madrid barcelona diferencias"],
+    keywords: ["madrid o barcelona", "españa primer viaje", "madrid barcelona diferencias"],
   },
   {
     id: "seguro-viaje-europa",

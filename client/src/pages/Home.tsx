@@ -29,7 +29,7 @@ export default function Home() {
       email: "Email",
       emailAddress: "info@tripseuropa.com",
       office: "Oficina Central",
-      address: "Calle Gran Via 45, Madrid, Espana",
+      address: "Calle Gran Via 45, Madrid, España",
       whatsapp: "Escribenos por WhatsApp",
       formTitle: "Solicita tu cotizacion",
     },

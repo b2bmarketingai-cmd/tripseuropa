@@ -78,7 +78,7 @@ const TESTIMONIALS_COSTARICA = [
   {
     name: "Carmen Jimenez",
     city: "Alajuela",
-    trip: "Espana Total 10 dias",
+    trip: "España Total 10 dias",
     text: "Primera vez viajando a Europa y quede encantada. La organizacion fue impecable. Definitivamente repetire.",
     rating: 5,
   },

@@ -23,7 +23,7 @@ const DESTINATIONS = [
     id: "barcelona",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
     name: { es: "Barcelona", en: "Barcelona" },
-    country: { es: "Espana", en: "Spain" },
+    country: { es: "España", en: "Spain" },
     packages: 10,
   },
   {

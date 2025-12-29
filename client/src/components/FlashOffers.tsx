@@ -38,7 +38,7 @@ const FLASH_OFFERS = [
     id: 4,
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     title: { es: "Barcelona y Costa Brava", en: "Barcelona and Costa Brava" },
-    country: { es: "Espana en 7 Dias", en: "Spain in 7 Days" },
+    country: { es: "España en 7 Dias", en: "Spain in 7 Days" },
     currentPrice: 799,
     originalPrice: 1899,
     discount: 58,

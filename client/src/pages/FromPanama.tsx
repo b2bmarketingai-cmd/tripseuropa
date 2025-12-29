@@ -24,7 +24,7 @@ const PACKAGES_PANAMA = [
   },
   {
     id: "espana-portugal-pa",
-    title: "Espana y Portugal desde Panama",
+    title: "España y Portugal desde Panama",
     destinations: ["Madrid", "Lisboa", "Porto", "Sevilla"],
     days: 12,
     price: 2200,
@@ -62,7 +62,7 @@ const TESTIMONIALS_PANAMA = [
   {
     name: "Ricardo Morales",
     city: "Panama City",
-    trip: "Espana y Portugal 12 dias",
+    trip: "España y Portugal 12 dias",
     text: "Increible experiencia! Todo estuvo perfectamente organizado. Los hoteles de primera categoria.",
     rating: 5,
   },

@@ -28,7 +28,7 @@ const PACKAGES_PERU = [
   },
   {
     id: "espana-peru",
-    title: "Espana Completa desde Lima",
+    title: "España Completa desde Lima",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Valencia"],
     days: 14,
     price: 2100,
@@ -82,7 +82,7 @@ const TESTIMONIALS_PERU = [
   {
     name: "Fernando Mendoza",
     city: "Cusco",
-    trip: "Espana + Portugal 12 dias",
+    trip: "España + Portugal 12 dias",
     text: "Como guia turistico en Peru, se lo que es un buen tour. Este fue de primera calidad. Los recomiendo totalmente.",
     rating: 5,
   },

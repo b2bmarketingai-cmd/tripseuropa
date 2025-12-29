@@ -17,7 +17,7 @@ const PACKAGES = [
   {
     id: "TE-002",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
-    title: { es: "ESPANA Y MARRUECOS", en: "SPAIN AND MOROCCO" },
+    title: { es: "España y Marruecos", en: "Spain and Morocco" },
     destinations: { es: "Madrid, Sevilla, Marrakech y Barcelona", en: "Madrid, Seville, Marrakech and Barcelona" },
     price: "2,899",
     days: 14,

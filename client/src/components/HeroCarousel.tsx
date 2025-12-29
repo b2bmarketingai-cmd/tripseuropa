@@ -28,7 +28,7 @@ const CAROUSEL_SLIDES = [
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "Espana, Portugal y Marruecos", en: "Spain, Portugal and Morocco" },
+    title: { es: "España, Portugal y Marruecos", en: "Spain, Portugal and Morocco" },
     subtitle: { es: "Desde Barcelona Especial", en: "From Barcelona Special" },
     price: "1,199",
     taxes: "799",
