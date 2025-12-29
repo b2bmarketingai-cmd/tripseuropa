@@ -301,8 +301,8 @@ export default function Home() {
       {/* Complete Your Trip Section */}
       <CompleteYourTripSection />
 
-      {/* Strategic Alliances Section */}
-      <AlliancesSection />
+      {/* Payment Methods Section */}
+      <PaymentMethodsSection />
 
       {/* VIP Club Section */}
       <VIPClubSection />
@@ -646,43 +646,59 @@ function CompleteYourTripSection() {
   );
 }
 
-function AlliancesSection() {
-  const { t } = useI18n();
+function PaymentMethodsSection() {
+  const { language } = useI18n();
   
-  const alliances = [
-    { name: "Avianca", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Avianca_Logo.svg/200px-Avianca_Logo.svg.png" },
-    { name: "Iberia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Iberia_Logo.svg/200px-Iberia_Logo.svg.png" },
-    { name: "Air Europa", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Air_Europa_logo.svg/200px-Air_Europa_logo.svg.png" },
-    { name: "Booking.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/200px-Booking.com_logo.svg.png" },
-    { name: "Civitatis", logo: "https://www.civitatis.com/f/rs/logo.svg" },
-  ];
+  const content = {
+    badge: { es: "Pago Seguro", en: "Secure Payment" },
+    title: { es: "Metodos de Pago Aceptados", en: "Accepted Payment Methods" },
+    subtitle: { es: "Ofrecemos multiples opciones de pago para tu comodidad. Todas las transacciones estan protegidas con encriptacion de nivel bancario.", en: "We offer multiple payment options for your convenience. All transactions are protected with bank-level encryption." },
+  };
 
   return (
-    <section className="py-16 bg-white" data-testid="section-alliances">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white" data-testid="section-payment-methods">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="mb-4" data-testid="badge-alliances">{t("alliances.badge")}</Badge>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4" data-testid="text-alliances-title">{t("alliances.title")}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-alliances-subtitle">{t("alliances.subtitle")}</p>
+          <Badge className="mb-4" data-testid="badge-payment">{content.badge[language]}</Badge>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4" data-testid="text-payment-title">{content.title[language]}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-payment-subtitle">{content.subtitle[language]}</p>
         </div>
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          {alliances.map((alliance, idx) => (
-            <div key={idx} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" data-testid={`alliance-${idx}`}>
-              <img src={alliance.logo} alt={alliance.name} className="h-8 md:h-10 w-auto object-contain" loading="lazy" />
-            </div>
-          ))}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300" data-testid="payment-visa">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/800px-Visa_Inc._logo.svg.png" 
+              alt="Visa" 
+              className="h-12 md:h-16 w-auto object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300" data-testid="payment-mastercard">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/800px-Mastercard-logo.svg.png" 
+              alt="Mastercard" 
+              className="h-12 md:h-16 w-auto object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300" data-testid="payment-scalapay">
+            <img 
+              src="https://www.scalapay.com/hubfs/Logos/scalapay-logo-green.svg" 
+              alt="Scalapay" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300" data-testid="payment-binance">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/800px-Binance_Logo.svg.png" 
+              alt="Binance Pay" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
+          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-100">
-          <p className="text-center text-sm text-muted-foreground mb-4">{t("alliances.paymentMethods")}</p>
-          <div className="flex justify-center items-center gap-6 flex-wrap">
-            <SiVisa className="w-12 h-8 text-[#1A1F71]" />
-            <SiMastercard className="w-10 h-8 text-[#EB001B]" />
-            <div className="flex items-center gap-1 px-3 py-1 bg-purple-100 rounded-full">
-              <span className="text-purple-600 font-semibold text-sm">Scalapay</span>
-            </div>
-            <SiBinance className="w-8 h-8 text-[#F0B90B]" />
+        <div className="mt-10 text-center">
+          <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+            <Shield className="w-4 h-4 text-accent" />
+            <span>{language === "es" ? "Transacciones 100% seguras y encriptadas" : "100% secure and encrypted transactions"}</span>
           </div>
         </div>
       </div>
