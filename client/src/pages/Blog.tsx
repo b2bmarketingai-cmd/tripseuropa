@@ -789,40 +789,58 @@ export default function Blog() {
                 <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
               </Card>
             </Link>
-            <Link href="/desde-argentina">
+            <Link href="/blog/argentina">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-argentina">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <MapPin className="w-5 h-5 text-white/60" />
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-white font-bold text-sm">Argentina</h3>
-                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/desde-peru">
+            <Link href="/blog/peru">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-peru">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <MapPin className="w-5 h-5 text-white/60" />
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-white font-bold text-sm">Peru</h3>
-                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/desde-panama">
+            <Link href="/blog/panama">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-panama">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <MapPin className="w-5 h-5 text-white/60" />
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-white font-bold text-sm">Panama</h3>
-                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/desde-costa-rica">
+            <Link href="/blog/costa-rica">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-costa-rica">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <MapPin className="w-5 h-5 text-white/60" />
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-white font-bold text-sm">Costa Rica</h3>
-                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
+              </Card>
+            </Link>
+            <Link href="/blog/dominicana">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-dominicana">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="text-white font-bold text-sm">R. Dominicana</h3>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
+              </Card>
+            </Link>
+            <Link href="/blog/caribe">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-caribe">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Caribe</h3>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Regional" : "Regional Guide"}</p>
               </Card>
             </Link>
           </div>

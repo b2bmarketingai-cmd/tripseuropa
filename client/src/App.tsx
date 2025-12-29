@@ -27,6 +27,12 @@ import FromArgentina from "@/pages/FromArgentina";
 import FromPeru from "@/pages/FromPeru";
 import FromCostaRica from "@/pages/FromCostaRica";
 import BlogColombia from "@/pages/BlogColombia";
+import BlogArgentina from "@/pages/BlogArgentina";
+import BlogPeru from "@/pages/BlogPeru";
+import BlogPanama from "@/pages/BlogPanama";
+import BlogCostaRica from "@/pages/BlogCostaRica";
+import BlogDominicana from "@/pages/BlogDominicana";
+import BlogCaribe from "@/pages/BlogCaribe";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -55,6 +61,12 @@ function Router() {
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/colombia" component={BlogColombia} />
+      <Route path="/blog/argentina" component={BlogArgentina} />
+      <Route path="/blog/peru" component={BlogPeru} />
+      <Route path="/blog/panama" component={BlogPanama} />
+      <Route path="/blog/costa-rica" component={BlogCostaRica} />
+      <Route path="/blog/dominicana" component={BlogDominicana} />
+      <Route path="/blog/caribe" component={BlogCaribe} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
