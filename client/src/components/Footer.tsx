@@ -253,7 +253,6 @@ export function Footer() {
               
               <div className="text-center text-white/50 text-sm">
                 <p>Trips Europa es Agencia de Viajes con</p>
-                <p>licencia num. RNT-12345</p>
                 <p className="flex items-center justify-center gap-2 mt-1">
                   <span className="text-accent">&#9733;</span>
                   <span className="font-medium">Miembro de ANATO</span>
