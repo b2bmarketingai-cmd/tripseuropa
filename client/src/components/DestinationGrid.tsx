@@ -1,38 +1,44 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 
 const DESTINATIONS = [
   {
-    id: "france",
+    id: "paris",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Francia", en: "France" },
-    trips: 24,
+    name: { es: "Paris", en: "Paris" },
+    country: { es: "Francia", en: "France" },
+    packages: 12,
   },
   {
-    id: "italy",
+    id: "roma",
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Italia", en: "Italy" },
-    trips: 32,
+    name: { es: "Roma", en: "Rome" },
+    country: { es: "Italia", en: "Italy" },
+    packages: 15,
   },
   {
-    id: "greece",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Grecia", en: "Greece" },
-    trips: 18,
-  },
-  {
-    id: "spain",
+    id: "barcelona",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Espana", en: "Spain" },
-    trips: 28,
+    name: { es: "Barcelona", en: "Barcelona" },
+    country: { es: "Espana", en: "Spain" },
+    packages: 10,
   },
   {
-    id: "switzerland",
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Suiza", en: "Switzerland" },
-    trips: 12,
+    id: "santorini",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Santorini", en: "Santorini" },
+    country: { es: "Grecia", en: "Greece" },
+    packages: 8,
+  },
+  {
+    id: "amsterdam",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Amsterdam", en: "Amsterdam" },
+    country: { es: "Paises Bajos", en: "Netherlands" },
+    packages: 6,
   },
 ];
 
@@ -42,21 +48,23 @@ export function DestinationGrid() {
 
   const content = {
     es: {
-      title: "Explora Europa",
-      subtitle: "Descubre los destinos mas fascinantes del viejo continente con nuestros circuitos exclusivos",
-      trips: "circuitos",
+      title: "Destinos Populares",
+      subtitle: "Explora los rincones mas bellos de Europa con nuestros viajes disenados especialmente para ti",
+      packages: "paquetes disponibles",
+      explore: "Explorar",
       viewAll: "Ver todos los destinos",
     },
     en: {
-      title: "Explore Europe",
-      subtitle: "Discover the most fascinating destinations of the old continent with our exclusive tours",
-      trips: "tours",
+      title: "Popular Destinations",
+      subtitle: "Explore the most beautiful corners of Europe with our trips designed especially for you",
+      packages: "packages available",
+      explore: "Explore",
       viewAll: "View all destinations",
     },
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-900" data-testid="section-destination-grid">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-destination-grid">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground" data-testid="text-destination-grid-title">
@@ -65,30 +73,40 @@ export function DestinationGrid() {
           <p className="text-muted-foreground max-w-2xl mx-auto">{content[lang].subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {DESTINATIONS.map((dest) => (
             <Link 
               key={dest.id} 
               href={`/destinations/${dest.id}`}
-              className="block group"
               data-testid={`link-destination-${dest.id}`}
             >
-              <Card className="overflow-hidden bg-transparent border-0 shadow-none hover-elevate">
-                <div className="relative aspect-square rounded-lg overflow-hidden">
+              <Card className="group overflow-hidden cursor-pointer h-full">
+                <div className="relative aspect-[4/5]">
                   <img
                     src={dest.image}
                     alt={dest.name[lang]}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white font-bold text-lg mb-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <Badge className="absolute top-4 left-4 bg-accent/90 text-primary border-0">
+                    {dest.country[lang]}
+                  </Badge>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h3 className="text-xl font-bold mb-1" data-testid={`text-destination-name-${dest.id}`}>
                       {dest.name[lang]}
                     </h3>
-                    <p className="text-white/70 text-sm">
-                      {dest.trips} {content[lang].trips}
+                    <p className="text-white/80 text-sm mb-3">
+                      {dest.packages} {content[lang].packages}
                     </p>
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="border-white/50 text-white hover:bg-white/20 w-full"
+                      data-testid={`button-explore-${dest.id}`}
+                    >
+                      {content[lang].explore}
+                    </Button>
                   </div>
                 </div>
               </Card>

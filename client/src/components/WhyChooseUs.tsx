@@ -1,53 +1,53 @@
-import { Plane, Hotel, Users, Shield, Wallet, Headphones } from "lucide-react";
+import { Shield, Award, Headphones, Wallet, Plane, CheckCircle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 const BENEFITS = [
   {
-    icon: Plane,
-    title: { es: "Vuelos Incluidos", en: "Flights Included" },
-    description: {
-      es: "Todos nuestros circuitos incluyen vuelos desde las principales ciudades.",
-      en: "All our tours include flights from major cities.",
-    },
-  },
-  {
-    icon: Hotel,
-    title: { es: "Hoteles Seleccionados", en: "Selected Hotels" },
-    description: {
-      es: "Alojamientos de 4 y 5 estrellas cuidadosamente elegidos para tu confort.",
-      en: "4 and 5 star accommodations carefully selected for your comfort.",
-    },
-  },
-  {
-    icon: Users,
-    title: { es: "Guias Expertos", en: "Expert Guides" },
-    description: {
-      es: "Guias locales profesionales que haran tu experiencia inolvidable.",
-      en: "Professional local guides who will make your experience unforgettable.",
-    },
-  },
-  {
     icon: Shield,
-    title: { es: "Viaje Seguro", en: "Safe Travel" },
+    title: { es: "Viajes Seguros", en: "Safe Travels" },
     description: {
-      es: "Seguro de viaje completo incluido en todos nuestros paquetes.",
-      en: "Comprehensive travel insurance included in all our packages.",
+      es: "Todos nuestros paquetes incluyen seguro de viaje completo",
+      en: "All our packages include comprehensive travel insurance",
     },
   },
   {
-    icon: Wallet,
-    title: { es: "Pago Flexible", en: "Flexible Payment" },
+    icon: Award,
+    title: { es: "Calidad Garantizada", en: "Guaranteed Quality" },
     description: {
-      es: "Reserva con solo 100EUR y paga el resto hasta 30 dias antes del viaje.",
-      en: "Book with only 100EUR and pay the rest up to 30 days before the trip.",
+      es: "Hoteles 4 y 5 estrellas cuidadosamente seleccionados",
+      en: "Carefully selected 4 and 5 star hotels",
     },
   },
   {
     icon: Headphones,
     title: { es: "Soporte 24/7", en: "24/7 Support" },
     description: {
-      es: "Asistencia telefonica disponible las 24 horas durante todo tu viaje.",
-      en: "Phone assistance available 24 hours throughout your trip.",
+      es: "Asistencia en espanol durante todo tu viaje",
+      en: "Spanish assistance throughout your trip",
+    },
+  },
+  {
+    icon: Wallet,
+    title: { es: "Financiamiento", en: "Financing" },
+    description: {
+      es: "Planes de pago flexibles hasta 12 cuotas sin interes",
+      en: "Flexible payment plans up to 12 interest-free installments",
+    },
+  },
+  {
+    icon: Plane,
+    title: { es: "Vuelos Incluidos", en: "Flights Included" },
+    description: {
+      es: "Boletos aereos con las mejores aerolineas europeas",
+      en: "Air tickets with the best European airlines",
+    },
+  },
+  {
+    icon: CheckCircle,
+    title: { es: "Reserva Facil", en: "Easy Booking" },
+    description: {
+      es: "Proceso de reserva simple y transparente",
+      en: "Simple and transparent booking process",
     },
   },
 ];
@@ -58,19 +58,24 @@ export function WhyChooseUs() {
 
   const content = {
     es: {
-      title: "Por que miles de personas eligen TripsEuropa?",
+      title: "Por que elegir TripsEuropa?",
+      subtitle: "Mas de 10 anos de experiencia creando viajes inolvidables por Europa",
     },
     en: {
-      title: "Why do thousands of people choose TripsEuropa?",
+      title: "Why choose TripsEuropa?",
+      subtitle: "More than 10 years of experience creating unforgettable trips through Europe",
     },
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-900" data-testid="section-why-choose">
+    <section className="py-16 bg-white dark:bg-gray-950" data-testid="section-why-choose">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-12 text-foreground" data-testid="text-why-title">
-          {content[lang].title}
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-foreground" data-testid="text-why-title">
+            {content[lang].title}
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{content[lang].subtitle}</p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {BENEFITS.map((benefit, index) => (
@@ -94,20 +99,20 @@ export function WhyChooseUs() {
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div data-testid="stat-experience">
-            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-experience-value">15+</div>
+            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-experience-value">10+</div>
             <p className="text-muted-foreground" data-testid="text-stat-experience-label">{lang === "es" ? "Anos de experiencia" : "Years of experience"}</p>
           </div>
           <div data-testid="stat-travelers">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-travelers-value">50K+</div>
-            <p className="text-muted-foreground" data-testid="text-stat-travelers-label">{lang === "es" ? "Viajeros satisfechos" : "Satisfied travelers"}</p>
+            <p className="text-muted-foreground" data-testid="text-stat-travelers-label">{lang === "es" ? "Viajeros felices" : "Happy travelers"}</p>
           </div>
-          <div data-testid="stat-tours">
-            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-tours-value">120+</div>
-            <p className="text-muted-foreground" data-testid="text-stat-tours-label">{lang === "es" ? "Circuitos unicos" : "Unique tours"}</p>
+          <div data-testid="stat-packages">
+            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-packages-value">200+</div>
+            <p className="text-muted-foreground" data-testid="text-stat-packages-label">{lang === "es" ? "Paquetes disponibles" : "Available packages"}</p>
           </div>
-          <div data-testid="stat-rating">
-            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-rating-value">4.9</div>
-            <p className="text-muted-foreground" data-testid="text-stat-rating-label">{lang === "es" ? "Valoracion media" : "Average rating"}</p>
+          <div data-testid="stat-countries">
+            <div className="text-4xl md:text-5xl font-bold text-primary mb-2" data-testid="text-stat-countries-value">30+</div>
+            <p className="text-muted-foreground" data-testid="text-stat-countries-label">{lang === "es" ? "Paises en Europa" : "Countries in Europe"}</p>
           </div>
         </div>
       </div>
