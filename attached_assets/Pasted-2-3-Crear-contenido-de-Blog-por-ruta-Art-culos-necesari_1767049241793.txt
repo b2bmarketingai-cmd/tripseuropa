@@ -1,0 +1,99 @@
+2.3 Crear contenido de Blog por ruta
+
+Artículos necesarios:
+
+"10 Mejores Destinos de Europa desde Bogotá"
+
+"Guía Completa: Viaje a París desde Ciudad de México"
+
+"Itinerario 14 días: Brasil → Europa"
+
+"Presupuesto Viaje Europa 2025 desde Colombia"
+
+2.4 Agregar Alt Text a TODAS las imágenes
+
+Cambiar:
+
+xml
+<img src="paris.jpg">
+Por:
+
+xml
+<img src="paris.jpg" alt="Torre Eiffel París - Paquete turístico Europa TripsEuropa">
+2.5 Implementar Hreflang para multi-país
+
+xml
+<link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia">
+<link rel="alternate" hreflang="es-MX" href="https://tripseuropa.com/from/mexico">
+<link rel="alternate" hreflang="es-BR" href="https://tripseuropa.com/from/brasil">
+PRIORIDAD 3 - MEDIA (Próximo mes)
+3.1 Crear landing pages específicas por destino
+
+Crear: /destinations/madrid, /destinations/paris, etc. con:
+
+Galería de fotos
+
+Información turística
+
+Clima por estación
+
+Presupuesto diario
+
+Mejores épocas para visitar
+
+Testimonios de viajeros
+
+3.2 Implementar chat con IA mejorado
+
+Agregar capacidad de:
+
+Sugerir rutas según origen
+
+Calcular presupuesto automático
+
+Mostrar disponibilidad en tiempo real
+
+3.3 Añadir sección "Preguntas Frecuentes" con FAQ Schema
+
+json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "¿Qué incluye el paquete turístico?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vuelos, hoteles 4-5 estrellas, seguro completo..."
+    }
+  }]
+}
+3.4 Crear sitemap dinámico
+
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tripseuropa.com</loc>
+    <lastmod>2025-12-29</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/colombia</loc>
+    <lastmod>2025-12-29</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/routes/bogota-madrid</loc>
+    <lastmod>2025-12-29</lastmod>
+    <priority>0.9</priority>
+  </url>
+</urlset>
+3.5 Crear robots.txt
+
+text
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Sitemap: https://tripseuropa.com/sitemap.xml

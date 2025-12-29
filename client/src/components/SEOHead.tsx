@@ -206,3 +206,27 @@ export function ArgentinaPageSEO() {
     />
   );
 }
+
+export function PeruPageSEO() {
+  return (
+    <SEOHead
+      title="Viajes a Europa desde Peru - Paquetes Todo Incluido"
+      description="Viaja a Europa desde Peru con Trips Europa. Paquetes turisticos desde Lima, vuelos directos, hoteles 4-5 estrellas y tours guiados en espanol."
+      keywords="viajes europa desde peru, peruanos europa, paquetes europa peru, vuelos lima europa"
+      url="https://tripseuropa.com/desde-peru"
+      locale="es_PE"
+    />
+  );
+}
+
+export function CostaRicaPageSEO() {
+  return (
+    <SEOHead
+      title="Viajes a Europa desde Costa Rica - Paquetes Todo Incluido"
+      description="Viaja a Europa desde Costa Rica SIN VISA. Paquetes turisticos desde San Jose, vuelos directos, hoteles de lujo y experiencias unicas. Tours en espanol."
+      keywords="viajes europa desde costa rica, costarricenses europa, paquetes europa costa rica, vuelos san jose europa"
+      url="https://tripseuropa.com/desde-costa-rica"
+      locale="es_CR"
+    />
+  );
+}

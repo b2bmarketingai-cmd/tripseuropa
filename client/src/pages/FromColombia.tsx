@@ -1,6 +1,8 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ColombiaPageSEO } from "@/components/SEOHead";
+import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/SEOSchema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -134,6 +136,12 @@ export default function FromColombia() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <ColombiaPageSEO />
+      <LocalBusinessSchema country="Colombia" city="Bogota" />
+      <BreadcrumbSchema items={[
+        { name: "Inicio", url: "https://tripseuropa.com" },
+        { name: "Viajes desde Colombia", url: "https://tripseuropa.com/desde-colombia" }
+      ]} />
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-colombia-hero">

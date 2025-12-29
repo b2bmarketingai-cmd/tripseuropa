@@ -1,0 +1,195 @@
+📌 ESTRATEGIA SEO COMPLETA POR ORIGEN-DESTINO
+ESTRUCTURA DE URLS RECOMENDADA
+text
+/from/{pais}/
+  ├── /from/colombia/
+  │   ├── /from/colombia/bogota
+  │   ├── /from/colombia/medellin
+  │   ├── /from/colombia/cali
+  │   └── /from/colombia/barranquilla
+  │
+  ├── /from/mexico/
+  │   ├── /from/mexico/cdmx
+  │   ├── /from/mexico/guadalajara
+  │   ├── /from/mexico/monterrey
+  │   └── /from/mexico/cancun
+  │
+  ├── /from/brasil/
+  │   ├── /from/brasil/sao-paulo
+  │   ├── /from/brasil/rio-janeiro
+  │   └── /from/brasil/belo-horizonte
+  │
+  ├── /from/argentina/
+  │   └── /from/argentina/buenos-aires
+  │
+  ├── /from/peru/
+  │   └── /from/peru/lima
+  │
+  ├── /from/panama/
+  │   └── /from/panama/panama-city
+  │
+  └── /from/costa-rica/
+      └── /from/costa-rica/san-jose
+
+/routes/{origin-airport}-{destiny-airport}/
+  ├── /routes/bog-mad (Bogotá-Madrid)
+  ├── /routes/bog-cdg (Bogotá-París)
+  ├── /routes/mex-mad (Ciudad de México-Madrid)
+  ├── /routes/gig-fco (São Paulo-Roma)
+  └── ... (todas las combinaciones principales)
+
+/destinations/{ciudad}/
+  ├── /destinations/madrid
+  ├── /destinations/paris
+  ├── /destinations/roma
+  ├── /destinations/barcelona
+  └── ... (todos los destinos)
+PALABRAS CLAVE PRINCIPALES POR ORIGEN
+COLOMBIA 🇨🇴
+Ciudad: Bogotá (BOG)
+
+text
+Palabras clave primarias:
+- Viajes a Europa desde Bogotá
+- Paquetes turísticos Bogotá Europa
+- Vuelos Bogotá Madrid
+- Tours Bogotá París
+- Agencia viajes Bogotá Europa
+- Paquetes Bogotá Italia
+- Excursiones Bogotá España
+
+Meta tags recomendados:
+<title>Viajes a Europa desde Bogotá | Paquetes TripsEuropa</title>
+<meta name="description" content="Paquetes turísticos a Europa desde Bogotá. Vuelos directos incluidos, hoteles 4-5 estrellas, seguro completo. Desde $9,500 USD. Consulta disponibilidad.">
+<meta name="keywords" content="viajes Europa Bogotá, paquetes Bogotá Madrid, tour Bogotá París, agencia viajes Bogotá">
+Ciudad: Medellín (MDE)
+
+text
+Palabras clave:
+- Viajes a Europa desde Medellín
+- Paquetes turísticos Medellín Europa
+- Vuelos Medellín Madrid
+- Tours Medellín Italia
+- Agencia viajes Medellín
+Ciudad: Cali (CLO)
+
+text
+Palabras clave:
+- Viajes a Europa desde Cali
+- Paquetes Cali Madrid
+- Tours Cali Barcelona
+MÉXICO 🇲🇽
+Ciudad: Ciudad de México (MEX)
+
+text
+Palabras clave primarias:
+- Viajes a Europa desde México
+- Paquetes CDMX Europa
+- Vuelos Ciudad de México París
+- Tours CDMX Madrid
+- Agencia viajes Ciudad de México
+- Paquetes México España
+- Excursiones México Italia
+
+Meta tags:
+<title>Viajes a Europa desde Ciudad de México | TripsEuropa</title>
+<meta name="description" content="Paquetes turísticos Europa desde CDMX. Vuelos directos a París, Madrid, Roma. Hoteles 4-5 estrellas. Seguro incluido. Desde $10,500 USD.">
+Ciudad: Guadalajara (GDL)
+
+text
+Palabras clave:
+- Viajes Europa Guadalajara
+- Paquetes Guadalajara Madrid
+- Tours Guadalajara París
+Ciudad: Monterrey (MTY)
+
+text
+Palabras clave:
+- Viajes Europa Monterrey
+- Tours Monterrey Barcelona
+- Paquetes Monterrey Italia
+BRASIL 🇧🇷
+Ciudad: São Paulo (GIG/CGH)
+
+text
+Palavras-chave primárias:
+- Viagens para Europa de São Paulo
+- Pacotes turísticos São Paulo Europa
+- Voos São Paulo Roma
+- Tours São Paulo Paris
+- Agência de viagens São Paulo
+
+Meta tags (en portugués):
+<title>Viagens para Europa desde São Paulo | TripsEuropa</title>
+<meta name="description" content="Pacotes turísticos para Europa desde São Paulo. Voos incluídos, hotéis 4-5 estrelas, seguro completo. A partir de $11,500 USD.">
+Ciudad: Rio de Janeiro (GIG/SDU)
+
+text
+Palavras-chave:
+- Viagens Europa Rio de Janeiro
+- Pacotes Rio de Janeiro Portugal
+- Tours Rio de Janeiro Itália
+ARGENTINA 🇦🇷
+Ciudad: Buenos Aires (AEP/EZE)
+
+text
+Palabras clave:
+- Viajes a Europa desde Buenos Aires
+- Paquetes Buenos Aires Madrid
+- Tours Buenos Aires Italia
+- Agencia viajes Buenos Aires
+- Vuelos Buenos Aires París
+
+Meta tags:
+<title>Viajes a Europa desde Buenos Aires | Paquetes TripsEuropa</title>
+<meta name="description" content="Tours a Europa desde Buenos Aires. Madrid, París, Roma y más. Vuelos incluidos, hoteles 4-5 estrellas, seguro internacional. Desde $11,500 USD.">
+PERÚ 🇵🇪
+Ciudad: Lima (LIM)
+
+text
+Palabras clave:
+- Viajes a Europa desde Lima
+- Paquetes turísticos Lima Europa
+- Tours Lima Madrid
+- Vuelos Lima París
+- Agencia viajes Lima Europa
+PANAMÁ 🇵🇦
+Ciudad: Panamá City (PTY)
+
+text
+Palabras clave:
+- Viajes a Europa desde Panamá
+- Paquetes Panamá Madrid
+- Tours Panamá Europa
+- Agencia viajes Panamá
+COSTA RICA 🇨🇷
+Ciudad: San José (SJO)
+
+text
+Palabras clave:
+- Viajes a Europa desde Costa Rica
+- Paquetes Costa Rica Madrid
+- Tours Costa Rica Italia
+PALABRAS CLAVE DE RUTAS ESPECÍFICAS
+Top 20 Rutas con Mayor Volumen de Búsqueda
+text
+1. Bogotá → Madrid: "Viajes Bogotá Madrid", "Paquetes Bogotá-Madrid 2025"
+2. Bogotá → París: "Tours Bogotá París", "Vuelos Bogotá París"
+3. Ciudad de México → Madrid: "CDMX Madrid viajes", "Paquetes México España"
+4. São Paulo → Roma: "Viajes São Paulo Roma", "Tours Brasil Italia"
+5. Ciudad de México → París: "México París tour", "Vuelos CDMX París"
+6. Bogotá → Barcelona: "Tours Bogotá Barcelona", "Paquetes Bogotá-Barcelona"
+7. Buenos Aires → Madrid: "Viajes Buenos Aires Madrid", "Tours Argentina España"
+8. São Paulo → París: "Viagens São Paulo Paris", "Tours Brasil França"
+9. Bogotá → Roma: "Viajes Bogotá Roma", "Tours Bogotá Italia"
+10. Lima → Madrid: "Viajes Lima Madrid", "Tours Perú España"
+11. Bogotá → Lisboa: "Viajes Bogotá Lisboa", "Tours Bogotá Portugal"
+12. Ciudad de México → Barcelona: "CDMX Barcelona", "Tours México Barcelona"
+13. São Paulo → Lisboa: "Viagens São Paulo Lisboa", "Tours Brasil Portugal"
+14. Bogotá → Ámsterdam: "Viajes Bogotá Ámsterdam", "Tours Bogotá Holanda"
+15. Buenos Aires → Barcelona: "Viajes Buenos Aires Barcelona", "Tours Argentina Barcelona"
+16. Medellín → Madrid: "Viajes Medellín Madrid", "Tours Medellín Europa"
+17. Ciudad de México → Roma: "CDMX Roma", "Tours México Italia"
+18. Rio de Janeiro → París: "Viagens Rio Janeiro Paris", "Tours Brasil França"
+19. Bogotá → Zúrich: "Viajes Bogotá Suiza", "Tours Bogotá Zúrich"
+20. Buenos Aires → Roma: "Viajes Buenos Aires Roma", "Tours Argentina Italia"
