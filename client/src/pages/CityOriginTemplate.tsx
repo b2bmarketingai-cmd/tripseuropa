@@ -249,6 +249,39 @@ const DESTINATIONS_BY_CITY: Record<string, DestinationRoute[]> = {
     { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "11-13h", connectionType: "Conexion", airlines: ["Air France", "Copa"] },
     { destCity: "Barcelona", destCountry: "Espana", destCode: "BCN", duration: "11-13h", connectionType: "Conexion Madrid", airlines: ["Iberia", "Copa"] },
   ],
+  medellin: [
+    { destCity: "Madrid", destCountry: "Espana", destCode: "MAD", duration: "11-12h", connectionType: "Conexion BOG", airlines: ["Avianca", "LATAM"], badge: "Mas Popular" },
+    { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "12-14h", connectionType: "Conexion BOG/MIA", airlines: ["Air France", "Avianca"] },
+    { destCity: "Barcelona", destCountry: "Espana", destCode: "BCN", duration: "13-15h", connectionType: "Conexion", airlines: ["LATAM", "Iberia"] },
+    { destCity: "Roma", destCountry: "Italia", destCode: "FCO", duration: "14-16h", connectionType: "Conexion", airlines: ["LATAM", "Alitalia"] },
+    { destCity: "Lisboa", destCountry: "Portugal", destCode: "LIS", duration: "12-14h", connectionType: "Conexion", airlines: ["TAP", "LATAM"] },
+  ],
+  cali: [
+    { destCity: "Madrid", destCountry: "Espana", destCode: "MAD", duration: "11-13h", connectionType: "Conexion BOG/MIA", airlines: ["Avianca", "LATAM"], badge: "Mas Popular" },
+    { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "13-15h", connectionType: "Conexion BOG", airlines: ["Air France", "Avianca"] },
+    { destCity: "Barcelona", destCountry: "Espana", destCode: "BCN", duration: "14-16h", connectionType: "Conexion", airlines: ["LATAM", "Iberia"] },
+    { destCity: "Roma", destCountry: "Italia", destCode: "FCO", duration: "15-17h", connectionType: "Conexion", airlines: ["LATAM", "Alitalia"] },
+  ],
+  guadalajara: [
+    { destCity: "Madrid", destCountry: "Espana", destCode: "MAD", duration: "12-14h", connectionType: "Conexion MEX", airlines: ["Aeromexico", "Iberia"], badge: "Mas Popular" },
+    { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "12-14h", connectionType: "Conexion MEX", airlines: ["Air France", "Aeromexico"] },
+    { destCity: "Barcelona", destCountry: "Espana", destCode: "BCN", duration: "13-15h", connectionType: "Conexion", airlines: ["LATAM", "Iberia"] },
+    { destCity: "Lisboa", destCountry: "Portugal", destCode: "LIS", duration: "12-14h", connectionType: "Conexion MEX", airlines: ["TAP", "LATAM"] },
+    { destCity: "Londres", destCountry: "Reino Unido", destCode: "LHR", duration: "12-14h", connectionType: "Conexion", airlines: ["LATAM", "BA"] },
+  ],
+  "rio-de-janeiro": [
+    { destCity: "Lisboa", destCountry: "Portugal", destCode: "LIS", duration: "9-10h", connectionType: "Directo", airlines: ["TAP", "LATAM"], badge: "Mas Popular" },
+    { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "11-13h", connectionType: "Conexion LIS", airlines: ["Air France", "TAP"] },
+    { destCity: "Madrid", destCountry: "Espana", destCode: "MAD", duration: "10-12h", connectionType: "Conexion LIS", airlines: ["TAP", "LATAM", "Iberia"] },
+    { destCity: "Roma", destCountry: "Italia", destCode: "FCO", duration: "12-14h", connectionType: "Conexion", airlines: ["TAP", "LATAM", "Alitalia"] },
+    { destCity: "Londres", destCountry: "Reino Unido", destCode: "LHR", duration: "11-13h", connectionType: "Conexion", airlines: ["TAP", "LATAM", "BA"] },
+  ],
+  "san-jose": [
+    { destCity: "Madrid", destCountry: "Espana", destCode: "MAD", duration: "12-14h", connectionType: "Conexion PTY/MIA", airlines: ["Copa", "Iberia"], badge: "Mas Popular" },
+    { destCity: "Paris", destCountry: "Francia", destCode: "CDG", duration: "13-15h", connectionType: "Conexion", airlines: ["Air France", "Copa"] },
+    { destCity: "Barcelona", destCountry: "Espana", destCode: "BCN", duration: "14-16h", connectionType: "Conexion PTY/MAD", airlines: ["Iberia", "Copa"] },
+    { destCity: "Lisboa", destCountry: "Portugal", destCode: "LIS", duration: "13-15h", connectionType: "Conexion", airlines: ["TAP", "Copa"] },
+  ],
 };
 
 const PACKAGES: Package[] = [
@@ -633,8 +666,7 @@ export default function CityOriginTemplate() {
                 </CardHeader>
                 <CardContent>
                   <div className="mb-4">
-                    <p className="text-sm"><strong>Itinerario:</strong> {pkg.itinerary}</p>
-                    <p className="text-sm"><strong>Duracion:</strong> {pkg.days} {t.days}, {pkg.nights} {t.nights}</p>
+                    <p className="text-sm text-muted-foreground">{pkg.itinerary}</p>
                   </div>
                   <div className="mb-4">
                     <p className="text-xs font-medium text-muted-foreground mb-2">{t.includes}:</p>
