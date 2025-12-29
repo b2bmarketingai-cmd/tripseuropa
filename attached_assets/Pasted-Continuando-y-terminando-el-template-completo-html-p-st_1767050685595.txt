@@ -1,0 +1,229 @@
+Continuando y terminando el template completo:
+
+```html
+            <p><strong>📞 Teléfono:</strong> +57 300 123 4567 (disponible 24/7)</p>
+            <p><strong>📧 Email:</strong> info@tripseuropa.com</p>
+            <p><strong>💬 WhatsApp:</strong> +57 300 123 4567</p>
+            <p><strong>🏢 Oficina Central:</strong> Calle Gran Vía 45, Bogotá, Colombia</p>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 11: SCHEMA MARKUP ==================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tripseuropa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Viaja Desde",
+          "item": "https://tripseuropa.com/from"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Colombia",
+          "item": "https://tripseuropa.com/from/colombia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bogotá",
+          "item": "https://tripseuropa.com/from/colombia/bogota"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TripsEuropa - Viajes desde Bogotá",
+      "image": "https://tripseuropa.com/logo.png",
+      "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Bogotá, Colombia",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Gran Vía 45",
+        "addressLocality": "Bogotá",
+        "postalCode": "110111",
+        "addressCountry": "CO"
+      },
+      "telephone": "+573001234567",
+      "email": "info@tripseuropa.com",
+      "url": "https://tripseuropa.com/from/colombia/bogota",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "28547",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "$7500-$25000",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bogotá",
+        "areaServed": "Colombia"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito visa para viajar a Europa desde Bogotá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, los ciudadanos colombianos requieren visa Schengen para viajar a la mayoría de países europeos. El proceso toma 2-4 semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay vuelos directos desde Bogotá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, existen vuelos directos desde el Aeropuerto El Dorado (BOG) hacia Madrid (9h 35m) y París (9h 50m)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor época para viajar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las mejores épocas son Primavera (Abril-Junio) y Otoño (Septiembre-Octubre) con clima perfecto y menos turistas."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Europa Clásica desde Bogotá",
+          "price": "11550",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-clasica"
+        },
+        {
+          "@type": "Offer",
+          "name": "Europa Romantica desde Bogotá",
+          "price": "12500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-romantica"
+        },
+        {
+          "@type": "Offer",
+          "name": "Europa Aventura desde Bogotá",
+          "price": "7500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-aventura"
+        }
+      ]
+    }
+    </script>
+
+</main>
+
+<!-- SIDEBAR / RELATED -->
+<aside>
+    <h3>Páginas Relacionadas</h3>
+    <ul>
+        <li><a href="/from/colombia">Todos los orígenes en Colombia</a></li>
+        <li><a href="/from/mexico/cdmx">Viajes desde México</a></li>
+        <li><a href="/from/brasil/sao-paulo">Viajes desde Brasil</a></li>
+        <li><a href="/destinations">Todos los destinos europeos</a></li>
+        <li><a href="/blog/bogota">Blog: Bogotá a Europa</a></li>
+    </ul>
+</aside>
+
+</body>
+</html>
+```
+
+***
+
+## 📊 TABLA DE RUTAS ORIGEN-DESTINO COMPLETA
+
+### COLOMBIA → EUROPA
+
+| Ruta | Origen | Destino | Código | Duración | Precio USD | Conexión | Aerolineas |
+|------|--------|---------|--------|----------|-----------|----------|-----------|
+| BOG-MAD | Bogotá | Madrid | BOG-MAD | 9h 35m | $9,500-12,500 | Directo | Avianca, LATAM, Iberia |
+| BOG-CDG | Bogotá | París | BOG-CDG | 9h 50m | $9,800-13,000 | Directo | Air France, LATAM, Avianca |
+| BOG-BCN | Bogotá | Barcelona | BOG-BCN | 11-13h | $8,500-11,000 | Madrid/Lisboa | LATAM, Iberia, United |
+| BOG-FCO | Bogotá | Roma | BOG-FCO | 12-14h | $10,000-13,500 | Madrid/Lisboa | LATAM, Alitalia |
+| BOG-LIS | Bogotá | Lisboa | BOG-LIS | 10-12h | $7,500-9,500 | Conexión | TAP, LATAM, Iberia |
+| BOG-FLR | Bogotá | Florencia | BOG-FLR | 12-15h | $7,000-9,000 | Conexión | LATAM, Iberia |
+| BOG-AMS | Bogotá | Ámsterdam | BOG-AMS | 12-14h | $11,000-15,000 | Conexión | KLM, LATAM |
+| BOG-LHR | Bogotá | Londres | BOG-LHR | 11-13h | $8,000-10,500 | Conexión | LATAM, BA, United |
+| BOG-ZRH | Bogotá | Zúrich | BOG-ZRH | 12-14h | $11,000-15,000 | Conexión | LATAM, Swiss |
+| BOG-VIE | Bogotá | Viena | BOG-VIE | 13-15h | $7,000-9,000 | Conexión | LATAM, Lufthansa |
+| MDE-MAD | Medellín | Madrid | MDE-MAD | 10-12h | $9,800-13,000 | Bogotá | LATAM, Avianca |
+| MDE-CDG | Medellín | París | MDE-CDG | 10-13h | $10,000-13,500 | Bogotá | LATAM, Air France |
+| CLO-MAD | Cali | Madrid | CLO-MAD | 10-13h | $9,500-12,500 | Bogotá | LATAM, Avianca |
+
+### MÉXICO → EUROPA
+
+| Ruta | Origen | Destino | Código | Duración | Precio USD | Conexión | Aerolineas |
+|------|--------|---------|--------|----------|-----------|----------|-----------|
+| MEX-MAD | CDMX | Madrid | MEX-MAD | 11h | $10,500-13,500 | Directo | Avianca, LATAM, Iberia |
+| MEX-CDG | CDMX | París | MEX-CDG | 10.5h | $10,800-13,800 | Directo | Air France, LATAM |
+| MEX-BCN | CDMX | Barcelona | MEX-BCN | 11-13h | $10,000-12,500 | Conexión | LATAM, Iberia |
+| MEX-FCO | CDMX | Roma | MEX-FCO | 12-15h | $11,000-14,000 | Conexión Miami/Madrid | LATAM, Alitalia |
+| MEX-LIS | CDMX | Lisboa | MEX-LIS | 10h | $9,500-12,000 | Directo | TAP, LATAM |
+| MEX-LHR | CDMX | Londres | MEX-LHR | 10-12h | $9,500-12,000 | Conexión | LATAM, BA |
+| MEX-AMS | CDMX | Ámsterdam | MEX-AMS | 11-13h | $11,500-15,000 | Conexión | KLM, LATAM |
+| GDL-MAD | Guadalajara | Madrid | GDL-MAD | 12-14h | $10,500-13,500 | Conexión CDMX | LATAM, Avianca |
+| MTY-MAD | Monterrey | Madrid | MTY-MAD | 12-14h | $10,500-13,500 | Conexión CDMX | LATAM, Avianca |
+
+### BRASIL → EUROPA
+
+| Ruta | Origen | Destino | Código | Duración | Precio USD | Conexión | Aerolineas |
+|------|--------|---------|--------|----------|-----------|----------|-----------|
+| GIG-FCO | São Paulo | Roma | GIG-FCO | 11-13h | $11,500-15,500 | Lisboa/Madrid | TAP, LATAM, Alitalia |
+| GIG-CDG | São Paulo | París | GIG-CDG | 11-13h | $11,000-14,500 | Directo creciente | Air France, TAP, LATAM |
+| GIG-MAD | São Paulo | Madrid | GIG-MAD | 9-11h | $10,500-13,500 | Conexión | TAP, LATAM, Iberia |
+| GIG-FLR | São Paulo | Florencia | GIG-FLR | 12-15h | $11,000-14,000 | Conexión | TAP, LATAM |
+| GIG-BCN | São Paulo | Barcelona | GIG-BCN | 12-14h | $10,500-13,500 | Conexión | TAP, LATAM |
+| GIG-LHR | São Paulo | Londres | GIG-LHR | 10-11h | $9,000-11,500 | Directo TAP | TAP, LATAM, BA |
+| GIG-LIS | São Paulo | Lisboa | GIG-LIS | 8-9h | $10,500-13,500 | Directo TAP | TAP, LATAM |
+| GIG-VIE | São Paulo | Viena | GIG-VIE | 13-15h | $11,500-15,000 | Conexión | TAP, LATAM, Lufthansa |
+| GIG-ARN | São Paulo | Estocolmo | GIG-ARN | 14-16h | $10,500-14,000 | Conexión | SAS, LATAM |
+| GIG-ATH | São Paulo | Atenas | GIG-ATH | 14-16h | $13,500-18,000 | Conexión | TAP, LATAM |
+| GIG-ZRH | São Paulo | Zúrich | GIG-ZRH | 11-12h | $10,000-13,000 | Conexión | TAP, LATAM, Swiss |
+| GIG-AMS | São Paulo | Ámsterdam | GIG-AMS | 11-13h | $11,500-15,000 | Conexión | KLM, TAP, LATAM |
+| SDU-CDG | Rio de Janeiro | París | SDU-CDG | 12-14h | $11,500-15,000 | Conexión | Air France, TAP |
+
+### ARGENTINA → EUROPA
+
+| Ruta | Origen | Destino | Código | Duración | Precio USD | Conexión | Aerolineas |
+|------|--------|---------|--------|----------|-----------|----------|-----------|
+| EZE-MAD | Buenos Aires | Madrid | EZE-MAD | 11-13h | $11,500-14,500 | Conexión Miami/São Paulo | LATAM, Iberia, Avianca |
+| EZE-BCN | Buenos Aires | Barcelona | EZE-BCN | 12-15h | $12,000-15,500 | Conexión | LATAM, Iberia |
+| EZE-FCO | Buenos Aires | Roma | EZE-FCO | 13-16h | $13,000-16,500 | Conexión | LATAM, Alitalia |
+| EZE-CDG | Buenos Aires | París | EZE-CDG | 12-15h | $12,500-16,000 | Conexión | LATAM, Air France |
+| EZE-ATH | Buenos Aires | Estambul | EZE-ATH | 14-17h | $10,500-13,500 | Conexión | LATAM, Turkish |
+
+### PERÚ → EUROPA
+
+| Ruta | Origen | Destino | Código | Du

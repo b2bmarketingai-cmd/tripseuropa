@@ -1,0 +1,157 @@
+            <p><strong>📞 Teléfono:</strong> +57 300 123 4567 (disponible 24/7)</p>
+            <p><strong>📧 Email:</strong> info@tripseuropa.com</p>
+            <p><strong>💬 WhatsApp:</strong> +57 300 123 4567</p>
+            <p><strong>🏢 Oficina Central:</strong> Calle Gran Vía 45, Bogotá, Colombia</p>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 11: SCHEMA MARKUP ==================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tripseuropa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Viaja Desde",
+          "item": "https://tripseuropa.com/from"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Colombia",
+          "item": "https://tripseuropa.com/from/colombia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bogotá",
+          "item": "https://tripseuropa.com/from/colombia/bogota"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TripsEuropa - Viajes desde Bogotá",
+      "image": "https://tripseuropa.com/logo.png",
+      "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Bogotá, Colombia",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Gran Vía 45",
+        "addressLocality": "Bogotá",
+        "postalCode": "110111",
+        "addressCountry": "CO"
+      },
+      "telephone": "+573001234567",
+      "email": "info@tripseuropa.com",
+      "url": "https://tripseuropa.com/from/colombia/bogota",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "28547",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "$7500-$25000",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bogotá",
+        "areaServed": "Colombia"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito visa para viajar a Europa desde Bogotá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, los ciudadanos colombianos requieren visa Schengen para viajar a la mayoría de países europeos. El proceso toma 2-4 semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay vuelos directos desde Bogotá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, existen vuelos directos desde el Aeropuerto El Dorado (BOG) hacia Madrid (9h 35m) y París (9h 50m)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor época para viajar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las mejores épocas son Primavera (Abril-Junio) y Otoño (Septiembre-Octubre) con clima perfecto y menos turistas."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Europa Clásica desde Bogotá",
+          "price": "11550",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-clasica"
+        },
+        {
+          "@type": "Offer",
+          "name": "Europa Romantica desde Bogotá",
+          "price": "12500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-romantica"
+        },
+        {
+          "@type": "Offer",
+          "name": "Europa Aventura desde Bogotá",
+          "price": "7500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tripseuropa.com/packages/europa-aventura"
+        }
+      ]
+    }
+    </script>
+
+</main>
+
+<!-- SIDEBAR / RELATED -->
+<aside>
+    <h3>Páginas Relacionadas</h3>
+    <ul>
+        <li><a href="/from/colombia">Todos los orígenes en Colombia</a></li>
+        <li><a href="/from/mexico/cdmx">Viajes desde México</a></li>
+        <li><a href="/from/brasil/sao-paulo">Viajes desde Brasil</a></li>
+        <li><a href="/destinations">Todos los destinos europeos</a></li>
+        <li><a href="/blog/bogota">Blog: Bogotá a Europa</a></li>
+    </ul>
+</aside>
+
+</body>
+</html>

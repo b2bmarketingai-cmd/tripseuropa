@@ -195,4 +195,81 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://tripseuropa.com/from/colombia/bogota</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia/bogota"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/colombia/medellin</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia/medellin"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/colombia/cali</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia/cali"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/mexico/cdmx</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://tripseuropa.com/from/mexico/cdmx"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/mexico/guadalajara</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://tripseuropa.com/from/mexico/guadalajara"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/brasil/sao-paulo</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/from/brasil/sao-paulo"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/brasil/rio-de-janeiro</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/from/brasil/rio-de-janeiro"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/argentina/buenos-aires</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://tripseuropa.com/from/argentina/buenos-aires"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/peru/lima</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://tripseuropa.com/from/peru/lima"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/panama/panama</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://tripseuropa.com/from/panama/panama"/>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/from/costa-rica/san-jose</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://tripseuropa.com/from/costa-rica/san-jose"/>
+  </url>
 </urlset>

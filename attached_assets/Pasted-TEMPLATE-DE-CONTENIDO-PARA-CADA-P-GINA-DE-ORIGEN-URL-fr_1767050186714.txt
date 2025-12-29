@@ -1,0 +1,87 @@
+TEMPLATE DE CONTENIDO PARA CADA PÁGINA DE ORIGEN
+URL: /from/colombia/bogota
+xml
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Viajes a Europa desde Bogotá | Paquetes TripsEuropa</title>
+    <meta name="description" content="Paquetes turísticos a Europa desde Bogotá. Vuelos directos incluidos, hoteles 4-5 estrellas, seguro completo. Desde $9,500 USD. Consulta disponibilidad.">
+    <meta name="keywords" content="viajes Europa Bogotá, paquetes Bogotá Madrid, tour Bogotá París, agencia viajes Bogotá">
+    <meta property="og:title" content="Viajes a Europa desde Bogotá">
+    <meta property="og:description" content="Paquetes turísticos a Europa desde Bogotá...">
+    anonical href="https://tripseuropa.com/from/colombia/bogota">
+    <link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia/bogota">
+</head>
+<body>
+
+<h1>Viajes a Europa desde Bogotá | Paquetes Turísticos 2025</h1>
+
+<p>Descubre los mejores paquetes turísticos a Europa desde Bogotá. Con TripsEuropa, viajar es fácil, seguro y asequible.</p>
+
+<h2>Destinos Populares desde Bogotá</h2>
+<ul>
+    <li><strong>Madrid, España</strong> - Vuelo directo (9h 35m) - Desde $9,500 USD</li>
+    <li><strong>París, Francia</strong> - Vuelo directo (9h 50m) - Desde $9,800 USD</li>
+    <li><strong>Roma, Italia</strong> - Con conexión - Desde $10,000 USD</li>
+    <li><strong>Barcelona, España</strong> - Con conexión - Desde $8,500 USD</li>
+    <li><strong>Lisboa, Portugal</strong> - Con conexión - Desde $7,500 USD</li>
+</ul>
+
+<h2>¿Por qué Viajar a Europa desde Bogotá?</h2>
+<p>Bogotá es el principal hub de salida hacia Europa en Colombia, con el Aeropuerto Internacional El Dorado (BOG) ofreciendo...</p>
+
+<h2>Rutas Más Solicitadas desde Bogotá</h2>
+
+<div class="route-card">
+    <h3>Bogotá → Madrid</h3>
+    <p><strong>Código IATA:</strong> BOG-MAD</p>
+    <p><strong>Duración:</strong> 9 horas 35 minutos (directo)</p>
+    <p><strong>Precio promedio:</strong> $9,500 - $12,500 USD por persona</p>
+    <p><strong>Aerolineas:</strong> Avianca, LATAM, United Airlines</p>
+    <a href="/routes/bog-mad">Ver paquetes Bogotá-Madrid →</a>
+</div>
+
+<div class="route-card">
+    <h3>Bogotá → París</h3>
+    <p><strong>Código IATA:</strong> BOG-CDG</p>
+    <p><strong>Duración:</strong> 9 horas 50 minutos (directo)</p>
+    <p><strong>Precio promedio:</strong> $9,800 - $13,000 USD por persona</p>
+    <p><strong>Aerolineas:</strong> Avianca, Air France, LATAM</p>
+    <a href="/routes/bog-cdg">Ver paquetes Bogotá-París →</a>
+</div>
+
+<h2>Testimonios de Viajeros desde Bogotá</h2>
+<!-- Testimonios específicos de viajeros bogotanos -->
+
+<h2>Guía de Viaje: Información Práctica</h2>
+<ul>
+    <li><strong>Documentación:</strong> Pasaporte válido, visado Schengen</li>
+    <li><strong>Mejor época:</strong> Abril-Junio, Septiembre-Octubre</li>
+    <li><strong>Moneda local:</strong> EUR (Euros) - Aceptamos conversión desde COP</li>
+    <li><strong>Horarios de vuelo:</strong> Salidas principalmente en tarde/noche desde BOG</li>
+</ul>
+
+<h2>Preguntas Frecuentes - Viajes desde Bogotá</h2>
+<details>
+    <summary>¿Necesito visa para viajar a Europa desde Bogotá?</summary>
+    <p>Los ciudadanos colombianos requieren visa Schengen para la mayoría de países europeos. TripsEuropa puede orientarte en el proceso.</p>
+</details>
+
+<details>
+    <summary>¿Hay vuelos directos desde Bogotá?</summary>
+    <p>Sí, existen vuelos directos desde el Aeropuerto El Dorado (BOG) hacia Madrid y París. Otros destinos requieren una conexión.</p>
+</details>
+
+<h2>Otros Origen es desde Colombia</h2>
+<ul>
+    <li><a href="/from/colombia/medellin">Viajes desde Medellín →</a></li>
+    <li><a href="/from/colombia/cali">Viajes desde Cali →</a></li>
+    <li><a href="/from/colombia">Ver todos los orígenes en Colombia →</a></li>
+</ul>
+
+<h2>Schema Markup</h2>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement":

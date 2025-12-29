@@ -1,0 +1,244 @@
+        <!-- PACKAGE 2 -->
+        <div class="package-card">
+            <img src="/images/package-romantica.jpg" alt="Europa Romántica - París, Barcelona, Ámsterdam">
+            <h3>Europa Romántica</h3>
+            <p class="description">Perfecto para parejas. Ciudades románticas y momentos inolvidables.</p>
+            <div class="itinerary">
+                <p><strong>Itinerario:</strong> Bogotá → Madrid → Barcelona → París → Ámsterdam → Bogotá</p>
+                <p><strong>Duración:</strong> 15 días, 14 noches</p>
+                <p><strong>Incluye:</strong> Vuelos, hoteles 5 estrellas, desayuno, cenas románticas, tours privados, seguro completo</p>
+            </div>
+            <div class="pricing">
+                <p class="price">Desde <strong>$12,500 USD</strong> por persona</p>
+                <p class="note">Habitación doble, impuestos incluidos</p>
+            </div>
+            <a href="/packages/europa-romantica" class="btn-primary">Ver detalles →</a>
+        </div>
+
+        <!-- PACKAGE 3 -->
+        <div class="package-card">
+            <img src="/images/package-aventura.jpg" alt="Europa Aventura - Lisboa, Barcelona">
+            <h3>Europa Aventura</h3>
+            <p class="description">Para los viajeros jóvenes y aventureros. Vivencias al máximo.</p>
+            <div class="itinerary">
+                <p><strong>Itinerario:</strong> Bogotá → Lisboa → Barcelona → Bogotá</p>
+                <p><strong>Duración:</strong> 8 días, 7 noches</p>
+                <p><strong>Incluye:</strong> Vuelos, hoteles 4 estrellas, desayuno, actividades de aventura, tours guiados, seguro</p>
+            </div>
+            <div class="pricing">
+                <p class="price">Desde <strong>$7,500 USD</strong> por persona</p>
+                <p class="note">Habitación compartida, impuestos incluidos</p>
+            </div>
+            <a href="/packages/europa-aventura" class="btn-primary">Ver detalles →</a>
+        </div>
+
+        <!-- PACKAGE 4 -->
+        <div class="package-card">
+            <img src="/images/package-lujo.jpg" alt="Europa Lujo - París, Suiza, Italia">
+            <h3>Europa Lujo</h3>
+            <p class="description">Experiencia premium. Hoteles 5 estrellas y servicios exclusivos.</p>
+            <div class="itinerary">
+                <p><strong>Itinerario:</strong> Bogotá → París → Zúrich → Milán → Florencia → Roma → Bogotá</p>
+                <p><strong>Duración:</strong> 12 días, 11 noches</p>
+                <p><strong>Incluye:</strong> Vuelos primera clase, hoteles 5 estrellas, all meals, tours privados, degustaciones, seguro VIP</p>
+            </div>
+            <div class="pricing">
+                <p class="price">Desde <strong>$18,000 USD</strong> por persona</p>
+                <p class="note">Suite, todos los servicios incluidos</p>
+            </div>
+            <a href="/packages/europa-lujo" class="btn-primary">Ver detalles →</a>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: WHY BOGOTÁ ==================== -->
+    <section id="por-que-bogota">
+        <h2>¿Por qué Viajar a Europa desde Bogotá?</h2>
+        
+        <h3>Ventajas del Aeropuerto El Dorado (BOG)</h3>
+        <ul>
+            <li><strong>Hub Principal:</strong> Bogotá es el mayor hub de salidas hacia Europa en Colombia</li>
+            <li><strong>Vuelos Directos:</strong> Conexiones directas a Madrid y París (9-10 horas)</li>
+            <li><strong>Mejor Precio:</strong> Tarifas aéreas más competitivas desde BOG</li>
+            <li><strong>Múltiples Aerolineas:</strong> Avianca, LATAM, United, Air France, Iberia</li>
+            <li><strong>Frecuencia Alta:</strong> Múltiples salidas diarias hacia principales destinos</li>
+            <li><strong>Infraestructura Moderna:</strong> Terminal internacional renovada con servicios premium</li>
+        </ul>
+
+        <h3>Datos Clave sobre Bogotá</h3>
+        <dl>
+            <dt><strong>Población Metropolitana:</strong></dt>
+            <dd>8.2 millones de habitantes</dd>
+            
+            <dt><strong>Ubicación:</strong></dt>
+            <dd>Capital de Colombia, centro geográfico y económico del país</dd>
+            
+            <dt><strong>Altitud:</strong></dt>
+            <dd>2,640 metros sobre el nivel del mar</dd>
+            
+            <dt><strong>Clima:</strong></dt>
+            <dd>Primavera eterna (12-20°C) - ideal para viajar todo el año</dd>
+            
+            <dt><strong>Zona Horaria:</strong></dt>
+            <dd>GMT-5 (UTC-5)</dd>
+        </dl>
+
+        <h3>Conectividad desde Bogotá</h3>
+        <p>Bogotá no solo conecta con Europa, sino que es punto de conexión para viajeros de toda Colombia:</p>
+        <ul>
+            <li>Desde Medellín (1h vuelo) → Conexión a Bogotá → Europa</li>
+            <li>Desde Cali (1h vuelo) → Conexión a Bogotá → Europa</li>
+            <li>Desde Barranquilla (2h vuelo) → Conexión a Bogotá → Europa</li>
+            <li>Desde otras ciudades → Vuelos domésticos económicos a Bogotá</li>
+        </ul>
+    </section>
+
+    <!-- ==================== SECTION 5: AIRLINE OPTIONS ==================== -->
+    <section id="aerolineas">
+        <h2>Aerolineas desde Bogotá a Europa</h2>
+        <p>Trabajamos con las mejores aerolineas para garantizar vuelos seguros, cómodos y puntuales.</p>
+
+        <div class="airline-grid">
+            <div class="airline-card">
+                <img src="/images/airlines/avianca.png" alt="Avianca">
+                <h3>Avianca</h3>
+                <p><strong>Rutas Principales:</strong> BOG-MAD, BOG-CDG, BOG-BCN</p>
+                <p><strong>Ventajas:</strong> Vuelos directos, programa de millas, servicio premium</p>
+                <p><strong>Precio Promedio:</strong> $$$ (medio)</p>
+            </div>
+
+            <div class="airline-card">
+                <img src="/images/airlines/latam.png" alt="LATAM">
+                <h3>LATAM Airlines</h3>
+                <p><strong>Rutas Principales:</strong> BOG-MAD, BOG-CDG, BOG-LIS</p>
+                <p><strong>Ventajas:</strong> Red extensa, conexiones frecuentes, frecuente flyer</p>
+                <p><strong>Precio Promedio:</strong> $$$ (medio)</p>
+            </div>
+
+            <div class="airline-card">
+                <img src="/images/airlines/airfrance.png" alt="Air France">
+                <h3>Air France</h3>
+                <p><strong>Rutas Principales:</strong> BOG-CDG, BOG-LIS</p>
+                <p><strong>Ventajas:</strong> Servicio europeo, comodidad premium, gastronomía</p>
+                <p><strong>Precio Promedio:</strong> $$$$ (premium)</p>
+            </div>
+
+            <div class="airline-card">
+                <img src="/images/airlines/iberia.png" alt="Iberia">
+                <h3>Iberia</h3>
+                <p><strong>Rutas Principales:</strong> BOG-MAD, BOG-BCN</p>
+                <p><strong>Ventajas:</strong> Hub en Madrid, conexiones fáciles, plus points</p>
+                <p><strong>Precio Promedio:</strong> $$$ (medio)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 6: PRACTICAL INFO ==================== -->
+    <section id="informacion-practica">
+        <h2>Guía Práctica: Información Importante para Viajeros desde Bogotá</h2>
+
+        <h3>📋 Documentación Requerida</h3>
+        <ul>
+            <li><strong>Pasaporte:</strong> Válido por lo menos 6 meses después del viaje</li>
+            <li><strong>Visa Schengen:</strong> Requerida para ciudadanos colombianos (procesamiento: 2-4 semanas)</li>
+            <li><strong>Seguro de Viaje:</strong> Recomendado (incluido en nuestros paquetes)</li>
+            <li><strong>Tarjeta de Débito/Crédito:</strong> Visa o Mastercard internacional</li>
+            <li><strong>Vacunas:</strong> Verifica requisitos con tu médico</li>
+        </ul>
+
+        <h3>🗓️ Mejor Época para Viajar desde Bogotá</h3>
+        <table class="seasons-table">
+            <thead>
+                <tr>
+                    <th>Estación</th>
+                    <th>Meses</th>
+                    <th>Clima Europa</th>
+                    <th>Recomendación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Primavera</strong></td>
+                    <td>Abril - Junio</td>
+                    <td>15-25°C, soleado</td>
+                    <td>⭐⭐⭐⭐⭐ EXCELENTE</td>
+                </tr>
+                <tr>
+                    <td><strong>Verano</strong></td>
+                    <td>Julio - Agosto</td>
+                    <td>20-30°C, muy soleado</td>
+                    <td>⭐⭐⭐⭐ BUENO (temporada alta)</td>
+                </tr>
+                <tr>
+                    <td><strong>Otoño</strong></td>
+                    <td>Septiembre - Octubre</td>
+                    <td>12-20°C, variado</td>
+                    <td>⭐⭐⭐⭐⭐ EXCELENTE</td>
+                </tr>
+                <tr>
+                    <td><strong>Invierno</strong></td>
+                    <td>Noviembre - Marzo</td>
+                    <td>5-15°C, lluvias</td>
+                    <td>⭐⭐⭐ REGULAR (menos turistas, precios bajos)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>💰 Conversión de Monedas y Presupuesto</h3>
+        <ul>
+            <li><strong>Moneda local Europe:</strong> EUR (Euro)</li>
+            <li><strong>Cambio aproximado (Dic 2025):</strong> 1 EUR = 4,500 COP</li>
+            <li><strong>Presupuesto diario recomendado:</strong> €80-150 (sin tours)</li>
+            <li><strong>Hospedaje promedio:</strong> €50-150 por noche (4-5 estrellas)</li>
+            <li><strong>Comida promedio:</strong> €15-40 por día</li>
+            <li><strong>Tours y actividades:</strong> €30-80 por actividad</li>
+        </ul>
+
+        <h3>✈️ Horarios de Vuelos desde Bogotá</h3>
+        <p><strong>Salidas típicas de BOG:</strong></p>
+        <ul>
+            <li>Tarde-Noche (16:00 - 22:00): Vuelos directos a Madrid y París</li>
+            <li>Mañana (06:00 - 12:00): Conexiones con escalas</li>
+            <li>Duración vuelo directo:</li>
+                <ul>
+                    <li>BOG → MAD: 9h 35m</li>
+                    <li>BOG → CDG: 9h 50m</li>
+                </ul>
+        </ul>
+
+        <h3>🛂 Proceso de Check-in</h3>
+        <ol>
+            <li><strong>Llega 3 horas antes</strong> para vuelos internacionales</li>
+            <li>Check-in en mostrador (equipaje hasta 23kg generalmente)</li>
+            <li>Seguridad (TSA)</li>
+            <li>Migraciones y sellado de pasaporte</li>
+            <li>Puerta de embarque (anuncia 1 hora antes)</li>
+        </ol>
+
+        <h3>📱 Conectividad en el Viaje</h3>
+        <ul>
+            <li><strong>eSIM Europa:</strong> Disponible en nuestro sitio (desde $15 USD)</li>
+            <li><strong>WiFi en aeropuertos:</strong> Gratis en BOG y principales airports europeos</li>
+            <li><strong>Roaming internacional:</strong> Verifica con tu operador (puede ser caro)</li>
+            <li><strong>Apps recomendadas:</strong> Google Maps, Skyscanner, Rome2Rio, Booking</li>
+        </ul>
+    </section>
+
+    <!-- ==================== SECTION 7: TESTIMONIALS ==================== -->
+    <section id="testimonios">
+        <h2>Testimonios de Viajeros desde Bogotá</h2>
+        <p>Lee las experiencias de colombianos que viajaron con TripsEuropa:</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>
+                    <p>"Viajamos con mi familia a Europa y fue la mejor decisión. Todo estuvo perfectamente organizado desde Bogotá. Los vuelos, hoteles, tours... todo impecable. ¡Recomendamos TripsEuropa al 100%!"</p>
+                </blockquote>
+                <div class="author">
+                    <strong>Carlos Martínez</strong>
+                    <span>Bogotá, Colombia - Viaje a Europa Clásica (Dic 2024)</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div

@@ -1,0 +1,274 @@
+Voy a terminar el template de forma exhaustiva y completa:
+
+xml
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Viajes a Europa desde Bogotá | Paquetes TripsEuropa</title>
+    <meta name="description" content="Paquetes turísticos a Europa desde Bogotá. Vuelos directos incluidos, hoteles 4-5 estrellas, seguro completo. Desde $9,500 USD. Consulta disponibilidad.">
+    <meta name="keywords" content="viajes Europa Bogotá, paquetes Bogotá Madrid, tour Bogotá París, agencia viajes Bogotá, vuelos Bogotá Europa">
+    <meta property="og:title" content="Viajes a Europa desde Bogotá | TripsEuropa">
+    <meta property="og:description" content="Paquetes turísticos a Europa desde Bogotá. Vuelos directos incluidos, hoteles 4-5 estrellas, seguro completo. Desde $9,500 USD.">
+    <meta property="og:image" content="https://tripseuropa.com/images/bogota-europe.jpg">
+    <meta property="og:url" content="https://tripseuropa.com/from/colombia/bogota">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Viajes a Europa desde Bogotá">
+    <meta name="twitter:description" content="Paquetes turísticos a Europa desde Bogotá...">
+    <meta name="twitter:image" content="https://tripseuropa.com/images/bogota-europe.jpg">
+    anonical href="https://tripseuropa.com/from/colombia/bogota">
+    <link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/from/colombia/bogota">
+    <meta name="author" content="TripsEuropa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- BREADCRUMB -->
+<nav aria-label="Breadcrumb">
+    <ol>
+        <li><a href="https://tripseuropa.com">Inicio</a></li>
+        <li><a href="https://tripseuropa.com/from">Viaja Desde</a></li>
+        <li><a href="https://tripseuropa.com/from/colombia">Colombia</a></li>
+        <li><strong>Bogotá</strong></li>
+    </ol>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+    <h1>Viajes a Europa desde Bogotá | Paquetes Turísticos 2025</h1>
+    
+    <p class="lead">Descubre los mejores paquetes turísticos a Europa desde Bogotá. Con TripsEuropa, viajar es fácil, seguro y asequible. Desde $9,500 USD con vuelos incluidos, hoteles 4-5 estrellas y seguro internacional completo.</p>
+
+    <!-- HERO IMAGE -->
+    <img src="https://tripseuropa.com/images/bogota-skyline-europe.jpg" 
+         alt="Viajes a Europa desde Bogotá - Paquetes turísticos TripsEuropa"
+         loading="lazy">
+
+    <!-- QUICK STATS -->
+    <section class="stats">
+        <div class="stat">
+            <strong>8.2M</strong>
+            <span>Habitantes en Bogotá</span>
+        </div>
+        <div class="stat">
+            <strong>9h 35m</strong>
+            <span>Vuelo directo a Madrid</span>
+        </div>
+        <div class="stat">
+            <strong>desde $9,500</strong>
+            <span>Precio más económico</span>
+        </div>
+        <div class="stat">
+            <strong>15+</strong>
+            <span>Destinos disponibles</span>
+        </div>
+    </section>
+
+    <!-- CTA BUTTON -->
+    <button class="cta-primary">Cotiza tu Viaje Ahora →</button>
+
+    <!-- ==================== SECTION 1: DESTINATION INFO ==================== -->
+    <section id="destinos-populares">
+        <h2>Destinos Populares desde Bogotá</h2>
+        <p>Bogotá es el principal hub de salida hacia Europa en Colombia, con el Aeropuerto Internacional El Dorado (BOG) ofreciendo conexiones a más de 80 ciudades en el mundo. Desde aquí, puedes viajar directo a Madrid y París, o con una conexión rápida a otros destinos europeos.</p>
+
+        <table class="destinations-table">
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>País</th>
+                    <th>Código IATA</th>
+                    <th>Tiempo Vuelo</th>
+                    <th>Precio USD</th>
+                    <th>Tipo Conexión</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Madrid</strong></td>
+                    <td>España</td>
+                    <td>MAD</td>
+                    <td>9h 35m</td>
+                    <td>$9,500 - $12,500</td>
+                    <td>Directo</td>
+                </tr>
+                <tr>
+                    <td><strong>París</strong></td>
+                    <td>Francia</td>
+                    <td>CDG</td>
+                    <td>9h 50m</td>
+                    <td>$9,800 - $13,000</td>
+                    <td>Directo</td>
+                </tr>
+                <tr>
+                    <td><strong>Roma</strong></td>
+                    <td>Italia</td>
+                    <td>FCO</td>
+                    <td>12-14h</td>
+                    <td>$10,000 - $13,500</td>
+                    <td>Conexión (MAD/LIS)</td>
+                </tr>
+                <tr>
+                    <td><strong>Barcelona</strong></td>
+                    <td>España</td>
+                    <td>BCN</td>
+                    <td>11-13h</td>
+                    <td>$8,500 - $11,000</td>
+                    <td>Conexión</td>
+                </tr>
+                <tr>
+                    <td><strong>Lisboa</strong></td>
+                    <td>Portugal</td>
+                    <td>LIS</td>
+                    <td>10-12h</td>
+                    <td>$7,500 - $9,500</td>
+                    <td>Conexión</td>
+                </tr>
+                <tr>
+                    <td><strong>Florencia</strong></td>
+                    <td>Italia</td>
+                    <td>FLR</td>
+                    <td>12-15h</td>
+                    <td>$7,000 - $9,000</td>
+                    <td>Conexión</td>
+                </tr>
+                <tr>
+                    <td><strong>Ámsterdam</strong></td>
+                    <td>Países Bajos</td>
+                    <td>AMS</td>
+                    <td>12-14h</td>
+                    <td>$11,000 - $15,000</td>
+                    <td>Conexión</td>
+                </tr>
+                <tr>
+                    <td><strong>Londres</strong></td>
+                    <td>Reino Unido</td>
+                    <td>LHR</td>
+                    <td>11-13h</td>
+                    <td>$8,000 - $10,500</td>
+                    <td>Conexión</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ==================== SECTION 2: TOP ROUTES ==================== -->
+    <section id="rutas-mas-solicitadas">
+        <h2>Rutas Más Solicitadas desde Bogotá</h2>
+        <p>Estas son las rutas con mayor demanda desde Bogotá hacia Europa. Ofrecemos vuelos directos, mejores precios y todas las comodidades incluidas.</p>
+
+        <!-- ROUTE CARD 1 -->
+        <div class="route-card">
+            <div class="route-header">
+                <h3>Bogotá → Madrid</h3>
+                <span class="badge badge-popular">🔥 Más Popular</span>
+            </div>
+            <div class="route-details">
+                <p><strong>Código Ruta:</strong> BOG-MAD</p>
+                <p><strong>Duración:</strong> 9 horas 35 minutos (directo)</p>
+                <p><strong>Precio promedio:</strong> $9,500 - $12,500 USD por persona</p>
+                <p><strong>Aerolineas:</strong> Avianca, LATAM, United Airlines</p>
+                <p><strong>Frecuencia:</strong> Diariamente (múltiples salidas)</p>
+            </div>
+            <div class="route-footer">
+                <a href="/routes/bog-mad" class="btn-secondary">Ver paquetes Bogotá-Madrid →</a>
+            </div>
+        </div>
+
+        <!-- ROUTE CARD 2 -->
+        <div class="route-card">
+            <div class="route-header">
+                <h3>Bogotá → París</h3>
+                <span class="badge badge-popular">✨ Romántico</span>
+            </div>
+            <div class="route-details">
+                <p><strong>Código Ruta:</strong> BOG-CDG</p>
+                <p><strong>Duración:</strong> 9 horas 50 minutos (directo)</p>
+                <p><strong>Precio promedio:</strong> $9,800 - $13,000 USD por persona</p>
+                <p><strong>Aerolineas:</strong> Avianca, Air France, LATAM</p>
+                <p><strong>Frecuencia:</strong> 5-7 veces por semana</p>
+            </div>
+            <div class="route-footer">
+                <a href="/routes/bog-cdg" class="btn-secondary">Ver paquetes Bogotá-París →</a>
+            </div>
+        </div>
+
+        <!-- ROUTE CARD 3 -->
+        <div class="route-card">
+            <div class="route-header">
+                <h3>Bogotá → Barcelona</h3>
+                <span class="badge badge-secondary">🏖️ Playa</span>
+            </div>
+            <div class="route-details">
+                <p><strong>Código Ruta:</strong> BOG-BCN</p>
+                <p><strong>Duración:</strong> 11-13 horas (conexión)</p>
+                <p><strong>Precio promedio:</strong> $8,500 - $11,000 USD por persona</p>
+                <p><strong>Aerolineas:</strong> LATAM, Iberia, United</p>
+                <p><strong>Conexión típica:</strong> Bogotá → Madrid → Barcelona</p>
+            </div>
+            <div class="route-footer">
+                <a href="/routes/bog-bcn" class="btn-secondary">Ver paquetes Bogotá-Barcelona →</a>
+            </div>
+        </div>
+
+        <!-- ROUTE CARD 4 -->
+        <div class="route-card">
+            <div class="route-header">
+                <h3>Bogotá → Roma</h3>
+                <span class="badge badge-secondary">🏛️ Cultural</span>
+            </div>
+            <div class="route-details">
+                <p><strong>Código Ruta:</strong> BOG-FCO</p>
+                <p><strong>Duración:</strong> 12-14 horas (conexión)</p>
+                <p><strong>Precio promedio:</strong> $10,000 - $13,500 USD por persona</p>
+                <p><strong>Aerolineas:</strong> LATAM, Alitalia, Iberia</p>
+                <p><strong>Conexión típica:</strong> Bogotá → Madrid/Lisboa → Roma</p>
+            </div>
+            <div class="route-footer">
+                <a href="/routes/bog-fco" class="btn-secondary">Ver paquetes Bogotá-Roma →</a>
+            </div>
+        </div>
+
+        <!-- ROUTE CARD 5 -->
+        <div class="route-card">
+            <div class="route-header">
+                <h3>Bogotá → Lisboa</h3>
+                <span class="badge badge-secondary">💰 Económico</span>
+            </div>
+            <div class="route-details">
+                <p><strong>Código Ruta:</strong> BOG-LIS</p>
+                <p><strong>Duración:</strong> 10-12 horas (conexión)</p>
+                <p><strong>Precio promedio:</strong> $7,500 - $9,500 USD por persona</p>
+                <p><strong>Aerolineas:</strong> TAP Air Portugal, LATAM, Iberia</p>
+                <p><strong>Ventaja:</strong> Puerta a Portugal y España</p>
+            </div>
+            <div class="route-footer">
+                <a href="/routes/bog-lis" class="btn-secondary">Ver paquetes Bogotá-Lisboa →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: POPULAR PACKAGES ==================== -->
+    <section id="paquetes-populares">
+        <h2>Paquetes Más Populares desde Bogotá</h2>
+        <p>Estos son nuestros paquetes favoritos para viajeros desde Bogotá. Incluyen vuelos, hoteles, seguro y más.</p>
+
+        <!-- PACKAGE 1 -->
+        <div class="package-card">
+            <img src="/images/package-clásica-europa.jpg" alt="Europa Clásica - París, Roma, Madrid">
+            <h3>Europa Clásica</h3>
+            <p class="description">Visita los tres destinos más icónicos de Europa en un solo viaje.</p>
+            <div class="itinerary">
+                <p><strong>Itinerario:</strong> Bogotá → Madrid → Roma → París → Bogotá</p>
+                <p><strong>Duración:</strong> 14 días, 13 noches</p>
+                <p><strong>Incluye:</strong> Vuelos internacionales y domésticos, hoteles 4 estrellas, desayuno, tours guiados, seguro completo</p>
+            </div>
+            <div class="pricing">
+                <p class="price">Desde <strong>$11,550 USD</strong> por persona</p>
+                <p class="note">Habitación doble, impuestos incluidos</p>
+            </div>
+            <a href="/packages/europa-clasica" class="btn-primary">Ver detalles →</a>
+        </div>
+
+        <!-- PACKAGE 2 -->
+        <div class="package-card">
+            <img src="/images/
