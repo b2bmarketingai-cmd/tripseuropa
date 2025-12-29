@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
 import { FlightSearch } from "@/components/FlightSearch";
 import { Chatbot } from "@/components/Chatbot";
 import { ContactForm, ContactInfo } from "@/components/ContactForm";
@@ -329,6 +330,16 @@ export default function Home() {
       <Footer />
       <Chatbot />
       <WhatsAppButton />
+      
+      <TravelAgencySchema />
+      <WebsiteSchema />
+      <FAQSchema questions={[
+        { question: "Necesito visa Schengen para viajar a Europa desde Colombia?", answer: "Si, los ciudadanos colombianos necesitan visa Schengen. Te ayudamos con todo el proceso de solicitud." },
+        { question: "Cuanto cuesta un viaje a Europa desde Latinoamerica?", answer: "Nuestros paquetes comienzan desde $1,200 USD por persona incluyendo vuelos, hoteles y tours." },
+        { question: "Incluyen seguro de viaje los paquetes?", answer: "Si, todos nuestros paquetes incluyen seguro de viaje internacional con cobertura medica de hasta $50,000 USD." },
+        { question: "Desde que paises ofrecen salidas?", answer: "Ofrecemos salidas desde Colombia, Brasil, Mexico, Panama, Argentina, Peru, Chile y toda Latinoamerica." },
+        { question: "Los tours incluyen guia en espanol?", answer: "Si, todos nuestros tours incluyen guias profesionales en espanol y portugues." }
+      ]} />
     </div>
   );
 }

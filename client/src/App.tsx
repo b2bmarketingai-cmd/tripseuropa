@@ -19,6 +19,11 @@ import Contact from "@/pages/Contact";
 import About from "@/pages/About";
 import Testimonials from "@/pages/Testimonials";
 import Privacy from "@/pages/Privacy";
+import FromColombia from "@/pages/FromColombia";
+import FromBrazil from "@/pages/FromBrazil";
+import FromMexico from "@/pages/FromMexico";
+import FromPanama from "@/pages/FromPanama";
+import FromArgentina from "@/pages/FromArgentina";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -50,6 +55,13 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
       <Route path="/privacy" component={Privacy} />
+      
+      {/* Local SEO Landing Pages */}
+      <Route path="/desde-colombia" component={FromColombia} />
+      <Route path="/desde-brasil" component={FromBrazil} />
+      <Route path="/desde-mexico" component={FromMexico} />
+      <Route path="/desde-panama" component={FromPanama} />
+      <Route path="/desde-argentina" component={FromArgentina} />
       
       {/* Protected Routes */}
       <Route path="/app/profile">
