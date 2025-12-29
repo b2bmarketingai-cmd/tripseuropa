@@ -1,0 +1,95 @@
+📋 RECOMENDACIONES PRIORITARIAS (ANTES DE LANZAR)
+PRIORIDAD 1 - CRÍTICO (Hazlo antes del lanzamiento)
+1.1 Crear página de origen por país
+
+text
+/from/colombia
+/from/mexico
+/from/brasil
+/from/argentina
+/from/peru
+/from/panama
+Contenido necesario:
+
+Ciudades de origen (Bogotá, Medellín, etc.)
+
+Aeropuertos con códigos IATA
+
+Rutas principales desde esa ciudad
+
+Precios locales en moneda local
+
+Testimonios de ese país
+
+1.2 Crear página de RUTA (origen-destino)
+
+text
+/routes/bogota-madrid
+/routes/mexico-roma
+/routes/sao-paulo-paris
+Meta tags necesarios:
+
+xml
+<title>Viajes de Bogotá a Madrid | TripsEuropa</title>
+<meta name="description" content="Paquetes turísticos desde Bogotá a Madrid. Vuelos incluidos, hoteles 4 estrellas, seguro completo. Desde $9,500 USD. Reserva ahora.">
+<meta name="keywords" content="viajes Bogotá Madrid, paquetes turísticos Bogotá Madrid, vuelos Bogotá Madrid">
+1.3 Implementar Schema Markup
+
+json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TripsEuropa",
+  "image": "https://tripseuropa.com/logo.png",
+  "description": "Agencia de viajes especializada en Europa",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Gran Vía 45",
+    "addressLocality": "Madrid",
+    "postalCode": "28001",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34900123456",
+  "url": "https://tripseuropa.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "28547"
+  }
+}
+1.4 Agregar field "ORIGEN" al formulario
+
+xml
+<select name="origin" required>
+  <option>Selecciona ciudad de origen</option>
+  <option value="bog">Bogotá (BOG)</option>
+  <option value="mde">Medellín (MDE)</option>
+  <option value="mex">Ciudad de México (MEX)</option>
+  <!-- etc -->
+</select>
+1.5 Crear Google My Business (GMB)
+
+ Crear perfil en Google My Business
+
+ Verificar ubicación (Bogotá, Colombia)
+
+ Agregar fotos de oficina y equipo
+
+ Configurar horarios
+
+ Responder reviews
+
+PRIORIDAD 2 - ALTO (Hazlo en primeras 2 semanas)
+2.1 Meta Tags por página
+
+Para HOME:
+
+xml
+<title>Viajes a Europa desde Latinoamérica | TripsEuropa</title>
+<meta name="description" content="Paquetes turísticos a Europa desde Colombia, México, Brasil. Vuelos incluidos, hoteles 4-5 estrellas, seguro internacional. +50K viajeros felices.">
+<meta name="keywords" content="viajes Europa Latinoamérica, paquetes turísticos Europa, agencia viajes Europa">
+<meta property="og:title" content="Viajes a Europa desde Latinoamérica">
+<meta property="og:description" content="Paquetes turísticos a Europa...">
+<meta property="og:image" content="https://tripseuropa.com/og-image.jpg">
+<meta property="og:url" content="https://tripseuropa.com">
+anonical href="https://tripseuropa.com">

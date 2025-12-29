@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
+import { HomePageSEO } from "@/components/SEOHead";
 import { Chatbot } from "@/components/Chatbot";
 import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
@@ -62,6 +63,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <HomePageSEO />
       <UrgencyBanner />
       <Header />
       

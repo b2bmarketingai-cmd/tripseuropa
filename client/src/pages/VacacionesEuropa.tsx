@@ -1,5 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
+import { FAQSchema, BreadcrumbSchema } from "@/components/SEOSchema";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -276,8 +278,21 @@ export default function VacacionesEuropa() {
     ? FEATURED_PACKAGES 
     : FEATURED_PACKAGES.slice(0, 6);
 
+  const faqsForSchema = FAQS.map(faq => ({ question: faq.question, answer: faq.answer }));
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Vacaciones en Europa - Paquetes de Viaje Todo Incluido"
+        description="Descubre los mejores paquetes de vacaciones a Europa desde Latinoamerica. Portugal, Espana, Italia, Francia y mas. Tours guiados en espanol, hoteles seleccionados, experiencias unicas."
+        keywords="vacaciones europa, paquetes europa, viaje europa todo incluido, tour europa espanol, europa desde latinoamerica"
+        url="https://tripseuropa.com/vacaciones-europa"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Inicio", url: "https://tripseuropa.com" },
+        { name: "Vacaciones Europa", url: "https://tripseuropa.com/vacaciones-europa" }
+      ]} />
+      <FAQSchema questions={faqsForSchema} />
       <Header />
       
       <section 

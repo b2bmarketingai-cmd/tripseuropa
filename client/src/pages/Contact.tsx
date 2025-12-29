@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { ContactForm, ContactInfo } from "@/components/ContactForm";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead
+        title="Contacto - Asesoría de Viajes a Europa"
+        description="Contacta a nuestro equipo de expertos en viajes a Europa. Asesoria personalizada para planificar tu viaje desde Latinoamerica. Respuesta en 24 horas."
+        keywords="contacto trips europa, asesoria viajes europa, planificar viaje europa"
+        url="https://tripseuropa.com/contact"
+      />
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-contact-hero">
