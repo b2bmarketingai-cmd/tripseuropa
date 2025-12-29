@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2 } from "lucide-react";
-import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiAmericanexpress } from "react-icons/si";
+import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
 
@@ -216,12 +216,6 @@ export function Footer() {
               </div>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="American Express">
-              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
-                <SiAmericanexpress className="w-8 h-6 text-white/80" />
-              </div>
-            </div>
-            
             <div className="flex flex-col items-center gap-1" title="Maestro">
               <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
                 <div className="flex items-center">
@@ -230,6 +224,22 @@ export function Footer() {
                 </div>
               </div>
               <span className="text-[10px] text-white/50">maestro</span>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="Binance Pay">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <SiBinance className="w-6 h-6 text-[#F0B90B]" />
+              </div>
+              <span className="text-[10px] text-white/50">Binance Pay</span>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="Scalapay">
+              <div className="w-20 h-10 rounded bg-white/10 flex items-center justify-center px-2">
+                <span className="text-white/80 text-sm font-semibold flex items-center gap-1">
+                  <span className="text-[#3C1053]">&#9829;</span>
+                  scalapay
+                </span>
+              </div>
             </div>
             
             <div className="flex flex-col items-center gap-1" title="Bank Transfer">
@@ -242,6 +252,15 @@ export function Footer() {
             </div>
           </div>
           
+          <div className="flex flex-wrap justify-center items-center gap-4 mb-6">
+            <span className="text-[11px] text-white/50">{language === "es" ? "Divisas aceptadas:" : "Accepted currencies:"}</span>
+            <div className="flex items-center gap-3">
+              <span className="px-2 py-1 rounded bg-white/10 text-[11px] text-white/70 font-medium">EUR</span>
+              <span className="px-2 py-1 rounded bg-white/10 text-[11px] text-white/70 font-medium">USD</span>
+              <span className="px-2 py-1 rounded bg-white/10 text-[11px] text-white/70 font-medium">COP</span>
+            </div>
+          </div>
+          
           <div className="border-t border-white/10 pt-6">
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
               <div className="flex items-center gap-2" title="Confianza Online">
@@ -249,6 +268,10 @@ export function Footer() {
                   <Shield className="w-4 h-4 text-white/70" />
                 </div>
                 <span className="text-sm text-white/60 font-medium tracking-wide">CONFIANZA ONLINE</span>
+              </div>
+              
+              <div className="text-center text-white/50 text-sm">
+                <p>Trips Europa es Agencia de Viajes</p>
               </div>
               
               <div className="flex items-center gap-2" title="IATA Member">
