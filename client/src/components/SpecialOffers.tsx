@@ -8,7 +8,7 @@ import { useI18n } from "@/lib/i18n";
 const OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=600&auto=format&fit=crop",
     title: { es: "Bellezas de Europa", en: "Beauties of Europe" },
     price: "2,399",
     taxes: "799",
