@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2 } from "lucide-react";
-import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance } from "react-icons/si";
+import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance, SiPaypal } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
 
@@ -210,6 +210,12 @@ export function Footer() {
             <div title="Mastercard">
               <div className="w-16 h-10 rounded bg-white flex items-center justify-center">
                 <SiMastercard className="w-10 h-8 text-[#EB001B]" />
+              </div>
+            </div>
+            
+            <div title="PayPal">
+              <div className="w-16 h-10 rounded bg-[#003087] flex items-center justify-center">
+                <SiPaypal className="w-6 h-6 text-white" />
               </div>
             </div>
             
