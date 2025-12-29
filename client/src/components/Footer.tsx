@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink } from "lucide-react";
-import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard } from "react-icons/si";
+import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2 } from "lucide-react";
+import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiAmericanexpress } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
 
@@ -190,34 +190,80 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 mb-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-wrap justify-center items-center gap-4 text-white/40 text-xs">
-              <span className="flex items-center gap-1">
-                <span className="w-6 h-6 rounded bg-white/10 flex items-center justify-center text-[10px] font-bold">IATA</span>
-                {t("footer.iata")}
+        <div className="border-t border-white/10 pt-8 mb-6">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 mb-8">
+            <div className="flex flex-col items-center gap-1" title="SSL 256 bits">
+              <div className="w-12 h-12 rounded bg-white/10 flex items-center justify-center">
+                <Lock className="w-6 h-6 text-white/70" />
+              </div>
+              <span className="text-[10px] text-white/50 text-center leading-tight">
+                SSL<br/>256 bits
               </span>
-              <span className="flex items-center gap-1">
-                <span className="w-6 h-6 rounded bg-white/10 flex items-center justify-center text-[10px] font-bold">SSL</span>
-                {t("footer.ssl")}
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="w-6 h-6 rounded bg-white/10 flex items-center justify-center text-[10px] font-bold">24/7</span>
-                {t("footer.support")}
+              <span className="text-[9px] text-white/40">
+                {language === "es" ? "Pago seguro garantizado" : "Secure payment guaranteed"}
               </span>
             </div>
             
-            <div className="flex items-center gap-2">
-              <span className="text-white/40 text-xs">{t("footer.paymentMethods")}:</span>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-6 rounded bg-white/10 flex items-center justify-center" title="Visa">
-                  <SiVisa className="w-6 h-4 text-white/80" />
+            <div className="flex flex-col items-center gap-1" title="Visa">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <SiVisa className="w-10 h-6 text-white/80" />
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="Mastercard">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <SiMastercard className="w-8 h-6 text-white/80" />
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="American Express">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <SiAmericanexpress className="w-8 h-6 text-white/80" />
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="Maestro">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <div className="flex items-center">
+                  <div className="w-4 h-4 rounded-full bg-red-500/60 -mr-1"></div>
+                  <div className="w-4 h-4 rounded-full bg-blue-500/60"></div>
                 </div>
-                <div className="w-10 h-6 rounded bg-white/10 flex items-center justify-center" title="Mastercard">
-                  <SiMastercard className="w-6 h-4 text-white/80" />
+              </div>
+              <span className="text-[10px] text-white/50">maestro</span>
+            </div>
+            
+            <div className="flex flex-col items-center gap-1" title="Bank Transfer">
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <Building2 className="w-5 h-5 text-white/70" />
+              </div>
+              <span className="text-[10px] text-white/50 text-center leading-tight">
+                BANK<br/>TRANSFER
+              </span>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/10 pt-6">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+              <div className="flex items-center gap-2" title="Confianza Online">
+                <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-white/70" />
                 </div>
-                <div className="w-10 h-6 rounded bg-white/10 flex items-center justify-center text-[8px] font-bold text-white/80" title="Scalapay">
-                  SCALA
+                <span className="text-sm text-white/60 font-medium tracking-wide">CONFIANZA ONLINE</span>
+              </div>
+              
+              <div className="text-center text-white/50 text-sm">
+                <p>Trips Europa es Agencia de Viajes con</p>
+                <p>licencia num. RNT-12345</p>
+                <p className="flex items-center justify-center gap-2 mt-1">
+                  <span className="text-accent">&#9733;</span>
+                  <span className="font-medium">Miembro de ANATO</span>
+                  <span className="text-accent">&#9733;</span>
+                </p>
+              </div>
+              
+              <div className="flex items-center gap-2" title="IATA Member">
+                <div className="px-4 py-2 border border-white/30 rounded flex items-center justify-center">
+                  <span className="text-xl font-bold text-white/80 tracking-wider" style={{ fontFamily: "serif" }}>IATA</span>
                 </div>
               </div>
             </div>
