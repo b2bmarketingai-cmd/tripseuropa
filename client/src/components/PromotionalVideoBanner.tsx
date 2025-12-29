@@ -17,7 +17,7 @@ export function PromotionalVideoBanner() {
 
   const content = {
     es: {
-      sectionTitle: "Trips Europa",
+      sectionTitle: "Conoce y Descubre      TripsEuropa.com",
       subheadline: "Elegido por mas de 50,000 viajeros cada ano - descubre la magia de Europa con nuestros paquetes exclusivos.",
       watchVideo: "Ver Video",
       videoTitle: "Video Promocional",
@@ -28,7 +28,7 @@ export function PromotionalVideoBanner() {
       award: "Mejor agencia 2024",
     },
     en: {
-      sectionTitle: "Trips Europa",
+      sectionTitle: "Conoce y Descubre      TripsEuropa.com",
       subheadline: "Chosen by more than 50,000 travelers each year - discover the magic of Europe with our exclusive packages.",
       watchVideo: "Watch Video",
       videoTitle: "Promotional Video",
