@@ -71,7 +71,7 @@ const OFFERS = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1493707553966-283afac8c358?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=600&auto=format&fit=crop",
     title: { es: "Viva Europa", en: "Viva Europe" },
     price: "1,599",
     taxes: "799",
@@ -80,7 +80,7 @@ const OFFERS = [
   },
   {
     id: 9,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop",
     title: { es: "Escapada a Grecia", en: "Greece Getaway" },
     price: "1,199",
     taxes: "799",
