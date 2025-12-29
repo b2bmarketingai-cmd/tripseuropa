@@ -48,9 +48,10 @@ export function PromotionalVideoBanner() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white text-left">
-              <p className="text-sm font-medium tracking-widest text-accent mb-4 uppercase">
-                {c.sectionTitle}
-              </p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 leading-tight">
+                <span className="text-white">Conoce y Descubre </span>
+                <span className="text-[#d4af37]">TripsEuropa.com</span>
+              </h2>
               <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
                 {c.subheadline}
               </p>
