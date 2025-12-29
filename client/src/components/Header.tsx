@@ -29,10 +29,10 @@ import { Label } from "@/components/ui/label";
 
 const DESTINATIONS_MENU = {
   es: [
-    { name: "Europa", href: "/destinations", items: ["Francia", "Italia", "España", "Alemania", "Portugal", "Grecia"] },
+    { name: "Europa", href: "/destinations", items: ["Francia", "Italia", "España", "Alemania", "Portugal", "Grecia", "Paises Bajos", "Suiza", "Croacia", "Reino Unido"] },
   ],
   en: [
-    { name: "Europe", href: "/destinations", items: ["France", "Italy", "Spain", "Germany", "Portugal", "Greece"] },
+    { name: "Europe", href: "/destinations", items: ["France", "Italy", "Spain", "Germany", "Portugal", "Greece", "Netherlands", "Switzerland", "Croatia", "United Kingdom"] },
   ]
 };
 
