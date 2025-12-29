@@ -13,7 +13,7 @@ import { SpecialOffers } from "@/components/SpecialOffers";
 import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { ReferralProgram } from "@/components/ReferralProgram";
+import { TravelerStories } from "@/components/TravelerStories";
 import { TrustpilotReviews } from "@/components/TrustpilotReviews";
 import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
 import { DestinationGrid } from "@/components/DestinationGrid";
@@ -87,7 +87,7 @@ export default function Home() {
 
       <PromotionalVideoBanner />
 
-      <ReferralProgram />
+      <TravelerStories />
 
       <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
         <div className="container mx-auto px-4">
