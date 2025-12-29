@@ -49,11 +49,13 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <img 
-              src={logoUrl} 
-              alt="Trips Europa - Agencia de Viajes Premium a Europa" 
-              className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" 
-            />
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-md">
+              <img 
+                src={logoUrl} 
+                alt="Trips Europa - Agencia de Viajes Premium a Europa" 
+                className="h-14 md:h-16 w-auto object-contain" 
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}

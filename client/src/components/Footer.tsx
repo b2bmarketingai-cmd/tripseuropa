@@ -41,12 +41,14 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-2 space-y-4 sm:space-y-6">
             <Link href="/" className="inline-block" data-testid="link-footer-logo">
-              <img 
-                src={logoUrl} 
-                alt="Trips Europa" 
-                className="h-10 sm:h-12 w-auto object-contain drop-shadow-lg"
-                loading="lazy"
-              />
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-md inline-block">
+                <img 
+                  src={logoUrl} 
+                  alt="Trips Europa" 
+                  className="h-10 sm:h-12 w-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
             </Link>
             <p className="text-white/60 leading-relaxed max-w-xs" data-testid="text-footer-description">
               {t("footer.description")}
