@@ -18,7 +18,6 @@ export function PromotionalVideoBanner() {
   const content = {
     es: {
       sectionTitle: "Trips Europa",
-      headline: "Viajes Organizados Extraordinarios A Destinos Europeos",
       subheadline: "Elegido por mas de 50,000 viajeros cada ano - descubre la magia de Europa con nuestros paquetes exclusivos.",
       watchVideo: "Ver Video",
       videoTitle: "Video Promocional",
@@ -30,7 +29,6 @@ export function PromotionalVideoBanner() {
     },
     en: {
       sectionTitle: "Trips Europa",
-      headline: "Extraordinary Organized Trips To European Destinations",
       subheadline: "Chosen by more than 50,000 travelers each year - discover the magic of Europe with our exclusive packages.",
       watchVideo: "Watch Video",
       videoTitle: "Promotional Video",
@@ -53,9 +51,6 @@ export function PromotionalVideoBanner() {
               <p className="text-sm font-medium tracking-widest text-accent mb-4 uppercase">
                 {c.sectionTitle}
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight">
-                {c.headline}
-              </h2>
               <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
                 {c.subheadline}
               </p>
