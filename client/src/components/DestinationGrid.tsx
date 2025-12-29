@@ -1,44 +1,68 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 
 const DESTINATIONS = [
   {
-    id: "paris",
+    id: "spain",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Espana", en: "Spain" },
+    trips: 24,
+  },
+  {
+    id: "france",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Paris", en: "Paris" },
-    country: { es: "Francia", en: "France" },
-    packages: 12,
+    name: { es: "Francia", en: "France" },
+    trips: 18,
   },
   {
-    id: "roma",
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Roma", en: "Rome" },
-    country: { es: "Italia", en: "Italy" },
-    packages: 15,
+    id: "italy",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Italia", en: "Italy" },
+    trips: 22,
   },
   {
-    id: "barcelona",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Barcelona", en: "Barcelona" },
-    country: { es: "España", en: "Spain" },
-    packages: 10,
+    id: "portugal",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Portugal", en: "Portugal" },
+    trips: 12,
   },
   {
-    id: "santorini",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Santorini", en: "Santorini" },
-    country: { es: "Grecia", en: "Greece" },
-    packages: 8,
+    id: "greece",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Grecia", en: "Greece" },
+    trips: 8,
   },
   {
-    id: "amsterdam",
+    id: "uk",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Reino Unido", en: "United Kingdom" },
+    trips: 15,
+  },
+  {
+    id: "germany",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Alemania", en: "Germany" },
+    trips: 10,
+  },
+  {
+    id: "netherlands",
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Amsterdam", en: "Amsterdam" },
-    country: { es: "Paises Bajos", en: "Netherlands" },
-    packages: 6,
+    name: { es: "Paises Bajos", en: "Netherlands" },
+    trips: 6,
+  },
+  {
+    id: "switzerland",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Suiza", en: "Switzerland" },
+    trips: 9,
+  },
+  {
+    id: "croatia",
+    image: "https://images.unsplash.com/photo-1555990538-1c7d85d68db2?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Croacia", en: "Croatia" },
+    trips: 5,
   },
 ];
 
@@ -48,68 +72,53 @@ export function DestinationGrid() {
 
   const content = {
     es: {
-      title: "Destinos Populares",
-      subtitle: "Explora los rincones mas bellos de Europa con nuestros viajes disenados especialmente para ti",
-      packages: "paquetes disponibles",
-      explore: "Explorar",
+      title: "Donde Quieres Ir?",
+      trips: "Viajes",
       viewAll: "Ver todos los destinos",
     },
     en: {
-      title: "Popular Destinations",
-      subtitle: "Explore the most beautiful corners of Europe with our trips designed especially for you",
-      packages: "packages available",
-      explore: "Explore",
+      title: "Where Do You Want To Go?",
+      trips: "Trips",
       viewAll: "View all destinations",
     },
   };
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-destination-grid">
+    <section className="py-16 bg-background" data-testid="section-destination-grid">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-accent" data-testid="text-destination-grid-title">
-            {content[lang].title}
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{content[lang].subtitle}</p>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-10" data-testid="text-destination-grid-title">
+          <span className="text-accent">{content[lang].title.split(" ")[0]}</span>{" "}
+          {content[lang].title.split(" ").slice(1).join(" ")}
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {DESTINATIONS.map((dest) => (
             <Link 
               key={dest.id} 
               href={`/destinations/${dest.id}`}
               data-testid={`link-destination-${dest.id}`}
             >
-              <Card className="group overflow-hidden cursor-pointer h-full">
-                <div className="relative aspect-[4/5]">
-                  <img
-                    src={dest.image}
-                    alt={dest.name[lang]}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                  <Badge className="absolute top-4 left-4 bg-accent/90 text-primary border-0">
-                    {dest.country[lang]}
+              <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer">
+                <img
+                  src={dest.image}
+                  alt={dest.name[lang]}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-lg font-bold text-white mb-2" data-testid={`text-destination-name-${dest.id}`}>
+                    {dest.name[lang]}
+                  </h3>
+                  <Badge 
+                    variant="secondary" 
+                    className="bg-white/20 backdrop-blur-sm text-white border-0 text-xs"
+                  >
+                    {dest.trips} {content[lang].trips}
                   </Badge>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="text-xl font-bold mb-1 text-accent" data-testid={`text-destination-name-${dest.id}`}>
-                      {dest.name[lang]}
-                    </h3>
-                    <p className="text-white/80 text-sm mb-3">
-                      {dest.packages} {content[lang].packages}
-                    </p>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="border-white/50 text-white hover:bg-white/20 w-full"
-                      data-testid={`button-explore-${dest.id}`}
-                    >
-                      {content[lang].explore}
-                    </Button>
-                  </div>
                 </div>
-              </Card>
+              </div>
             </Link>
           ))}
         </div>

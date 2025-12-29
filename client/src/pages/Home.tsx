@@ -16,6 +16,8 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ReferralProgram } from "@/components/ReferralProgram";
 import { TrustpilotReviews } from "@/components/TrustpilotReviews";
 import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
+import { DestinationGrid } from "@/components/DestinationGrid";
+import { ContactSupportModal } from "@/components/ContactSupportModal";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -66,6 +68,8 @@ export default function Home() {
       <HeroCarousel />
 
       <TopOffers />
+
+      <DestinationGrid />
 
       <ReserveSpot />
 
@@ -152,6 +156,7 @@ export default function Home() {
       <Footer />
       <Chatbot />
       <WhatsAppButton />
+      <SupportButton />
       
       <TravelAgencySchema />
       <WebsiteSchema />
@@ -178,5 +183,21 @@ function WhatsAppButton() {
     >
       <SiWhatsapp className="w-7 h-7 text-white" />
     </a>
+  );
+}
+
+function SupportButton() {
+  return (
+    <ContactSupportModal
+      trigger={
+        <button
+          className="fixed bottom-6 left-6 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors z-50"
+          aria-label="Support"
+          data-testid="button-support-float"
+        >
+          <Phone className="w-6 h-6 text-primary-foreground" />
+        </button>
+      }
+    />
   );
 }
