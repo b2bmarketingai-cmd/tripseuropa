@@ -21,7 +21,7 @@ const BLOG_CATEGORIES = [
 const BLOG_POSTS = [
   {
     id: "circuito-balcanes",
-    image: "https://images.unsplash.com/photo-1555990538-1e6f13e0e101?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Circuito Balcanes: Descubre 10 Naciones en un Solo Viaje", en: "Balkans Circuit: Discover 10 Nations in One Trip" },
     excerpt: { es: "Bulgaria, Grecia, Macedonia, Albania, Montenegro, Croacia, Bosnia y Serbia. La ruta mas completa por los Balcanes europeos.", en: "Bulgaria, Greece, Macedonia, Albania, Montenegro, Croatia, Bosnia and Serbia. The most complete route through the European Balkans." },
     category: "destinos",
