@@ -83,7 +83,7 @@ export function FAQAccordion() {
           <Badge className="mb-4" data-testid="badge-faq">
             {language === "es" ? "Preguntas Frecuentes" : "FAQ"}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4" data-testid="text-faq-title">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-accent mb-4" data-testid="text-faq-title">
             {language === "es" ? "Resolvemos Tus Dudas" : "We Answer Your Questions"}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-faq-subtitle">

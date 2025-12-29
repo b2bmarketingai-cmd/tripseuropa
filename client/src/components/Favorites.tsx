@@ -92,7 +92,7 @@ export function Favorites() {
             <Heart className="w-6 h-6 text-red-500" />
             <div>
               <Badge variant="secondary" className="mb-1">{content[lang].badge}</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground" data-testid="text-favorites-title">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-favorites-title">
                 {content[lang].title}
               </h2>
             </div>

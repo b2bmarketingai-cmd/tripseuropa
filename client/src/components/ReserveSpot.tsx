@@ -92,7 +92,7 @@ export function ReserveSpot() {
             <Calendar className="w-6 h-6 text-primary" />
             <div>
               <Badge className="mb-1">{content[lang].badge}</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground" data-testid="text-reserve-title">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-reserve-title">
                 {content[lang].title}
               </h2>
             </div>

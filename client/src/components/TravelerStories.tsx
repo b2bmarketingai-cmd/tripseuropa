@@ -74,7 +74,7 @@ export function TravelerStories() {
             <Badge className="mb-4" data-testid="badge-stories">
               {language === "es" ? "Blog" : "Blog"}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-primary" data-testid="text-stories-title">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-accent" data-testid="text-stories-title">
               {language === "es" ? "Historias de Viajeros" : "Traveler Stories"}
             </h2>
             <p className="text-muted-foreground mt-2 max-w-xl" data-testid="text-stories-subtitle">

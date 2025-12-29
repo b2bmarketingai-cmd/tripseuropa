@@ -94,7 +94,7 @@ export function FlashOffers() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white" data-testid="text-flash-title">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-accent" data-testid="text-flash-title">
                 {content[lang].title}
               </h2>
               <Badge className="bg-red-500 text-white border-0 animate-pulse">

@@ -8,7 +8,7 @@ const PACKAGES = [
   {
     id: "TE-001",
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop",
-    title: { es: "SINFONIA EUROPEA", en: "EUROPEAN SYMPHONY" },
+    title: { es: "Sinfonia Europea", en: "European Symphony" },
     destinations: { es: "Roma, Paris, Madrid y Barcelona", en: "Rome, Paris, Madrid and Barcelona" },
     price: "2,799",
     days: 15,
@@ -26,7 +26,7 @@ const PACKAGES = [
   {
     id: "TE-003",
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
-    title: { es: "GRECIA MAGICA", en: "MAGICAL GREECE" },
+    title: { es: "Grecia Magica", en: "Magical Greece" },
     destinations: { es: "Atenas, Santorini y Mykonos", en: "Athens, Santorini and Mykonos" },
     price: "3,199",
     days: 12,
@@ -35,7 +35,7 @@ const PACKAGES = [
   {
     id: "TE-004",
     image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=80&w=800&auto=format&fit=crop",
-    title: { es: "CAPITALES EUROPEAS", en: "EUROPEAN CAPITALS" },
+    title: { es: "Capitales Europeas", en: "European Capitals" },
     destinations: { es: "Londres, Paris, Amsterdam y Berlin", en: "London, Paris, Amsterdam and Berlin" },
     price: "3,499",
     days: 17,
@@ -44,7 +44,7 @@ const PACKAGES = [
   {
     id: "TE-005",
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop",
-    title: { es: "BENELUX EXPRESS", en: "BENELUX EXPRESS" },
+    title: { es: "Benelux Express", en: "Benelux Express" },
     destinations: { es: "Amsterdam, Bruselas y Brujas", en: "Amsterdam, Brussels and Bruges" },
     price: "2,199",
     days: 10,
@@ -53,7 +53,7 @@ const PACKAGES = [
   {
     id: "TE-006",
     image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=800&auto=format&fit=crop",
-    title: { es: "EUROPA CENTRAL", en: "CENTRAL EUROPE" },
+    title: { es: "Europa Central", en: "Central Europe" },
     destinations: { es: "Viena, Praga, Budapest y Munich", en: "Vienna, Prague, Budapest and Munich" },
     price: "2,999",
     days: 14,
@@ -92,7 +92,7 @@ export function FeaturedPackages() {
     <section className="py-16 bg-white dark:bg-gray-950" data-testid="section-featured-packages">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground" data-testid="text-packages-title">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-accent" data-testid="text-packages-title">
             {content[lang].title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{content[lang].subtitle}</p>

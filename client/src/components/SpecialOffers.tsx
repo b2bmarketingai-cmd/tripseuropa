@@ -99,7 +99,7 @@ export function SpecialOffers() {
             <Zap className="w-6 h-6 text-accent" />
             <div>
               <Badge className="bg-accent text-primary mb-1">{content[lang].badge}</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-white" data-testid="text-offers-title">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-offers-title">
                 {content[lang].title}
               </h2>
             </div>

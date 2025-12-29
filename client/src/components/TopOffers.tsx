@@ -129,7 +129,7 @@ export function TopOffers() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
             <Sparkles className="w-8 h-8 text-accent" />
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-white" data-testid="text-top-offers-title">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-top-offers-title">
               {content[lang].title}
             </h2>
           </div>

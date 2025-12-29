@@ -126,7 +126,7 @@ export function TopSales() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground" data-testid="text-top-sales-title">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-accent" data-testid="text-top-sales-title">
               {content[lang].title}
             </h2>
             <p className="text-muted-foreground text-lg">{content[lang].subtitle}</p>
