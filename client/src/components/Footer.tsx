@@ -251,15 +251,6 @@ export function Footer() {
                 <span className="text-sm text-white/60 font-medium tracking-wide">CONFIANZA ONLINE</span>
               </div>
               
-              <div className="text-center text-white/50 text-sm">
-                <p>Trips Europa es Agencia de Viajes con</p>
-                <p className="flex items-center justify-center gap-2 mt-1">
-                  <span className="text-accent">&#9733;</span>
-                  <span className="font-medium">Miembro de ANATO</span>
-                  <span className="text-accent">&#9733;</span>
-                </p>
-              </div>
-              
               <div className="flex items-center gap-2" title="IATA Member">
                 <div className="px-4 py-2 border border-white/30 rounded flex items-center justify-center">
                   <span className="text-xl font-bold text-white/80 tracking-wider" style={{ fontFamily: "serif" }}>IATA</span>
