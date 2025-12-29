@@ -147,7 +147,7 @@ export function SpecialOffers() {
                 />
               </div>
               <div className="p-4 text-white">
-                <h3 className="font-display font-bold text-lg mb-2">{offer.title[lang]}</h3>
+                <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang]}</h3>
                 <p className="text-white/70 text-sm">{content[lang].from}</p>
                 <div className="flex items-baseline gap-1 flex-wrap">
                   <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>

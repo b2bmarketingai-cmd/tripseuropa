@@ -93,7 +93,7 @@ export function DestinationGrid() {
                     {dest.country[lang]}
                   </Badge>
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="text-xl font-bold mb-1" data-testid={`text-destination-name-${dest.id}`}>
+                    <h3 className="text-xl font-bold mb-1 text-accent" data-testid={`text-destination-name-${dest.id}`}>
                       {dest.name[lang]}
                     </h3>
                     <p className="text-white/80 text-sm mb-3">

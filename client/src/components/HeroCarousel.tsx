@@ -134,7 +134,7 @@ export function HeroCarousel() {
       <div className="container relative z-20 px-4 py-16 md:py-24">
         <div className="max-w-2xl text-white">
           <h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 animate-fade-in" 
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 animate-fade-in text-accent" 
             data-testid="text-hero-title"
           >
             {currentContent.title[lang]}

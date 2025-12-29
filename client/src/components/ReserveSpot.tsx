@@ -138,7 +138,7 @@ export function ReserveSpot() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-display font-bold text-lg mb-2">{pkg.title[lang]}</h3>
+                  <h3 className="font-display font-bold text-lg mb-2 text-accent">{pkg.title[lang]}</h3>
                   <p className="text-white/70 text-sm">{content[lang].from}</p>
                   <div className="flex items-baseline gap-1 flex-wrap">
                     <span className="text-xl font-bold text-accent">{pkg.price}{content[lang].currency}</span>

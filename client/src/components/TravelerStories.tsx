@@ -125,7 +125,7 @@ export function TravelerStories() {
                 </div>
 
                 <h3 
-                  className="text-xl font-bold text-primary mb-3 font-display line-clamp-2 group-hover:text-accent transition-colors"
+                  className="text-xl font-bold text-accent mb-3 font-display line-clamp-2"
                   data-testid={`text-story-title-${index}`}
                 >
                   {story.title[lang]}

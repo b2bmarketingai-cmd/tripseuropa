@@ -154,7 +154,7 @@ export function FlashOffers() {
                   </Badge>
 
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white font-bold text-lg leading-tight mb-1">
+                    <h3 className="text-accent font-bold text-lg leading-tight mb-1">
                       {offer.title[lang]}
                     </h3>
                     <p className="text-white/70 text-sm mb-3">{offer.country[lang]}</p>

@@ -113,7 +113,7 @@ export function FeaturedPackages() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground" data-testid={`text-package-title-${pkg.id}`}>
+                <h3 className="text-xl font-bold mb-2 text-accent" data-testid={`text-package-title-${pkg.id}`}>
                   {pkg.title[lang]}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">{pkg.destinations[lang]}</p>
