@@ -17,8 +17,9 @@ export function PromotionalVideoBanner() {
 
   const content = {
     es: {
+      sectionTitle: "Trips Europa",
       headline: "Viajes Organizados Extraordinarios A Destinos Europeos",
-      subheadline: "Elegido por mas de 50,000 viajeros cada año - descubre la magia de Europa con nuestros paquetes exclusivos.",
+      subheadline: "Elegido por mas de 50,000 viajeros cada ano - descubre la magia de Europa con nuestros paquetes exclusivos.",
       watchVideo: "Ver Video",
       videoTitle: "Video Promocional",
       tagline: "TRIPS EUROPA PRESENTA",
@@ -28,6 +29,7 @@ export function PromotionalVideoBanner() {
       award: "Mejor agencia 2024",
     },
     en: {
+      sectionTitle: "Trips Europa",
       headline: "Extraordinary Organized Trips To European Destinations",
       subheadline: "Chosen by more than 50,000 travelers each year - discover the magic of Europe with our exclusive packages.",
       watchVideo: "Watch Video",
@@ -47,21 +49,24 @@ export function PromotionalVideoBanner() {
       <section className="py-16 bg-[#0f172a]" data-testid="section-promotional-video">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-white">
+            <div className="text-white text-left">
+              <p className="text-sm font-medium tracking-widest text-accent mb-4 uppercase">
+                {c.sectionTitle}
+              </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight">
                 {c.headline}
               </h2>
-              <p className="text-lg text-white/70 mb-8">
+              <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
                 {c.subheadline}
               </p>
-              <div className="flex flex-wrap gap-6 text-sm text-white/60">
+              <div className="flex flex-wrap gap-6 text-sm">
                 <div className="flex items-center gap-2">
                   <Star className="w-4 h-4 text-accent fill-accent" />
-                  <span>{c.rating}</span>
+                  <span className="text-accent">{c.rating}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-accent" />
-                  <span>{c.award}</span>
+                  <span className="text-white/80">{c.award}</span>
                 </div>
               </div>
             </div>
