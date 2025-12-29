@@ -1,0 +1,308 @@
+Aquí tienes el borrador de **prompt completo**, listo para copiar/pegar en tu agente (Claude / ChatGPT / Replit) y que genere todo el header + carrusel + vistas móvil/desktop para tripseuropa.com inspirado en Exoticca.
+
+***
+
+## 🧠 ROL Y CONTEXTO
+
+ERES: Desarrollador Frontend Senior especializado en **React + TailwindCSS / CSS puro + diseño responsive**.
+
+OBJETIVO:  
+Clonar y adaptar la **barra de inicio, navegación, carrusel y comportamiento UX** de la home de `https://www.exoticca.com/es` para `tripseuropa.com`, usando el **logo oficial TRIPS EUROPA** y manteniendo **misma experiencia** para:
+
+- Escritorio (desktop / laptop)  
+- Móvil (mobile view)  
+
+Usar de referencia las capturas adjuntas:
+
+- `barra-de-inicio-de-exotica.jpg`  
+- `funciones-barra-de-exotica.jpg`  
+- `al-darle-clic-al-boton-destinos.jpg`  
+- `al-darle-clic-al-boton-estilo-de-viaje.jpg`  
+- `al-darle-clic-al-boton-ofertas.jpg`  
+- `al-darle-clic-al-boton-ayuda.jpg`  
+- `al-darle-clic-al-boton-de-inicio-de-seccion.jpg`  
+- `al-darle-clic-al-boton-de-inicio-de-seccion-2.jpg`  
+- `darle-clic-al-inicio-de-seccion-de-advisor-exoticca.jpg`  
+- `funcion-al-darle-clic-al-numero.jpg`  
+- `banner-principal-de-exotica-ajustar-para-tripseuropa.com.jpg`  
+- `logotipo oficial tripseuropa.com sin fondo.jpg`  
+
+***
+
+## 🧱 REQUISITOS TÉCNICOS GENERALES
+
+1. **Stack esperado**
+   - HTML5 semántico + CSS (o Tailwind) + JS vanilla o React (según le pida el usuario).
+   - Debe ser **Mobile First** y escalar a desktop con media queries.
+   - Preparado para integrarse en una app existente (`index.html` + `header.jsx` o similar).
+
+2. **Estructura global**
+   - `<header>` fijo en la parte superior con:
+     - Logo **TRIPS EUROPA.com** adaptado en tamaño y proporción similar al logo Exoticca en la barra.
+     - Menú principal horizontal en desktop.
+     - Iconos: idioma, usuario (inicio de sesión), teléfono de reservas.
+   - `<main>` con:
+     - Hero principal con **carrusel de ofertas** tipo Exoticca (banner grande).
+     - Buscador central (origen, destino, fechas) parecido a Exoticca.
+   - Footer **simplificado**, dejando solo:
+     - **Contacto**
+     - **Herramientas**
+     - **Blog**
+     - Sin logotipo en el footer.
+
+3. **Diseño / Estilo**
+   - Colores base:
+     - Azul oscuro del logo TRIPS EUROPA.
+     - Dorado del texto “EUROPA”.
+     - Fondo de barra similar al degradado marrón/negro de Exoticca (puede ser `linear-gradient`).
+   - Tipografía sans-serif moderna (ej: `system-ui`, `Inter` o similar).
+   - Bordes redondeados tipo píldora para:
+     - Botones
+     - Selector “Viajero / Agente de viajes”
+     - Campos del buscador.
+
+4. **Responsive**
+   - Desktop:
+     - Menú completo visible.
+     - Buscador en una sola fila.
+     - Teléfono y botones Ayuda / Login en la parte derecha.
+   - Mobile:
+     - Logo centrado arriba.
+     - Icono hamburguesa que abre un panel con el menú.
+     - Buscador en columna (origen / destino / fechas uno bajo otro).
+     - Botón flotante para “Reservar por WhatsApp” opcional.
+
+***
+
+## 🔝 HEADER – BARRA DE INICIO (CLON EXOTICCA ADAPTADO)
+
+### 1. Estructura de la barra
+
+Crear un componente (o bloque HTML) con:
+
+- Sección izquierda:
+  - Logo `TRIPS EUROPA.com` alineado como Exoticca.
+- Sección media (solo desktop):
+  - Menú con estos items principales:
+    - **Destinos**
+    - **Estilo de viaje**
+    - **Ofertas**
+- Sección derecha:
+  - Texto: `Reservar: +34 919 01 15 89` (ejemplo, dejar fácil de cambiar).
+  - Enlace **Ayuda** que despliega el panel con opciones (chat, WhatsApp, FAQs, FB Messenger).
+  - Selector de idioma (bandera / ES).
+  - Icono de usuario que abre/inicia sección (Viajero / Agente de viajes).
+
+El comportamiento debe replicar Exoticca:
+
+- Al pasar el mouse / hacer clic en **Destinos** → mostrar mega-menú vertical con:
+  - África
+  - América
+  - Asia
+  - Europa
+  - Oceanía
+- Al hacer clic en **Estilo de viaje** → otro desplegable con:
+  - Por Temporada
+  - Por Interés
+  - Por Grupo
+- Al hacer clic en **Ofertas** → desplegable con:
+  - Outlet de Invierno
+  - Ofertas de Última Hora
+  - El Ofertón [País / Destino destacado]
+  - Programa de recompensas (adaptar nombre a TripsEuropa si se desea).
+
+La barra debe tener las mismas **animaciones suaves** (fade/slide) para desplegables.
+
+### 2. Botón “Mi cuenta / Iniciar sesión”
+
+Replicar el componente del modal/página de cuenta con:
+
+- Toggle tipo píldora:
+  - `Viajero` | `Agente de viajes`
+- Para cada pestaña:
+  - Formulario con:
+    - Email
+    - Password
+    - Botón “Iniciar sesión”
+  - Enlace “Crear una cuenta” que lleve a:
+    - `/cuenta/registro-viajero`
+    - `/cuenta/registro-agente`
+- Para `Agente de viajes` replicar el layout de:
+  - https://www.exoticca.com/es/travel-advisors/register
+  - Incluir texto tipo:
+    - “Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos”.
+
+No implementar lógica real de backend, solo:
+
+- Validaciones básicas de HTML5.
+- Estructura lista para conectarse a APIs futuras.
+
+### 3. Botón “Ayuda”
+
+El botón **Ayuda** del header debe abrir un dropdown como en las capturas:
+
+- Opciones:
+  - Asistencia por chat
+  - Centro de Ayuda y FAQs
+  - WhatsApp
+  - Facebook Messenger
+- Cada item como `<a>` listo para reemplazar URLs reales.
+
+### 4. Teléfono clicable
+
+El número debe ser:
+
+```html
+<a href="tel:+34919011589">+34 919 01 15 89</a>
+```
+
+En mobile debe estar siempre visible arriba o en la parte superior del menú desplegable.
+
+***
+
+## 🎠 HERO + CARRUSEL DE OFERTAS
+
+### 1. Hero principal
+
+Replicar el layout de `banner-principal-de-exotica-ajustar-para-tripseuropa.com.jpg`:
+
+- Fondo: imagen a pantalla completa (o 60–70% alto de viewport).
+- Encima:
+  - Logo pequeño “TripsEuropa GO” (puede ser texto por ahora).
+  - Título grande: “El Ofertón Europa desde 799 €” (parametrizable).
+  - Subtítulo: “11 días, vuelos incluidos”.
+  - Botón principal: “Reserva ahora”.
+
+### 2. Buscador central
+
+Dentro del hero, justo como Exoticca:
+
+- 3 campos:
+  - `Ciudad de origen` (input o select)
+  - `Destino` (input o select)
+  - `Fechas` (input `type="date"` o placeholder para datepicker).
+- Botón de búsqueda con icono de lupa.
+- En mobile: los 3 campos en columna; en desktop: en fila.
+
+### 3. Carrusel
+
+- Implementar carrusel simple (sin librerías externas si es posible) con:
+  - Autoplay.
+  - Bullet o flechas para navegar.
+  - Cada slide con:
+    - Imagen de fondo.
+    - Título oferta.
+    - Subtítulo (días, vuelos incluidos, etc.).
+    - Botón de “Ver oferta”.
+
+Dejar array JS de ejemplo:
+
+```js
+const offers = [
+  { title: "Turquía desde 799€", days: "11 días, vuelos incluidos", image: "turquia.jpg" },
+  { title: "Europa Clásica desde 999€", days: "14 días, vuelos incluidos", image: "europa-clasica.jpg" },
+  ...
+];
+```
+
+***
+
+## 👥 FUNCIONALIDAD VIAJERO / AGENTE DE VIAJES
+
+Basado en las capturas `al-darle-clic-al-boton-de-inicio-de-seccion*.jpg` y `darle-clic-al-inicio-de-seccion-de-advisor-exoticca.jpg`:
+
+1. Crear vista/overlay de **Mi cuenta** con:
+   - Tabs: Viajero | Agente de viajes.
+   - Para cada tab:
+     - Formulario login.
+     - Enlace a registro.
+2. Para Agente de viajes:
+   - Bloque de texto:
+     - “Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos.”
+   - Botón “Registrarse como agente”.
+3. Toda la UI debe funcionar igual en desktop y mobile.
+
+***
+
+## 🦴 FOOTER – SIMPLIFICAR
+
+- Eliminar cualquier logotipo del footer (no mostrar el de Exoticca).
+- Incluir solo:
+  - Enlaces:
+    - **Contacto**
+    - **Herramientas**
+    - **Blog**
+  - Texto legal básico (copyright, términos, política).
+
+***
+
+## 📐 IMPLEMENTACIÓN RESPONSIVE (DETALLE)
+
+1. **Mobile first**:
+   - Comienza maquetando para 375–430px.
+   - Menú colapsado (hamburger).
+   - Hero con buscardor en columna.
+2. **Desktop**:
+   - `@media (min-width: 1024px)`:
+     - Menú horizontal.
+     - Buscador en fila.
+     - Teléfono y ayuda alineados a la derecha.
+3. Asegurar:
+   - Header sticky (`position: sticky; top: 0; z-index: 50`).
+   - Sombra ligera debajo del header.
+   - Transiciones CSS de 150–250ms para hover y dropdowns.
+
+***
+
+## 🧪 REQUISITOS DE CÓDIGO
+
+1. Entregar:
+   - Si trabajas en HTML/JS:
+     - `index.html`
+     - `styles.css`
+     - `app.js` (si hace falta para carrusel y toggles).
+   - Si trabajas en React:
+     - Componente `HeaderTripsEuropa.jsx`
+     - Componente `HeroCarousel.jsx`
+     - CSS/Tailwind correspondiente.
+2. El código debe:
+   - No depender de frameworks pesados adicionales.
+   - Estar listo para pegarse en Replit (Vite/React o HTML simple).
+3. Usar nombres genéricos:
+   - Clases: `te-header`, `te-nav`, `te-hero`, etc., para evitar colisiones.
+
+***
+
+## 🧾 SALIDA ESPERADA DEL MODELO
+
+1. Explicar brevemente la estructura de archivos.
+2. Entregar el **código completo**:
+   - HTML + CSS + JS (o componentes React) listos para copiar y pegar.
+3. Incluir comentarios breves donde sea importante:
+   - Dónde cambiar rutas de imágenes.
+   - Dónde conectar APIs reales de login / búsqueda.
+4. Respetar colores y estilo general de:
+   - Logo `TRIPS EUROPA.com`.
+   - UX de Exoticca, sin copiar texto comercial tal cual (solo estructura y comportamiento).
+
+***
+
+Con este prompt, genera todo el **header + hero + carrusel + login viajero/agente**, funcionando en desktop y móvil, listo para integrarse en `tripseuropa.com`.
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/8b75df8c-eb83-4e60-a122-d424dd10712a/logotipo-oficial-tripseuropa.com-sin-fondo.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=tHz66ueK6Tewz4fWBQ0n6lygy%2Fc%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/ef0950ff-569c-4933-89bd-0fd5e374e8b0/barra-de-inicio-de-exotica.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=r0k3CxckMNf02OEQ6fYqDrR3hc4%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/a8785e35-6240-4605-8663-355f374e2d35/al-darle-clic-al-boton-ayuda.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=K%2BeV%2B0HmApUor3YqF3kMeIurDWo%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[4](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/c50a9a21-a6a1-4120-8eba-d511f4b17ec2/funciones-barra-de-exotica.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=Vl1lZZCCfCy%2FEMrC%2BEuznzrzMPg%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[5](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/bfe45c58-b342-4f2f-9631-734f21f6d0be/al-darle-clic-al-boton-estilo-de-viaje.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=4x2nnjEM4FjXQaMQPsYg8yDO8EM%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[6](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/a7cf0776-391c-44d2-b9c5-76adf4dd9209/al-darle-clic-al-boton-de-inicio-de-seccion.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=WFp2w8QA%2Fl1ZUKyl%2FDh0HFIN8oU%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[7](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/e6c521aa-1fd6-44ec-91d0-87db850381ed/banner-principal-de-exotica-ajustar-para-tripseuropa.com.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=b2smDzxS5KZkSsVLqSxWhhVQPZ4%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[8](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/f6157fd9-624c-4181-9e8c-8798f5521384/funcion-al-darle-clic-al-numero.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=FrrJXIu6ELzdH4y%2Bbn0YzkGQfQA%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[9](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/e6325dcf-4c69-4ff7-b30c-2c8d13bc1a16/al-darle-clic-al-boton-ofertas.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=6%2B2dwMicu41WT9qBoqNGRVLmEh0%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[10](https://www.exoticca.com/es)
+[11](https://replit.com/@holidayhub/Europa-Trips)
+[12](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/82606110-15f5-4b70-b4b6-95b1a5dc2ef5/logo-oficial-tripseuropa.com.jpg)
+[13](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/67522062/1f503153-fde2-43be-b262-f054c06995b5/Rutas-Colombia-Europa-2025.pdf)
+[14](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/67522062/73b8f300-d3bc-49f3-bc25-18f664b3a887/paste.txt)
+[15](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/8c8bb09c-b454-4bb3-ad62-cfc45b07ef0b/al-darle-clic-al-boton-de-inicio-de-seccion-2.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=vX%2F4V9DtykM05ywHyF5uaMOVA6w%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[16](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/a168dd55-64e2-4fcb-b544-225654a74f7a/al-darle-clic-al-boton-destinos.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=Hc39Ej54yTDhKHu%2FqNU4YuTovKE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)
+[17](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/67522062/f8c4e2e4-aec3-4495-90d3-203b1c37947f/darle-clic-al-inicio-de-seccion-de-advisor-exoticca.jpg?AWSAccessKeyId=ASIA2F3EMEYESUIF7H4U&Signature=H%2BlbV9b2WejhOXJpZfOqF%2B1V26s%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDjshyKaTHQ1eIie5nQweLHana3o1JfbmuPN5XXwE3tVgIgU1R3CEKI9%2BOenr9w3wG8aBHYERmYdURn1li3thK%2Ff34q%2FAQIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDPSaKffONKUOZc7N5CrQBMwrNOeKx6eSiUlvY1ZzN%2FwO97vF%2BgyRGQReya8b0d1aCDcA%2BybMFCzTc9VF8wr%2BT4T6uPTOTsGqh%2BRcyjjjfPT4PGIHOYFgRwV9CNc3DaM2Mf6QF7Px%2FRwjhUi6B%2FnG0iaF1jzoJnWxjf9jqzixqNaBmQMXxLB%2FrM%2BzufsEfPNOdRTRahU%2BJls73f3wnO%2FtOPiAeuUGPTVqs%2F0J6BYyv%2BLJLcl0SbZwNw03xZX40kWDpwtFxljmbv9yyscLf2CplEPYkPMg6zGj315Yym%2By9jmIZWEDBHHVSq1FlQGk5zavYuyy6aQIp3x2v5QutSGSSYwqrljCcaCLbwD1OSzI6XyoFtSlPjibnbA1l4YTkiQnMi9x6zdCRY6L%2BMFldKKMBAZ1da82FhD2fUUK5oVJrw%2FQJ0m6VVEvY%2FtMjkFTRpua2oMw7XwRV4eHgurhMAZkRu5X2Liq5iztDHbH50CFW7tGY7F47amno3LsaSAQ0BLTlVwTmKaAIlHKSXty5OmmCYRn%2BY7uQjVMlKWoU5Z%2FSjIjxGQhQ3cy%2FiatE9r6Q9%2FYaGIJao3h6jsUWiuzkWvWhLIP2daKNCThRN3a2rV1rb7lEgVE6blhWndnqz0qEuH3MVEqvs9mc2plrG%2FOzOKUYt47tDe0CVyOqpPzpdXQ0HkxvSvpk%2B7fkbi2EjjaxgVO5d9iGlvRYYmJhYMw7pLAvQrl82%2FEhoRMrnCv0v%2BipEBA3LO95gQ4IdmGbTEUh%2ByItCovGQR%2Bbx%2BqDIx1SyGrTUnfLq0LmuZ7%2BlHRgUm2Md0w1czKygY6mAHSSG4Sekn%2BdCYrT9eNmu85%2FqLM0JahDOe5wfiFnFoWFka%2BorFsaUKzFTRZlg4a4tqtM2xaCiDN6zsZ8OiAYLxO8BZ%2FppcnJtowxbwGp2%2B%2Bof%2BLzPOqai26OXsi0kHFCMv7Y9dEp%2Fu%2B8LAJ9DvkzWZ10VjMJm6BgUsSh8xhCK6V%2FIlOrJTV9%2BxRkmdfVluuHR2DRvhGP91ifA%3D%3D&Expires=1767025619)

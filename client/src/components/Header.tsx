@@ -2,20 +2,79 @@ import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
-import { Menu, X, User, ShoppingBag, Globe, ChevronDown } from "lucide-react";
+import { 
+  Menu, X, User, Phone, HelpCircle, ChevronDown, 
+  MessageCircle, MessageSquare, Search, MapPin, Calendar
+} from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/upscalemedia-transformed_1767014855004.png";
+import logoUrl from "@assets/logotipo_oficial_tripseuropa.com_sin_fondo_1767025709834.png";
+import { SiWhatsapp } from "react-icons/si";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
+const DESTINATIONS_MENU = {
+  es: [
+    { name: "Europa", href: "/destinations", items: ["Francia", "Italia", "Espana", "Alemania", "Portugal", "Grecia"] },
+  ],
+  en: [
+    { name: "Europe", href: "/destinations", items: ["France", "Italy", "Spain", "Germany", "Portugal", "Greece"] },
+  ]
+};
+
+const TRAVEL_STYLE_MENU = {
+  es: [
+    { name: "Por Temporada", href: "/packages?filter=temporada" },
+    { name: "Por Interes", href: "/packages?filter=interes" },
+    { name: "Por Grupo", href: "/packages?filter=grupo" },
+  ],
+  en: [
+    { name: "By Season", href: "/packages?filter=season" },
+    { name: "By Interest", href: "/packages?filter=interest" },
+    { name: "By Group", href: "/packages?filter=group" },
+  ]
+};
+
+const OFFERS_MENU = {
+  es: [
+    { name: "Ofertas de Invierno", href: "/packages?offer=invierno" },
+    { name: "Ofertas de Ultima Hora", href: "/packages?offer=ultimahora" },
+    { name: "Paquetes Destacados", href: "/packages?offer=destacados" },
+    { name: "Programa TripsEuropa GO", href: "/rewards" },
+  ],
+  en: [
+    { name: "Winter Deals", href: "/packages?offer=winter" },
+    { name: "Last Minute Deals", href: "/packages?offer=lastminute" },
+    { name: "Featured Packages", href: "/packages?offer=featured" },
+    { name: "TripsEuropa GO Program", href: "/rewards" },
+  ]
+};
+
+const COUNTRY_FLAGS: Record<string, { flag: string; name: string; code: string }> = {
+  es: { flag: "🇪🇸", name: "Espana", code: "ES" },
+  en: { flag: "🇬🇧", name: "English", code: "EN" },
+  pt: { flag: "🇧🇷", name: "Brasil", code: "PT" },
+};
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [accountModalOpen, setAccountModalOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { language, setLanguage, t } = useI18n();
   const { user, isAuthenticated, logout } = useAuth();
   const [location] = useLocation();
@@ -28,207 +87,399 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: t("nav.destinations"), href: "/destinations" },
-    { name: t("nav.packages"), href: "/packages" },
-    { name: t("nav.tools"), href: "/tools" },
-    { name: t("nav.blog"), href: "/blog" },
-    { name: t("nav.contact"), href: "/contact" },
-  ];
-
-  const isActive = (path: string) => location === path;
+  const currentLang = language as "es" | "en";
 
   return (
-    <header 
-      className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-        scrolled || isOpen ? "bg-primary/95 backdrop-blur-md shadow-md border-white/10" : "bg-transparent"
-      )}
-    >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-md">
+    <>
+      <header 
+        className={cn(
+          "fixed top-0 w-full z-50 transition-all duration-300",
+          scrolled || isOpen ? "bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] shadow-lg" : "bg-gradient-to-r from-[#1a1a1a]/95 to-[#2d2d2d]/95"
+        )}
+        data-testid="header-main"
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            
+            <div className="hidden lg:flex items-center gap-6">
+              <DropdownMenu open={activeDropdown === "destinos"} onOpenChange={(open) => setActiveDropdown(open ? "destinos" : null)}>
+                <DropdownMenuTrigger asChild>
+                  <button 
+                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    data-testid="button-menu-destinos"
+                  >
+                    {language === "es" ? "Destinos" : "Destinations"}
+                    <ChevronDown className="w-3 h-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 bg-white p-2">
+                  {DESTINATIONS_MENU[currentLang][0].items.map((item, idx) => (
+                    <DropdownMenuItem key={idx} asChild className="cursor-pointer">
+                      <Link href={`/destinations/${item.toLowerCase()}`} className="w-full">
+                        {item}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <DropdownMenu open={activeDropdown === "estilo"} onOpenChange={(open) => setActiveDropdown(open ? "estilo" : null)}>
+                <DropdownMenuTrigger asChild>
+                  <button 
+                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    data-testid="button-menu-estilo"
+                  >
+                    {language === "es" ? "Estilo de viaje" : "Travel Style"}
+                    <ChevronDown className="w-3 h-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 bg-white p-2">
+                  {TRAVEL_STYLE_MENU[currentLang].map((item, idx) => (
+                    <DropdownMenuItem key={idx} asChild className="cursor-pointer">
+                      <Link href={item.href} className="w-full">
+                        {item.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <DropdownMenu open={activeDropdown === "ofertas"} onOpenChange={(open) => setActiveDropdown(open ? "ofertas" : null)}>
+                <DropdownMenuTrigger asChild>
+                  <button 
+                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    data-testid="button-menu-ofertas"
+                  >
+                    {language === "es" ? "Ofertas" : "Deals"}
+                    <ChevronDown className="w-3 h-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-64 bg-white p-2">
+                  {OFFERS_MENU[currentLang].map((item, idx) => (
+                    <DropdownMenuItem key={idx} asChild className="cursor-pointer">
+                      <Link href={item.href} className="w-full">
+                        {item.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+
+            <Link href="/" className="flex items-center" data-testid="link-home-logo">
               <img 
                 src={logoUrl} 
-                alt="Trips Europa - Agencia de Viajes Premium a Europa" 
-                className="h-14 md:h-16 w-auto object-contain" 
+                alt="Trips Europa" 
+                className="h-10 md:h-14 w-auto object-contain" 
               />
+            </Link>
+
+            <div className="hidden lg:flex items-center gap-4">
+              <a 
+                href="tel:+573001234567" 
+                className="flex items-center gap-2 text-white/90 hover:text-white text-sm transition-colors"
+                data-testid="link-phone-reservar"
+              >
+                <span className="text-white/70">{language === "es" ? "Reservar:" : "Book:"}</span>
+                <span className="font-semibold">+57 300 123 4567</span>
+              </a>
+
+              <div className="w-px h-6 bg-white/20" />
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button 
+                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    data-testid="button-menu-ayuda"
+                  >
+                    {language === "es" ? "Ayuda" : "Help"}
+                    <ChevronDown className="w-3 h-3" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-64 bg-white p-2">
+                  <DropdownMenuItem className="cursor-pointer gap-3">
+                    <MessageCircle className="w-5 h-5" />
+                    <span>{language === "es" ? "Asistencia por chat" : "Chat Support"}</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="cursor-pointer gap-3">
+                    <Link href="/faq" className="flex items-center gap-3 w-full">
+                      <HelpCircle className="w-5 h-5" />
+                      <span>{language === "es" ? "Centro de Ayuda y FAQs" : "Help Center & FAQs"}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild className="cursor-pointer gap-3">
+                    <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
+                      <SiWhatsapp className="w-5 h-5 text-green-600" />
+                      <span>WhatsApp</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="cursor-pointer gap-3">
+                    <a href="https://m.me/tripseuropa" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
+                      <MessageSquare className="w-5 h-5 text-blue-600" />
+                      <span>Facebook Messenger</span>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button 
+                    className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition-colors"
+                    data-testid="button-language-selector"
+                  >
+                    <span className="w-6 h-4 rounded-sm overflow-hidden flex items-center justify-center text-lg">
+                      {COUNTRY_FLAGS[language]?.flag || COUNTRY_FLAGS.es.flag}
+                    </span>
+                    <ChevronDown className="w-3 h-3 text-white/70" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-white">
+                  <DropdownMenuItem 
+                    onClick={() => setLanguage("es")} 
+                    className={cn("cursor-pointer gap-2", language === "es" && "bg-accent/10")}
+                    data-testid="button-lang-es"
+                  >
+                    <span className="text-lg">🇪🇸</span>
+                    <span>Espanol</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => setLanguage("en")} 
+                    className={cn("cursor-pointer gap-2", language === "en" && "bg-accent/10")}
+                    data-testid="button-lang-en"
+                  >
+                    <span className="text-lg">🇬🇧</span>
+                    <span>English</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <button 
+                onClick={() => setAccountModalOpen(true)}
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                data-testid="button-account-open"
+              >
+                <User className="w-5 h-5 text-white" />
+              </button>
             </div>
-          </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium tracking-wide hover:text-accent transition-colors relative py-1",
-                  isActive(link.href) ? "text-accent" : "text-white/80"
-                )}
-                data-testid={`link-nav-${link.href.replace("/", "")}`}
+            <div className="flex lg:hidden items-center gap-3">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition-colors">
+                    <span className="text-lg">{COUNTRY_FLAGS[language]?.flag}</span>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-white">
+                  <DropdownMenuItem onClick={() => setLanguage("es")} className="cursor-pointer gap-2">
+                    <span className="text-lg">🇪🇸</span>
+                    <span>ES</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLanguage("en")} className="cursor-pointer gap-2">
+                    <span className="text-lg">🇬🇧</span>
+                    <span>EN</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <button 
+                onClick={() => setAccountModalOpen(true)}
+                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"
               >
-                {link.name}
-                {isActive(link.href) && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
-                )}
-              </Link>
-            ))}
-          </nav>
+                <User className="w-4 h-4 text-white" />
+              </button>
 
-          {/* Actions */}
-          <div className="hidden md:flex items-center gap-3">
-            {/* Language Toggle */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-white hover:text-accent hover:bg-white/10 gap-1" data-testid="button-language-toggle">
-                  <Globe className="w-4 h-4" />
-                  <span className="text-xs font-semibold">{language.toUpperCase()}</span>
-                  <ChevronDown className="w-3 h-3" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white">
-                <DropdownMenuItem 
-                  onClick={() => setLanguage("es")} 
-                  className={cn("gap-2 cursor-pointer", language === "es" && "bg-accent/10")} 
-                  data-testid="button-lang-es"
-                >
-                  <span className="w-5 h-4 rounded-sm overflow-hidden flex items-center justify-center bg-red-600">
-                    <span className="text-yellow-400 text-xs font-bold">ES</span>
-                  </span>
-                  <span>Español</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => setLanguage("en")} 
-                  className={cn("gap-2 cursor-pointer", language === "en" && "bg-accent/10")} 
-                  data-testid="button-lang-en"
-                >
-                  <span className="w-5 h-4 rounded-sm overflow-hidden flex items-center justify-center bg-blue-800">
-                    <span className="text-white text-xs font-bold">EN</span>
-                  </span>
-                  <span>English</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {isAuthenticated ? (
-              <div className="flex items-center gap-3">
-                <Link href="/app/bookings">
-                  <Button variant="ghost" size="icon" className="text-white hover:text-accent hover:bg-white/10" data-testid="button-bookings">
-                    <ShoppingBag className="w-5 h-5" />
-                  </Button>
-                </Link>
-                <Link href="/app/profile">
-                  <Button variant="outline" className="border-accent/50 text-accent hover:bg-accent hover:text-primary gap-2" data-testid="button-profile">
-                    <User className="w-4 h-4" />
-                    <span>{t("nav.myAccount")}</span>
-                  </Button>
-                </Link>
-              </div>
-            ) : (
-              <Button 
-                onClick={() => window.location.href = "/api/login"}
-                className="bg-accent text-primary hover:bg-accent/90 font-semibold px-6 shadow-lg shadow-accent/20"
-                data-testid="button-signin"
+              <button 
+                className="text-white p-1"
+                onClick={() => setIsOpen(!isOpen)}
+                data-testid="button-mobile-menu"
               >
-                {t("nav.signin")}
-              </Button>
-            )}
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
-
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-            data-testid="button-mobile-menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-primary border-t border-white/10 absolute w-full left-0 animate-in slide-in-from-top-5 duration-300">
-          <div className="container px-4 py-8 flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className="text-lg font-medium text-white/90 hover:text-accent"
-                onClick={() => setIsOpen(false)}
-                data-testid={`link-mobile-nav-${link.href.replace("/", "")}`}
+        {isOpen && (
+          <div className="lg:hidden bg-[#1a1a1a] border-t border-white/10 animate-in slide-in-from-top-2 duration-200">
+            <div className="container px-4 py-6 space-y-4">
+              <a 
+                href="tel:+573001234567" 
+                className="flex items-center gap-2 text-white py-2"
               >
-                {link.name}
-              </Link>
-            ))}
+                <Phone className="w-5 h-5 text-accent" />
+                <span>{language === "es" ? "Reservar:" : "Book:"} +57 300 123 4567</span>
+              </a>
+
+              <div className="h-px bg-white/10" />
+
+              <details className="group">
+                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                  <span className="font-medium">{language === "es" ? "Destinos" : "Destinations"}</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pl-4 py-2 space-y-2">
+                  {DESTINATIONS_MENU[currentLang][0].items.map((item, idx) => (
+                    <Link 
+                      key={idx}
+                      href={`/destinations/${item.toLowerCase()}`}
+                      className="block py-1 text-white/70 hover:text-white"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+
+              <details className="group">
+                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                  <span className="font-medium">{language === "es" ? "Estilo de viaje" : "Travel Style"}</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pl-4 py-2 space-y-2">
+                  {TRAVEL_STYLE_MENU[currentLang].map((item, idx) => (
+                    <Link 
+                      key={idx}
+                      href={item.href}
+                      className="block py-1 text-white/70 hover:text-white"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+
+              <details className="group">
+                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                  <span className="font-medium">{language === "es" ? "Ofertas" : "Deals"}</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pl-4 py-2 space-y-2">
+                  {OFFERS_MENU[currentLang].map((item, idx) => (
+                    <Link 
+                      key={idx}
+                      href={item.href}
+                      className="block py-1 text-white/70 hover:text-white"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+
+              <div className="h-px bg-white/10" />
+
+              <details className="group">
+                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                  <span className="font-medium flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    {language === "es" ? "Ayuda" : "Help"}
+                  </span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pl-4 py-2 space-y-2">
+                  <button className="flex items-center gap-2 py-1 text-white/70 hover:text-white w-full text-left">
+                    <MessageCircle className="w-4 h-4" />
+                    {language === "es" ? "Asistencia por chat" : "Chat Support"}
+                  </button>
+                  <Link href="/faq" className="flex items-center gap-2 py-1 text-white/70 hover:text-white" onClick={() => setIsOpen(false)}>
+                    <HelpCircle className="w-4 h-4" />
+                    {language === "es" ? "Centro de Ayuda" : "Help Center"}
+                  </Link>
+                  <a href="https://wa.me/573001234567" className="flex items-center gap-2 py-1 text-white/70 hover:text-white">
+                    <SiWhatsapp className="w-4 h-4 text-green-500" />
+                    WhatsApp
+                  </a>
+                </div>
+              </details>
+            </div>
+          </div>
+        )}
+      </header>
+
+      <Dialog open={accountModalOpen} onOpenChange={setAccountModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-display">
+              {language === "es" ? "Mi cuenta" : "My Account"}
+            </DialogTitle>
+          </DialogHeader>
+          
+          <Tabs defaultValue="viajero" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 rounded-full bg-muted p-1">
+              <TabsTrigger value="viajero" className="rounded-full data-[state=active]:bg-white data-[state=active]:shadow-sm">
+                {language === "es" ? "Viajero" : "Traveler"}
+              </TabsTrigger>
+              <TabsTrigger value="agente" className="rounded-full data-[state=active]:bg-white data-[state=active]:shadow-sm">
+                {language === "es" ? "Agente de viajes" : "Travel Agent"}
+              </TabsTrigger>
+            </TabsList>
             
-            {/* Language in mobile */}
-            <div className="flex gap-4 py-2">
-              <button 
-                onClick={() => setLanguage("es")}
-                className={cn(
-                  "flex items-center gap-2 px-3 py-1 rounded",
-                  language === "es" ? "bg-accent/20 text-accent" : "text-white/60"
-                )}
-                data-testid="button-mobile-lang-es"
+            <TabsContent value="viajero" className="space-y-4 pt-4">
+              <div className="space-y-2">
+                <Label htmlFor="email-viajero">Email</Label>
+                <Input id="email-viajero" type="email" placeholder="tu@email.com" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password-viajero">{language === "es" ? "Contrasena" : "Password"}</Label>
+                <Input id="password-viajero" type="password" />
+              </div>
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-white"
+                onClick={() => window.location.href = "/api/login"}
               >
-                <span className="w-5 h-4 rounded-sm bg-red-600 flex items-center justify-center">
-                  <span className="text-yellow-400 text-xs font-bold">ES</span>
-                </span>
-                Español
-              </button>
-              <button 
-                onClick={() => setLanguage("en")}
-                className={cn(
-                  "flex items-center gap-2 px-3 py-1 rounded",
-                  language === "en" ? "bg-accent/20 text-accent" : "text-white/60"
-                )}
-                data-testid="button-mobile-lang-en"
-              >
-                <span className="w-5 h-4 rounded-sm bg-blue-800 flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">EN</span>
-                </span>
-                English
-              </button>
-            </div>
-
-            <div className="h-px bg-white/10 my-2"></div>
-            {isAuthenticated ? (
-              <div className="flex flex-col gap-4">
-                <Link href="/app/bookings" onClick={() => setIsOpen(false)} data-testid="link-mobile-bookings">
-                  <span className="text-lg font-medium text-white/90 hover:text-accent">
-                    {t("nav.myBookings")}
-                  </span>
-                </Link>
-                <Link href="/app/profile" onClick={() => setIsOpen(false)} data-testid="link-mobile-profile">
-                  <span className="text-lg font-medium text-white/90 hover:text-accent">
-                    {t("nav.profile")}
-                  </span>
-                </Link>
-                <Button 
-                  onClick={() => logout()}
-                  variant="outline" 
-                  className="w-full border-white/20 text-white hover:bg-white/10"
-                  data-testid="button-mobile-signout"
-                >
-                  {t("nav.signout")}
+                {language === "es" ? "Iniciar sesion" : "Login"}
+              </Button>
+              <div className="text-center">
+                <button className="text-sm text-muted-foreground hover:underline">
+                  {language === "es" ? "Olvidaste tu contrasena?" : "Forgot password?"}
+                </button>
+              </div>
+              <div className="text-center pt-2 border-t">
+                <p className="text-sm text-muted-foreground mb-2">
+                  {language === "es" ? "No tienes cuenta?" : "Don't have an account?"}
+                </p>
+                <Button variant="outline" className="w-full">
+                  {language === "es" ? "Crear una cuenta" : "Create account"}
                 </Button>
               </div>
-            ) : (
-              <Button 
-                onClick={() => window.location.href = "/api/login"}
-                className="w-full bg-accent text-primary font-bold"
-                data-testid="button-mobile-signin"
-              >
-                {t("nav.signin")}
+            </TabsContent>
+            
+            <TabsContent value="agente" className="space-y-4 pt-4">
+              <p className="text-sm text-muted-foreground text-center">
+                {language === "es" 
+                  ? "Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos." 
+                  : "Offer your clients unforgettable travel packages at competitive prices."}
+              </p>
+              <div className="space-y-2">
+                <Label htmlFor="email-agente">Email</Label>
+                <Input id="email-agente" type="email" placeholder="agente@agencia.com" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password-agente">{language === "es" ? "Contrasena" : "Password"}</Label>
+                <Input id="password-agente" type="password" />
+              </div>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                {language === "es" ? "Iniciar sesion" : "Login"}
               </Button>
-            )}
-          </div>
-        </div>
-      )}
-    </header>
+              <div className="text-center pt-2 border-t">
+                <p className="text-sm text-muted-foreground mb-2">
+                  {language === "es" ? "Eres agente de viajes?" : "Are you a travel agent?"}
+                </p>
+                <Link href="/agentes/registro">
+                  <Button variant="outline" className="w-full" onClick={() => setAccountModalOpen(false)}>
+                    {language === "es" ? "Registrarse" : "Register"}
+                  </Button>
+                </Link>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
