@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, User, ShoppingBag, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/logo_oficial_sin_fondo_tripseuropa_1767014572714.png";
+import logoUrl from "@assets/upscalemedia-transformed_1767014855004.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -52,7 +52,7 @@ export function Header() {
             <img 
               src={logoUrl} 
               alt="Trips Europa - Agencia de Viajes Premium a Europa" 
-              className="h-12 md:h-14 w-auto object-contain drop-shadow-lg" 
+              className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" 
             />
           </Link>
 
