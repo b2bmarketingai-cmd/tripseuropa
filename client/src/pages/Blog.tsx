@@ -22,7 +22,7 @@ const BLOG_CATEGORIES = [
 const BLOG_POSTS = [
   {
     id: "circuito-balcanes",
-    image: "https://images.unsplash.com/photo-1555990538-1e6f13e0e101?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590412200988-a40c4e4cc53b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Circuito Balcanes: Descubre 10 Naciones en un Solo Viaje", en: "Balkans Circuit: Discover 10 Nations in One Trip" },
     excerpt: { es: "Bulgaria, Grecia, Macedonia, Albania, Montenegro, Croacia, Bosnia y Serbia. La ruta mas completa por los Balcanes europeos.", en: "Bulgaria, Greece, Macedonia, Albania, Montenegro, Croatia, Bosnia and Serbia. The most complete route through the European Balkans." },
     category: "destinos",
@@ -658,7 +658,7 @@ const BLOG_POSTS = [
   },
   {
     id: "croatia-costa-dalmatia",
-    image: "https://images.unsplash.com/photo-1555990538-1e6f13e0e101?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Croacia: Dubrovnik, Split y las Islas Dalmacias", en: "Croatia: Dubrovnik, Split and the Dalmatian Islands" },
     excerpt: { es: "El destino de moda en Europa. Playas, Game of Thrones y islas paradisiacas.", en: "Europe's trending destination. Beaches, Game of Thrones and paradise islands." },
     category: "destinos",
