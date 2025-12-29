@@ -54,7 +54,7 @@ export function Footer() {
     <footer className="bg-primary text-white pt-12 pb-8" data-testid="footer">
       <div className="container mx-auto px-4 md:px-6">
         
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-8 border-b border-white/10">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-8 border-b border-white/10 bg-[#ffffff] text-[#d5b034]">
           {mainNav.map((item, index) => (
             <Link 
               key={index} 
