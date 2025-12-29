@@ -1,0 +1,181 @@
+Perfecto. Ahora voy a compilar todo en una lista profesional y detallada:
+
+***
+
+# 📊 **LISTA COMPLETA DE RUTAS ORIGEN-DESTINO**
+## **Trips Europa: Viajes desde Latinoamérica hacia Europa**
+
+### **1. COLOMBIA** 🇨🇴
+
+#### **Ciudades de Origen (Aeropuertos)**
+
+| Ciudad | Aeropuerto | Código | Prioridad | Pasajeros Potenciales |
+|--------|-----------|--------|----------|----------------------|
+| **Bogotá** | El Dorado | BOG | 🔴 MÁXIMA | 8.2M metro |
+| **Medellín** | Rionegro (José María Córdova) | MDE | 🟠 ALTA | 2.6M metro |
+| **Cali** | Alfonso Bonilla Aragón | CLO | 🟡 MEDIA | 2.3M metro |
+| **Barranquilla** | Ernesto Cortissoz | BAQ | 🟡 MEDIA | 1.4M metro |
+| Bucaramanga | Palonegro | BGA | 🔵 BAJA | Regional |
+| Cúcuta | Camilo Daza | CUC | 🔵 BAJA | Regional |
+| Santa Marta | Simón Bolívar | SMR | 🔵 BAJA | Regional |
+
+#### **Destinos Europeos - TOP 12**
+
+| Destino | País | Aeropuerto | Días Típicos | Precio USD | Ruta Principal |
+|---------|------|-----------|-------------|-----------|-----------------|
+| **Madrid** | España | MAD | 8-10 | $9,500-12,500 | BOG-MAD (directo 9h35m) |
+| **París** | Francia | CDG | 8-10 | $9,800-13,000 | BOG-CDG (directo 9h50m) |
+| **Roma** | Italia | FCO | 8-10 | $10,000-13,500 | BOG-FCO (conexión) |
+| **Barcelona** | España | BCN | 6-8 | $8,500-11,000 | BOG-BCN (conexión) |
+| **Lisboa** | Portugal | LIS | 5-7 | $7,500-9,500 | BOG-LIS (conexión) |
+| **Florencia** | Italia | FLR | 5-6 | $7,000-9,000 | BOG-FLR (conexión) |
+| **Ámsterdam** | Países Bajos | AMS | 5-7 | $11,000-15,000 | BOG-AMS (conexión) |
+| **Zúrich** | Suiza | ZRH | 5-7 | $11,000-15,000 | BOG-ZRH (conexión) |
+| **Viena** | Austria | VIE | 4-5 | $7,000-9,000 | BOG-VIE (conexión) |
+| **Atenas** | Grecia | ATH | 8-10 | $8,500-11,000 | BOG-ATH (conexión) |
+| **Praga** | República Checa | PRG | 4-5 | $6,000-8,000 | BOG-PRG (conexión) |
+| **Londres** | Reino Unido | LHR | 5-6 | $8,000-10,500 | BOG-LHR (conexión) |
+
+#### **Rutas Populares desde Colombia**
+
+| # | Nombre Ruta | Origen | Destinos | Duración | Precio USD | Público |
+|---|------------|--------|----------|----------|-----------|---------|
+| 1 | **Clásica Europa** | Bogotá | Madrid → Roma → París | 14 días | $11,550-14,050 | Familias |
+| 2 | **Europa Romántica** | Bogotá | Madrid → Barcelona → París → Ámsterdam | 15 días | $12,500-16,000 | Parejas |
+| 3 | **Europa Aventura** | Bogotá | Lisboa → Barcelona | 8 días | $7,500-9,500 | Jóvenes |
+| 4 | **Europa Lujo** | Bogotá | París → Suiza → Italia | 12 días | $18,000-25,000 | Clase alta |
+| 5 | **Europa + Marruecos** | Bogotá | Madrid → Marruecos → París | 14 días | $11,500-14,500 | Aventureros |
+| 6 | **Norte de África** | Bogotá | Completa | 16 días | Precio custom | Premium |
+
+***
+
+### **2. MÉXICO** 🇲🇽
+
+#### **Ciudades de Origen (Aeropuertos)**
+
+| Ciudad | Aeropuerto | Código | Prioridad | Pasajeros Potenciales |
+|--------|-----------|--------|----------|----------------------|
+| **Ciudad de México (CDMX)** | Benito Juárez | MEX | 🔴 MÁXIMA | 21M metro |
+| **Guadalajara** | Miguel Hidalgo | GDL | 🟠 ALTA | 5.3M metro |
+| **Monterrey** | Mariano Escobedo | MTY | 🟠 ALTA | 4.3M metro |
+| **Cancún** | Cancún International | CUN | 🟡 MEDIA | 888k + turismo |
+| **Puebla** | Hermanos Serdán | PBC | 🟡 MEDIA | 2.8M metro |
+| Veracruz | General Heriberto Jara | VER | 🔵 BAJA | Regional |
+
+#### **Destinos Europeos - TOP 10**
+
+| Destino | País | Aeropuerto | Días Típicos | Precio USD | Conexión Típica |
+|---------|------|-----------|-------------|-----------|-----------------|
+| **Madrid** | España | MAD | 8-10 | $10,500-13,500 | CDMX-MAD (directo 11h) |
+| **París** | Francia | CDG | 8-10 | $10,800-13,800 | CDMX-CDG (directo 10.5h) |
+| **Roma** | Italia | FCO | 8-10 | $11,000-14,000 | Conexión Miami/Madrid |
+| **Barcelona** | España | BCN | 7-9 | $10,000-12,500 | Conexión |
+| **Lisboa** | Portugal | LIS | 5-7 | $9,500-12,000 | CDMX-LIS (directo 10h) |
+| **Londres** | Reino Unido | LHR | 5-6 | $9,500-12,000 | Conexión |
+| **Ámsterdam** | Países Bajos | AMS | 5-7 | $11,500-15,000 | Conexión |
+| **Florencia** | Italia | FLR | 5-7 | $10,500-13,500 | Conexión |
+| **Zurich** | Suiza | ZRH | 5-7 | $12,000-16,000 | Conexión |
+| **Praga** | República Checa | PRG | 5-7 | $9,500-12,000 | Conexión |
+
+#### **Rutas Populares desde México**
+
+| # | Nombre Ruta | Origen | Destinos | Duración | Precio USD | Público |
+|---|------------|--------|----------|----------|-----------|---------|
+| 1 | **Madrid + Barcelona** | CDMX | Madrid → Barcelona | 8 días | $10,500-13,000 | Familias |
+| 2 | **París + Roma** | CDMX | París → Roma | 10 días | $11,500-14,500 | Parejas |
+| 3 | **Europa Completa** | CDMX | Madrid → Barcelona → París → Roma | 14 días | $13,500-17,000 | Aventureros |
+| 4 | **Portugal + España** | CDMX | Lisboa → Madrid | 8 días | $9,000-11,500 | Jóvenes |
+| 5 | **Lujo Europa** | CDMX | París + Suiza | 10 días | $14,000-18,000 | Clase alta |
+
+***
+
+### **3. BRASIL** 🇧🇷
+
+#### **Cidades de Origem (Aeroportos)**
+
+| Cidade | Aeroporto | Código | Prioridade | Passageiros Potenciais |
+|--------|-----------|--------|----------|----------------------|
+| **São Paulo** | Guarulhos/Congonhas | GIG/CGH | 🔴 MÁXIMA | 12M metro |
+| **Rio de Janeiro** | Galeão/Santos Dumont | GIG/SDU | 🔴 MÁXIMA | 6.7M metro |
+| **Belo Horizonte** | Tancredo Neves | CNF | 🟠 ALTA | 2.5M metro |
+| **Brasília** | Presidente Juscelino Kubitschek | BSB | 🟡 MEDIA | 3M metro |
+| **Salvador** | Deputado Luís Eduardo Magalhães | SSA | 🟡 MEDIA | 2.9M metro |
+| Recife | Gilberto Freyre | REC | 🟡 MEDIA | 1.6M metro |
+
+#### **Destinos Europeus - TOP 12**
+
+| Destino | País | Aeroporto | Dias Típicos | Preço USD | Conexão Típica |
+|---------|------|-----------|-------------|-----------|-----------------|
+| **Roma** | Itália | FCO | 8-10 | $11,500-15,500 | SP-FCO (conexão via LIS/MAD) |
+| **Paris** | França | CDG | 8-10 | $11,000-14,500 | SP-CDG (direto 11-13h, crescendo) |
+| **Madrid** | Espanha | MAD | 6-8 | $10,500-13,500 | SP-MAD (conexão) |
+| **Florença** | Itália | FLR | 7-9 | $11,000-14,000 | SP-FLR (conexão) |
+| **Barcelona** | Espanha | BCN | 5-7 | $10,500-13,500 | SP-BCN (conexão) |
+| **Londres** | Reino Unido | LHR | 5-7 | $9,000-11,500 | SP-LHR (direto TAP 2x diários) |
+| **Lisboa** | Portugal | LIS | 5-7 | $10,500-13,500 | SP-LIS (direto TAP) |
+| **Viena** | Áustria | VIE | 6-8 | $11,500-15,000 | SP-VIE (conexão) |
+| **Estocolmo** | Suécia | ARN | 8-10 | $10,500-14,000 | SP-ARN (conexão) |
+| **Atenas** | Grécia | ATH | 7-9 | $13,500-18,000 | SP-ATH (conexão) |
+| **Zurique** | Suíça | ZRH | 5-6 | $10,000-13,000 | SP-ZRH (conexão) |
+| **Amsterdã** | Países Baixos | AMS | 5-7 | $11,500-15,000 | SP-AMS (conexão) |
+
+#### **Rotas Populares desde Brasil**
+
+| # | Nome Rota | Origem | Destinos | Duração | Preço USD | Público |
+|---|----------|--------|----------|----------|-----------|---------|
+| 1 | **Itália + França** | São Paulo | Roma → Paris | 10 dias | $12,500-15,500 | Casais |
+| 2 | **Europa Luxo** | São Paulo | Madrid → Barcelona → Roma → Florença | 12 dias | $16,000-22,000 | Classe alta |
+| 3 | **Lisboa + Madrid** | São Paulo | Lisboa → Porto → Madrid | 8 dias | $10,500-13,500 | Jóvens |
+| 4 | **Europa Cultural** | São Paulo | Lisboa → Porto → Madrid | 14 dias | $14,500-18,500 | Adventureiros |
+| 5 | **Portugal + Espanha** | São Paulo | Lisboa → Madrid | 8 dias | $10,500-13,500 | Familias |
+
+***
+
+### **4. ARGENTINA** 🇦🇷
+
+#### **Ciudades de Origen (Aeropuertos)**
+
+| Ciudad | Aeropuerto | Código | Prioridad | Pasajeros Potenciales |
+|--------|-----------|--------|----------|----------------------|
+| **Buenos Aires** | Ministro Pistarini / Aeroparque | AEP/EZE | 🔴 MÁXIMA | 3.1M metro |
+| **Córdoba** | Córdoba | COR | 🟠 ALTA | 1.3M |
+| **Rosario** | Rosario | ROS | 🟡 MEDIA | 950k |
+
+#### **Destinos Europeos - TOP 5**
+
+| Destino | Precio USD | Duración |
+|---------|-----------|----------|
+| Madrid | $11,500 | 12 días |
+| Barcelona | $12,000 | 12 días |
+| Roma | $13,000 | 10 días |
+| París | $12,500 | 10 días |
+| Estambul | $10,500 | 10 días |
+
+#### **Rutas Populares desde Argentina**
+
+| # | Ruta | Destinos | Duración | Precio USD |
+|---|------|----------|----------|-----------|
+| 1 | Clásica | BA → Madrid → Barcelona → París → BA | 12 días | $13,500 |
+| 2 | Romántica | BA → Roma → Florencia → Venecia → BA | 10 días | $12,500 |
+| 3 | Economía | BA → Lisboa → Madrid → Barcelona → BA | 10 días | $12,000 |
+
+***
+
+### **5. PERÚ** 🇵🇪
+
+#### **Ciudades de Origen (Aeropuertos)**
+
+| Ciudad | Aeropuerto | Código | Prioridad |
+|--------|-----------|--------|----------|
+| **Lima** | Jorge Chávez | LIM | 🔴 MÁXIMA |
+| **Arequipa** | Alfredo Rodríguez Ballón | AQT | 🟡 MEDIA |
+| **Cusco** | Alejandro Velasco Astete | CUS | 🟡 MEDIA |
+
+#### **Destinos Europeos - TOP 5**
+
+| Destino | Precio USD | Duración |
+|---------|-----------|----------|
+| Madrid | $10,500 | 10 días |
+| Barcelona | $11,000 | 10 días |
+| París | $11,500 | 8 días |
+| Roma | $12,000 | 10 días |

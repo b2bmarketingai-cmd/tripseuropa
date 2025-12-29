@@ -41,13 +41,13 @@ export function Footer() {
   ];
 
   const countries = [
-    { name: "Colombia", href: "/desde-colombia", flag: "🇨🇴" },
-    { name: "Mexico", href: "/desde-mexico", flag: "🇲🇽" },
-    { name: "Brasil", href: "/desde-brasil", flag: "🇧🇷" },
-    { name: "Panama", href: "/desde-panama", flag: "🇵🇦" },
-    { name: "Argentina", href: "/desde-argentina", flag: "🇦🇷" },
-    { name: "Peru", href: "/desde-peru", flag: "🇵🇪" },
-    { name: "Costa Rica", href: "/desde-costa-rica", flag: "🇨🇷" },
+    { name: "Colombia", href: "/blog/colombia", code: "CO" },
+    { name: "Mexico", href: "/blog/mexico", code: "MX" },
+    { name: "Brasil", href: "/blog/brasil", code: "BR" },
+    { name: "Argentina", href: "/blog/argentina", code: "AR" },
+    { name: "Peru", href: "/blog/peru", code: "PE" },
+    { name: "Panama", href: "/blog/panama", code: "PA" },
+    { name: "Costa Rica", href: "/blog/costa-rica", code: "CR" },
   ];
 
   return (
@@ -123,7 +123,7 @@ export function Footer() {
               {countries.map((country, index) => (
                 <li key={index}>
                   <Link href={country.href} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
-                    <span>{country.flag}</span>
+                    <span className="text-xs bg-white/10 px-1 rounded font-mono">{country.code}</span>
                     {country.name}
                   </Link>
                 </li>

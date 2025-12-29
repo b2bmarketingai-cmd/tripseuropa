@@ -6,10 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { 
-  Plane, MapPin, Star, Calendar, Users, Shield, Clock, 
-  CheckCircle, ArrowRight, Phone, MessageCircle, DollarSign,
-  Building, CreditCard, Globe, Compass, Camera, Heart,
-  HelpCircle, ChevronDown, ChevronUp, Briefcase
+  Plane, MapPin, Star, Users, Shield, 
+  CheckCircle, Phone, MessageCircle,
+  Globe, Heart, ChevronDown, ChevronUp
 } from "lucide-react";
 import { useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
@@ -18,530 +17,491 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, España",
+    name: "Madrid, Espana",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
-    why: ["Vuelos directos Aerolineas", "Idioma español", "Hub europeo", "Cultura vibrante"],
-    duration: "10-12 dias",
-    priceRange: "$11,500 USD",
-    bestTime: "Abril - Octubre",
-    routes: ["Barcelona", "Sevilla", "Toledo"],
+    why: ["Idioma espanol", "Fuerte conexion cultural", "Museos Prado y Reina Sofia", "Hub para otros destinos"],
+    nearby: ["Barcelona", "Sevilla", "Valencia", "Toledo"],
   },
   {
     id: "barcelona",
-    name: "Barcelona, España",
+    name: "Barcelona, Espana",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
-    why: ["Gaudi y arquitectura", "Playas mediterraneas", "Gastronomia", "Vida nocturna"],
-    duration: "8-10 dias",
-    priceRange: "$12,000 USD",
-    bestTime: "Mayo - Octubre",
-    routes: ["Costa Brava", "Montserrat", "Girona"],
+    why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida nocturna vibrante"],
+    nearby: ["Costa Brava", "Montserrat", "Girona"],
   },
   {
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
     image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
-    why: ["Historia milenaria", "Ciudadania italiana", "Gastronomia", "Arte renacentista"],
-    duration: "10-12 dias",
-    priceRange: "$13,000 USD",
-    bestTime: "Abril - Junio, Septiembre",
-    routes: ["Florencia", "Venecia", "Napoles"],
+    why: ["Herencia italiana argentina", "Coliseo y Vaticano", "Gastronomia autentica", "Arte renacentista"],
+    nearby: ["Florencia", "Venecia", "Milan", "Napoles"],
   },
   {
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
-    why: ["Torre Eiffel", "Museo del Louvre", "Moda y lujo", "Romanticismo"],
-    duration: "8-10 dias",
-    priceRange: "$12,500 USD",
-    bestTime: "Abril - Junio, Septiembre",
-    routes: ["Versalles", "Normandia", "Loire"],
+    why: ["Ciudad del amor", "Torre Eiffel", "Museo del Louvre", "Gastronomia mundial"],
+    nearby: ["Versalles", "Normandia", "Provence"],
   },
   {
     id: "estambul",
     name: "Estambul, Turquia",
     countryCode: "TR",
     image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop",
-    why: ["Precio accesible", "Cultura unica", "Gastronomia", "Puente Europa-Asia"],
-    duration: "7-8 dias",
-    priceRange: "$10,500 USD",
-    bestTime: "Abril - Mayo, Septiembre - Octubre",
-    routes: ["Capadocia", "Efeso", "Pamukkale"],
-  },
-];
-
-const TRAVEL_ROUTES = [
-  {
-    id: "clasica",
-    name: "Europa Clasica",
-    duration: "12 dias",
-    price: "$13,500 USD",
-    route: "Buenos Aires - Madrid - Barcelona - Paris - Buenos Aires",
-    highlights: ["3 capitales europeas", "Arte y cultura", "Gastronomia"],
-    icon: Compass,
+    why: ["Destino emergente", "Cultura unica", "Mezquitas impresionantes", "Bazares historicos"],
+    nearby: ["Capadocia", "Efeso", "Pamukkale"],
   },
   {
-    id: "italia",
-    name: "Italia Completa",
-    duration: "10 dias",
-    price: "$12,500 USD",
-    route: "Buenos Aires - Roma - Florencia - Venecia",
-    highlights: ["Ciudadania italiana", "Arte renacentista", "Cocina italiana"],
-    icon: Heart,
+    id: "lisboa",
+    name: "Lisboa, Portugal",
+    countryCode: "PT",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    why: ["Destino accesible", "Gastronomia portuguesa", "Tranvias historicos", "Fado y cultura"],
+    nearby: ["Cascais", "Sintra", "Oporto"],
   },
   {
-    id: "iberia",
-    name: "Peninsula Iberica",
-    duration: "10 dias",
-    price: "$12,000 USD",
-    route: "Buenos Aires - Lisboa - Madrid - Barcelona",
-    highlights: ["Portugal + España", "Costas mediterraneas", "Flamenco"],
-    icon: Globe,
+    id: "florencia",
+    name: "Florencia, Italia",
+    countryCode: "IT",
+    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=600&auto=format&fit=crop",
+    why: ["Cuna del Renacimiento", "Galeria Uffizi", "Duomo impresionante", "Toscana cercana"],
+    nearby: ["Pisa", "Siena", "San Gimignano"],
+  },
+  {
+    id: "venecia",
+    name: "Venecia, Italia",
+    countryCode: "IT",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&auto=format&fit=crop",
+    why: ["Canales romanticos", "Gondolas", "Plaza San Marcos", "Islas de Murano y Burano"],
+    nearby: ["Verona", "Padua", "Trieste"],
   },
 ];
 
 const DEPARTURE_CITIES = [
   {
     name: "Buenos Aires",
-    code: "AEP/EZE",
-    airport: "Ezeiza/Aeroparque",
-    priority: "ALTA",
-    population: "3.1M",
-    features: ["Capital nacional", "Hub principal Aerolineas"],
-    routes: ["Madrid (directo)", "Roma", "Paris", "Barcelona"],
+    code: "EZE",
+    airport: "Aeropuerto Internacional Ministro Pistarini (Ezeiza)",
+    priority: "MAXIMA",
+    population: "3.1 millones (metro: 15M)",
+    description: "La capital argentina es el principal hub internacional, con vuelos directos a Madrid, Roma y conexiones a toda Europa.",
+    topDestinations: ["Madrid", "Barcelona", "Roma", "Paris", "Estambul"],
+    airlines: ["Aerolineas Argentinas", "LATAM", "Iberia", "Air Europa"],
   },
   {
     name: "Cordoba",
     code: "COR",
-    airport: "Ambrosio Taravella",
-    priority: "MEDIA",
-    population: "1.3M",
-    features: ["Segunda ciudad", "Centro del pais"],
-    routes: ["Europa via Buenos Aires", "Madrid (conexion)"],
+    airport: "Aeropuerto Internacional Ingeniero Ambrosio Taravella",
+    priority: "ALTA",
+    population: "1.3 millones",
+    description: "Segunda ciudad del pais con conexiones internacionales via Buenos Aires y Santiago.",
+    topDestinations: ["Madrid", "Barcelona", "Roma", "Paris"],
+    airlines: ["Aerolineas Argentinas", "LATAM"],
   },
   {
     name: "Rosario",
     code: "ROS",
-    airport: "Islas Malvinas",
+    airport: "Aeropuerto Internacional Islas Malvinas",
     priority: "MEDIA",
-    population: "950k",
-    features: ["Tercera ciudad", "Zona industrial"],
-    routes: ["Europa via Buenos Aires"],
+    population: "950 mil",
+    description: "Tercera ciudad argentina con acceso conveniente a Europa via Buenos Aires.",
+    topDestinations: ["Madrid", "Barcelona", "Roma"],
+    airlines: ["Aerolineas Argentinas", "LATAM"],
   },
 ];
 
-const PRICE_TABLE = [
-  { duration: "8 dias", low: "$10,500", medium: "$12,000", high: "$15,000" },
-  { duration: "10 dias", low: "$11,500", medium: "$13,000", high: "$16,500" },
-  { duration: "12 dias", low: "$12,500", medium: "$13,500", high: "$18,000" },
-  { duration: "14 dias", low: "$14,000", medium: "$15,500", high: "$20,000" },
+const POPULAR_ROUTES = [
+  {
+    id: "clasica",
+    name: "Ruta Clasica Argentina",
+    description: "El recorrido favorito de los argentinos: Madrid, Barcelona y Paris.",
+    destinations: ["Madrid", "Barcelona", "Paris"],
+    highlights: ["Idioma espanol en Espana", "Cultura mediterranea", "Ciudad del amor", "Gastronomia variada"],
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    id: "italiana",
+    name: "Italia Completa",
+    description: "Para argentinos con raices italianas: Roma, Florencia y Venecia.",
+    destinations: ["Roma", "Florencia", "Venecia", "Milan"],
+    highlights: ["Conexion con raices", "Arte renacentista", "Gondolas y canales", "Moda italiana"],
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    id: "romantica",
+    name: "Europa Romantica",
+    description: "Perfecta para lunas de miel: Paris, Roma y Venecia.",
+    destinations: ["Paris", "Roma", "Venecia"],
+    highlights: ["Ciudades del amor", "Cenas romanticas", "Paseos en gondola", "Torre Eiffel"],
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    id: "economica",
+    name: "Europa Accesible",
+    description: "La mejor relacion calidad-precio: Lisboa, Madrid y Barcelona.",
+    destinations: ["Lisboa", "Madrid", "Barcelona"],
+    highlights: ["Destinos accesibles", "Idioma similar", "Playas mediterraneas", "Cultura iberica"],
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+  },
 ];
 
 const FAQS = [
   {
-    category: "Documentacion & Visas",
+    category: "Documentacion y Visas",
     questions: [
       {
         q: "Necesito visa para viajar a Europa siendo argentino?",
-        a: "No. Los argentinos tienen exencion de visa Schengen por 90 dias. Solo necesitas pasaporte valido con minimo 6 meses de vigencia."
+        a: "No. Los argentinos estan exentos de visa Schengen para estancias turisticas de hasta 90 dias. Solo necesitas pasaporte vigente con minimo 6 meses de validez."
       },
       {
-        q: "Puedo tramitar ciudadania italiana durante el viaje?",
-        a: "Si, muchos argentinos aprovechan para iniciar tramites. Ofrecemos tours especiales que incluyen visitas a comunas y asesoria."
-      },
-    ]
-  },
-  {
-    category: "Vuelos & Transporte",
-    questions: [
-      {
-        q: "Hay vuelos directos desde Buenos Aires a Europa?",
-        a: "Si. Aerolineas Argentinas opera vuelos directos a Madrid y Roma. LATAM conecta via Sao Paulo."
-      },
-      {
-        q: "Cuanto dura el vuelo Buenos Aires - Madrid?",
-        a: "Aproximadamente 12-13 horas en vuelo directo."
+        q: "Que documentos necesito?",
+        a: "Pasaporte argentino vigente, pasaje ida y vuelta, reservas de alojamiento, seguro de viaje internacional y comprobante de fondos suficientes."
       },
     ]
   },
   {
-    category: "Dinero & Pagos",
+    category: "Vuelos y Conexiones",
     questions: [
       {
-        q: "Puedo pagar en pesos argentinos?",
-        a: "Los precios estan en USD para estabilidad. Aceptamos pago en pesos al tipo de cambio del dia."
+        q: "Hay vuelos directos desde Argentina a Europa?",
+        a: "Si, desde Buenos Aires hay vuelos directos a Madrid (Aerolineas Argentinas, Iberia) y Roma (Aerolineas Argentinas). Otras ciudades europeas requieren conexion."
       },
       {
-        q: "Hay financiamiento disponible?",
-        a: "Si. Ofrecemos hasta 12 cuotas sin interes con tarjetas argentinas seleccionadas."
+        q: "Cuanto dura el vuelo a Europa?",
+        a: "Los vuelos directos Buenos Aires-Madrid duran aproximadamente 12-13 horas. A Roma son unas 13 horas."
       },
     ]
   },
   {
-    category: "Seguridad & Seguros",
+    category: "Destinos Recomendados",
     questions: [
       {
-        q: "Es seguro viajar a Europa en 2025?",
-        a: "Si. Europa es muy segura para turistas. Mantener precauciones basicas como en cualquier gran ciudad."
+        q: "Cual es el mejor destino para argentinos?",
+        a: "Espana e Italia son los favoritos por la conexion cultural e idiomatica. Madrid, Barcelona, Roma y Florencia son los mas populares."
       },
       {
-        q: "Necesito seguro de viaje?",
-        a: "Altamente recomendado aunque no obligatorio para argentinos. Cubre emergencias medicas y perdida de equipaje."
+        q: "Puedo visitar varios paises?",
+        a: "Si, los trenes europeos y vuelos de bajo costo facilitan recorrer multiples paises. Las rutas mas populares combinan Espana, Francia e Italia."
       },
     ]
   },
 ];
 
-const MARKET_STATS = [
-  { label: "Poblacion Argentina", value: "47 millones" },
-  { label: "Clase Media Objetivo", value: "20 millones (42%)" },
-  { label: "Argentinos viajan exterior/año", value: "2.1 millones" },
-  { label: "Gasto promedio viaje Europa", value: "$11,500 USD" },
-];
+function FAQSection({ category, questions }: { category: string; questions: { q: string; a: string }[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  
+  return (
+    <div className="mb-6">
+      <h3 className="text-lg font-bold text-[#d4af37] mb-4">{category}</h3>
+      <div className="space-y-3">
+        {questions.map((faq, index) => (
+          <Card key={index} className="border border-border/50">
+            <button
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="w-full p-4 text-left flex items-center justify-between gap-4"
+            >
+              <span className="font-medium text-foreground">{faq.q}</span>
+              {openIndex === index ? (
+                <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+              )}
+            </button>
+            {openIndex === index && (
+              <CardContent className="pt-0 pb-4 px-4">
+                <p className="text-muted-foreground">{faq.a}</p>
+              </CardContent>
+            )}
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function BlogArgentina() {
   const { language } = useI18n();
-  const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
-
-  const content = {
-    badge: { es: "Guia Completa 2025-2026", en: "Complete Guide 2025-2026" },
-    h1: { es: "Viajes a Europa desde Argentina", en: "Travel to Europe from Argentina" },
-    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos y consejos para viajeros argentinos", en: "Everything you need to know: routes, prices, destinations and tips for Argentine travelers" },
-    destinations: { es: "Destinos Preferidos por Argentinos", en: "Preferred Destinations by Argentines" },
-    routes: { es: "Rutas Principales desde Argentina", en: "Main Routes from Argentina" },
-    departures: { es: "Ciudades de Salida", en: "Departure Cities" },
-    prices: { es: "Comparativa de Precios", en: "Price Comparison" },
-    faq: { es: "Preguntas Frecuentes", en: "Frequently Asked Questions" },
-    cta: { es: "Cotiza Tu Viaje Ahora", en: "Quote Your Trip Now" },
-  };
-
-  const toggleFaq = (id: string) => {
-    setExpandedFaq(expandedFaq === id ? null : id);
-  };
-
-  const faqQuestions = FAQS.flatMap(cat => 
-    cat.questions.map(faq => ({
-      question: faq.q,
-      answer: faq.a
-    }))
+  
+  const allFaqs = FAQS.flatMap(cat => 
+    cat.questions.map(faq => ({ question: faq.q, answer: faq.a }))
   );
 
+  const breadcrumbs = [
+    { name: "Inicio", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Viajes desde Argentina", url: "/blog/argentina" },
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <SEOHead
-        title={language === "es" ? "Guia de Viajes a Europa desde Argentina - Rutas, Precios y Consejos" : "Guide to Travel Europe from Argentina - Routes, Prices and Tips"}
-        description={language === "es" 
-          ? "Guia completa para argentinos que quieren viajar a Europa: destinos favoritos, vuelos desde Buenos Aires, precios 2025, sin visa Schengen, y consejos practicos."
-          : "Complete guide for Argentines wanting to travel to Europe: favorite destinations, flights from Buenos Aires, 2025 prices, no Schengen visa needed, and practical tips."}
-        keywords="viajes europa argentina, europa desde buenos aires, paquetes europa argentina, vuelos buenos aires europa"
-        url="https://tripseuropa.com/blog/argentina"
-        type="article"
-        locale="es_AR"
-        publishedTime="2025-01-01"
-        modifiedTime="2025-01-01"
+    <div className="min-h-screen bg-background" data-testid="page-blog-argentina">
+      <SEOHead 
+        title="Viajes a Europa desde Argentina | Buenos Aires, Cordoba, Rosario"
+        description="Descubre los mejores destinos europeos para viajeros argentinos. Vuelos desde Buenos Aires, Cordoba y Rosario hacia Madrid, Roma, Barcelona, Paris y mas."
+        keywords="viajes europa argentina, vuelos buenos aires madrid, europa desde cordoba, viajes rosario europa, paris desde argentina, roma desde buenos aires"
+        url="/blog/argentina"
       />
-      <BreadcrumbSchema 
-        items={[
-          { name: "Inicio", url: "https://tripseuropa.com" },
-          { name: "Blog", url: "https://tripseuropa.com/blog" },
-          { name: "Argentina", url: "https://tripseuropa.com/blog/argentina" }
-        ]}
-      />
+      <FAQSchema questions={allFaqs} />
+      <BreadcrumbSchema items={breadcrumbs} />
       <BlogPostSchema
-        title={language === "es" ? "Guia Completa: Viajes a Europa desde Argentina 2025-2026" : "Complete Guide: Travel to Europe from Argentina 2025-2026"}
-        description={language === "es" 
-          ? "Todo lo que necesitas saber para viajar a Europa desde Argentina: destinos, rutas, precios y consejos practicos."
-          : "Everything you need to know to travel to Europe from Argentina: destinations, routes, prices and practical tips."}
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        title="Viajes a Europa desde Argentina: Guia Completa"
+        description="Todo lo que necesitas saber para viajar a Europa desde Argentina"
         datePublished="2025-01-01"
         author="Trips Europa"
-        url="https://tripseuropa.com/blog/argentina"
+        image="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200"
+        url="/blog/argentina"
       />
-      <FAQSchema questions={faqQuestions} />
-      <Header />
       
-      <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-argentina-hero">
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1612294037637-ec328d0e075e?q=80&w=1200&auto=format&fit=crop" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-argentina">
-            {content.badge[language]}
+      <Header />
+
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1920&auto=format&fit=crop')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <Badge className="mb-4 bg-[#d4af37] text-primary font-bold">
+            <MapPin className="w-3 h-3 mr-1" /> Argentina
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-accent mb-6" data-testid="text-argentina-title">
-            {content.h1[language]}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
+            Viajes A Europa Desde Argentina
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8" data-testid="text-argentina-subtitle">
-            {content.subtitle[language]}
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-6">
+            Desde Buenos Aires, Cordoba y Rosario hacia los destinos mas fascinantes de Europa. Vuelos directos a Madrid y Roma.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-[#d4af37] text-primary hover:bg-[#d4af37]/90 font-bold">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Cotizacion Gratis
+              </Button>
+            </Link>
+            <Link href="/packages">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                <Plane className="w-4 h-4 mr-2" />
+                Ver Paquetes
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-[#d4af37]/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+              Viaja Desde Tu Ciudad
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Conectamos a viajeros de las principales ciudades argentinas con los mejores destinos europeos.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
-            {MARKET_STATS.map((stat, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-accent">{stat.value}</div>
-                <div className="text-white/70 text-sm">{stat.label}</div>
-              </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {DEPARTURE_CITIES.map((city) => (
+              <Card key={city.code} className="overflow-hidden">
+                <CardContent className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#d4af37]">{city.name}</h3>
+                      <p className="text-sm text-muted-foreground">{city.airport}</p>
+                    </div>
+                    <Badge variant="secondary" className="font-bold">{city.code}</Badge>
+                  </div>
+                  <p className="text-muted-foreground mb-4">{city.description}</p>
+                  <div className="mb-4">
+                    <p className="text-sm font-medium mb-2 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#d4af37]" />
+                      Poblacion: {city.population}
+                    </p>
+                  </div>
+                  <div className="mb-4">
+                    <p className="text-sm font-medium mb-2">Destinos Populares:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {city.topDestinations.map((dest) => (
+                        <Badge key={dest} variant="outline" className="text-xs">{dest}</Badge>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium mb-2">Aerolineas:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {city.airlines.map((airline) => (
+                        <Badge key={airline} variant="secondary" className="text-xs">{airline}</Badge>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white" data-testid="section-destinations">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.destinations[language]}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+              Destinos Europeos Favoritos De Los Argentinos
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {TOP_DESTINATIONS.map((dest) => (
-              <Card key={dest.id} className="group overflow-hidden hover:shadow-lg transition-shadow" data-testid={`card-dest-${dest.id}`}>
+              <Card key={dest.id} className="overflow-hidden group">
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={dest.image} 
-                    alt={dest.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    alt={dest.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-3 left-3 bg-white/90 text-primary font-bold">
-                    {dest.countryCode}
-                  </Badge>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <h3 className="absolute bottom-3 left-3 text-xl font-bold text-accent" data-testid={`text-dest-name-${dest.id}`}>
-                    {dest.name}
-                  </h3>
-                </div>
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>{dest.duration}</span>
-                    </div>
-                    <div className="text-accent font-bold">{dest.priceRange}</div>
-                  </div>
-                  <div className="space-y-2">
-                    {dest.why.slice(0, 3).map((reason, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span>{reason}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-3 border-t">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4" />
-                      <span>{language === "es" ? "Mejor epoca:" : "Best time:"} {dest.bestTime}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50" data-testid="section-routes">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.routes[language]}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TRAVEL_ROUTES.map((route) => (
-              <Card key={route.id} className="hover:shadow-lg transition-shadow" data-testid={`card-route-${route.id}`}>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                      <route.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">{route.name}</h3>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4" />
-                        <span>{route.duration}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-2xl font-bold text-accent mb-4">{route.price}</div>
-                  <div className="flex items-start gap-2 mb-4">
-                    <Plane className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
-                    <span className="text-sm">{route.route}</span>
-                  </div>
-                  <div className="space-y-2">
-                    {route.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm">
-                        <Star className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span>{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white" data-testid="section-departures">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.departures[language]}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {DEPARTURE_CITIES.map((city) => (
-              <Card key={city.code} className="hover:shadow-lg transition-shadow" data-testid={`card-city-${city.code}`}>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                        <Plane className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg">{city.name}</h3>
-                        <span className="text-sm text-muted-foreground">{city.code}</span>
-                      </div>
-                    </div>
-                    <Badge variant={city.priority === "ALTA" ? "default" : "secondary"}>
-                      {city.priority}
+                  <div className="absolute top-3 right-3">
+                    <Badge variant="secondary" className="bg-white/90 text-foreground font-bold">
+                      {dest.countryCode}
                     </Badge>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm">
-                      <Building className="w-4 h-4 text-muted-foreground" />
-                      <span>{city.airport}</span>
+                </div>
+                <CardContent className="p-4">
+                  <h3 className="text-xl font-bold text-[#d4af37] mb-3">{dest.name}</h3>
+                  <ul className="space-y-1 mb-4">
+                    {dest.why.map((reason, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        {reason}
+                      </li>
+                    ))}
+                  </ul>
+                  <div>
+                    <p className="text-xs font-medium text-muted-foreground mb-2">Cerca de:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {dest.nearby.map((place) => (
+                        <Badge key={place} variant="outline" className="text-xs">{place}</Badge>
+                      ))}
                     </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Users className="w-4 h-4 text-muted-foreground" />
-                      <span>{city.population} habitantes</span>
-                    </div>
-                    <div className="pt-3 border-t">
-                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : "Available routes:"}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+              Rutas Populares Desde Argentina
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {POPULAR_ROUTES.map((route) => (
+              <Card key={route.id} className="overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-2/5 h-48 md:h-auto">
+                    <img src={route.image} alt={route.name} className="w-full h-full object-cover" />
+                  </div>
+                  <CardContent className="md:w-3/5 p-6">
+                    <h3 className="text-xl font-bold text-[#d4af37] mb-2">{route.name}</h3>
+                    <p className="text-muted-foreground text-sm mb-4">{route.description}</p>
+                    <div className="mb-4">
+                      <p className="text-sm font-medium mb-2">Destinos:</p>
                       <div className="flex flex-wrap gap-1">
-                        {city.routes.map((route, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">{route}</Badge>
+                        {route.destinations.map((dest) => (
+                          <Badge key={dest} className="bg-[#d4af37]/20 text-[#d4af37] text-xs">{dest}</Badge>
                         ))}
                       </div>
                     </div>
-                  </div>
-                </CardContent>
+                    <ul className="space-y-1">
+                      {route.highlights.map((h, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Star className="w-3 h-3 text-[#d4af37]" />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50" data-testid="section-prices">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.prices[language]}
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <CardContent className="p-0">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="bg-primary text-white">
-                        <th className="p-4 text-left">{language === "es" ? "Duracion" : "Duration"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Economico" : "Budget"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Estandar" : "Standard"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Premium" : "Premium"}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {PRICE_TABLE.map((row, idx) => (
-                        <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                          <td className="p-4 font-medium">{row.duration}</td>
-                          <td className="p-4 text-center">{row.low}</td>
-                          <td className="p-4 text-center font-bold text-accent">{row.medium}</td>
-                          <td className="p-4 text-center">{row.high}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+              Por Que Viajar A Europa Desde Argentina
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center p-6">
+              <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="font-bold text-lg mb-2">Sin Visa Schengen</h3>
+              <p className="text-sm text-muted-foreground">Argentinos exentos de visa para estancias de hasta 90 dias en Europa.</p>
             </Card>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              {language === "es" 
-                ? "* Precios en USD por persona. Incluye vuelos, hoteles 3-5 estrellas, traslados y tours. Impuestos no incluidos."
-                : "* Prices in USD per person. Includes flights, 3-5 star hotels, transfers and tours. Taxes not included."}
-            </p>
+            <Card className="text-center p-6">
+              <Plane className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
+              <h3 className="font-bold text-lg mb-2">Vuelos Directos</h3>
+              <p className="text-sm text-muted-foreground">Conexiones directas desde Buenos Aires a Madrid y Roma.</p>
+            </Card>
+            <Card className="text-center p-6">
+              <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
+              <h3 className="font-bold text-lg mb-2">Conexion Cultural</h3>
+              <p className="text-sm text-muted-foreground">Herencia italiana y espanola que facilita la experiencia europea.</p>
+            </Card>
+            <Card className="text-center p-6">
+              <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
+              <h3 className="font-bold text-lg mb-2">Experiencia Unica</h3>
+              <p className="text-sm text-muted-foreground">Arte, historia, gastronomia y paisajes que cambiaran tu vida.</p>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white" data-testid="section-faq">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.faq[language]}
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            {FAQS.map((category, catIdx) => (
-              <div key={catIdx}>
-                <h3 className="text-lg font-bold text-accent mb-3 flex items-center gap-2">
-                  <HelpCircle className="w-5 h-5" />
-                  {category.category}
-                </h3>
-                <div className="space-y-2">
-                  {category.questions.map((faq, faqIdx) => {
-                    const faqId = `${catIdx}-${faqIdx}`;
-                    const isExpanded = expandedFaq === faqId;
-                    return (
-                      <Card 
-                        key={faqIdx} 
-                        className="cursor-pointer"
-                        onClick={() => toggleFaq(faqId)}
-                        data-testid={`faq-${faqId}`}
-                      >
-                        <div className="p-4">
-                          <div className="flex items-start justify-between gap-4">
-                            <h4 className="font-medium">{faq.q}</h4>
-                            {isExpanded ? (
-                              <ChevronUp className="w-5 h-5 text-accent flex-shrink-0" />
-                            ) : (
-                              <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                            )}
-                          </div>
-                          {isExpanded && (
-                            <p className="text-muted-foreground mt-3 text-sm">{faq.a}</p>
-                          )}
-                        </div>
-                      </Card>
-                    );
-                  })}
-                </div>
-              </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+              Preguntas Frecuentes
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            {FAQS.map((section, idx) => (
+              <FAQSection key={idx} category={section.category} questions={section.questions} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-primary" data-testid="section-cta">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-display font-bold text-accent mb-4">
-            {content.cta[language]}
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#d4af37] mb-4">
+            Comienza Tu Aventura Europea
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            {language === "es" 
-              ? "Nuestros asesores especializados en viajes desde Argentina te ayudaran a planificar tu viaje perfecto a Europa."
-              : "Our travel advisors specialized in trips from Argentina will help you plan your perfect trip to Europe."}
+          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+            Contactanos hoy y recibe una cotizacion personalizada para tu viaje sonado a Europa desde Argentina.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2">
-                <Phone className="w-5 h-5" />
-                {language === "es" ? "Contactar Asesor" : "Contact Advisor"}
+              <Button size="lg" className="bg-[#d4af37] text-primary hover:bg-[#d4af37]/90 font-bold">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Solicitar Cotizacion
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2">
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp
-            </Button>
+            <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                <Phone className="w-4 h-4 mr-2" />
+                WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </section>
