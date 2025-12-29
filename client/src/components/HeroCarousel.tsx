@@ -197,15 +197,6 @@ export function HeroCarousel() {
       </div>
 
       <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/50 transition-colors z-30"
-        aria-label="Previous slide"
-        data-testid="button-carousel-prev"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-
-      <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/50 transition-colors z-30"
         aria-label="Next slide"
