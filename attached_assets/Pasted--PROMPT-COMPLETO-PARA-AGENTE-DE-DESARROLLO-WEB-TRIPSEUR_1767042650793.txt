@@ -1,0 +1,373 @@
+# PROMPT COMPLETO PARA AGENTE DE DESARROLLO WEB - TRIPSEUROPA.COM
+
+## PARTE 1: ESTRUCTURA DE LINKS CORPORATIVOS
+
+```xml
+<!-- COMPANY / MAIN LINKS -->
+<a href="/about-us">About Us</a>
+<a href="/reviews">Exoticca Reviews</a>
+<a href="/blog">Blog</a>
+<a href="https://apply.workable.com/exoticca">Join Our Team</a>
+<a href="/travel-advisors">Travel Advisor Portal</a>
+<a href="/landing/exoticca-go-rewards">Exoticca GO Rewards Program</a>
+<a href="/travel-giveaway">Win a Trip</a>
+<a href="/referral">Refer a Friend Program</a>
+<a href="/groupchampionsprogram">Save with Your Group</a>
+
+<!-- SUPPORT -->
+<a href="https://help.exoticca.com/contact#openChat">Chat with Us</a>
+<a href="https://help.exoticca.com">Help Centre & FAQs</a>
+<a href="https://wa.me/16479255757">WhatsApp</a>
+<a href="https://m.me/ExoticcaCA">Facebook Messenger</a>
+
+<!-- POLICIES -->
+<a href="/terms-and-conditions">General Conditions</a>
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/cookies-policy">Cookies Policy</a>
+
+<!-- MULTI-COUNTRY -->
+<a href="/">Canada</a>
+<a href="/fr">France</a>
+<a href="/de">Germany</a>
+<a href="/mx">Mexico</a>
+<a href="/es">Spain</a>
+<a href="/us">United States</a>
+<a href="/uk">United Kingdom</a>
+
+<!-- APPS -->
+<a href="https://play.google.com/store/apps/details?id=com.exoticca.android">Google Play</a>
+<a href="https://apps.apple.com/app/exoticca-travelers-app/id1604571536">Apple App Store</a>
+
+<!-- SOCIAL MEDIA -->
+<a href="https://www.facebook.com/ExoticcaCA/">Facebook</a>
+<a href="https://www.instagram.com/exoticca/">Instagram</a>
+<a href="https://www.tiktok.com/@exoticca">TikTok</a>
+<a href="https://www.linkedin.com/company/exoticca">LinkedIn</a>
+<a href="https://www.youtube.com/channel/UCXqF7R5EqmMpKaVF0RrEsYA">YouTube</a>
+<a href="https://twitter.com/ExoticcaTravel">Twitter/X</a>
+```
+
+## PARTE 2: ADAPTACIÓN PARA TRIPSEUROPA.COM
+
+### Links Corporativos Adaptados:
+
+```xml
+<!-- COMPANY / MAIN LINKS -->
+<a href="/about-us">Sobre Nosotros</a>
+<a href="/reviews">Opiniones de Viajeros</a>
+<a href="/blog">Blog de Viajes</a>
+<a href="/careers">Trabaja con Nosotros</a>
+<a href="/travel-advisors">Portal de Asesores</a>
+<a href="/rewards">Programa TripsEuropa Rewards</a>
+<a href="/win-trip">Gana un Viaje</a>
+<a href="/referral">Programa de Referidos</a>
+<a href="/group-travel">Viajes en Grupo</a>
+
+<!-- SUPPORT -->
+<a href="/contact">Chat en Vivo</a>
+<a href="/help-center">Centro de Ayuda</a>
+<a href="https://wa.me/YOUR_NUMBER">WhatsApp</a>
+<a href="/contact">Contacto Directo</a>
+
+<!-- POLICIES -->
+<a href="/terms">Términos y Condiciones</a>
+<a href="/privacy">Política de Privacidad</a>
+<a href="/cookies">Política de Cookies</a>
+
+<!-- MULTI-COUNTRY -->
+<a href="/es">España</a>
+<a href="/mx">México</a>
+<a href="/co">Colombia</a>
+<a href="/ar">Argentina</a>
+<a href="/pe">Perú</a>
+<a href="/cl">Chile</a>
+<a href="/us">USA (English)</a>
+
+<!-- APPS -->
+<a href="https://play.google.com/store/apps/details?id=com.tripseuropa.android">Google Play</a>
+<a href="https://apps.apple.com/app/tripseuropa/id1234567890">Apple App Store</a>
+
+<!-- SOCIAL MEDIA -->
+<a href="https://www.facebook.com/TripsEuropa/">Facebook</a>
+<a href="https://www.instagram.com/tripseuropa/">Instagram</a>
+<a href="https://www.tiktok.com/@tripseuropa">TikTok</a>
+<a href="https://www.linkedin.com/company/tripseuropa">LinkedIn</a>
+<a href="https://www.youtube.com/channel/tripseuropa">YouTube</a>
+<a href="https://twitter.com/TripsEuropa">Twitter/X</a>
+```
+
+## PARTE 3: COMPONENTE HTML COMPLETO DE FOOTER
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripsEuropa - Vacaciones Premium a Europa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
+            padding: 60px 20px 20px;
+            margin-top: 100px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #f39c12;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+            transform: translateX(5px);
+        }
+
+        .footer-section-newsletter {
+            margin-bottom: 20px;
+        }
+
+        .newsletter-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ecf0f1;
+        }
+
+        .newsletter-input input::placeholder {
+            color: #95a5a6;
+        }
+
+        .newsletter-input button {
+            padding: 12px 25px;
+            background: #f39c12;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-input button:hover {
+            background: #e67e22;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #f39c12;
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: #95a5a6;
+            text-decoration: none;
+            font-size: 12px;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #f39c12;
+        }
+
+        .footer-copyright {
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .payment-icon {
+            width: 35px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .newsletter-input {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- SECTION 1: COMPANY -->
+            <div class="footer-section">
+                <h3>Empresa</h3>
+                <ul>
+                    <li><a href="/about-us">Sobre Nosotros</a></li>
+                    <li><a href="/reviews">Opiniones</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/careers">Trabaja con Nosotros</a></li>
+                    <li><a href="/press">Prensa</a></li>
+                    <li><a href="/partnerships">Alianzas</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 2: EXPERIENCE -->
+            <div class="footer-section">
+                <h3>Experiencias</h3>
+                <ul>
+                    <li><a href="/destinations/europe">Europa</a></li>
+                    <li><a href="/travel-advisors">Portal de Asesores</a></li>
+                    <li><a href="/group-travel">Viajes en Grupo</a></li>
+                    <li><a href="/rewards">Programa Rewards</a></li>
+                    <li><a href="/referral">Referir Amigos</a></li>
+                    <li><a href="/win-trip">Gana un Viaje</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 3: SUPPORT -->
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="/help-center">Centro de Ayuda</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                    <li><a href="/faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#openChat">Chat en Vivo</a></li>
+                    <li><a href="tel:+34XXXXXXXXX">Llamar</a></li>
+                    <li><a href="/booking-confirmation">Estado de Reserva</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 4: NEWSLETTER -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="font-size: 14px; color: #bdc3c7; margin-bottom: 15px;">Recibe las mejores ofertas y destinos exclusivos.</p>
+                <div class="footer-section-newsletter">
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit">Suscribir</button>
+                    </div>
+                </div>
+                <p style="font-size: 12px; color: #7f8c8d;">Acepto términos de privacidad</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/tripseuropa" title="Facebook">f</a>
+                    <a href="https://www.instagram.com/tripseuropa" title="Instagram">📷</a>
+                    <a href="https://www.tiktok.com/@tripseuropa" title="TikTok">♪</a>
+                    <a href="https://www.youtube.com/tripseuropa" title="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="/terms">Términos y Condiciones</a>
+                <a href="/privacy">Privacidad</a>
+                <a href="/cookies">Cookies</a>
+                <a href="/sitemap">Mapa del Sitio</a>
+            </div>
+            <div style="text-align: right; flex: 1;">
+                <p style="font-size: 12px; color: #7f8c8d; margin-bottom: 10px;">Métodos de Pago</p>
+                <div class="payment-methods">
+                    <div class="payment-icon" title="Visa"></div>
+                    <div class="payment-icon" title="Mastercard"></div>
+                    <div class="payment-icon" title="PayPal"></div>
+                    <div class="payment-icon" title="Transferencia"></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p class="footer-copyright

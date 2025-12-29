@@ -849,6 +849,43 @@ export default function Blog() {
         </div>
       </section>
 
+      <section className="py-8 bg-accent" data-testid="section-vacaciones-europa-banner">
+        <div className="container mx-auto px-4">
+          <Link href="/vacaciones-europa">
+            <Card className="bg-primary/95 border-accent/30 hover:bg-primary transition-all cursor-pointer overflow-hidden" data-testid="link-vacaciones-europa">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="relative w-full md:w-1/3 h-48 md:h-auto">
+                    <img 
+                      src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=600&auto=format&fit=crop" 
+                      alt="Vacaciones para Europa" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/90 md:block hidden" />
+                  </div>
+                  <div className="flex-1 p-6 md:p-8 text-center md:text-left">
+                    <Badge className="bg-accent text-primary mb-3">
+                      {language === "es" ? "Seccion Especial" : "Special Section"}
+                    </Badge>
+                    <h3 className="text-2xl md:text-3xl font-display font-bold text-accent mb-2">
+                      {language === "es" ? "Vacaciones para Europa" : "European Vacations"}
+                    </h3>
+                    <p className="text-white/80 mb-4 max-w-lg">
+                      {language === "es" 
+                        ? "Descubre paquetes, destinos, circuitos y todo lo que necesitas para planear tus vacaciones europeas perfectas." 
+                        : "Discover packages, destinations, circuits and everything you need to plan your perfect European vacation."}
+                    </p>
+                    <Button className="bg-accent text-primary hover:bg-accent/90">
+                      {language === "es" ? "Explorar Vacaciones" : "Explore Vacations"} <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
       <section className="py-12 bg-gradient-to-r from-primary to-primary/90" data-testid="section-country-blogs">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-6">

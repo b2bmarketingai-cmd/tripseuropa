@@ -35,6 +35,7 @@ import BlogDominicana from "@/pages/BlogDominicana";
 import BlogCaribe from "@/pages/BlogCaribe";
 import BlogMexico from "@/pages/BlogMexico";
 import BlogBrasil from "@/pages/BlogBrasil";
+import VacacionesEuropa from "@/pages/VacacionesEuropa";
 import TravelAdvisor from "@/pages/TravelAdvisor";
 import NotFound from "@/pages/not-found";
 
@@ -72,6 +73,7 @@ function Router() {
       <Route path="/blog/caribe" component={BlogCaribe} />
       <Route path="/blog/mexico" component={BlogMexico} />
       <Route path="/blog/brasil" component={BlogBrasil} />
+      <Route path="/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/travel-advisor" component={TravelAdvisor} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />

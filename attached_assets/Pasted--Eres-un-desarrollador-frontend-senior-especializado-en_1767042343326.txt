@@ -1,0 +1,254 @@
+ Eres un desarrollador frontend senior especializado en crear 
+secciones de viajes. Tu tarea es crear una sección completa "Vacaciones 
+para Europa" para tripseuropa.com, inspirada en la estructura de 
+https://www.exoticca.com/ca/europe
+
+OBJETIVO: Crear un BOTÓN/SECCIÓN interactiva con toda la información, 
+links y funcionalidades de Exoticca, adaptado a Trips Europa.
+
+RESULTADO FINAL: Un componente HTML/CSS/JS completamente funcional 
+que se pueda integrar en la web de Trips Europa.
+PARTE 1: ESTRUCTURA DE CONTENIDO
+A. Secciones Principales a Crear
+text
+1. HERO SECTION
+   - Título: "Vacaciones para Europa"
+   - Subtítulo inspiracional
+   - CTA principal: "Buscar mi viaje perfecto"
+   
+2. INTRO TEXT
+   - 300-400 palabras sobre Europa
+   - Párrafos de historia, arquitectura, cultura
+   - "Read more" expandible
+   
+3. FILTROS POR REGIÓN (8 botones)
+   ├─ All (110 Trips)
+   ├─ Eastern Mediterranean (2 Trips)
+   ├─ Eastern Europe (1 Trips)
+   ├─ Western Europe (59 Trips)
+   ├─ The Balkans (14 Trips)
+   ├─ Scandinavia and the Baltic States (16 Trips)
+   └─ Central Europe (18 Trips)
+   
+4. GRID DE PAQUETES (12-15 tarjetas)
+   - Flash Sale / Best Seller / Top Pick badges
+   - Imagen del destino
+   - Nombre del paquete
+   - País + días
+   - Ciudades incluidas (tags)
+   - Precio: Desde USD X
+   - Descuento porcentual
+   - Botón "View Details" (link)
+   
+5. SECCIÓN DE CATEGORÍAS DE VIAJE
+   ├─ Cultural Treasures
+   ├─ Mediterranean & Coastal Cities
+   ├─ Magical Baltic Trips
+   ├─ The Enchanting Alps
+   └─ (cada una con descripción y links)
+   
+6. TOP COUNTRIES (5 tarjetas destacadas)
+   - Portugal
+   - Greece
+   - Italy
+   - Switzerland
+   - Ireland
+   
+7. FAQ (Acordeón)
+   - 4-5 preguntas frecuentes
+   - Respuestas expandibles
+   
+8. TESTIMONIOS (Carrusel)
+   - Nombre + ubicación
+   - Rating (estrellas)
+   - Comentario
+   - Fecha
+   
+9. NEWSLETTER SIGNUP
+   
+10. FOOTER CON LINKS
+PARTE 2: TODOS LOS LINKS A INCLUIR
+Categorías Principales
+xml
+<!-- REGIONAL CATEGORIES -->
+<a href="/trips/europe/all">All (110 Trips)</a>
+<a href="/trips/europe/eastern-mediterranean">Eastern Mediterranean (2 Trips)</a>
+<a href="/trips/europe/eastern-europe">Eastern Europe (1 Trips)</a>
+<a href="/trips/europe/western-europe">Western Europe (59 Trips)</a>
+<a href="/trips/europe/the-balkans">The Balkans (14 Trips)</a>
+<a href="/trips/europe/scandinavia-and-the-baltic-states">Scandinavia and the Baltic States (16 Trips)</a>
+<a href="/trips/europe/central-europe">Central Europe (18 Trips)</a>
+Paquetes Destacados (15 principales)
+xml
+<!-- FEATURED PACKAGES -->
+1. Coastal Cities & Cultural Treasures - Portugal 9 days
+   <a href="/tours/europe/10044-coastal-cities-cultural-treasures">
+   Precio: From $1,999 | Was $4,999 | 60% off
+   
+2. Madrid, Andalusia, Valencia & Barcelona - Spain 9 days
+   <a href="/tours/spain/15990-madrid-andalusia-valencia-barcelona">
+   Precio: From $1,999 | Was $4,999 | 60% off
+   
+3. Essence of the Emerald Isle - Ireland 9 days
+   <a href="/tours/europe/9382-essence-of-the-emerald-isle">
+   Precio: From $2,199 | Was $3,669 | 40% off
+   
+4. Escorted Eternal Cities - Italy 9 days
+   <a href="/tours/europe/15708-escorted-eternal-cities">
+   Precio: From $2,949 | Was $5,369 | 45% off
+   
+5. Cultural Treasures & Algarve Escape - Portugal 13 days
+   <a href="/tours/europe/15898-cultural-treasures-algarve-escape">
+   Precio: From $3,349 | Was $7,449 | 55% off
+   
+6. Seaside cities & the majestic Douro Valley - Portugal 9 days
+   <a href="/tours/europe/17914-seaside-cities-the-majestic-douro-valley">
+   Precio: From $2,099 | Was $3,499 | 40% off
+   
+7. Cultural Treasures, Bazaars & Kasbahs - Portugal & Morocco 18 days
+   <a href="/tours/europe/10185-cultural-treasures-bazaars-kasbahs">
+   Precio: From $3,749 | Was $5,769 | 35% off
+   
+8. Self-guided: Ischia, Amalfi & Pompeii - Italy 9 days
+   <a href="/tours/europe/19911-self-guided-ischia-amalfi-pompeii">
+   Precio: From $2,749 | Was $4,999 | 45% off
+   
+9. Celtic Journey: Ireland & Northern Ireland - 14 days
+   <a href="/tours/europe/19459-celtic-journey-ireland-northern-ireland">
+   Precio: From $3,699 | Was $6,169 | 40% off
+   
+10. Coastal wonders of Amalfi & Puglia - Italy 9 days
+    <a href="/tours/europe/21101-coastal-wonders-of-amalfi-puglia">
+    Precio: From $2,349 | Was $5,879 | 60% off
+    
+11. Self-Guided Renaissance Cities & Tuscany - Italy 11 days
+    <a href="/tours/europe/13147-self-guided-renaissance-cities-tuscany">
+    
+12. Gems of Normandie and the French Riviera - France 12 days
+    <a href="/tours/europe/16124-gems-of-normandie-the-french-riviera">
+    
+13. A Cypriot Adventure - Cyprus 8 days
+    <a href="/nature/europe/15504-a-cypriot-adventure">
+    
+14. Fully Guided Journey Through the Baltics - 9 days
+    <a href="/tours/europe/16870-fully-guided-journey-through-the-baltics">
+    
+15. Escorted Alps and Cities of Switzerland - 8 days
+    <a href="/tours/europe/16200-escorted-alps-and-cities-of-switzerland">
+País Específico - Landing Pages
+xml
+<!-- COUNTRY PAGES -->
+<a href="/europe/western-europe/portugal">Portugal Vacation Packages</a>
+<a href="/europe/the-balkans/greece">Greece Vacation Packages</a>
+<a href="/europe/western-europe/italy">Italy Vacation Packages</a>
+<a href="/europe/central-europe/switzerland">Switzerland Vacation Packages</a>
+<a href="/europe/western-europe/ireland">Ireland Vacation Packages</a>
+<a href="/europe/western-europe/spain">Spain Trips</a>
+<a href="/europe/western-europe/france">France Trips</a>
+<a href="/europe/central-europe/austria">Austria Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states">Scandinavia Trips</a>
+<a href="/europe/the-balkans/croatia">Croatia Trips</a>
+<a href="/europe/eastern-mediterranean/cyprus">Cyprus Trips</a>
+Viajes Temáticos (Trip Styles)
+xml
+<!-- TRIP STYLES / THEMES -->
+<a href="/landing/croatia-nature-vacation-packages">Croatia Nature Travel</a>
+<a href="/landing/czech-republic-cultural-tours">Czech Republic Cultural Tours</a>
+<a href="/landing/england-nature-vacation-packages">England Nature Packages</a>
+<a href="/landing/england-cultural-tours">England Cultural Tours</a>
+<a href="/landing/france-cultural-tours">France Cultural Tours</a>
+<a href="/landing/france-nature-vacation-packages">France Nature Packages</a>
+<a href="/landing/family-greece">Family Greece Trips</a>
+<a href="/landing/greece-cultural-tours">Greece Cultural Tours</a>
+<a href="/landing/greece-tours-for-couples">Greece Couples Tours</a>
+<a href="/landing/iceland-nature-vacation-packages">Iceland Nature Packages</a>
+<a href="/landing/ireland-nature-vacation-packages">Ireland Nature Packages</a>
+<a href="/landing/italy-tours-for-couples">Italy Couples Tours</a>
+<a href="/landing/italy-cultural-tours">Italy Cultural Tours</a>
+<a href="/landing/italy-nature-vacation-packages">Italy Nature Tours</a>
+<a href="/landing/family-italy">Family Italy Trips</a>
+<a href="/landing/norway-cultural-tours">Norway Cultural Tours</a>
+<a href="/landing/norway-nature-vacation-packages">Norway Nature Packages</a>
+<a href="/landing/portugal-cultural-tours">Portugal Cultural Tours</a>
+<a href="/landing/portugal-nature-vacation-packages">Portugal Nature Tours</a>
+<a href="/landing/portugal-tours-for-couples">Portugal Couples Tours</a>
+<a href="/landing/spain-nature-vacation-packages">Spain Nature Packages</a>
+<a href="/landing/switzerland-nature-vacation-packages">Switzerland Nature Packages</a>
+<a href="/landing/switzerland-cultural-tours">Switzerland Cultural Tours</a>
+Todas las Ciudades/Países
+xml
+<!-- COUNTRY INDIVIDUAL PAGES -->
+<a href="/europe/the-balkans/albania">Albania Trips</a>
+<a href="/europe/central-europe/austria">Austria Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/baltic-states">Baltic States Trips</a>
+<a href="/europe/central-europe/belgium">Belgium Trips</a>
+<a href="/europe/the-balkans/croatia">Croatia Trips</a>
+<a href="/europe/eastern-mediterranean/cyprus">Cyprus Trips</a>
+<a href="/europe/central-europe/czech-republic">Czech Republic Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/denmark">Denmark Trips</a>
+<a href="/europe/western-europe/england">England Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/faroe-islands">Faroe Islands Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/finland">Finland Trips</a>
+<a href="/europe/western-europe/france">France Trips</a>
+<a href="/europe/central-europe/germany">Germany Trips</a>
+<a href="/europe/the-balkans/greece">Greece Trips</a>
+<a href="/europe/western-europe/holland">Holland Trips</a>
+<a href="/europe/western-europe/hungary">Hungary Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/iceland">Iceland Trips</a>
+<a href="/europe/western-europe/ireland">Ireland Trips</a>
+<a href="/europe/western-europe/italy">Italy Trips</a>
+<a href="/europe/the-balkans/north-macedonia">North Macedonia Trips</a>
+<a href="/europe/western-europe/northern-ireland">Northern Ireland Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/norway">Norway Trips</a>
+<a href="/europe/central-europe/poland">Poland Trips</a>
+<a href="/europe/western-europe/portugal">Portugal Trips</a>
+<a href="/europe/eastern-europe/romania">Romania Trips</a>
+<a href="/europe/eastern-europe/russia">Russia Trips</a>
+<a href="/europe/western-europe/scotland">Scotland Trips</a>
+<a href="/europe/central-europe/slovakia">Slovakia Trips</a>
+<a href="/europe/the-balkans/slovenia">Slovenia Trips</a>
+<a href="/europe/western-europe/spain">Spain Trips</a>
+<a href="/europe/scandinavia-and-the-baltic-states/sweden">Sweden Trips</a>
+<a href="/europe/central-europe/switzerland">Switzerland Trips</a>
+<a href="/europe/eastern-europe/ukraine">Ukraine Trips</a>
+<a href="/europe/western-europe/united-kingdom">United Kingdom Trips</a>
+Links Corporativos Principales
+xml
+<!-- COMPANY / MAIN LINKS -->
+<a href="/about-us">About Us</a>
+<a href="/reviews">Exoticca Reviews</a>
+<a href="/blog">Blog</a>
+<a href="https://apply.workable.com/exoticca">Join Our Team</a>
+<a href="/travel-advisors">Travel Advisor Portal</a>
+<a href="/landing/exoticca-go-rewards">Exoticca GO Rewards Program</a>
+<a href="/travel-giveaway">Win a Trip</a>
+<a href="/referral">Refer a Friend Program</a>
+<a href="/groupchampionsprogram">Save with Your Group</a>
+
+<!-- SUPPORT -->
+<a href="https://help.exoticca.com/contact#openChat">Chat with Us</a>
+<a href="https://help.exoticca.com">Help Centre & FAQs</a>
+<a href="https://wa.me/16479255757">WhatsApp</a>
+<a href="https://m.me/ExoticcaCA">Facebook Messenger</a>
+
+<!-- POLICIES -->
+<a href="/terms-and-conditions">General Conditions</a>
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/cookies-policy">Cookies Policy</a>
+
+<!-- MULTI-COUNTRY -->
+<a href="/">Canada</a>
+<a href="/fr">France</a>
+<a href="/de">Germany</a>
+<a href="/mx">Mexico</a>
+<a href="/es">Spain</a>
+<a href="/us">United States</a>
+<a href="/uk">United Kingdom</a>
+
+<!-- APPS -->
+<a href="https://play.google.com/store/apps/details?id=com.exoticca.android">Google Play</a>
+<a href="https://apps.apple.com/app/exoticca-travelers-app/id1604571536">Apple App Store</a>
+
+<!-- SOCIAL MEDIA -->
+<a href="https://www.facebook.com/ExoticcaCA/">Facebook</a>
+<a href="
