@@ -26,6 +26,7 @@ import FromPanama from "@/pages/FromPanama";
 import FromArgentina from "@/pages/FromArgentina";
 import FromPeru from "@/pages/FromPeru";
 import FromCostaRica from "@/pages/FromCostaRica";
+import BlogColombia from "@/pages/BlogColombia";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -53,6 +54,7 @@ function Router() {
       <Route path="/destinations" component={Destinations} />
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/colombia" component={BlogColombia} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />

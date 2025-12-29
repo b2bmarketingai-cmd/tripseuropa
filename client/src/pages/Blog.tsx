@@ -4,7 +4,8 @@ import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils } from "lucide-react";
+import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils, Globe } from "lucide-react";
+import { Link } from "wouter";
 import { useState, useMemo } from "react";
 
 const BLOG_CATEGORIES = [
@@ -748,6 +749,82 @@ export default function Blog() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gradient-to-r from-primary to-primary/90" data-testid="section-country-blogs">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-display font-bold text-accent flex items-center gap-2">
+              <Globe className="w-6 h-6" />
+              {language === "es" ? "Guias por Pais" : "Country Guides"}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <Link href="/blog/colombia">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-colombia">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Colombia</h3>
+                <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : "Complete Guide"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-mexico">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-mexico">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Mexico</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-brasil">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-brasil">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Brasil</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-argentina">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-argentina">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Argentina</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-peru">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-peru">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Peru</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-panama">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-panama">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Panama</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
+            <Link href="/desde-costa-rica">
+              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-costa-rica">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <h3 className="text-white font-bold text-sm">Costa Rica</h3>
+                <p className="text-white/60 text-xs">{language === "es" ? "Proximamente" : "Coming Soon"}</p>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
