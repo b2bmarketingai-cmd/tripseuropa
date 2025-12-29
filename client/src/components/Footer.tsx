@@ -191,54 +191,46 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 mb-6">
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-8">
             <div className="flex flex-col items-center gap-1" title="SSL 256 bits">
-              <div className="w-12 h-12 rounded bg-white/10 flex items-center justify-center">
-                <Lock className="w-6 h-6 text-white/70" />
+              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
+                <Lock className="w-5 h-5 text-white/70" />
               </div>
-              <span className="text-[10px] text-white/50 text-center leading-tight">
-                SSL<br/>256 bits
-              </span>
-              <span className="text-[9px] text-white/40">
-                {language === "es" ? "Pago seguro garantizado" : "Secure payment guaranteed"}
+              <span className="text-[9px] text-white/50 text-center leading-tight">
+                SSL 256 bits
               </span>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Visa">
-              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
-                <SiVisa className="w-10 h-6 text-white/80" />
+            <div title="Visa">
+              <div className="w-16 h-10 rounded bg-white flex items-center justify-center">
+                <SiVisa className="w-12 h-8 text-[#1A1F71]" />
               </div>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Mastercard">
-              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
-                <SiMastercard className="w-8 h-6 text-white/80" />
+            <div title="Mastercard">
+              <div className="w-16 h-10 rounded bg-white flex items-center justify-center">
+                <SiMastercard className="w-10 h-8 text-[#EB001B]" />
               </div>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Binance Pay">
-              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
-                <SiBinance className="w-6 h-6 text-[#F0B90B]" />
+            <div title="Binance Pay">
+              <div className="w-16 h-10 rounded bg-[#F0B90B] flex items-center justify-center">
+                <SiBinance className="w-6 h-6 text-[#1E2329]" />
               </div>
-              <span className="text-[10px] text-white/50">Binance Pay</span>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Scalapay">
-              <div className="w-20 h-10 rounded bg-white/10 flex items-center justify-center px-2">
-                <span className="text-white/80 text-sm font-semibold flex items-center gap-1">
-                  <span className="text-[#3C1053]">&#9829;</span>
-                  scalapay
+            <div title="Scalapay">
+              <div className="w-16 h-10 rounded bg-[#FFE8E8] flex items-center justify-center">
+                <span className="text-[#1A1A1A] text-xs font-bold flex items-center">
+                  <span className="text-[#1A1A1A]">&#9829;</span>
                 </span>
               </div>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Bank Transfer">
+            <div title="Bank Transfer">
               <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
                 <Building2 className="w-5 h-5 text-white/70" />
               </div>
-              <span className="text-[10px] text-white/50 text-center leading-tight">
-                BANK<br/>TRANSFER
-              </span>
             </div>
           </div>
           
@@ -282,7 +274,6 @@ export function Footer() {
           </div>
           <div className="flex gap-4 text-xs text-white/40 flex-wrap justify-center">
             <Link href="/privacy" className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
-            <Link href="/cookies" className="hover:text-white transition-colors">{t("footer.cookies")}</Link>
           </div>
         </div>
       </div>
