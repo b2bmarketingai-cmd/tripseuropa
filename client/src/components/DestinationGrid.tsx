@@ -7,7 +7,7 @@ const DESTINATIONS = [
   {
     id: "spain",
     image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Espana", en: "Spain" },
+    name: { es: "España", en: "Spain" },
     trips: 24,
   },
   {
