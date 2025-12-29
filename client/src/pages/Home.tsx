@@ -13,7 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { 
   ArrowRight, Star, Plane, Hotel, Users, Award, CheckCircle, Quote,
   Car, Smartphone, Shield, MapPin, Truck, Tag, Clock, Send, MessageCircle,
-  HeadphonesIcon, Briefcase, UserCheck, Compass
+  HeadphonesIcon, Briefcase, UserCheck, Compass, Calculator, Radar, FileCheck, Wallet
 } from "lucide-react";
 import { SiVisa, SiMastercard, SiBinance } from "react-icons/si";
 import { Link } from "wouter";
@@ -295,6 +295,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tools Section */}
+      <ToolsSection />
+
       {/* Complete Your Trip Section */}
       <CompleteYourTripSection />
 
@@ -498,6 +501,83 @@ function VIPClubSection() {
             </Button>
           </form>
           <p className="text-xs text-muted-foreground mt-4" data-testid="text-vipclub-nospam">{t("vipClub.noSpam")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ToolsSection() {
+  const { language } = useI18n();
+  
+  const content = {
+    badge: { es: "Herramientas Gratuitas", en: "Free Tools" },
+    title1: { es: "Herramientas Para Tu", en: "Tools For Your" },
+    title2: { es: "Proximo Viaje", en: "Next Trip" },
+    subtitle: { es: "Accede a nuestras herramientas gratuitas para planificar tu viaje sin complicaciones. Calcula tu solvencia, verifica requisitos de visa, rastrea tus vuelos y mas, todo en un solo lugar.", en: "Access our free tools to plan your trip hassle-free. Calculate your solvency, verify visa requirements, track your flights and more, all in one place." },
+    explore: { es: "Explorar Herramientas", en: "Explore Tools" },
+  };
+
+  const tools = [
+    {
+      icon: Wallet,
+      title: { es: "Solvencia Europea", en: "European Solvency" },
+      description: { es: "Calcula el monto minimo que necesitas segun los dias de viaje.", en: "Calculate the minimum amount you need based on travel days." },
+      href: "/tools#solvency",
+    },
+    {
+      icon: Calculator,
+      title: { es: "Calcular Viaje", en: "Trip Calculator" },
+      description: { es: "Obten un estimado de tarifas y opciones para tu destino.", en: "Get an estimate of rates and options for your destination." },
+      href: "/tools#calculator",
+    },
+    {
+      icon: Radar,
+      title: { es: "Rastrear Vuelos", en: "Track Flights" },
+      description: { es: "Consulta el estado de cualquier vuelo en tiempo real.", en: "Check the status of any flight in real time." },
+      href: "/tools#flights",
+    },
+    {
+      icon: FileCheck,
+      title: { es: "Verificar Visa", en: "Verify Visa" },
+      description: { es: "Revisa si necesitas visa para tu proximo destino.", en: "Check if you need a visa for your next destination." },
+      href: "/tools#visa",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-white" data-testid="section-tools">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <Badge className="mb-4" data-testid="badge-tools">{content.badge[language]}</Badge>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6" data-testid="text-tools-title">
+              {content.title1[language]}<br />
+              <span className="text-accent">{content.title2[language]}</span>
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed" data-testid="text-tools-subtitle">
+              {content.subtitle[language]}
+            </p>
+            <Link href="/tools">
+              <Button size="lg" className="bg-accent text-primary font-bold hover:bg-accent/90" data-testid="button-explore-tools">
+                {content.explore[language]} <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {tools.map((tool, index) => (
+              <Link key={index} href={tool.href}>
+                <div className="group p-6 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer h-full" data-testid={`card-tool-${index}`}>
+                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-4 text-accent group-hover:scale-110 transition-transform duration-300">
+                    <tool.icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary mb-2 font-display group-hover:text-accent transition-colors">{tool.title[language]}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{tool.description[language]}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
