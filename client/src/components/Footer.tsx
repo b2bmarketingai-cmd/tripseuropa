@@ -292,7 +292,6 @@ export function Footer() {
           </div>
           <div className="flex gap-4 text-xs text-white/40 flex-wrap justify-center">
             <Link href="/privacy" className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">{t("footer.terms")}</Link>
             <Link href="/cookies" className="hover:text-white transition-colors">{t("footer.cookies")}</Link>
           </div>
         </div>
