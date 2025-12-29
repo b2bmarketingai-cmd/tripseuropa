@@ -216,16 +216,6 @@ export function Footer() {
               </div>
             </div>
             
-            <div className="flex flex-col items-center gap-1" title="Maestro">
-              <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
-                <div className="flex items-center">
-                  <div className="w-4 h-4 rounded-full bg-red-500/60 -mr-1"></div>
-                  <div className="w-4 h-4 rounded-full bg-blue-500/60"></div>
-                </div>
-              </div>
-              <span className="text-[10px] text-white/50">maestro</span>
-            </div>
-            
             <div className="flex flex-col items-center gap-1" title="Binance Pay">
               <div className="w-16 h-10 rounded bg-white/10 flex items-center justify-center">
                 <SiBinance className="w-6 h-6 text-[#F0B90B]" />
