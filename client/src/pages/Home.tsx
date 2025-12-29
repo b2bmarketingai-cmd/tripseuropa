@@ -6,8 +6,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { DestinationGrid } from "@/components/DestinationGrid";
-import { FeaturedPackages } from "@/components/FeaturedPackages";
+import { TopOffers } from "@/components/TopOffers";
+import { ReserveSpot } from "@/components/ReserveSpot";
+import { Favorites } from "@/components/Favorites";
 import { SpecialOffers } from "@/components/SpecialOffers";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
@@ -57,11 +58,13 @@ export default function Home() {
       
       <HeroCarousel />
 
-      <DestinationGrid />
+      <TopOffers />
 
-      <FeaturedPackages />
+      <ReserveSpot />
 
       <SpecialOffers />
+
+      <Favorites />
 
       <WhyChooseUs />
 
@@ -137,7 +140,7 @@ export default function Home() {
       <WebsiteSchema />
       <FAQSchema questions={[
         { question: "Necesito visa Schengen para viajar a Europa desde Latinoamerica?", answer: "Si, los ciudadanos de la mayoria de paises latinoamericanos necesitan visa Schengen. Te ayudamos con todo el proceso de solicitud." },
-        { question: "Cuanto cuesta un viaje a Europa?", answer: "Nuestros paquetes comienzan desde USD 2,199 por persona incluyendo vuelos, hoteles y tours." },
+        { question: "Cuanto cuesta un viaje a Europa?", answer: "Nuestros paquetes comienzan desde USD 999 por persona mas impuestos incluyendo hoteles y tours." },
         { question: "Incluyen seguro de viaje los paquetes?", answer: "Si, todos nuestros paquetes incluyen seguro de viaje internacional con cobertura medica completa." },
         { question: "Los tours incluyen guia en espanol?", answer: "Si, todos nuestros tours incluyen guias profesionales en espanol." },
         { question: "Que formas de pago aceptan?", answer: "Aceptamos tarjetas de credito, transferencias bancarias y planes de financiamiento hasta 12 cuotas sin interes." }

@@ -8,29 +8,52 @@ const CAROUSEL_SLIDES = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "EUROPA CLASICA", en: "CLASSIC EUROPE" },
-    subtitle: { es: "Paris, Roma y Madrid", en: "Paris, Rome and Madrid" },
-    price: "2,899",
-    days: 15,
-    nights: 13,
+    title: { es: "Gran Tour de Europa", en: "Grand Tour of Europe" },
+    subtitle: { es: "Paris, Roma, Madrid y mas", en: "Paris, Rome, Madrid and more" },
+    price: "1,999",
+    taxes: "799",
+    days: 19,
+    nights: 17,
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "ITALIA ROMANTICA", en: "ROMANTIC ITALY" },
-    subtitle: { es: "Roma, Florencia y Venecia", en: "Rome, Florence and Venice" },
-    price: "2,499",
-    days: 12,
-    nights: 10,
+    title: { es: "Europa Clasica", en: "Classic Europe" },
+    subtitle: { es: "Lo mejor de Europa en un viaje", en: "The best of Europe in one trip" },
+    price: "1,999",
+    taxes: "799",
+    days: 15,
+    nights: 13,
   },
   {
     id: 3,
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1920&auto=format&fit=crop",
+    title: { es: "Espana, Portugal y Marruecos", en: "Spain, Portugal and Morocco" },
+    subtitle: { es: "Desde Barcelona Especial", en: "From Barcelona Special" },
+    price: "1,199",
+    taxes: "799",
+    days: 17,
+    nights: 15,
+  },
+  {
+    id: 4,
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "ISLAS GRIEGAS", en: "GREEK ISLANDS" },
-    subtitle: { es: "Atenas y Santorini", en: "Athens and Santorini" },
-    price: "3,199",
-    days: 10,
-    nights: 8,
+    title: { es: "Turquia y Grecia", en: "Turkey and Greece" },
+    subtitle: { es: "Estambul, Atenas y Santorini", en: "Istanbul, Athens and Santorini" },
+    price: "999",
+    taxes: "999",
+    days: 16,
+    nights: 13,
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1920&auto=format&fit=crop",
+    title: { es: "Viviendo Europa", en: "Living Europe" },
+    subtitle: { es: "Una experiencia inolvidable", en: "An unforgettable experience" },
+    price: "1,699",
+    taxes: "799",
+    days: 14,
+    nights: 12,
   },
 ];
 
@@ -66,7 +89,8 @@ export function HeroCarousel() {
     es: {
       from: "Desde",
       currency: "USD",
-      perPerson: "Por persona en acomodacion doble",
+      taxes: "+ IMP",
+      perPerson: "Por persona en habitacion doble",
       days: "dias",
       nights: "noches",
       quote: "Cotiza Ahora",
@@ -75,7 +99,8 @@ export function HeroCarousel() {
     en: {
       from: "From",
       currency: "USD",
-      perPerson: "Per person in double accommodation",
+      taxes: "+ Taxes",
+      perPerson: "Per person in double room",
       days: "days",
       nights: "nights",
       quote: "Get Quote",
@@ -124,9 +149,12 @@ export function HeroCarousel() {
 
           <div className="mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <span className="text-white/70 text-lg">{content[lang].from}</span>
-            <div className="flex items-baseline gap-2">
+            <div className="flex items-baseline gap-2 flex-wrap">
               <span className="text-4xl md:text-5xl font-bold text-accent font-display" data-testid="text-hero-price">
-                {content[lang].currency} {currentContent.price}
+                {currentContent.price}{content[lang].currency}
+              </span>
+              <span className="text-xl md:text-2xl text-white/80" data-testid="text-hero-taxes">
+                + {currentContent.taxes} {content[lang].taxes}
               </span>
             </div>
             <span className="text-white/70 text-sm">{content[lang].perPerson}</span>
@@ -145,7 +173,7 @@ export function HeroCarousel() {
           </div>
 
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Link href="/contact">
+            <a href="https://wa.me/34900123456" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-accent text-primary font-bold hover:bg-accent/90 px-8 text-lg"
@@ -153,7 +181,7 @@ export function HeroCarousel() {
               >
                 {content[lang].quote}
               </Button>
-            </Link>
+            </a>
             <Link href="/packages">
               <Button 
                 size="lg" 

@@ -119,3 +119,12 @@
 .gold-gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-amber-300;
 }
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

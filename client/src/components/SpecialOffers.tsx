@@ -1,123 +1,160 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { ChevronLeft, ChevronRight, Zap } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { Link } from "wouter";
 
 const OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
-    title: { es: "GRECIA EN SEMANA SANTA", en: "GREECE IN EASTER" },
-    originalPrice: "3,599",
-    discountPrice: "2,899",
-    discount: 20,
-    days: 10,
-    deadline: { es: "Hasta 15 Ene 2025", en: "Until Jan 15, 2025" },
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Bellezas de Europa", en: "Beauties of Europe" },
+    price: "2,399",
+    taxes: "799",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=80&w=800&auto=format&fit=crop",
-    title: { es: "LONDRES EXPRESS", en: "LONDON EXPRESS" },
-    originalPrice: "1,899",
-    discountPrice: "1,499",
-    discount: 21,
-    days: 5,
-    deadline: { es: "Hasta 20 Ene 2025", en: "Until Jan 20, 2025" },
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Europa Magnifica", en: "Magnificent Europe" },
+    price: "1,999",
+    taxes: "799",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=800&auto=format&fit=crop",
-    title: { es: "VIENA Y PRAGA", en: "VIENNA AND PRAGUE" },
-    originalPrice: "2,499",
-    discountPrice: "1,999",
-    discount: 20,
-    days: 8,
-    deadline: { es: "Hasta 31 Dic 2024", en: "Until Dec 31, 2024" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Magia Turca", en: "Turkish Magic" },
+    price: "699",
+    taxes: "999",
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Turquia con Islas Griegas", en: "Turkey with Greek Islands" },
+    price: "1,399",
+    taxes: "999",
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Encantos de Europa", en: "European Charms" },
+    price: "1,899",
+    taxes: "799",
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai" },
+    price: "1,999",
+    taxes: "999",
+  },
+  {
+    id: 7,
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=600&auto=format&fit=crop",
+    title: { es: "Orlando y Europa", en: "Orlando and Europe" },
+    price: "999",
+    taxes: "399",
   },
 ];
 
 export function SpecialOffers() {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const { language } = useI18n();
   const lang = language as "es" | "en";
 
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 320;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const content = {
     es: {
-      badge: "Ofertas limitadas",
-      title: "Ofertas Especiales",
+      badge: "Ofertas de Temporada",
+      title: "Semana Santa",
+      from: "Desde",
       currency: "USD",
-      days: "dias",
-      reserve: "Reservar ahora",
-      viewAll: "Ver todas las ofertas",
+      taxes: "+ IMP",
+      perPerson: "Por persona en habitacion doble",
     },
     en: {
-      badge: "Limited offers",
-      title: "Special Offers",
+      badge: "Seasonal Offers",
+      title: "Easter Week",
+      from: "From",
       currency: "USD",
-      days: "days",
-      reserve: "Book now",
-      viewAll: "View all offers",
+      taxes: "+ Taxes",
+      perPerson: "Per person in double room",
     },
   };
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-special-offers">
+    <section className="py-16 bg-gradient-to-r from-primary via-primary/95 to-primary" data-testid="section-special-offers">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
-          <div>
-            <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
-              {content[lang].badge}
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground" data-testid="text-offers-title">
-              {content[lang].title}
-            </h2>
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            <Zap className="w-6 h-6 text-accent" />
+            <div>
+              <Badge className="bg-accent text-primary mb-1">{content[lang].badge}</Badge>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-white" data-testid="text-offers-title">
+                {content[lang].title}
+              </h2>
+            </div>
           </div>
-          <Link href="/offers">
-            <Button variant="outline" data-testid="button-view-all-offers">
-              {content[lang].viewAll}
+          <div className="flex gap-2">
+            <Button
+              size="icon"
+              variant="outline"
+              onClick={() => scroll("left")}
+              className="border-white/30 text-white hover:bg-white/10"
+              data-testid="button-offers-prev"
+            >
+              <ChevronLeft className="w-5 h-5" />
             </Button>
-          </Link>
+            <Button
+              size="icon"
+              variant="outline"
+              onClick={() => scroll("right")}
+              className="border-white/30 text-white hover:bg-white/10"
+              data-testid="button-offers-next"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
+          style={{ scrollSnapType: "x mandatory" }}
+        >
           {OFFERS.map((offer) => (
-            <Card key={offer.id} className="overflow-hidden group" data-testid={`card-offer-${offer.id}`}>
+            <Card
+              key={offer.id}
+              className="flex-shrink-0 w-[280px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
+              style={{ scrollSnapAlign: "start" }}
+              data-testid={`card-seasonal-offer-${offer.id}`}
+            >
               <div className="relative aspect-[4/3]">
                 <img
                   src={offer.image}
                   alt={offer.title[lang]}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
-                <Badge className="absolute top-4 left-4 bg-red-500 text-white border-0 text-lg px-3 py-1">
-                  -{offer.discount}%
-                </Badge>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-4 text-foreground" data-testid={`text-offer-title-${offer.id}`}>
-                  {offer.title[lang]}
-                </h3>
-                
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-muted-foreground line-through">
-                    {content[lang].currency} {offer.originalPrice}
-                  </span>
-                  <span className="text-2xl font-bold text-primary">
-                    {content[lang].currency} {offer.discountPrice}
-                  </span>
+              <div className="p-4 text-white">
+                <h3 className="font-display font-bold text-lg mb-2">{offer.title[lang]}</h3>
+                <p className="text-white/70 text-sm">{content[lang].from}</p>
+                <div className="flex items-baseline gap-1 flex-wrap">
+                  <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>
+                  <span className="text-sm text-white/70">+ {offer.taxes} {content[lang].taxes}</span>
                 </div>
-                
-                <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                  <span>{offer.days} {content[lang].days}</span>
-                  <span>{offer.deadline[lang]}</span>
-                </div>
-
-                <Link href="/contact">
-                  <Button className="w-full bg-primary text-white hover:bg-primary/90" data-testid={`button-reserve-${offer.id}`}>
-                    {content[lang].reserve}
-                  </Button>
-                </Link>
-              </CardContent>
+                <p className="text-white/60 text-xs mt-1">{content[lang].perPerson}</p>
+              </div>
             </Card>
           ))}
         </div>
