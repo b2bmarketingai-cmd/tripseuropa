@@ -46,7 +46,7 @@ const BLOG_POSTS = [
   },
   {
     id: "encanto-mediterraneo",
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Encanto Mediterraneo: Italia, Francia y Espana Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
     excerpt: { es: "Costa Amalfitana, Riviera Francesa, Costa Brava. Las costas mas hermosas del Mediterraneo en un viaje.", en: "Amalfi Coast, French Riviera, Costa Brava. The most beautiful Mediterranean coasts in one trip." },
     category: "destinos",
@@ -82,7 +82,7 @@ const BLOG_POSTS = [
   },
   {
     id: "italia-vespa",
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Italia en Vespa: Recorre la Toscana Como un Local", en: "Italy by Vespa: Explore Tuscany Like a Local" },
     excerpt: { es: "Florencia, Siena, Chianti y pueblos medievales. La forma mas autentica de vivir la Toscana italiana.", en: "Florence, Siena, Chianti and medieval towns. The most authentic way to experience Italian Tuscany." },
     category: "lujo",
@@ -118,7 +118,7 @@ const BLOG_POSTS = [
   },
   {
     id: "visa-schengen-colombia-2025",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1569254184391-fefaab4c4c22?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa: Visa Schengen para Colombianos 2025", en: "Complete Guide: Schengen Visa for Colombians 2025" },
     excerpt: { es: "Requisitos actualizados, documentos necesarios, costo, tiempo de tramite y consejos para aprobar tu visa Schengen desde Colombia.", en: "Updated requirements, necessary documents, cost, processing time and tips to get your Schengen visa from Colombia approved." },
     category: "planificacion",
@@ -178,7 +178,7 @@ const BLOG_POSTS = [
   },
   {
     id: "seguro-viaje-europa",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Seguro de Viaje para Europa: Cual Elegir y Por Que es Obligatorio", en: "Travel Insurance for Europe: Which to Choose and Why It's Mandatory" },
     excerpt: { es: "Requisitos Schengen, coberturas necesarias, mejores companias y como reclamar si lo necesitas.", en: "Schengen requirements, necessary coverage, best companies and how to claim if you need it." },
     category: "planificacion",
@@ -190,7 +190,7 @@ const BLOG_POSTS = [
   },
   {
     id: "roma-3-dias",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Roma en 3 Dias: Coliseo, Vaticano y Trastevere", en: "Rome in 3 Days: Colosseum, Vatican and Trastevere" },
     excerpt: { es: "Itinerario optimizado para ver lo mejor de Roma. Evita filas, mejores horarios y tips locales.", en: "Optimized itinerary to see the best of Rome. Skip lines, best times and local tips." },
     category: "destinos",
@@ -250,7 +250,7 @@ const BLOG_POSTS = [
   },
   {
     id: "luna-miel-europa",
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1529543544599-93aeb66b7c96?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Luna de Miel en Europa: 5 Destinos Romanticos", en: "Honeymoon in Europe: 5 Romantic Destinations" },
     excerpt: { es: "Paris, Santorini, Venecia, Costa Amalfitana y Suiza. Los destinos mas romanticos para parejas.", en: "Paris, Santorini, Venice, Amalfi Coast and Switzerland. The most romantic destinations for couples." },
     category: "lujo",
@@ -334,7 +334,7 @@ const BLOG_POSTS = [
   },
   {
     id: "praga-budapest-viena",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Praga, Budapest y Viena: Circuito Imperial 10 Dias", en: "Prague, Budapest and Vienna: Imperial Circuit 10 Days" },
     excerpt: { es: "El circuito europeo mas popular. Itinerario, transporte, hoteles y presupuesto detallado.", en: "The most popular European circuit. Itinerary, transport, hotels and detailed budget." },
     category: "destinos",
@@ -346,7 +346,7 @@ const BLOG_POSTS = [
   },
   {
     id: "costa-amalfitana",
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Costa Amalfitana: Positano, Amalfi y Ravello", en: "Amalfi Coast: Positano, Amalfi and Ravello" },
     excerpt: { es: "El destino mas fotografiado de Italia. Como llegar, donde alojarse y que hacer.", en: "Italy's most photographed destination. How to get there, where to stay and what to do." },
     category: "lujo",
@@ -358,7 +358,7 @@ const BLOG_POSTS = [
   },
   {
     id: "santorini-mikonos",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Santorini y Mykonos: Islas Griegas en 7 Dias", en: "Santorini and Mykonos: Greek Islands in 7 Days" },
     excerpt: { es: "Las islas mas famosas de Grecia. Ferries, atardeceres, playas y vida nocturna.", en: "Greece's most famous islands. Ferries, sunsets, beaches and nightlife." },
     category: "destinos",
@@ -370,7 +370,7 @@ const BLOG_POSTS = [
   },
   {
     id: "viaje-solo-europa",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Viajar Solo a Europa: Guia Completa 2025", en: "Traveling Solo to Europe: Complete Guide 2025" },
     excerpt: { es: "Destinos seguros, hostales, tours y consejos para viajeros solitarios latinoamericanos.", en: "Safe destinations, hostels, tours and tips for Latin American solo travelers." },
     category: "consejos",
@@ -382,7 +382,7 @@ const BLOG_POSTS = [
   },
   {
     id: "viaje-brasil-europa",
-    image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1518659526054-190340b32735?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Viagem para Europa do Brasil: Guia Completo", en: "Travel to Europe from Brazil: Complete Guide" },
     excerpt: { es: "Brasileiros nao precisam de visto! Requisitos, documentos, voos e dicas para sua primeira viagem.", en: "Brazilians don't need a visa! Requirements, documents, flights and tips for your first trip." },
     category: "planificacion",
@@ -394,7 +394,7 @@ const BLOG_POSTS = [
   },
   {
     id: "suiza-7-dias",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Suiza en 7 Dias: Alpes, Lagos y Chocolate", en: "Switzerland in 7 Days: Alps, Lakes and Chocolate" },
     excerpt: { es: "Zurich, Lucerna, Interlaken, Zermatt. El itinerario perfecto por los Alpes suizos.", en: "Zurich, Lucerne, Interlaken, Zermatt. The perfect itinerary through the Swiss Alps." },
     category: "destinos",
@@ -454,7 +454,7 @@ const BLOG_POSTS = [
   },
   {
     id: "cinque-terre-guia",
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Cinque Terre: Las 5 Aldeas Coloridas de Italia", en: "Cinque Terre: Italy's 5 Colorful Villages" },
     excerpt: { es: "Riomaggiore, Manarola, Corniglia, Vernazza y Monterosso. Como visitarlas en un dia.", en: "Riomaggiore, Manarola, Corniglia, Vernazza and Monterosso. How to visit them in one day." },
     category: "destinos",
@@ -466,7 +466,7 @@ const BLOG_POSTS = [
   },
   {
     id: "documentos-viajar-europa",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Documentos para Viajar a Europa: Checklist Completo 2025", en: "Documents for Traveling to Europe: Complete Checklist 2025" },
     excerpt: { es: "Pasaporte, visa, seguro, reservas de hotel. Todo lo que necesitas para pasar inmigracion sin problemas.", en: "Passport, visa, insurance, hotel reservations. Everything you need to pass immigration smoothly." },
     category: "planificacion",
@@ -478,7 +478,7 @@ const BLOG_POSTS = [
   },
   {
     id: "mejor-epoca-europa",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Mejor Epoca para Viajar a Europa por Destino", en: "Best Time to Travel to Europe by Destination" },
     excerpt: { es: "Cuando visitar cada pais segun el clima, precios y temporadas. Evita multitudes y ahorra dinero.", en: "When to visit each country based on weather, prices and seasons. Avoid crowds and save money." },
     category: "consejos",
@@ -490,7 +490,7 @@ const BLOG_POSTS = [
   },
   {
     id: "wifi-europa-datos",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
     title: { es: "WiFi y Datos Moviles en Europa: eSIM vs Roaming", en: "WiFi and Mobile Data in Europe: eSIM vs Roaming" },
     excerpt: { es: "Las mejores opciones para tener internet en Europa. eSIM, chips locales y como evitar cargos sorpresa.", en: "The best options for internet in Europe. eSIM, local chips and how to avoid surprise charges." },
     category: "consejos",
@@ -526,7 +526,7 @@ const BLOG_POSTS = [
   },
   {
     id: "pasaporte-europa-requisitos",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Requisitos del Pasaporte para Viajar a Europa 2025", en: "Passport Requirements for Traveling to Europe 2025" },
     excerpt: { es: "Vigencia minima, paginas en blanco, renovacion y casos especiales para pasaportes latinoamericanos.", en: "Minimum validity, blank pages, renewal and special cases for Latin American passports." },
     category: "planificacion",
@@ -538,7 +538,7 @@ const BLOG_POSTS = [
   },
   {
     id: "eurail-pass-guia",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Eurail Pass: Vale la Pena? Guia Completa 2025", en: "Eurail Pass: Is It Worth It? Complete Guide 2025" },
     excerpt: { es: "Tipos de pases, precios, como reservar asientos y en que casos conviene comprarlo.", en: "Types of passes, prices, how to reserve seats and when it's worth buying." },
     category: "dinero",
@@ -574,7 +574,7 @@ const BLOG_POSTS = [
   },
   {
     id: "apps-viaje-europa",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
     title: { es: "10 Apps Imprescindibles para Viajar a Europa", en: "10 Essential Apps for Traveling to Europe" },
     excerpt: { es: "Google Maps offline, traductores, transporte, restaurantes y mas. Las apps que necesitas.", en: "Google Maps offline, translators, transport, restaurants and more. The apps you need." },
     category: "consejos",
@@ -586,7 +586,7 @@ const BLOG_POSTS = [
   },
   {
     id: "venecia-sin-perderse",
-    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Venecia en 2 Dias: Como No Perderse en la Ciudad", en: "Venice in 2 Days: How Not to Get Lost in the City" },
     excerpt: { es: "Rutas a pie, gondolas, murano y burano. El itinerario perfecto sin perderte.", en: "Walking routes, gondolas, Murano and Burano. The perfect itinerary without getting lost." },
     category: "destinos",
@@ -598,7 +598,7 @@ const BLOG_POSTS = [
   },
   {
     id: "visa-schengen-brasil-2025",
-    image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1619546952812-520e98064a52?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Brasileiros na Europa: Guia Completo Sem Visto", en: "Brazilians in Europe: Complete Guide Without Visa" },
     excerpt: { es: "Brasileiros nao precisam de visto Schengen! Documentos, seguro e dicas para sua viagem.", en: "Brazilians don't need Schengen visa! Documents, insurance and tips for your trip." },
     category: "planificacion",
@@ -646,7 +646,7 @@ const BLOG_POSTS = [
   },
   {
     id: "escocia-highlands",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Escocia: Highlands, Castillos y Whisky en 7 Dias", en: "Scotland: Highlands, Castles and Whisky in 7 Days" },
     excerpt: { es: "Edimburgo, Loch Ness, Isle of Skye. Ruta por las tierras altas escocesas.", en: "Edinburgh, Loch Ness, Isle of Skye. Route through the Scottish Highlands." },
     category: "destinos",
@@ -670,7 +670,7 @@ const BLOG_POSTS = [
   },
   {
     id: "noruega-fiordos",
-    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Fiordos Noruegos: Guia para Latinoamericanos", en: "Norwegian Fjords: Guide for Latin Americans" },
     excerpt: { es: "Bergen, Flam, Geirangerfjord. Como ver los fiordos sin gastar una fortuna.", en: "Bergen, Flam, Geirangerfjord. How to see the fjords without spending a fortune." },
     category: "destinos",
@@ -682,7 +682,7 @@ const BLOG_POSTS = [
   },
   {
     id: "malta-playas-historia",
-    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Malta: Playas, Historia y Cursos de Ingles", en: "Malta: Beaches, History and English Courses" },
     excerpt: { es: "La Valeta, Mdina, Blue Lagoon. El destino perfecto para combinar playa y cultura.", en: "Valletta, Mdina, Blue Lagoon. The perfect destination to combine beach and culture." },
     category: "destinos",
@@ -694,7 +694,7 @@ const BLOG_POSTS = [
   },
   {
     id: "viaje-familia-europa-ninos",
-    image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Viajar a Europa con Ninos: Guia Completa para Familias", en: "Traveling to Europe with Kids: Complete Family Guide" },
     excerpt: { es: "Destinos family-friendly, tips para vuelos largos, parques de atracciones y actividades para todas las edades.", en: "Family-friendly destinations, tips for long flights, theme parks and activities for all ages." },
     category: "experiencias",
@@ -742,7 +742,7 @@ const BLOG_POSTS = [
   },
   {
     id: "toscana-5-dias-ruta",
-    image: "https://images.unsplash.com/photo-1523528283115-9bf9b1699245?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Ruta por la Toscana en 5 Dias: Vino, Arte y Paisajes", en: "Tuscany Route in 5 Days: Wine, Art and Landscapes" },
     excerpt: { es: "Siena, San Gimignano, Chianti, Montepulciano. La ruta perfecta por la campiña italiana.", en: "Siena, San Gimignano, Chianti, Montepulciano. The perfect route through the Italian countryside." },
     category: "destinos",
@@ -754,7 +754,7 @@ const BLOG_POSTS = [
   },
   {
     id: "munich-neuschwanstein",
-    image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1594394489098-74ac04c0fc2e?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Munich y Neuschwanstein: Castillos de Cuento", en: "Munich and Neuschwanstein: Fairy Tale Castles" },
     excerpt: { es: "El castillo que inspiro a Disney. Como visitarlo desde Munich en un dia.", en: "The castle that inspired Disney. How to visit it from Munich in one day." },
     category: "destinos",
