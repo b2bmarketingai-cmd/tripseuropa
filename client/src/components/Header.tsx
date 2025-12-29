@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/logotipo_oficial_tripseuropa.com_sin_fondo_1767025709834.png";
+import logoUrl from "@assets/erasebg-transformed_(2)_1767029138652.png";
 import { SiWhatsapp } from "react-icons/si";
 import {
   DropdownMenu,
@@ -94,12 +94,15 @@ export function Header() {
       <header 
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300",
-          scrolled || isOpen ? "bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] shadow-lg" : "bg-gradient-to-r from-[#1a1a1a]/95 to-[#2d2d2d]/95"
+          scrolled || isOpen 
+            ? "bg-gradient-to-r from-[#0b1220] via-[#1f2a3e] to-[#0f172a] shadow-xl" 
+            : "bg-gradient-to-r from-[#0b1220]/98 via-[#1f2a3e]/98 to-[#0f172a]/98 backdrop-blur-sm"
         )}
+        style={{ boxShadow: scrolled ? '0 4px 30px rgba(15,23,42,0.3)' : 'none' }}
         data-testid="header-main"
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-[72px] md:h-[88px]">
             
             <div className="hidden lg:flex items-center gap-6">
               <DropdownMenu open={activeDropdown === "destinos"} onOpenChange={(open) => setActiveDropdown(open ? "destinos" : null)}>
@@ -166,11 +169,12 @@ export function Header() {
               </DropdownMenu>
             </div>
 
-            <Link href="/" className="flex items-center" data-testid="link-home-logo">
+            <Link href="/" className="flex items-center justify-center absolute left-1/2 -translate-x-1/2" data-testid="link-home-logo">
               <img 
                 src={logoUrl} 
                 alt="Trips Europa" 
-                className="h-10 md:h-14 w-auto object-contain" 
+                className="w-auto object-contain"
+                style={{ height: 'clamp(56px, 5vw + 40px, 80px)' }}
               />
             </Link>
 
@@ -302,7 +306,7 @@ export function Header() {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden bg-[#1a1a1a] border-t border-white/10 animate-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden bg-gradient-to-b from-[#0f172a] to-[#1a2744] border-t border-white/10 animate-in slide-in-from-top-2 duration-200">
             <div className="container px-4 py-6 space-y-4">
               <a 
                 href="tel:+573001234567" 

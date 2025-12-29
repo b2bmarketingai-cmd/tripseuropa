@@ -8,6 +8,10 @@ import { ContactForm, ContactInfo } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { TravelerStories } from "@/components/TravelerStories";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { FlashOffers } from "@/components/FlashOffers";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { TopSales } from "@/components/TopSales";
+import { DestinationGrid } from "@/components/DestinationGrid";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -116,8 +120,20 @@ export default function Home() {
       {/* Hero Carousel with Offers */}
       <HeroCarousel />
 
+      {/* Flash Offers - Exoticca Style */}
+      <FlashOffers />
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Top Sales */}
+      <TopSales />
+
+      {/* Destination Grid - Where do you want to go? */}
+      <DestinationGrid />
+
       {/* Flight Search */}
-      <section className="relative z-20 py-8 -mt-20" data-testid="section-search">
+      <section className="relative z-20 py-8" data-testid="section-search">
         <FlightSearch />
       </section>
 
