@@ -10,6 +10,10 @@ import { TopOffers } from "@/components/TopOffers";
 import { ReserveSpot } from "@/components/ReserveSpot";
 import { Favorites } from "@/components/Favorites";
 import { SpecialOffers } from "@/components/SpecialOffers";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
+import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { ReferralProgram } from "@/components/ReferralProgram";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -54,6 +58,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <UrgencyBanner />
       <Header />
       
       <HeroCarousel />
@@ -67,6 +72,12 @@ export default function Home() {
       <Favorites />
 
       <WhyChooseUs />
+
+      <BestPriceGuarantee />
+
+      <NewsletterSignup />
+
+      <ReferralProgram />
 
       <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
         <div className="container mx-auto px-4">
