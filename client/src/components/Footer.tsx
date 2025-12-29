@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { Facebook, Instagram, MapPin, Mail, Phone, Youtube } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard } from "react-icons/si";
-import logoUrl from "@assets/logo_oficial_tripseuropa.com_1766951188994.png";
+import logoUrl from "@assets/logo_oficial_sin_fondo_tripseuropa_1767014572714.png";
 
 export function Footer() {
   const { t } = useI18n();
