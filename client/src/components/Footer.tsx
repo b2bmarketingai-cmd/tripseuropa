@@ -54,12 +54,12 @@ export function Footer() {
     <footer className="bg-primary text-white pt-12 pb-8" data-testid="footer">
       <div className="container mx-auto px-4 md:px-6">
         
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-8 border-b border-white/10 bg-[#ffffff] text-[#d5b034]">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-8 border-b border-white/10">
           {mainNav.map((item, index) => (
             <Link 
               key={index} 
               href={item.href} 
-              className="flex items-center gap-2 text-white/80 hover:text-accent transition-colors text-sm md:text-base font-medium"
+              className="flex items-center gap-2 text-[#d5b034] hover:text-[#f0d060] hover:drop-shadow-[0_0_8px_rgba(213,176,52,0.6)] transition-all duration-300 text-sm md:text-base font-medium"
               data-testid={`link-footer-nav-${index}`}
             >
               <item.icon className="w-4 h-4" />
