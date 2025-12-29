@@ -1,67 +1,38 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 
 const DESTINATIONS = [
   {
-    id: "spain",
-    image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Espana", en: "Spain" },
-    trips: 12,
-  },
-  {
-    id: "italy",
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Italia", en: "Italy" },
-    trips: 15,
-  },
-  {
     id: "france",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop",
     name: { es: "Francia", en: "France" },
-    trips: 10,
+    trips: 24,
+  },
+  {
+    id: "italy",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Italia", en: "Italy" },
+    trips: 32,
   },
   {
     id: "greece",
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop",
     name: { es: "Grecia", en: "Greece" },
-    trips: 8,
+    trips: 18,
   },
   {
-    id: "portugal",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Portugal", en: "Portugal" },
-    trips: 6,
+    id: "spain",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Espana", en: "Spain" },
+    trips: 28,
   },
   {
-    id: "germany",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Alemania", en: "Germany" },
-    trips: 7,
-  },
-  {
-    id: "norway",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Noruega", en: "Norway" },
-    trips: 5,
-  },
-  {
-    id: "croatia",
-    image: "https://images.unsplash.com/photo-1541343672885-9be56236c64e?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Croacia", en: "Croatia" },
-    trips: 6,
-  },
-  {
-    id: "scotland",
-    image: "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Escocia", en: "Scotland" },
-    trips: 4,
-  },
-  {
-    id: "iceland",
-    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Islandia", en: "Iceland" },
-    trips: 5,
+    id: "switzerland",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Suiza", en: "Switzerland" },
+    trips: 12,
   },
 ];
 
@@ -71,21 +42,28 @@ export function DestinationGrid() {
 
   const content = {
     es: {
-      title: "Donde quieres ir?",
-      trips: "Viajes",
+      title: "Explora Europa",
+      subtitle: "Descubre los destinos mas fascinantes del viejo continente con nuestros circuitos exclusivos",
+      trips: "circuitos",
+      viewAll: "Ver todos los destinos",
     },
     en: {
-      title: "Where do you want to go?",
-      trips: "Trips",
+      title: "Explore Europe",
+      subtitle: "Discover the most fascinating destinations of the old continent with our exclusive tours",
+      trips: "tours",
+      viewAll: "View all destinations",
     },
   };
 
   return (
     <section className="py-16 bg-white dark:bg-gray-900" data-testid="section-destination-grid">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-10 text-foreground" data-testid="text-destination-grid-title">
-          {content[lang].title}
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground" data-testid="text-destination-grid-title">
+            {content[lang].title}
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{content[lang].subtitle}</p>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {DESTINATIONS.map((dest) => (
@@ -116,6 +94,14 @@ export function DestinationGrid() {
               </Card>
             </Link>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link href="/destinations">
+            <Button variant="outline" size="lg" data-testid="button-view-all-destinations">
+              {content[lang].viewAll}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

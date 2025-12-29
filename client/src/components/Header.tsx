@@ -95,20 +95,19 @@ export function Header() {
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300",
           scrolled || isOpen 
-            ? "bg-gradient-to-r from-[#0b1220] via-[#1f2a3e] to-[#0f172a] shadow-xl" 
-            : "bg-gradient-to-r from-[#0b1220]/98 via-[#1f2a3e]/98 to-[#0f172a]/98 backdrop-blur-sm"
+            ? "bg-white shadow-lg border-b border-gray-100" 
+            : "bg-white/95 backdrop-blur-sm"
         )}
-        style={{ boxShadow: scrolled ? '0 4px 30px rgba(15,23,42,0.3)' : 'none' }}
         data-testid="header-main"
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-[72px] md:h-[88px]">
+          <div className="flex items-center justify-between h-[80px] md:h-[100px]">
             
             <div className="hidden lg:flex items-center gap-6">
               <DropdownMenu open={activeDropdown === "destinos"} onOpenChange={(open) => setActiveDropdown(open ? "destinos" : null)}>
                 <DropdownMenuTrigger asChild>
                   <button 
-                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-destinos"
                   >
                     {language === "es" ? "Destinos" : "Destinations"}
@@ -129,7 +128,7 @@ export function Header() {
               <DropdownMenu open={activeDropdown === "estilo"} onOpenChange={(open) => setActiveDropdown(open ? "estilo" : null)}>
                 <DropdownMenuTrigger asChild>
                   <button 
-                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-estilo"
                   >
                     {language === "es" ? "Estilo de viaje" : "Travel Style"}
@@ -150,7 +149,7 @@ export function Header() {
               <DropdownMenu open={activeDropdown === "ofertas"} onOpenChange={(open) => setActiveDropdown(open ? "ofertas" : null)}>
                 <DropdownMenuTrigger asChild>
                   <button 
-                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-ofertas"
                   >
                     {language === "es" ? "Ofertas" : "Deals"}
@@ -173,27 +172,27 @@ export function Header() {
               <img 
                 src={logoUrl} 
                 alt="Trips Europa" 
-                className="w-auto object-contain"
-                style={{ height: 'clamp(56px, 5vw + 40px, 80px)' }}
+                className="w-auto object-contain max-w-[280px] md:max-w-[360px] lg:max-w-[420px]"
+                style={{ height: 'clamp(60px, 6vw + 48px, 90px)' }}
               />
             </Link>
 
             <div className="hidden lg:flex items-center gap-4">
               <a 
                 href="tel:+573001234567" 
-                className="flex items-center gap-2 text-white/90 hover:text-white text-sm transition-colors"
+                className="flex items-center gap-2 text-gray-600 hover:text-primary text-sm transition-colors"
                 data-testid="link-phone-reservar"
               >
-                <span className="text-white/70">{language === "es" ? "Reservar:" : "Book:"}</span>
-                <span className="font-semibold">+57 300 123 4567</span>
+                <span className="text-gray-500">{language === "es" ? "Reservar:" : "Book:"}</span>
+                <span className="font-semibold text-primary">+57 300 123 4567</span>
               </a>
 
-              <div className="w-px h-6 bg-white/20" />
+              <div className="w-px h-6 bg-gray-200" />
 
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button 
-                    className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+                    className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-ayuda"
                   >
                     {language === "es" ? "Ayuda" : "Help"}
@@ -230,13 +229,13 @@ export function Header() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button 
-                    className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition-colors"
+                    className="flex items-center gap-1 px-2 py-1 rounded hover:bg-gray-100 transition-colors"
                     data-testid="button-language-selector"
                   >
                     <span className="w-6 h-4 rounded-sm overflow-hidden flex items-center justify-center text-lg">
                       {COUNTRY_FLAGS[language]?.flag || COUNTRY_FLAGS.es.flag}
                     </span>
-                    <ChevronDown className="w-3 h-3 text-white/70" />
+                    <ChevronDown className="w-3 h-3 text-gray-500" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white">
@@ -261,17 +260,17 @@ export function Header() {
 
               <button 
                 onClick={() => setAccountModalOpen(true)}
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                 data-testid="button-account-open"
               >
-                <User className="w-5 h-5 text-white" />
+                <User className="w-5 h-5 text-primary" />
               </button>
             </div>
 
             <div className="flex lg:hidden items-center gap-3">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition-colors">
+                  <button className="flex items-center gap-1 px-2 py-1 rounded hover:bg-gray-100 transition-colors">
                     <span className="text-lg">{COUNTRY_FLAGS[language]?.flag}</span>
                   </button>
                 </DropdownMenuTrigger>
@@ -289,13 +288,13 @@ export function Header() {
 
               <button 
                 onClick={() => setAccountModalOpen(true)}
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"
+                className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"
               >
-                <User className="w-4 h-4 text-white" />
+                <User className="w-4 h-4 text-primary" />
               </button>
 
               <button 
-                className="text-white p-1"
+                className="text-gray-700 p-1"
                 onClick={() => setIsOpen(!isOpen)}
                 data-testid="button-mobile-menu"
               >
@@ -306,20 +305,20 @@ export function Header() {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden bg-gradient-to-b from-[#0f172a] to-[#1a2744] border-t border-white/10 animate-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden bg-white border-t border-gray-100 animate-in slide-in-from-top-2 duration-200 shadow-lg">
             <div className="container px-4 py-6 space-y-4">
               <a 
                 href="tel:+573001234567" 
-                className="flex items-center gap-2 text-white py-2"
+                className="flex items-center gap-2 text-gray-700 py-2"
               >
                 <Phone className="w-5 h-5 text-accent" />
                 <span>{language === "es" ? "Reservar:" : "Book:"} +57 300 123 4567</span>
               </a>
 
-              <div className="h-px bg-white/10" />
+              <div className="h-px bg-gray-100" />
 
               <details className="group">
-                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
                   <span className="font-medium">{language === "es" ? "Destinos" : "Destinations"}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
@@ -328,7 +327,7 @@ export function Header() {
                     <Link 
                       key={idx}
                       href={`/destinations/${item.toLowerCase()}`}
-                      className="block py-1 text-white/70 hover:text-white"
+                      className="block py-1 text-gray-600 hover:text-primary"
                       onClick={() => setIsOpen(false)}
                     >
                       {item}
@@ -338,7 +337,7 @@ export function Header() {
               </details>
 
               <details className="group">
-                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
                   <span className="font-medium">{language === "es" ? "Estilo de viaje" : "Travel Style"}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
@@ -347,7 +346,7 @@ export function Header() {
                     <Link 
                       key={idx}
                       href={item.href}
-                      className="block py-1 text-white/70 hover:text-white"
+                      className="block py-1 text-gray-600 hover:text-primary"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -357,7 +356,7 @@ export function Header() {
               </details>
 
               <details className="group">
-                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
                   <span className="font-medium">{language === "es" ? "Ofertas" : "Deals"}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
@@ -366,7 +365,7 @@ export function Header() {
                     <Link 
                       key={idx}
                       href={item.href}
-                      className="block py-1 text-white/70 hover:text-white"
+                      className="block py-1 text-gray-600 hover:text-primary"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -375,10 +374,10 @@ export function Header() {
                 </div>
               </details>
 
-              <div className="h-px bg-white/10" />
+              <div className="h-px bg-gray-100" />
 
               <details className="group">
-                <summary className="flex items-center justify-between py-2 text-white cursor-pointer list-none">
+                <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
                   <span className="font-medium flex items-center gap-2">
                     <HelpCircle className="w-4 h-4" />
                     {language === "es" ? "Ayuda" : "Help"}
@@ -386,15 +385,15 @@ export function Header() {
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2">
-                  <button className="flex items-center gap-2 py-1 text-white/70 hover:text-white w-full text-left">
+                  <button className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left">
                     <MessageCircle className="w-4 h-4" />
                     {language === "es" ? "Asistencia por chat" : "Chat Support"}
                   </button>
-                  <Link href="/faq" className="flex items-center gap-2 py-1 text-white/70 hover:text-white" onClick={() => setIsOpen(false)}>
+                  <Link href="/faq" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
                     <HelpCircle className="w-4 h-4" />
                     {language === "es" ? "Centro de Ayuda" : "Help Center"}
                   </Link>
-                  <a href="https://wa.me/573001234567" className="flex items-center gap-2 py-1 text-white/70 hover:text-white">
+                  <a href="https://wa.me/573001234567" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
                     <SiWhatsapp className="w-4 h-4 text-green-500" />
                     WhatsApp
                   </a>
