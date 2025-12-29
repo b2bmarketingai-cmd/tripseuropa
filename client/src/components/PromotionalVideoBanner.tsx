@@ -10,7 +10,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Play, Star, Award } from "lucide-react";
-import logoPath from "@assets/erasebg-transformed_(2)_1767029138652.png";
 
 export function PromotionalVideoBanner() {
   const { language } = useI18n();
@@ -49,12 +48,6 @@ export function PromotionalVideoBanner() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white">
-              <img 
-                src={logoPath} 
-                alt="Trips Europa" 
-                className="h-8 mb-6 brightness-0 invert"
-                data-testid="img-promo-logo"
-              />
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight">
                 {c.headline}
               </h2>
