@@ -5,6 +5,9 @@ import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSc
 import { FlightSearch } from "@/components/FlightSearch";
 import { Chatbot } from "@/components/Chatbot";
 import { ContactForm, ContactInfo } from "@/components/ContactForm";
+import { HeroCarousel } from "@/components/HeroCarousel";
+import { TravelerStories } from "@/components/TravelerStories";
+import { FAQAccordion } from "@/components/FAQAccordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -110,56 +113,8 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
       
-      {/* Hero Section with Contact Form */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" data-testid="section-hero">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={HERO_IMAGE} 
-            srcSet={`${HERO_IMAGE_SM} 768w, ${HERO_IMAGE_MD} 1280w, ${HERO_IMAGE} 1920w`}
-            sizes="100vw"
-            alt={t("hero.badge")} 
-            className="w-full h-full object-cover" 
-            loading="eager" 
-            fetchPriority="high" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/40"></div>
-        </div>
-
-        <div className="container relative z-10 px-4 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-6">
-              <Badge className="bg-accent/20 text-accent border-accent/30 backdrop-blur-sm text-sm px-4 py-1" data-testid="badge-hero">
-                {t("hero.badge")}
-              </Badge>
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight animate-fade-in" data-testid="text-hero-title">
-                {t("hero.title1")} <span className="text-accent italic">{t("hero.titleHighlight")}</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }} data-testid="text-hero-subtitle">
-                {t("hero.subtitle")}
-              </p>
-
-              <div className="flex flex-wrap gap-6 pt-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <StatItem icon={<Award className="w-6 h-6 text-accent" />} value={t("hero.years")} label={t("hero.experience")} testId="text-stat-years" />
-                <StatItem icon={<Users className="w-6 h-6 text-accent" />} value={t("hero.travelers")} label={t("hero.happyTravelers")} testId="text-stat-travelers" />
-                <StatItem icon={<Star className="w-6 h-6 text-accent fill-accent" />} value={t("hero.satisfaction")} label={t("hero.rating")} testId="text-stat-rating" />
-              </div>
-            </div>
-
-            <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <ContactForm variant="hero" title={t("contact.title")} subtitle={t("contact.subtitle")} />
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" data-testid="scroll-indicator">
-          <div className="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-3 bg-white/60 rounded-full"></div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Carousel with Offers */}
+      <HeroCarousel />
 
       {/* Flight Search */}
       <section className="relative z-20 py-8 -mt-20" data-testid="section-search">
@@ -210,6 +165,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Traveler Stories Blog Section */}
+      <TravelerStories />
 
       {/* Featured Packages */}
       <section className="py-24 bg-white" data-testid="section-packages">
@@ -304,6 +262,9 @@ export default function Home() {
 
       {/* Payment Methods Section */}
       <PaymentMethodsSection />
+
+      {/* FAQ Accordion Section */}
+      <FAQAccordion />
 
       {/* VIP Club Section */}
       <VIPClubSection />

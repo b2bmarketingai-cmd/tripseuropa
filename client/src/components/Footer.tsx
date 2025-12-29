@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard } from "react-icons/si";
+import { VisitorCounter } from "@/components/VisitorCounter";
 
 export function Footer() {
   const { t, language } = useI18n();
@@ -204,9 +205,12 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs" data-testid="text-footer-copyright">
-            2025 TripsEuropa.com - {t("footer.rights")}
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-white/40 text-xs" data-testid="text-footer-copyright">
+              2025 TripsEuropa.com - {t("footer.rights")}
+            </p>
+            <VisitorCounter />
+          </div>
           <div className="flex gap-4 text-xs text-white/40 flex-wrap justify-center">
             <Link href="/privacy" className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
             <Link href="/terms" className="hover:text-white transition-colors">{t("footer.terms")}</Link>
