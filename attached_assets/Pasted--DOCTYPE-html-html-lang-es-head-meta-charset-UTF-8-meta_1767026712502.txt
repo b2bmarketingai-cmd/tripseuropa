@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips Europa - Viajes Premium a Europa desde Latinoamérica</title>
+    <meta name="description" content="Viajes a Europa desde $799. Todo incluido, itinerarios personalizados, expertos en viajes. Ofertón especial limitada.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3a52;
+            --gold: #d4a574;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f9f9f9;
+            --white: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* BANNER PROMOCIONAL */
+        .te-promo-banner {
+            background: var(--gold);
+            color: var(--primary);
+            padding: 0.75rem 1rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .te-promo-banner button {
+            background: var(--primary);
+            color: var(--gold);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 150ms ease;
+        }
+
+        .te-promo-banner button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+        }
+
+        .te-header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .te-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .te-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .te-nav-item {
+            position: relative;
+            cursor: pointer;
+            font-weight: 500;
+            transition: color 150ms ease;
+        }
+
+        .te-nav-item:hover {
+            color: var(--gold);
+        }
+
+        .te-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 200ms ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 0.5rem;
+        }
+
+        .te-nav-item:hover .te-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .te-dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 150ms ease;
+        }
+
+        .te-dropdown-item:hover {
+            background: var(--bg);
+            color: var(--gold);
+            padding-left: 1.3rem;
+        }
+
+        .te-nav-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .te-nav-right button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: transform 150ms ease;
+        }
+
+        .te-nav-right button:hover {
+            transform: scale(1.2);
+        }
+
+        .te-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+
+        .te-hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 200ms ease;
+        }
+
+        /* HERO */
+        .te-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d5a7b 100%);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .te-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .te-hero .te-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .te-hero-promo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 1rem 0;
+        }
+
+        .te-hero-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .te-hero-cta {
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 150ms ease;
+            margin: 1.5rem 0;
+        }
+
+        .te-hero-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        /* CARRUSEL */
+        .te-carousel {
+            position: relative;
+            height: 300px;
+            margin: 2rem auto;
+            max-width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .te-carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 500ms ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .te-carousel-slide.active {
+            opacity: 1;
+        }
+
+        .te-carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: all 150ms ease;
+            z-index: 10;
+        }
+
+        .te-carousel-nav:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .te-carousel-nav.prev {
+            left: 1rem;
+        }
+
+        .te-carousel-nav.next {
+            right: 1rem;
+        }
+
+        .te-carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+
+        .te-carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 200ms ease;
+        }
+
+        .te-carousel-dot.active {
+            background: var(--gold);
+            transform: scale(1.3);
+        }
+
+        /* BUSCADOR */
+        .te-search {
+            background: var(--white);
+            padding: 2rem 1rem;
+            max-width: 1000px;
+            margin: -50px auto 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 20;
+        }
+
+        .te-search-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto;
+            gap: 1rem;
+        }
+
+        .te-search-grid input,
+        .te-search-grid select {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .te-search-grid button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 150ms ease;
+        }
+
+        .te-search-grid button:hover {
+            background: #0f2a3d;
+            transform: translateY(-2px);
+        }
+
+        /* SECCIONES */
+        .te-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .te-section {
+            padding: 4rem 1rem;
+        }
+
+        .te-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        /* GRID DESTINOS */
+        .te-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .te-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 200ms ease;
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+
+        .te-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .te-card-header {
+            padding: 2rem;
+            color: var(--white);
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--gold) 100%);
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .te-card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .te-card-body {
+            padding: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .te-card-body p {
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* TESTIMONIOS */
+        .te-testimonial {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: all 200ms ease;
+        }
+
+        .te-testimonial:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .te-testimonial-rating {
+            color: #ffc107;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .te-testimonial-text {
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .te-testimonial-author {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .te-testimonial-country {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* ESTADÍSTICAS */
+        .te-stats {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem 1rem;
+        }
+
+        .te-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .te-stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .te-stat-item p {
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+        }
+
+        /* NEWSLETTER */
+        .te-newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d5a7b 100%);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .te-newsletter h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .te-newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .te-newsletter-form input {
+            padding: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .te-newsletter-form button {
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 150ms ease;
+        }
+
+        .te-newsletter-form button:hover {
+            background: #f0e8d8;
+            transform: scale(1.02);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem 1rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .te-footer-content {
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .te-footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .te-footer-section a,
+        .te-footer-section p {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.9rem;
+            transition: color 150ms ease;
+        }
+
+        .te-footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .te-footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* MODAL */
+        .te-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 300ms ease;
+            z-index: 1000;
+        }
+
+        .te-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .te-modal {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 300ms ease;
+        }
+
+        .te-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 150ms ease;
+        }
+
+        .te-modal-close:hover {
+            color: var(--primary);
+        }
+
+        .te-modal h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+
+        .te-modal-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .te-modal-tab {
+            background: none;
+            border: none;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            color: var(--text-light);
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 150ms ease;
+            margin-bottom: -2px;
+        }
+
+        .te-modal-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--gold);
+        }
+
+        .te-modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .te-modal-form input,
+        .te-modal-form button {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .te-modal-form button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 150ms ease;
+        }
+
+        .te-modal-form button:hover {
+            background: var(--gold);
+            color: var(--primary);
+        }
+
+        /* WHATSAPP FLOTANTE */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 999;
+            animation: pulse 2s infinite;
+            transition: all 150ms ease;
+            font-size: 2rem;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .te-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .te-hero .te-subtitle {
+                font-size: 1rem;
+            }
+
+            .te-hero-promo {
+                font-size: 1.3rem;
+            }
+
+            .te-hero-price {
+                font-size: 1.8rem;
+            }
+
+            .te-search-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .te-hamburger {
+                display: flex;
+            }
+
+            .te-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                list-style: none;
+                border-top: 1px solid var(--border);
+            }
+
+            .te-nav.active {
+                display: flex;
+            }
+
+            .te-nav-item {
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .te-dropdown {
+                position: static;
+                opacity: 0;
+                visibility: hidden;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                margin-top: 0;
+            }
+
+            .te-nav-item.active .te-dropdown {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .te-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .te-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .te-modal {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROMO BANNER -->
+    <div class="te-promo-banner">
+        <span>⏰ ÚLTIMA LLAMADA: El Ofertón Europa termina en 4 días</span>
+        <button onclick="document.getElementById('modalOverlay').classList.add('active')">Ver oferta</button>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="te-header-container">
+            <a href="#" class="te-logo">🌍 Trips EUROPA</a>
+            
+            <nav class="te-nav" id="navMenu">
+                <div class="te-nav-item">
+                    Destinos
+                    <div class="te-dropdown">
+                        <a href="#" class="te-dropdown-item">🌍 África</a>
+                        <a href="#" class="te-dropdown-item">🌎 América</a>
+                        <a href="#" class="te-dropdown-item">🏯 Asia</a>
+                        <a href="#" class="te-dropdown-item">🗼 Europa</a>
+                        <a href="#" class="te-dropdown-item">🏝️ Oceanía</a>
+                    </div>
+                </div>
+                <div class="te-nav-item">
+                    Estilo de Viaje
+                    <div class="te-dropdown">
+                        <a href="#" class="te-dropdown-item">🏖️ Playas</a>
+                        <a href="#" class="te-dropdown-item">🏛️ Cultura</a>
+                        <a href="#" class="te-dropdown-item">⛰️ Aventura</a>
+                        <a href="#" class="te-dropdown-item">👨‍👩‍👧‍👦 Familia</a>
+                    </div>
+                </div>
+                <div class="te-nav-item">
+                    Ofertas
+                </div>
+            </nav>
+
+            <div class="te-nav-right">
+                <button onclick="document.getElementById('modalOverlay').classList.add('active')" title="Iniciar sesión">👤</button>
+                <button title="Llamar ahora" onclick="alert('Llamando a +34 919011589')">📞</button>
+                <button class="te-hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="te-hero">
+        <h1>✈️ Trips Europa GO</h1>
+        <p class="te-subtitle">Experimenta Europa como nunca antes</p>
+        
+        <div class="te-hero-promo">El Ofertón EUROPA</div>
+        <div class="te-hero-price">desde 799 €</div>
+        <p class="te-subtitle">11 días • Vuelos incluidos • Todo preparado</p>
+        
+        <button class="te-hero-cta" onclick="document.getElementById('modalOverlay').classList.add('active')">
+            Reserva ahora →
+        </button>
+
+        <!-- CARRUSEL -->
+        <div class="te-carousel">
+            <div class="te-carousel-slide active" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                Turquía desde 799 € • 11 días, vuelos incluidos
+            </div>
+            <div class="te-carousel-slide" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+                Croacia desde 899 € • Playas mediterráneas
+            </div>
+            <div class="te-carousel-slide" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">
+                Portugal desde 699 € • Cultura y gastronomía
+            </div>
+
+            <button class="te-carousel-nav prev" onclick="prevSlide()">❮</button>
+            <button class="te-carousel-nav next" onclick="nextSlide()">❯</button>
+
+            <div class="te-carousel-dots">
+                <div class="te-carousel-dot active" onclick="goToSlide(0)"></div>
+                <div class="te-carousel-dot" onclick="goToSlide(1)"></div>
+                <div class="te-carousel-dot" onclick="goToSlide(2)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <div class="te-search">
+        <div class="te-search-grid">
+            <select>
+                <option>Ciudad origen</option>
+                <option>Bogotá</option>
+                <option>México City</option>
+                <option>São Paulo</option>
+            </select>
+            <select>
+                <option>¿Dónde quieres ir?</option>
+                <option>París</option>
+                <option>Roma</option>
+                <option>Barcelona</option>
+            </select>
+            <input type="date" placeholder="Fechas">
+            <button onclick="alert('Búsqueda: próximas novedades')">🔍 Buscar</button>
+        </div>
+    </div>
+
+    <!-- DESTINOS -->
+    <section class="te-section te-container">
+        <h2>Nuestros Destinos Principales</h2>
+        <div class="te-grid">
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇫🇷 París</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>La ciudad de la luz. Revive los momentos mágicos del Sena, la Torre Eiffel, los museos del Louvre y una gastronomía incomparable.</p>
+                </div>
+            </div>
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇮🇹 Roma</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>Historia viva. El Coliseo, el Vaticano, las fuentes barrocas. Camina por las calles donde respiró el Imperio.</p>
+                </div>
+            </div>
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇪🇸 Madrid</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>Arte y vida. Prado, Retiro, gastronomía de tapas. Una capital vibrante que nunca duerme.</p>
+                </div>
+            </div>
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇳🇱 Ámsterdam</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>Canales y cultura. Pedalea por la ciudad, visita museos de clase mundial y disfruta de la atmósfera holandesa.</p>
+                </div>
+            </div>
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇦🇹 Viena</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>Elegancia imperial. Palacios, conciertos clásicos, café Viena y la magia de la corte Habsburgo.</p>
+                </div>
+            </div>
+            <div class="te-card">
+                <div class="te-card-header">
+                    <h3>🇩🇪 Berlín</h3>
+                </div>
+                <div class="te-card-body">
+                    <p>Moderna e histórica. Muro de Berlín, arte callejero, museos. Una ciudad que respira historia y futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="te-section" style="background: #f9f9f9;">
+        <div class="te-container">
+            <h2>¿Qué dicen nuestros viajeros?</h2>
+            <div class="te-grid">
+                <div class="te-testimonial">
+                    <div class="te-testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="te-testimonial-text">"Increíble experiencia. El viaje a París fue perfecto, todo incluido como prometieron. ¡Recomendado!"</p>
+                    <div class="te-testimonial-author">María González</div>
+                    <div class="te-testimonial-country">Colombia</div>
+                </div>
+                <div class="te-testimonial">
+                    <div class="te-testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="te-testimonial-text">"El mejor viaje en grupo que he hecho. Excelente servicio y atención personalizada. Volveré pronto."</p>
+                    <div class="te-testimonial-author">Carlos Méndez</div>
+                    <div class="te-testimonial-country">México</div>
+                </div>
+                <div class="te-testimonial">
+                    <div class="te-testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="te-testimonial-text">"Vale totalmente la pena. Precios competitivos y experiencias inolvidables. Mis amigas ya se anotaron."</p>
+                    <div class="te-testimonial-author">Ana Silva</div>
+                    <div class="te-testimonial-country">Brasil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="te-stats">
+        <div class="te-stats-grid">
+            <div class="te-stat-item">
+                <h3>50,000+</h3>
+                <p>Viajeros Satisfechos</p>
+            </div>
+            <div class="te-stat-item">
+                <h3>150+</h3>
+                <p>Destinos Europeos</p>
+            </div>
+            <div class="te-stat-item">
+                <h3>15 años</h3>
+                <p>De Experiencia</p>
+            </div>
+            <div class="te-stat-item">
+                <h3>24/7</h3>
+                <p>Soporte al Cliente</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="te-newsletter">
+        <div class="te-container">
+            <h2>Recibe ofertas exclusivas</h2>
+            <p>Suscríbete a nuestro newsletter y recibe descuentos especiales en viajes a Europa.</p>
+            <form class="te-newsletter-form" onsubmit="handleNewsletter(event)">
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+                Protegemos tu privacidad. Sin spam, solo ofertas reales.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="te-footer-content">
+            <div class="te-footer-section">
+                <h4>🌍 EMPRESA</h4>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Testimonios</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="te-footer-section">
+                <h4>🛠️ HERRAMIENTAS</h4>
+                <a href="#">Portal Agentes</a>
+                <a href="#">Programa Referidos</a>
+                <a href="#">Grupo VIP</a>
+            </div>
+            <div class="te-footer-section">
+                <h4>💬 CONTACTO</h4>
+                <a href="tel:+34919011589">+34 919 011 589</a>
+                <a href="mailto:info@tripseuropa.com">info@tripseuropa.com</a>
+                <a href="https://wa.me/34919011589" target="_blank">WhatsApp</a>
+            </div>
+            <div class="te-footer-section">
+                <h4>📋 LEGAL</h4>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        <div class="te-footer-bottom">
+            © 2013-2025 Trips Europa. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- MODAL LOGIN -->
+    <div class="te-modal-overlay" id="modalOverlay">
+        <div class="te-modal">
+            <button class="te-modal-close" onclick="document.getElementById('modalOverlay').classList.remove('active')">✕</button>
+            
+            <h2>Acceso Seguro</h2>
+            
+            <div class="te-modal-tabs">
+                <button class="te-modal-tab active" onclick="switchTab('traveler')">👤 Viajero</button>
+                <button class="te-modal-tab" onclick="switchTab('agent')">💼 Agente</button>
+            </div>
+
+            <!-- TAB VIAJERO -->
+            <div id="traveler-tab">
+                <form class="te-modal-form" onsubmit="handleLogin(event)">
+                    <input type="email" placeholder="Tu email" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-light);">
+                    ¿No tienes cuenta? <a href="#" style="color: var(--primary); font-weight: 600;">Crear una</a>
+                </p>
+            </div>
+
+            <!-- TAB AGENTE -->
+            <div id="agent-tab" style="display: none;">
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                    Ofrece a tus clientes paquetes de viaje incomparables a precios competitivos.
+                </p>
+                <form class="te-modal-form" onsubmit="handleLogin(event)">
+                    <input type="email" placeholder="Tu email de agencia" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-light);">
+                    ¿No tienes cuenta? <a href="#" style="color: var(--primary); font-weight: 600;">Registrarse como agente</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/34919011589?text=Hola%20Trips%20Europa%2C%20me%20interesa%20saber%20sobre%20viajes" 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Chat WhatsApp">
+        📱
+    </a>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.te-carousel-slide');
+        const dots = document.querySelectorAll('.te-carousel-dot');
+        const slideDuration = 5000; // 5 segundos
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, slideDuration);
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
+        // Modal tabs
+        function switchTab(tab) {
+            document.getElementById('traveler-tab').style.display = tab === 'traveler' ? 'block' : 'none';
+            document.getElementById('agent-tab').style.display = tab === 'agent' ? 'block' : 'none';
+            
+            document.querySelectorAll('.te-modal-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Form handlers
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('✅ ¡Bienvenido! Redirigiendo a tu panel...');
+            document.getElementById('modalOverlay').classList.remove('active');
+            event.target.reset();
+        }
+
+        function handleNewsletter(event) {
+            event.preventDefault();
+            alert('✅ ¡Suscripción confirmada! Revisa tu email para ofertas exclusivas.');
+            event.target.reset();
+        }
+
+        // Close modal on overlay click
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
