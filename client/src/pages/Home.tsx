@@ -14,6 +14,8 @@ import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ReferralProgram } from "@/components/ReferralProgram";
+import { TrustpilotReviews } from "@/components/TrustpilotReviews";
+import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -76,6 +78,10 @@ export default function Home() {
       <BestPriceGuarantee />
 
       <NewsletterSignup />
+
+      <TrustpilotReviews />
+
+      <PromotionalVideoBanner />
 
       <ReferralProgram />
 
