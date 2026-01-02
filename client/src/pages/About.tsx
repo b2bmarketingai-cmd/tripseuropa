@@ -11,53 +11,53 @@ import { FloatingContactButtons } from "@/components/support";
 const TEAM = [
   {
     name: "Maria Rodriguez",
-    role: { es: "Directora General", en: "General Director" },
+    role: { es: "Directora General", en: "General Director", pt: "Diretora Geral" },
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=70&w=400&auto=format&fit=crop",
     experience: "15+"
   },
   {
     name: "Carlos Martinez",
-    role: { es: "Director de Operaciones", en: "Operations Director" },
+    role: { es: "Director de Operaciones", en: "Operations Director", pt: "Diretor de Operacoes" },
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=70&w=400&auto=format&fit=crop",
     experience: "12+"
   },
   {
     name: "Ana Gonzalez",
-    role: { es: "Asesora Senior Europa", en: "Senior Europe Advisor" },
+    role: { es: "Asesora Senior Europa", en: "Senior Europe Advisor", pt: "Consultora Senior Europa" },
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=70&w=400&auto=format&fit=crop",
     experience: "10+"
   },
   {
     name: "Pedro Sanchez",
-    role: { es: "Especialista en Lunas de Miel", en: "Honeymoon Specialist" },
+    role: { es: "Especialista en Lunas de Miel", en: "Honeymoon Specialist", pt: "Especialista em Lua de Mel" },
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=70&w=400&auto=format&fit=crop",
     experience: "8+"
   }
 ];
 
 const STATS = [
-  { value: "10+", label: { es: "Anos de experiencia", en: "Years of experience" }, icon: Award },
-  { value: "5,000+", label: { es: "Viajeros felices", en: "Happy travelers" }, icon: Users },
-  { value: "25+", label: { es: "Destinos europeos", en: "European destinations" }, icon: Globe },
-  { value: "98%", label: { es: "Satisfaccion del cliente", en: "Customer satisfaction" }, icon: Heart }
+  { value: "10+", label: { es: "Anos de experiencia", en: "Years of experience", pt: "Anos de experiencia" }, icon: Award },
+  { value: "5,000+", label: { es: "Viajeros felices", en: "Happy travelers", pt: "Viajantes felizes" }, icon: Users },
+  { value: "25+", label: { es: "Destinos europeos", en: "European destinations", pt: "Destinos europeus" }, icon: Globe },
+  { value: "98%", label: { es: "Satisfaccion del cliente", en: "Customer satisfaction", pt: "Satisfacao do cliente" }, icon: Heart }
 ];
 
 const VALUES = [
   { 
-    title: { es: "Excelencia", en: "Excellence" },
-    desc: { es: "Buscamos la perfeccion en cada detalle de tu viaje", en: "We seek perfection in every detail of your trip" }
+    title: { es: "Excelencia", en: "Excellence", pt: "Excelencia" },
+    desc: { es: "Buscamos la perfeccion en cada detalle de tu viaje", en: "We seek perfection in every detail of your trip", pt: "Buscamos a perfeicao em cada detalhe da sua viagem" }
   },
   { 
-    title: { es: "Confianza", en: "Trust" },
-    desc: { es: "Transparencia y honestidad en todo lo que hacemos", en: "Transparency and honesty in everything we do" }
+    title: { es: "Confianza", en: "Trust", pt: "Confianca" },
+    desc: { es: "Transparencia y honestidad en todo lo que hacemos", en: "Transparency and honesty in everything we do", pt: "Transparencia e honestidade em tudo o que fazemos" }
   },
   { 
-    title: { es: "Personalizacion", en: "Personalization" },
-    desc: { es: "Cada viaje es unico, como cada viajero", en: "Each trip is unique, like each traveler" }
+    title: { es: "Personalizacion", en: "Personalization", pt: "Personalizacao" },
+    desc: { es: "Cada viaje es unico, como cada viajero", en: "Each trip is unique, like each traveler", pt: "Cada viagem e unica, como cada viajante" }
   },
   { 
-    title: { es: "Pasion", en: "Passion" },
-    desc: { es: "Amamos lo que hacemos y se nota en cada experiencia", en: "We love what we do and it shows in every experience" }
+    title: { es: "Pasion", en: "Passion", pt: "Paixao" },
+    desc: { es: "Amamos lo que hacemos y se nota en cada experiencia", en: "We love what we do and it shows in every experience", pt: "Amamos o que fazemos e isso se reflete em cada experiencia" }
   }
 ];
 
@@ -78,14 +78,16 @@ export default function About() {
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-about">
-            {language === "es" ? "Sobre Nosotros" : "About Us"}
+            {language === "es" ? "Sobre Nosotros" : language === "pt" ? "Sobre Nos" : "About Us"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-about-title">
-            {language === "es" ? "Tu Viaje, Nuestra Pasion" : "Your Trip, Our Passion"}
+            {language === "es" ? "Tu Viaje, Nuestra Pasion" : language === "pt" ? "Sua Viagem, Nossa Paixao" : "Your Trip, Our Passion"}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-about-subtitle">
             {language === "es" 
               ? "Desde 2014 ayudando a colombianos y venezolanos a descubrir la magia de Europa" 
+              : language === "pt"
+              ? "Desde 2014 ajudando colombianos e venezuelanos a descobrir a magia da Europa"
               : "Since 2014 helping Colombians and Venezuelans discover the magic of Europe"}
           </p>
         </div>
@@ -112,20 +114,24 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
-                {language === "es" ? "Nuestra Historia" : "Our Story"}
+                {language === "es" ? "Nuestra Historia" : language === "pt" ? "Nossa Historia" : "Our Story"}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                {language === "es" ? "Nacimos de un Sueno Europeo" : "Born from a European Dream"}
+                {language === "es" ? "Nacimos de un Sueno Europeo" : language === "pt" ? "Nascemos de um Sonho Europeu" : "Born from a European Dream"}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   {language === "es" 
                     ? "Trips Europa nacio en 2014 cuando nuestra fundadora, Maria Rodriguez, regreso de su primer viaje a Europa completamente enamorada del continente. Vio la necesidad de una agencia que realmente entendiera las necesidades especificas de los viajeros latinoamericanos."
+                    : language === "pt"
+                    ? "A Trips Europa nasceu em 2014 quando nossa fundadora, Maria Rodriguez, retornou de sua primeira viagem a Europa completamente apaixonada pelo continente. Ela viu a necessidade de uma agencia que realmente entendesse as necessidades especificas dos viajantes latino-americanos."
                     : "Trips Europa was born in 2014 when our founder, Maria Rodriguez, returned from her first trip to Europe completely in love with the continent. She saw the need for an agency that truly understood the specific needs of Latin American travelers."}
                 </p>
                 <p>
                   {language === "es" 
                     ? "Desde entonces, hemos ayudado a mas de 5,000 familias a cumplir su sueno de conocer Europa, con un enfoque especial en la atencion personalizada y el acompanamiento en cada paso del proceso, desde la visa hasta el regreso a casa."
+                    : language === "pt"
+                    ? "Desde entao, ajudamos mais de 5.000 familias a realizar seu sonho de conhecer a Europa, com foco especial no atendimento personalizado e acompanhamento em cada etapa do processo, do visto ate o retorno para casa."
                     : "Since then, we have helped more than 5,000 families fulfill their dream of visiting Europe, with a special focus on personalized attention and support at every step of the process, from visa to returning home."}
                 </p>
               </div>
@@ -139,7 +145,7 @@ export default function About() {
               />
               <div className="absolute -bottom-6 -left-6 bg-accent text-primary p-6 rounded-xl shadow-lg">
                 <p className="text-3xl font-bold">10+</p>
-                <p className="text-sm">{language === "es" ? "Anos creando memorias" : "Years creating memories"}</p>
+                <p className="text-sm">{language === "es" ? "Anos creando memorias" : language === "pt" ? "Anos criando memorias" : "Years creating memories"}</p>
               </div>
             </div>
           </div>
@@ -150,10 +156,10 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
-              {language === "es" ? "Nuestros Valores" : "Our Values"}
+              {language === "es" ? "Nuestros Valores" : language === "pt" ? "Nossos Valores" : "Our Values"}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold">
-              {language === "es" ? "Lo Que Nos Define" : "What Defines Us"}
+              {language === "es" ? "Lo Que Nos Define" : language === "pt" ? "O Que Nos Define" : "What Defines Us"}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -174,10 +180,10 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
-              {language === "es" ? "Nuestro Equipo" : "Our Team"}
+              {language === "es" ? "Nuestro Equipo" : language === "pt" ? "Nossa Equipe" : "Our Team"}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold">
-              {language === "es" ? "Expertos en Viajes Europeos" : "European Travel Experts"}
+              {language === "es" ? "Expertos en Viajes Europeos" : language === "pt" ? "Especialistas em Viagens Europeias" : "European Travel Experts"}
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -191,7 +197,7 @@ export default function About() {
                     loading="lazy"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4">
-                    <Badge className="bg-accent text-primary mb-2">{member.experience} {language === "es" ? "anos" : "years"}</Badge>
+                    <Badge className="bg-accent text-primary mb-2">{member.experience} {language === "es" ? "anos" : language === "pt" ? "anos" : "years"}</Badge>
                   </div>
                 </div>
                 <CardContent className="p-4 text-center">
@@ -207,16 +213,18 @@ export default function About() {
       <section className="py-16 bg-primary" data-testid="section-about-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            {language === "es" ? "Listo para Conocer Europa?" : "Ready to Explore Europe?"}
+            {language === "es" ? "Listo para Conocer Europa?" : language === "pt" ? "Pronto para Conhecer a Europa?" : "Ready to Explore Europe?"}
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             {language === "es" 
               ? "Dejanos ayudarte a planificar el viaje de tus suenos" 
+              : language === "pt"
+              ? "Deixe-nos ajuda-lo a planejar a viagem dos seus sonhos"
               : "Let us help you plan the trip of your dreams"}
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-about-contact">
-              {language === "es" ? "Contactar ahora" : "Contact now"}
+              {language === "es" ? "Contactar ahora" : language === "pt" ? "Contato agora" : "Contact now"}
             </Button>
           </Link>
         </div>

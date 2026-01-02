@@ -12,14 +12,14 @@ import { useState } from "react";
 import { openWhatsAppQuote, openWhatsAppCustomQuote } from "@/lib/whatsapp";
 
 const PACKAGE_CATEGORIES = [
-  { id: "all", label: { es: "Todos", en: "All" }, icon: Sparkles },
-  { id: "express", label: { es: "Express", en: "Express" }, icon: Zap },
-  { id: "classic", label: { es: "Clasica", en: "Classic" }, icon: Star },
-  { id: "total", label: { es: "Total", en: "Total" }, icon: Crown },
-  { id: "luxury", label: { es: "Lujo VIP", en: "VIP Luxury" }, icon: Crown },
-  { id: "adventure", label: { es: "Aventura", en: "Adventure" }, icon: Mountain },
-  { id: "gastronomy", label: { es: "Gastronomia", en: "Gastronomy" }, icon: Utensils },
-  { id: "romantic", label: { es: "Romantico", en: "Romantic" }, icon: Heart },
+  { id: "all", label: { es: "Todos", en: "All", pt: "Todos" }, icon: Sparkles },
+  { id: "express", label: { es: "Express", en: "Express", pt: "Express" }, icon: Zap },
+  { id: "classic", label: { es: "Clasica", en: "Classic", pt: "Classica" }, icon: Star },
+  { id: "total", label: { es: "Total", en: "Total", pt: "Total" }, icon: Crown },
+  { id: "luxury", label: { es: "Lujo VIP", en: "VIP Luxury", pt: "Luxo VIP" }, icon: Crown },
+  { id: "adventure", label: { es: "Aventura", en: "Adventure", pt: "Aventura" }, icon: Mountain },
+  { id: "gastronomy", label: { es: "Gastronomia", en: "Gastronomy", pt: "Gastronomia" }, icon: Utensils },
+  { id: "romantic", label: { es: "Romantico", en: "Romantic", pt: "Romantico" }, icon: Heart },
 ];
 
 const PACKAGES = [
@@ -228,32 +228,32 @@ const PACKAGES = [
 const PROMOTIONS = [
   {
     id: "early-bird",
-    title: { es: "Early Bird - 15% OFF", en: "Early Bird - 15% OFF" },
-    desc: { es: "Reserva con 45+ dias de anticipacion", en: "Book 45+ days in advance" },
+    title: { es: "Early Bird - 15% OFF", en: "Early Bird - 15% OFF", pt: "Early Bird - 15% OFF" },
+    desc: { es: "Reserva con 45+ dias de anticipacion", en: "Book 45+ days in advance", pt: "Reserve com 45+ dias de antecedencia" },
     discount: 15,
     icon: Clock,
     color: "bg-green-500",
   },
   {
     id: "grupos",
-    title: { es: "Grupos 10+ - 20% OFF", en: "Groups 10+ - 20% OFF" },
-    desc: { es: "Viaja con amigos o familia", en: "Travel with friends or family" },
+    title: { es: "Grupos 10+ - 20% OFF", en: "Groups 10+ - 20% OFF", pt: "Grupos 10+ - 20% OFF" },
+    desc: { es: "Viaja con amigos o familia", en: "Travel with friends or family", pt: "Viaje com amigos ou familia" },
     discount: 20,
     icon: Users,
     color: "bg-blue-500",
   },
   {
     id: "last-minute",
-    title: { es: "Last Minute - Hasta 25% OFF", en: "Last Minute - Up to 25% OFF" },
-    desc: { es: "Salidas en los proximos 14 dias", en: "Departures in the next 14 days" },
+    title: { es: "Last Minute - Hasta 25% OFF", en: "Last Minute - Up to 25% OFF", pt: "Last Minute - Ate 25% OFF" },
+    desc: { es: "Salidas en los proximos 14 dias", en: "Departures in the next 14 days", pt: "Saidas nos proximos 14 dias" },
     discount: 25,
     icon: Zap,
     color: "bg-orange-500",
   },
   {
     id: "referidos",
-    title: { es: "Refiere un Amigo - $100 USD", en: "Refer a Friend - $100 USD" },
-    desc: { es: "Credito para tu proximo viaje", en: "Credit for your next trip" },
+    title: { es: "Refiere un Amigo - $100 USD", en: "Refer a Friend - $100 USD", pt: "Indique um Amigo - $100 USD" },
+    desc: { es: "Credito para tu proximo viaje", en: "Credit for your next trip", pt: "Credito para sua proxima viagem" },
     discount: 100,
     icon: Heart,
     color: "bg-pink-500",
@@ -290,28 +290,30 @@ export default function Packages() {
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-packages">
-            {language === "es" ? "Paquetes Exclusivos 2025" : "Exclusive Packages 2025"}
+            {language === "es" ? "Paquetes Exclusivos 2025" : language === "pt" ? "Pacotes Exclusivos 2025" : "Exclusive Packages 2025"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-packages-title">
-            {language === "es" ? "Tu Viaje Sonado a Europa" : "Your Dream Trip to Europe"}
+            {language === "es" ? "Tu Viaje Sonado a Europa" : language === "pt" ? "Sua Viagem dos Sonhos para a Europa" : "Your Dream Trip to Europe"}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8" data-testid="text-packages-subtitle">
             {language === "es" 
               ? "Desde $1,200 USD por persona. Paquetes desde Colombia, Mexico, Brasil, Argentina, Panama y toda Latinoamerica." 
+              : language === "pt"
+              ? "A partir de $1,200 USD por pessoa. Pacotes da Colombia, Mexico, Brasil, Argentina, Panama e toda a America Latina."
               : "From $1,200 USD per person. Packages from Colombia, Mexico, Brazil, Argentina, Panama and all Latin America."}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 text-white">
               <span className="text-2xl font-bold text-accent">10+</span>
-              <span className="ml-2 text-sm">{language === "es" ? "Paquetes" : "Packages"}</span>
+              <span className="ml-2 text-sm">{language === "es" ? "Paquetes" : language === "pt" ? "Pacotes" : "Packages"}</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 text-white">
               <span className="text-2xl font-bold text-accent">25+</span>
-              <span className="ml-2 text-sm">{language === "es" ? "Destinos" : "Destinations"}</span>
+              <span className="ml-2 text-sm">{language === "es" ? "Destinos" : language === "pt" ? "Destinos" : "Destinations"}</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 text-white">
               <span className="text-2xl font-bold text-accent">4.9</span>
-              <span className="ml-2 text-sm">{language === "es" ? "Calificacion" : "Rating"}</span>
+              <span className="ml-2 text-sm">{language === "es" ? "Calificacion" : language === "pt" ? "Avaliacao" : "Rating"}</span>
             </div>
           </div>
         </div>
@@ -320,7 +322,7 @@ export default function Packages() {
       <section className="py-12 bg-gradient-to-r from-accent/10 to-accent/5 border-b" data-testid="section-promotions">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-display font-bold text-center mb-8" data-testid="text-promotions-title">
-            {language === "es" ? "Promociones Activas" : "Active Promotions"}
+            {language === "es" ? "Promociones Activas" : language === "pt" ? "Promocoes Ativas" : "Active Promotions"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {PROMOTIONS.map((promo) => (
@@ -369,14 +371,14 @@ export default function Packages() {
                     loading="lazy"
                   />
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <Badge className="bg-accent text-primary">{pkg.days} {language === "es" ? "dias" : "days"}</Badge>
+                    <Badge className="bg-accent text-primary">{pkg.days} {language === "es" ? "dias" : language === "pt" ? "dias" : "days"}</Badge>
                     {pkg.discount > 0 && (
                       <Badge className="bg-red-500 text-white">-{pkg.discount}%</Badge>
                     )}
                   </div>
                   {pkg.featured && (
                     <Badge className="absolute top-4 right-4 bg-primary text-white">
-                      {language === "es" ? "Mas vendido" : "Best Seller"}
+                      {language === "es" ? "Mas vendido" : language === "pt" ? "Mais Vendido" : "Best Seller"}
                     </Badge>
                   )}
                 </div>
@@ -386,7 +388,7 @@ export default function Packages() {
                       <Star className="w-4 h-4 text-accent fill-accent" />
                       <span className="text-sm font-bold">{pkg.rating}</span>
                     </div>
-                    <span className="text-muted-foreground text-xs">({pkg.reviews} {language === "es" ? "resenas" : "reviews"})</span>
+                    <span className="text-muted-foreground text-xs">({pkg.reviews} {language === "es" ? "resenas" : language === "pt" ? "avaliacoes" : "reviews"})</span>
                     <span className="text-muted-foreground">|</span>
                     <div className="flex items-center gap-1 text-muted-foreground text-xs">
                       <Users className="w-3 h-3" />
@@ -416,13 +418,13 @@ export default function Packages() {
                   </div>
 
                   <div className="text-xs text-muted-foreground mb-4">
-                    <span className="font-medium">{language === "es" ? "Salidas:" : "Departures:"}</span> {pkg.departures.slice(0, 3).join(", ")}
+                    <span className="font-medium">{language === "es" ? "Salidas:" : language === "pt" ? "Saidas:" : "Departures:"}</span> {pkg.departures.slice(0, 3).join(", ")}
                     {pkg.departures.length > 3 && ` +${pkg.departures.length - 3}`}
                   </div>
 
                   <div className="flex items-center justify-between pt-4 border-t">
                     <div>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Desde" : "From"}</p>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Desde" : language === "pt" ? "A partir de" : "From"}</p>
                       {pkg.discount > 0 ? (
                         <div className="flex items-center gap-2">
                           <p className="text-lg font-bold text-accent">${Math.round(pkg.priceUSD * (1 - pkg.discount / 100)).toLocaleString()} USD</p>
@@ -485,36 +487,36 @@ export default function Packages() {
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
                 <Plane className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-lg font-bold">{language === "es" ? "Vuelos Premium" : "Premium Flights"}</h3>
+              <h3 className="text-lg font-bold">{language === "es" ? "Vuelos Premium" : language === "pt" ? "Voos Premium" : "Premium Flights"}</h3>
               <p className="text-muted-foreground text-sm">
-                {language === "es" ? "Vuelos directos o con escalas minimas" : "Direct flights or with minimal stopovers"}
+                {language === "es" ? "Vuelos directos o con escalas minimas" : language === "pt" ? "Voos diretos ou com escalas minimas" : "Direct flights or with minimal stopovers"}
               </p>
             </div>
             <div className="space-y-3">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
                 <Hotel className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-lg font-bold">{language === "es" ? "Hoteles 4-5 Estrellas" : "4-5 Star Hotels"}</h3>
+              <h3 className="text-lg font-bold">{language === "es" ? "Hoteles 4-5 Estrellas" : language === "pt" ? "Hoteis 4-5 Estrelas" : "4-5 Star Hotels"}</h3>
               <p className="text-muted-foreground text-sm">
-                {language === "es" ? "Ubicaciones privilegiadas en cada destino" : "Privileged locations in every destination"}
+                {language === "es" ? "Ubicaciones privilegiadas en cada destino" : language === "pt" ? "Localizacoes privilegiadas em cada destino" : "Privileged locations in every destination"}
               </p>
             </div>
             <div className="space-y-3">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
                 <Users className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-lg font-bold">{language === "es" ? "Grupos Pequenos" : "Small Groups"}</h3>
+              <h3 className="text-lg font-bold">{language === "es" ? "Grupos Pequenos" : language === "pt" ? "Grupos Pequenos" : "Small Groups"}</h3>
               <p className="text-muted-foreground text-sm">
-                {language === "es" ? "Maximo 18 personas para experiencia intima" : "Maximum 18 people for intimate experience"}
+                {language === "es" ? "Maximo 18 personas para experiencia intima" : language === "pt" ? "Maximo 18 pessoas para experiencia intima" : "Maximum 18 people for intimate experience"}
               </p>
             </div>
             <div className="space-y-3">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
                 <Car className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-lg font-bold">{language === "es" ? "Todo Incluido" : "All Inclusive"}</h3>
+              <h3 className="text-lg font-bold">{language === "es" ? "Todo Incluido" : language === "pt" ? "Tudo Incluido" : "All Inclusive"}</h3>
               <p className="text-muted-foreground text-sm">
-                {language === "es" ? "Transportes, tours y experiencias incluidas" : "Transports, tours and experiences included"}
+                {language === "es" ? "Transportes, tours y experiencias incluidas" : language === "pt" ? "Transportes, passeios e experiencias incluidas" : "Transports, tours and experiences included"}
               </p>
             </div>
           </div>

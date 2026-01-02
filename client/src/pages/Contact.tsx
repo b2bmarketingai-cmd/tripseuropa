@@ -29,14 +29,16 @@ export default function Contact() {
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-contact">
-            {language === "es" ? "Contactanos" : "Contact Us"}
+            {language === "es" ? "Contactanos" : language === "pt" ? "Fale Conosco" : "Contact Us"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-contact-title">
-            {language === "es" ? "Estamos Aqui para Ayudarte" : "We're Here to Help"}
+            {language === "es" ? "Estamos Aqui para Ayudarte" : language === "pt" ? "Estamos Aqui para Ajudar" : "We're Here to Help"}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-contact-subtitle">
             {language === "es" 
               ? "Nuestro equipo de expertos en viajes esta listo para crear tu experiencia europea perfecta" 
+              : language === "pt"
+              ? "Nossa equipe de especialistas em viagens esta pronta para criar sua experiencia europeia perfeita"
               : "Our team of travel experts is ready to create your perfect European experience"}
           </p>
         </div>
@@ -47,22 +49,26 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-display font-bold mb-6">
-                {language === "es" ? "Envianos un Mensaje" : "Send Us a Message"}
+                {language === "es" ? "Envianos un Mensaje" : language === "pt" ? "Envie-nos uma Mensagem" : "Send Us a Message"}
               </h2>
               <p className="text-muted-foreground mb-8">
                 {language === "es" 
                   ? "Completa el formulario y te responderemos en menos de 24 horas" 
+                  : language === "pt"
+                  ? "Preencha o formulario e responderemos em menos de 24 horas"
                   : "Fill out the form and we'll respond within 24 hours"}
               </p>
               <ContactForm />
             </div>
             <div>
               <h2 className="text-3xl font-display font-bold mb-6">
-                {language === "es" ? "Informacion de Contacto" : "Contact Information"}
+                {language === "es" ? "Informacion de Contacto" : language === "pt" ? "Informacoes de Contato" : "Contact Information"}
               </h2>
               <p className="text-muted-foreground mb-8">
                 {language === "es" 
                   ? "Tambien puedes contactarnos directamente por estos medios" 
+                  : language === "pt"
+                  ? "Voce tambem pode entrar em contato conosco diretamente por estes meios"
                   : "You can also contact us directly through these channels"}
               </p>
               <ContactInfo />
@@ -75,21 +81,21 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
             <div>
-              <h3 className="text-lg font-bold mb-2">{language === "es" ? "Horario de Atencion" : "Business Hours"}</h3>
+              <h3 className="text-lg font-bold mb-2">{language === "es" ? "Horario de Atencion" : language === "pt" ? "Horario de Atendimento" : "Business Hours"}</h3>
               <p className="text-muted-foreground">
-                {language === "es" ? "Lunes a Viernes: 8:00 AM - 6:00 PM" : "Monday to Friday: 8:00 AM - 6:00 PM"}
+                {language === "es" ? "Lunes a Viernes: 8:00 AM - 6:00 PM" : language === "pt" ? "Segunda a Sexta: 8:00 - 18:00" : "Monday to Friday: 8:00 AM - 6:00 PM"}
               </p>
               <p className="text-muted-foreground">
-                {language === "es" ? "Sabados: 9:00 AM - 2:00 PM" : "Saturdays: 9:00 AM - 2:00 PM"}
+                {language === "es" ? "Sabados: 9:00 AM - 2:00 PM" : language === "pt" ? "Sabados: 9:00 - 14:00" : "Saturdays: 9:00 AM - 2:00 PM"}
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-2">{language === "es" ? "Tiempo de Respuesta" : "Response Time"}</h3>
+              <h3 className="text-lg font-bold mb-2">{language === "es" ? "Tiempo de Respuesta" : language === "pt" ? "Tempo de Resposta" : "Response Time"}</h3>
               <p className="text-muted-foreground">
-                {language === "es" ? "Respondemos en menos de 24 horas" : "We respond within 24 hours"}
+                {language === "es" ? "Respondemos en menos de 24 horas" : language === "pt" ? "Respondemos em menos de 24 horas" : "We respond within 24 hours"}
               </p>
               <p className="text-muted-foreground">
-                {language === "es" ? "Emergencias 24/7 via WhatsApp" : "24/7 emergencies via WhatsApp"}
+                {language === "es" ? "Emergencias 24/7 via WhatsApp" : language === "pt" ? "Emergencias 24/7 via WhatsApp" : "24/7 emergencies via WhatsApp"}
               </p>
             </div>
           </div>

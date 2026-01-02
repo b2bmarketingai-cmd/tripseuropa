@@ -149,6 +149,71 @@ const CONTENT = {
     featuredSubtitle: "Explore our most popular destinations and start accumulating benefits",
     viewTrip: "View Trip",
     termsLink: "See full terms and conditions"
+  },
+  pt: {
+    heroTitle: "Viaje Mais, Ganhe Mais: Bem-vindo ao",
+    heroBrand: "TripsEuropa GO",
+    heroSubtitle: "Transforme seus sonhos em realidade com nosso programa de recompensas criado para viajantes exigentes. Sem barreiras, sem limites, apenas oportunidades ilimitadas.",
+    level1Title: "Nivel 1",
+    level1Subtitle: "Inscricao gratuita",
+    level1Benefits: [
+      "Ofertas exclusivas Nivel 1",
+      "Convide um amigo e ganhe $150 USD",
+      "Newsletter com ofertas antecipadas",
+      "Acesso a conteudo exclusivo de viagem"
+    ],
+    level2Title: "Nivel 2",
+    level2Subtitle: "Apos sua primeira reserva",
+    level2Benefits: [
+      "Oferta especial: Receba 10% do valor da sua reserva em credito para futuras viagens (ate $350 USD)",
+      "Acesso prioritario a novos destinos",
+      "Ofertas exclusivas Nivel 2",
+      "Convide um amigo e ganhe $150 USD",
+      "Concierge de viagem dedicado",
+      "Upgrades de quarto quando disponiveis"
+    ],
+    level3Title: "Nivel 3",
+    level3Subtitle: "VIP Platina - 3+ viagens",
+    level3Benefits: [
+      "Todos os beneficios do Nivel 2",
+      "15% de credito em cada reserva (ate $500 USD)",
+      "Traslados do aeroporto incluidos",
+      "Experiencias VIP exclusivas",
+      "Linha direta de atendimento 24/7",
+      "Convide um amigo e ganhe $200 USD"
+    ],
+    signupTitle: "Junte-se ao TripsEuropa GO",
+    signupSubtitle: "Cadastre-se gratuitamente e comece a acumular recompensas desde sua primeira consulta",
+    emailPlaceholder: "seu@email.com",
+    namePlaceholder: "Seu nome completo",
+    signupButton: "Junte-se Agora",
+    faqTitle: "Perguntas Frequentes",
+    faqs: [
+      {
+        question: "Como me cadastro?",
+        answer: "Cadastrar-se e facil e gratuito. Basta criar uma conta para comecar no Nivel 1. Assim que reservar sua primeira viagem, automaticamente comecara a receber recompensas do Nivel 2."
+      },
+      {
+        question: "Ha limitacoes nos destinos?",
+        answer: "Nao! Nosso programa faz exatamente o que diz: te da recompensas para onde voce for. Sem datas bloqueadas, sem restricoes em nenhum dos nossos roteiros para a Europa."
+      },
+      {
+        question: "O que acontece se eu reservar mais viagens com a TripsEuropa?",
+        answer: "Apos 3 viagens concluidas, voce sobe automaticamente para o Nivel 3 VIP Platina com beneficios premium adicionais como traslados incluidos e experiencias exclusivas."
+      },
+      {
+        question: "Os descontos sao acumulaveis com outras promocoes?",
+        answer: "As recompensas do TripsEuropa GO nao podem ser combinadas com outros descontos, exceto o credito creditado na sua carteira TripsEuropa em caso de cancelamentos ou outra compensacao."
+      },
+      {
+        question: "Como funciona o programa de indicacao?",
+        answer: "Quando voce convida um amigo e ele faz sua primeira reserva, ambos recebem credito na carteira TripsEuropa: $150 USD no Nivel 1 e 2, e $200 USD no Nivel 3 VIP."
+      }
+    ],
+    featuredTitle: "Ganhe Recompensas Onde Voce For",
+    featuredSubtitle: "Explore nossos destinos mais populares e comece a acumular beneficios",
+    viewTrip: "Ver Viagem",
+    termsLink: "Ver termos e condicoes completos"
   }
 };
 
@@ -166,8 +231,8 @@ export default function Rewards() {
     e.preventDefault();
     if (!name || !email) {
       toast({
-        title: language === "es" ? "Campos requeridos" : "Required fields",
-        description: language === "es" ? "Por favor ingresa tu nombre y correo" : "Please enter your name and email",
+        title: language === "es" ? "Campos requeridos" : language === "pt" ? "Campos obrigatorios" : "Required fields",
+        description: language === "es" ? "Por favor ingresa tu nombre y correo" : language === "pt" ? "Por favor insira seu nome e e-mail" : "Please enter your name and email",
         variant: "destructive"
       });
       return;
@@ -188,8 +253,8 @@ export default function Rewards() {
       window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       toast({
-        title: language === "es" ? "Registro exitoso" : "Registration successful",
-        description: language === "es" ? "Bienvenido a TripsEuropa GO" : "Welcome to TripsEuropa GO"
+        title: language === "es" ? "Registro exitoso" : language === "pt" ? "Cadastro realizado" : "Registration successful",
+        description: language === "es" ? "Bienvenido a TripsEuropa GO" : language === "pt" ? "Bem-vindo ao TripsEuropa GO" : "Welcome to TripsEuropa GO"
       });
       setName("");
       setEmail("");
@@ -214,7 +279,7 @@ export default function Rewards() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <Badge className="mb-6 bg-accent/20 text-accent border-accent/30 px-4 py-1.5">
               <Sparkles className="w-4 h-4 mr-2" />
-              {language === "es" ? "Programa de Recompensas" : "Rewards Program"}
+              {language === "es" ? "Programa de Recompensas" : language === "pt" ? "Programa de Recompensas" : "Rewards Program"}
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6 text-[#d1d2d6]">
               {content.heroTitle}{" "}
@@ -264,7 +329,7 @@ export default function Rewards() {
             <Card className="relative overflow-hidden border-2 border-accent/50 shadow-lg scale-[1.02]">
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-accent to-yellow-500" />
               <Badge className="absolute top-4 right-4 bg-accent text-primary">
-                {language === "es" ? "Popular" : "Popular"}
+                {language === "es" ? "Popular" : language === "pt" ? "Popular" : "Popular"}
               </Badge>
               <CardContent className="pt-8 pb-6 px-6">
                 <div className="flex items-center gap-3 mb-4">
