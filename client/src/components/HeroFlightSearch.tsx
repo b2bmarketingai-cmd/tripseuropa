@@ -95,7 +95,26 @@ const AIRPORTS = [
   { code: "SAL", city: "San Salvador", country: "El Salvador", countryCode: "SV" },
   { code: "TGU", city: "Tegucigalpa", country: "Honduras", countryCode: "HN" },
   { code: "MGA", city: "Managua", country: "Nicaragua", countryCode: "NI" },
-  // Europe - España
+  // FR - Francia
+  { code: "CDG", city: "Paris (Charles de Gaulle)", country: "Francia", countryCode: "FR" },
+  { code: "ORY", city: "Paris (Orly)", country: "Francia", countryCode: "FR" },
+  { code: "LYS", city: "Lyon", country: "Francia", countryCode: "FR" },
+  { code: "MRS", city: "Marsella", country: "Francia", countryCode: "FR" },
+  { code: "NCE", city: "Niza", country: "Francia", countryCode: "FR" },
+  { code: "TLS", city: "Toulouse", country: "Francia", countryCode: "FR" },
+  { code: "BOD", city: "Burdeos", country: "Francia", countryCode: "FR" },
+  // IT - Italia
+  { code: "FCO", city: "Roma (Fiumicino)", country: "Italia", countryCode: "IT" },
+  { code: "MXP", city: "Milan (Malpensa)", country: "Italia", countryCode: "IT" },
+  { code: "LIN", city: "Milan (Linate)", country: "Italia", countryCode: "IT" },
+  { code: "VCE", city: "Venecia", country: "Italia", countryCode: "IT" },
+  { code: "FLR", city: "Florencia", country: "Italia", countryCode: "IT" },
+  { code: "NAP", city: "Napoles", country: "Italia", countryCode: "IT" },
+  { code: "BLQ", city: "Bolonia", country: "Italia", countryCode: "IT" },
+  { code: "PSA", city: "Pisa", country: "Italia", countryCode: "IT" },
+  { code: "CTA", city: "Catania", country: "Italia", countryCode: "IT" },
+  { code: "PMO", city: "Palermo", country: "Italia", countryCode: "IT" },
+  // ES - Espana
   { code: "MAD", city: "Madrid", country: "Espana", countryCode: "ES" },
   { code: "BCN", city: "Barcelona", country: "Espana", countryCode: "ES" },
   { code: "VLC", city: "Valencia", country: "Espana", countryCode: "ES" },
@@ -106,46 +125,120 @@ const AIRPORTS = [
   { code: "LPA", city: "Gran Canaria", country: "Espana", countryCode: "ES" },
   { code: "BIO", city: "Bilbao", country: "Espana", countryCode: "ES" },
   { code: "ALC", city: "Alicante", country: "Espana", countryCode: "ES" },
-  // Europe - Francia
-  { code: "CDG", city: "Paris (Charles de Gaulle)", country: "Francia", countryCode: "FR" },
-  { code: "ORY", city: "Paris (Orly)", country: "Francia", countryCode: "FR" },
-  { code: "LYS", city: "Lyon", country: "Francia", countryCode: "FR" },
-  { code: "MRS", city: "Marsella", country: "Francia", countryCode: "FR" },
-  { code: "NCE", city: "Niza", country: "Francia", countryCode: "FR" },
-  // Europe - Italia
-  { code: "FCO", city: "Roma (Fiumicino)", country: "Italia", countryCode: "IT" },
-  { code: "MXP", city: "Milan (Malpensa)", country: "Italia", countryCode: "IT" },
-  { code: "VCE", city: "Venecia", country: "Italia", countryCode: "IT" },
-  { code: "FLR", city: "Florencia", country: "Italia", countryCode: "IT" },
-  { code: "NAP", city: "Napoles", country: "Italia", countryCode: "IT" },
-  // Europe - Others
-  { code: "LHR", city: "Londres (Heathrow)", country: "Reino Unido", countryCode: "GB" },
-  { code: "LGW", city: "Londres (Gatwick)", country: "Reino Unido", countryCode: "GB" },
-  { code: "MAN", city: "Manchester", country: "Reino Unido", countryCode: "GB" },
-  { code: "AMS", city: "Amsterdam", country: "Paises Bajos", countryCode: "NL" },
+  { code: "IBZ", city: "Ibiza", country: "Espana", countryCode: "ES" },
+  { code: "SDR", city: "Santander", country: "Espana", countryCode: "ES" },
+  { code: "ZAZ", city: "Zaragoza", country: "Espana", countryCode: "ES" },
+  // DE - Alemania
   { code: "FRA", city: "Frankfurt", country: "Alemania", countryCode: "DE" },
   { code: "MUC", city: "Munich", country: "Alemania", countryCode: "DE" },
   { code: "BER", city: "Berlin", country: "Alemania", countryCode: "DE" },
+  { code: "DUS", city: "Dusseldorf", country: "Alemania", countryCode: "DE" },
+  { code: "HAM", city: "Hamburgo", country: "Alemania", countryCode: "DE" },
+  { code: "CGN", city: "Colonia", country: "Alemania", countryCode: "DE" },
+  { code: "STR", city: "Stuttgart", country: "Alemania", countryCode: "DE" },
+  // PT - Portugal
   { code: "LIS", city: "Lisboa", country: "Portugal", countryCode: "PT" },
   { code: "OPO", city: "Oporto", country: "Portugal", countryCode: "PT" },
+  { code: "FAO", city: "Faro (Algarve)", country: "Portugal", countryCode: "PT" },
+  { code: "FNC", city: "Madeira", country: "Portugal", countryCode: "PT" },
+  { code: "PDL", city: "Azores (Ponta Delgada)", country: "Portugal", countryCode: "PT" },
+  // GR - Grecia
   { code: "ATH", city: "Atenas", country: "Grecia", countryCode: "GR" },
   { code: "SKG", city: "Tesalonica", country: "Grecia", countryCode: "GR" },
   { code: "JTR", city: "Santorini", country: "Grecia", countryCode: "GR" },
-  { code: "PRG", city: "Praga", country: "Republica Checa", countryCode: "CZ" },
-  { code: "VIE", city: "Viena", country: "Austria", countryCode: "AT" },
+  { code: "JMK", city: "Mykonos", country: "Grecia", countryCode: "GR" },
+  { code: "HER", city: "Heraklion (Creta)", country: "Grecia", countryCode: "GR" },
+  { code: "RHO", city: "Rodas", country: "Grecia", countryCode: "GR" },
+  { code: "CFU", city: "Corfu", country: "Grecia", countryCode: "GR" },
+  // NL - Paises Bajos
+  { code: "AMS", city: "Amsterdam", country: "Paises Bajos", countryCode: "NL" },
+  { code: "RTM", city: "Rotterdam", country: "Paises Bajos", countryCode: "NL" },
+  { code: "EIN", city: "Eindhoven", country: "Paises Bajos", countryCode: "NL" },
+  // CH - Suiza
   { code: "ZRH", city: "Zurich", country: "Suiza", countryCode: "CH" },
   { code: "GVA", city: "Ginebra", country: "Suiza", countryCode: "CH" },
-  { code: "BRU", city: "Bruselas", country: "Belgica", countryCode: "BE" },
-  { code: "CPH", city: "Copenhague", country: "Dinamarca", countryCode: "DK" },
-  { code: "DUB", city: "Dublin", country: "Irlanda", countryCode: "IE" },
-  { code: "OSL", city: "Oslo", country: "Noruega", countryCode: "NO" },
-  { code: "ARN", city: "Estocolmo", country: "Suecia", countryCode: "SE" },
-  { code: "HEL", city: "Helsinki", country: "Finlandia", countryCode: "FI" },
-  { code: "WAW", city: "Varsovia", country: "Polonia", countryCode: "PL" },
-  { code: "BUD", city: "Budapest", country: "Hungria", countryCode: "HU" },
+  { code: "BSL", city: "Basilea", country: "Suiza", countryCode: "CH" },
+  // HR - Croacia
   { code: "ZAG", city: "Zagreb", country: "Croacia", countryCode: "HR" },
-  { code: "IST", city: "Estambul", country: "Turquia", countryCode: "TR" },
+  { code: "DBV", city: "Dubrovnik", country: "Croacia", countryCode: "HR" },
+  { code: "SPU", city: "Split", country: "Croacia", countryCode: "HR" },
+  { code: "PUY", city: "Pula", country: "Croacia", countryCode: "HR" },
+  // GB - Reino Unido
+  { code: "LHR", city: "Londres (Heathrow)", country: "Reino Unido", countryCode: "GB" },
+  { code: "LGW", city: "Londres (Gatwick)", country: "Reino Unido", countryCode: "GB" },
+  { code: "STN", city: "Londres (Stansted)", country: "Reino Unido", countryCode: "GB" },
+  { code: "MAN", city: "Manchester", country: "Reino Unido", countryCode: "GB" },
+  { code: "BHX", city: "Birmingham", country: "Reino Unido", countryCode: "GB" },
+  { code: "LPL", city: "Liverpool", country: "Reino Unido", countryCode: "GB" },
+  // SCT - Escocia
+  { code: "EDI", city: "Edimburgo", country: "Escocia", countryCode: "SCT" },
+  { code: "GLA", city: "Glasgow", country: "Escocia", countryCode: "SCT" },
+  { code: "INV", city: "Inverness", country: "Escocia", countryCode: "SCT" },
+  // AL - Albania
+  { code: "TIA", city: "Tirana", country: "Albania", countryCode: "AL" },
+  // AT - Austria
+  { code: "VIE", city: "Viena", country: "Austria", countryCode: "AT" },
+  { code: "SZG", city: "Salzburgo", country: "Austria", countryCode: "AT" },
+  { code: "INN", city: "Innsbruck", country: "Austria", countryCode: "AT" },
+  // BE - Belgica
+  { code: "BRU", city: "Bruselas", country: "Belgica", countryCode: "BE" },
+  { code: "CRL", city: "Charleroi", country: "Belgica", countryCode: "BE" },
+  { code: "ANR", city: "Amberes", country: "Belgica", countryCode: "BE" },
+  // CZ - Republica Checa
+  { code: "PRG", city: "Praga", country: "Republica Checa", countryCode: "CZ" },
+  { code: "BRQ", city: "Brno", country: "Republica Checa", countryCode: "CZ" },
+  // DK - Dinamarca
+  { code: "CPH", city: "Copenhague", country: "Dinamarca", countryCode: "DK" },
+  { code: "BLL", city: "Billund", country: "Dinamarca", countryCode: "DK" },
+  { code: "AAL", city: "Aalborg", country: "Dinamarca", countryCode: "DK" },
+  // FI - Finlandia
+  { code: "HEL", city: "Helsinki", country: "Finlandia", countryCode: "FI" },
+  { code: "TMP", city: "Tampere", country: "Finlandia", countryCode: "FI" },
+  { code: "RVN", city: "Rovaniemi", country: "Finlandia", countryCode: "FI" },
+  // HU - Hungria
+  { code: "BUD", city: "Budapest", country: "Hungria", countryCode: "HU" },
+  { code: "DEB", city: "Debrecen", country: "Hungria", countryCode: "HU" },
+  // IS - Islandia
   { code: "KEF", city: "Reikiavik", country: "Islandia", countryCode: "IS" },
+  { code: "AEY", city: "Akureyri", country: "Islandia", countryCode: "IS" },
+  // IE - Irlanda
+  { code: "DUB", city: "Dublin", country: "Irlanda", countryCode: "IE" },
+  { code: "ORK", city: "Cork", country: "Irlanda", countryCode: "IE" },
+  { code: "SNN", city: "Shannon", country: "Irlanda", countryCode: "IE" },
+  // NO - Noruega
+  { code: "OSL", city: "Oslo", country: "Noruega", countryCode: "NO" },
+  { code: "BGO", city: "Bergen", country: "Noruega", countryCode: "NO" },
+  { code: "TRD", city: "Trondheim", country: "Noruega", countryCode: "NO" },
+  { code: "TOS", city: "Tromso", country: "Noruega", countryCode: "NO" },
+  // PL - Polonia
+  { code: "WAW", city: "Varsovia", country: "Polonia", countryCode: "PL" },
+  { code: "KRK", city: "Cracovia", country: "Polonia", countryCode: "PL" },
+  { code: "GDN", city: "Gdansk", country: "Polonia", countryCode: "PL" },
+  { code: "WRO", city: "Breslavia", country: "Polonia", countryCode: "PL" },
+  // RO - Rumania
+  { code: "OTP", city: "Bucarest", country: "Rumania", countryCode: "RO" },
+  { code: "CLJ", city: "Cluj-Napoca", country: "Rumania", countryCode: "RO" },
+  { code: "TSR", city: "Timisoara", country: "Rumania", countryCode: "RO" },
+  // SE - Suecia
+  { code: "ARN", city: "Estocolmo", country: "Suecia", countryCode: "SE" },
+  { code: "GOT", city: "Gotemburgo", country: "Suecia", countryCode: "SE" },
+  { code: "MMX", city: "Malmo", country: "Suecia", countryCode: "SE" },
+  // BAL - Estados Balticos
+  { code: "TLL", city: "Tallin", country: "Estonia (Baltico)", countryCode: "BAL" },
+  { code: "RIX", city: "Riga", country: "Letonia (Baltico)", countryCode: "BAL" },
+  { code: "VNO", city: "Vilna", country: "Lituania (Baltico)", countryCode: "BAL" },
+  // CY - Chipre
+  { code: "LCA", city: "Larnaca", country: "Chipre", countryCode: "CY" },
+  { code: "PFO", city: "Pafos", country: "Chipre", countryCode: "CY" },
+  // Other Europe
+  { code: "IST", city: "Estambul", country: "Turquia", countryCode: "TR" },
+  { code: "AYT", city: "Antalya", country: "Turquia", countryCode: "TR" },
+  { code: "MLA", city: "Malta", country: "Malta", countryCode: "MT" },
+  { code: "LJU", city: "Liubliana", country: "Eslovenia", countryCode: "SI" },
+  { code: "BEG", city: "Belgrado", country: "Serbia", countryCode: "RS" },
+  { code: "SOF", city: "Sofia", country: "Bulgaria", countryCode: "BG" },
+  { code: "SKP", city: "Skopie", country: "Macedonia Norte", countryCode: "MK" },
+  { code: "TGD", city: "Podgorica", country: "Montenegro", countryCode: "ME" },
 ];
 
 export function HeroFlightSearch() {
