@@ -114,6 +114,12 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/travel-assistant" className="flex items-center gap-2 text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
+                  <Bot className="w-3 h-3 text-accent" />
+                  {language === "es" ? "Asistente Virtual IA" : "AI Travel Assistant"}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -189,29 +195,6 @@ export function Footer() {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="mb-8 flex justify-center">
-          <Link href="/travel-assistant">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 max-w-md hover:border-accent/50 hover:bg-white/10 transition-all cursor-pointer group" data-testid="card-ai-chatbot">
-              <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
-                <Bot className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="text-lg font-display font-bold text-white mb-2 flex items-center gap-2">
-                {language === "es" ? "Asistente Virtual para Viajes" : "AI powered chatbot"}
-                <Sparkles className="w-4 h-4 text-accent" />
-              </h3>
-              <p className="text-white/60 text-sm leading-relaxed">
-                {language === "es" 
-                  ? "Tu asistente con IA de viajes personal que recuerda la conversacion, perfecto para consultas"
-                  : "Add a context-aware chatbot to your app. Give your users a support agent that remembers the conversation, perfect for multi-step bookings or troubleshooting."}
-              </p>
-              <Button className="mt-4 bg-accent text-primary gap-2" size="sm">
-                <MessageCircle className="w-4 h-4" />
-                {language === "es" ? "Iniciar Chat" : "Start Chat"}
-              </Button>
-            </div>
-          </Link>
         </div>
 
         <div className="border-t border-white/10 pt-8 mb-6">
