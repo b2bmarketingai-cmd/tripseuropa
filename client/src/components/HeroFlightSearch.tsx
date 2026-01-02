@@ -62,7 +62,7 @@ export function HeroFlightSearch() {
       a.country.toLowerCase().includes(destSearch.toLowerCase())
   );
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (!origin || !destination || !departureDate) {
       toast({
         title: language === "es" ? "Informacion incompleta" : "Missing information",
@@ -100,6 +100,24 @@ Me pueden ayudar con la cotizacion?`
 *Passengers:* ${passengers}
 
 Can you help me with a quote?`;
+
+    // Send email notification in background
+    try {
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Busqueda de Vuelo",
+          email: "cliente@busqueda.com",
+          phone: null,
+          originCountry: origin,
+          serviceInterest: `Vuelo: ${origin} → ${destination}`,
+          message: `Tipo: ${tripTypeText}, Salida: ${departureDateStr}, Regreso: ${returnDateStr || "N/A"}, Pasajeros: ${passengers}`
+        })
+      });
+    } catch {
+      // Continue even if email fails
+    }
 
     const whatsappUrl = `https://wa.me/34611105448?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
