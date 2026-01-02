@@ -5,6 +5,19 @@ export interface ItineraryDay {
   activities: { es: string[]; en: string[] };
 }
 
+export interface CategorizedItinerary {
+  id: string;
+  name: { es: string; en: string };
+  description: { es: string; en: string };
+  days: ItineraryDay[];
+}
+
+export interface ItinerariesByCategory {
+  bySeason: CategorizedItinerary[];
+  byInterest: CategorizedItinerary[];
+  byGroup: CategorizedItinerary[];
+}
+
 export interface DestinationPackage {
   id: string;
   name: { es: string; en: string };
@@ -28,6 +41,7 @@ export interface DestinationData {
   highlights: { es: string[]; en: string[] };
   packages: DestinationPackage[];
   itinerary: ItineraryDay[];
+  categorizedItineraries?: ItinerariesByCategory;
   faqs: DestinationFAQ[];
   bestTimeToVisit: { es: string; en: string };
   currency: string;
@@ -1287,17 +1301,3 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is magical for Christmas markets." }
       },
       {
-        question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?" },
-        answer: { es: "Variable y lluvioso. Lleva siempre un paraguas y capas de ropa. Los veranos son templados.", en: "Variable and rainy. Always carry an umbrella and layers. Summers are mild." }
-      }
-    ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
-    currency: "GBP",
-    language: { es: "Ingles", en: "English" },
-    visaInfo: { es: "Algunos paises requieren visa - verificar antes de viajar", en: "Some countries require visa - check before traveling" }
-  }
-];
-
-export function getDestinationBySlug(slug: string): DestinationData | undefined {
-  return DESTINATIONS_DATA.find(d => d.slug.toLowerCase() === slug.toLowerCase());
-}
