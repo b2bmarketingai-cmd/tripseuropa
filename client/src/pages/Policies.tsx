@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useI18n } from "@/lib/i18n";
-import { FileText, XCircle, RefreshCw, RotateCcw, CheckCircle, AlertTriangle, Clock, Mail } from "lucide-react";
+import { FileText, XCircle, RefreshCw, RotateCcw, CheckCircle, AlertTriangle, Clock, Mail, Phone } from "lucide-react";
 import { useLocation } from "wouter";
 import { useEffect, useState } from "react";
 
@@ -191,33 +191,73 @@ function TermsSection({ language }: { language: string }) {
 function CancellationsSection({ language }: { language: string }) {
   const content = language === "es" ? {
     title: "Política de Cancelaciones",
-    intro: "Entendemos que los planes pueden cambiar. Nuestra política de cancelación está diseñada para ser justa:",
-    policies: [
-      { days: "Más de 60 días", percentage: "100%", desc: "Reembolso completo menos gastos administrativos (50 USD)" },
-      { days: "30-60 días", percentage: "75%", desc: "Reembolso del 75% del monto total" },
-      { days: "15-29 días", percentage: "50%", desc: "Reembolso del 50% del monto total" },
-      { days: "7-14 días", percentage: "25%", desc: "Reembolso del 25% del monto total" },
-      { days: "Menos de 7 días", percentage: "0%", desc: "Sin reembolso disponible" },
+    intro: "Una vez emitidos los servicios, las políticas de cancelación están sujetas a las condiciones de cada proveedor:",
+    services: [
+      { 
+        service: "Boletos Aéreos", 
+        desc: "Las cancelaciones y cambios están sujetos a las políticas de cada aerolínea. Algunas tarifas son no reembolsables.",
+        icon: "plane"
+      },
+      { 
+        service: "Hoteles", 
+        desc: "Cada hotel tiene sus propias políticas de cancelación. Consulta las condiciones específicas de tu reserva.",
+        icon: "hotel"
+      },
+      { 
+        service: "Seguro de Viaje", 
+        desc: "Una vez emitida la póliza, aplican las condiciones de la aseguradora. Revisa los términos antes de contratar.",
+        icon: "insurance"
+      },
+      { 
+        service: "eSIM Europa", 
+        desc: "No reembolsable una vez activada. Antes de la activación se puede cancelar.",
+        icon: "esim"
+      },
+      { 
+        service: "Tours y Excursiones", 
+        desc: "Sujeto a las políticas del operador turístico. Generalmente requieren aviso previo de 48-72 horas.",
+        icon: "tour"
+      },
     ],
     notes: [
-      "Las cancelaciones deben solicitarse por escrito a info@tripseuropa.com",
-      "Los vuelos pueden tener políticas de cancelación diferentes según la aerolínea",
-      "Los seguros de viaje pueden cubrir cancelaciones por causas justificadas",
+      "Trips Europa actúa como intermediario. Una vez emitidos los servicios, las condiciones de cancelación las establece cada proveedor.",
+      "Te recomendamos contratar seguro de viaje que cubra cancelaciones imprevistas.",
+      "Para cualquier solicitud de cancelación, contáctanos a info@tripseuropa.com o al +34 611 105 448.",
     ]
   } : {
     title: "Cancellation Policy",
-    intro: "We understand plans can change. Our cancellation policy is designed to be fair:",
-    policies: [
-      { days: "More than 60 days", percentage: "100%", desc: "Full refund minus administrative fees (50 USD)" },
-      { days: "30-60 days", percentage: "75%", desc: "75% refund of total amount" },
-      { days: "15-29 days", percentage: "50%", desc: "50% refund of total amount" },
-      { days: "7-14 days", percentage: "25%", desc: "25% refund of total amount" },
-      { days: "Less than 7 days", percentage: "0%", desc: "No refund available" },
+    intro: "Once services are issued, cancellation policies are subject to each provider's conditions:",
+    services: [
+      { 
+        service: "Flight Tickets", 
+        desc: "Cancellations and changes are subject to each airline's policies. Some fares are non-refundable.",
+        icon: "plane"
+      },
+      { 
+        service: "Hotels", 
+        desc: "Each hotel has its own cancellation policies. Check the specific conditions of your booking.",
+        icon: "hotel"
+      },
+      { 
+        service: "Travel Insurance", 
+        desc: "Once the policy is issued, the insurer's conditions apply. Review the terms before purchasing.",
+        icon: "insurance"
+      },
+      { 
+        service: "Europe eSIM", 
+        desc: "Non-refundable once activated. Can be canceled before activation.",
+        icon: "esim"
+      },
+      { 
+        service: "Tours and Excursions", 
+        desc: "Subject to tour operator policies. Generally require 48-72 hours advance notice.",
+        icon: "tour"
+      },
     ],
     notes: [
-      "Cancellations must be requested in writing to info@tripseuropa.com",
-      "Flights may have different cancellation policies depending on the airline",
-      "Travel insurance may cover cancellations for justified reasons",
+      "Trips Europa acts as an intermediary. Once services are issued, cancellation conditions are set by each provider.",
+      "We recommend purchasing travel insurance that covers unexpected cancellations.",
+      "For any cancellation request, contact us at info@tripseuropa.com or +34 611 105 448.",
     ]
   };
 
@@ -232,28 +272,25 @@ function CancellationsSection({ language }: { language: string }) {
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid gap-3">
-          {content.policies.map((policy, idx) => (
-            <div key={idx} className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-muted-foreground" />
-                <div>
-                  <p className="font-medium text-primary">{policy.days}</p>
-                  <p className="text-sm text-muted-foreground">{policy.desc}</p>
-                </div>
+          {content.services.map((item, idx) => (
+            <div key={idx} className="flex items-start gap-4 p-4 bg-muted/50 rounded-lg">
+              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                <AlertTriangle className="w-5 h-5 text-primary" />
               </div>
-              <Badge className={policy.percentage === "0%" ? "bg-red-500" : "bg-green-600"}>
-                {policy.percentage}
-              </Badge>
+              <div>
+                <p className="font-medium text-primary">{item.service}</p>
+                <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
         
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
           <div className="flex items-start gap-2">
             <AlertTriangle className="w-5 h-5 text-amber-600 mt-0.5" />
             <div className="space-y-1">
               {content.notes.map((note, idx) => (
-                <p key={idx} className="text-sm text-amber-800">{note}</p>
+                <p key={idx} className="text-sm text-amber-800 dark:text-amber-200">{note}</p>
               ))}
             </div>
           </div>
@@ -266,32 +303,26 @@ function CancellationsSection({ language }: { language: string }) {
 function RefundsSection({ language }: { language: string }) {
   const content = language === "es" ? {
     title: "Política de Reembolsos",
-    intro: "Procesamos los reembolsos de manera rápida y transparente:",
-    timeline: [
-      { step: "1", title: "Solicitud recibida", desc: "Confirmamos recepción en 24 horas" },
-      { step: "2", title: "Revisión", desc: "Evaluamos tu solicitud en 3-5 días hábiles" },
-      { step: "3", title: "Aprobación", desc: "Notificamos la decisión por correo electrónico" },
-      { step: "4", title: "Procesamiento", desc: "Reembolso procesado en 7-10 días hábiles" },
+    intro: "Los reembolsos están sujetos a las políticas de cada proveedor de servicios:",
+    info: [
+      "Los reembolsos de boletos aéreos dependen de las condiciones de la aerolínea y tipo de tarifa adquirida.",
+      "Los reembolsos de hoteles están sujetos a las políticas de cancelación de cada establecimiento.",
+      "Los seguros de viaje y eSIM tienen condiciones específicas establecidas por el proveedor.",
+      "Trips Europa gestionará tu solicitud de reembolso ante el proveedor correspondiente.",
     ],
-    methods: [
-      "Tarjeta de crédito/débito: Reembolso al mismo método de pago original",
-      "Transferencia bancaria: Depósito directo a cuenta proporcionada",
-      "Crédito de viaje: Opción de mantener saldo para futuras reservas (+10% bonus)",
-    ]
+    process: "Para solicitar un reembolso, contáctanos con tu número de reserva y te informaremos las condiciones aplicables según cada proveedor.",
+    contact: "Escríbenos a info@tripseuropa.com o llámanos al +34 611 105 448"
   } : {
     title: "Refund Policy",
-    intro: "We process refunds quickly and transparently:",
-    timeline: [
-      { step: "1", title: "Request received", desc: "We confirm receipt within 24 hours" },
-      { step: "2", title: "Review", desc: "We evaluate your request in 3-5 business days" },
-      { step: "3", title: "Approval", desc: "Decision notified by email" },
-      { step: "4", title: "Processing", desc: "Refund processed in 7-10 business days" },
+    intro: "Refunds are subject to each service provider's policies:",
+    info: [
+      "Flight ticket refunds depend on the airline's conditions and the type of fare purchased.",
+      "Hotel refunds are subject to each property's cancellation policies.",
+      "Travel insurance and eSIM have specific conditions set by the provider.",
+      "Trips Europa will manage your refund request with the corresponding provider.",
     ],
-    methods: [
-      "Credit/debit card: Refund to original payment method",
-      "Bank transfer: Direct deposit to provided account",
-      "Travel credit: Option to keep balance for future bookings (+10% bonus)",
-    ]
+    process: "To request a refund, contact us with your booking number and we will inform you of the applicable conditions for each provider.",
+    contact: "Write to us at info@tripseuropa.com or call +34 611 105 448"
   };
 
   return (
@@ -304,28 +335,21 @@ function RefundsSection({ language }: { language: string }) {
         <p className="text-muted-foreground text-sm">{content.intro}</p>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {content.timeline.map((item, idx) => (
-            <div key={idx} className="text-center p-4 bg-accent/10 rounded-lg">
-              <div className="w-10 h-10 bg-accent text-primary font-bold rounded-full flex items-center justify-center mx-auto mb-2">
-                {item.step}
-              </div>
-              <h4 className="font-medium text-primary text-sm">{item.title}</h4>
-              <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
+        <div className="space-y-3">
+          {content.info.map((item, idx) => (
+            <div key={idx} className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+              <AlertTriangle className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+              <p className="text-sm text-muted-foreground">{item}</p>
             </div>
           ))}
         </div>
 
-        <div className="space-y-2">
-          <h4 className="font-bold text-primary">{language === "es" ? "Métodos de reembolso" : "Refund methods"}</h4>
-          <ul className="space-y-2">
-            {content.methods.map((method, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
-                {method}
-              </li>
-            ))}
-          </ul>
+        <div className="bg-primary/5 rounded-lg p-4 space-y-3">
+          <p className="text-sm text-muted-foreground">{content.process}</p>
+          <a href="mailto:info@tripseuropa.com" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
+            <Mail className="w-4 h-4" />
+            {content.contact}
+          </a>
         </div>
       </CardContent>
     </Card>
@@ -334,57 +358,49 @@ function RefundsSection({ language }: { language: string }) {
 
 function ReturnsSection({ language }: { language: string }) {
   const content = language === "es" ? {
-    title: "Política de Devoluciones",
-    intro: "Para productos y servicios adicionales adquiridos a través de Trips Europa:",
+    title: "Información Importante",
+    intro: "Trips Europa actúa como intermediario entre tú y los proveedores de servicios turísticos:",
     items: [
       {
-        product: "eSIM Europa",
-        policy: "No reembolsable una vez activada. Antes de activación: reembolso completo.",
-        icon: "esim"
+        title: "Rol de Intermediario",
+        desc: "Facilitamos la reserva de servicios de aerolíneas, hoteles, aseguradoras y operadores turísticos. Una vez emitidos los servicios, las políticas de cada proveedor aplican directamente.",
       },
       {
-        product: "Seguro de Viaje",
-        policy: "Cancelación gratuita hasta 14 días después de la compra si no ha iniciado el viaje.",
-        icon: "insurance"
+        title: "Documentación",
+        desc: "Al realizar tu reserva, recibirás los términos y condiciones específicos de cada servicio contratado. Te recomendamos leerlos cuidadosamente.",
       },
       {
-        product: "Excursiones y Tours",
-        policy: "Reembolso completo si se cancela 48 horas antes. Menos de 48 horas: 50%.",
-        icon: "tour"
+        title: "Asistencia Garantizada",
+        desc: "Aunque las políticas las establecen los proveedores, nuestro equipo te asistirá en todo el proceso de gestión de cambios, cancelaciones o reembolsos.",
       },
       {
-        product: "Traslados",
-        policy: "Cancelación gratuita hasta 24 horas antes del servicio.",
-        icon: "transfer"
+        title: "Recomendación",
+        desc: "Siempre te sugerimos contratar seguro de viaje con cobertura de cancelación para proteger tu inversión ante imprevistos.",
       },
     ],
-    contact: "Para cualquier solicitud de devolución, contáctanos:"
+    contact: "¿Tienes dudas sobre las políticas de tu reserva? Contáctanos:"
   } : {
-    title: "Returns Policy",
-    intro: "For additional products and services purchased through Trips Europa:",
+    title: "Important Information",
+    intro: "Trips Europa acts as an intermediary between you and tourism service providers:",
     items: [
       {
-        product: "Europe eSIM",
-        policy: "Non-refundable once activated. Before activation: full refund.",
-        icon: "esim"
+        title: "Intermediary Role",
+        desc: "We facilitate booking services from airlines, hotels, insurers, and tour operators. Once services are issued, each provider's policies apply directly.",
       },
       {
-        product: "Travel Insurance",
-        policy: "Free cancellation up to 14 days after purchase if trip hasn't started.",
-        icon: "insurance"
+        title: "Documentation",
+        desc: "When making your reservation, you will receive the specific terms and conditions for each contracted service. We recommend reading them carefully.",
       },
       {
-        product: "Excursions and Tours",
-        policy: "Full refund if canceled 48 hours before. Less than 48 hours: 50%.",
-        icon: "tour"
+        title: "Guaranteed Assistance",
+        desc: "Although policies are set by providers, our team will assist you throughout the process of managing changes, cancellations, or refunds.",
       },
       {
-        product: "Transfers",
-        policy: "Free cancellation up to 24 hours before service.",
-        icon: "transfer"
+        title: "Recommendation",
+        desc: "We always suggest purchasing travel insurance with cancellation coverage to protect your investment against unforeseen circumstances.",
       },
     ],
-    contact: "For any return request, contact us:"
+    contact: "Have questions about your booking policies? Contact us:"
   };
 
   return (
@@ -404,8 +420,8 @@ function ReturnsSection({ language }: { language: string }) {
                 <CheckCircle className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium text-primary">{item.product}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{item.policy}</p>
+                <h4 className="font-medium text-primary">{item.title}</h4>
+                <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -413,10 +429,16 @@ function ReturnsSection({ language }: { language: string }) {
 
         <div className="bg-primary/5 rounded-lg p-4">
           <p className="text-sm text-muted-foreground mb-2">{content.contact}</p>
-          <a href="mailto:info@tripseuropa.com" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
-            <Mail className="w-4 h-4" />
-            info@tripseuropa.com
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a href="mailto:info@tripseuropa.com" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
+              <Mail className="w-4 h-4" />
+              info@tripseuropa.com
+            </a>
+            <a href="tel:+34611105448" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
+              <Phone className="w-4 h-4" />
+              +34 611 105 448
+            </a>
+          </div>
         </div>
       </CardContent>
     </Card>
