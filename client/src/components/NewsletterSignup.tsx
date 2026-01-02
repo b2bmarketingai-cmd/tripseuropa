@@ -4,12 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Gift, Tag, Compass, CheckCircle, Loader2 } from "lucide-react";
+import { Mail, Gift, Tag, Compass, CheckCircle, Loader2, User, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function NewsletterSignup() {
   const { language } = useI18n();
   const { toast } = useToast();
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -24,12 +26,14 @@ export function NewsletterSignup() {
         { icon: Gift, text: "Promociones especiales solo para suscriptores" },
         { icon: Compass, text: "Inspiracion viajera y guias de destinos" },
       ],
-      placeholder: "Tu correo electronico",
+      namePlaceholder: "Nombre completo",
+      phonePlaceholder: "Numero de telefono",
+      emailPlaceholder: "Tu correo electronico",
       cta: "Suscribirme",
-      subscribing: "Suscribiendo...",
+      subscribing: "Conectando...",
       success: "Suscripcion exitosa",
-      successDesc: "Te hemos enviado un correo de confirmacion.",
-      error: "Por favor ingresa un correo valido",
+      successDesc: "Te conectaremos por WhatsApp con nuestras mejores ofertas.",
+      error: "Por favor completa todos los campos",
       privacy: "Respetamos tu privacidad. Puedes cancelar en cualquier momento.",
     },
     en: {
@@ -41,12 +45,14 @@ export function NewsletterSignup() {
         { icon: Gift, text: "Special promotions only for subscribers" },
         { icon: Compass, text: "Travel inspiration and destination guides" },
       ],
-      placeholder: "Your email address",
+      namePlaceholder: "Full name",
+      phonePlaceholder: "Phone number",
+      emailPlaceholder: "Your email address",
       cta: "Subscribe",
-      subscribing: "Subscribing...",
+      subscribing: "Connecting...",
       success: "Subscription successful",
-      successDesc: "We've sent you a confirmation email.",
-      error: "Please enter a valid email",
+      successDesc: "We'll connect you via WhatsApp with our best offers.",
+      error: "Please fill in all fields",
       privacy: "We respect your privacy. You can cancel anytime.",
     },
   };
@@ -56,7 +62,11 @@ export function NewsletterSignup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes("@")) {
+    const trimmedName = fullName.trim();
+    const trimmedPhone = phone.trim();
+    const trimmedEmail = email.trim();
+
+    if (!trimmedName || !trimmedPhone || !trimmedEmail || !trimmedEmail.includes("@")) {
       toast({
         title: c.error,
         variant: "destructive",
@@ -71,11 +81,22 @@ export function NewsletterSignup() {
       await fetch("/api/newsletter/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ 
+          name: trimmedName,
+          phone: trimmedPhone,
+          email: trimmedEmail 
+        })
       });
 
-      // Open WhatsApp with notification
-      const whatsappMessage = `Nueva suscripcion al Newsletter!\n\nEmail: ${email}`;
+      // Open WhatsApp with all contact info
+      const whatsappMessage = `Hola! Me gustaria suscribirme a la Newsletter de Trips Europa.
+
+*Nombre:* ${trimmedName}
+*Telefono:* ${trimmedPhone}
+*Email:* ${trimmedEmail}
+
+Por favor envienme las mejores ofertas y promociones de viajes a Europa.`;
+      
       window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       setIsSubscribed(true);
@@ -136,20 +157,43 @@ export function NewsletterSignup() {
                 </ul>
               </div>
               <CardContent className="p-8 flex flex-col justify-center">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <Input
+                      type="text"
+                      placeholder={c.namePlaceholder}
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      className="h-11 pl-10"
+                      data-testid="input-newsletter-name"
+                    />
+                  </div>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <Input
+                      type="tel"
+                      placeholder={c.phonePlaceholder}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="h-11 pl-10"
+                      data-testid="input-newsletter-phone"
+                    />
+                  </div>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
                       type="email"
-                      placeholder={c.placeholder}
+                      placeholder={c.emailPlaceholder}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="h-12"
+                      className="h-11 pl-10"
                       data-testid="input-newsletter-email"
                     />
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full h-12 bg-accent text-primary hover:bg-accent/90 font-bold"
+                    className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-bold"
                     disabled={isLoading}
                     data-testid="button-newsletter-submit"
                   >
