@@ -367,12 +367,23 @@ export default function VacacionesEuropa() {
             Descubre los destinos mas fascinantes del viejo continente con nuestros paquetes todo incluido diseñados para viajeros latinoamericanos
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-search-trip">
+            <Button 
+              size="lg" 
+              className="bg-accent text-primary hover:bg-accent/90" 
+              data-testid="button-search-trip"
+              onClick={() => openWhatsAppQuote({ es: "encontrar mi viaje perfecto a Europa", en: "finding my perfect trip to Europe", pt: "encontrar minha viagem perfeita para a Europa" }, language)}
+            >
               <Globe className="w-4 h-4 mr-2" />
-              Buscar Mi Viaje Perfecto
+              {language === "es" ? "Buscar Mi Viaje Perfecto" : language === "pt" ? "Encontrar Minha Viagem Perfeita" : "Find My Perfect Trip"}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" data-testid="button-contact-advisor">
-              Hablar con un Asesor
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10" 
+              data-testid="button-contact-advisor"
+              onClick={() => openWhatsAppQuote({ es: "hablar con un asesor de viajes", en: "speaking with a travel advisor", pt: "falar com um consultor de viagens" }, language)}
+            >
+              {language === "es" ? "Hablar con un Asesor" : language === "pt" ? "Falar com um Consultor" : "Talk to an Advisor"}
             </Button>
           </div>
         </div>
