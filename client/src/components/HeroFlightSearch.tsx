@@ -12,65 +12,140 @@ import { useToast } from "@/hooks/use-toast";
 import { ShareTrip } from "./ShareTrip";
 
 const AIRPORTS = [
-  // Latin America - Colombia
-  { code: "BOG", city: "Bogota", country: "Colombia" },
-  { code: "MDE", city: "Medellin", country: "Colombia" },
-  { code: "CLO", city: "Cali", country: "Colombia" },
-  { code: "CTG", city: "Cartagena", country: "Colombia" },
-  { code: "BAQ", city: "Barranquilla", country: "Colombia" },
-  // Latin America - Mexico
-  { code: "MEX", city: "Ciudad de Mexico", country: "Mexico" },
-  { code: "GDL", city: "Guadalajara", country: "Mexico" },
-  { code: "CUN", city: "Cancun", country: "Mexico" },
-  { code: "MTY", city: "Monterrey", country: "Mexico" },
-  { code: "TIJ", city: "Tijuana", country: "Mexico" },
-  // Latin America - Argentina
-  { code: "EZE", city: "Buenos Aires", country: "Argentina" },
-  { code: "COR", city: "Cordoba", country: "Argentina" },
-  { code: "MDZ", city: "Mendoza", country: "Argentina" },
-  // Latin America - Peru
-  { code: "LIM", city: "Lima", country: "Peru" },
-  { code: "CUZ", city: "Cusco", country: "Peru" },
-  // Latin America - Brasil
-  { code: "GRU", city: "Sao Paulo", country: "Brasil" },
-  { code: "GIG", city: "Rio de Janeiro", country: "Brasil" },
-  { code: "BSB", city: "Brasilia", country: "Brasil" },
-  // Latin America - Others
-  { code: "PTY", city: "Panama", country: "Panama" },
-  { code: "SJO", city: "San Jose", country: "Costa Rica" },
-  { code: "SDQ", city: "Santo Domingo", country: "Republica Dominicana" },
-  { code: "PUJ", city: "Punta Cana", country: "Republica Dominicana" },
-  { code: "HAV", city: "La Habana", country: "Cuba" },
-  { code: "SCL", city: "Santiago", country: "Chile" },
-  { code: "UIO", city: "Quito", country: "Ecuador" },
-  { code: "GYE", city: "Guayaquil", country: "Ecuador" },
-  { code: "CCS", city: "Caracas", country: "Venezuela" },
-  { code: "MVD", city: "Montevideo", country: "Uruguay" },
-  { code: "LPB", city: "La Paz", country: "Bolivia" },
-  { code: "ASU", city: "Asuncion", country: "Paraguay" },
+  // CO - Colombia
+  { code: "BOG", city: "Bogota", country: "Colombia", countryCode: "CO" },
+  { code: "MDE", city: "Medellin", country: "Colombia", countryCode: "CO" },
+  { code: "CLO", city: "Cali", country: "Colombia", countryCode: "CO" },
+  { code: "CTG", city: "Cartagena", country: "Colombia", countryCode: "CO" },
+  { code: "BAQ", city: "Barranquilla", country: "Colombia", countryCode: "CO" },
+  { code: "SMR", city: "Santa Marta", country: "Colombia", countryCode: "CO" },
+  { code: "BGA", city: "Bucaramanga", country: "Colombia", countryCode: "CO" },
+  { code: "PEI", city: "Pereira", country: "Colombia", countryCode: "CO" },
+  { code: "ADZ", city: "San Andres", country: "Colombia", countryCode: "CO" },
+  // MX - Mexico
+  { code: "MEX", city: "Ciudad de Mexico", country: "Mexico", countryCode: "MX" },
+  { code: "GDL", city: "Guadalajara", country: "Mexico", countryCode: "MX" },
+  { code: "CUN", city: "Cancun", country: "Mexico", countryCode: "MX" },
+  { code: "MTY", city: "Monterrey", country: "Mexico", countryCode: "MX" },
+  { code: "TIJ", city: "Tijuana", country: "Mexico", countryCode: "MX" },
+  { code: "PVR", city: "Puerto Vallarta", country: "Mexico", countryCode: "MX" },
+  { code: "SJD", city: "San Jose del Cabo", country: "Mexico", countryCode: "MX" },
+  { code: "MID", city: "Merida", country: "Mexico", countryCode: "MX" },
+  // BR - Brasil
+  { code: "GRU", city: "Sao Paulo (Guarulhos)", country: "Brasil", countryCode: "BR" },
+  { code: "CGH", city: "Sao Paulo (Congonhas)", country: "Brasil", countryCode: "BR" },
+  { code: "GIG", city: "Rio de Janeiro (Galeao)", country: "Brasil", countryCode: "BR" },
+  { code: "SDU", city: "Rio de Janeiro (Santos Dumont)", country: "Brasil", countryCode: "BR" },
+  { code: "BSB", city: "Brasilia", country: "Brasil", countryCode: "BR" },
+  { code: "CNF", city: "Belo Horizonte", country: "Brasil", countryCode: "BR" },
+  { code: "SSA", city: "Salvador", country: "Brasil", countryCode: "BR" },
+  { code: "REC", city: "Recife", country: "Brasil", countryCode: "BR" },
+  { code: "FOR", city: "Fortaleza", country: "Brasil", countryCode: "BR" },
+  { code: "POA", city: "Porto Alegre", country: "Brasil", countryCode: "BR" },
+  { code: "CWB", city: "Curitiba", country: "Brasil", countryCode: "BR" },
+  { code: "FLN", city: "Florianopolis", country: "Brasil", countryCode: "BR" },
+  // AR - Argentina
+  { code: "EZE", city: "Buenos Aires (Ezeiza)", country: "Argentina", countryCode: "AR" },
+  { code: "AEP", city: "Buenos Aires (Aeroparque)", country: "Argentina", countryCode: "AR" },
+  { code: "COR", city: "Cordoba", country: "Argentina", countryCode: "AR" },
+  { code: "MDZ", city: "Mendoza", country: "Argentina", countryCode: "AR" },
+  { code: "ROS", city: "Rosario", country: "Argentina", countryCode: "AR" },
+  { code: "BRC", city: "Bariloche", country: "Argentina", countryCode: "AR" },
+  { code: "IGR", city: "Iguazu", country: "Argentina", countryCode: "AR" },
+  { code: "SLA", city: "Salta", country: "Argentina", countryCode: "AR" },
+  // PE - Peru
+  { code: "LIM", city: "Lima", country: "Peru", countryCode: "PE" },
+  { code: "CUZ", city: "Cusco", country: "Peru", countryCode: "PE" },
+  { code: "AQP", city: "Arequipa", country: "Peru", countryCode: "PE" },
+  { code: "TRU", city: "Trujillo", country: "Peru", countryCode: "PE" },
+  { code: "PIU", city: "Piura", country: "Peru", countryCode: "PE" },
+  // PA - Panama
+  { code: "PTY", city: "Ciudad de Panama", country: "Panama", countryCode: "PA" },
+  { code: "DAV", city: "David", country: "Panama", countryCode: "PA" },
+  { code: "BOC", city: "Bocas del Toro", country: "Panama", countryCode: "PA" },
+  // CR - Costa Rica
+  { code: "SJO", city: "San Jose", country: "Costa Rica", countryCode: "CR" },
+  { code: "LIR", city: "Liberia", country: "Costa Rica", countryCode: "CR" },
+  // DO - Republica Dominicana
+  { code: "SDQ", city: "Santo Domingo", country: "Rep. Dominicana", countryCode: "DO" },
+  { code: "PUJ", city: "Punta Cana", country: "Rep. Dominicana", countryCode: "DO" },
+  { code: "STI", city: "Santiago", country: "Rep. Dominicana", countryCode: "DO" },
+  { code: "POP", city: "Puerto Plata", country: "Rep. Dominicana", countryCode: "DO" },
+  // CB - Caribe
+  { code: "HAV", city: "La Habana", country: "Cuba (Caribe)", countryCode: "CB" },
+  { code: "VRA", city: "Varadero", country: "Cuba (Caribe)", countryCode: "CB" },
+  { code: "MBJ", city: "Montego Bay", country: "Jamaica (Caribe)", countryCode: "CB" },
+  { code: "KIN", city: "Kingston", country: "Jamaica (Caribe)", countryCode: "CB" },
+  { code: "SXM", city: "Sint Maarten", country: "San Martin (Caribe)", countryCode: "CB" },
+  { code: "AUA", city: "Aruba", country: "Aruba (Caribe)", countryCode: "CB" },
+  { code: "CUR", city: "Curacao", country: "Curacao (Caribe)", countryCode: "CB" },
+  { code: "NAS", city: "Nassau", country: "Bahamas (Caribe)", countryCode: "CB" },
+  { code: "POS", city: "Puerto Espana", country: "Trinidad (Caribe)", countryCode: "CB" },
+  { code: "BGI", city: "Bridgetown", country: "Barbados (Caribe)", countryCode: "CB" },
+  // Others Latin America
+  { code: "SCL", city: "Santiago", country: "Chile", countryCode: "CL" },
+  { code: "UIO", city: "Quito", country: "Ecuador", countryCode: "EC" },
+  { code: "GYE", city: "Guayaquil", country: "Ecuador", countryCode: "EC" },
+  { code: "CCS", city: "Caracas", country: "Venezuela", countryCode: "VE" },
+  { code: "MVD", city: "Montevideo", country: "Uruguay", countryCode: "UY" },
+  { code: "LPB", city: "La Paz", country: "Bolivia", countryCode: "BO" },
+  { code: "VVI", city: "Santa Cruz", country: "Bolivia", countryCode: "BO" },
+  { code: "ASU", city: "Asuncion", country: "Paraguay", countryCode: "PY" },
+  { code: "GUA", city: "Guatemala City", country: "Guatemala", countryCode: "GT" },
+  { code: "SAL", city: "San Salvador", country: "El Salvador", countryCode: "SV" },
+  { code: "TGU", city: "Tegucigalpa", country: "Honduras", countryCode: "HN" },
+  { code: "MGA", city: "Managua", country: "Nicaragua", countryCode: "NI" },
   // Europe - España
-  { code: "MAD", city: "Madrid", country: "España" },
-  { code: "BCN", city: "Barcelona", country: "España" },
-  { code: "VLC", city: "Valencia", country: "España" },
-  { code: "AGP", city: "Malaga", country: "España" },
-  { code: "SVQ", city: "Sevilla", country: "España" },
+  { code: "MAD", city: "Madrid", country: "Espana", countryCode: "ES" },
+  { code: "BCN", city: "Barcelona", country: "Espana", countryCode: "ES" },
+  { code: "VLC", city: "Valencia", country: "Espana", countryCode: "ES" },
+  { code: "AGP", city: "Malaga", country: "Espana", countryCode: "ES" },
+  { code: "SVQ", city: "Sevilla", country: "Espana", countryCode: "ES" },
+  { code: "PMI", city: "Palma de Mallorca", country: "Espana", countryCode: "ES" },
+  { code: "TFS", city: "Tenerife Sur", country: "Espana", countryCode: "ES" },
+  { code: "LPA", city: "Gran Canaria", country: "Espana", countryCode: "ES" },
+  { code: "BIO", city: "Bilbao", country: "Espana", countryCode: "ES" },
+  { code: "ALC", city: "Alicante", country: "Espana", countryCode: "ES" },
+  // Europe - Francia
+  { code: "CDG", city: "Paris (Charles de Gaulle)", country: "Francia", countryCode: "FR" },
+  { code: "ORY", city: "Paris (Orly)", country: "Francia", countryCode: "FR" },
+  { code: "LYS", city: "Lyon", country: "Francia", countryCode: "FR" },
+  { code: "MRS", city: "Marsella", country: "Francia", countryCode: "FR" },
+  { code: "NCE", city: "Niza", country: "Francia", countryCode: "FR" },
+  // Europe - Italia
+  { code: "FCO", city: "Roma (Fiumicino)", country: "Italia", countryCode: "IT" },
+  { code: "MXP", city: "Milan (Malpensa)", country: "Italia", countryCode: "IT" },
+  { code: "VCE", city: "Venecia", country: "Italia", countryCode: "IT" },
+  { code: "FLR", city: "Florencia", country: "Italia", countryCode: "IT" },
+  { code: "NAP", city: "Napoles", country: "Italia", countryCode: "IT" },
   // Europe - Others
-  { code: "CDG", city: "Paris", country: "Francia" },
-  { code: "FCO", city: "Roma", country: "Italia" },
-  { code: "MXP", city: "Milan", country: "Italia" },
-  { code: "LHR", city: "Londres", country: "Reino Unido" },
-  { code: "AMS", city: "Amsterdam", country: "Paises Bajos" },
-  { code: "FRA", city: "Frankfurt", country: "Alemania" },
-  { code: "MUC", city: "Munich", country: "Alemania" },
-  { code: "LIS", city: "Lisboa", country: "Portugal" },
-  { code: "OPO", city: "Oporto", country: "Portugal" },
-  { code: "ATH", city: "Atenas", country: "Grecia" },
-  { code: "PRG", city: "Praga", country: "Republica Checa" },
-  { code: "VIE", city: "Viena", country: "Austria" },
-  { code: "ZRH", city: "Zurich", country: "Suiza" },
-  { code: "BRU", city: "Bruselas", country: "Belgica" },
-  { code: "CPH", city: "Copenhague", country: "Dinamarca" },
-  { code: "DUB", city: "Dublin", country: "Irlanda" },
+  { code: "LHR", city: "Londres (Heathrow)", country: "Reino Unido", countryCode: "GB" },
+  { code: "LGW", city: "Londres (Gatwick)", country: "Reino Unido", countryCode: "GB" },
+  { code: "MAN", city: "Manchester", country: "Reino Unido", countryCode: "GB" },
+  { code: "AMS", city: "Amsterdam", country: "Paises Bajos", countryCode: "NL" },
+  { code: "FRA", city: "Frankfurt", country: "Alemania", countryCode: "DE" },
+  { code: "MUC", city: "Munich", country: "Alemania", countryCode: "DE" },
+  { code: "BER", city: "Berlin", country: "Alemania", countryCode: "DE" },
+  { code: "LIS", city: "Lisboa", country: "Portugal", countryCode: "PT" },
+  { code: "OPO", city: "Oporto", country: "Portugal", countryCode: "PT" },
+  { code: "ATH", city: "Atenas", country: "Grecia", countryCode: "GR" },
+  { code: "SKG", city: "Tesalonica", country: "Grecia", countryCode: "GR" },
+  { code: "JTR", city: "Santorini", country: "Grecia", countryCode: "GR" },
+  { code: "PRG", city: "Praga", country: "Republica Checa", countryCode: "CZ" },
+  { code: "VIE", city: "Viena", country: "Austria", countryCode: "AT" },
+  { code: "ZRH", city: "Zurich", country: "Suiza", countryCode: "CH" },
+  { code: "GVA", city: "Ginebra", country: "Suiza", countryCode: "CH" },
+  { code: "BRU", city: "Bruselas", country: "Belgica", countryCode: "BE" },
+  { code: "CPH", city: "Copenhague", country: "Dinamarca", countryCode: "DK" },
+  { code: "DUB", city: "Dublin", country: "Irlanda", countryCode: "IE" },
+  { code: "OSL", city: "Oslo", country: "Noruega", countryCode: "NO" },
+  { code: "ARN", city: "Estocolmo", country: "Suecia", countryCode: "SE" },
+  { code: "HEL", city: "Helsinki", country: "Finlandia", countryCode: "FI" },
+  { code: "WAW", city: "Varsovia", country: "Polonia", countryCode: "PL" },
+  { code: "BUD", city: "Budapest", country: "Hungria", countryCode: "HU" },
+  { code: "ZAG", city: "Zagreb", country: "Croacia", countryCode: "HR" },
+  { code: "IST", city: "Estambul", country: "Turquia", countryCode: "TR" },
+  { code: "KEF", city: "Reikiavik", country: "Islandia", countryCode: "IS" },
 ];
 
 export function HeroFlightSearch() {
@@ -381,9 +456,12 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
-                          <div>
-                            <span className="font-medium">{airport.city}</span>
-                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-mono bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">{airport.countryCode}</span>
+                            <div>
+                              <span className="font-medium">{airport.city}</span>
+                              <span className="text-muted-foreground text-xs ml-1">{airport.country}</span>
+                            </div>
                           </div>
                           <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
@@ -428,9 +506,12 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
-                          <div>
-                            <span className="font-medium">{airport.city}</span>
-                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-mono bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">{airport.countryCode}</span>
+                            <div>
+                              <span className="font-medium">{airport.city}</span>
+                              <span className="text-muted-foreground text-xs ml-1">{airport.country}</span>
+                            </div>
                           </div>
                           <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
@@ -596,9 +677,12 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
-                          <div>
-                            <span className="font-medium">{airport.city}</span>
-                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-mono bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">{airport.countryCode}</span>
+                            <div>
+                              <span className="font-medium">{airport.city}</span>
+                              <span className="text-muted-foreground text-xs ml-1">{airport.country}</span>
+                            </div>
                           </div>
                           <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
@@ -643,9 +727,12 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
-                          <div>
-                            <span className="font-medium">{airport.city}</span>
-                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-mono bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">{airport.countryCode}</span>
+                            <div>
+                              <span className="font-medium">{airport.city}</span>
+                              <span className="text-muted-foreground text-xs ml-1">{airport.country}</span>
+                            </div>
                           </div>
                           <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
