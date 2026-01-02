@@ -1328,7 +1328,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Descubre Albania", en: "Discover Albania" }, duration: "8 dias", price: "€1,899", includes: { es: ["Vuelos", "Hoteles 4*", "Tours guiados", "Desayunos"], en: ["Flights", "4* Hotels", "Guided tours", "Breakfasts"] } }
+      { id: "albania-1", name: { es: "Descubre Albania", en: "Discover Albania" }, duration: { es: "8 dias", en: "8 days" }, price: "1,899", taxes: "350", includes: { es: ["Vuelos", "Hoteles 4*", "Tours guiados", "Desayunos"], en: ["Flights", "4* Hotels", "Guided tours", "Breakfasts"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Llegada a Tirana", en: "Arrival in Tirana" }, description: { es: "Bienvenida y traslado al hotel en la vibrante capital albanesa.", en: "Welcome and transfer to hotel in the vibrant Albanian capital." }, activities: { es: ["Traslado aeropuerto", "Check-in hotel", "Paseo plaza Skanderbeg"], en: ["Airport transfer", "Hotel check-in", "Skanderbeg Square walk"] } },
@@ -1368,7 +1368,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1563890738384-0d3a3c15c14c?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Austria Imperial", en: "Imperial Austria" }, duration: "9 dias", price: "€2,799", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Concierto Viena"], en: ["Flights", "4* Hotels", "Breakfasts", "Vienna Concert"] } }
+      { id: "austria-1", name: { es: "Austria Imperial", en: "Imperial Austria" }, duration: { es: "9 dias", en: "9 days" }, price: "2,799", taxes: "450", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Concierto Viena"], en: ["Flights", "4* Hotels", "Breakfasts", "Vienna Concert"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Viena Llegada", en: "Vienna Arrival" }, description: { es: "Bienvenida a la capital imperial austriaca.", en: "Welcome to the Austrian imperial capital." }, activities: { es: ["Traslado hotel", "Paseo Ringstrasse", "Cena de bienvenida"], en: ["Hotel transfer", "Ringstrasse walk", "Welcome dinner"] } },
@@ -1408,7 +1408,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Belgica Esencial", en: "Essential Belgium" }, duration: "6 dias", price: "€1,699", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Degustaciones"], en: ["Flights", "4* Hotels", "Breakfasts", "Tastings"] } }
+      { id: "belgium-1", name: { es: "Belgica Esencial", en: "Essential Belgium" }, duration: { es: "6 dias", en: "6 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Degustaciones"], en: ["Flights", "4* Hotels", "Breakfasts", "Tastings"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Bruselas", en: "Brussels" }, description: { es: "Llegada a la capital de Europa.", en: "Arrival in the capital of Europe." }, activities: { es: ["Grand Place", "Manneken Pis", "Galerias Saint-Hubert"], en: ["Grand Place", "Manneken Pis", "Saint-Hubert Galleries"] } },
@@ -1445,7 +1445,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Bohemia Romantica", en: "Romantic Bohemia" }, duration: "7 dias", price: "€1,799", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
+      { id: "czech-republic-1", name: { es: "Bohemia Romantica", en: "Romantic Bohemia" }, duration: { es: "7 dias", en: "7 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Praga Llegada", en: "Prague Arrival" }, description: { es: "Bienvenida a la ciudad de las cien torres.", en: "Welcome to the city of a hundred towers." }, activities: { es: ["Traslado hotel", "Plaza Ciudad Vieja", "Cena tipica"], en: ["Hotel transfer", "Old Town Square", "Traditional dinner"] } },
@@ -1483,7 +1483,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Dinamarca Hygge", en: "Hygge Denmark" }, duration: "6 dias", price: "€2,199", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Copenhagen Card"], en: ["Flights", "4* Hotels", "Breakfasts", "Copenhagen Card"] } }
+      { id: "denmark-1", name: { es: "Dinamarca Hygge", en: "Hygge Denmark" }, duration: { es: "6 dias", en: "6 days" }, price: "2,199", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Copenhagen Card"], en: ["Flights", "4* Hotels", "Breakfasts", "Copenhagen Card"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Copenhague", en: "Copenhagen" }, description: { es: "Llegada a la capital mas feliz del mundo.", en: "Arrival in the world's happiest capital." }, activities: { es: ["Traslado hotel", "Nyhavn", "Cena nordica"], en: ["Hotel transfer", "Nyhavn", "Nordic dinner"] } },
@@ -1520,7 +1520,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Laponia Magica", en: "Magical Lapland" }, duration: "7 dias", price: "€3,299", includes: { es: ["Vuelos", "Hoteles/Iglus", "Actividades articas", "Aurora tour"], en: ["Flights", "Hotels/Igloos", "Arctic activities", "Aurora tour"] } }
+      { id: "finland-1", name: { es: "Laponia Magica", en: "Magical Lapland" }, duration: { es: "7 dias", en: "7 days" }, price: "3,299", taxes: "520", includes: { es: ["Vuelos", "Hoteles/Iglus", "Actividades articas", "Aurora tour"], en: ["Flights", "Hotels/Igloos", "Arctic activities", "Aurora tour"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Helsinki", en: "Helsinki" }, description: { es: "Llegada a la capital del diseno nordico.", en: "Arrival in the Nordic design capital." }, activities: { es: ["Traslado hotel", "Catedral Helsinki", "Mercado puerto"], en: ["Hotel transfer", "Helsinki Cathedral", "Market Square"] } },
@@ -1558,7 +1558,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Budapest y Danubio", en: "Budapest and Danube" }, duration: "6 dias", price: "€1,599", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Crucero Danubio"], en: ["Flights", "4* Hotels", "Breakfasts", "Danube cruise"] } }
+      { id: "hungary-1", name: { es: "Budapest y Danubio", en: "Budapest and Danube" }, duration: { es: "6 dias", en: "6 days" }, price: "1,599", taxes: "300", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Crucero Danubio"], en: ["Flights", "4* Hotels", "Breakfasts", "Danube cruise"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Budapest Llegada", en: "Budapest Arrival" }, description: { es: "Bienvenida a la Perla del Danubio.", en: "Welcome to the Pearl of the Danube." }, activities: { es: ["Traslado hotel", "Paseo Pest", "Crucero nocturno Danubio"], en: ["Hotel transfer", "Pest walk", "Danube night cruise"] } },
@@ -1595,7 +1595,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Islandia Esencial", en: "Essential Iceland" }, duration: "8 dias", price: "€3,499", includes: { es: ["Vuelos", "Hoteles/Cabanas", "4x4", "Actividades"], en: ["Flights", "Hotels/Cabins", "4x4", "Activities"] } }
+      { id: "iceland-1", name: { es: "Islandia Esencial", en: "Essential Iceland" }, duration: { es: "8 dias", en: "8 days" }, price: "3,499", taxes: "550", includes: { es: ["Vuelos", "Hoteles/Cabanas", "4x4", "Actividades"], en: ["Flights", "Hotels/Cabins", "4x4", "Activities"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Reykjavik", en: "Reykjavik" }, description: { es: "Llegada a la capital mas septentrional.", en: "Arrival in the world's northernmost capital." }, activities: { es: ["Traslado hotel", "Centro Reykjavik", "Hallgrimskirkja"], en: ["Hotel transfer", "Reykjavik center", "Hallgrimskirkja"] } },
@@ -1634,7 +1634,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Irlanda Esmeralda", en: "Emerald Ireland" }, duration: "9 dias", price: "€2,499", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos irlandeses"], en: ["Flights", "4* Hotels", "Rental car", "Irish breakfasts"] } }
+      { id: "ireland-1", name: { es: "Irlanda Esmeralda", en: "Emerald Ireland" }, duration: { es: "9 dias", en: "9 days" }, price: "2,499", taxes: "420", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos irlandeses"], en: ["Flights", "4* Hotels", "Rental car", "Irish breakfasts"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Dublin", en: "Dublin" }, description: { es: "Llegada a la capital literaria.", en: "Arrival in the literary capital." }, activities: { es: ["Traslado hotel", "Temple Bar", "Pub tradicional"], en: ["Hotel transfer", "Temple Bar", "Traditional pub"] } },
@@ -1674,7 +1674,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1484264883846-1fd0f423c0b3?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Fiordos de Noruega", en: "Norway's Fjords" }, duration: "9 dias", price: "€3,599", includes: { es: ["Vuelos", "Hoteles 4*", "Crucero fiordo", "Tren panoramico"], en: ["Flights", "4* Hotels", "Fjord cruise", "Panoramic train"] } }
+      { id: "norway-1", name: { es: "Fiordos de Noruega", en: "Norway's Fjords" }, duration: { es: "9 dias", en: "9 days" }, price: "3,599", taxes: "560", includes: { es: ["Vuelos", "Hoteles 4*", "Crucero fiordo", "Tren panoramico"], en: ["Flights", "4* Hotels", "Fjord cruise", "Panoramic train"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Oslo", en: "Oslo" }, description: { es: "Llegada a la capital noruega.", en: "Arrival in the Norwegian capital." }, activities: { es: ["Traslado hotel", "Opera Oslo", "Paseo Aker Brygge"], en: ["Hotel transfer", "Oslo Opera", "Aker Brygge walk"] } },
@@ -1714,7 +1714,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Polonia Esencial", en: "Essential Poland" }, duration: "8 dias", price: "€1,799", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours guiados"], en: ["Flights", "4* Hotels", "Breakfasts", "Guided tours"] } }
+      { id: "poland-1", name: { es: "Polonia Esencial", en: "Essential Poland" }, duration: { es: "8 dias", en: "8 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours guiados"], en: ["Flights", "4* Hotels", "Breakfasts", "Guided tours"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Varsovia", en: "Warsaw" }, description: { es: "Llegada a la capital polaca.", en: "Arrival in the Polish capital." }, activities: { es: ["Traslado hotel", "Ciudad Vieja", "Cena polaca"], en: ["Hotel transfer", "Old Town", "Polish dinner"] } },
@@ -1753,7 +1753,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1584646098378-0874589d76b1?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Transilvania Misteriosa", en: "Mysterious Transylvania" }, duration: "8 dias", price: "€1,699", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayunos"], en: ["Flights", "4* Hotels", "Private transport", "Breakfasts"] } }
+      { id: "romania-1", name: { es: "Transilvania Misteriosa", en: "Mysterious Transylvania" }, duration: { es: "8 dias", en: "8 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayunos"], en: ["Flights", "4* Hotels", "Private transport", "Breakfasts"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Bucarest", en: "Bucharest" }, description: { es: "Llegada a la capital rumana.", en: "Arrival in the Romanian capital." }, activities: { es: ["Traslado hotel", "Palacio Parlamento", "Casco antiguo"], en: ["Hotel transfer", "Parliament Palace", "Old Town"] } },
@@ -1792,7 +1792,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Suecia Esencial", en: "Essential Sweden" }, duration: "7 dias", price: "€2,599", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Stockholm Pass"], en: ["Flights", "4* Hotels", "Breakfasts", "Stockholm Pass"] } }
+      { id: "sweden-1", name: { es: "Suecia Esencial", en: "Essential Sweden" }, duration: { es: "7 dias", en: "7 days" }, price: "2,599", taxes: "420", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Stockholm Pass"], en: ["Flights", "4* Hotels", "Breakfasts", "Stockholm Pass"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Estocolmo", en: "Stockholm" }, description: { es: "Llegada a la Venecia del Norte.", en: "Arrival in the Venice of the North." }, activities: { es: ["Traslado hotel", "Gamla Stan", "Fika sueco"], en: ["Hotel transfer", "Gamla Stan", "Swedish fika"] } },
@@ -1830,7 +1830,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Capitales Balticas", en: "Baltic Capitals" }, duration: "9 dias", price: "€1,999", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte entre paises", "Desayunos"], en: ["Flights", "4* Hotels", "Inter-country transport", "Breakfasts"] } }
+      { id: "baltic-states-1", name: { es: "Capitales Balticas", en: "Baltic Capitals" }, duration: { es: "9 dias", en: "9 days" }, price: "1,999", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte entre paises", "Desayunos"], en: ["Flights", "4* Hotels", "Inter-country transport", "Breakfasts"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Vilna", en: "Vilnius" }, description: { es: "Llegada a la capital lituana.", en: "Arrival in the Lithuanian capital." }, activities: { es: ["Traslado hotel", "Catedral Vilna", "Ciudad Vieja"], en: ["Hotel transfer", "Vilnius Cathedral", "Old Town"] } },
@@ -1870,7 +1870,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Chipre Esencial", en: "Essential Cyprus" }, duration: "7 dias", price: "€1,899", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos"], en: ["Flights", "4* Hotels", "Rental car", "Breakfasts"] } }
+      { id: "cyprus-1", name: { es: "Chipre Esencial", en: "Essential Cyprus" }, duration: { es: "7 dias", en: "7 days" }, price: "1,899", taxes: "360", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos"], en: ["Flights", "4* Hotels", "Rental car", "Breakfasts"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Larnaca", en: "Larnaca" }, description: { es: "Llegada a Chipre.", en: "Arrival in Cyprus." }, activities: { es: ["Traslado hotel", "Paseo maritimo", "Iglesia San Lazaro"], en: ["Hotel transfer", "Seafront promenade", "St. Lazarus Church"] } },
@@ -1908,7 +1908,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1591622180684-9f9e8e6a0e3a?w=800&q=80"
     ],
     packages: [
-      { name: { es: "Escocia Magica", en: "Magical Scotland" }, duration: "8 dias", price: "€2,399", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayuno escoces"], en: ["Flights", "4* Hotels", "Private transport", "Scottish breakfast"] } }
+      { id: "scotland-1", name: { es: "Escocia Magica", en: "Magical Scotland" }, duration: { es: "8 dias", en: "8 days" }, price: "2,399", taxes: "400", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayuno escoces"], en: ["Flights", "4* Hotels", "Private transport", "Scottish breakfast"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Edimburgo", en: "Edinburgh" }, description: { es: "Llegada a la capital escocesa.", en: "Arrival in the Scottish capital." }, activities: { es: ["Traslado hotel", "Royal Mile", "Pub tradicional"], en: ["Hotel transfer", "Royal Mile", "Traditional pub"] } },
