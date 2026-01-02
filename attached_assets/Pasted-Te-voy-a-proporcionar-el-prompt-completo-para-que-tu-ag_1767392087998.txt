@@ -1,0 +1,299 @@
+Te voy a proporcionar el prompt completo para que tu agente de desarrollo web repare y complete el formulario de búsqueda de vuelos con toda la funcionalidad que necesitas:
+
+PROMPT: AGENTE PARA REPARAR FORMULARIO DE BÚSQUEDA DE VUELOS - TRIPSEUROPA
+Rol: Eres un desarrollador frontend senior especializado en formularios interactivos, validación de datos y flujos de conversión para plataformas de viajes.
+
+Objetivo Inmediato:
+Reparar y completar el formulario de búsqueda de vuelos en tripseuropa.com para que funcione perfectamente en desktop y mobile. El flujo debe ser: Búsqueda → Datos Personales → Conexión WhatsApp.
+
+Problemas Identificados:
+
+Los campos "Origen" y "Destino" no muestran opciones completas
+
+Falta selector de fechas de retorno ("Vuelta")
+
+No hay validación correcta de formularios
+
+El flujo de múltiples pasos no está implementado
+
+No conecta con WhatsApp al finalizar
+
+Responsive design incompleto en mobile
+
+CHECKLIST DE IMPLEMENTACIÓN:
+PASO 1: CAMPOS DE ORIGEN (Origen)
+text
+✓ Crear dropdown con TODOS los países latinoamericanos:
+  - Colombia (Bogotá BOG, Medellín MDE, Cali CLO, Cartagena CTG)
+  - México (CDMX MEX, Guadalajara GDL, Monterrey MTY)
+  - Argentina (Buenos Aires EZE, AEP)
+  - Perú (Lima LIM, Cusco CUS)
+  - Chile (Santiago SCL)
+  - Brasil (São Paulo GIG, Rio de Janeiro SDU)
+  - Ecuador (Quito UIO)
+  - Panamá (Panamá City PTY)
+  - Costa Rica (San José SJO)
+  - República Dominicana (Santo Domingo SDQ)
+
+✓ Permitir búsqueda dentro del dropdown (autocomplete)
+✓ Mostrar código aeropuerto junto a ciudad
+✓ Estilo visual: icono avión + nombre ciudad + código
+PASO 2: CAMPOS DE DESTINO (Destino)
+text
+✓ Crear dropdown con ciudades europeas:
+  - España: Madrid (MAD), Barcelona (BCN), Valencia (VLC), Málaga (AGP)
+  - Italia: Roma (FCO), Milán (MXP), Venecia (VCE), Florencia (FLR)
+  - Francia: París (CDG), Lyon (LYS), Marsella (MRS)
+  - Portugal: Lisboa (LIS), Oporto (OPO)
+  - Alemania: Berlín (BER), Frankfurt (FRA), Múnich (MUC)
+  - Reino Unido: Londres (LHR), Manchester (MAN)
+  - Países Bajos: Ámsterdam (AMS)
+  - Suiza: Zurich (ZRH)
+  - Austria: Viena (VIE)
+  - Grecia: Atenas (ATH)
+  - República Checa: Praga (PRG)
+  - Turquía: Estambul (IST)
+
+✓ Autocomplete búsqueda
+✓ Mostrar código + ciudad + país
+PASO 3: SELECTOR DE FECHAS
+text
+✓ Campo "Fecha de Salida" (Ida)
+  - Input tipo date
+  - Validación: No permitir fechas pasadas
+  - Placeholder: "DD/MM/YYYY"
+  - Calendario picker integrado
+
+✓ Campo "Fecha de Retorno" (Vuelta)
+  - Input tipo date
+  - Validación: Debe ser posterior a fecha de salida
+  - Mínimo 3 días diferencia
+  - Placeholder: "DD/MM/YYYY"
+  - Opcional si es "Solo Ida"
+
+✓ Toggle "Solo Ida" / "Ida y Vuelta"
+  - Ocultar/mostrar campo de retorno dinámicamente
+PASO 4: SELECTOR DE PASAJEROS
+text
+✓ Dropdown Cantidad de Pasajeros
+  - Opciones: 1, 2, 3, 4, 5, 6, 7, 8+
+  - Validación: Mínimo 1
+
+✓ Desglose opcional (mostrar al expandir):
+  - Adultos (mayores de 12 años)
+  - Niños (2-11 años)
+  - Bebés (0-1 años)
+  - Total automático
+PASO 5: BOTÓN "SIGUIENTE"
+text
+✓ Validación antes de continuar:
+  ✓ Origen: seleccionado
+  ✓ Destino: seleccionado
+  ✓ Fecha salida: válida y futura
+  ✓ Fecha retorno: válida si "Ida y Vuelta"
+  ✓ Pasajeros: mínimo 1
+
+✓ Si hay error: mostrar mensaje rojo bajo campo específico
+✓ Si validación OK: pasar a PASO 2 (Datos Personales)
+
+✓ Estilo botón:
+  - Color dorado (var--color-accent: #d4af37)
+  - Hover: más oscuro, sombra
+  - Click: estado cargando "Buscando..."
+  - 100% ancho en mobile
+PASO 6: FORMULARIO PASO 2 - DATOS PERSONALES
+text
+Mostrar modal/página nueva con:
+
+✓ Campo "Nombre Completo"
+  - Validación: mínimo 3 caracteres
+  - No números
+  - Requerido
+
+✓ Campo "Apellido"
+  - Validación: mínimo 3 caracteres
+  - Requerido
+
+✓ Campo "Teléfono WhatsApp"
+  - Formato: +XX XXXXX XXXX
+  - Validación: formato correcto
+  - Prefijo país automático según origen seleccionado
+  - Requerido
+
+✓ Campo "Email" (opcional)
+  - Validación: formato correcto
+
+✓ Resumen datos búsqueda:
+  - "Bogotá → Madrid"
+  - "15 de Enero - 30 de Enero"
+  - "4 pasajeros"
+  - Permitir editar (volver a Paso 1)
+
+✓ Botón "Conectar a WhatsApp"
+  - Color: verde WhatsApp (#25D366)
+  - Validación completa antes de continuar
+  - Click: abre WhatsApp con mensaje pre-llenado
+PASO 7: CONEXIÓN WHATSAPP
+text
+✓ URL WhatsApp con mensaje pre-llenado:
+  https://wa.me/34611105448?text=Hola%20TripsEuropa%2C%20me%20interesa%20viajar%20desde%20[ORIGEN]%20a%20[DESTINO]%20del%20[FECHA_SALIDA]%20al%20[FECHA_RETORNO].%20Soy%20[NOMBRE_COMPLETO].%20Teléfono%3A%20[TELEFONO]%20%E2%9C%88%EF%B8%8F
+
+✓ Ejemplo real:
+  https://wa.me/34611105448?text=Hola%20TripsEuropa%2C%20me%20interesa%20viajar%20desde%20Bogot%C3%A1%20a%20Madrid%20del%2015%20de%20Enero%20al%2030%20de%20Enero.%20Soy%20Juan%20Mart%C3%ADnez.%20Tel%C3%A9fono%3A%20%2B57%20311%201234567
+
+✓ Reemplazar dinámicamente:
+  - [ORIGEN] = Ciudad seleccionada
+  - [DESTINO] = Ciudad seleccionada
+  - [FECHA_SALIDA] = Formato: "15 de Enero"
+  - [FECHA_RETORNO] = Formato: "30 de Enero"
+  - [NOMBRE_COMPLETO] = Nombre + Apellido usuario
+  - [TELEFONO] = Teléfono con formato internacional
+
+✓ Abrir en nueva pestaña
+✓ Rastrear conversión (Google Analytics event)
+PASO 8: RESPONSIVE DESIGN MOBILE
+text
+✓ Desktop (1024px+):
+  - Grid 4 columnas: Origen | Destino | Fechas | Pasajeros
+  - Botón Siguiente a la derecha
+  - Dropdowns lado a lado
+
+✓ Tablet (768px - 1023px):
+  - Grid 2x2
+  - Origen y Destino en fila 1
+  - Fechas y Pasajeros en fila 2
+  - Botón 100% ancho
+
+✓ Mobile (<768px):
+  - Stack vertical (1 columna)
+  - Cada campo 100% ancho
+  - Fuente mínimo 16px para evitar zoom
+  - Padding generoso (15px)
+  - Botón 100% ancho, altura 48px
+  - Dropdowns se expanden full screen
+  - Date picker nativo del dispositivo
+
+✓ Modal Paso 2 Mobile:
+  - Full screen height
+  - Scroll si contenido se desborda
+  - Botón "Volver" en header
+PASO 9: VALIDACIONES Y ERRORES
+text
+✓ Origen no seleccionado:
+  Mensaje error: "Por favor selecciona tu ciudad de origen"
+  Color: rojo (#ef4444)
+
+✓ Destino no seleccionado:
+  Mensaje error: "Por favor selecciona tu destino en Europa"
+
+✓ Fecha pasada:
+  Mensaje error: "La fecha debe ser en el futuro"
+
+✓ Fecha retorno <= fecha salida:
+  Mensaje error: "La fecha de retorno debe ser posterior a la salida"
+
+✓ Teléfono inválido:
+  Mensaje error: "Teléfono inválido. Usa formato +XX XXXXX"
+
+✓ Nombre vacío:
+  Mensaje error: "El nombre es requerido"
+
+✓ Error aparecer debajo del campo específico
+✓ Color de borde del campo en rojo
+✓ Mensaje desaparece al corregir y hacer blur
+PASO 10: ESTADOS DEL FORMULARIO
+text
+Estados CSS a crear:
+  .form-group.error
+  .form-group.success
+  .form-group.loading
+  .btn:disabled
+  .btn:loading
+
+✓ Input error: borde rojo, fondo rojo claro
+✓ Input success: borde verde, check icon
+✓ Botón loading: spinner, texto "Validando..."
+✓ Botón disabled: opacidad 0.5, cursor not-allowed
+PASO 11: LOCAL STORAGE (Guardado de datos)
+text
+✓ Guardar en localStorage:
+  {
+    "tripseuropa_search": {
+      "origen": "BOG",
+      "destino": "MAD",
+      "fechaSalida": "2026-01-15",
+      "fechaRetorno": "2026-01-30",
+      "pasajeros": 4,
+      "timestamp": 1234567890
+    }
+  }
+
+✓ Si usuario vuelve en 24h: pre-llenar forma
+✓ Permitir limpiar datos (botón "Nueva búsqueda")
+PASO 12: ANALYTICS Y TRACKING
+text
+✓ Google Analytics eventos:
+  - ga('send', 'event', 'Flight_Search', 'Step1_Complete', origen + destino)
+  - ga('send', 'event', 'Flight_Search', 'Step2_Complete', nombre)
+  - ga('send', 'event', 'Flight_Search', 'WhatsApp_Click', telefono)
+
+✓ Facebook Pixel:
+  - fbq('track', 'Lead', { city: origen, destination: destino })
+
+✓ Guardar leads en Supabase:
+  INSERT INTO flight_leads (
+    origen, destino, fecha_salida, fecha_retorno, 
+    pasajeros, nombre, telefono, email, timestamp
+  )
+CÓDIGO ESTRUCTURA RECOMENDADA
+text
+/components
+  ├── FlightSearch.jsx (componente principal)
+  ├── SearchForm.jsx (Paso 1)
+  ├── PersonalDataForm.jsx (Paso 2)
+  ├── LocationDropdown.jsx (Origen/Destino)
+  └── DatePicker.jsx (Fechas)
+
+/utils
+  ├── validation.js (validaciones)
+  ├── whatsapp.js (generador URLs WhatsApp)
+  ├── locations.js (datos ciudades)
+  └── analytics.js (tracking)
+
+/styles
+  └── FlightSearch.module.css
+ARCHIVOS A ACTUALIZAR:
+paste.html - Actualizar sección .search-form con estructura completa
+
+Crear SearchForm.jsx - Lógica Paso 1
+
+Crear PersonalDataForm.jsx - Lógica Paso 2
+
+Crear validation.js - Todas las validaciones
+
+Crear whatsapp.js - Generador de URLs y mensajes
+
+TESTING CHECKLIST:
+text
+✓ Desktop 1920x1080: todos campos alineados
+✓ Tablet 768x1024: responsive correcto
+✓ Mobile 375x667: stack vertical correcto
+✓ Validación: campos requeridos funcionan
+✓ WhatsApp: URL correcta y mensaje pre-llenado
+✓ LocalStorage: guarda y recupera datos
+✓ Navegación: Paso 1 → Paso 2 → WhatsApp
+✓ Mobile: sin zoom involuntario
+✓ Accesibilidad: tabs funcionan, labels correctos
+ENTREGAR:
+
+✅ Formulario 100% funcional desktop + mobile
+
+✅ Validaciones completas
+
+✅ Conexión WhatsApp operativa
+
+✅ Datos guardados en Supabase
+
+✅ Sin errores en consola
+
+✅ Testing en navegadores principales

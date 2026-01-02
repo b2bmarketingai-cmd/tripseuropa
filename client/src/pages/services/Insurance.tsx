@@ -8,8 +8,8 @@ import {
   Shield, Heart, Plane, Luggage, CheckCircle, AlertTriangle,
   DollarSign, Users, ArrowRight, Clock, FileText, Phone
 } from "lucide-react";
-import { Link } from "wouter";
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const INSURANCE_FAQS: FAQItem[] = [
   {
@@ -195,16 +195,15 @@ export default function Insurance() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact">
-                    <Button 
-                      className={`w-full ${plan.popular ? 'bg-accent text-primary hover:bg-accent/90' : ''}`}
-                      variant={plan.popular ? "default" : "outline"}
-                      data-testid={`button-insurance-plan-${idx}`}
-                    >
-                      {language === "es" ? "Cotizar" : "Quote"}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    className={`w-full ${plan.popular ? 'bg-accent text-primary hover:bg-accent/90' : ''}`}
+                    variant={plan.popular ? "default" : "outline"}
+                    data-testid={`button-insurance-plan-${idx}`}
+                    onClick={() => openWhatsAppQuote({ es: `seguro ${plan.name.es}`, en: `${plan.name.en} insurance`, pt: `seguro ${plan.name.es}` }, language)}
+                  >
+                    {language === "es" ? "Cotizar" : language === "pt" ? "Orcamento" : "Quote"}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -258,12 +257,15 @@ export default function Insurance() {
               ? "Cotiza tu seguro de viaje en minutos y viaja protegido a Europa." 
               : "Quote your travel insurance in minutes and travel protected to Europe."}
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2" data-testid="button-insurance-contact">
-              <ArrowRight className="w-5 h-5" />
-              {language === "es" ? "Cotizar Seguro" : "Quote Insurance"}
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            className="bg-accent text-primary hover:bg-accent/90 gap-2" 
+            data-testid="button-insurance-contact"
+            onClick={() => openWhatsAppQuote({ es: "seguro de viaje", en: "travel insurance", pt: "seguro de viagem" }, language)}
+          >
+            <ArrowRight className="w-5 h-5" />
+            {language === "es" ? "Cotizar Seguro" : language === "pt" ? "Orcamento Seguro" : "Quote Insurance"}
+          </Button>
         </div>
       </section>
 

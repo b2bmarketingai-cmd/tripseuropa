@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES = [
   {
@@ -129,11 +130,13 @@ export function FeaturedPackages() {
                 </p>
 
                 <div className="flex gap-3">
-                  <Link href="/contact" className="flex-1">
-                    <Button className="w-full bg-accent text-primary hover:bg-accent/90" data-testid={`button-quote-${pkg.id}`}>
-                      {content[lang].quote}
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="flex-1 bg-accent text-primary hover:bg-accent/90" 
+                    data-testid={`button-quote-${pkg.id}`}
+                    onClick={() => openWhatsAppQuote({ es: pkg.title.es, en: pkg.title.en, pt: pkg.title.pt || pkg.title.es }, lang)}
+                  >
+                    {content[lang].quote}
+                  </Button>
                   <Link href={`/packages/${pkg.id}`}>
                     <Button variant="outline" data-testid={`button-view-${pkg.id}`}>
                       {content[lang].viewMore}

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Star, Calendar, Users, Plane, Hotel, Car, ArrowRight, Clock, Percent, Zap, Crown, Heart, Mountain, Utensils, Camera, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import { openWhatsAppQuote, openWhatsAppCustomQuote } from "@/lib/whatsapp";
 
 const PACKAGE_CATEGORIES = [
   { id: "all", label: { es: "Todos", en: "All" }, icon: Sparkles },
@@ -430,10 +431,16 @@ export default function Packages() {
                       ) : (
                         <p className="text-xl font-bold text-accent">${pkg.priceUSD.toLocaleString()} USD</p>
                       )}
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "por persona" : "per person"}</p>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "por persona" : language === "pt" ? "por pessoa" : "per person"}</p>
                     </div>
-                    <Button data-testid={`button-package-${pkg.id}`}>
-                      {language === "es" ? "Cotizar" : "Quote"}
+                    <Button 
+                      data-testid={`button-package-${pkg.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        openWhatsAppQuote({ es: `el paquete "${pkg.title.es}"`, en: `the "${pkg.title.en}" package`, pt: `o pacote "${pkg.title.es}"` }, language);
+                      }}
+                    >
+                      {language === "es" ? "Cotizar" : language === "pt" ? "Cotar" : "Quote"}
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>
                   </div>
@@ -447,18 +454,25 @@ export default function Packages() {
       <section className="py-16 bg-primary text-white" data-testid="section-custom-package">
         <div className="container mx-auto px-4 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
-            {language === "es" ? "Viaje Personalizado" : "Custom Trip"}
+            {language === "es" ? "Viaje Personalizado" : language === "pt" ? "Viagem Personalizada" : "Custom Trip"}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            {language === "es" ? "No encuentras lo que buscas?" : "Can't find what you're looking for?"}
+            {language === "es" ? "No encuentras lo que buscas?" : language === "pt" ? "Nao encontra o que procura?" : "Can't find what you're looking for?"}
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
             {language === "es" 
               ? "Creamos tu viaje a medida. Dinos tus fechas, destinos y presupuesto, y nuestro equipo disenara la experiencia perfecta." 
+              : language === "pt"
+              ? "Criamos sua viagem sob medida. Diga-nos suas datas, destinos e orcamento, e nossa equipe criara a experiencia perfeita."
               : "We create your custom trip. Tell us your dates, destinations and budget, and our team will design the perfect experience."}
           </p>
-          <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-custom-quote">
-            {language === "es" ? "Solicitar Cotizacion Personalizada" : "Request Custom Quote"}
+          <Button 
+            size="lg" 
+            className="bg-accent text-primary hover:bg-accent/90" 
+            data-testid="button-custom-quote"
+            onClick={() => openWhatsAppCustomQuote(language)}
+          >
+            {language === "es" ? "Solicitar Cotizacion Personalizada" : language === "pt" ? "Solicitar Orcamento Personalizado" : "Request Custom Quote"}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>

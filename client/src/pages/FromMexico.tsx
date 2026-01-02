@@ -10,6 +10,7 @@ import {
   Plane, MapPin, Star, Users, Shield, 
   ArrowRight, Phone, MessageCircle
 } from "lucide-react";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_MEXICO = [
   {
@@ -176,12 +177,15 @@ export default function FromMexico() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-red-500 text-white font-bold hover:bg-red-600" data-testid="button-mexico-cta">
-                  {content.cta[language]}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-red-500 text-white font-bold hover:bg-red-600" 
+                data-testid="button-mexico-cta"
+                onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Mexico", en: "travel to Europe from Mexico", pt: "viagens para Europa do Mexico" }, language)}
+              >
+                {content.cta[language]}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
               <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-mexico-whatsapp">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -344,12 +348,15 @@ export default function FromMexico() {
             Contactanos hoy y recibe una cotizacion personalizada. Hasta 12 MSI con tarjetas participantes.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90" data-testid="button-mexico-contact">
-                <Phone className="w-5 h-5 mr-2" />
-                Contactar Ahora
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90" 
+              data-testid="button-mexico-contact"
+              onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Mexico", en: "travel to Europe from Mexico", pt: "viagens para Europa do Mexico" }, language)}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Contactar Ahora
+            </Button>
           </div>
         </div>
       </section>

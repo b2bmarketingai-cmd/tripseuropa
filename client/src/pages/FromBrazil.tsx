@@ -10,6 +10,7 @@ import {
   Plane, MapPin, Star, Users, Shield, 
   ArrowRight, Phone, MessageCircle
 } from "lucide-react";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_BRAZIL = [
   {
@@ -174,12 +175,15 @@ export default function FromBrazil() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-green-500 text-white font-bold hover:bg-green-600" data-testid="button-brazil-cta">
-                  {content.cta[language]}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-green-500 text-white font-bold hover:bg-green-600" 
+                data-testid="button-brazil-cta"
+                onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Brasil", en: "travel to Europe from Brazil", pt: "viagens para Europa do Brasil" }, language)}
+              >
+                {content.cta[language]}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
               <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-brazil-whatsapp">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -333,12 +337,15 @@ export default function FromBrazil() {
             Entre em contato hoje e receba um orcamento personalizado em menos de 24 horas.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-white/90" data-testid="button-brazil-contact">
-                <Phone className="w-5 h-5 mr-2" />
-                Falar com Consultor
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-white text-green-600 hover:bg-white/90" 
+              data-testid="button-brazil-contact"
+              onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Brasil", en: "travel to Europe from Brazil", pt: "viagens para Europa do Brasil" }, language)}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Falar com Consultor
+            </Button>
           </div>
         </div>
       </section>

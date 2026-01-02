@@ -14,6 +14,7 @@ import {
   Globe, CreditCard, FileText, Thermometer,
   ChevronRight, Building2, Info
 } from "lucide-react";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 interface CityData {
   city: string;
@@ -812,11 +813,14 @@ export default function CityOriginTemplate() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                {t.contact}
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10"
+              onClick={() => openWhatsAppQuote({ es: `viajes desde ${cityData?.city || 'mi ciudad'}`, en: `trips from ${cityData?.city || 'my city'}`, pt: `viagens de ${cityData?.city || 'minha cidade'}` }, language)}
+            >
+              {t.contact}
+            </Button>
           </div>
         </div>
       </section>

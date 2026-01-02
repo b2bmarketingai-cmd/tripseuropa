@@ -16,6 +16,7 @@ import {
 import { Link } from "wouter";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const REGIONS = [
   { id: "all", label: "Todos", count: 110 },
@@ -623,11 +624,13 @@ export default function VacacionesEuropa() {
           
           <div className="text-center mt-8">
             <p className="text-muted-foreground mb-4">Tienes mas preguntas?</p>
-            <Link href="/contact">
-              <Button className="bg-accent text-primary" data-testid="button-contact-us">
-                Contactanos <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
+            <Button 
+              className="bg-accent text-primary" 
+              data-testid="button-contact-us"
+              onClick={() => openWhatsAppQuote({ es: "vacaciones a Europa", en: "vacation to Europe", pt: "ferias na Europa" }, language)}
+            >
+              {language === "es" ? "Contactanos" : language === "pt" ? "Contate-nos" : "Contact Us"} <ArrowRight className="w-4 h-4 ml-1" />
+            </Button>
           </div>
         </div>
       </section>

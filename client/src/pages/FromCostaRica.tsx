@@ -12,6 +12,7 @@ import {
   Building, Utensils, Camera, Compass, Leaf
 } from "lucide-react";
 import { FAQSchema, LocalBusinessSchema } from "@/components/SEOSchema";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_COSTARICA = [
   {
@@ -176,11 +177,14 @@ export default function FromCostaRica() {
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-cta-cr">
-                  {t("cta")} <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-accent text-primary hover:bg-accent/90" 
+                data-testid="button-cta-cr"
+                onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Costa Rica", en: "travel to Europe from Costa Rica", pt: "viagens para Europa da Costa Rica" }, language)}
+              >
+                {t("cta")} <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
               <Button size="lg" variant="outline" className="text-white border-white/30 hover:bg-white/10" data-testid="button-whatsapp-cr">
                 <MessageCircle className="mr-2 w-5 h-5" /> {t("whatsapp")}
               </Button>
@@ -249,11 +253,13 @@ export default function FromCostaRica() {
                     <span className="text-2xl font-bold text-accent">${pkg.price.toLocaleString()}</span>
                     <span className="text-sm text-muted-foreground">USD</span>
                   </div>
-                  <Link href="/contact">
-                    <Button className="w-full" data-testid={`button-quote-${pkg.id}`}>
-                      {language === "es" ? "Cotizar" : "Quote"}
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="w-full" 
+                    data-testid={`button-quote-${pkg.id}`}
+                    onClick={() => openWhatsAppQuote({ es: pkg.title, en: pkg.title, pt: pkg.title }, language)}
+                  >
+                    {language === "es" ? "Cotizar" : language === "pt" ? "Orcamento" : "Quote"}
+                  </Button>
                 </CardContent>
               </Card>
             ))}

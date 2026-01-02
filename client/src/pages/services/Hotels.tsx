@@ -8,8 +8,8 @@ import {
   Building, Star, MapPin, CheckCircle, Shield, Calendar, 
   DollarSign, Users, ArrowRight, Wifi, Coffee, Car
 } from "lucide-react";
-import { Link } from "wouter";
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const HOTEL_FAQS: FAQItem[] = [
   {
@@ -239,12 +239,15 @@ export default function Hotels() {
               ? "Te ayudamos a encontrar el alojamiento perfecto para tu viaje a Europa." 
               : "We help you find the perfect accommodation for your trip to Europe."}
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2" data-testid="button-hotels-contact">
-              <ArrowRight className="w-5 h-5" />
-              {language === "es" ? "Cotizar Hotel" : "Quote Hotel"}
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            className="bg-accent text-primary hover:bg-accent/90 gap-2" 
+            data-testid="button-hotels-contact"
+            onClick={() => openWhatsAppQuote({ es: "hoteles en Europa", en: "hotels in Europe", pt: "hoteis na Europa" }, language)}
+          >
+            <ArrowRight className="w-5 h-5" />
+            {language === "es" ? "Cotizar Hotel" : language === "pt" ? "Orcamento Hotel" : "Quote Hotel"}
+          </Button>
         </div>
       </section>
 

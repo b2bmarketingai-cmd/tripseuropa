@@ -10,6 +10,7 @@ import {
   Plane, MapPin, Star, Users, Shield, 
   ArrowRight, Phone, MessageCircle
 } from "lucide-react";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_ARGENTINA = [
   {
@@ -175,12 +176,15 @@ export default function FromArgentina() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-sky-500 text-white font-bold hover:bg-sky-600" data-testid="button-argentina-cta">
-                  {content.cta[language]}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-sky-500 text-white font-bold hover:bg-sky-600" 
+                data-testid="button-argentina-cta"
+                onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Argentina", en: "travel to Europe from Argentina", pt: "viagens para Europa da Argentina" }, language)}
+              >
+                {content.cta[language]}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
               <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-argentina-whatsapp">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -343,12 +347,15 @@ export default function FromArgentina() {
             Contactanos hoy y recibe una cotizacion personalizada. Consulta por nuestros tours de raices italianas y espanolas.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-sky-600 hover:bg-white/90" data-testid="button-argentina-contact">
-                <Phone className="w-5 h-5 mr-2" />
-                Contactar Ahora
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-white text-sky-600 hover:bg-white/90" 
+              data-testid="button-argentina-contact"
+              onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Argentina", en: "travel to Europe from Argentina", pt: "viagens para Europa da Argentina" }, language)}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Contactar Ahora
+            </Button>
           </div>
         </div>
       </section>

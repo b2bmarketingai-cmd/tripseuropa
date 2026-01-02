@@ -13,6 +13,7 @@ import {
   CheckCircle, ArrowRight, Phone, MessageCircle, Heart,
   Building, Utensils, Camera, Compass
 } from "lucide-react";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_COLOMBIA = [
   {
@@ -183,12 +184,15 @@ export default function FromColombia() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-accent text-primary font-bold hover:bg-accent/90" data-testid="button-colombia-cta">
-                  {content.cta[language]}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-accent text-primary font-bold hover:bg-accent/90" 
+                data-testid="button-colombia-cta"
+                onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Colombia", en: "travel to Europe from Colombia", pt: "viagens para Europa da Colombia" }, language)}
+              >
+                {content.cta[language]}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
               <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-colombia-whatsapp">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -358,12 +362,15 @@ export default function FromColombia() {
               : "Contact us today and receive a personalized quote in less than 24 hours."}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary text-white hover:bg-primary/90" data-testid="button-colombia-contact">
-                <Phone className="w-5 h-5 mr-2" />
-                {language === "es" ? "Contactar Ahora" : "Contact Now"}
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-primary text-white hover:bg-primary/90" 
+              data-testid="button-colombia-contact"
+              onClick={() => openWhatsAppQuote({ es: "viajes a Europa desde Colombia", en: "travel to Europe from Colombia", pt: "viagens para Europa da Colombia" }, language)}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              {language === "es" ? "Contactar Ahora" : "Contact Now"}
+            </Button>
           </div>
         </div>
       </section>

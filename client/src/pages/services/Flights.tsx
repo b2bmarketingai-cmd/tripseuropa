@@ -8,8 +8,8 @@ import {
   Plane, Globe, Clock, CheckCircle, Shield, Calendar, 
   DollarSign, Users, ArrowRight, MapPin, Luggage, Star
 } from "lucide-react";
-import { Link } from "wouter";
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const FLIGHT_FAQS: FAQItem[] = [
   {
@@ -254,12 +254,15 @@ export default function Flights() {
               ? "Nuestros asesores te ayudan a encontrar las mejores opciones de vuelo para tu viaje." 
               : "Our advisors help you find the best flight options for your trip."}
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2" data-testid="button-flights-contact">
-              <ArrowRight className="w-5 h-5" />
-              {language === "es" ? "Cotizar Vuelo" : "Quote Flight"}
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            className="bg-accent text-primary hover:bg-accent/90 gap-2" 
+            data-testid="button-flights-contact"
+            onClick={() => openWhatsAppQuote({ es: "vuelos a Europa", en: "flights to Europe", pt: "voos para Europa" }, language)}
+          >
+            <ArrowRight className="w-5 h-5" />
+            {language === "es" ? "Cotizar Vuelo" : language === "pt" ? "Orcamento Voo" : "Quote Flight"}
+          </Button>
         </div>
       </section>
 

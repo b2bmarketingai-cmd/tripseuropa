@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
+import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGE_FAQS: FAQItem[] = [
   {
@@ -191,11 +192,13 @@ export default function Packages() {
                   
                   <div className="flex items-center justify-between pt-3 border-t">
                     <span className="text-xl font-bold text-accent">{pkg.price}</span>
-                    <Link href="/contact">
-                      <Button size="sm" data-testid={`button-package-${idx}`}>
-                        {language === "es" ? "Cotizar" : "Quote"}
-                      </Button>
-                    </Link>
+                    <Button 
+                      size="sm" 
+                      data-testid={`button-package-${idx}`}
+                      onClick={() => openWhatsAppQuote({ es: pkg.name.es, en: pkg.name.en, pt: pkg.name.pt || pkg.name.es }, language)}
+                    >
+                      {language === "es" ? "Cotizar" : language === "pt" ? "Orcamento" : "Quote"}
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -300,12 +303,15 @@ export default function Packages() {
               ? "Cuentanos tus preferencias y creamos un paquete a tu medida." 
               : "Tell us your preferences and we'll create a package tailored to you."}
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2" data-testid="button-packages-contact">
-              <ArrowRight className="w-5 h-5" />
-              {language === "es" ? "Solicitar Cotizacion" : "Request Quote"}
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            className="bg-accent text-primary hover:bg-accent/90 gap-2" 
+            data-testid="button-packages-contact"
+            onClick={() => openWhatsAppQuote({ es: "paquete personalizado", en: "custom package", pt: "pacote personalizado" }, language)}
+          >
+            <ArrowRight className="w-5 h-5" />
+            {language === "es" ? "Solicitar Cotizacion" : language === "pt" ? "Solicitar Orcamento" : "Request Quote"}
+          </Button>
         </div>
       </section>
 
