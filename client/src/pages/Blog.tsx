@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils, Globe } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useMemo } from "react";
+import { BLOG_POSTS_DATA } from "@/lib/blogData";
+import { BLOG_POSTS_SIMPLE } from "./BlogPostsSimple";
 
 const BLOG_CATEGORIES = [
   { id: "all", label: { es: "Todos", en: "All" }, icon: BookOpen },
@@ -771,17 +773,23 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
+  const allPosts = useMemo(() => {
+    const blogDataIds = new Set(BLOG_POSTS_DATA.map(p => p.id));
+    const simplePosts = BLOG_POSTS_SIMPLE.filter(p => !blogDataIds.has(p.id));
+    return [...BLOG_POSTS_DATA, ...simplePosts];
+  }, []);
+
   const filteredPosts = useMemo(() => {
-    return BLOG_POSTS.filter(post => {
+    return allPosts.filter(post => {
       const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
       const matchesSearch = !searchQuery || 
         post.title[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt[language].toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery, language]);
+  }, [allPosts, selectedCategory, searchQuery, language]);
 
-  const featuredPosts = BLOG_POSTS.filter(p => p.featured);
+  const featuredPosts = allPosts.filter(p => p.featured);
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -1028,36 +1036,38 @@ export default function Blog() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <Card key={post.id} className="group overflow-hidden hover:shadow-lg transition-shadow" data-testid={`card-blog-${post.id}`}>
-                  <div className="relative h-52 overflow-hidden bg-muted">
-                    <img 
-                      src={post.image} 
-                      alt={post.title[language]} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language]}</Badge>
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
-                      <span data-testid={`text-date-${post.id}`}>{post.date}</span>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span data-testid={`text-readtime-${post.id}`}>{post.readTime} min</span>
-                      </div>
+                <Link href={`/blog/post/${post.id}`} key={post.id}>
+                  <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-blog-${post.id}`}>
+                    <div className="relative h-52 overflow-hidden bg-muted">
+                      <img 
+                        src={post.image} 
+                        alt={post.title[language]} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language]}</Badge>
                     </div>
-                    
-                    <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors" data-testid={`text-title-${post.id}`}>
-                      {post.title[language]}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-5 line-clamp-3" data-testid={`text-excerpt-${post.id}`}>{post.excerpt[language]}</p>
-                    
-                    <Button className="w-full gap-2" data-testid={`button-blog-${post.id}`}>
-                      {language === "es" ? "Leer articulo" : "Read article"}
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
+                        <span data-testid={`text-date-${post.id}`}>{post.date}</span>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span data-testid={`text-readtime-${post.id}`}>{post.readTime} min</span>
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors" data-testid={`text-title-${post.id}`}>
+                        {post.title[language]}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-5 line-clamp-3" data-testid={`text-excerpt-${post.id}`}>{post.excerpt[language]}</p>
+                      
+                      <Button className="w-full gap-2" data-testid={`button-blog-${post.id}`}>
+                        {language === "es" ? "Leer articulo" : "Read article"}
+                        <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           )}

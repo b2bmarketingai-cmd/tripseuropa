@@ -39,6 +39,7 @@ import VacacionesEuropa from "@/pages/VacacionesEuropa";
 import TravelAdvisor from "@/pages/TravelAdvisor";
 import RouteTemplate from "@/pages/RouteTemplate";
 import CityOriginTemplate from "@/pages/CityOriginTemplate";
+import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -66,6 +67,7 @@ function Router() {
       <Route path="/destinations" component={Destinations} />
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/post/:slug" component={BlogPost} />
       <Route path="/blog/colombia" component={BlogColombia} />
       <Route path="/blog/argentina" component={BlogArgentina} />
       <Route path="/blog/peru" component={BlogPeru} />
