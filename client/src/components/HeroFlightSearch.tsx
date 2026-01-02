@@ -304,7 +304,7 @@ Can you help me with a quote?`;
           </p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
+        <div className="bg-white rounded-xl shadow-2xl max-w-6xl mx-auto">
           <div className="flex border-b justify-between items-center">
             <div className="flex">
               <button
@@ -369,8 +369,8 @@ Can you help me with a quote?`;
                     data-testid="input-origin"
                   />
                   {showOriginDropdown && filteredOrigins.length > 0 && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredOrigins.slice(0, 8).map((airport) => (
+                    <div className="absolute z-[100] w-full mt-1 bg-white border border-gray-200 rounded-md shadow-xl max-h-64 overflow-y-auto">
+                      {filteredOrigins.slice(0, 12).map((airport) => (
                         <button
                           key={airport.code}
                           type="button"
@@ -379,13 +379,13 @@ Can you help me with a quote?`;
                             setOriginSearch(`${airport.city} (${airport.code})`);
                             setShowOriginDropdown(false);
                           }}
-                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                          className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
                           <div>
                             <span className="font-medium">{airport.city}</span>
                             <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
                           </div>
-                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                          <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
                       ))}
                     </div>
@@ -416,8 +416,8 @@ Can you help me with a quote?`;
                     data-testid="input-destination-desktop"
                   />
                   {showDestDropdown && filteredDests.length > 0 && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredDests.slice(0, 8).map((airport) => (
+                    <div className="absolute z-[100] w-full mt-1 bg-white border border-gray-200 rounded-md shadow-xl max-h-64 overflow-y-auto">
+                      {filteredDests.slice(0, 12).map((airport) => (
                         <button
                           key={airport.code}
                           type="button"
@@ -426,13 +426,13 @@ Can you help me with a quote?`;
                             setDestSearch(`${airport.city} (${airport.code})`);
                             setShowDestDropdown(false);
                           }}
-                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                          className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
                           <div>
                             <span className="font-medium">{airport.city}</span>
                             <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
                           </div>
-                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                          <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
                       ))}
                     </div>
@@ -584,8 +584,8 @@ Can you help me with a quote?`;
                     data-testid="input-origin-mobile"
                   />
                   {showOriginDropdown && filteredOrigins.length > 0 && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredOrigins.slice(0, 8).map((airport) => (
+                    <div className="absolute z-[100] w-full mt-1 bg-white border border-gray-200 rounded-md shadow-xl max-h-60 overflow-y-auto">
+                      {filteredOrigins.slice(0, 10).map((airport) => (
                         <button
                           key={airport.code}
                           type="button"
@@ -594,13 +594,13 @@ Can you help me with a quote?`;
                             setOriginSearch(`${airport.city} (${airport.code})`);
                             setShowOriginDropdown(false);
                           }}
-                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                          className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
                           <div>
                             <span className="font-medium">{airport.city}</span>
                             <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
                           </div>
-                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                          <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
                       ))}
                     </div>
@@ -631,8 +631,8 @@ Can you help me with a quote?`;
                     data-testid="input-destination"
                   />
                   {showDestDropdown && filteredDests.length > 0 && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredDests.slice(0, 8).map((airport) => (
+                    <div className="absolute z-[100] w-full mt-1 bg-white border border-gray-200 rounded-md shadow-xl max-h-60 overflow-y-auto">
+                      {filteredDests.slice(0, 10).map((airport) => (
                         <button
                           key={airport.code}
                           type="button"
@@ -641,13 +641,13 @@ Can you help me with a quote?`;
                             setDestSearch(`${airport.city} (${airport.code})`);
                             setShowDestDropdown(false);
                           }}
-                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                          className="w-full px-4 py-3 text-left hover:bg-accent/10 text-sm flex justify-between items-center border-b border-gray-50 last:border-0"
                         >
                           <div>
                             <span className="font-medium">{airport.city}</span>
                             <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
                           </div>
-                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                          <span className="text-primary font-bold text-xs bg-primary/10 px-2 py-1 rounded">{airport.code}</span>
                         </button>
                       ))}
                     </div>
