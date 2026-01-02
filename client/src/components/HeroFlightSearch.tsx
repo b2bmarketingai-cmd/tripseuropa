@@ -72,12 +72,37 @@ export function HeroFlightSearch() {
       return;
     }
 
-    toast({
-      title: language === "es" ? "Buscando vuelos..." : "Searching flights...",
-      description: language === "es" 
-        ? `${origin} a ${destination} - ${passengers} pasajero(s)` 
-        : `${origin} to ${destination} - ${passengers} passenger(s)`,
-    });
+    const tripTypeText = tripType === "roundtrip" 
+      ? (language === "es" ? "Ida y Vuelta" : "Round Trip")
+      : (language === "es" ? "Solo Ida" : "One Way");
+    
+    const departureDateStr = departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : "";
+    const returnDateStr = returnDate && tripType === "roundtrip" 
+      ? format(returnDate, "d MMM yyyy", { locale: dateLocale }) 
+      : "";
+
+    const message = language === "es"
+      ? `Hola! Estoy interesado en un vuelo:
+
+*Tipo de viaje:* ${tripTypeText}
+*Origen:* ${origin}
+*Destino:* ${destination}
+*Fecha de salida:* ${departureDateStr}${returnDateStr ? `\n*Fecha de regreso:* ${returnDateStr}` : ""}
+*Pasajeros:* ${passengers}
+
+Me pueden ayudar con la cotizacion?`
+      : `Hello! I'm interested in a flight:
+
+*Trip type:* ${tripTypeText}
+*Origin:* ${origin}
+*Destination:* ${destination}
+*Departure date:* ${departureDateStr}${returnDateStr ? `\n*Return date:* ${returnDateStr}` : ""}
+*Passengers:* ${passengers}
+
+Can you help me with a quote?`;
+
+    const whatsappUrl = `https://wa.me/34611105448?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const content = {
