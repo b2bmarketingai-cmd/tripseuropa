@@ -153,9 +153,6 @@ export function HeroCarousel() {
               <span className="text-4xl md:text-5xl font-bold text-accent font-display" data-testid="text-hero-price">
                 {currentContent.price}{content[lang].currency}
               </span>
-              <span className="text-xl md:text-2xl text-white/80" data-testid="text-hero-taxes">
-                + {currentContent.taxes} {content[lang].taxes}
-              </span>
             </div>
             <span className="text-white/70 text-sm">{content[lang].perPerson}</span>
           </div>

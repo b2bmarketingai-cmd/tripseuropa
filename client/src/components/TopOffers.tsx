@@ -185,7 +185,6 @@ export function TopOffers() {
                   <p className="text-white/70 text-sm">{content[lang].from}</p>
                   <div className="flex items-baseline gap-1 flex-wrap">
                     <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>
-                    <span className="text-sm text-white/70">+ {offer.taxes} {content[lang].taxes}</span>
                   </div>
                   <p className="text-white/60 text-xs mt-1">{content[lang].perPerson}</p>
                 </div>
