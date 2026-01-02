@@ -310,7 +310,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "spain",
-    name: { es: "Espana", en: "Spain" },
+    name: { es: "España", en: "Spain" },
     heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=1920&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
@@ -319,7 +319,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Espana es un pais vibrante que combina historia, cultura, gastronomia y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, Espana ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
+      es: "España es un pais vibrante que combina historia, cultura, gastronomia y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
       en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations."
     },
     highlights: {
@@ -329,7 +329,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "espana-clasica",
-        name: { es: "Espana Clasica", en: "Classic Spain" },
+        name: { es: "España Clasica", en: "Classic Spain" },
         duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
         price: "1,799",
         taxes: "360",
@@ -365,7 +365,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       {
         day: 1,
         title: { es: "Llegada a Madrid", en: "Arrival in Madrid" },
-        description: { es: "Bienvenida en Madrid, la vibrante capital de Espana.", en: "Welcome to Madrid, Spain's vibrant capital." },
+        description: { es: "Bienvenida en Madrid, la vibrante capital de España.", en: "Welcome to Madrid, Spain's vibrant capital." },
         activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Gran Via"], en: ["Airport pickup", "Hotel check-in", "Gran Via walk"] }
       },
       {
@@ -426,7 +426,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     faqs: [
       {
         question: { es: "Necesito visa para viajar a Espana?", en: "Do I need a visa to travel to Spain?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Espana sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism." }
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a España sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism." }
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?" },
@@ -438,7 +438,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Como es la gastronomia espanola?", en: "What is Spanish gastronomy like?" },
-        answer: { es: "Espana es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties." }
+        answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties." }
       }
     ],
     bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
