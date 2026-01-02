@@ -47,8 +47,9 @@ import { FloatingContactButtons } from "@/components/support";
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
-  // Destination data only supports es/en, fallback pt to es
-  const lang = (language === "pt" ? "es" : language) as "es" | "en";
+  // Content supports es/en/pt, destination data uses es/en with pt fallback to es
+  const contentLang = language as "es" | "en" | "pt";
+  const dataLang = (language === "pt" ? "es" : language) as "es" | "en";
   const { toast } = useToast();
   
   const destination = getDestinationBySlug(slug || "");
@@ -67,15 +68,15 @@ export default function DestinationPage() {
       <div className="min-h-screen flex items-center justify-center pt-[100px]">
         <div className="text-center">
           <h1 className="text-3xl font-display font-bold text-accent mb-4">
-            {lang === "es" ? "Destino no encontrado" : "Destination not found"}
+            {contentLang === "es" ? "Destino no encontrado" : "Destination not found"}
           </h1>
           <p className="text-muted-foreground mb-6">
-            {lang === "es" 
+            {contentLang === "es" 
               ? "El destino que buscas no existe o ha sido movido." 
               : "The destination you're looking for doesn't exist or has been moved."}
           </p>
           <Button onClick={() => window.location.href = "/"}>
-            {lang === "es" ? "Volver al inicio" : "Back to home"}
+            {contentLang === "es" ? "Volver al inicio" : "Back to home"}
           </Button>
         </div>
       </div>
@@ -162,8 +163,50 @@ export default function DestinationPage() {
       byGroup: "By Group",
       viewMore: "View more",
       idealFor: "Ideal for"
+    },
+    pt: {
+      highlights: "Destaques",
+      packages: "Nossos Pacotes",
+      from: "A partir de",
+      taxes: "+ impostos",
+      perPerson: "por pessoa",
+      duration: "Duracao",
+      includes: "Inclui",
+      selectPackage: "Solicitar Cotacao",
+      itinerary: "Itinerario de Viagem",
+      day: "Dia",
+      activities: "Atividades",
+      faqs: "Perguntas Frequentes",
+      gallery: "Galeria",
+      practicalInfo: "Informacoes Praticas",
+      bestTime: "Melhor epoca para visitar",
+      currency: "Moeda",
+      language: "Idioma",
+      visa: "Informacoes de visto",
+      contactForm: "Solicite sua Cotacao",
+      contactDescription: "Preencha o formulario e um consultor entrara em contato em ate 24 horas.",
+      name: "Nome completo",
+      email: "E-mail",
+      phone: "Telefone",
+      message: "Mensagem ou consulta",
+      packageInterest: "Pacote de interesse",
+      submit: "Enviar Solicitacao",
+      submitting: "Enviando...",
+      successTitle: "Solicitacao enviada",
+      successMessage: "Entraremos em contato em breve.",
+      whatsapp: "Contatar via WhatsApp",
+      call: "Ligar agora",
+      travelSchedules: "Cronogramas de Viagem Recomendados",
+      travelSchedulesDescription: "Explore as melhores formas de visitar este destino por temporada, interesses ou tipo de grupo",
+      bySeason: "Por Temporada",
+      byInterest: "Por Interesse",
+      byGroup: "Por Grupo",
+      viewMore: "Ver mais",
+      idealFor: "Ideal para"
     }
   };
+  
+  const c = content[contentLang] || content.es;
 
   const travelStylesBySeason = TRAVEL_STYLE_DATA.filter(ts => ts.category === "season");
   const travelStylesByInterest = TRAVEL_STYLE_DATA.filter(ts => ts.category === "interest");
@@ -174,7 +217,7 @@ export default function DestinationPage() {
     
     if (!formData.name || !formData.email) {
       toast({
-        title: lang === "es" ? "Campos requeridos" : "Required fields",
+        title: contentLang === "es" ? "Campos requeridos" : "Required fields",
         variant: "destructive"
       });
       return;
@@ -185,11 +228,11 @@ export default function DestinationPage() {
       email: formData.email,
       phone: formData.phone || null,
       originCountry: null,
-      serviceInterest: formData.packageInterest || (destination?.name[lang] || null),
+      serviceInterest: formData.packageInterest || (destination?.name[dataLang] || null),
       message: formData.message || null
     }, {
       onSuccess: () => {
-        const whatsappMessage = `Nueva solicitud - ${destination?.name[lang] || "Destino"}!
+        const whatsappMessage = `Nueva solicitud - ${destination?.name[dataLang] || "Destino"}!
 
 *Nombre:* ${formData.name}
 *Email:* ${formData.email}
@@ -199,15 +242,15 @@ export default function DestinationPage() {
         window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         toast({
-          title: content[lang].successTitle,
-          description: content[lang].successMessage,
+          title: c.successTitle,
+          description: c.successMessage,
         });
         setFormData({ name: "", email: "", phone: "", message: "", packageInterest: "" });
       },
       onError: () => {
         toast({
           title: "Error",
-          description: lang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
           variant: "destructive"
         });
       }
@@ -224,7 +267,7 @@ export default function DestinationPage() {
         <div className="absolute inset-0">
           <img
             src={destination.heroImage}
-            alt={destination.name[lang]}
+            alt={destination.name[dataLang]}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/40"></div>
@@ -236,10 +279,10 @@ export default function DestinationPage() {
             className="text-5xl md:text-7xl font-display font-bold text-accent mb-6"
             data-testid="text-destination-title"
           >
-            {destination.name[lang]}
+            {destination.name[dataLang]}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            {destination.description[lang].slice(0, 200)}...
+            {destination.description[dataLang]}
           </p>
         </div>
       </section>
@@ -247,10 +290,10 @@ export default function DestinationPage() {
       <section className="py-16 bg-muted/30" data-testid="section-highlights">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].highlights}
+            {c.highlights}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {destination.highlights[lang].map((highlight, idx) => (
+            {destination.highlights[dataLang].map((highlight, idx) => (
               <div 
                 key={idx}
                 className="bg-card rounded-md p-4 text-center shadow-sm"
@@ -267,39 +310,39 @@ export default function DestinationPage() {
       <section className="py-16" data-testid="section-packages">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].packages}
+            {c.packages}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {destination.packages.map((pkg, idx) => (
               <Card key={pkg.id} className={`relative ${idx === 1 ? 'border-accent border-2 shadow-lg' : ''}`}>
                 {idx === 1 && (
                   <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-primary">
-                    {lang === "es" ? "Mas Popular" : "Most Popular"}
+                    {contentLang === "es" ? "Mas Popular" : "Most Popular"}
                   </Badge>
                 )}
                 <CardHeader>
                   <CardTitle className="text-xl font-display text-accent">
-                    {pkg.name[lang]}
+                    {pkg.name[dataLang]}
                   </CardTitle>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Clock className="w-4 h-4" />
-                    <span className="text-sm">{pkg.duration[lang]}</span>
+                    <span className="text-sm">{pkg.duration[dataLang]}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
-                    <span className="text-sm text-muted-foreground">{content[lang].from}</span>
+                    <span className="text-sm text-muted-foreground">{c.from}</span>
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl font-bold text-accent">${pkg.price}</span>
                       <span className="text-sm text-muted-foreground">USD</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">{content[lang].perPerson}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{c.perPerson}</p>
                   </div>
                   
                   <div className="mb-6">
-                    <p className="text-sm font-medium mb-2">{content[lang].includes}:</p>
+                    <p className="text-sm font-medium mb-2">{c.includes}:</p>
                     <ul className="space-y-1">
-                      {pkg.includes[lang].map((item, i) => (
+                      {pkg.includes[dataLang].map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
                           <Check className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
                           <span>{item}</span>
@@ -311,12 +354,12 @@ export default function DestinationPage() {
                   <Button 
                     className="w-full bg-accent text-primary hover:bg-accent/90"
                     onClick={() => {
-                      setFormData(prev => ({ ...prev, packageInterest: pkg.name[lang] }));
+                      setFormData(prev => ({ ...prev, packageInterest: pkg.name[dataLang] }));
                       document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     data-testid={`button-select-package-${idx}`}
                   >
-                    {content[lang].selectPackage}
+                    {c.selectPackage}
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Button>
                 </CardContent>
@@ -329,7 +372,7 @@ export default function DestinationPage() {
       <section className="py-16 bg-muted/30" data-testid="section-itinerary">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].itinerary}
+            {c.itinerary}
           </h2>
           <div className="max-w-4xl mx-auto">
             {destination.itinerary.map((day, idx) => (
@@ -343,11 +386,11 @@ export default function DestinationPage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-display font-bold text-accent mb-1">
-                    {content[lang].day} {day.day}: {day.title[lang]}
+                    {c.day} {day.day}: {day.title[dataLang]}
                   </h3>
-                  <p className="text-muted-foreground mb-3">{day.description[lang]}</p>
+                  <p className="text-muted-foreground mb-3">{day.description[dataLang]}</p>
                   <div className="flex flex-wrap gap-2">
-                    {day.activities[lang].map((activity, i) => (
+                    {day.activities[dataLang].map((activity, i) => (
                       <Badge key={i} variant="secondary" className="text-xs">
                         {activity}
                       </Badge>
@@ -363,7 +406,7 @@ export default function DestinationPage() {
       <section className="py-16" data-testid="section-gallery">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].gallery}
+            {c.gallery}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {destination.galleryImages.map((img, idx) => (
@@ -374,7 +417,7 @@ export default function DestinationPage() {
               >
                 <img
                   src={img}
-                  alt={`${destination.name[lang]} ${idx + 1}`}
+                  alt={`${destination.name[dataLang]} ${idx + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -386,35 +429,35 @@ export default function DestinationPage() {
       <section className="py-16 bg-muted/30" data-testid="section-practical-info">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].practicalInfo}
+            {c.practicalInfo}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <Card>
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-8 h-8 text-accent mx-auto mb-3" />
-                <p className="font-medium mb-1">{content[lang].bestTime}</p>
-                <p className="text-sm text-muted-foreground">{destination.bestTimeToVisit[lang]}</p>
+                <p className="font-medium mb-1">{c.bestTime}</p>
+                <p className="text-sm text-muted-foreground">{destination.bestTimeToVisit[dataLang]}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
                 <CreditCard className="w-8 h-8 text-accent mx-auto mb-3" />
-                <p className="font-medium mb-1">{content[lang].currency}</p>
+                <p className="font-medium mb-1">{c.currency}</p>
                 <p className="text-sm text-muted-foreground">{destination.currency}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
                 <Globe className="w-8 h-8 text-accent mx-auto mb-3" />
-                <p className="font-medium mb-1">{content[lang].language}</p>
-                <p className="text-sm text-muted-foreground">{destination.language[lang]}</p>
+                <p className="font-medium mb-1">{c.language}</p>
+                <p className="text-sm text-muted-foreground">{destination.language[dataLang]}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
                 <FileText className="w-8 h-8 text-accent mx-auto mb-3" />
-                <p className="font-medium mb-1">{content[lang].visa}</p>
-                <p className="text-sm text-muted-foreground">{destination.visaInfo[lang]}</p>
+                <p className="font-medium mb-1">{c.visa}</p>
+                <p className="text-sm text-muted-foreground">{destination.visaInfo[dataLang]}</p>
               </CardContent>
             </Card>
           </div>
@@ -424,17 +467,17 @@ export default function DestinationPage() {
       <section className="py-16" data-testid="section-faqs">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-8 text-center">
-            {content[lang].faqs}
+            {c.faqs}
           </h2>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {destination.faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`faq-${idx}`}>
                   <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-medium">{faq.question[lang]}</span>
+                    <span className="font-medium">{faq.question[dataLang]}</span>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-muted-foreground">{faq.answer[lang]}</p>
+                    <p className="text-muted-foreground">{faq.answer[dataLang]}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -447,10 +490,10 @@ export default function DestinationPage() {
         <div className="container px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-4">
-              {content[lang].travelSchedules}
+              {c.travelSchedules}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {content[lang].travelSchedulesDescription}
+              {c.travelSchedulesDescription}
             </p>
           </div>
           
@@ -458,15 +501,15 @@ export default function DestinationPage() {
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="season" className="flex items-center gap-2" data-testid="tab-trigger-season">
                 <Sun className="w-4 h-4" />
-                <span className="hidden sm:inline">{content[lang].bySeason}</span>
+                <span className="hidden sm:inline">{c.bySeason}</span>
               </TabsTrigger>
               <TabsTrigger value="interest" className="flex items-center gap-2" data-testid="tab-trigger-interest">
                 <Heart className="w-4 h-4" />
-                <span className="hidden sm:inline">{content[lang].byInterest}</span>
+                <span className="hidden sm:inline">{c.byInterest}</span>
               </TabsTrigger>
               <TabsTrigger value="group" className="flex items-center gap-2" data-testid="tab-trigger-group">
                 <Users className="w-4 h-4" />
-                <span className="hidden sm:inline">{content[lang].byGroup}</span>
+                <span className="hidden sm:inline">{c.byGroup}</span>
               </TabsTrigger>
             </TabsList>
 
@@ -478,24 +521,24 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[lang]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[lang]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {style.description[lang].slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {style.idealDuration[lang]}
+                            {style.idealDuration[dataLang]}
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
-                            {content[lang].viewMore}
+                            {c.viewMore}
                             <ArrowRight className="w-3 h-3" />
                           </span>
                         </div>
@@ -514,24 +557,24 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[lang]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[lang]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {style.description[lang].slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {content[lang].idealFor}: {style.bestFor[lang].slice(0, 25)}...
+                            {c.idealFor}: {style.bestFor[dataLang].slice(0, 25)}...
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
-                            {content[lang].viewMore}
+                            {c.viewMore}
                             <ArrowRight className="w-3 h-3" />
                           </span>
                         </div>
@@ -544,7 +587,7 @@ export default function DestinationPage() {
                 <div className="text-center mt-6">
                   <Button variant="outline" asChild data-testid="button-view-all-travel-styles">
                     <Link href="/travel-styles">
-                      {lang === "es" ? "Ver todos los estilos de viaje" : "View all travel styles"}
+                      {contentLang === "es" ? "Ver todos los estilos de viaje" : "View all travel styles"}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
@@ -560,24 +603,24 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[lang]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[lang]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {style.description[lang].slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {content[lang].idealFor}: {style.bestFor[lang].slice(0, 25)}...
+                            {c.idealFor}: {style.bestFor[dataLang].slice(0, 25)}...
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
-                            {content[lang].viewMore}
+                            {c.viewMore}
                             <ArrowRight className="w-3 h-3" />
                           </span>
                         </div>
@@ -596,9 +639,9 @@ export default function DestinationPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-4">
-                {content[lang].contactForm}
+                {c.contactForm}
               </h2>
-              <p className="text-white/80">{content[lang].contactDescription}</p>
+              <p className="text-white/80">{c.contactDescription}</p>
             </div>
             
             <div className="grid md:grid-cols-5 gap-8">
@@ -606,7 +649,7 @@ export default function DestinationPage() {
                 <form onSubmit={handleSubmit} className="bg-card rounded-md p-6 shadow-lg">
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="name">{content[lang].name}</Label>
+                      <Label htmlFor="name">{c.name}</Label>
                       <div className="relative mt-1">
                         <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
@@ -621,7 +664,7 @@ export default function DestinationPage() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="email">{content[lang].email}</Label>
+                      <Label htmlFor="email">{c.email}</Label>
                       <div className="relative mt-1">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
@@ -637,7 +680,7 @@ export default function DestinationPage() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="phone">{content[lang].phone}</Label>
+                      <Label htmlFor="phone">{c.phone}</Label>
                       <div className="relative mt-1">
                         <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
@@ -653,7 +696,7 @@ export default function DestinationPage() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="packageInterest">{content[lang].packageInterest}</Label>
+                      <Label htmlFor="packageInterest">{c.packageInterest}</Label>
                       <div className="relative mt-1">
                         <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
@@ -661,14 +704,14 @@ export default function DestinationPage() {
                           value={formData.packageInterest}
                           onChange={(e) => setFormData(prev => ({ ...prev, packageInterest: e.target.value }))}
                           className="pl-10"
-                          placeholder={destination.packages[0]?.name[lang] || ""}
+                          placeholder={destination.packages[0]?.name[dataLang] || ""}
                           data-testid="input-contact-package"
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <Label htmlFor="message">{content[lang].message}</Label>
+                      <Label htmlFor="message">{c.message}</Label>
                       <div className="relative mt-1">
                         <Textarea
                           id="message"
@@ -686,7 +729,7 @@ export default function DestinationPage() {
                       disabled={isSubmitting}
                       data-testid="button-submit-contact"
                     >
-                      {isSubmitting ? content[lang].submitting : content[lang].submit}
+                      {isSubmitting ? c.submitting : c.submit}
                       <Send className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
@@ -703,7 +746,7 @@ export default function DestinationPage() {
                 >
                   <SiWhatsapp className="w-6 h-6" />
                   <div>
-                    <p className="font-medium">{content[lang].whatsapp}</p>
+                    <p className="font-medium">{c.whatsapp}</p>
                     <p className="text-sm text-white/80">+34 611 105 448</p>
                   </div>
                 </a>
@@ -715,7 +758,7 @@ export default function DestinationPage() {
                 >
                   <Phone className="w-6 h-6" />
                   <div>
-                    <p className="font-medium">{content[lang].call}</p>
+                    <p className="font-medium">{c.call}</p>
                     <p className="text-sm">+34 611 105 448</p>
                   </div>
                 </a>
@@ -724,7 +767,7 @@ export default function DestinationPage() {
                   <CardContent className="pt-6 text-white">
                     <MessageSquare className="w-8 h-8 text-accent mb-3" />
                     <p className="text-sm">
-                      {lang === "es" 
+                      {contentLang === "es" 
                         ? "Nuestros asesores estan disponibles de lunes a viernes de 9:00 AM a 7:00 PM y sabados de 9:00 AM a 2:00 PM." 
                         : "Our advisors are available Monday to Friday from 9:00 AM to 7:00 PM and Saturdays from 9:00 AM to 2:00 PM."}
                     </p>
