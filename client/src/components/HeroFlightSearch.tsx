@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
-import { es, enUS } from "date-fns/locale";
-import { Calendar as CalendarIcon, Plane, ArrowRight, Users, Minus, Plus } from "lucide-react";
+import { es, enUS, ptBR } from "date-fns/locale";
+import { Calendar as CalendarIcon, Plane, ArrowRight, ArrowLeft, Users, Minus, Plus, User, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 
@@ -34,6 +35,7 @@ const AIRPORTS = [
 
 export function HeroFlightSearch() {
   const { language } = useI18n();
+  const [step, setStep] = useState<1 | 2>(1);
   const [tripType, setTripType] = useState<"roundtrip" | "oneway">("roundtrip");
   const [origin, setOrigin] = useState("");
   const [destination, setDestination] = useState("");
@@ -44,9 +46,11 @@ export function HeroFlightSearch() {
   const [showDestDropdown, setShowDestDropdown] = useState(false);
   const [originSearch, setOriginSearch] = useState("");
   const [destSearch, setDestSearch] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const { toast } = useToast();
 
-  const dateLocale = language === "es" ? es : enUS;
+  const dateLocale = language === "es" ? es : language === "pt" ? ptBR : enUS;
 
   const filteredOrigins = AIRPORTS.filter(
     (a) =>
@@ -62,19 +66,47 @@ export function HeroFlightSearch() {
       a.country.toLowerCase().includes(destSearch.toLowerCase())
   );
 
-  const handleSearch = async () => {
-    if (!origin || !destination || !departureDate) {
-      toast({
-        title: language === "es" ? "Informacion incompleta" : "Missing information",
-        description: language === "es" ? "Por favor completa origen, destino y fecha" : "Please fill in origin, destination and date",
-        variant: "destructive",
-      });
+  const handleNextStep = () => {
+    if (step === 1) {
+      if (!origin || !destination || !departureDate) {
+        const msgs = {
+          es: { title: "Informacion incompleta", desc: "Por favor completa origen, destino y fecha de salida" },
+          en: { title: "Missing information", desc: "Please fill in origin, destination and departure date" },
+          pt: { title: "Informacao incompleta", desc: "Por favor preencha origem, destino e data de partida" }
+        };
+        const m = msgs[language as keyof typeof msgs] || msgs.es;
+        toast({ title: m.title, description: m.desc, variant: "destructive" });
+        return;
+      }
+      if (tripType === "roundtrip" && !returnDate) {
+        const msgs = {
+          es: { title: "Fecha de regreso requerida", desc: "Por favor selecciona la fecha de regreso" },
+          en: { title: "Return date required", desc: "Please select a return date" },
+          pt: { title: "Data de retorno obrigatoria", desc: "Por favor selecione a data de retorno" }
+        };
+        const m = msgs[language as keyof typeof msgs] || msgs.es;
+        toast({ title: m.title, description: m.desc, variant: "destructive" });
+        return;
+      }
+      setStep(2);
+    }
+  };
+
+  const handleSubmit = async () => {
+    if (!fullName.trim() || !phoneNumber.trim()) {
+      const msgs = {
+        es: { title: "Datos de contacto incompletos", desc: "Por favor ingresa tu nombre y telefono" },
+        en: { title: "Contact info incomplete", desc: "Please enter your name and phone number" },
+        pt: { title: "Dados de contato incompletos", desc: "Por favor insira seu nome e telefone" }
+      };
+      const m = msgs[language as keyof typeof msgs] || msgs.es;
+      toast({ title: m.title, description: m.desc, variant: "destructive" });
       return;
     }
 
     const tripTypeText = tripType === "roundtrip" 
-      ? (language === "es" ? "Ida y Vuelta" : "Round Trip")
-      : (language === "es" ? "Solo Ida" : "One Way");
+      ? (language === "es" ? "Ida y Vuelta" : language === "pt" ? "Ida e Volta" : "Round Trip")
+      : (language === "es" ? "Solo Ida" : language === "pt" ? "Somente Ida" : "One Way");
     
     const departureDateStr = departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : "";
     const returnDateStr = returnDate && tripType === "roundtrip" 
@@ -82,8 +114,10 @@ export function HeroFlightSearch() {
       : "";
 
     const message = language === "es"
-      ? `Hola! Estoy interesado en un vuelo:
+      ? `Hola! Soy ${fullName} y estoy interesado en un vuelo:
 
+*Nombre:* ${fullName}
+*Telefono:* ${phoneNumber}
 *Tipo de viaje:* ${tripTypeText}
 *Origen:* ${origin}
 *Destino:* ${destination}
@@ -91,8 +125,22 @@ export function HeroFlightSearch() {
 *Pasajeros:* ${passengers}
 
 Me pueden ayudar con la cotizacion?`
-      : `Hello! I'm interested in a flight:
+      : language === "pt"
+      ? `Ola! Sou ${fullName} e estou interessado em um voo:
 
+*Nome:* ${fullName}
+*Telefone:* ${phoneNumber}
+*Tipo de viagem:* ${tripTypeText}
+*Origem:* ${origin}
+*Destino:* ${destination}
+*Data de partida:* ${departureDateStr}${returnDateStr ? `\n*Data de retorno:* ${returnDateStr}` : ""}
+*Passageiros:* ${passengers}
+
+Podem me ajudar com o orcamento?`
+      : `Hello! I'm ${fullName} and I'm interested in a flight:
+
+*Name:* ${fullName}
+*Phone:* ${phoneNumber}
 *Trip type:* ${tripTypeText}
 *Origin:* ${origin}
 *Destination:* ${destination}
@@ -101,15 +149,14 @@ Me pueden ayudar con la cotizacion?`
 
 Can you help me with a quote?`;
 
-    // Send email notification in background
     try {
       await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: "Busqueda de Vuelo",
+          name: fullName,
           email: "cliente@busqueda.com",
-          phone: null,
+          phone: phoneNumber,
           originCountry: origin,
           serviceInterest: `Vuelo: ${origin} → ${destination}`,
           message: `Tipo: ${tripTypeText}, Salida: ${departureDateStr}, Regreso: ${returnDateStr || "N/A"}, Pasajeros: ${passengers}`
@@ -135,7 +182,14 @@ Can you help me with a quote?`;
       departure: "Salida",
       return: "Vuelta",
       passengers: "Pasajeros",
-      search: "Buscar",
+      next: "Siguiente",
+      back: "Volver",
+      fullName: "Nombre completo",
+      phone: "Numero de telefono",
+      step1Title: "Paso 1: Detalles del viaje",
+      step2Title: "Paso 2: Datos de contacto",
+      tripSummary: "Resumen de tu viaje",
+      contactToWhatsapp: "Contactar por WhatsApp",
     },
     en: {
       title: "Trips Europa Travel Agency",
@@ -148,11 +202,38 @@ Can you help me with a quote?`;
       departure: "Departure",
       return: "Return",
       passengers: "Passengers",
-      search: "Search",
+      next: "Next",
+      back: "Back",
+      fullName: "Full name",
+      phone: "Phone number",
+      step1Title: "Step 1: Trip details",
+      step2Title: "Step 2: Contact info",
+      tripSummary: "Your trip summary",
+      contactToWhatsapp: "Contact via WhatsApp",
+    },
+    pt: {
+      title: "Agencia de Viagens Trips Europa",
+      subtitle: "Esta planejando sua proxima viagem para a Europa? Quer encontrar o melhor preco e a melhor experiencia? Use nosso buscador, porque na Trips Europa temos o que voce precisa.",
+      roundtrip: "Ida e Volta",
+      oneway: "Somente Ida",
+      origin: "Origem",
+      destination: "Destino",
+      selectFirst: "Selecione primeiro a ORIGEM",
+      departure: "Partida",
+      return: "Retorno",
+      passengers: "Passageiros",
+      next: "Proximo",
+      back: "Voltar",
+      fullName: "Nome completo",
+      phone: "Numero de telefone",
+      step1Title: "Passo 1: Detalhes da viagem",
+      step2Title: "Passo 2: Dados de contato",
+      tripSummary: "Resumo da sua viagem",
+      contactToWhatsapp: "Contatar via WhatsApp",
     },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   return (
     <div className="w-full bg-primary/95 backdrop-blur-sm py-8" data-testid="hero-flight-search">
@@ -167,33 +248,44 @@ Can you help me with a quote?`;
         </div>
 
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
-          <div className="flex border-b">
-            <button
-              onClick={() => setTripType("roundtrip")}
-              className={cn(
-                "px-6 py-3 text-sm font-medium transition-colors",
-                tripType === "roundtrip"
-                  ? "text-accent border-b-2 border-accent bg-accent/5"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              data-testid="tab-roundtrip"
-            >
-              {c.roundtrip}
-            </button>
-            <button
-              onClick={() => setTripType("oneway")}
-              className={cn(
-                "px-6 py-3 text-sm font-medium transition-colors",
-                tripType === "oneway"
-                  ? "text-accent border-b-2 border-accent bg-accent/5"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              data-testid="tab-oneway"
-            >
-              {c.oneway}
-            </button>
+          <div className="flex border-b justify-between items-center">
+            <div className="flex">
+              <button
+                onClick={() => step === 1 && setTripType("roundtrip")}
+                className={cn(
+                  "px-6 py-3 text-sm font-medium transition-colors",
+                  tripType === "roundtrip"
+                    ? "text-accent border-b-2 border-accent bg-accent/5"
+                    : "text-muted-foreground hover:text-foreground",
+                  step === 2 && "opacity-50 cursor-not-allowed"
+                )}
+                data-testid="tab-roundtrip"
+                disabled={step === 2}
+              >
+                {c.roundtrip}
+              </button>
+              <button
+                onClick={() => step === 1 && setTripType("oneway")}
+                className={cn(
+                  "px-6 py-3 text-sm font-medium transition-colors",
+                  tripType === "oneway"
+                    ? "text-accent border-b-2 border-accent bg-accent/5"
+                    : "text-muted-foreground hover:text-foreground",
+                  step === 2 && "opacity-50 cursor-not-allowed"
+                )}
+                data-testid="tab-oneway"
+                disabled={step === 2}
+              >
+                {c.oneway}
+              </button>
+            </div>
+            <div className="px-4 flex gap-2">
+              <span className={cn("w-3 h-3 rounded-full", step === 1 ? "bg-accent" : "bg-gray-300")} />
+              <span className={cn("w-3 h-3 rounded-full", step === 2 ? "bg-accent" : "bg-gray-300")} />
+            </div>
           </div>
 
+          {step === 1 && (
           <div className="p-4">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
               <div className="md:col-span-3 relative">
@@ -380,15 +472,87 @@ Can you help me with a quote?`;
 
               <div className="md:col-span-1 flex items-end">
                 <Button
-                  onClick={handleSearch}
+                  onClick={handleNextStep}
                   className="w-full h-[46px] bg-accent hover:bg-accent/90 text-primary"
-                  data-testid="button-search-flights"
+                  data-testid="button-next-step"
                 >
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
             </div>
           </div>
+          )}
+
+          {step === 2 && (
+          <div className="p-6">
+            <div className="max-w-md mx-auto space-y-6">
+              <div className="bg-accent/10 rounded-lg p-4 mb-4">
+                <h4 className="font-semibold text-sm text-primary mb-2">{c.tripSummary}</h4>
+                <div className="text-sm space-y-1 text-muted-foreground">
+                  <p><strong>{c.origin}:</strong> {origin}</p>
+                  <p><strong>{c.destination}:</strong> {destination}</p>
+                  <p><strong>{c.departure}:</strong> {departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : ""}</p>
+                  {tripType === "roundtrip" && returnDate && (
+                    <p><strong>{c.return}:</strong> {format(returnDate, "d MMM yyyy", { locale: dateLocale })}</p>
+                  )}
+                  <p><strong>{c.passengers}:</strong> {passengers}</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="text-xs text-muted-foreground mb-1 block">{c.fullName}</label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary" />
+                    <Input
+                      type="text"
+                      placeholder={c.fullName}
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      className="pl-10 h-[46px] bg-gray-50 border-gray-200"
+                      data-testid="input-fullname"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-xs text-muted-foreground mb-1 block">{c.phone}</label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary" />
+                    <Input
+                      type="tel"
+                      placeholder="+57 300 123 4567"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="pl-10 h-[46px] bg-gray-50 border-gray-200"
+                      data-testid="input-phone"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-3 pt-4">
+                <Button
+                  variant="outline"
+                  onClick={() => setStep(1)}
+                  className="flex-1 h-[46px]"
+                  data-testid="button-back"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  {c.back}
+                </Button>
+                <Button
+                  onClick={handleSubmit}
+                  className="flex-1 h-[46px] bg-green-600 hover:bg-green-700 text-white"
+                  data-testid="button-whatsapp-submit"
+                >
+                  {c.contactToWhatsapp}
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          </div>
+          )}
         </div>
       </div>
     </div>
