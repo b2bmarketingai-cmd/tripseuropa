@@ -9,6 +9,33 @@ import { MapPin, Clock, Calendar, Tag, ArrowRight, CheckCircle, Phone, Percent, 
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
 import { Link } from "wouter";
 
+const LAST_MINUTE_FAQS: FAQItem[] = [
+  {
+    question: { es: "Que incluyen las ofertas de ultima hora?", en: "What's included in last-minute deals?" },
+    answer: { es: "Nuestras ofertas de ultima hora incluyen vuelos de ida y vuelta, alojamiento en hoteles de 4-5 estrellas, traslados, tours guiados y algunas comidas segun el paquete. Todos los impuestos y tasas estan incluidos en el precio.", en: "Our last-minute deals include round-trip flights, accommodation in 4-5 star hotels, transfers, guided tours, and some meals depending on the package. All taxes and fees are included in the price." }
+  },
+  {
+    question: { es: "Con cuanta anticipacion puedo reservar una oferta de ultima hora?", en: "How far in advance can I book a last-minute deal?" },
+    answer: { es: "Las ofertas de ultima hora tienen fechas de salida en las proximas 2-6 semanas. Puedes reservar hasta 48 horas antes de la fecha de salida, dependiendo de la disponibilidad.", en: "Last-minute deals have departure dates within the next 2-6 weeks. You can book up to 48 hours before the departure date, depending on availability." }
+  },
+  {
+    question: { es: "Puedo modificar o cancelar mi reserva de ultima hora?", en: "Can I modify or cancel my last-minute booking?" },
+    answer: { es: "Las reservas de ultima hora tienen politicas de cancelacion especificas debido a su naturaleza. Generalmente ofrecemos modificaciones sin cargo hasta 7 dias antes de la salida. Consulta los terminos especificos de cada oferta.", en: "Last-minute bookings have specific cancellation policies due to their nature. We generally offer free modifications up to 7 days before departure. Check the specific terms for each offer." }
+  },
+  {
+    question: { es: "Por que los precios de ultima hora son mas bajos?", en: "Why are last-minute prices lower?" },
+    answer: { es: "Los hoteles y aerolineas prefieren llenar sus espacios vacios a ofrecer descuentos. Aprovechamos estas oportunidades para ofrecerte precios excepcionales en viajes de alta calidad.", en: "Hotels and airlines prefer to fill empty spaces rather than offer discounts. We take advantage of these opportunities to offer you exceptional prices on high-quality trips." }
+  },
+  {
+    question: { es: "Como puedo pagar mi reserva?", en: "How can I pay for my booking?" },
+    answer: { es: "Aceptamos tarjetas de credito y debito (Visa, Mastercard, American Express), transferencias bancarias y PayPal. Para reservas de ultima hora, el pago completo es requerido al momento de la reserva.", en: "We accept credit and debit cards (Visa, Mastercard, American Express), bank transfers, and PayPal. For last-minute bookings, full payment is required at the time of booking." }
+  },
+  {
+    question: { es: "Necesito visa para viajar a Europa?", en: "Do I need a visa to travel to Europe?" },
+    answer: { es: "Depende de tu nacionalidad. Los ciudadanos de paises latinoamericanos generalmente pueden visitar el espacio Schengen por hasta 90 dias sin visa para turismo. Te recomendamos verificar los requisitos especificos para tu pais.", en: "It depends on your nationality. Citizens of Latin American countries can generally visit the Schengen area for up to 90 days without a visa for tourism. We recommend checking the specific requirements for your country." }
+  }
+];
+
 const LAST_MINUTE_OFFERS = [
   {
     id: "ireland-emerald",
@@ -424,162 +451,9 @@ export default function LastMinuteOffers() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" data-testid="section-lastminute-faq">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-8">
-              <span className="text-accent">{language === "es" ? "Preguntas Frecuentes" : "Frequently Asked Questions"}</span>
-            </h2>
-            <Accordion type="single" collapsible className="w-full space-y-3">
-              <AccordionItem value="item-1" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-1">
-                  {language === "es" 
-                    ? "Que incluyen las ofertas de ultima hora?" 
-                    : "What's included in last-minute deals?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Nuestras ofertas de ultima hora incluyen vuelos de ida y vuelta, alojamiento en hoteles de 4-5 estrellas, traslados, tours guiados y algunas comidas segun el paquete. Todos los impuestos y tasas estan incluidos en el precio." 
-                    : "Our last-minute deals include round-trip flights, accommodation in 4-5 star hotels, transfers, guided tours, and some meals depending on the package. All taxes and fees are included in the price."}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-2">
-                  {language === "es" 
-                    ? "Con cuanta anticipacion puedo reservar una oferta de ultima hora?" 
-                    : "How far in advance can I book a last-minute deal?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Las ofertas de ultima hora tienen fechas de salida en las proximas 2-6 semanas. Puedes reservar hasta 48 horas antes de la fecha de salida, dependiendo de la disponibilidad." 
-                    : "Last-minute deals have departure dates within the next 2-6 weeks. You can book up to 48 hours before the departure date, depending on availability."}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-3">
-                  {language === "es" 
-                    ? "Puedo modificar o cancelar mi reserva de ultima hora?" 
-                    : "Can I modify or cancel my last-minute booking?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Las reservas de ultima hora tienen politicas de cancelacion especificas debido a su naturaleza. Generalmente ofrecemos modificaciones sin cargo hasta 7 dias antes de la salida. Consulta los terminos especificos de cada oferta." 
-                    : "Last-minute bookings have specific cancellation policies due to their nature. We generally offer free modifications up to 7 days before departure. Check the specific terms for each offer."}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-4">
-                  {language === "es" 
-                    ? "Por que los precios de ultima hora son mas bajos?" 
-                    : "Why are last-minute prices lower?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Los hoteles y aerolineas prefieren llenar sus espacios vacios a ofrecer descuentos. Aprovechamos estas oportunidades para ofrecerte precios excepcionales en viajes de alta calidad." 
-                    : "Hotels and airlines prefer to fill empty spaces rather than offer discounts. We take advantage of these opportunities to offer you exceptional prices on high-quality trips."}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-5">
-                  {language === "es" 
-                    ? "Como puedo pagar mi reserva?" 
-                    : "How can I pay for my booking?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Aceptamos tarjetas de credito y debito (Visa, Mastercard, American Express), transferencias bancarias y PayPal. Para reservas de ultima hora, el pago completo es requerido al momento de la reserva." 
-                    : "We accept credit and debit cards (Visa, Mastercard, American Express), bank transfers, and PayPal. For last-minute bookings, full payment is required at the time of booking."}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-6" className="border rounded-lg px-4">
-                <AccordionTrigger className="text-left font-medium" data-testid="faq-item-6">
-                  {language === "es" 
-                    ? "Necesito visa para viajar a Europa?" 
-                    : "Do I need a visa to travel to Europe?"}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Depende de tu nacionalidad. Los ciudadanos de paises latinoamericanos generalmente pueden visitar el espacio Schengen por hasta 90 dias sin visa para turismo. Te recomendamos verificar los requisitos especificos para tu pais." 
-                    : "It depends on your nationality. Citizens of Latin American countries can generally visit the Schengen area for up to 90 days without a visa for tourism. We recommend checking the specific requirements for your country."}
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30" data-testid="section-lastminute-contact">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-4">
-              <span className="text-accent">{language === "es" ? "Contactanos" : "Contact Us"}</span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-8">
-              {language === "es" 
-                ? "Tienes preguntas sobre nuestras ofertas? Nuestros asesores de viaje estan listos para ayudarte." 
-                : "Have questions about our deals? Our travel advisors are ready to help you."}
-            </p>
-            <Card>
-              <CardContent className="p-6">
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="contact-name">{language === "es" ? "Nombre completo" : "Full name"}</Label>
-                      <Input id="contact-name" placeholder={language === "es" ? "Tu nombre" : "Your name"} data-testid="input-contact-name" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="contact-email">Email</Label>
-                      <Input id="contact-email" type="email" placeholder="tu@email.com" data-testid="input-contact-email" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="contact-phone">{language === "es" ? "Telefono" : "Phone"}</Label>
-                      <Input id="contact-phone" type="tel" placeholder="+57 300 000 0000" data-testid="input-contact-phone" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="contact-destination">{language === "es" ? "Destino de interes" : "Destination of interest"}</Label>
-                      <Input id="contact-destination" placeholder={language === "es" ? "Ej: Italia, España" : "E.g.: Italy, Spain"} data-testid="input-contact-destination" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="contact-message">{language === "es" ? "Mensaje" : "Message"}</Label>
-                    <Textarea 
-                      id="contact-message" 
-                      placeholder={language === "es" ? "Cuentanos sobre tu viaje ideal..." : "Tell us about your ideal trip..."} 
-                      rows={4}
-                      data-testid="input-contact-message"
-                    />
-                  </div>
-                  <Button className="w-full bg-accent text-primary hover:bg-accent/90" data-testid="button-contact-submit">
-                    <Send className="w-4 h-4 mr-2" />
-                    {language === "es" ? "Enviar consulta" : "Send inquiry"}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50" data-testid="floating-contact-buttons">
-        <a 
-          href="https://wa.me/34611105448" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
-          data-testid="button-whatsapp-float"
-        >
-          <SiWhatsapp className="w-7 h-7 text-white" />
-        </a>
-        <a 
-          href="tel:+34611105448"
-          className="w-14 h-14 bg-accent hover:bg-accent/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
-          data-testid="button-phone-float"
-        >
-          <Phone className="w-6 h-6 text-primary" />
-        </a>
-      </div>
+      <SupportFAQSection faqs={LAST_MINUTE_FAQS} />
+      <SupportContactSection />
+      <FloatingContactButtons />
 
       <Footer />
     </div>
