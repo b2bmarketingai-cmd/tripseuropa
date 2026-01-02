@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Copy, Check } from "lucide-react";
+import { Phone, Copy, Check, PhoneCall } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
 export function FloatingContactButtons() {
@@ -32,22 +32,35 @@ export function FloatingContactButtons() {
       
       <div className="relative">
         {showPhone && (
-          <div className="absolute right-16 bottom-0 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-3 flex items-center gap-2 min-w-max border border-gray-200 dark:border-gray-700">
+          <div className="absolute right-16 bottom-0 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-3 flex items-center gap-3 min-w-max border border-gray-200 dark:border-gray-700">
+            <span className="font-bold text-primary">
+              {phoneNumber}
+            </span>
             <a 
               href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-              className="font-bold text-primary hover:text-accent transition-colors"
+              className="p-2 rounded-md bg-green-500 hover:bg-green-600 transition-colors flex items-center gap-1"
+              aria-label="Llamar"
+              data-testid="button-call-direct"
             >
-              {phoneNumber}
+              <PhoneCall className="w-4 h-4 text-white" />
+              <span className="text-white text-sm font-medium">Llamar</span>
             </a>
             <button
               onClick={copyToClipboard}
-              className="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Copiar número"
+              className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-1"
+              aria-label="Copiar numero"
+              data-testid="button-copy-phone"
             >
               {copied ? (
-                <Check className="w-4 h-4 text-green-500" />
+                <>
+                  <Check className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-green-500">Copiado</span>
+                </>
               ) : (
-                <Copy className="w-4 h-4 text-gray-500" />
+                <>
+                  <Copy className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                  <span className="text-sm text-gray-600 dark:text-gray-300">Copiar</span>
+                </>
               )}
             </button>
           </div>
