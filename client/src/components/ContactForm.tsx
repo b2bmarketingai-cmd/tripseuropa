@@ -330,8 +330,7 @@ export function ContactInfo() {
         </div>
         <div>
           <h4 className="font-bold text-lg mb-1">{t("contactInfo.call")}</h4>
-          <p className="text-muted-foreground">+57 601 123 4567</p>
-          <p className="text-muted-foreground">+34 91 123 4567</p>
+          <p className="text-muted-foreground">+34 611 105 448</p>
         </div>
       </div>
       <div className="flex items-start gap-4">

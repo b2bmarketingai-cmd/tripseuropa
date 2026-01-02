@@ -41,7 +41,7 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="contact-phone">{language === "es" ? "Telefono" : "Phone"}</Label>
-                    <Input id="contact-phone" type="tel" placeholder="+57 300 000 0000" data-testid="input-contact-phone" />
+                    <Input id="contact-phone" type="tel" placeholder="+34 611 105 448" data-testid="input-contact-phone" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="contact-destination">{language === "es" ? "Destino de interes" : "Destination of interest"}</Label>

@@ -797,7 +797,7 @@ export default function CityOriginTemplate() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-accent" />
-              <span>{t.phone}: +34 900 123 456</span>
+              <span>{t.phone}: +34 611 105 448</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-accent" />

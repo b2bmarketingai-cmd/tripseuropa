@@ -8,7 +8,7 @@ export function TravelAgencySchema() {
     "url": "https://tripseuropa.com",
     "logo": "https://tripseuropa.com/logo.png",
     "image": "https://tripseuropa.com/og-image.jpg",
-    "telephone": "+57-300-123-4567",
+    "telephone": "+34-611-105-448",
     "email": "info@tripseuropa.com",
     "address": {
       "@type": "PostalAddress",
@@ -314,7 +314,7 @@ export function LocalBusinessSchema({ country, city }: { country: string; city: 
     "name": `Trips Europa - ${city}`,
     "@id": `https://tripseuropa.com/desde-${country.toLowerCase()}`,
     "url": `https://tripseuropa.com/desde-${country.toLowerCase()}`,
-    "telephone": "+57-300-123-4567",
+    "telephone": "+34-611-105-448",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": city,
