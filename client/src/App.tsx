@@ -53,6 +53,7 @@ import TravelAssistant from "@/pages/TravelAssistant";
 import RouteTemplate from "@/pages/RouteTemplate";
 import CityOriginTemplate from "@/pages/CityOriginTemplate";
 import BlogPost from "@/pages/BlogPost";
+import DestinationPage from "@/pages/DestinationPage";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -78,6 +79,7 @@ function Router() {
       <Route path="/tools" component={Tools} />
       <Route path="/policies" component={Policies} />
       <Route path="/destinations" component={Destinations} />
+      <Route path="/destinations/:slug" component={DestinationPage} />
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/post/:slug" component={BlogPost} />
