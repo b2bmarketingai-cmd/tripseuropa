@@ -80,10 +80,10 @@ export default function BlogPost() {
                 <Clock className="w-4 h-4" />
                 <span>{post.readTime} min de lectura</span>
               </div>
-              {post.author && (
+              {fullPost?.author && (
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
-                  <span>{post.author}</span>
+                  <span>{fullPost.author}</span>
                 </div>
               )}
             </div>
@@ -103,7 +103,7 @@ export default function BlogPost() {
               {excerpt}
             </p>
 
-            {post.sections && post.sections.map((section: BlogSection, index: number) => (
+            {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
               <section key={index} className="mb-10">
                 <h2 className="text-2xl font-display text-gold mb-4">{section.title}</h2>
                 <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
@@ -128,11 +128,11 @@ export default function BlogPost() {
               </section>
             ))}
 
-            {post.faqs && post.faqs.length > 0 && (
+            {fullPost?.faqs && fullPost.faqs.length > 0 && (
               <section className="mt-12">
                 <h2 className="text-2xl font-display text-gold mb-6">Preguntas Frecuentes</h2>
                 <div className="space-y-4">
-                  {post.faqs.map((faq: { question: string; answer: string }, index: number) => (
+                  {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
                     <Card key={index}>
                       <CardContent className="p-4">
                         <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
