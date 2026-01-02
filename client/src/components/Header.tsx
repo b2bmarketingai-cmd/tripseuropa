@@ -44,6 +44,14 @@ const DESTINATIONS_MENU = {
       "Italy", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Scotland", 
       "Spain", "Sweden", "Switzerland", "United Kingdom"
     ] },
+  ],
+  pt: [
+    { name: "Europa", href: "/destinations", items: [
+      "Albania", "Alemanha", "Austria", "Belgica", "Chipre", "Croacia", "Dinamarca", 
+      "Escocia", "Espanha", "Estados Balticos", "Finlandia", "Franca", "Grecia", 
+      "Hungria", "Irlanda", "Islandia", "Italia", "Noruega", "Paises Baixos", 
+      "Polonia", "Portugal", "Reino Unido", "Republica Tcheca", "Romenia", "Suecia", "Suica"
+    ] },
   ]
 };
 
@@ -121,6 +129,43 @@ const TRAVEL_STYLE_CATEGORIES = {
         { name: "Friends & Private Tours", href: "/travel-style/friends-private" }
       ]
     }
+  },
+  pt: {
+    bySeason: {
+      title: "Por Temporada",
+      items: [
+        { name: "Outono", href: "/travel-style/fall" },
+        { name: "Verao", href: "/travel-style/summer" },
+        { name: "Primavera", href: "/travel-style/spring" },
+        { name: "Pascoa", href: "/travel-style/easter" },
+        { name: "Inverno", href: "/travel-style/winter" },
+        { name: "Natal", href: "/travel-style/christmas" }
+      ]
+    },
+    byInterest: {
+      title: "Por Interesse",
+      items: [
+        { name: "Multi-Pais", href: "/travel-style/multi-country" },
+        { name: "Praia", href: "/travel-style/beach" },
+        { name: "Aventura", href: "/travel-style/adventure" },
+        { name: "Safari", href: "/travel-style/safari" },
+        { name: "Cruzeiros", href: "/travel-style/cruises" },
+        { name: "Lua de Mel", href: "/travel-style/honeymoon" },
+        { name: "Natureza", href: "/travel-style/nature" },
+        { name: "Cultural", href: "/travel-style/culture" },
+        { name: "Luxo", href: "/travel-style/luxury" }
+      ]
+    },
+    byGroup: {
+      title: "Por Grupo",
+      items: [
+        { name: "Viajantes Solo", href: "/travel-style/solo" },
+        { name: "Familia", href: "/travel-style/family" },
+        { name: "Casais", href: "/travel-style/couples" },
+        { name: "Seniors", href: "/travel-style/senior" },
+        { name: "Amigos e Tours Privados", href: "/travel-style/friends-private" }
+      ]
+    }
   }
 };
 
@@ -134,6 +179,11 @@ const TRAVEL_STYLE_MENU = {
     { name: "By Season", href: "/packages?filter=season" },
     { name: "By Interest", href: "/packages?filter=interest" },
     { name: "By Group", href: "/packages?filter=group" },
+  ],
+  pt: [
+    { name: "Por Temporada", href: "/packages?filter=temporada" },
+    { name: "Por Interesse", href: "/packages?filter=interesse" },
+    { name: "Por Grupo", href: "/packages?filter=grupo" },
   ]
 };
 
@@ -149,6 +199,12 @@ const OFFERS_MENU = {
     { name: "Winter Deals", href: "/packages?offer=winter" },
     { name: "Featured Packages", href: "/packages?offer=featured" },
     { name: "TripsEuropa GO Program", href: "/rewards" },
+  ],
+  pt: [
+    { name: "Ofertas de Ultima Hora", href: "/ofertas-ultima-hora" },
+    { name: "Ofertas de Inverno", href: "/packages?offer=inverno" },
+    { name: "Pacotes em Destaque", href: "/packages?offer=destaque" },
+    { name: "Programa TripsEuropa GO", href: "/rewards" },
   ]
 };
 
@@ -175,7 +231,33 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const currentLang = language as "es" | "en";
+  const currentLang = language as "es" | "en" | "pt";
+
+  const labels = {
+    destinos: { es: "Destinos", en: "Destinations", pt: "Destinos" },
+    estiloViaje: { es: "Estilo de viaje", en: "Travel Style", pt: "Estilo de viagem" },
+    ofertas: { es: "Ofertas", en: "Deals", pt: "Ofertas" },
+    reservar: { es: "Reservar:", en: "Book:", pt: "Reservar:" },
+    ayuda: { es: "Ayuda", en: "Help", pt: "Ajuda" },
+    asistenciaChat: { es: "Asistencia por chat", en: "Chat Support", pt: "Suporte por chat" },
+    centroAyuda: { es: "Centro de Ayuda y FAQs", en: "Help Center & FAQs", pt: "Central de Ajuda e FAQs" },
+    centroAyudaMobile: { es: "Centro de Ayuda", en: "Help Center", pt: "Central de Ajuda" },
+    miCuenta: { es: "Mi cuenta", en: "My Account", pt: "Minha conta" },
+    iniciarSesion: { es: "Inicia sesion o crea una cuenta", en: "Login or create an account", pt: "Entre ou crie uma conta" },
+    viajero: { es: "Viajero", en: "Traveler", pt: "Viajante" },
+    agenteViajes: { es: "Agente de viajes", en: "Travel Agent", pt: "Agente de viagens" },
+    contrasena: { es: "Contrasena", en: "Password", pt: "Senha" },
+    entrar: { es: "Iniciar sesion", en: "Login", pt: "Entrar" },
+    olvidaste: { es: "Olvidaste tu contrasena?", en: "Forgot password?", pt: "Esqueceu a senha?" },
+    noTienesCuenta: { es: "No tienes cuenta?", en: "Don't have an account?", pt: "Nao tem conta?" },
+    crearCuenta: { es: "Crear una cuenta", en: "Create account", pt: "Criar conta" },
+    eresAgente: { es: "Eres agente de viajes?", en: "Are you a travel agent?", pt: "E agente de viagens?" },
+    registrarse: { es: "Registrarse", en: "Register", pt: "Registrar-se" },
+    tripBySeason: { es: "Viaje Por Temporada", en: "Trip By Season", pt: "Viagem por Temporada" },
+    tripByInterest: { es: "Viaje Por Interes", en: "Trip By Interest", pt: "Viagem por Interesse" },
+    tripByGroup: { es: "Viaje Por Grupo", en: "Trip By Group", pt: "Viagem por Grupo" },
+    agenteDesc: { es: "Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos.", en: "Offer your clients unforgettable travel packages at competitive prices.", pt: "Ofereca aos seus clientes pacotes de viagem inesqueciveis a precos competitivos." },
+  };
 
   return (
     <>
@@ -198,7 +280,7 @@ export function Header() {
                     className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-destinos"
                   >
-                    {language === "es" ? "Destinos" : "Destinations"}
+                    {labels.destinos[currentLang]}
                     <ChevronDown className="w-3 h-3" />
                   </button>
                 </DropdownMenuTrigger>
@@ -217,7 +299,9 @@ export function Header() {
                       "Germany": "germany", "Greece": "greece", "Hungary": "hungary", "Iceland": "iceland", "Ireland": "ireland",
                       "Italy": "italy", "Netherlands": "netherlands", "Norway": "norway", "Poland": "poland",
                       "Romania": "romania", "Scotland": "scotland", "Spain": "spain",
-                      "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom"
+                      "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom",
+                      "Alemanha": "germany", "Espanha": "spain", "Franca": "france", "Paises Baixos": "netherlands",
+                      "Republica Tcheca": "czech-republic", "Romenia": "romania", "Suica": "switzerland"
                     };
                     return (
                       <DropdownMenuItem key={idx} asChild className="cursor-pointer">
@@ -236,7 +320,7 @@ export function Header() {
                     className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-estilo"
                   >
-                    {language === "es" ? "Estilo de viaje" : "Travel Style"}
+                    {labels.estiloViaje[currentLang]}
                     <ChevronDown className="w-3 h-3" />
                   </button>
                 </DropdownMenuTrigger>
@@ -254,7 +338,7 @@ export function Header() {
                       </TabsTrigger>
                     </TabsList>
                     <TabsContent value="season" className="mt-0">
-                      <p className="text-sm font-medium text-muted-foreground mb-3">{language === "es" ? "Viaje Por Temporada" : "Trip By Season"}</p>
+                      <p className="text-sm font-medium text-muted-foreground mb-3">{labels.tripBySeason[currentLang]}</p>
                       <div className="grid grid-cols-2 gap-2">
                         {TRAVEL_STYLE_CATEGORIES[currentLang].bySeason.items.map((item, idx) => (
                           <Link key={idx} href={item.href} className="text-sm text-foreground hover:text-accent py-1.5 transition-colors" onClick={() => setActiveDropdown(null)}>
@@ -264,7 +348,7 @@ export function Header() {
                       </div>
                     </TabsContent>
                     <TabsContent value="interest" className="mt-0">
-                      <p className="text-sm font-medium text-muted-foreground mb-3">{language === "es" ? "Viaje Por Interes" : "Trip By Interest"}</p>
+                      <p className="text-sm font-medium text-muted-foreground mb-3">{labels.tripByInterest[currentLang]}</p>
                       <div className="grid grid-cols-3 gap-2">
                         {TRAVEL_STYLE_CATEGORIES[currentLang].byInterest.items.map((item, idx) => (
                           <Link key={idx} href={item.href} className="text-sm text-foreground hover:text-accent py-1.5 transition-colors" onClick={() => setActiveDropdown(null)}>
@@ -274,7 +358,7 @@ export function Header() {
                       </div>
                     </TabsContent>
                     <TabsContent value="group" className="mt-0">
-                      <p className="text-sm font-medium text-muted-foreground mb-3">{language === "es" ? "Viaje Por Grupo" : "Trip By Group"}</p>
+                      <p className="text-sm font-medium text-muted-foreground mb-3">{labels.tripByGroup[currentLang]}</p>
                       <div className="grid grid-cols-2 gap-2">
                         {TRAVEL_STYLE_CATEGORIES[currentLang].byGroup.items.map((item, idx) => (
                           <Link key={idx} href={item.href} className="text-sm text-foreground hover:text-accent py-1.5 transition-colors" onClick={() => setActiveDropdown(null)}>
@@ -293,7 +377,7 @@ export function Header() {
                     className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-ofertas"
                   >
-                    {language === "es" ? "Ofertas" : "Deals"}
+                    {labels.ofertas[currentLang]}
                     <ChevronDown className="w-3 h-3" />
                   </button>
                 </DropdownMenuTrigger>
@@ -324,7 +408,7 @@ export function Header() {
                 className="flex items-center gap-2 text-gray-600 hover:text-primary text-sm transition-colors"
                 data-testid="link-phone-reservar"
               >
-                <span className="text-gray-500">{language === "es" ? "Reservar:" : "Book:"}</span>
+                <span className="text-gray-500">{labels.reservar[currentLang]}</span>
                 <span className="font-semibold text-primary">+34 611 105 448</span>
               </a>
 
@@ -336,19 +420,19 @@ export function Header() {
                     className="text-sm font-medium text-gray-700 hover:text-primary flex items-center gap-1 transition-colors"
                     data-testid="button-menu-ayuda"
                   >
-                    {language === "es" ? "Ayuda" : "Help"}
+                    {labels.ayuda[currentLang]}
                     <ChevronDown className="w-3 h-3" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-64 bg-white p-2">
                   <DropdownMenuItem className="cursor-pointer gap-3">
                     <MessageCircle className="w-5 h-5" />
-                    <span>{language === "es" ? "Asistencia por chat" : "Chat Support"}</span>
+                    <span>{labels.asistenciaChat[currentLang]}</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
                     <Link href="/faq" className="flex items-center gap-3 w-full">
                       <HelpCircle className="w-5 h-5" />
-                      <span>{language === "es" ? "Centro de Ayuda y FAQs" : "Help Center & FAQs"}</span>
+                      <span>{labels.centroAyuda[currentLang]}</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
@@ -396,6 +480,14 @@ export function Header() {
                     <span className="text-lg">🇬🇧</span>
                     <span>English</span>
                   </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => setLanguage("pt")} 
+                    className={cn("cursor-pointer gap-2", language === "pt" && "bg-accent/10")}
+                    data-testid="button-lang-pt"
+                  >
+                    <span className="text-lg">🇧🇷</span>
+                    <span>Portugues</span>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
@@ -423,6 +515,10 @@ export function Header() {
                   <DropdownMenuItem onClick={() => setLanguage("en")} className="cursor-pointer gap-2">
                     <span className="text-lg">🇬🇧</span>
                     <span>EN</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLanguage("pt")} className="cursor-pointer gap-2">
+                    <span className="text-lg">🇧🇷</span>
+                    <span>PT</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -453,14 +549,14 @@ export function Header() {
                 className="flex items-center gap-2 text-gray-700 py-2"
               >
                 <Phone className="w-5 h-5 text-accent" />
-                <span>{language === "es" ? "Reservar:" : "Book:"} +34 611 105 448</span>
+                <span>{labels.reservar[currentLang]} +34 611 105 448</span>
               </a>
 
               <div className="h-px bg-gray-100" />
 
               <details className="group">
                 <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
-                  <span className="font-medium">{language === "es" ? "Destinos" : "Destinations"}</span>
+                  <span className="font-medium">{labels.destinos[currentLang]}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2 max-h-64 overflow-y-auto">
@@ -478,7 +574,9 @@ export function Header() {
                       "Germany": "germany", "Greece": "greece", "Hungary": "hungary", "Iceland": "iceland", "Ireland": "ireland",
                       "Italy": "italy", "Netherlands": "netherlands", "Norway": "norway", "Poland": "poland",
                       "Romania": "romania", "Scotland": "scotland", "Spain": "spain",
-                      "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom"
+                      "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom",
+                      "Alemanha": "germany", "Espanha": "spain", "Franca": "france", "Paises Baixos": "netherlands",
+                      "Republica Tcheca": "czech-republic", "Romenia": "romania", "Suica": "switzerland"
                     };
                     return (
                       <Link 
@@ -496,7 +594,7 @@ export function Header() {
 
               <details className="group">
                 <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
-                  <span className="font-medium">{language === "es" ? "Estilo de viaje" : "Travel Style"}</span>
+                  <span className="font-medium">{labels.estiloViaje[currentLang]}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-4">
@@ -535,7 +633,7 @@ export function Header() {
 
               <details className="group">
                 <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
-                  <span className="font-medium">{language === "es" ? "Ofertas" : "Deals"}</span>
+                  <span className="font-medium">{labels.ofertas[currentLang]}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2">
@@ -558,18 +656,18 @@ export function Header() {
                 <summary className="flex items-center justify-between py-2 text-gray-800 cursor-pointer list-none">
                   <span className="font-medium flex items-center gap-2">
                     <HelpCircle className="w-4 h-4" />
-                    {language === "es" ? "Ayuda" : "Help"}
+                    {labels.ayuda[currentLang]}
                   </span>
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2">
                   <button className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left">
                     <MessageCircle className="w-4 h-4" />
-                    {language === "es" ? "Asistencia por chat" : "Chat Support"}
+                    {labels.asistenciaChat[currentLang]}
                   </button>
                   <Link href="/faq" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
                     <HelpCircle className="w-4 h-4" />
-                    {language === "es" ? "Centro de Ayuda" : "Help Center"}
+                    {labels.centroAyudaMobile[currentLang]}
                   </Link>
                   <a href="https://wa.me/34611105448" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
                     <SiWhatsapp className="w-4 h-4 text-green-500" />
@@ -586,20 +684,20 @@ export function Header() {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-center text-xl font-display">
-              {language === "es" ? "Mi cuenta" : "My Account"}
+              {labels.miCuenta[currentLang]}
             </DialogTitle>
             <DialogDescription className="sr-only">
-              {language === "es" ? "Inicia sesion o crea una cuenta" : "Login or create an account"}
+              {labels.iniciarSesion[currentLang]}
             </DialogDescription>
           </DialogHeader>
           
           <Tabs defaultValue="viajero" className="w-full">
             <TabsList className="grid w-full grid-cols-2 rounded-full bg-muted p-1">
               <TabsTrigger value="viajero" className="rounded-full data-[state=active]:bg-white data-[state=active]:shadow-sm">
-                {language === "es" ? "Viajero" : "Traveler"}
+                {labels.viajero[currentLang]}
               </TabsTrigger>
               <TabsTrigger value="agente" className="rounded-full data-[state=active]:bg-white data-[state=active]:shadow-sm">
-                {language === "es" ? "Agente de viajes" : "Travel Agent"}
+                {labels.agenteViajes[currentLang]}
               </TabsTrigger>
             </TabsList>
             
@@ -609,54 +707,52 @@ export function Header() {
                 <Input id="email-viajero" type="email" placeholder="tu@email.com" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password-viajero">{language === "es" ? "Contrasena" : "Password"}</Label>
+                <Label htmlFor="password-viajero">{labels.contrasena[currentLang]}</Label>
                 <Input id="password-viajero" type="password" />
               </div>
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-white"
                 onClick={() => window.location.href = "/api/login"}
               >
-                {language === "es" ? "Iniciar sesion" : "Login"}
+                {labels.entrar[currentLang]}
               </Button>
               <div className="text-center">
                 <button className="text-sm text-muted-foreground hover:underline">
-                  {language === "es" ? "Olvidaste tu contrasena?" : "Forgot password?"}
+                  {labels.olvidaste[currentLang]}
                 </button>
               </div>
               <div className="text-center pt-2 border-t">
                 <p className="text-sm text-muted-foreground mb-2">
-                  {language === "es" ? "No tienes cuenta?" : "Don't have an account?"}
+                  {labels.noTienesCuenta[currentLang]}
                 </p>
                 <Button variant="outline" className="w-full">
-                  {language === "es" ? "Crear una cuenta" : "Create account"}
+                  {labels.crearCuenta[currentLang]}
                 </Button>
               </div>
             </TabsContent>
             
             <TabsContent value="agente" className="space-y-4 pt-4">
               <p className="text-sm text-muted-foreground text-center">
-                {language === "es" 
-                  ? "Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos." 
-                  : "Offer your clients unforgettable travel packages at competitive prices."}
+                {labels.agenteDesc[currentLang]}
               </p>
               <div className="space-y-2">
                 <Label htmlFor="email-agente">Email</Label>
                 <Input id="email-agente" type="email" placeholder="agente@agencia.com" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password-agente">{language === "es" ? "Contrasena" : "Password"}</Label>
+                <Label htmlFor="password-agente">{labels.contrasena[currentLang]}</Label>
                 <Input id="password-agente" type="password" />
               </div>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                {language === "es" ? "Iniciar sesion" : "Login"}
+                {labels.entrar[currentLang]}
               </Button>
               <div className="text-center pt-2 border-t">
                 <p className="text-sm text-muted-foreground mb-2">
-                  {language === "es" ? "Eres agente de viajes?" : "Are you a travel agent?"}
+                  {labels.eresAgente[currentLang]}
                 </p>
                 <Link href="/agentes/registro">
                   <Button variant="outline" className="w-full" onClick={() => setAccountModalOpen(false)}>
-                    {language === "es" ? "Registrarse" : "Register"}
+                    {labels.registrarse[currentLang]}
                   </Button>
                 </Link>
               </div>
