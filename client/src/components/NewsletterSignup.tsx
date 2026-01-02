@@ -66,14 +66,28 @@ export function NewsletterSignup() {
 
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsLoading(false);
-    setIsSubscribed(true);
-    toast({
-      title: c.success,
-      description: c.successDesc,
-    });
+    try {
+      // Send notification to backend (emails)
+      await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+
+      // Open WhatsApp with notification
+      const whatsappMessage = `Nueva suscripcion al Newsletter!\n\nEmail: ${email}`;
+      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      
+      setIsSubscribed(true);
+      toast({
+        title: c.success,
+        description: c.successDesc,
+      });
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubscribed) {

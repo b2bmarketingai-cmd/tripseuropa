@@ -147,3 +147,54 @@ export async function sendContactFormEmail(data: ContactFormData): Promise<boole
     return false;
   }
 }
+
+export async function sendNewsletterNotificationEmail(subscriberEmail: string): Promise<boolean> {
+  try {
+    const { client, fromEmail } = await getUncachableResendClient();
+
+    const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background: #0f172a; padding: 20px; text-align: center;">
+          <h1 style="color: #d4af37; margin: 0;">Trips Europa</h1>
+          <p style="color: white; margin: 5px 0 0;">Nueva Suscripcion al Newsletter</p>
+        </div>
+        
+        <div style="padding: 30px; background: #f8f9fa;">
+          <h2 style="color: #0f172a; border-bottom: 2px solid #d4af37; padding-bottom: 10px;">
+            Nuevo Suscriptor
+          </h2>
+          
+          <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+            <p style="margin: 0; color: #666; font-size: 14px;">Email del suscriptor:</p>
+            <p style="margin: 5px 0 0; color: #0f172a; font-size: 18px; font-weight: bold;">
+              <a href="mailto:${subscriberEmail}" style="color: #d4af37;">${subscriberEmail}</a>
+            </p>
+          </div>
+          
+          <p style="color: #666; margin-top: 20px; font-size: 14px;">
+            Este usuario se ha suscrito al newsletter de Trips Europa y desea recibir ofertas exclusivas y promociones.
+          </p>
+        </div>
+        
+        <div style="background: #0f172a; padding: 15px; text-align: center;">
+          <p style="color: #888; margin: 0; font-size: 12px;">
+            Notificacion automatica de tripseuropa.com
+          </p>
+        </div>
+      </div>
+    `;
+
+    const result = await client.emails.send({
+      from: fromEmail || 'Trips Europa <noreply@tripseuropa.com>',
+      to: ['info@tripseuropa.com', 'agente@tripseuropa.com'],
+      subject: `Nueva Suscripcion Newsletter - ${subscriberEmail}`,
+      html: htmlContent
+    });
+
+    console.log('Newsletter notification email sent:', result);
+    return true;
+  } catch (error) {
+    console.error('Error sending newsletter notification email:', error);
+    return false;
+  }
+}

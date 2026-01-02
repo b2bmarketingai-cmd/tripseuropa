@@ -6,7 +6,7 @@ import { z } from "zod";
 import { setupAuth, registerAuthRoutes } from "./replit_integrations/auth";
 import { registerChatRoutes } from "./replit_integrations/chat";
 import { registerImageRoutes } from "./replit_integrations/image";
-import { sendContactFormEmail } from "./replit_integrations/email";
+import { sendContactFormEmail, sendNewsletterNotificationEmail } from "./replit_integrations/email";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -168,6 +168,27 @@ export async function registerRoutes(
         });
       }
       throw err;
+    }
+  });
+
+  // -- Newsletter Subscription --
+  app.post("/api/newsletter/subscribe", async (req, res) => {
+    try {
+      const { email } = req.body;
+      
+      if (!email || !email.includes("@")) {
+        return res.status(400).json({ message: "Email invalido" });
+      }
+
+      // Send email notification
+      sendNewsletterNotificationEmail(email).catch(err => {
+        console.error('Failed to send newsletter notification email:', err);
+      });
+      
+      res.status(200).json({ success: true, message: "Suscripcion exitosa" });
+    } catch (err) {
+      console.error('Newsletter subscription error:', err);
+      res.status(500).json({ message: "Error al procesar la suscripcion" });
     }
   });
 
