@@ -165,7 +165,6 @@ export default function Rewards() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
@@ -175,7 +174,7 @@ export default function Rewards() {
               <Sparkles className="w-4 h-4 mr-2" />
               {language === "es" ? "Programa de Recompensas" : "Rewards Program"}
             </Badge>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6 text-[#d1d2d6]">
               {content.heroTitle}{" "}
               <span className="text-accent">{content.heroBrand}</span>
             </h1>
@@ -194,7 +193,6 @@ export default function Rewards() {
           </div>
         </div>
       </section>
-
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -272,7 +270,6 @@ export default function Rewards() {
           </div>
         </div>
       </section>
-
       <section id="signup" className="py-16 lg:py-24 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto text-center">
@@ -319,7 +316,6 @@ export default function Rewards() {
           </div>
         </div>
       </section>
-
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -352,7 +348,6 @@ export default function Rewards() {
           </div>
         </div>
       </section>
-
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -409,7 +404,6 @@ export default function Rewards() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
