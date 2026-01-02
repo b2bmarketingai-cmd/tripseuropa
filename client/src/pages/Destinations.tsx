@@ -236,14 +236,16 @@ export default function Destinations() {
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-destinations">
-            {language === "es" ? "Destinos Premium" : "Premium Destinations"}
+            {language === "es" ? "Destinos Premium" : language === "pt" ? "Destinos Premium" : "Premium Destinations"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-destinations-title">
-            {language === "es" ? "Explora Europa" : "Explore Europe"}
+            {language === "es" ? "Explora Europa" : language === "pt" ? "Explore a Europa" : "Explore Europe"}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-destinations-subtitle">
             {language === "es" 
               ? "Descubre los destinos mas exclusivos de Europa con nuestros paquetes personalizados" 
+              : language === "pt"
+              ? "Descubra os destinos mais exclusivos da Europa com nossos pacotes personalizados"
               : "Discover the most exclusive destinations in Europe with our personalized packages"}
           </p>
         </div>
@@ -253,7 +255,7 @@ export default function Destinations() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {DESTINATIONS.map((dest) => {
-              const lang = language as "es" | "en";
+              const dataLang = (language === "pt" ? "es" : language) as "es" | "en";
               return (
                 <Link key={dest.slug} href={`/destinations/${dest.slug}`}>
                   <Card className="group overflow-hidden cursor-pointer hover-elevate" data-testid={`card-destination-${dest.slug}`}>
@@ -266,29 +268,29 @@ export default function Destinations() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
                       <Badge className="absolute top-4 left-4 bg-white/90 text-primary">
-                        {dest.days} {language === "es" ? "dias" : "days"}
+                        {dest.days} {language === "es" ? "dias" : language === "pt" ? "dias" : "days"}
                       </Badge>
                       <div className="absolute bottom-4 left-4 right-4 text-white">
-                        <h3 className="text-xl font-display font-bold text-accent">{dest.name[lang]}</h3>
+                        <h3 className="text-xl font-display font-bold text-accent">{dest.name[dataLang]}</h3>
                         <div className="flex items-center gap-1 text-white/80 text-sm">
                           <MapPin className="w-3 h-3" />
-                          {language === "es" ? "Europa" : "Europe"}
+                          {language === "es" ? "Europa" : language === "pt" ? "Europa" : "Europe"}
                         </div>
                       </div>
                     </div>
                     <CardContent className="p-4">
                       <div className="flex flex-wrap gap-1 mb-4">
-                        {dest.highlights[lang].slice(0, 3).map((h, i) => (
+                        {dest.highlights[dataLang].slice(0, 3).map((h, i) => (
                           <Badge key={i} variant="secondary" className="text-xs">{h}</Badge>
                         ))}
                       </div>
                       <div className="flex items-center justify-between gap-2">
                         <div>
-                          <p className="text-xs text-muted-foreground">{language === "es" ? "Desde" : "From"}</p>
+                          <p className="text-xs text-muted-foreground">{language === "es" ? "Desde" : language === "pt" ? "A partir de" : "From"}</p>
                           <p className="text-lg font-bold text-accent">${dest.price} USD</p>
                         </div>
                         <Button size="sm" data-testid={`button-destination-${dest.slug}`}>
-                          {language === "es" ? "Ver mas" : "View more"}
+                          {language === "es" ? "Ver mas" : language === "pt" ? "Ver mais" : "View more"}
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Button>
                       </div>
@@ -304,16 +306,18 @@ export default function Destinations() {
       <section className="py-16 bg-primary" data-testid="section-destinations-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            {language === "es" ? "No encuentras tu destino ideal?" : "Can't find your ideal destination?"}
+            {language === "es" ? "No encuentras tu destino ideal?" : language === "pt" ? "Nao encontra seu destino ideal?" : "Can't find your ideal destination?"}
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             {language === "es" 
               ? "Nuestros asesores pueden crear un viaje personalizado a cualquier destino europeo" 
+              : language === "pt"
+              ? "Nossos consultores podem criar uma viagem personalizada para qualquer destino europeu"
               : "Our advisors can create a personalized trip to any European destination"}
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-contact-advisor">
-              {language === "es" ? "Hablar con un asesor" : "Talk to an advisor"}
+              {language === "es" ? "Hablar con un asesor" : language === "pt" ? "Falar com um consultor" : "Talk to an advisor"}
             </Button>
           </Link>
         </div>

@@ -2,8 +2,8 @@ import { useI18n } from "@/lib/i18n";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export interface FAQItem {
-  question: { es: string; en: string };
-  answer: { es: string; en: string };
+  question: { es: string; en: string; pt?: string };
+  answer: { es: string; en: string; pt?: string };
 }
 
 const DEFAULT_FAQS: FAQItem[] = [
@@ -71,16 +71,18 @@ const DEFAULT_FAQS: FAQItem[] = [
 
 interface SupportFAQSectionProps {
   faqs?: FAQItem[];
-  title?: { es: string; en: string };
+  title?: { es: string; en: string; pt?: string };
 }
 
 export function SupportFAQSection({ faqs = DEFAULT_FAQS, title }: SupportFAQSectionProps) {
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
+  const fallbackLang = (language === "pt" ? "es" : language) as "es" | "en";
 
   const sectionTitle = title || {
     es: "Preguntas Frecuentes",
-    en: "Frequently Asked Questions"
+    en: "Frequently Asked Questions",
+    pt: "Perguntas Frequentes"
   };
 
   return (
@@ -88,16 +90,16 @@ export function SupportFAQSection({ faqs = DEFAULT_FAQS, title }: SupportFAQSect
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-8">
-            <span className="text-accent">{sectionTitle[lang]}</span>
+            <span className="text-accent">{sectionTitle[lang] || sectionTitle[fallbackLang]}</span>
           </h2>
           <Accordion type="single" collapsible className="w-full space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-4">
                 <AccordionTrigger className="text-left font-medium" data-testid={`faq-item-${index + 1}`}>
-                  {faq.question[lang]}
+                  {(language === "pt" && faq.question.pt) ? faq.question.pt : faq.question[fallbackLang]}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  {faq.answer[lang]}
+                  {(language === "pt" && faq.answer.pt) ? faq.answer.pt : faq.answer[fallbackLang]}
                 </AccordionContent>
               </AccordionItem>
             ))}
