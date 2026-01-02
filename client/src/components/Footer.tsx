@@ -9,41 +9,41 @@ export function Footer() {
   const { t, language } = useI18n();
   
   const mainNav = [
-    { name: language === "es" ? "Destinos" : "Destinations", href: "/destinations", icon: Map },
-    { name: language === "es" ? "Paquetes" : "Packages", href: "/packages", icon: Plane },
-    { name: language === "es" ? "Herramientas" : "Tools", href: "/tools", icon: Wrench },
-    { name: language === "es" ? "Blog" : "Blog", href: "/blog", icon: BookOpen },
-    { name: language === "es" ? "Contacto" : "Contact", href: "/contact", icon: MessageCircle },
-    { name: language === "es" ? "Asistente IA" : "AI Assistant", href: "/travel-assistant", icon: Bot },
+    { name: { es: "Destinos", en: "Destinations", pt: "Destinos" }, href: "/destinations", icon: Map },
+    { name: { es: "Paquetes", en: "Packages", pt: "Pacotes" }, href: "/packages", icon: Plane },
+    { name: { es: "Herramientas", en: "Tools", pt: "Ferramentas" }, href: "/tools", icon: Wrench },
+    { name: { es: "Blog", en: "Blog", pt: "Blog" }, href: "/blog", icon: BookOpen },
+    { name: { es: "Contacto", en: "Contact", pt: "Contato" }, href: "/contact", icon: MessageCircle },
+    { name: { es: "Asistente IA", en: "AI Assistant", pt: "Assistente IA" }, href: "/travel-assistant", icon: Bot },
   ];
 
   const destinations = [
-    { name: { es: "Francia", en: "France" }, href: "/destinations/france" },
-    { name: { es: "Italia", en: "Italy" }, href: "/destinations/italy" },
-    { name: { es: "España", en: "Spain" }, href: "/destinations/spain" },
-    { name: { es: "Alemania", en: "Germany" }, href: "/destinations/germany" },
-    { name: { es: "Portugal", en: "Portugal" }, href: "/destinations/portugal" },
-    { name: { es: "Grecia", en: "Greece" }, href: "/destinations/greece" },
-    { name: { es: "Paises Bajos", en: "Netherlands" }, href: "/destinations/netherlands" },
-    { name: { es: "Suiza", en: "Switzerland" }, href: "/destinations/switzerland" },
-    { name: { es: "Croacia", en: "Croatia" }, href: "/destinations/croatia" },
-    { name: { es: "Reino Unido", en: "United Kingdom" }, href: "/destinations/united-kingdom" },
-    { name: { es: "Albania", en: "Albania" }, href: "/destinations/albania" },
-    { name: { es: "Austria", en: "Austria" }, href: "/destinations/austria" },
-    { name: { es: "Belgica", en: "Belgium" }, href: "/destinations/belgium" },
-    { name: { es: "Republica Checa", en: "Czech Republic" }, href: "/destinations/czech-republic" },
-    { name: { es: "Dinamarca", en: "Denmark" }, href: "/destinations/denmark" },
-    { name: { es: "Finlandia", en: "Finland" }, href: "/destinations/finland" },
-    { name: { es: "Hungria", en: "Hungary" }, href: "/destinations/hungary" },
-    { name: { es: "Islandia", en: "Iceland" }, href: "/destinations/iceland" },
-    { name: { es: "Irlanda", en: "Ireland" }, href: "/destinations/ireland" },
-    { name: { es: "Noruega", en: "Norway" }, href: "/destinations/norway" },
-    { name: { es: "Polonia", en: "Poland" }, href: "/destinations/poland" },
-    { name: { es: "Rumania", en: "Romania" }, href: "/destinations/romania" },
-    { name: { es: "Suecia", en: "Sweden" }, href: "/destinations/sweden" },
-    { name: { es: "Estados Balticos", en: "Baltic States" }, href: "/destinations/baltic-states" },
-    { name: { es: "Chipre", en: "Cyprus" }, href: "/destinations/cyprus" },
-    { name: { es: "Escocia", en: "Scotland" }, href: "/destinations/scotland" },
+    { name: { es: "Francia", en: "France", pt: "Franca" }, href: "/destinations/france" },
+    { name: { es: "Italia", en: "Italy", pt: "Italia" }, href: "/destinations/italy" },
+    { name: { es: "España", en: "Spain", pt: "Espanha" }, href: "/destinations/spain" },
+    { name: { es: "Alemania", en: "Germany", pt: "Alemanha" }, href: "/destinations/germany" },
+    { name: { es: "Portugal", en: "Portugal", pt: "Portugal" }, href: "/destinations/portugal" },
+    { name: { es: "Grecia", en: "Greece", pt: "Grecia" }, href: "/destinations/greece" },
+    { name: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" }, href: "/destinations/netherlands" },
+    { name: { es: "Suiza", en: "Switzerland", pt: "Suica" }, href: "/destinations/switzerland" },
+    { name: { es: "Croacia", en: "Croatia", pt: "Croacia" }, href: "/destinations/croatia" },
+    { name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" }, href: "/destinations/united-kingdom" },
+    { name: { es: "Albania", en: "Albania", pt: "Albania" }, href: "/destinations/albania" },
+    { name: { es: "Austria", en: "Austria", pt: "Austria" }, href: "/destinations/austria" },
+    { name: { es: "Belgica", en: "Belgium", pt: "Belgica" }, href: "/destinations/belgium" },
+    { name: { es: "Republica Checa", en: "Czech Republic", pt: "Republica Tcheca" }, href: "/destinations/czech-republic" },
+    { name: { es: "Dinamarca", en: "Denmark", pt: "Dinamarca" }, href: "/destinations/denmark" },
+    { name: { es: "Finlandia", en: "Finland", pt: "Finlandia" }, href: "/destinations/finland" },
+    { name: { es: "Hungria", en: "Hungary", pt: "Hungria" }, href: "/destinations/hungary" },
+    { name: { es: "Islandia", en: "Iceland", pt: "Islandia" }, href: "/destinations/iceland" },
+    { name: { es: "Irlanda", en: "Ireland", pt: "Irlanda" }, href: "/destinations/ireland" },
+    { name: { es: "Noruega", en: "Norway", pt: "Noruega" }, href: "/destinations/norway" },
+    { name: { es: "Polonia", en: "Poland", pt: "Polonia" }, href: "/destinations/poland" },
+    { name: { es: "Rumania", en: "Romania", pt: "Romenia" }, href: "/destinations/romania" },
+    { name: { es: "Suecia", en: "Sweden", pt: "Suecia" }, href: "/destinations/sweden" },
+    { name: { es: "Estados Balticos", en: "Baltic States", pt: "Estados Balticos" }, href: "/destinations/baltic-states" },
+    { name: { es: "Chipre", en: "Cyprus", pt: "Chipre" }, href: "/destinations/cyprus" },
+    { name: { es: "Escocia", en: "Scotland", pt: "Escocia" }, href: "/destinations/scotland" },
   ];
 
   const services = [
@@ -63,15 +63,15 @@ export function Footer() {
   ];
 
   const countries = [
-    { name: "Colombia", href: "/blog/colombia", code: "CO" },
-    { name: "Mexico", href: "/blog/mexico", code: "MX" },
-    { name: "Brasil", href: "/blog/brasil", code: "BR" },
-    { name: "Argentina", href: "/blog/argentina", code: "AR" },
-    { name: "Peru", href: "/blog/peru", code: "PE" },
-    { name: "Panama", href: "/blog/panama", code: "PA" },
-    { name: "Costa Rica", href: "/blog/costa-rica", code: "CR" },
-    { name: "Rep. Dominicana", href: "/blog/dominicana", code: "DO" },
-    { name: "Caribe", href: "/blog/caribe", code: "CB" },
+    { name: { es: "Colombia", en: "Colombia", pt: "Colombia" }, href: "/blog/colombia", code: "CO" },
+    { name: { es: "Mexico", en: "Mexico", pt: "Mexico" }, href: "/blog/mexico", code: "MX" },
+    { name: { es: "Brasil", en: "Brazil", pt: "Brasil" }, href: "/blog/brasil", code: "BR" },
+    { name: { es: "Argentina", en: "Argentina", pt: "Argentina" }, href: "/blog/argentina", code: "AR" },
+    { name: { es: "Peru", en: "Peru", pt: "Peru" }, href: "/blog/peru", code: "PE" },
+    { name: { es: "Panama", en: "Panama", pt: "Panama" }, href: "/blog/panama", code: "PA" },
+    { name: { es: "Costa Rica", en: "Costa Rica", pt: "Costa Rica" }, href: "/blog/costa-rica", code: "CR" },
+    { name: { es: "Rep. Dominicana", en: "Dominican Rep.", pt: "Rep. Dominicana" }, href: "/blog/dominicana", code: "DO" },
+    { name: { es: "Caribe", en: "Caribbean", pt: "Caribe" }, href: "/blog/caribe", code: "CB" },
   ];
 
   return (
@@ -87,7 +87,7 @@ export function Footer() {
               data-testid={`link-footer-nav-${index}`}
             >
               <item.icon className="w-4 h-4" />
-              {item.name}
+              {item.name[language as "es" | "en" | "pt"] || item.name.es}
             </Link>
           ))}
         </div>
@@ -102,7 +102,7 @@ export function Footer() {
               {destinations.map((dest, index) => (
                 <li key={index}>
                   <Link href={dest.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
-                    {dest.name[language as "es" | "en"]}
+                    {dest.name[language as "es" | "en" | "pt"] || dest.name.es}
                   </Link>
                 </li>
               ))}
@@ -139,7 +139,7 @@ export function Footer() {
               <li>
                 <Link href="/travel-assistant" className="flex items-center gap-2 text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
                   <Bot className="w-3 h-3 text-accent" />
-                  {language === "es" ? "Asistente Virtual IA" : "AI Travel Assistant"}
+                  {language === "es" ? "Asistente Virtual IA" : language === "pt" ? "Assistente Virtual IA" : "AI Travel Assistant"}
                 </Link>
               </li>
             </ul>
@@ -147,14 +147,14 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60">
-              {language === "es" ? "Viaja desde" : "Travel from"}
+              {language === "es" ? "Viaja desde" : language === "pt" ? "Viaje de" : "Travel from"}
             </h4>
             <ul className="space-y-2">
               {countries.map((country, index) => (
                 <li key={index}>
                   <Link href={country.href} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
                     <span className="text-xs bg-white/10 px-1 rounded font-mono">{country.code}</span>
-                    {country.name}
+                    {country.name[language as "es" | "en" | "pt"] || country.name.es}
                   </Link>
                 </li>
               ))}
@@ -167,11 +167,13 @@ export function Footer() {
                 data-testid="link-visa-requirements"
               >
                 <Shield className="w-4 h-4" />
-                {language === "es" ? "Requisitos de Visa" : "Visa Requirements"}
+                {language === "es" ? "Requisitos de Visa" : language === "pt" ? "Requisitos de Visto" : "Visa Requirements"}
               </Link>
               <p className="text-xs text-white/40 mt-2">
                 {language === "es" 
                   ? "EE.UU., Canada, China, India, Sudafrica, Australia, ETIAS y mas"
+                  : language === "pt"
+                  ? "EUA, Canada, China, India, Africa do Sul, Australia, ETIAS e mais"
                   : "USA, Canada, China, India, South Africa, Australia, ETIAS and more"}
               </p>
             </div>
@@ -267,7 +269,7 @@ export function Footer() {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-4 mb-6">
-            <span className="text-[11px] text-white/50">{language === "es" ? "Divisas aceptadas:" : "Accepted currencies:"}</span>
+            <span className="text-[11px] text-white/50">{language === "es" ? "Divisas aceptadas:" : language === "pt" ? "Moedas aceitas:" : "Accepted currencies:"}</span>
             <div className="flex items-center gap-3">
               <span className="px-2 py-1 rounded bg-white/10 text-[11px] text-white/70 font-medium">EUR</span>
               <span className="px-2 py-1 rounded bg-white/10 text-[11px] text-white/70 font-medium">USD</span>
@@ -285,7 +287,7 @@ export function Footer() {
               </div>
               
               <div className="text-center text-white/50 text-sm">
-                <p>Trips Europa es Agencia de Viajes</p>
+                <p>{language === "es" ? "Trips Europa es Agencia de Viajes" : language === "pt" ? "Trips Europa e Agencia de Viagens" : "Trips Europa is a Travel Agency"}</p>
               </div>
               
               <div className="flex items-center gap-2" title="IATA Member">
