@@ -47,9 +47,21 @@ export function ContactSupportModal({ trigger }: ContactSupportModalProps) {
       whatsapp: "WhatsApp",
       messenger: "Facebook Messenger",
     },
+    pt: {
+      bookTrip: "Reserve Sua Viagem",
+      bookSubtitle: "Obtenha conselhos e suporte para reservar",
+      talkExpert: "Fale com um especialista:",
+      phone: "+34 611 105 448",
+      needHelp: "Precisa de ajuda com uma reserva existente?",
+      quickHelp: "Receba assistencia rapidamente",
+      chatSupport: "Suporte por chat",
+      helpCenter: "Central de Ajuda e FAQs",
+      whatsapp: "WhatsApp",
+      messenger: "Facebook Messenger",
+    },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   const supportOptions = [
     {

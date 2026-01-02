@@ -27,6 +27,8 @@ export function PromotionalVideoBanner() {
       movieSubtitle: "Una experiencia que cambiara tu vida",
       rating: "Calificacion 5 estrellas",
       award: "Mejor agencia 2024",
+      videoComingSoon: "Video promocional proximamente",
+      storyQuote: "Una historia que cambia vidas",
     },
     en: {
       sectionTitle: "Conoce y Descubre      TripsEuropa.com",
@@ -38,10 +40,25 @@ export function PromotionalVideoBanner() {
       movieSubtitle: "A life-changing experience",
       rating: "5 star rating",
       award: "Best agency 2024",
+      videoComingSoon: "Promotional video coming soon",
+      storyQuote: "A story that changes lives",
+    },
+    pt: {
+      sectionTitle: "Conheca e Descubra      TripsEuropa.com",
+      subheadline: "Escolhido por mais de 50.000 viajantes a cada ano - descubra a magia da Europa com nossos pacotes exclusivos.",
+      watchVideo: "Ver Video",
+      videoTitle: "Video Promocional",
+      tagline: "TRIPS EUROPA APRESENTA",
+      movieTitle: "SEU MOMENTO DE VIAJAR",
+      movieSubtitle: "Uma experiencia que mudara sua vida",
+      rating: "Avaliacao 5 estrelas",
+      award: "Melhor agencia 2024",
+      videoComingSoon: "Video promocional em breve",
+      storyQuote: "Uma historia que muda vidas",
     },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   return (
     <>
@@ -112,7 +129,7 @@ export function PromotionalVideoBanner() {
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end text-xs text-white/60">
-                    <span className="italic">"Una historia que cambia vidas"</span>
+                    <span className="italic">"{c.storyQuote}"</span>
                     <span>2024</span>
                   </div>
                 </AspectRatio>
@@ -127,7 +144,7 @@ export function PromotionalVideoBanner() {
           <DialogHeader className="p-4 pb-0">
             <DialogTitle className="text-accent font-display">{c.videoTitle}</DialogTitle>
             <DialogDescription className="sr-only">
-              {language === "es" ? "Video promocional de Trips Europa" : "Trips Europa promotional video"}
+              {c.videoTitle}
             </DialogDescription>
           </DialogHeader>
           <div className="p-4">
@@ -136,7 +153,7 @@ export function PromotionalVideoBanner() {
                 <div className="text-center">
                   <Play className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
                   <p className="text-muted-foreground">
-                    {language === "es" ? "Video promocional proximamente" : "Promotional video coming soon"}
+                    {c.videoComingSoon}
                   </p>
                 </div>
               </div>

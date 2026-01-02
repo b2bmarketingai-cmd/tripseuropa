@@ -144,9 +144,68 @@ export function TrustpilotReviews() {
         },
       ] as Review[],
     },
+    pt: {
+      excellent: "Excelente",
+      basedOn: "Com base em 28.547 avaliacoes",
+      ourReviews: "Nossas avaliacoes favoritas",
+      byInvitation: "Por convite",
+      verified: "Verificada",
+      reviews: [
+        {
+          id: 1,
+          rating: 5,
+          title: "Viajar com Trips Europa significa seguranca",
+          excerpt: "Viajar com Trips Europa significa profissionalismo, seguranca e excelencia. Tudo foi perfeitamente organizado.",
+          author: "Carlos Martinez",
+          date: "15 dezembro",
+          verified: false,
+          byInvitation: true,
+        },
+        {
+          id: 2,
+          rating: 5,
+          title: "Uma viagem espetacular para a Italia",
+          excerpt: "Nossa viagem este ano foi para Italia e Grecia. Ja conheciamos Trips Europa do ano passado e confiamos neles novamente.",
+          author: "Maria Fernanda Lopez",
+          date: "28 novembro",
+          verified: false,
+          byInvitation: true,
+        },
+        {
+          id: 3,
+          rating: 4,
+          title: "Viagem inesquecivel pela Europa",
+          excerpt: "Posso dizer que foi uma viagem inesquecivel. Desde o minuto zero a equipe estava atenta a todos os detalhes.",
+          author: "Roberto Sanchez Perez",
+          date: "10 novembro",
+          verified: false,
+          byInvitation: true,
+        },
+        {
+          id: 4,
+          rating: 5,
+          title: "Muito bom atendimento ao cliente",
+          excerpt: "Muito boa atencao desde o primeiro contato. A viagem saiu perfeita e os hoteis foram excelentes.",
+          author: "Ana Garcia",
+          date: "5 outubro",
+          verified: true,
+          byInvitation: false,
+        },
+        {
+          id: 5,
+          rating: 5,
+          title: "Experiencia de primeira classe",
+          excerpt: "Todo o processo foi muito facil. A equipe da Trips Europa cuidou de tudo e pudemos aproveitar sem preocupacoes.",
+          author: "Luis Eduardo Ruiz",
+          date: "22 setembro",
+          verified: true,
+          byInvitation: false,
+        },
+      ] as Review[],
+    },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   const renderStars = (rating: number) => {
     return (

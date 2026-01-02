@@ -7,68 +7,68 @@ const DESTINATIONS = [
   {
     id: "spain",
     image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800&auto=format&fit=crop",
-    name: { es: "España", en: "Spain" },
+    name: { es: "España", en: "Spain", pt: "Espanha" },
     trips: 24,
   },
   {
     id: "france",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Francia", en: "France" },
+    name: { es: "Francia", en: "France", pt: "Franca" },
     trips: 18,
   },
   {
     id: "italy",
     image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Italia", en: "Italy" },
+    name: { es: "Italia", en: "Italy", pt: "Italia" },
     trips: 22,
   },
   {
     id: "portugal",
     image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Portugal", en: "Portugal" },
+    name: { es: "Portugal", en: "Portugal", pt: "Portugal" },
     trips: 12,
   },
   {
     id: "greece",
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Grecia", en: "Greece" },
+    name: { es: "Grecia", en: "Greece", pt: "Grecia" },
     trips: 8,
   },
   {
     id: "uk",
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Reino Unido", en: "United Kingdom" },
+    name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" },
     trips: 15,
   },
   {
     id: "germany",
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Alemania", en: "Germany" },
+    name: { es: "Alemania", en: "Germany", pt: "Alemanha" },
     trips: 10,
   },
   {
     id: "netherlands",
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Paises Bajos", en: "Netherlands" },
+    name: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" },
     trips: 6,
   },
   {
     id: "switzerland",
     image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Suiza", en: "Switzerland" },
+    name: { es: "Suiza", en: "Switzerland", pt: "Suica" },
     trips: 9,
   },
   {
     id: "croatia",
     image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=80&w=800&auto=format&fit=crop",
-    name: { es: "Croacia", en: "Croatia" },
+    name: { es: "Croacia", en: "Croatia", pt: "Croacia" },
     trips: 5,
   },
 ];
 
 export function DestinationGrid() {
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
 
   const content = {
     es: {
@@ -80,6 +80,11 @@ export function DestinationGrid() {
       title: "Where Do You Want To Go?",
       trips: "Trips",
       viewAll: "View all destinations",
+    },
+    pt: {
+      title: "Para Onde Voce Quer Ir?",
+      trips: "Viagens",
+      viewAll: "Ver todos os destinos",
     },
   };
 

@@ -56,10 +56,22 @@ export default function Home() {
       whatsapp: "Write us on WhatsApp",
       formTitle: "Request your quote",
     },
+    pt: {
+      ctaBadge: "Planeje sua viagem",
+      ctaTitle: "Pronto para viver uma experiencia europeia inesquecivel?",
+      ctaSubtitle: "Nossa equipe de especialistas esta aqui para ajuda-lo a projetar a viagem perfeita.",
+      callUs: "Ligue para nos",
+      phone: "+34 611 105 448",
+      email: "Email",
+      emailAddress: "info@tripseuropa.com",
+      office: "Escritorio Central",
+      address: "Calle Gran Via 45, Madrid, Espanha",
+      whatsapp: "Escreva-nos pelo WhatsApp",
+      formTitle: "Solicite seu orcamento",
+    },
   };
 
-  const lang = language as "es" | "en";
-  const c = content[lang];
+  const c = content[language as keyof typeof content] || content.es;
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">

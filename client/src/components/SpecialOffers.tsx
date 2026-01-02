@@ -9,49 +9,49 @@ const OFFERS = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Bellezas de Europa", en: "Beauties of Europe" },
+    title: { es: "Bellezas de Europa", en: "Beauties of Europe", pt: "Belezas da Europa" },
     price: "2,399",
     taxes: "799",
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Europa Magnifica", en: "Magnificent Europe" },
+    title: { es: "Europa Magnifica", en: "Magnificent Europe", pt: "Europa Magnifica" },
     price: "1,999",
     taxes: "799",
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Magia Turca", en: "Turkish Magic" },
+    title: { es: "Magia Turca", en: "Turkish Magic", pt: "Magia Turca" },
     price: "699",
     taxes: "999",
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Turquia con Islas Griegas", en: "Turkey with Greek Islands" },
+    title: { es: "Turquia con Islas Griegas", en: "Turkey with Greek Islands", pt: "Turquia com Ilhas Gregas" },
     price: "1,399",
     taxes: "999",
   },
   {
     id: 5,
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Encantos de Europa", en: "European Charms" },
+    title: { es: "Encantos de Europa", en: "European Charms", pt: "Encantos da Europa" },
     price: "1,899",
     taxes: "799",
   },
   {
     id: 6,
     image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai" },
+    title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai", pt: "Turquia, Egito e Dubai" },
     price: "1,999",
     taxes: "999",
   },
   {
     id: 7,
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=600&auto=format&fit=crop",
-    title: { es: "Orlando y Europa", en: "Orlando and Europe" },
+    title: { es: "Orlando y Europa", en: "Orlando and Europe", pt: "Orlando e Europa" },
     price: "999",
     taxes: "399",
   },
@@ -60,7 +60,7 @@ const OFFERS = [
 export function SpecialOffers() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -89,7 +89,17 @@ export function SpecialOffers() {
       taxes: "+ Taxes",
       perPerson: "Per person in double room",
     },
+    pt: {
+      badge: "Ofertas de Temporada",
+      title: "Ofertas Relampago",
+      from: "A partir de",
+      currency: "USD",
+      taxes: "+ Taxas",
+      perPerson: "Por pessoa em quarto duplo",
+    },
   };
+
+  const c = content[lang] || content.es;
 
   return (
     <section className="py-16 bg-gradient-to-r from-primary via-primary/95 to-primary" data-testid="section-special-offers">
@@ -98,9 +108,9 @@ export function SpecialOffers() {
           <div className="flex items-center gap-3">
             <Zap className="w-6 h-6 text-accent" />
             <div>
-              <Badge className="bg-accent text-primary mb-1">{content[lang].badge}</Badge>
+              <Badge className="bg-accent text-primary mb-1">{c.badge}</Badge>
               <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-offers-title">
-                {content[lang].title}
+                {c.title}
               </h2>
             </div>
           </div>
@@ -141,18 +151,18 @@ export function SpecialOffers() {
               <div className="relative aspect-[4/3]">
                 <img
                   src={offer.image}
-                  alt={offer.title[lang]}
+                  alt={offer.title[lang] || offer.title.es}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
               <div className="p-4 text-white">
-                <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang]}</h3>
-                <p className="text-white/70 text-sm">{content[lang].from}</p>
+                <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang] || offer.title.es}</h3>
+                <p className="text-white/70 text-sm">{c.from}</p>
                 <div className="flex items-baseline gap-1 flex-wrap">
-                  <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>
+                  <span className="text-xl font-bold text-accent">{offer.price}{c.currency}</span>
                 </div>
-                <p className="text-white/60 text-xs mt-1">{content[lang].perPerson}</p>
+                <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
               </div>
             </Card>
           ))}

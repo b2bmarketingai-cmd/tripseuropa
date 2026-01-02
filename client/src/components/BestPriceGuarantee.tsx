@@ -33,6 +33,10 @@ export function BestPriceGuarantee() {
           description: "Equipo de soporte en espanol disponible las 24 horas, los 7 dias de la semana.",
         },
       ],
+      securePayment: "Pago seguro SSL",
+      noHiddenFees: "Sin cargos ocultos",
+      flexibleCancellation: "Cancelacion flexible",
+      insuranceIncluded: "Seguro incluido",
     },
     en: {
       badge: "Our Guarantees",
@@ -60,10 +64,45 @@ export function BestPriceGuarantee() {
           description: "Support team in Spanish available 24 hours a day, 7 days a week.",
         },
       ],
+      securePayment: "Secure SSL payment",
+      noHiddenFees: "No hidden fees",
+      flexibleCancellation: "Flexible cancellation",
+      insuranceIncluded: "Insurance included",
+    },
+    pt: {
+      badge: "Nossas Garantias",
+      title: "Por Que Escolher Trips Europa",
+      subtitle: "Viaje com a tranquilidade de estar nas melhores maos. Mais de 10.000 viajantes satisfeitos nos apoiam.",
+      guarantees: [
+        {
+          icon: Shield,
+          title: "Melhor Preco Garantido",
+          description: "Se voce encontrar uma oferta melhor, igualamos em 24 horas. Sem perguntas.",
+        },
+        {
+          icon: Award,
+          title: "Experiencias Extraordinarias",
+          description: "Colaboramos com fornecedores locais selecionados para oferecer experiencias autenticas.",
+        },
+        {
+          icon: Clock,
+          title: "Tudo Sob Controle",
+          description: "Itinerarios projetados por especialistas. Cada detalhe planejado para seu conforto.",
+        },
+        {
+          icon: Headphones,
+          title: "Assistencia 24/7",
+          description: "Equipe de suporte em portugues disponivel 24 horas por dia, 7 dias por semana.",
+        },
+      ],
+      securePayment: "Pagamento seguro SSL",
+      noHiddenFees: "Sem taxas ocultas",
+      flexibleCancellation: "Cancelamento flexivel",
+      insuranceIncluded: "Seguro incluido",
     },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   return (
     <section className="py-16 bg-primary text-primary-foreground" data-testid="section-guarantees">
@@ -102,19 +141,19 @@ export function BestPriceGuarantee() {
           <div className="inline-flex flex-wrap justify-center gap-6 text-sm text-white/80">
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-accent" />
-              {language === "es" ? "Pago seguro SSL" : "Secure SSL payment"}
+              {c.securePayment}
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-accent" />
-              {language === "es" ? "Sin cargos ocultos" : "No hidden fees"}
+              {c.noHiddenFees}
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-accent" />
-              {language === "es" ? "Cancelacion flexible" : "Flexible cancellation"}
+              {c.flexibleCancellation}
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-accent" />
-              {language === "es" ? "Seguro incluido" : "Insurance included"}
+              {c.insuranceIncluded}
             </span>
           </div>
         </div>

@@ -8,8 +8,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "Gran Tour de Europa", en: "Grand Tour of Europe" },
-    subtitle: { es: "Paris, Roma, Madrid y mas", en: "Paris, Rome, Madrid and more" },
+    title: { es: "Gran Tour de Europa", en: "Grand Tour of Europe", pt: "Grande Tour pela Europa" },
+    subtitle: { es: "Paris, Roma, Madrid y mas", en: "Paris, Rome, Madrid and more", pt: "Paris, Roma, Madrid e mais" },
     price: "2,899",
     taxes: "590",
     days: 19,
@@ -18,8 +18,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "Europa Clasica", en: "Classic Europe" },
-    subtitle: { es: "Lo mejor de Europa en un viaje", en: "The best of Europe in one trip" },
+    title: { es: "Europa Clasica", en: "Classic Europe", pt: "Europa Classica" },
+    subtitle: { es: "Lo mejor de Europa en un viaje", en: "The best of Europe in one trip", pt: "O melhor da Europa em uma viagem" },
     price: "2,299",
     taxes: "520",
     days: 15,
@@ -28,8 +28,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "España, Portugal y Marruecos", en: "Spain, Portugal and Morocco" },
-    subtitle: { es: "Desde Barcelona Especial", en: "From Barcelona Special" },
+    title: { es: "España, Portugal y Marruecos", en: "Spain, Portugal and Morocco", pt: "Espanha, Portugal e Marrocos" },
+    subtitle: { es: "Desde Barcelona Especial", en: "From Barcelona Special", pt: "Desde Barcelona Especial" },
     price: "1,899",
     taxes: "480",
     days: 17,
@@ -38,8 +38,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "Turquia y Grecia", en: "Turkey and Greece" },
-    subtitle: { es: "Estambul, Atenas y Santorini", en: "Istanbul, Athens and Santorini" },
+    title: { es: "Turquia y Grecia", en: "Turkey and Greece", pt: "Turquia e Grecia" },
+    subtitle: { es: "Estambul, Atenas y Santorini", en: "Istanbul, Athens and Santorini", pt: "Istambul, Atenas e Santorini" },
     price: "1,699",
     taxes: "450",
     days: 16,
@@ -48,8 +48,8 @@ const CAROUSEL_SLIDES = [
   {
     id: 5,
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1920&auto=format&fit=crop",
-    title: { es: "Viviendo Europa", en: "Living Europe" },
-    subtitle: { es: "Una experiencia inolvidable", en: "An unforgettable experience" },
+    title: { es: "Viviendo Europa", en: "Living Europe", pt: "Vivendo a Europa" },
+    subtitle: { es: "Una experiencia inolvidable", en: "An unforgettable experience", pt: "Uma experiencia inesquecivel" },
     price: "1,599",
     taxes: "420",
     days: 14,
@@ -61,7 +61,7 @@ export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
@@ -106,7 +106,19 @@ export function HeroCarousel() {
       quote: "Get Quote",
       viewMore: "View more",
     },
+    pt: {
+      from: "A partir de",
+      currency: "USD",
+      taxes: "+ Taxas",
+      perPerson: "Por pessoa em quarto duplo",
+      days: "dias",
+      nights: "noites",
+      quote: "Solicitar Orcamento",
+      viewMore: "Ver mais",
+    },
   };
+
+  const c = content[lang] || content.es;
 
   return (
     <section 

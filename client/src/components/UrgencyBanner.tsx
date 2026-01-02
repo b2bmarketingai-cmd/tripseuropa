@@ -60,9 +60,19 @@ export function UrgencyBanner() {
       seconds: "sec",
       cta: "View Offers",
     },
+    pt: {
+      flash: "Oferta Relampago",
+      message: "Ultima chamada: viaje para a Europa a precos especiais 2025",
+      remaining: "Restam",
+      days: "dias",
+      hours: "hrs",
+      minutes: "min",
+      seconds: "seg",
+      cta: "Ver Ofertas",
+    },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   if (!isVisible) return null;
 
