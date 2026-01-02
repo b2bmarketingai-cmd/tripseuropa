@@ -1,9 +1,11 @@
-import { useParams } from "wouter";
+import { useParams, Link } from "wouter";
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { getDestinationBySlug } from "@/lib/destinationsData";
+import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -30,6 +32,10 @@ import {
   FileText,
   ChevronRight,
   Send,
+  Sun,
+  Heart,
+  Users,
+  ArrowRight,
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
@@ -102,7 +108,14 @@ export default function DestinationPage() {
       successTitle: "Solicitud enviada",
       successMessage: "Nos pondremos en contacto contigo pronto.",
       whatsapp: "Contactar por WhatsApp",
-      call: "Llamar ahora"
+      call: "Llamar ahora",
+      travelSchedules: "Cronogramas de Viaje Recomendados",
+      travelSchedulesDescription: "Explora las mejores formas de visitar este destino segun la temporada, tus intereses o tu tipo de grupo",
+      bySeason: "Por Temporada",
+      byInterest: "Por Interes",
+      byGroup: "Por Grupo",
+      viewMore: "Ver mas",
+      idealFor: "Ideal para"
     },
     en: {
       highlights: "Highlights",
@@ -135,9 +148,20 @@ export default function DestinationPage() {
       successTitle: "Request sent",
       successMessage: "We will contact you soon.",
       whatsapp: "Contact via WhatsApp",
-      call: "Call now"
+      call: "Call now",
+      travelSchedules: "Recommended Travel Schedules",
+      travelSchedulesDescription: "Explore the best ways to visit this destination by season, interests, or group type",
+      bySeason: "By Season",
+      byInterest: "By Interest",
+      byGroup: "By Group",
+      viewMore: "View more",
+      idealFor: "Ideal for"
     }
   };
+
+  const travelStylesBySeason = TRAVEL_STYLE_DATA.filter(ts => ts.category === "season");
+  const travelStylesByInterest = TRAVEL_STYLE_DATA.filter(ts => ts.category === "interest");
+  const travelStylesByGroup = TRAVEL_STYLE_DATA.filter(ts => ts.category === "group");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -379,6 +403,154 @@ export default function DestinationPage() {
               ))}
             </Accordion>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30" data-testid="section-travel-schedules">
+        <div className="container px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-accent mb-4">
+              {content[lang].travelSchedules}
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {content[lang].travelSchedulesDescription}
+            </p>
+          </div>
+          
+          <Tabs defaultValue="season" className="max-w-5xl mx-auto" data-testid="tabs-travel-schedules">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsTrigger value="season" className="flex items-center gap-2" data-testid="tab-trigger-season">
+                <Sun className="w-4 h-4" />
+                <span className="hidden sm:inline">{content[lang].bySeason}</span>
+              </TabsTrigger>
+              <TabsTrigger value="interest" className="flex items-center gap-2" data-testid="tab-trigger-interest">
+                <Heart className="w-4 h-4" />
+                <span className="hidden sm:inline">{content[lang].byInterest}</span>
+              </TabsTrigger>
+              <TabsTrigger value="group" className="flex items-center gap-2" data-testid="tab-trigger-group">
+                <Users className="w-4 h-4" />
+                <span className="hidden sm:inline">{content[lang].byGroup}</span>
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="season" className="mt-0" data-testid="tab-content-season">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {travelStylesBySeason.map((style) => (
+                  <Link key={style.slug} href={`/travel-style/${style.slug}`} data-testid={`link-travel-style-season-${style.slug}`}>
+                    <Card className="h-full hover:shadow-md transition-shadow overflow-hidden group cursor-pointer" data-testid={`card-travel-style-${style.slug}`}>
+                      <div className="aspect-video relative overflow-hidden">
+                        <img 
+                          src={style.heroImage} 
+                          alt={style.name[lang]}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
+                          {style.name[lang]}
+                        </h3>
+                      </div>
+                      <CardContent className="pt-4">
+                        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                          {style.description[lang].slice(0, 100)}...
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <Badge variant="secondary" className="text-xs">
+                            {style.idealDuration[lang]}
+                          </Badge>
+                          <span className="text-sm text-accent flex items-center gap-1">
+                            {content[lang].viewMore}
+                            <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="interest" className="mt-0" data-testid="tab-content-interest">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {travelStylesByInterest.slice(0, 6).map((style) => (
+                  <Link key={style.slug} href={`/travel-style/${style.slug}`} data-testid={`link-travel-style-interest-${style.slug}`}>
+                    <Card className="h-full hover:shadow-md transition-shadow overflow-hidden group cursor-pointer" data-testid={`card-travel-style-${style.slug}`}>
+                      <div className="aspect-video relative overflow-hidden">
+                        <img 
+                          src={style.heroImage} 
+                          alt={style.name[lang]}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
+                          {style.name[lang]}
+                        </h3>
+                      </div>
+                      <CardContent className="pt-4">
+                        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                          {style.description[lang].slice(0, 100)}...
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <Badge variant="secondary" className="text-xs">
+                            {content[lang].idealFor}: {style.bestFor[lang].slice(0, 25)}...
+                          </Badge>
+                          <span className="text-sm text-accent flex items-center gap-1">
+                            {content[lang].viewMore}
+                            <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+              {travelStylesByInterest.length > 6 && (
+                <div className="text-center mt-6">
+                  <Button variant="outline" asChild data-testid="button-view-all-travel-styles">
+                    <Link href="/travel-styles">
+                      {lang === "es" ? "Ver todos los estilos de viaje" : "View all travel styles"}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
+              )}
+            </TabsContent>
+
+            <TabsContent value="group" className="mt-0" data-testid="tab-content-group">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {travelStylesByGroup.map((style) => (
+                  <Link key={style.slug} href={`/travel-style/${style.slug}`} data-testid={`link-travel-style-group-${style.slug}`}>
+                    <Card className="h-full hover:shadow-md transition-shadow overflow-hidden group cursor-pointer" data-testid={`card-travel-style-${style.slug}`}>
+                      <div className="aspect-video relative overflow-hidden">
+                        <img 
+                          src={style.heroImage} 
+                          alt={style.name[lang]}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
+                          {style.name[lang]}
+                        </h3>
+                      </div>
+                      <CardContent className="pt-4">
+                        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                          {style.description[lang].slice(0, 100)}...
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <Badge variant="secondary" className="text-xs">
+                            {content[lang].idealFor}: {style.bestFor[lang].slice(0, 25)}...
+                          </Badge>
+                          <span className="text-sm text-accent flex items-center gap-1">
+                            {content[lang].viewMore}
+                            <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
