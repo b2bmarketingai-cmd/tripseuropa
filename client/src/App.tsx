@@ -55,6 +55,7 @@ import CityOriginTemplate from "@/pages/CityOriginTemplate";
 import BlogPost from "@/pages/BlogPost";
 import DestinationPage from "@/pages/DestinationPage";
 import Rewards from "@/pages/Rewards";
+import TravelStylePage from "@/pages/TravelStylePage";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -97,6 +98,7 @@ function Router() {
       <Route path="/travel-advisor" component={TravelAdvisor} />
       <Route path="/travel-assistant" component={TravelAssistant} />
       <Route path="/rewards" component={Rewards} />
+      <Route path="/travel-style/:slug" component={TravelStylePage} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
