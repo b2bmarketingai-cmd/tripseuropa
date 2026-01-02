@@ -17,7 +17,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, Espana",
+    name: "Madrid, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
     why: ["Idioma espanol", "Conexiones faciles desde Lima", "Museos de clase mundial", "Vida cultural vibrante"],
@@ -25,7 +25,7 @@ const TOP_DESTINATIONS = [
   },
   {
     id: "barcelona",
-    name: "Barcelona, Espana",
+    name: "Barcelona, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     why: ["Gaudi y modernismo", "Playas mediterraneas", "Sagrada Familia", "FC Barcelona"],
@@ -117,7 +117,7 @@ const DEPARTURE_CITIES = [
 const POPULAR_ROUTES = [
   {
     id: "espana",
-    name: "Espana Completa",
+    name: "España Completa",
     description: "El destino favorito de los peruanos: Madrid y Barcelona con toda la cultura espanola.",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     highlights: ["Idioma espanol", "Flamenco y tapas", "Gaudi y modernismo", "Historia andaluza"],
@@ -181,11 +181,11 @@ const FAQS = [
     questions: [
       {
         q: "Cual es el mejor destino para peruanos?",
-        a: "Espana es perfecta por el idioma y la facilidad cultural. Madrid y Barcelona son los destinos favoritos de los viajeros peruanos."
+        a: "España es perfecta por el idioma y la facilidad cultural. Madrid y Barcelona son los destinos favoritos de los viajeros peruanos."
       },
       {
         q: "Puedo visitar varios paises?",
-        a: "Si, los trenes europeos y vuelos de bajo costo facilitan recorrer multiples paises. Las rutas mas populares combinan Espana, Francia e Italia."
+        a: "Si, los trenes europeos y vuelos de bajo costo facilitan recorrer multiples paises. Las rutas mas populares combinan España, Francia e Italia."
       },
     ]
   },
@@ -454,7 +454,7 @@ export default function BlogPeru() {
             <Card className="text-center p-6">
               <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Ventaja Cultural</h3>
-              <p className="text-sm text-muted-foreground">El espanol te facilita la comunicacion en Espana y otros paises.</p>
+              <p className="text-sm text-muted-foreground">El espanol te facilita la comunicacion en España y otros paises.</p>
             </Card>
             <Card className="text-center p-6">
               <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />

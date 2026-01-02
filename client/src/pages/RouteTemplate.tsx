@@ -31,7 +31,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Colombia",
     destCity: "Madrid",
     destCode: "MAD",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "10h 30min",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos directos disponibles", "Conexion Avianca/Iberia", "Sin cambio de horario", "Visa Schengen requerida"]
@@ -53,7 +53,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Mexico",
     destCity: "Madrid",
     destCode: "MAD",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "10h 45min",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos directos Iberia/Aeromexico", "Sin escala", "Exencion visa 90 dias", "Conexiones a toda Europa"]
@@ -86,7 +86,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Argentina",
     destCity: "Madrid",
     destCode: "MAD",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "12h 30min",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos directos Aerolineas/Iberia", "Aeropuerto Ezeiza", "Conexion directa", "Exencion visa 90 dias"]
@@ -97,7 +97,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Peru",
     destCity: "Madrid",
     destCode: "MAD",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "11h 45min",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos directos LATAM/Iberia", "Jorge Chavez Internacional", "Sin escala", "Visa Schengen requerida"]
@@ -108,7 +108,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Colombia",
     destCity: "Barcelona",
     destCode: "BCN",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "10h 45min",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos via Madrid", "El Prat Internacional", "Conexion Vueling", "Visa Schengen requerida"]
@@ -130,7 +130,7 @@ const ROUTES_DATA: Record<string, RouteInfo> = {
     originCountry: "Panama",
     destCity: "Madrid",
     destCode: "MAD",
-    destCountry: "Espana",
+    destCountry: "España",
     flightTime: "9h 45min",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=1200&auto=format&fit=crop",
     highlights: ["Vuelos directos Copa/Iberia", "Hub Tocumen", "Excelentes conexiones", "Exencion visa 90 dias"]

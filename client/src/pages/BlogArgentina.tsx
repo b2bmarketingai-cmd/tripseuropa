@@ -17,7 +17,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, Espana",
+    name: "Madrid, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
     why: ["Idioma espanol", "Fuerte conexion cultural", "Museos Prado y Reina Sofia", "Hub para otros destinos"],
@@ -25,7 +25,7 @@ const TOP_DESTINATIONS = [
   },
   {
     id: "barcelona",
-    name: "Barcelona, Espana",
+    name: "Barcelona, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida nocturna vibrante"],
@@ -120,7 +120,7 @@ const POPULAR_ROUTES = [
     name: "Ruta Clasica Argentina",
     description: "El recorrido favorito de los argentinos: Madrid, Barcelona y Paris.",
     destinations: ["Madrid", "Barcelona", "Paris"],
-    highlights: ["Idioma espanol en Espana", "Cultura mediterranea", "Ciudad del amor", "Gastronomia variada"],
+    highlights: ["Idioma espanol en España", "Cultura mediterranea", "Ciudad del amor", "Gastronomia variada"],
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -181,11 +181,11 @@ const FAQS = [
     questions: [
       {
         q: "Cual es el mejor destino para argentinos?",
-        a: "Espana e Italia son los favoritos por la conexion cultural e idiomatica. Madrid, Barcelona, Roma y Florencia son los mas populares."
+        a: "España e Italia son los favoritos por la conexion cultural e idiomatica. Madrid, Barcelona, Roma y Florencia son los mas populares."
       },
       {
         q: "Puedo visitar varios paises?",
-        a: "Si, los trenes europeos y vuelos de bajo costo facilitan recorrer multiples paises. Las rutas mas populares combinan Espana, Francia e Italia."
+        a: "Si, los trenes europeos y vuelos de bajo costo facilitan recorrer multiples paises. Las rutas mas populares combinan España, Francia e Italia."
       },
     ]
   },

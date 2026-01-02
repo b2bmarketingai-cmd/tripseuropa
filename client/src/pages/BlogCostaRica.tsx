@@ -17,7 +17,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, Espana",
+    name: "Madrid, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
     why: ["Vuelo directo Iberia desde San Jose", "Idioma espanol", "Museos Prado y Reina Sofia", "Hub para toda Europa"],
@@ -25,7 +25,7 @@ const TOP_DESTINATIONS = [
   },
   {
     id: "barcelona",
-    name: "Barcelona, Espana",
+    name: "Barcelona, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     why: ["Gaudi y Sagrada Familia", "Playas mediterraneas", "Cultura catalana vibrante", "Gastronomia excepcional"],
@@ -171,7 +171,7 @@ const FAQS = [
     questions: [
       {
         q: "Cual es el mejor destino para ticos primerizos en Europa?",
-        a: "Espana es ideal por el idioma espanol, vuelo directo desde San Jose, y cultura accesible. Madrid o Barcelona son excelentes puntos de partida."
+        a: "España es ideal por el idioma espanol, vuelo directo desde San Jose, y cultura accesible. Madrid o Barcelona son excelentes puntos de partida."
       },
       {
         q: "Que destinos europeos son mejores para amantes de la naturaleza?",
@@ -448,7 +448,7 @@ export default function BlogCostaRica() {
             <Card className="text-center p-6">
               <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Idioma Espanol</h3>
-              <p className="text-sm text-muted-foreground">Espana como puerta de entrada facilita la comunicacion para viajeros ticos.</p>
+              <p className="text-sm text-muted-foreground">España como puerta de entrada facilita la comunicacion para viajeros ticos.</p>
             </Card>
             <Card className="text-center p-6">
               <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />

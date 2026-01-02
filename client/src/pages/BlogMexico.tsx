@@ -17,7 +17,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, Espana",
+    name: "Madrid, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
     why: ["Vuelo directo desde CDMX (11 horas)", "Idioma espanol", "Museos Prado y Reina Sofia", "Hub para otros destinos"],
@@ -41,7 +41,7 @@ const TOP_DESTINATIONS = [
   },
   {
     id: "barcelona",
-    name: "Barcelona, Espana",
+    name: "Barcelona, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida nocturna vibrante"],
@@ -137,7 +137,7 @@ const DEPARTURE_CITIES = [
 const POPULAR_ROUTES = [
   {
     id: "espana",
-    name: "Espana Completa",
+    name: "España Completa",
     description: "El destino favorito de los mexicanos: Madrid y Barcelona con toda la cultura espanola.",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     highlights: ["Idioma espanol", "Flamenco y tapas", "Gaudi y Sagrada Familia", "Plazas historicas"],
@@ -154,14 +154,14 @@ const POPULAR_ROUTES = [
   {
     id: "completa",
     name: "Europa Completa",
-    description: "El gran tour europeo: Espana, Francia e Italia en un viaje inolvidable.",
+    description: "El gran tour europeo: España, Francia e Italia en un viaje inolvidable.",
     destinations: ["Madrid", "Barcelona", "Paris", "Roma"],
     highlights: ["4 ciudades iconicas", "3 paises", "Trenes de alta velocidad", "Gastronomia variada"],
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "portugal",
-    name: "Portugal y Espana",
+    name: "Portugal y España",
     description: "Descubre la peninsula iberica: Lisboa, Oporto y las principales ciudades espanolas.",
     destinations: ["Lisboa", "Oporto", "Madrid", "Barcelona"],
     highlights: ["Cultura portuguesa", "Vinos del Douro", "Arquitectura morisca", "Costas atlanticas"],
@@ -201,11 +201,11 @@ const FAQS = [
     questions: [
       {
         q: "Cual es el mejor destino para primera vez?",
-        a: "Espana es perfecta por el idioma y la facilidad cultural. Madrid y Barcelona son ideales para iniciarse en Europa."
+        a: "España es perfecta por el idioma y la facilidad cultural. Madrid y Barcelona son ideales para iniciarse en Europa."
       },
       {
         q: "Puedo combinar varios paises?",
-        a: "Absolutamente. Los trenes europeos y vuelos de bajo costo facilitan visitar multiples paises. Las rutas mas populares combinan Espana, Francia e Italia."
+        a: "Absolutamente. Los trenes europeos y vuelos de bajo costo facilitan visitar multiples paises. Las rutas mas populares combinan España, Francia e Italia."
       },
     ]
   },
@@ -477,7 +477,7 @@ export default function BlogMexico() {
             <Card className="text-center p-6">
               <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Ventaja Cultural</h3>
-              <p className="text-sm text-muted-foreground">El espanol te abre puertas en Espana y facilita la comunicacion.</p>
+              <p className="text-sm text-muted-foreground">El espanol te abre puertas en España y facilita la comunicacion.</p>
             </Card>
             <Card className="text-center p-6">
               <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />

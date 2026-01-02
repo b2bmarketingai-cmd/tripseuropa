@@ -35,7 +35,7 @@ const STORIES = [
   {
     id: 3,
     destination: { es: "Barcelona", en: "Barcelona" },
-    location: { es: "Barcelona, Espana", en: "Barcelona, Spain" },
+    location: { es: "Barcelona, España", en: "Barcelona, Spain" },
     title: { es: "Barcelona, Arte Y Playa", en: "Barcelona, Art And Beach" },
     story: {
       es: "Barcelona nos enamoro con su arquitectura de Gaudi, Las Ramblas y sus playas. El tour por la Sagrada Familia fue increible. Un destino que combina cultura, historia y diversion.",

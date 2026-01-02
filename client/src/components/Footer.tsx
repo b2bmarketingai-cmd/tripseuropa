@@ -20,7 +20,7 @@ export function Footer() {
   const destinations = [
     { name: { es: "Francia", en: "France" }, href: "/destinations/france" },
     { name: { es: "Italia", en: "Italy" }, href: "/destinations/italy" },
-    { name: { es: "Espana", en: "Spain" }, href: "/destinations/spain" },
+    { name: { es: "España", en: "Spain" }, href: "/destinations/spain" },
     { name: { es: "Alemania", en: "Germany" }, href: "/destinations/germany" },
     { name: { es: "Portugal", en: "Portugal" }, href: "/destinations/portugal" },
     { name: { es: "Grecia", en: "Greece" }, href: "/destinations/greece" },

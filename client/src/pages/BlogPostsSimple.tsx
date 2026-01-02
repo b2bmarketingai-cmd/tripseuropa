@@ -27,7 +27,7 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
   {
     id: "colores-de-europa",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Colores de Europa: Tour por Francia, Espana e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
+    title: { es: "Colores de Europa: Tour por Francia, España e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
     excerpt: { es: "Paris, Barcelona, Roma y mas. El circuito clasico que combina lo mejor de tres paises iconicos.", en: "Paris, Barcelona, Rome and more. The classic circuit combining the best of three iconic countries." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
@@ -39,7 +39,7 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
   {
     id: "encanto-mediterraneo",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Encanto Mediterraneo: Italia, Francia y Espana Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
+    title: { es: "Encanto Mediterraneo: Italia, Francia y España Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
     excerpt: { es: "Costa Amalfitana, Riviera Francesa, Costa Brava. Las costas mas hermosas del Mediterraneo en un viaje.", en: "Amalfi Coast, French Riviera, Costa Brava. The most beautiful Mediterranean coasts in one trip." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
@@ -243,8 +243,8 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
   {
     id: "itinerario-espana-15-dias",
     image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Espana en 15 Dias: Madrid, Barcelona, Sevilla y Mas", en: "Spain in 15 Days: Madrid, Barcelona, Seville and More" },
-    excerpt: { es: "El itinerario perfecto para recorrer Espana. Rutas, transporte, alojamiento y consejos.", en: "The perfect itinerary to tour Spain. Routes, transport, accommodation and tips." },
+    title: { es: "España en 15 Dias: Madrid, Barcelona, Sevilla y Mas", en: "Spain in 15 Days: Madrid, Barcelona, Seville and More" },
+    excerpt: { es: "El itinerario perfecto para recorrer España. Rutas, transporte, alojamiento y consejos.", en: "The perfect itinerary to tour Spain. Routes, transport, accommodation and tips." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "6 Dic 2024",
@@ -544,7 +544,7 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
     id: "barcelona-gaudi",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Ruta Gaudi en Barcelona: Sagrada Familia, Park Guell y Mas", en: "Gaudi Route in Barcelona: Sagrada Familia, Park Guell and More" },
-    excerpt: { es: "Todas las obras del arquitecto mas famoso de Espana. Entradas, horarios y consejos de visita.", en: "All the works of Spain's most famous architect. Tickets, schedules and visiting tips." },
+    excerpt: { es: "Todas las obras del arquitecto mas famoso de España. Entradas, horarios y consejos de visita.", en: "All the works of Spain's most famous architect. Tickets, schedules and visiting tips." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "16 Oct 2024",

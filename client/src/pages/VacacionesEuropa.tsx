@@ -39,7 +39,7 @@ const FEATURED_PACKAGES = [
     id: "spain-complete",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
     title: "Madrid, Andalucia, Valencia y Barcelona",
-    country: "Espana",
+    country: "España",
     cities: ["Madrid", "Sevilla", "Valencia", "Barcelona"],
     badge: "Best Seller",
     badgeColor: "bg-accent",
@@ -142,7 +142,7 @@ const TRIP_CATEGORIES = [
     title: "Tesoros Culturales",
     description: "Explora museos de clase mundial, arquitectura historica y el rico patrimonio artistico de Europa.",
     icon: Castle,
-    destinations: ["Italia", "Francia", "Espana", "Grecia"],
+    destinations: ["Italia", "Francia", "España", "Grecia"],
   },
   {
     id: "mediterranean",
@@ -255,9 +255,9 @@ const TESTIMONIALS = [
     name: "Carlos Rodriguez",
     location: "Ciudad de Mexico",
     rating: 5,
-    comment: "El circuito por Espana supero todas nuestras expectativas. Los hoteles excelentes, los guias muy preparados y las experiencias inolvidables.",
+    comment: "El circuito por España supero todas nuestras expectativas. Los hoteles excelentes, los guias muy preparados y las experiencias inolvidables.",
     date: "Octubre 2024",
-    trip: "Espana Completa",
+    trip: "España Completa",
   },
   {
     name: "Ana Paula Santos",
@@ -284,7 +284,7 @@ export default function VacacionesEuropa() {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Vacaciones en Europa - Paquetes de Viaje Todo Incluido"
-        description="Descubre los mejores paquetes de vacaciones a Europa desde Latinoamerica. Portugal, Espana, Italia, Francia y mas. Tours guiados en espanol, hoteles seleccionados, experiencias unicas."
+        description="Descubre los mejores paquetes de vacaciones a Europa desde Latinoamerica. Portugal, España, Italia, Francia y mas. Tours guiados en espanol, hoteles seleccionados, experiencias unicas."
         keywords="vacaciones europa, paquetes europa, viaje europa todo incluido, tour europa espanol, europa desde latinoamerica"
         url="https://tripseuropa.com/vacaciones-europa"
       />
@@ -348,11 +348,11 @@ export default function VacacionesEuropa() {
                 </p>
                 <p>
                   La gastronomia europea es otra razon para visitar. Desde la pasta fresca en Italia hasta los churros con chocolate 
-                  en Espana, desde los croissants parisinos hasta las salchichas alemanas, cada pais tiene su propia tradicion culinaria 
+                  en España, desde los croissants parisinos hasta las salchichas alemanas, cada pais tiene su propia tradicion culinaria 
                   que refleja su cultura e historia. Los vinos franceses, portugueses e italianos son reconocidos mundialmente.
                 </p>
                 <p>
-                  Para los viajeros latinoamericanos, Europa representa una conexion especial con nuestras raices. Espana y Portugal 
+                  Para los viajeros latinoamericanos, Europa representa una conexion especial con nuestras raices. España y Portugal 
                   nos heredaron el idioma, la religion y muchas tradiciones. Italia ha influenciado nuestra cultura con su arte, musica 
                   y cocina. Visitar Europa es, en cierto modo, conocer de donde venimos.
                 </p>
@@ -615,7 +615,7 @@ export default function VacacionesEuropa() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Espana", "Francia", "Italia", "Portugal", "Grecia", "Suiza", 
+              "España", "Francia", "Italia", "Portugal", "Grecia", "Suiza", 
               "Austria", "Alemania", "Irlanda", "Reino Unido", "Croacia", 
               "Holanda", "Belgica", "Noruega", "Islandia", "Turquia"
             ].map((country) => (

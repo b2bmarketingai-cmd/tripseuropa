@@ -18,7 +18,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 const TOP_DESTINATIONS = [
   {
     id: "madrid",
-    name: "Madrid, Espana",
+    name: "Madrid, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
     why: ["Idioma espanol (ventaja cultural)", "Vuelo directo desde Bogota", "Museos Prado y Reina Sofia", "Vida nocturna vibrante", "Hub para otros destinos europeos"],
@@ -42,7 +42,7 @@ const TOP_DESTINATIONS = [
   },
   {
     id: "barcelona",
-    name: "Barcelona, Espana",
+    name: "Barcelona, España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
     why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida moderna vibrante"],
@@ -139,7 +139,7 @@ const POPULAR_ROUTES = [
   {
     id: "clasica",
     name: "Ruta Clasica Europa",
-    description: "El recorrido mas popular entre colombianos: Espana, Italia y Francia en un solo viaje.",
+    description: "El recorrido mas popular entre colombianos: España, Italia y Francia en un solo viaje.",
     destinations: ["Madrid", "Roma", "Paris"],
     highlights: ["Museos de fama mundial", "Gastronomia europea", "Monumentos iconicos", "Historia milenaria"],
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop",
@@ -154,8 +154,8 @@ const POPULAR_ROUTES = [
   },
   {
     id: "espana",
-    name: "Espana Completa",
-    description: "Descubre toda Espana: desde Madrid hasta Barcelona, pasando por Andalucia.",
+    name: "España Completa",
+    description: "Descubre toda España: desde Madrid hasta Barcelona, pasando por Andalucia.",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     highlights: ["Idioma espanol", "Flamenco y tapas", "Arquitectura morisca", "Playas mediterraneas"],
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
@@ -202,11 +202,11 @@ const FAQS = [
     questions: [
       {
         q: "Cual es el mejor destino para primera vez en Europa?",
-        a: "Espana es ideal por el idioma y la facilidad cultural. Madrid y Barcelona son perfectas para iniciarse en Europa."
+        a: "España es ideal por el idioma y la facilidad cultural. Madrid y Barcelona son perfectas para iniciarse en Europa."
       },
       {
         q: "Puedo combinar varios paises en un viaje?",
-        a: "Absolutamente. Los trenes europeos y vuelos de bajo costo facilitan visitar multiples paises. Las rutas mas populares combinan Espana, Francia e Italia."
+        a: "Absolutamente. Los trenes europeos y vuelos de bajo costo facilitan visitar multiples paises. Las rutas mas populares combinan España, Francia e Italia."
       },
     ]
   },
@@ -486,7 +486,7 @@ export default function BlogColombia() {
             <Card className="text-center p-6">
               <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Ventaja Cultural</h3>
-              <p className="text-sm text-muted-foreground">El espanol facilita la comunicacion en Espana y se entiende en muchos lugares.</p>
+              <p className="text-sm text-muted-foreground">El espanol facilita la comunicacion en España y se entiende en muchos lugares.</p>
             </Card>
             <Card className="text-center p-6">
               <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />

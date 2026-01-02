@@ -37,7 +37,7 @@ const BLOG_POSTS = [
   {
     id: "colores-de-europa",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Colores de Europa: Tour por Francia, Espana e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
+    title: { es: "Colores de Europa: Tour por Francia, España e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
     excerpt: { es: "Paris, Barcelona, Roma y mas. El circuito clasico que combina lo mejor de tres paises iconicos.", en: "Paris, Barcelona, Rome and more. The classic circuit combining the best of three iconic countries." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
@@ -49,7 +49,7 @@ const BLOG_POSTS = [
   {
     id: "encanto-mediterraneo",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Encanto Mediterraneo: Italia, Francia y Espana Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
+    title: { es: "Encanto Mediterraneo: Italia, Francia y España Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
     excerpt: { es: "Costa Amalfitana, Riviera Francesa, Costa Brava. Las costas mas hermosas del Mediterraneo en un viaje.", en: "Amalfi Coast, French Riviera, Costa Brava. The most beautiful Mediterranean coasts in one trip." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
