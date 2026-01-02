@@ -203,7 +203,7 @@ export function Footer() {
               </h3>
               <p className="text-white/60 text-sm leading-relaxed">
                 {language === "es" 
-                  ? "Agrega un chatbot inteligente a tu experiencia. Tu asistente de viajes personal que recuerda la conversacion, perfecto para reservas y consultas."
+                  ? "Tu asistente con IA de viajes personal que recuerda la conversacion, perfecto para consultas"
                   : "Add a context-aware chatbot to your app. Give your users a support agent that remembers the conversation, perfect for multi-step bookings or troubleshooting."}
               </p>
               <Button className="mt-4 bg-accent text-primary gap-2" size="sm">
