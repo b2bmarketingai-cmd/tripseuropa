@@ -8,14 +8,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Clock, ArrowLeft, Calendar, User, Share2, Phone } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
-import { BLOG_POSTS_SIMPLE } from "./BlogPostsSimple";
+import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
   
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
-  const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p) => p.id === slug) : null;
+  const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
   const post = fullPost || simplePost;
   
   if (!post) {
@@ -166,14 +166,56 @@ export default function BlogPost() {
 
           <div className="mt-12">
             <Card className="bg-gradient-to-r from-primary/10 to-gold/10 border-gold/20">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-display text-gold mb-2">Planifica Tu Viaje a Europa</h3>
-                <p className="text-muted-foreground mb-4">Contacta con nuestros asesores para disenar tu viaje perfecto</p>
-                <Link href="/contact">
-                  <Button className="bg-gold hover:bg-gold/90 text-primary-foreground">
-                    Solicitar Cotizacion
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-display text-gold mb-2 text-center">Contactanos Para Mas Informacion</h3>
+                <p className="text-muted-foreground mb-6 text-center">Nuestros asesores te ayudaran a planificar tu viaje perfecto a Europa</p>
+                
+                <form className="space-y-4 max-w-md mx-auto" data-testid="form-blog-contact">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1">Nombre Completo</label>
+                    <input 
+                      type="text" 
+                      placeholder="Tu nombre" 
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      data-testid="input-contact-name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1">Correo Electronico</label>
+                    <input 
+                      type="email" 
+                      placeholder="tu@email.com" 
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      data-testid="input-contact-email"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1">Telefono / WhatsApp</label>
+                    <input 
+                      type="tel" 
+                      placeholder="+57 300 000 0000" 
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      data-testid="input-contact-phone"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1">Mensaje o Consulta</label>
+                    <textarea 
+                      placeholder="Cuentanos sobre el viaje que tienes en mente..." 
+                      rows={4}
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold resize-none"
+                      data-testid="textarea-contact-message"
+                    />
+                  </div>
+                  <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-primary-foreground" data-testid="button-contact-submit">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Enviar Consulta
                   </Button>
-                </Link>
+                </form>
+                
+                <p className="text-xs text-muted-foreground text-center mt-4">
+                  O llamanos directamente al +1 (786) 919-0191
+                </p>
               </CardContent>
             </Card>
           </div>

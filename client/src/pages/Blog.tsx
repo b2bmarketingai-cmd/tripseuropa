@@ -827,33 +827,35 @@ export default function Blog() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredPosts.map((post) => (
-              <Card key={post.id} className="group overflow-hidden hover:shadow-lg transition-shadow" data-testid={`card-featured-${post.id}`}>
-                <div className="relative h-48 overflow-hidden bg-muted">
-                  <img 
-                    src={post.image} 
-                    alt={post.title[language]} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language]}</Badge>
-                  <Badge className="absolute top-4 right-4 bg-primary text-white">
-                    {language === "es" ? "Destacado" : "Featured"}
-                  </Badge>
-                </div>
-                <CardContent className="p-5">
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
-                    <span>{post.date}</span>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime} min</span>
-                    </div>
+              <Link href={`/blog/post/${'slug' in post ? post.slug : post.id}`} key={post.id}>
+                <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-featured-${post.id}`}>
+                  <div className="relative h-48 overflow-hidden bg-muted">
+                    <img 
+                      src={post.image} 
+                      alt={post.title[language]} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language]}</Badge>
+                    <Badge className="absolute top-4 right-4 bg-primary text-white">
+                      {language === "es" ? "Destacado" : "Featured"}
+                    </Badge>
                   </div>
-                  <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors">
-                    {post.title[language]}
-                  </h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2">{post.excerpt[language]}</p>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-5">
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
+                      <span>{post.date}</span>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{post.readTime} min</span>
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors">
+                      {post.title[language]}
+                    </h3>
+                    <p className="text-muted-foreground text-sm line-clamp-2">{post.excerpt[language]}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
