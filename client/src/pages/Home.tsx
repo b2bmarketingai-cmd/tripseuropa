@@ -5,6 +5,7 @@ import { HomePageSEO } from "@/components/SEOHead";
 import { Chatbot } from "@/components/Chatbot";
 import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { HeroFlightSearch } from "@/components/HeroFlightSearch";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { TopOffers } from "@/components/TopOffers";
@@ -68,6 +69,8 @@ export default function Home() {
       <Header />
       
       <HeroCarousel />
+      
+      <HeroFlightSearch />
 
       <TopOffers />
 
