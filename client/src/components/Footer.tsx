@@ -18,12 +18,32 @@ export function Footer() {
   ];
 
   const destinations = [
-    { nameKey: "footer.dest.paris", href: "/destinations/paris" },
-    { nameKey: "footer.dest.madrid", href: "/destinations/madrid" },
-    { nameKey: "footer.dest.barcelona", href: "/destinations/barcelona" },
-    { nameKey: "footer.dest.rome", href: "/destinations/roma" },
-    { nameKey: "footer.dest.london", href: "/destinations/london" },
-    { nameKey: "footer.dest.amsterdam", href: "/destinations/amsterdam" },
+    { name: { es: "Francia", en: "France" }, href: "/destinations/france" },
+    { name: { es: "Italia", en: "Italy" }, href: "/destinations/italy" },
+    { name: { es: "Espana", en: "Spain" }, href: "/destinations/spain" },
+    { name: { es: "Alemania", en: "Germany" }, href: "/destinations/germany" },
+    { name: { es: "Portugal", en: "Portugal" }, href: "/destinations/portugal" },
+    { name: { es: "Grecia", en: "Greece" }, href: "/destinations/greece" },
+    { name: { es: "Paises Bajos", en: "Netherlands" }, href: "/destinations/netherlands" },
+    { name: { es: "Suiza", en: "Switzerland" }, href: "/destinations/switzerland" },
+    { name: { es: "Croacia", en: "Croatia" }, href: "/destinations/croatia" },
+    { name: { es: "Reino Unido", en: "United Kingdom" }, href: "/destinations/united-kingdom" },
+    { name: { es: "Albania", en: "Albania" }, href: "/destinations/albania" },
+    { name: { es: "Austria", en: "Austria" }, href: "/destinations/austria" },
+    { name: { es: "Belgica", en: "Belgium" }, href: "/destinations/belgium" },
+    { name: { es: "Republica Checa", en: "Czech Republic" }, href: "/destinations/czech-republic" },
+    { name: { es: "Dinamarca", en: "Denmark" }, href: "/destinations/denmark" },
+    { name: { es: "Finlandia", en: "Finland" }, href: "/destinations/finland" },
+    { name: { es: "Hungria", en: "Hungary" }, href: "/destinations/hungary" },
+    { name: { es: "Islandia", en: "Iceland" }, href: "/destinations/iceland" },
+    { name: { es: "Irlanda", en: "Ireland" }, href: "/destinations/ireland" },
+    { name: { es: "Noruega", en: "Norway" }, href: "/destinations/norway" },
+    { name: { es: "Polonia", en: "Poland" }, href: "/destinations/poland" },
+    { name: { es: "Rumania", en: "Romania" }, href: "/destinations/romania" },
+    { name: { es: "Suecia", en: "Sweden" }, href: "/destinations/sweden" },
+    { name: { es: "Estados Balticos", en: "Baltic States" }, href: "/destinations/baltic-states" },
+    { name: { es: "Chipre", en: "Cyprus" }, href: "/destinations/cyprus" },
+    { name: { es: "Escocia", en: "Scotland" }, href: "/destinations/scotland" },
   ];
 
   const services = [
@@ -72,15 +92,15 @@ export function Footer() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-12">
           
-          <div>
+          <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-2">
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-destinations-heading">
               {t("footer.destinations")}
             </h4>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-2">
               {destinations.map((dest, index) => (
                 <li key={index}>
-                  <Link href={dest.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${index}`}>
-                    {t(dest.nameKey)}
+                  <Link href={dest.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
+                    {dest.name[language as "es" | "en"]}
                   </Link>
                 </li>
               ))}
