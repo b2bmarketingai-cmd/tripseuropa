@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -32,6 +33,7 @@ export default function BlogPost() {
             </Button>
           </Link>
         </main>
+        <FloatingContactButtons />
         <Footer />
       </div>
     );
@@ -222,6 +224,7 @@ export default function BlogPost() {
         </article>
       </main>
       
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

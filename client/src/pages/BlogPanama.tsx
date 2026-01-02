@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -524,6 +525,7 @@ export default function BlogPanama() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

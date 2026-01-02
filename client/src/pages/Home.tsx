@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { FloatingContactButtons } from "@/components/support";
 
 export default function Home() {
   const { language } = useI18n();
@@ -157,8 +158,7 @@ export default function Home() {
 
       <Footer />
       <Chatbot />
-      <WhatsAppButton />
-      <SupportButton />
+      <FloatingContactButtons />
       
       <TravelAgencySchema />
       <WebsiteSchema />

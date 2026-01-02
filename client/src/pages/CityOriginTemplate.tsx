@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
 import { BreadcrumbSchema, FAQSchema, LocalBusinessSchema } from "@/components/SEOSchema";
 import { Button } from "@/components/ui/button";
@@ -820,6 +821,7 @@ export default function CityOriginTemplate() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

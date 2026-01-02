@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -76,6 +77,7 @@ export default function Policies() {
         </div>
       </main>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
 import { FAQSchema, BreadcrumbSchema } from "@/components/SEOSchema";
 import { useI18n } from "@/lib/i18n";
@@ -634,6 +635,7 @@ export default function VacacionesEuropa() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
 
 const QUICK_ACTIONS = [
@@ -313,6 +314,7 @@ export default function TravelAssistant() {
         </div>
       </main>
       
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

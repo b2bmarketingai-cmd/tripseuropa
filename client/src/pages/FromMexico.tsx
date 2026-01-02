@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -353,6 +354,7 @@ export default function FromMexico() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{

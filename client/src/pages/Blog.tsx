@@ -10,6 +10,7 @@ import { Link } from "wouter";
 import { useState, useMemo } from "react";
 import { BLOG_POSTS_DATA } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE } from "./BlogPostsSimple";
+import { FloatingContactButtons } from "@/components/support";
 
 const BLOG_CATEGORIES = [
   { id: "all", label: { es: "Todos", en: "All" }, icon: BookOpen },
@@ -1121,6 +1122,7 @@ export default function Blog() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

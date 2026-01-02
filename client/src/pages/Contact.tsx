@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { ContactForm, ContactInfo } from "@/components/ContactForm";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
+import { FloatingContactButtons } from "@/components/support";
 
 export default function Contact() {
   const { language } = useI18n();
@@ -95,6 +96,7 @@ export default function Contact() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

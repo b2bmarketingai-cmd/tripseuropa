@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { ColombiaPageSEO } from "@/components/SEOHead";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/SEOSchema";
 import { Button } from "@/components/ui/button";
@@ -367,6 +368,7 @@ export default function FromColombia() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{

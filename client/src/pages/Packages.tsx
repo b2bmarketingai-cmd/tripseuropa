@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { PackagesPageSEO } from "@/components/SEOHead";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -506,6 +507,7 @@ export default function Packages() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

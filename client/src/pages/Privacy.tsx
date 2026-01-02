@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -164,6 +165,7 @@ export default function Privacy() {
           </div>
         </div>
       </section>
+      <FloatingContactButtons />
       <Footer />
     </div>
   );

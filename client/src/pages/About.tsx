@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Globe, Heart, CheckCircle, Star } from "lucide-react";
 import { Link } from "wouter";
+import { FloatingContactButtons } from "@/components/support";
 
 const TEAM = [
   {
@@ -221,6 +222,7 @@ export default function About() {
         </div>
       </section>
 
+      <FloatingContactButtons />
       <Footer />
     </div>
   );
