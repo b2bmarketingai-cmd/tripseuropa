@@ -49,6 +49,7 @@ export function ShareTrip({
       linkedin: "LinkedIn",
       copyLink: "Copiar enlace",
       copied: "Copiado",
+      copiedDesc: "El enlace ha sido copiado",
       tripMessage: `Estoy planeando mi viaje de ${origin} a ${destination}`,
       fullMessage: `Estoy planeando mi viaje de ${origin} a ${destination}${departureDate ? ` el ${departureDate}` : ""}${returnDate && tripType === "roundtrip" ? ` con regreso el ${returnDate}` : ""}. ${passengers > 1 ? `Viajamos ${passengers} personas.` : ""} Reservado con Trips Europa - tu agencia de viajes de confianza para Europa.`,
     },
@@ -62,6 +63,7 @@ export function ShareTrip({
       linkedin: "LinkedIn",
       copyLink: "Copy link",
       copied: "Copied",
+      copiedDesc: "Link has been copied",
       tripMessage: `I'm planning my trip from ${origin} to ${destination}`,
       fullMessage: `I'm planning my trip from ${origin} to ${destination}${departureDate ? ` on ${departureDate}` : ""}${returnDate && tripType === "roundtrip" ? ` returning on ${returnDate}` : ""}. ${passengers > 1 ? `We're ${passengers} travelers.` : ""} Booked with Trips Europa - your trusted travel agency for Europe.`,
     },
@@ -75,6 +77,7 @@ export function ShareTrip({
       linkedin: "LinkedIn",
       copyLink: "Copiar link",
       copied: "Copiado",
+      copiedDesc: "O link foi copiado",
       tripMessage: `Estou planejando minha viagem de ${origin} para ${destination}`,
       fullMessage: `Estou planejando minha viagem de ${origin} para ${destination}${departureDate ? ` em ${departureDate}` : ""}${returnDate && tripType === "roundtrip" ? ` com retorno em ${returnDate}` : ""}. ${passengers > 1 ? `Somos ${passengers} viajantes.` : ""} Reservado com Trips Europa - sua agencia de viagens de confianca para a Europa.`,
     },
@@ -105,7 +108,7 @@ export function ShareTrip({
       setCopied(true);
       toast({
         title: c.copied,
-        description: language === "es" ? "El enlace ha sido copiado" : "Link has been copied",
+        description: c.copiedDesc,
       });
       setTimeout(() => setCopied(false), 2000);
     } catch {

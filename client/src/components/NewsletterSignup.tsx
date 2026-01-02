@@ -55,9 +55,28 @@ export function NewsletterSignup() {
       error: "Please fill in all fields",
       privacy: "We respect your privacy. You can cancel anytime.",
     },
+    pt: {
+      badge: "Newsletter Exclusiva",
+      title: "Receba As Melhores Ofertas",
+      subtitle: "Inscreva-se e receba ofertas exclusivas, promocoes especiais e inspiracao de viagem diretamente no seu email.",
+      benefits: [
+        { icon: Tag, text: "Ofertas exclusivas ate 60% de desconto" },
+        { icon: Gift, text: "Promocoes especiais apenas para assinantes" },
+        { icon: Compass, text: "Inspiracao de viagem e guias de destinos" },
+      ],
+      namePlaceholder: "Nome completo",
+      phonePlaceholder: "Numero de telefone",
+      emailPlaceholder: "Seu endereco de email",
+      cta: "Inscrever-se",
+      subscribing: "Conectando...",
+      success: "Inscricao bem-sucedida",
+      successDesc: "Entraremos em contato via WhatsApp com nossas melhores ofertas.",
+      error: "Por favor preencha todos os campos",
+      privacy: "Respeitamos sua privacidade. Voce pode cancelar a qualquer momento.",
+    },
   };
 
-  const c = content[language as "es" | "en"];
+  const c = content[language as keyof typeof content] || content.es;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

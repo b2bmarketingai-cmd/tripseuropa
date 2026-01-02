@@ -37,11 +37,13 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
   const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
 
+  const selectOriginMsg = language === "es" ? "Selecciona tu pais de origen" : language === "pt" ? "Selecione seu pais de origem" : "Select your origin country";
+  
   const contactSchema = z.object({
     name: z.string().min(2, t("form.validation.nameMin")),
     email: z.string().email(t("form.validation.emailInvalid")),
     phone: z.string().optional(),
-    originCountry: z.string().min(1, language === "es" ? "Selecciona tu pais de origen" : "Select your origin country"),
+    originCountry: z.string().min(1, selectOriginMsg),
     serviceInterest: z.string().optional(),
     message: z.string().min(10, t("form.validation.messageMin")),
     honeypot: z.string().max(0).optional(),
@@ -73,7 +75,7 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
     { value: "panama", label: "Panama" },
     { value: "costa-rica", label: "Costa Rica" },
     { value: "venezuela", label: "Venezuela" },
-    { value: "otro", label: language === "es" ? "Otro pais" : "Other country" },
+    { value: "otro", label: language === "es" ? "Otro pais" : language === "pt" ? "Outro pais" : "Other country" },
   ];
 
   const onSubmit = (data: ContactFormData) => {
@@ -215,7 +217,7 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className={isFooter ? "text-white/70" : ""}>
-                    {language === "es" ? "Pais de Origen" : "Origin Country"} *
+                    {language === "es" ? "Pais de Origen" : language === "pt" ? "Pais de Origem" : "Origin Country"} *
                   </FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
@@ -223,7 +225,7 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
                         className={isFooter ? "bg-white/5 border-white/10 text-white" : ""}
                         data-testid="select-contact-origin"
                       >
-                        <SelectValue placeholder={language === "es" ? "Selecciona tu pais" : "Select your country"} />
+                        <SelectValue placeholder={language === "es" ? "Selecciona tu pais" : language === "pt" ? "Selecione seu pais" : "Select your country"} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>

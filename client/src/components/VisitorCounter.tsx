@@ -28,7 +28,7 @@ export function VisitorCounter() {
         {visitorCount.toLocaleString()}
       </span>
       <span>
-        {language === "es" ? "visitantes hoy" : "visitors today"}
+        {language === "es" ? "visitantes hoy" : language === "pt" ? "visitantes hoje" : "visitors today"}
       </span>
     </div>
   );

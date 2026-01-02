@@ -26,13 +26,72 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
     message: ""
   });
 
+  const content = {
+    es: {
+      requiredFields: "Campos requeridos",
+      fillAllFields: "Por favor completa nombre, email y mensaje",
+      messageSent: "Mensaje enviado",
+      willContactSoon: "Te contactaremos pronto",
+      errorSending: "Error al enviar. Intenta de nuevo.",
+      contactUs: "Contactanos",
+      haveQuestions: "Tienes preguntas? Nuestros asesores de viaje estan listos para ayudarte a planificar tu viaje perfecto.",
+      fullName: "Nombre completo",
+      yourName: "Tu nombre",
+      phone: "Telefono",
+      destinationInterest: "Destino de interes",
+      destinationExample: "Ej: Italia, Espana",
+      message: "Mensaje",
+      idealTrip: "Cuentanos sobre tu viaje ideal...",
+      sending: "Enviando...",
+      sendInquiry: "Enviar consulta",
+    },
+    en: {
+      requiredFields: "Required fields",
+      fillAllFields: "Please fill in name, email and message",
+      messageSent: "Message sent",
+      willContactSoon: "We will contact you soon",
+      errorSending: "Error sending. Please try again.",
+      contactUs: "Contact Us",
+      haveQuestions: "Have questions? Our travel advisors are ready to help you plan your perfect trip.",
+      fullName: "Full name",
+      yourName: "Your name",
+      phone: "Phone",
+      destinationInterest: "Destination of interest",
+      destinationExample: "E.g.: Italy, Spain",
+      message: "Message",
+      idealTrip: "Tell us about your ideal trip...",
+      sending: "Sending...",
+      sendInquiry: "Send inquiry",
+    },
+    pt: {
+      requiredFields: "Campos obrigatorios",
+      fillAllFields: "Por favor preencha nome, email e mensagem",
+      messageSent: "Mensagem enviada",
+      willContactSoon: "Entraremos em contato em breve",
+      errorSending: "Erro ao enviar. Tente novamente.",
+      contactUs: "Fale Conosco",
+      haveQuestions: "Tem duvidas? Nossos consultores de viagem estao prontos para ajuda-lo a planejar sua viagem perfeita.",
+      fullName: "Nome completo",
+      yourName: "Seu nome",
+      phone: "Telefone",
+      destinationInterest: "Destino de interesse",
+      destinationExample: "Ex: Italia, Espanha",
+      message: "Mensagem",
+      idealTrip: "Conte-nos sobre sua viagem ideal...",
+      sending: "Enviando...",
+      sendInquiry: "Enviar consulta",
+    },
+  };
+
+  const c = content[language as keyof typeof content] || content.es;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: language === "es" ? "Campos requeridos" : "Required fields",
-        description: language === "es" ? "Por favor completa nombre, email y mensaje" : "Please fill in name, email and message",
+        title: c.requiredFields,
+        description: c.fillAllFields,
         variant: "destructive"
       });
       return;
@@ -47,7 +106,6 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
       message: formData.message
     }, {
       onSuccess: () => {
-        // Send WhatsApp notification
         const whatsappMessage = `Nueva consulta de contacto!
 
 *Nombre:* ${formData.name}
@@ -59,8 +117,8 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
         
         setSubmitted(true);
         toast({
-          title: language === "es" ? "Mensaje enviado" : "Message sent",
-          description: language === "es" ? "Te contactaremos pronto" : "We will contact you soon"
+          title: c.messageSent,
+          description: c.willContactSoon
         });
         setFormData({ name: "", email: "", phone: "", destination: "", message: "" });
         setTimeout(() => setSubmitted(false), 5000);
@@ -68,7 +126,7 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
       onError: () => {
         toast({
           title: "Error",
-          description: language === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          description: c.errorSending,
           variant: "destructive"
         });
       }
@@ -82,10 +140,10 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
           <div className="max-w-2xl mx-auto text-center py-12">
             <CheckCircle className="w-16 h-16 text-accent mx-auto mb-4" />
             <h3 className="text-2xl font-display font-bold mb-2">
-              {language === "es" ? "Mensaje enviado" : "Message sent"}
+              {c.messageSent}
             </h3>
             <p className="text-muted-foreground">
-              {language === "es" ? "Te contactaremos pronto" : "We will contact you soon"}
+              {c.willContactSoon}
             </p>
           </div>
         </div>
@@ -98,22 +156,20 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-4">
-            <span className="text-accent">{language === "es" ? "Contactanos" : "Contact Us"}</span>
+            <span className="text-accent">{c.contactUs}</span>
           </h2>
           <p className="text-center text-muted-foreground mb-8">
-            {language === "es" 
-              ? "Tienes preguntas? Nuestros asesores de viaje estan listos para ayudarte a planificar tu viaje perfecto." 
-              : "Have questions? Our travel advisors are ready to help you plan your perfect trip."}
+            {c.haveQuestions}
           </p>
           <Card>
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="contact-name">{language === "es" ? "Nombre completo" : "Full name"}</Label>
+                    <Label htmlFor="contact-name">{c.fullName}</Label>
                     <Input 
                       id="contact-name" 
-                      placeholder={language === "es" ? "Tu nombre" : "Your name"} 
+                      placeholder={c.yourName} 
                       value={formData.name}
                       onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                       data-testid="input-contact-name" 
@@ -133,7 +189,7 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="contact-phone">{language === "es" ? "Telefono" : "Phone"}</Label>
+                    <Label htmlFor="contact-phone">{c.phone}</Label>
                     <Input 
                       id="contact-phone" 
                       type="tel" 
@@ -144,10 +200,10 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="contact-destination">{language === "es" ? "Destino de interes" : "Destination of interest"}</Label>
+                    <Label htmlFor="contact-destination">{c.destinationInterest}</Label>
                     <Input 
                       id="contact-destination" 
-                      placeholder={destinationPlaceholder || (language === "es" ? "Ej: Italia, España" : "E.g.: Italy, Spain")} 
+                      placeholder={destinationPlaceholder || c.destinationExample} 
                       value={formData.destination}
                       onChange={(e) => setFormData(prev => ({ ...prev, destination: e.target.value }))}
                       data-testid="input-contact-destination" 
@@ -155,10 +211,10 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="contact-message">{language === "es" ? "Mensaje" : "Message"}</Label>
+                  <Label htmlFor="contact-message">{c.message}</Label>
                   <Textarea 
                     id="contact-message" 
-                    placeholder={language === "es" ? "Cuentanos sobre tu viaje ideal..." : "Tell us about your ideal trip..."} 
+                    placeholder={c.idealTrip} 
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
@@ -174,12 +230,12 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
                   {isPending ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      {language === "es" ? "Enviando..." : "Sending..."}
+                      {c.sending}
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4 mr-2" />
-                      {language === "es" ? "Enviar consulta" : "Send inquiry"}
+                      {c.sendInquiry}
                     </>
                   )}
                 </Button>
