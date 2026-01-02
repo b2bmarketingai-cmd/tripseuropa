@@ -11,26 +11,65 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 
 const AIRPORTS = [
+  // Latin America - Colombia
   { code: "BOG", city: "Bogota", country: "Colombia" },
   { code: "MDE", city: "Medellin", country: "Colombia" },
   { code: "CLO", city: "Cali", country: "Colombia" },
   { code: "CTG", city: "Cartagena", country: "Colombia" },
+  { code: "BAQ", city: "Barranquilla", country: "Colombia" },
+  // Latin America - Mexico
   { code: "MEX", city: "Ciudad de Mexico", country: "Mexico" },
   { code: "GDL", city: "Guadalajara", country: "Mexico" },
   { code: "CUN", city: "Cancun", country: "Mexico" },
+  { code: "MTY", city: "Monterrey", country: "Mexico" },
+  { code: "TIJ", city: "Tijuana", country: "Mexico" },
+  // Latin America - Argentina
   { code: "EZE", city: "Buenos Aires", country: "Argentina" },
+  { code: "COR", city: "Cordoba", country: "Argentina" },
+  { code: "MDZ", city: "Mendoza", country: "Argentina" },
+  // Latin America - Peru
   { code: "LIM", city: "Lima", country: "Peru" },
+  { code: "CUZ", city: "Cusco", country: "Peru" },
+  // Latin America - Brasil
   { code: "GRU", city: "Sao Paulo", country: "Brasil" },
+  { code: "GIG", city: "Rio de Janeiro", country: "Brasil" },
+  { code: "BSB", city: "Brasilia", country: "Brasil" },
+  // Latin America - Others
   { code: "PTY", city: "Panama", country: "Panama" },
   { code: "SJO", city: "San Jose", country: "Costa Rica" },
+  { code: "SDQ", city: "Santo Domingo", country: "Republica Dominicana" },
+  { code: "PUJ", city: "Punta Cana", country: "Republica Dominicana" },
+  { code: "HAV", city: "La Habana", country: "Cuba" },
+  { code: "SCL", city: "Santiago", country: "Chile" },
+  { code: "UIO", city: "Quito", country: "Ecuador" },
+  { code: "GYE", city: "Guayaquil", country: "Ecuador" },
+  { code: "CCS", city: "Caracas", country: "Venezuela" },
+  { code: "MVD", city: "Montevideo", country: "Uruguay" },
+  { code: "LPB", city: "La Paz", country: "Bolivia" },
+  { code: "ASU", city: "Asuncion", country: "Paraguay" },
+  // Europe - España
   { code: "MAD", city: "Madrid", country: "España" },
   { code: "BCN", city: "Barcelona", country: "España" },
+  { code: "VLC", city: "Valencia", country: "España" },
+  { code: "AGP", city: "Malaga", country: "España" },
+  { code: "SVQ", city: "Sevilla", country: "España" },
+  // Europe - Others
   { code: "CDG", city: "Paris", country: "Francia" },
   { code: "FCO", city: "Roma", country: "Italia" },
+  { code: "MXP", city: "Milan", country: "Italia" },
   { code: "LHR", city: "Londres", country: "Reino Unido" },
   { code: "AMS", city: "Amsterdam", country: "Paises Bajos" },
   { code: "FRA", city: "Frankfurt", country: "Alemania" },
+  { code: "MUC", city: "Munich", country: "Alemania" },
   { code: "LIS", city: "Lisboa", country: "Portugal" },
+  { code: "OPO", city: "Oporto", country: "Portugal" },
+  { code: "ATH", city: "Atenas", country: "Grecia" },
+  { code: "PRG", city: "Praga", country: "Republica Checa" },
+  { code: "VIE", city: "Viena", country: "Austria" },
+  { code: "ZRH", city: "Zurich", country: "Suiza" },
+  { code: "BRU", city: "Bruselas", country: "Belgica" },
+  { code: "CPH", city: "Copenhague", country: "Dinamarca" },
+  { code: "DUB", city: "Dublin", country: "Irlanda" },
 ];
 
 export function HeroFlightSearch() {
@@ -52,23 +91,31 @@ export function HeroFlightSearch() {
 
   const dateLocale = language === "es" ? es : language === "pt" ? ptBR : enUS;
 
-  const filteredOrigins = AIRPORTS.filter(
-    (a) =>
-      a.city.toLowerCase().includes(originSearch.toLowerCase()) ||
-      a.code.toLowerCase().includes(originSearch.toLowerCase()) ||
-      a.country.toLowerCase().includes(originSearch.toLowerCase())
-  );
+  const filteredOrigins = originSearch.length > 0 
+    ? AIRPORTS.filter(
+        (a) =>
+          a.city.toLowerCase().includes(originSearch.toLowerCase()) ||
+          a.code.toLowerCase().includes(originSearch.toLowerCase()) ||
+          a.country.toLowerCase().includes(originSearch.toLowerCase())
+      )
+    : AIRPORTS;
 
-  const filteredDests = AIRPORTS.filter(
-    (a) =>
-      a.city.toLowerCase().includes(destSearch.toLowerCase()) ||
-      a.code.toLowerCase().includes(destSearch.toLowerCase()) ||
-      a.country.toLowerCase().includes(destSearch.toLowerCase())
-  );
+  const filteredDests = destSearch.length > 0
+    ? AIRPORTS.filter(
+        (a) =>
+          a.city.toLowerCase().includes(destSearch.toLowerCase()) ||
+          a.code.toLowerCase().includes(destSearch.toLowerCase()) ||
+          a.country.toLowerCase().includes(destSearch.toLowerCase())
+      )
+    : AIRPORTS;
 
   const handleNextStep = () => {
     if (step === 1) {
-      if (!origin || !destination || !departureDate) {
+      const trimmedOrigin = origin.trim();
+      const trimmedDest = destination.trim();
+      setOrigin(trimmedOrigin);
+      setDestination(trimmedDest);
+      if (!trimmedOrigin || !trimmedDest || !departureDate) {
         const msgs = {
           es: { title: "Informacion incompleta", desc: "Por favor completa origen, destino y fecha de salida" },
           en: { title: "Missing information", desc: "Please fill in origin, destination and departure date" },
@@ -178,6 +225,8 @@ Can you help me with a quote?`;
       oneway: "Solo Ida",
       origin: "Origen",
       destination: "Destino",
+      originPlaceholder: "Ciudad o pais de origen",
+      destPlaceholder: "Ciudad o pais de destino",
       selectFirst: "Seleccione primero ORIGEN",
       departure: "Salida",
       return: "Vuelta",
@@ -198,6 +247,8 @@ Can you help me with a quote?`;
       oneway: "One Way",
       origin: "Origin",
       destination: "Destination",
+      originPlaceholder: "City or country of origin",
+      destPlaceholder: "City or country of destination",
       selectFirst: "Select ORIGIN first",
       departure: "Departure",
       return: "Return",
@@ -218,6 +269,8 @@ Can you help me with a quote?`;
       oneway: "Somente Ida",
       origin: "Origem",
       destination: "Destino",
+      originPlaceholder: "Cidade ou pais de origem",
+      destPlaceholder: "Cidade ou pais de destino",
       selectFirst: "Selecione primeiro a ORIGEM",
       departure: "Partida",
       return: "Retorno",
@@ -286,28 +339,32 @@ Can you help me with a quote?`;
           </div>
 
           {step === 1 && (
-          <div className="p-4">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
-              <div className="md:col-span-3 relative">
+          <div className="p-4 md:p-6">
+            <div className="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-2">
+              <div className="col-span-2 md:col-span-3 relative">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.origin}</label>
                 <div className="relative">
                   <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-[-45deg]" />
                   <input
                     type="text"
-                    placeholder={c.origin}
+                    placeholder={c.originPlaceholder}
                     value={originSearch}
                     onChange={(e) => {
                       setOriginSearch(e.target.value);
+                      setOrigin(e.target.value);
                       setShowOriginDropdown(true);
                     }}
                     onFocus={() => setShowOriginDropdown(true)}
-                    onBlur={() => setTimeout(() => setShowOriginDropdown(false), 200)}
+                    onBlur={() => {
+                      setTimeout(() => setShowOriginDropdown(false), 200);
+                      if (originSearch && !origin) setOrigin(originSearch);
+                    }}
                     className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
                     data-testid="input-origin"
                   />
                   {showOriginDropdown && filteredOrigins.length > 0 && (
                     <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredOrigins.slice(0, 6).map((airport) => (
+                      {filteredOrigins.slice(0, 8).map((airport) => (
                         <button
                           key={airport.code}
                           onClick={() => {
@@ -317,8 +374,11 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
                         >
-                          <span className="font-medium">{airport.city}</span>
-                          <span className="text-muted-foreground text-xs">{airport.code}</span>
+                          <div>
+                            <span className="font-medium">{airport.city}</span>
+                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          </div>
+                          <span className="text-primary font-bold text-xs">{airport.code}</span>
                         </button>
                       ))}
                     </div>
@@ -326,30 +386,30 @@ Can you help me with a quote?`;
                 </div>
               </div>
 
-              <div className="md:col-span-3 relative">
+              <div className="col-span-2 md:col-span-3 relative">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.destination}</label>
                 <div className="relative">
                   <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-45" />
                   <input
                     type="text"
-                    placeholder={origin ? c.destination : c.selectFirst}
+                    placeholder={c.destPlaceholder}
                     value={destSearch}
                     onChange={(e) => {
                       setDestSearch(e.target.value);
+                      setDestination(e.target.value);
                       setShowDestDropdown(true);
                     }}
                     onFocus={() => setShowDestDropdown(true)}
-                    onBlur={() => setTimeout(() => setShowDestDropdown(false), 200)}
-                    disabled={!origin}
-                    className={cn(
-                      "w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm",
-                      !origin && "opacity-60 cursor-not-allowed"
-                    )}
+                    onBlur={() => {
+                      setTimeout(() => setShowDestDropdown(false), 200);
+                      if (destSearch && !destination) setDestination(destSearch);
+                    }}
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
                     data-testid="input-destination"
                   />
                   {showDestDropdown && filteredDests.length > 0 && (
                     <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                      {filteredDests.slice(0, 6).map((airport) => (
+                      {filteredDests.slice(0, 8).map((airport) => (
                         <button
                           key={airport.code}
                           onClick={() => {
@@ -359,8 +419,11 @@ Can you help me with a quote?`;
                           }}
                           className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
                         >
-                          <span className="font-medium">{airport.city}</span>
-                          <span className="text-muted-foreground text-xs">{airport.code}</span>
+                          <div>
+                            <span className="font-medium">{airport.city}</span>
+                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          </div>
+                          <span className="text-primary font-bold text-xs">{airport.code}</span>
                         </button>
                       ))}
                     </div>
@@ -368,20 +431,20 @@ Can you help me with a quote?`;
                 </div>
               </div>
 
-              <div className="md:col-span-2">
+              <div className="col-span-1 md:col-span-2">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.departure}</label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px]",
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs md:text-sm",
                         !departureDate && "text-muted-foreground"
                       )}
                       data-testid="button-departure-date"
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4 text-primary" />
-                      {departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : <span>{c.departure}</span>}
+                      <CalendarIcon className="mr-1 md:mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="truncate">{departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : c.departure}</span>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white" align="start">
@@ -396,7 +459,7 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="md:col-span-2">
+              <div className="col-span-1 md:col-span-2">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.return}</label>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -404,16 +467,16 @@ Can you help me with a quote?`;
                       variant="outline"
                       disabled={tripType === "oneway"}
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px]",
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs md:text-sm",
                         !returnDate && "text-muted-foreground",
                         tripType === "oneway" && "opacity-50 cursor-not-allowed"
                       )}
                       data-testid="button-return-date"
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4 text-primary" />
-                      {returnDate && tripType === "roundtrip" 
+                      <CalendarIcon className="mr-1 md:mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="truncate">{returnDate && tripType === "roundtrip" 
                         ? format(returnDate, "d MMM yyyy", { locale: dateLocale }) 
-                        : <span>{c.return}</span>}
+                        : c.return}</span>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white" align="start">
@@ -428,7 +491,7 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="md:col-span-1">
+              <div className="col-span-1 md:col-span-1">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.passengers}</label>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -441,8 +504,8 @@ Can you help me with a quote?`;
                       <span className="font-bold">{passengers}</span>
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-48 p-4 bg-white" align="end">
-                    <div className="flex items-center justify-between">
+                  <PopoverContent className="w-48 p-4 bg-white" align="center">
+                    <div className="flex items-center justify-between gap-2">
                       <span className="text-sm">{c.passengers}</span>
                       <div className="flex items-center gap-2">
                         <Button
@@ -470,12 +533,13 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="md:col-span-1 flex items-end">
+              <div className="col-span-1 md:col-span-1 flex items-end">
                 <Button
                   onClick={handleNextStep}
-                  className="w-full h-[46px] bg-accent hover:bg-accent/90 text-primary"
+                  className="w-full h-[46px] bg-accent hover:bg-accent/90 text-primary font-semibold"
                   data-testid="button-next-step"
                 >
+                  <span className="hidden md:inline mr-2">{c.next}</span>
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
