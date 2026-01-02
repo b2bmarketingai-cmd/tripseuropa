@@ -72,7 +72,7 @@ export default function Contact() {
 
       <section className="py-16 bg-accent/10" data-testid="section-contact-hours">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
             <div>
               <h3 className="text-lg font-bold mb-2">{language === "es" ? "Horario de Atencion" : "Business Hours"}</h3>
               <p className="text-muted-foreground">
@@ -89,15 +89,6 @@ export default function Contact() {
               </p>
               <p className="text-muted-foreground">
                 {language === "es" ? "Emergencias 24/7 via WhatsApp" : "24/7 emergencies via WhatsApp"}
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2">{language === "es" ? "Oficina Principal" : "Main Office"}</h3>
-              <p className="text-muted-foreground">
-                {language === "es" ? "Bogota, Colombia" : "Bogota, Colombia"}
-              </p>
-              <p className="text-muted-foreground">
-                {language === "es" ? "Zona horaria: GMT-5" : "Time zone: GMT-5"}
               </p>
             </div>
           </div>

@@ -179,10 +179,6 @@ export function TrustpilotReviews() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground mb-3">{c.basedOn}</p>
-            <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-[#00b67a] fill-[#00b67a]" />
-              <span className="font-bold text-foreground">Trustpilot</span>
-            </div>
             <p className="text-xs text-muted-foreground mt-4">{c.ourReviews}</p>
           </div>
 
