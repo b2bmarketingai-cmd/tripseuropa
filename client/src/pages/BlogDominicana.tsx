@@ -186,15 +186,15 @@ export default function BlogDominicana() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
 
   const content = {
-    badge: { es: "Guia Completa 2025-2026", en: "Complete Guide 2025-2026" },
-    h1: { es: "Viajes a Europa desde Republica Dominicana", en: "Travel to Europe from Dominican Republic" },
-    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos, visa y consejos para viajeros dominicanos", en: "Everything you need to know: routes, prices, destinations, visa and tips for Dominican travelers" },
-    destinations: { es: "Destinos Preferidos por Dominicanos", en: "Preferred Destinations by Dominicans" },
-    routes: { es: "Rutas Principales desde RD", en: "Main Routes from DR" },
-    departures: { es: "Ciudades de Salida", en: "Departure Cities" },
-    prices: { es: "Comparativa de Precios", en: "Price Comparison" },
-    faq: { es: "Preguntas Frecuentes", en: "Frequently Asked Questions" },
-    cta: { es: "Cotiza Tu Viaje Ahora", en: "Quote Your Trip Now" },
+    badge: { es: "Guia Completa 2025-2026", pt: "Guia Completo 2025-2026", en: "Complete Guide 2025-2026" },
+    h1: { es: "Viajes a Europa desde Republica Dominicana", pt: "Viagens a Europa desde Republica Dominicana", en: "Travel to Europe from Dominican Republic" },
+    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos, visa y consejos para viajeros dominicanos", pt: "Tudo o que voce precisa saber: rotas, precos, destinos, visto e dicas para viajantes dominicanos", en: "Everything you need to know: routes, prices, destinations, visa and tips for Dominican travelers" },
+    destinations: { es: "Destinos Preferidos por Dominicanos", pt: "Destinos Preferidos pelos Dominicanos", en: "Preferred Destinations by Dominicans" },
+    routes: { es: "Rutas Principales desde RD", pt: "Rotas Principais desde RD", en: "Main Routes from DR" },
+    departures: { es: "Ciudades de Salida", pt: "Cidades de Partida", en: "Departure Cities" },
+    prices: { es: "Comparativa de Precios", pt: "Comparativo de Precos", en: "Price Comparison" },
+    faq: { es: "Preguntas Frecuentes", pt: "Perguntas Frequentes", en: "Frequently Asked Questions" },
+    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orcamento Agora", en: "Quote Your Trip Now" },
   };
 
   const toggleFaq = (id: string) => {
@@ -211,9 +211,11 @@ export default function BlogDominicana() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEOHead
-        title={language === "es" ? "Guia de Viajes a Europa desde Republica Dominicana - Rutas, Precios y Visa" : "Guide to Travel Europe from Dominican Republic - Routes, Prices and Visa"}
+        title={language === "es" ? "Guia de Viajes a Europa desde Republica Dominicana - Rutas, Precios y Visa" : language === "pt" ? "Guia de Viagens a Europa desde Republica Dominicana - Rotas, Precos e Visto" : "Guide to Travel Europe from Dominican Republic - Routes, Prices and Visa"}
         description={language === "es" 
           ? "Guia completa para dominicanos que quieren viajar a Europa: destinos favoritos, vuelos desde Santo Domingo, precios 2025, tramite de visa Schengen, y consejos practicos."
+          : language === "pt"
+          ? "Guia completo para dominicanos que querem viajar a Europa: destinos favoritos, voos desde Santo Domingo, precos 2025, tramite de visto Schengen e dicas praticas."
           : "Complete guide for Dominicans wanting to travel to Europe: favorite destinations, flights from Santo Domingo, 2025 prices, Schengen visa process, and practical tips."}
         keywords="viajes europa republica dominicana, europa desde santo domingo, visa schengen dominicanos, paquetes europa rd"
         url="https://tripseuropa.com/blog/dominicana"
@@ -230,9 +232,11 @@ export default function BlogDominicana() {
         ]}
       />
       <BlogPostSchema
-        title={language === "es" ? "Guia Completa: Viajes a Europa desde Republica Dominicana 2025-2026" : "Complete Guide: Travel to Europe from Dominican Republic 2025-2026"}
+        title={language === "es" ? "Guia Completa: Viajes a Europa desde Republica Dominicana 2025-2026" : language === "pt" ? "Guia Completo: Viagens a Europa desde Republica Dominicana 2025-2026" : "Complete Guide: Travel to Europe from Dominican Republic 2025-2026"}
         description={language === "es" 
           ? "Todo lo que necesitas saber para viajar a Europa desde RD: destinos, rutas, precios, visa y consejos practicos."
+          : language === "pt"
+          ? "Tudo o que voce precisa saber para viajar a Europa desde RD: destinos, rotas, precos, visto e dicas praticas."
           : "Everything you need to know to travel to Europe from DR: destinations, routes, prices, visa and practical tips."}
         image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
         datePublished="2025-01-01"
@@ -252,13 +256,13 @@ export default function BlogDominicana() {
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-dominicana">
-            {content.badge[language]}
+            {language === "es" ? content.badge.es : language === "pt" ? content.badge.pt : content.badge.en}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-accent mb-6" data-testid="text-dominicana-title">
-            {content.h1[language]}
+            {language === "es" ? content.h1.es : language === "pt" ? content.h1.pt : content.h1.en}
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8" data-testid="text-dominicana-subtitle">
-            {content.subtitle[language]}
+            {language === "es" ? content.subtitle.es : language === "pt" ? content.subtitle.pt : content.subtitle.en}
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
@@ -278,10 +282,10 @@ export default function BlogDominicana() {
             <Shield className="w-8 h-8 text-amber-600" />
             <div className="text-center">
               <p className="font-bold text-amber-800">
-                {language === "es" ? "Importante: Los dominicanos necesitan visa Schengen" : "Important: Dominicans need Schengen visa"}
+                {language === "es" ? "Importante: Los dominicanos necesitan visa Schengen" : language === "pt" ? "Importante: Dominicanos precisam de visto Schengen" : "Important: Dominicans need Schengen visa"}
               </p>
               <p className="text-amber-700 text-sm">
-                {language === "es" ? "Ofrecemos asesoria completa para el tramite de visa. Proceso de 15-30 dias." : "We offer complete visa processing assistance. 15-30 day process."}
+                {language === "es" ? "Ofrecemos asesoria completa para el tramite de visa. Proceso de 15-30 dias." : language === "pt" ? "Oferecemos assessoria completa para o tramite de visto. Processo de 15-30 dias." : "We offer complete visa processing assistance. 15-30 day process."}
               </p>
             </div>
           </div>
@@ -291,7 +295,7 @@ export default function BlogDominicana() {
       <section className="py-16 bg-white" data-testid="section-destinations">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.destinations[language]}
+            {language === "es" ? content.destinations.es : language === "pt" ? content.destinations.pt : content.destinations.en}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TOP_DESTINATIONS.map((dest) => (
@@ -330,7 +334,7 @@ export default function BlogDominicana() {
                   <div className="mt-4 pt-3 border-t">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4" />
-                      <span>{language === "es" ? "Mejor epoca:" : "Best time:"} {dest.bestTime}</span>
+                      <span>{language === "es" ? "Mejor epoca:" : language === "pt" ? "Melhor epoca:" : "Best time:"} {dest.bestTime}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -343,7 +347,7 @@ export default function BlogDominicana() {
       <section className="py-16 bg-gray-50" data-testid="section-routes">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.routes[language]}
+            {language === "es" ? content.routes.es : language === "pt" ? content.routes.pt : content.routes.en}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {TRAVEL_ROUTES.map((route) => (
@@ -384,7 +388,7 @@ export default function BlogDominicana() {
       <section className="py-16 bg-white" data-testid="section-departures">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.departures[language]}
+            {language === "es" ? content.departures.es : language === "pt" ? content.departures.pt : content.departures.en}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {DEPARTURE_CITIES.map((city) => (
@@ -414,7 +418,7 @@ export default function BlogDominicana() {
                       <span>{city.population} habitantes</span>
                     </div>
                     <div className="pt-3 border-t">
-                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : "Available routes:"}</p>
+                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : language === "pt" ? "Rotas disponiveis:" : "Available routes:"}</p>
                       <div className="flex flex-wrap gap-1">
                         {city.routes.map((route, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">{route}</Badge>
@@ -432,7 +436,7 @@ export default function BlogDominicana() {
       <section className="py-16 bg-gray-50" data-testid="section-prices">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.prices[language]}
+            {language === "es" ? content.prices.es : language === "pt" ? content.prices.pt : content.prices.en}
           </h2>
           <div className="max-w-4xl mx-auto">
             <Card>
@@ -441,10 +445,10 @@ export default function BlogDominicana() {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-primary text-white">
-                        <th className="p-4 text-left">{language === "es" ? "Duracion" : "Duration"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Economico" : "Budget"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Estandar" : "Standard"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Premium" : "Premium"}</th>
+                        <th className="p-4 text-left">{language === "es" ? "Duracion" : language === "pt" ? "Duracao" : "Duration"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Economico" : language === "pt" ? "Economico" : "Budget"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Estandar" : language === "pt" ? "Padrao" : "Standard"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Premium" : language === "pt" ? "Premium" : "Premium"}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -468,7 +472,7 @@ export default function BlogDominicana() {
       <section className="py-16 bg-white" data-testid="section-faq">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-display font-bold text-accent mb-8 text-center">
-            {content.faq[language]}
+            {language === "es" ? content.faq.es : language === "pt" ? content.faq.pt : content.faq.en}
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
             {FAQS.map((category, catIdx) => (
@@ -514,18 +518,20 @@ export default function BlogDominicana() {
       <section className="py-16 bg-primary" data-testid="section-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-display font-bold text-accent mb-4">
-            {content.cta[language]}
+            {language === "es" ? content.cta.es : language === "pt" ? content.cta.pt : content.cta.en}
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             {language === "es" 
               ? "Nuestros asesores especializados en viajes desde Republica Dominicana te ayudaran con la visa y planificacion de tu viaje."
+              : language === "pt"
+              ? "Nossos consultores especializados em viagens desde Republica Dominicana ajudarao voce com o visto e planejamento da sua viagem."
               : "Our travel advisors specialized in trips from Dominican Republic will help you with visa and trip planning."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2">
                 <Phone className="w-5 h-5" />
-                {language === "es" ? "Contactar Asesor" : "Contact Advisor"}
+                {language === "es" ? "Contactar Asesor" : language === "pt" ? "Contatar Consultor" : "Contact Advisor"}
               </Button>
             </Link>
             <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">

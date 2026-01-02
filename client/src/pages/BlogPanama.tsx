@@ -186,15 +186,15 @@ export default function BlogPanama() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
 
   const content = {
-    badge: { es: "Guia Completa 2025-2026", en: "Complete Guide 2025-2026" },
-    h1: { es: "Viajes a Europa desde Panama", en: "Travel to Europe from Panama" },
-    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos y consejos para viajeros panamenos", en: "Everything you need to know: routes, prices, destinations and tips for Panamanian travelers" },
-    destinations: { es: "Destinos Preferidos por Panamenos", en: "Preferred Destinations by Panamanians" },
-    routes: { es: "Rutas Principales desde Panama", en: "Main Routes from Panama" },
-    departures: { es: "Ciudades de Salida", en: "Departure Cities" },
-    prices: { es: "Comparativa de Precios", en: "Price Comparison" },
-    faq: { es: "Preguntas Frecuentes", en: "Frequently Asked Questions" },
-    cta: { es: "Cotiza Tu Viaje Ahora", en: "Quote Your Trip Now" },
+    badge: { es: "Guia Completa 2025-2026", pt: "Guia Completo 2025-2026", en: "Complete Guide 2025-2026" },
+    h1: { es: "Viajes a Europa desde Panama", pt: "Viagens a Europa desde Panama", en: "Travel to Europe from Panama" },
+    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos y consejos para viajeros panamenos", pt: "Tudo o que voce precisa saber: rotas, precos, destinos e dicas para viajantes panamenhos", en: "Everything you need to know: routes, prices, destinations and tips for Panamanian travelers" },
+    destinations: { es: "Destinos Preferidos por Panamenos", pt: "Destinos Preferidos por Panamenhos", en: "Preferred Destinations by Panamanians" },
+    routes: { es: "Rutas Principales desde Panama", pt: "Rotas Principais desde Panama", en: "Main Routes from Panama" },
+    departures: { es: "Ciudades de Salida", pt: "Cidades de Partida", en: "Departure Cities" },
+    prices: { es: "Comparativa de Precios", pt: "Comparativo de Precos", en: "Price Comparison" },
+    faq: { es: "Preguntas Frecuentes", pt: "Perguntas Frequentes", en: "Frequently Asked Questions" },
+    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orcamento Agora", en: "Quote Your Trip Now" },
   };
 
   const toggleFaq = (id: string) => {
@@ -211,9 +211,11 @@ export default function BlogPanama() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEOHead
-        title={language === "es" ? "Guia de Viajes a Europa desde Panama - Rutas, Precios y Consejos" : "Guide to Travel Europe from Panama - Routes, Prices and Tips"}
+        title={language === "es" ? "Guia de Viajes a Europa desde Panama - Rutas, Precios y Consejos" : language === "pt" ? "Guia de Viagens a Europa desde Panama - Rotas, Precos e Dicas" : "Guide to Travel Europe from Panama - Routes, Prices and Tips"}
         description={language === "es" 
           ? "Guia completa para panamenos que quieren viajar a Europa: destinos favoritos, vuelos desde Panama City, precios 2025, sin visa Schengen, y consejos practicos."
+          : language === "pt" 
+          ? "Guia completo para panamenhos que querem viajar a Europa: destinos favoritos, voos desde Panama City, precos 2025, sem visto Schengen, e dicas praticas."
           : "Complete guide for Panamanians wanting to travel to Europe: favorite destinations, flights from Panama City, 2025 prices, no Schengen visa needed, and practical tips."}
         keywords="viajes europa panama, europa desde panama city, paquetes europa panama, vuelos panama europa copa"
         url="https://tripseuropa.com/blog/panama"
@@ -230,9 +232,11 @@ export default function BlogPanama() {
         ]}
       />
       <BlogPostSchema
-        title={language === "es" ? "Guia Completa: Viajes a Europa desde Panama 2025-2026" : "Complete Guide: Travel to Europe from Panama 2025-2026"}
+        title={language === "es" ? "Guia Completa: Viajes a Europa desde Panama 2025-2026" : language === "pt" ? "Guia Completo: Viagens a Europa desde Panama 2025-2026" : "Complete Guide: Travel to Europe from Panama 2025-2026"}
         description={language === "es" 
           ? "Todo lo que necesitas saber para viajar a Europa desde Panama: destinos, rutas, precios y consejos practicos."
+          : language === "pt"
+          ? "Tudo o que voce precisa saber para viajar a Europa desde Panama: destinos, rotas, precos e dicas praticas."
           : "Everything you need to know to travel to Europe from Panama: destinations, routes, prices and practical tips."}
         image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
         datePublished="2025-01-01"
@@ -314,7 +318,7 @@ export default function BlogPanama() {
                   <div className="mt-4 pt-3 border-t">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4" />
-                      <span>{language === "es" ? "Mejor epoca:" : "Best time:"} {dest.bestTime}</span>
+                      <span>{language === "es" ? "Mejor epoca:" : language === "pt" ? "Melhor epoca:" : "Best time:"} {dest.bestTime}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -398,7 +402,7 @@ export default function BlogPanama() {
                       <span>{city.population} habitantes</span>
                     </div>
                     <div className="pt-3 border-t">
-                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : "Available routes:"}</p>
+                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : language === "pt" ? "Rotas disponiveis:" : "Available routes:"}</p>
                       <div className="flex flex-wrap gap-1">
                         {city.routes.map((route, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">{route}</Badge>
@@ -425,10 +429,10 @@ export default function BlogPanama() {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-primary text-white">
-                        <th className="p-4 text-left">{language === "es" ? "Duracion" : "Duration"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Economico" : "Budget"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Estandar" : "Standard"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Premium" : "Premium"}</th>
+                        <th className="p-4 text-left">{language === "es" ? "Duracion" : language === "pt" ? "Duracao" : "Duration"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Economico" : language === "pt" ? "Economico" : "Budget"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Estandar" : language === "pt" ? "Padrao" : "Standard"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Premium" : language === "pt" ? "Premium" : "Premium"}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -448,6 +452,8 @@ export default function BlogPanama() {
             <p className="text-sm text-muted-foreground text-center mt-4">
               {language === "es" 
                 ? "* Precios en USD por persona. Incluye vuelos, hoteles 3-5 estrellas, traslados y tours. Impuestos no incluidos."
+                : language === "pt"
+                ? "* Precos em USD por pessoa. Inclui voos, hoteis 3-5 estrelas, traslados e passeios. Impostos nao incluidos."
                 : "* Prices in USD per person. Includes flights, 3-5 star hotels, transfers and tours. Taxes not included."}
             </p>
           </div>
@@ -508,13 +514,15 @@ export default function BlogPanama() {
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             {language === "es" 
               ? "Nuestros asesores especializados en viajes desde Panama te ayudaran a planificar tu viaje perfecto a Europa."
+              : language === "pt"
+              ? "Nossos consultores especializados em viagens desde Panama ajudarao voce a planejar sua viagem perfeita a Europa."
               : "Our travel advisors specialized in trips from Panama will help you plan your perfect trip to Europe."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 gap-2">
                 <Phone className="w-5 h-5" />
-                {language === "es" ? "Contactar Asesor" : "Contact Advisor"}
+                {language === "es" ? "Contactar Asesor" : language === "pt" ? "Contatar Consultor" : "Contact Advisor"}
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2">
