@@ -17,17 +17,6 @@ const FAQ_ITEMS = [
     }
   },
   {
-    id: 2,
-    question: {
-      es: "Cual es la politica de cancelacion?",
-      en: "What is the cancellation policy?"
-    },
-    answer: {
-      es: "Ofrecemos cancelacion gratuita hasta 60 dias antes del viaje con reembolso completo. Entre 30-60 dias, se retiene el 25% del valor. Entre 15-30 dias, se retiene el 50%. Menos de 15 dias, el 75%. Cancelaciones de ultimo momento (menos de 7 dias) no tienen reembolso, pero puedes reprogramar para otra fecha pagando la diferencia de tarifas si aplica.",
-      en: "We offer free cancellation up to 60 days before the trip with a full refund. Between 30-60 days, 25% is retained. Between 15-30 days, 50% is retained. Less than 15 days, 75%. Last-minute cancellations (less than 7 days) are non-refundable, but you can reschedule for another date paying the fare difference if applicable."
-    }
-  },
-  {
     id: 3,
     question: {
       es: "El seguro de viaje esta incluido?",
