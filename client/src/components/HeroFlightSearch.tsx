@@ -230,6 +230,7 @@ Can you help me with a quote?`;
       selectFirst: "Seleccione primero ORIGEN",
       departure: "Salida",
       return: "Vuelta",
+      selectDate: "Seleccionar",
       passengers: "Pasajeros",
       next: "Siguiente",
       back: "Volver",
@@ -252,6 +253,7 @@ Can you help me with a quote?`;
       selectFirst: "Select ORIGIN first",
       departure: "Departure",
       return: "Return",
+      selectDate: "Select",
       passengers: "Passengers",
       next: "Next",
       back: "Back",
@@ -274,6 +276,7 @@ Can you help me with a quote?`;
       selectFirst: "Selecione primeiro a ORIGEM",
       departure: "Partida",
       return: "Retorno",
+      selectDate: "Selecionar",
       passengers: "Passageiros",
       next: "Proximo",
       back: "Voltar",
@@ -340,11 +343,13 @@ Can you help me with a quote?`;
 
           {step === 1 && (
           <div className="p-4 md:p-6">
-            <div className="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-2">
-              <div className="col-span-2 md:col-span-3 relative">
+            {/* Desktop: flex row layout */}
+            <div className="hidden md:flex md:flex-row md:gap-3 md:items-end">
+              {/* Origin */}
+              <div className="flex-1 min-w-0 relative">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.origin}</label>
                 <div className="relative">
-                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-[-45deg]" />
+                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-[-45deg] z-10" />
                   <input
                     type="text"
                     placeholder={c.originPlaceholder}
@@ -359,7 +364,7 @@ Can you help me with a quote?`;
                       setTimeout(() => setShowOriginDropdown(false), 200);
                       if (originSearch && !origin) setOrigin(originSearch);
                     }}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
+                    className="w-full pl-10 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
                     data-testid="input-origin"
                   />
                   {showOriginDropdown && filteredOrigins.length > 0 && (
@@ -367,6 +372,7 @@ Can you help me with a quote?`;
                       {filteredOrigins.slice(0, 8).map((airport) => (
                         <button
                           key={airport.code}
+                          type="button"
                           onClick={() => {
                             setOrigin(`${airport.city} (${airport.code})`);
                             setOriginSearch(`${airport.city} (${airport.code})`);
@@ -386,10 +392,11 @@ Can you help me with a quote?`;
                 </div>
               </div>
 
-              <div className="col-span-2 md:col-span-3 relative">
+              {/* Destination */}
+              <div className="flex-1 min-w-0 relative">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.destination}</label>
                 <div className="relative">
-                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-45" />
+                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-45 z-10" />
                   <input
                     type="text"
                     placeholder={c.destPlaceholder}
@@ -404,14 +411,15 @@ Can you help me with a quote?`;
                       setTimeout(() => setShowDestDropdown(false), 200);
                       if (destSearch && !destination) setDestination(destSearch);
                     }}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
-                    data-testid="input-destination"
+                    className="w-full pl-10 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
+                    data-testid="input-destination-desktop"
                   />
                   {showDestDropdown && filteredDests.length > 0 && (
                     <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
                       {filteredDests.slice(0, 8).map((airport) => (
                         <button
                           key={airport.code}
+                          type="button"
                           onClick={() => {
                             setDestination(`${airport.city} (${airport.code})`);
                             setDestSearch(`${airport.city} (${airport.code})`);
@@ -431,20 +439,21 @@ Can you help me with a quote?`;
                 </div>
               </div>
 
-              <div className="col-span-1 md:col-span-2">
+              {/* Departure Date */}
+              <div className="w-36">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.departure}</label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs md:text-sm",
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-sm",
                         !departureDate && "text-muted-foreground"
                       )}
                       data-testid="button-departure-date"
                     >
-                      <CalendarIcon className="mr-1 md:mr-2 h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="truncate">{departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : c.departure}</span>
+                      <CalendarIcon className="mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="truncate">{departureDate ? format(departureDate, "d MMM", { locale: dateLocale }) : c.selectDate}</span>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white" align="start">
@@ -459,7 +468,8 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="col-span-1 md:col-span-2">
+              {/* Return Date */}
+              <div className="w-36">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.return}</label>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -467,16 +477,16 @@ Can you help me with a quote?`;
                       variant="outline"
                       disabled={tripType === "oneway"}
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs md:text-sm",
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-sm",
                         !returnDate && "text-muted-foreground",
                         tripType === "oneway" && "opacity-50 cursor-not-allowed"
                       )}
                       data-testid="button-return-date"
                     >
-                      <CalendarIcon className="mr-1 md:mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                      <CalendarIcon className="mr-2 h-4 w-4 text-primary flex-shrink-0" />
                       <span className="truncate">{returnDate && tripType === "roundtrip" 
-                        ? format(returnDate, "d MMM yyyy", { locale: dateLocale }) 
-                        : c.return}</span>
+                        ? format(returnDate, "d MMM", { locale: dateLocale }) 
+                        : c.selectDate}</span>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white" align="start">
@@ -491,7 +501,8 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="col-span-1 md:col-span-1">
+              {/* Passengers */}
+              <div className="w-24">
                 <label className="text-xs text-muted-foreground mb-1 block">{c.passengers}</label>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -499,6 +510,221 @@ Can you help me with a quote?`;
                       variant="outline"
                       className="w-full justify-center bg-gray-50 border-gray-200 h-[46px] gap-2"
                       data-testid="button-passengers"
+                    >
+                      <Users className="h-4 w-4 text-primary" />
+                      <span className="font-bold">{passengers}</span>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-48 p-4 bg-white" align="end">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-sm">{c.passengers}</span>
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-8 w-8"
+                          onClick={() => setPassengers(Math.max(1, passengers - 1))}
+                          disabled={passengers <= 1}
+                        >
+                          <Minus className="h-3 w-3" />
+                        </Button>
+                        <span className="w-6 text-center font-bold">{passengers}</span>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-8 w-8"
+                          onClick={() => setPassengers(Math.min(9, passengers + 1))}
+                          disabled={passengers >= 9}
+                        >
+                          <Plus className="h-3 w-3" />
+                        </Button>
+                      </div>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+              {/* Next Button */}
+              <div>
+                <label className="text-xs text-transparent mb-1 block">.</label>
+                <Button
+                  onClick={handleNextStep}
+                  className="h-[46px] px-6 bg-accent hover:bg-accent/90 text-primary font-semibold"
+                  data-testid="button-next-step"
+                >
+                  {c.next}
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Mobile: grid layout */}
+            <div className="md:hidden grid grid-cols-2 gap-3">
+              {/* Origin - full width */}
+              <div className="col-span-2 relative">
+                <label className="text-xs text-muted-foreground mb-1 block">{c.origin}</label>
+                <div className="relative">
+                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-[-45deg] z-10" />
+                  <input
+                    type="text"
+                    placeholder={c.originPlaceholder}
+                    value={originSearch}
+                    onChange={(e) => {
+                      setOriginSearch(e.target.value);
+                      setOrigin(e.target.value);
+                      setShowOriginDropdown(true);
+                    }}
+                    onFocus={() => setShowOriginDropdown(true)}
+                    onBlur={() => {
+                      setTimeout(() => setShowOriginDropdown(false), 200);
+                      if (originSearch && !origin) setOrigin(originSearch);
+                    }}
+                    className="w-full pl-10 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
+                    data-testid="input-origin-mobile"
+                  />
+                  {showOriginDropdown && filteredOrigins.length > 0 && (
+                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                      {filteredOrigins.slice(0, 8).map((airport) => (
+                        <button
+                          key={airport.code}
+                          type="button"
+                          onClick={() => {
+                            setOrigin(`${airport.city} (${airport.code})`);
+                            setOriginSearch(`${airport.city} (${airport.code})`);
+                            setShowOriginDropdown(false);
+                          }}
+                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                        >
+                          <div>
+                            <span className="font-medium">{airport.city}</span>
+                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          </div>
+                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Destination - full width */}
+              <div className="col-span-2 relative">
+                <label className="text-xs text-muted-foreground mb-1 block">{c.destination}</label>
+                <div className="relative">
+                  <Plane className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary rotate-45 z-10" />
+                  <input
+                    type="text"
+                    placeholder={c.destPlaceholder}
+                    value={destSearch}
+                    onChange={(e) => {
+                      setDestSearch(e.target.value);
+                      setDestination(e.target.value);
+                      setShowDestDropdown(true);
+                    }}
+                    onFocus={() => setShowDestDropdown(true)}
+                    onBlur={() => {
+                      setTimeout(() => setShowDestDropdown(false), 200);
+                      if (destSearch && !destination) setDestination(destSearch);
+                    }}
+                    className="w-full pl-10 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm"
+                    data-testid="input-destination"
+                  />
+                  {showDestDropdown && filteredDests.length > 0 && (
+                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                      {filteredDests.slice(0, 8).map((airport) => (
+                        <button
+                          key={airport.code}
+                          type="button"
+                          onClick={() => {
+                            setDestination(`${airport.city} (${airport.code})`);
+                            setDestSearch(`${airport.city} (${airport.code})`);
+                            setShowDestDropdown(false);
+                          }}
+                          className="w-full px-4 py-2 text-left hover:bg-accent/10 text-sm flex justify-between items-center"
+                        >
+                          <div>
+                            <span className="font-medium">{airport.city}</span>
+                            <span className="text-muted-foreground text-xs ml-2">{airport.country}</span>
+                          </div>
+                          <span className="text-primary font-bold text-xs">{airport.code}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Departure Date */}
+              <div className="col-span-1">
+                <label className="text-xs text-muted-foreground mb-1 block">{c.departure}</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs",
+                        !departureDate && "text-muted-foreground"
+                      )}
+                      data-testid="button-departure-date-mobile"
+                    >
+                      <CalendarIcon className="mr-1 h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="truncate">{departureDate ? format(departureDate, "d MMM", { locale: dateLocale }) : c.selectDate}</span>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-white" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={departureDate}
+                      onSelect={setDepartureDate}
+                      initialFocus
+                      disabled={(d) => d < new Date()}
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+              {/* Return Date */}
+              <div className="col-span-1">
+                <label className="text-xs text-muted-foreground mb-1 block">{c.return}</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      disabled={tripType === "oneway"}
+                      className={cn(
+                        "w-full justify-start text-left font-normal bg-gray-50 border-gray-200 h-[46px] text-xs",
+                        !returnDate && "text-muted-foreground",
+                        tripType === "oneway" && "opacity-50 cursor-not-allowed"
+                      )}
+                      data-testid="button-return-date-mobile"
+                    >
+                      <CalendarIcon className="mr-1 h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="truncate">{returnDate && tripType === "roundtrip" 
+                        ? format(returnDate, "d MMM", { locale: dateLocale }) 
+                        : c.selectDate}</span>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-white" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={returnDate}
+                      onSelect={setReturnDate}
+                      initialFocus
+                      disabled={(d) => d < (departureDate || new Date())}
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+              {/* Passengers */}
+              <div className="col-span-1">
+                <label className="text-xs text-muted-foreground mb-1 block">{c.passengers}</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className="w-full justify-center bg-gray-50 border-gray-200 h-[46px] gap-2"
+                      data-testid="button-passengers-mobile"
                     >
                       <Users className="h-4 w-4 text-primary" />
                       <span className="font-bold">{passengers}</span>
@@ -533,13 +759,13 @@ Can you help me with a quote?`;
                 </Popover>
               </div>
 
-              <div className="col-span-1 md:col-span-1 flex items-end">
+              {/* Next Button */}
+              <div className="col-span-1 flex items-end">
                 <Button
                   onClick={handleNextStep}
                   className="w-full h-[46px] bg-accent hover:bg-accent/90 text-primary font-semibold"
-                  data-testid="button-next-step"
+                  data-testid="button-next-step-mobile"
                 >
-                  <span className="hidden md:inline mr-2">{c.next}</span>
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
