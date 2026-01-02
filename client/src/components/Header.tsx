@@ -22,6 +22,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -410,6 +411,9 @@ export function Header() {
             <DialogTitle className="text-center text-xl font-display">
               {language === "es" ? "Mi cuenta" : "My Account"}
             </DialogTitle>
+            <DialogDescription className="sr-only">
+              {language === "es" ? "Inicia sesion o crea una cuenta" : "Login or create an account"}
+            </DialogDescription>
           </DialogHeader>
           
           <Tabs defaultValue="viajero" className="w-full">

@@ -8,6 +8,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Play, Star, Award } from "lucide-react";
 
@@ -125,6 +126,9 @@ export function PromotionalVideoBanner() {
         <DialogContent className="sm:max-w-4xl p-0 overflow-hidden">
           <DialogHeader className="p-4 pb-0">
             <DialogTitle className="text-accent font-display">{c.videoTitle}</DialogTitle>
+            <DialogDescription className="sr-only">
+              {language === "es" ? "Video promocional de Trips Europa" : "Trips Europa promotional video"}
+            </DialogDescription>
           </DialogHeader>
           <div className="p-4">
             <AspectRatio ratio={16 / 9}>

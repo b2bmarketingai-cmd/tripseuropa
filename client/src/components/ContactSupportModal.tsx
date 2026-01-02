@@ -5,6 +5,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -88,7 +89,7 @@ export function ContactSupportModal({ trigger }: ContactSupportModalProps) {
       <DialogContent className="sm:max-w-md" data-testid="modal-contact-support">
         <DialogHeader>
           <DialogTitle className="text-2xl font-display text-accent">{c.bookTrip}</DialogTitle>
-          <p className="text-muted-foreground">{c.bookSubtitle}</p>
+          <DialogDescription className="text-muted-foreground">{c.bookSubtitle}</DialogDescription>
         </DialogHeader>
         
         <Card className="p-4 bg-muted/50">
