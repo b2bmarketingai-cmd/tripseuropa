@@ -19,10 +19,11 @@ import { getTravelStyleBySlug, TravelStyleData } from "@/lib/travelStyleData";
 import { 
   Calendar, Clock, Check, ChevronRight, MapPin, 
   Users, Mail, Phone, Send, Star, ArrowLeft,
-  MessageSquare
+  MessageSquare, Loader2
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
+import { useCreateLead } from "@/hooks/use-leads";
 import { FloatingContactButtons } from "@/components/support";
 
 const CONTENT = {
@@ -95,7 +96,7 @@ export default function TravelStylePage() {
     travelDate: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { mutate: createLead, isPending: isSubmitting } = useCreateLead();
 
   if (!travelStyle) {
     return (
@@ -116,19 +117,52 @@ export default function TravelStylePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    if (!formData.name || !formData.email) {
+      toast({
+        title: lang === "es" ? "Campos requeridos" : "Required fields",
+        variant: "destructive"
+      });
+      return;
+    }
     
-    toast({
-      title: lang === "es" ? "Solicitud enviada" : "Request sent",
-      description: lang === "es" 
-        ? "Un asesor te contactara pronto" 
-        : "An advisor will contact you soon",
+    const messageContent = `Viajeros: ${formData.travelers || "No especificado"}, Fecha: ${formData.travelDate || "No especificada"}, ${formData.message || ""}`;
+    
+    createLead({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone || null,
+      originCountry: null,
+      serviceInterest: travelStyle?.name[lang] || null,
+      message: messageContent
+    }, {
+      onSuccess: () => {
+        const whatsappMessage = `Nueva solicitud - ${travelStyle?.name[lang] || "Estilo de viaje"}!
+
+*Nombre:* ${formData.name}
+*Email:* ${formData.email}
+*Telefono:* ${formData.phone || "No proporcionado"}
+*Viajeros:* ${formData.travelers || "No especificado"}
+*Fecha:* ${formData.travelDate || "No especificada"}
+*Mensaje:* ${formData.message || "Sin mensaje"}`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
+        toast({
+          title: lang === "es" ? "Solicitud enviada" : "Request sent",
+          description: lang === "es" 
+            ? "Un asesor te contactara pronto" 
+            : "An advisor will contact you soon",
+        });
+        setFormData({ name: "", email: "", phone: "", travelers: "", travelDate: "", message: "" });
+      },
+      onError: () => {
+        toast({
+          title: "Error",
+          description: lang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          variant: "destructive"
+        });
+      }
     });
-    
-    setFormData({ name: "", email: "", phone: "", travelers: "", travelDate: "", message: "" });
-    setIsSubmitting(false);
   };
 
   const categoryLabels = {

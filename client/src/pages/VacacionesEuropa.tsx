@@ -11,10 +11,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { 
   MapPin, Globe, Star, ChevronRight, Plane, 
   Mountain, Ship, Heart, Wine, Castle,
-  ArrowRight, Quote, Sparkles
+  ArrowRight, Quote, Sparkles, Loader2
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const REGIONS = [
   { id: "all", label: "Todos", count: 110 },
@@ -274,10 +275,57 @@ export default function VacacionesEuropa() {
   const { t, language } = useI18n();
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [showFullIntro, setShowFullIntro] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const filteredPackages = selectedRegion === "all" 
     ? FEATURED_PACKAGES 
     : FEATURED_PACKAGES.slice(0, 6);
+    
+  const handleNewsletterSubmit = async () => {
+    if (!newsletterEmail || !newsletterEmail.includes("@")) {
+      toast({
+        title: "Correo invalido",
+        description: "Por favor ingresa un correo valido",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail })
+      });
+      
+      if (response.ok) {
+        const whatsappMessage = `Nueva suscripcion a newsletter!
+
+*Email:* ${newsletterEmail}
+*Pagina:* Vacaciones Europa`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
+        toast({
+          title: "Suscripcion exitosa",
+          description: "Recibiras nuestras mejores ofertas"
+        });
+        setNewsletterEmail("");
+      } else {
+        throw new Error("Failed");
+      }
+    } catch {
+      toast({
+        title: "Error",
+        description: "Intenta nuevamente",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const faqsForSchema = FAQS.map(faq => ({ question: faq.question, answer: faq.answer }));
 
@@ -596,11 +644,18 @@ export default function VacacionesEuropa() {
             <input 
               type="email" 
               placeholder="Tu correo electronico"
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               className="flex-1 px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-primary"
               data-testid="input-newsletter-email"
             />
-            <Button className="bg-primary text-white hover:bg-primary/90" data-testid="button-subscribe">
-              Suscribirme
+            <Button 
+              className="bg-primary text-white hover:bg-primary/90" 
+              data-testid="button-subscribe"
+              onClick={handleNewsletterSubmit}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : "Suscribirme"}
             </Button>
           </div>
           <p className="text-primary/60 text-sm mt-4">

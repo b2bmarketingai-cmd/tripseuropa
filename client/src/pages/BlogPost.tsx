@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/support";
@@ -6,14 +7,68 @@ import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, ArrowLeft, Calendar, User, Share2, Phone } from "lucide-react";
+import { Clock, ArrowLeft, Calendar, User, Share2, Phone, Loader2 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
+import { useToast } from "@/hooks/use-toast";
+import { useCreateLead } from "@/hooks/use-leads";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
+  const { toast } = useToast();
+  const { mutate: createLead, isPending } = useCreateLead();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Campos requeridos",
+        description: "Por favor completa nombre, email y mensaje",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    createLead({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone || null,
+      originCountry: null,
+      serviceInterest: null,
+      message: formData.message
+    }, {
+      onSuccess: () => {
+        const whatsappMessage = `Nueva consulta desde Blog!
+
+*Nombre:* ${formData.name}
+*Email:* ${formData.email}
+*Telefono:* ${formData.phone || "No proporcionado"}
+*Mensaje:* ${formData.message}`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
+        toast({
+          title: "Mensaje enviado",
+          description: "Te contactaremos pronto"
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      },
+      onError: () => {
+        toast({
+          title: "Error",
+          description: "Error al enviar. Intenta de nuevo.",
+          variant: "destructive"
+        });
+      }
+    });
+  };
   
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
   const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
@@ -172,12 +227,14 @@ export default function BlogPost() {
                 <h3 className="text-2xl font-display text-accent mb-2 text-center">Contactanos Para Mas Informacion</h3>
                 <p className="text-muted-foreground mb-6 text-center">Nuestros asesores te ayudaran a planificar tu viaje perfecto a Europa</p>
                 
-                <form className="space-y-4 max-w-md mx-auto" data-testid="form-blog-contact">
+                <form onSubmit={handleContactSubmit} className="space-y-4 max-w-md mx-auto" data-testid="form-blog-contact">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1">Nombre Completo</label>
                     <input 
                       type="text" 
                       placeholder="Tu nombre" 
+                      value={formData.name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                       className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-name"
                     />
@@ -187,6 +244,8 @@ export default function BlogPost() {
                     <input 
                       type="email" 
                       placeholder="tu@email.com" 
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                       className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-email"
                     />
@@ -196,6 +255,8 @@ export default function BlogPost() {
                     <input 
                       type="tel" 
                       placeholder="+34 611 105 448" 
+                      value={formData.phone}
+                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                       className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-phone"
                     />
@@ -205,18 +266,20 @@ export default function BlogPost() {
                     <textarea 
                       placeholder="Cuentanos sobre el viaje que tienes en mente..." 
                       rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                       className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent resize-none"
                       data-testid="textarea-contact-message"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-accent text-primary" data-testid="button-contact-submit">
-                    <Phone className="w-4 h-4 mr-2" />
+                  <Button type="submit" disabled={isPending} className="w-full bg-accent text-primary" data-testid="button-contact-submit">
+                    {isPending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Phone className="w-4 h-4 mr-2" />}
                     Enviar Consulta
                   </Button>
                 </form>
                 
                 <p className="text-xs text-muted-foreground text-center mt-4">
-                  O llamanos directamente al +1 (786) 919-0191
+                  O llamanos directamente al +34 611 105 448
                 </p>
               </CardContent>
             </Card>

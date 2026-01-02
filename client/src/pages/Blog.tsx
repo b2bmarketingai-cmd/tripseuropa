@@ -5,12 +5,13 @@ import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils, Globe } from "lucide-react";
+import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils, Globe, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useMemo } from "react";
 import { BLOG_POSTS_DATA } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE } from "./BlogPostsSimple";
 import { FloatingContactButtons } from "@/components/support";
+import { useToast } from "@/hooks/use-toast";
 
 const BLOG_CATEGORIES = [
   { id: "all", label: { es: "Todos", en: "All" }, icon: BookOpen },
@@ -771,8 +772,43 @@ const BLOG_POSTS = [
 
 export default function Blog() {
   const { language } = useI18n();
+  const { toast } = useToast();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterLoading, setNewsletterLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail || !newsletterEmail.includes("@")) {
+      toast({
+        title: language === "es" ? "Email requerido" : "Email required",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setNewsletterLoading(true);
+    try {
+      await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail })
+      });
+
+      const whatsappMessage = `Nueva suscripcion al Newsletter Blog!\n\nEmail: ${newsletterEmail}`;
+      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      
+      toast({
+        title: language === "es" ? "Suscripcion exitosa" : "Subscription successful"
+      });
+      setNewsletterEmail("");
+    } catch (error) {
+      console.error("Newsletter error:", error);
+    } finally {
+      setNewsletterLoading(false);
+    }
+  };
 
   const allPosts = useMemo(() => {
     const blogDataIds = new Set(BLOG_POSTS_DATA.map(p => p.id));
@@ -1105,17 +1141,19 @@ export default function Blog() {
               ? "Suscribete y recibe nuestra guia PDF gratuita: 'Top 10 Ciudades Imprescindibles de Europa' + descuento 10% en tu primer viaje" 
               : "Subscribe and receive our free PDF guide: 'Top 10 Must-See Cities in Europe' + 10% discount on your first trip"}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input 
               type="email" 
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder={language === "es" ? "Tu correo electronico" : "Your email address"}
               className="flex-1 px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-accent"
               data-testid="input-newsletter-email"
             />
-            <Button className="bg-accent text-primary hover:bg-accent/90" data-testid="button-newsletter-subscribe">
-              {language === "es" ? "Suscribirse" : "Subscribe"}
+            <Button type="submit" disabled={newsletterLoading} className="bg-accent text-primary hover:bg-accent/90" data-testid="button-newsletter-subscribe">
+              {newsletterLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : (language === "es" ? "Suscribirse" : "Subscribe")}
             </Button>
-          </div>
+          </form>
           <p className="text-white/50 text-xs mt-4">
             {language === "es" ? "Sin spam. Puedes darte de baja cuando quieras." : "No spam. You can unsubscribe anytime."}
           </p>

@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
+import { useCreateLead } from "@/hooks/use-leads";
 import {
   Calendar,
   MapPin,
@@ -38,6 +39,7 @@ import {
   Heart,
   Users,
   ArrowRight,
+  Loader2,
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { FloatingContactButtons } from "@/components/support";
@@ -57,7 +59,7 @@ export default function DestinationPage() {
     message: "",
     packageInterest: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { mutate: createLead, isPending: isSubmitting } = useCreateLead();
 
   if (!destination) {
     return (
@@ -168,17 +170,47 @@ export default function DestinationPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    if (!formData.name || !formData.email) {
+      toast({
+        title: lang === "es" ? "Campos requeridos" : "Required fields",
+        variant: "destructive"
+      });
+      return;
+    }
     
-    toast({
-      title: content[lang].successTitle,
-      description: content[lang].successMessage,
+    createLead({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone || null,
+      originCountry: null,
+      serviceInterest: formData.packageInterest || (destination?.name[lang] || null),
+      message: formData.message || null
+    }, {
+      onSuccess: () => {
+        const whatsappMessage = `Nueva solicitud - ${destination?.name[lang] || "Destino"}!
+
+*Nombre:* ${formData.name}
+*Email:* ${formData.email}
+*Telefono:* ${formData.phone || "No proporcionado"}
+*Paquete:* ${formData.packageInterest || "No especificado"}
+*Mensaje:* ${formData.message || "Sin mensaje"}`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
+        toast({
+          title: content[lang].successTitle,
+          description: content[lang].successMessage,
+        });
+        setFormData({ name: "", email: "", phone: "", message: "", packageInterest: "" });
+      },
+      onError: () => {
+        toast({
+          title: "Error",
+          description: lang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          variant: "destructive"
+        });
+      }
     });
-    
-    setFormData({ name: "", email: "", phone: "", message: "", packageInterest: "" });
-    setIsSubmitting(false);
   };
 
   return (

@@ -83,6 +83,19 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
     const { honeypot, ...leadData } = data;
     createLead(leadData as any, {
       onSuccess: () => {
+        // Send WhatsApp notification
+        const countryLabel = originCountries.find(c => c.value === data.originCountry)?.label || data.originCountry;
+        const serviceLabel = serviceOptions.find(s => s.value === data.serviceInterest)?.label || data.serviceInterest;
+        const whatsappMessage = `Nueva solicitud de contacto!
+
+*Nombre:* ${data.name}
+*Email:* ${data.email}
+*Telefono:* ${data.phone || "No proporcionado"}
+*Pais:* ${countryLabel}
+*Servicio:* ${serviceLabel || "No especificado"}
+*Mensaje:* ${data.message}`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
         setSubmitted(true);
         toast({
           title: t("contact.success"),

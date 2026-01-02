@@ -14,9 +14,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useI18n } from "@/lib/i18n";
-import { Check, Gift, Star, Users, Plane, Crown, Sparkles, ArrowRight, ChevronRight, Mail } from "lucide-react";
+import { Check, Gift, Star, Users, Plane, Crown, Sparkles, ArrowRight, ChevronRight, Mail, Loader2 } from "lucide-react";
 import { DESTINATIONS_DATA } from "@/lib/destinationsData";
 import { FloatingContactButtons, SupportContactSection } from "@/components/support";
+import { useToast } from "@/hooks/use-toast";
 
 const CONTENT = {
   es: {
@@ -158,6 +159,46 @@ export default function Rewards() {
   const content = CONTENT[language];
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleRewardsSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !email) {
+      toast({
+        title: language === "es" ? "Campos requeridos" : "Required fields",
+        description: language === "es" ? "Por favor ingresa tu nombre y correo" : "Please enter your name and email",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsLoading(true);
+    try {
+      await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+
+      const whatsappMessage = `Nueva inscripcion TripsEuropa GO!
+
+*Nombre:* ${name}
+*Email:* ${email}`;
+      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      
+      toast({
+        title: language === "es" ? "Registro exitoso" : "Registration successful",
+        description: language === "es" ? "Bienvenido a TripsEuropa GO" : "Welcome to TripsEuropa GO"
+      });
+      setName("");
+      setEmail("");
+    } catch (error) {
+      console.error("Rewards signup error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const featuredPackages = DESTINATIONS_DATA.filter(d => 
     FEATURED_DESTINATIONS.includes(d.slug)
@@ -283,7 +324,7 @@ export default function Rewards() {
             <p className="text-white/70 mb-8">
               {content.signupSubtitle}
             </p>
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); }}>
+            <form className="space-y-4" onSubmit={handleRewardsSubmit}>
               <div className="space-y-2">
                 <Input
                   type="text"
@@ -308,9 +349,14 @@ export default function Rewards() {
                 type="submit" 
                 size="lg" 
                 className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold h-12"
+                disabled={isLoading}
                 data-testid="button-rewards-submit"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                {isLoading ? (
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                ) : (
+                  <Mail className="w-5 h-5 mr-2" />
+                )}
                 {content.signupButton}
               </Button>
             </form>

@@ -5,9 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MapPin, Clock, Calendar, Tag, ArrowRight, CheckCircle, Phone, Percent, Flame } from "lucide-react";
+import { MapPin, Clock, Calendar, Tag, ArrowRight, CheckCircle, Phone, Percent, Flame, Loader2 } from "lucide-react";
 import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
 import { Link } from "wouter";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const LAST_MINUTE_FAQS: FAQItem[] = [
   {
@@ -210,11 +212,56 @@ const LAST_MINUTE_OFFERS = [
 export default function LastMinuteOffers() {
   const { language } = useI18n();
   const lang = language as "es" | "en";
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "short" };
     return date.toLocaleDateString(language === "es" ? "es-ES" : "en-US", options);
+  };
+  
+  const handleNewsletterSubmit = async () => {
+    if (!newsletterEmail || !newsletterEmail.includes("@")) {
+      toast({
+        title: lang === "es" ? "Correo invalido" : "Invalid email",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail })
+      });
+      
+      if (response.ok) {
+        const whatsappMessage = `Nueva suscripcion a newsletter!
+
+*Email:* ${newsletterEmail}
+*Pagina:* Ofertas de Ultima Hora`;
+        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        
+        toast({
+          title: lang === "es" ? "Suscripcion exitosa" : "Subscribed successfully",
+          description: lang === "es" ? "Recibiras nuestras mejores ofertas" : "You'll receive our best deals"
+        });
+        setNewsletterEmail("");
+      } else {
+        throw new Error("Failed");
+      }
+    } catch {
+      toast({
+        title: "Error",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -410,11 +457,18 @@ export default function LastMinuteOffers() {
               <Input 
                 type="email" 
                 placeholder={language === "es" ? "Ingresa tu email" : "Enter your email"}
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 data-testid="input-newsletter-email"
               />
-              <Button className="bg-accent text-primary hover:bg-accent/90 whitespace-nowrap" data-testid="button-newsletter-subscribe">
-                {language === "es" ? "Suscribirme" : "Subscribe"}
+              <Button 
+                className="bg-accent text-primary hover:bg-accent/90 whitespace-nowrap" 
+                data-testid="button-newsletter-subscribe"
+                onClick={handleNewsletterSubmit}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : (language === "es" ? "Suscribirme" : "Subscribe")}
               </Button>
             </div>
           </div>
