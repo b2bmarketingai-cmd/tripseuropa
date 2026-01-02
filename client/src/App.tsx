@@ -37,6 +37,7 @@ import BlogMexico from "@/pages/BlogMexico";
 import BlogBrasil from "@/pages/BlogBrasil";
 import VacacionesEuropa from "@/pages/VacacionesEuropa";
 import TravelAdvisor from "@/pages/TravelAdvisor";
+import TravelAssistant from "@/pages/TravelAssistant";
 import RouteTemplate from "@/pages/RouteTemplate";
 import CityOriginTemplate from "@/pages/CityOriginTemplate";
 import BlogPost from "@/pages/BlogPost";
@@ -79,6 +80,7 @@ function Router() {
       <Route path="/blog/brasil" component={BlogBrasil} />
       <Route path="/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/travel-advisor" component={TravelAdvisor} />
+      <Route path="/travel-assistant" component={TravelAssistant} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
