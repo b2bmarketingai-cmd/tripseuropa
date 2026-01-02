@@ -232,7 +232,6 @@ export default function DestinationPage() {
                       <span className="text-3xl font-bold text-accent">${pkg.price}</span>
                       <span className="text-sm text-muted-foreground">USD</span>
                     </div>
-                    <span className="text-xs text-muted-foreground">+ ${pkg.taxes} {content[lang].taxes}</span>
                     <p className="text-xs text-muted-foreground mt-1">{content[lang].perPerson}</p>
                   </div>
                   
