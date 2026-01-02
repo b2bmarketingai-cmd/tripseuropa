@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { getDestinationBySlug } from "@/lib/destinationsData";
 import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -180,7 +182,8 @@ export default function DestinationPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
       <section 
         className="relative min-h-[500px] flex items-center justify-center pt-[100px]"
         data-testid="section-destination-hero"
@@ -700,6 +703,7 @@ export default function DestinationPage() {
         </div>
       </section>
 
+      <Footer />
       <FloatingContactButtons />
     </div>
   );
