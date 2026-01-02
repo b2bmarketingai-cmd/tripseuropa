@@ -23,7 +23,7 @@ export default function BlogPost() {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-display text-gold mb-4">Articulo No Encontrado</h1>
+          <h1 className="text-3xl font-display text-accent mb-4">Articulo No Encontrado</h1>
           <p className="text-muted-foreground mb-8">El articulo que buscas no existe o ha sido movido.</p>
           <Link href="/blog">
             <Button variant="outline">
@@ -67,7 +67,7 @@ export default function BlogPost() {
               {post.categoryLabel[language] || post.categoryLabel.es}
             </Badge>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-gold mb-4 leading-tight" data-testid="text-post-title">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-accent mb-4 leading-tight" data-testid="text-post-title">
               {title}
             </h1>
             
@@ -105,7 +105,7 @@ export default function BlogPost() {
 
             {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
               <section key={index} className="mb-10">
-                <h2 className="text-2xl font-display text-gold mb-4">{section.title}</h2>
+                <h2 className="text-2xl font-display text-accent mb-4">{section.title}</h2>
                 <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
                 
                 {section.image && (
@@ -130,7 +130,7 @@ export default function BlogPost() {
 
             {fullPost?.faqs && fullPost.faqs.length > 0 && (
               <section className="mt-12">
-                <h2 className="text-2xl font-display text-gold mb-6">Preguntas Frecuentes</h2>
+                <h2 className="text-2xl font-display text-accent mb-6">Preguntas Frecuentes</h2>
                 <div className="space-y-4">
                   {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
                     <Card key={index}>
@@ -165,9 +165,9 @@ export default function BlogPost() {
           </div>
 
           <div className="mt-12">
-            <Card className="bg-gradient-to-r from-primary/10 to-gold/10 border-gold/20">
+            <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-accent/20">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-display text-gold mb-2 text-center">Contactanos Para Mas Informacion</h3>
+                <h3 className="text-2xl font-display text-accent mb-2 text-center">Contactanos Para Mas Informacion</h3>
                 <p className="text-muted-foreground mb-6 text-center">Nuestros asesores te ayudaran a planificar tu viaje perfecto a Europa</p>
                 
                 <form className="space-y-4 max-w-md mx-auto" data-testid="form-blog-contact">
@@ -176,7 +176,7 @@ export default function BlogPost() {
                     <input 
                       type="text" 
                       placeholder="Tu nombre" 
-                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-name"
                     />
                   </div>
@@ -185,7 +185,7 @@ export default function BlogPost() {
                     <input 
                       type="email" 
                       placeholder="tu@email.com" 
-                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-email"
                     />
                   </div>
@@ -194,7 +194,7 @@ export default function BlogPost() {
                     <input 
                       type="tel" 
                       placeholder="+57 300 000 0000" 
-                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-phone"
                     />
                   </div>
@@ -203,11 +203,11 @@ export default function BlogPost() {
                     <textarea 
                       placeholder="Cuentanos sobre el viaje que tienes en mente..." 
                       rows={4}
-                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-gold resize-none"
+                      className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent resize-none"
                       data-testid="textarea-contact-message"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-primary-foreground" data-testid="button-contact-submit">
+                  <Button type="submit" className="w-full bg-accent text-primary" data-testid="button-contact-submit">
                     <Phone className="w-4 h-4 mr-2" />
                     Enviar Consulta
                   </Button>
