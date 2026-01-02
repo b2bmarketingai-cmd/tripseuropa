@@ -123,7 +123,8 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground">{c.email}</h3>
-                  <p className="text-primary">{c.emailAddress}</p>
+                  <p className="text-primary">info@tripseuropa.com</p>
+                  <p className="text-primary">agente@tripseuropa.com</p>
                 </div>
               </div>
 
