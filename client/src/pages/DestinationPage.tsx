@@ -68,15 +68,17 @@ export default function DestinationPage() {
       <div className="min-h-screen flex items-center justify-center pt-[100px]">
         <div className="text-center">
           <h1 className="text-3xl font-display font-bold text-accent mb-4">
-            {contentLang === "es" ? "Destino no encontrado" : "Destination not found"}
+            {contentLang === "es" ? "Destino no encontrado" : contentLang === "pt" ? "Destino nao encontrado" : "Destination not found"}
           </h1>
           <p className="text-muted-foreground mb-6">
             {contentLang === "es" 
               ? "El destino que buscas no existe o ha sido movido." 
+              : contentLang === "pt"
+              ? "O destino que voce procura nao existe ou foi movido."
               : "The destination you're looking for doesn't exist or has been moved."}
           </p>
           <Button onClick={() => window.location.href = "/"}>
-            {contentLang === "es" ? "Volver al inicio" : "Back to home"}
+            {contentLang === "es" ? "Volver al inicio" : contentLang === "pt" ? "Voltar ao inicio" : "Back to home"}
           </Button>
         </div>
       </div>
@@ -217,7 +219,7 @@ export default function DestinationPage() {
     
     if (!formData.name || !formData.email) {
       toast({
-        title: contentLang === "es" ? "Campos requeridos" : "Required fields",
+        title: contentLang === "es" ? "Campos requeridos" : contentLang === "pt" ? "Campos obrigatorios" : "Required fields",
         variant: "destructive"
       });
       return;
@@ -250,7 +252,7 @@ export default function DestinationPage() {
       onError: () => {
         toast({
           title: "Error",
-          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : contentLang === "pt" ? "Erro ao enviar. Tente novamente." : "Error sending. Please try again.",
           variant: "destructive"
         });
       }
@@ -317,7 +319,7 @@ export default function DestinationPage() {
               <Card key={pkg.id} className={`relative ${idx === 1 ? 'border-accent border-2 shadow-lg' : ''}`}>
                 {idx === 1 && (
                   <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-primary">
-                    {contentLang === "es" ? "Mas Popular" : "Most Popular"}
+                    {contentLang === "es" ? "Mas Popular" : contentLang === "pt" ? "Mais Popular" : "Most Popular"}
                   </Badge>
                 )}
                 <CardHeader>
@@ -587,7 +589,7 @@ export default function DestinationPage() {
                 <div className="text-center mt-6">
                   <Button variant="outline" asChild data-testid="button-view-all-travel-styles">
                     <Link href="/travel-styles">
-                      {contentLang === "es" ? "Ver todos los estilos de viaje" : "View all travel styles"}
+                      {contentLang === "es" ? "Ver todos los estilos de viaje" : contentLang === "pt" ? "Ver todos os estilos de viagem" : "View all travel styles"}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
