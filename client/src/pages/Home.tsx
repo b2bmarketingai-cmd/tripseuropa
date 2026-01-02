@@ -115,7 +115,6 @@ export default function Home() {
                 <div>
                   <h3 className="font-bold text-foreground">{c.callUs}</h3>
                   <p className="text-xl font-bold text-primary">{c.phone}</p>
-                  <p className="text-muted-foreground text-sm">{c.hours}</p>
                 </div>
               </div>
 
