@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2 } from "lucide-react";
+import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2, Bot, Sparkles } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance, SiPaypal } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ export function Footer() {
     { name: language === "es" ? "Herramientas" : "Tools", href: "/tools", icon: Wrench },
     { name: language === "es" ? "Blog" : "Blog", href: "/blog", icon: BookOpen },
     { name: language === "es" ? "Contacto" : "Contact", href: "/contact", icon: MessageCircle },
+    { name: language === "es" ? "Asistente IA" : "AI Assistant", href: "/travel-assistant", icon: Bot },
   ];
 
   const destinations = [
@@ -188,6 +189,29 @@ export function Footer() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="mb-8 flex justify-center">
+          <Link href="/travel-assistant">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6 max-w-md hover:border-accent/50 hover:bg-white/10 transition-all cursor-pointer group" data-testid="card-ai-chatbot">
+              <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
+                <Bot className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-lg font-display font-bold text-white mb-2 flex items-center gap-2">
+                AI powered chatbot
+                <Sparkles className="w-4 h-4 text-accent" />
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                {language === "es" 
+                  ? "Agrega un chatbot inteligente a tu experiencia. Tu asistente de viajes personal que recuerda la conversacion, perfecto para reservas y consultas."
+                  : "Add a context-aware chatbot to your app. Give your users a support agent that remembers the conversation, perfect for multi-step bookings or troubleshooting."}
+              </p>
+              <Button className="mt-4 bg-accent text-primary gap-2" size="sm">
+                <MessageCircle className="w-4 h-4" />
+                {language === "es" ? "Iniciar Chat" : "Start Chat"}
+              </Button>
+            </div>
+          </Link>
         </div>
 
         <div className="border-t border-white/10 pt-8 mb-6">
