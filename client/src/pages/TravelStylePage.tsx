@@ -50,7 +50,9 @@ const CONTENT = {
     idealDuration: "Duracion Recomendada",
     highlights: "Lo Que Incluye",
     whatsapp: "Contactar por WhatsApp",
-    call: "Llamar ahora"
+    call: "Llamar ahora",
+    notFound: "Estilo de viaje no encontrado",
+    backHome: "Volver al inicio"
   },
   en: {
     back: "Back",
@@ -75,15 +77,45 @@ const CONTENT = {
     idealDuration: "Recommended Duration",
     highlights: "What's Included",
     whatsapp: "Contact via WhatsApp",
-    call: "Call now"
+    call: "Call now",
+    notFound: "Travel style not found",
+    backHome: "Back to home"
+  },
+  pt: {
+    back: "Voltar",
+    packages: "Pacotes Disponiveis",
+    from: "A partir de",
+    perPerson: "por pessoa",
+    selectPackage: "Solicitar Informacoes",
+    itinerary: "Roteiro de Exemplo",
+    day: "Dia",
+    faqs: "Perguntas Frequentes",
+    contactForm: "Solicite Sua Viagem",
+    contactDescription: "Preencha o formulario e um consultor entrara em contato em ate 24 horas",
+    name: "Nome completo",
+    email: "Email",
+    phone: "Telefone",
+    travelers: "Numero de viajantes",
+    travelDate: "Data de viagem desejada",
+    message: "Comentarios adicionais",
+    submit: "Enviar Solicitacao",
+    submitting: "Enviando...",
+    bestFor: "Ideal Para",
+    idealDuration: "Duracao Recomendada",
+    highlights: "O Que Esta Incluido",
+    whatsapp: "Contatar via WhatsApp",
+    call: "Ligar agora",
+    notFound: "Estilo de viagem nao encontrado",
+    backHome: "Voltar ao inicio"
   }
 };
 
 export default function TravelStylePage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
-  const lang = language;
-  const content = CONTENT[lang];
+  const contentLang = language as "es" | "en" | "pt";
+  const dataLang = language === "pt" ? "es" : (language as "es" | "en");
+  const content = CONTENT[contentLang];
   const { toast } = useToast();
 
   const travelStyle = getTravelStyleBySlug(slug || "");
@@ -104,10 +136,10 @@ export default function TravelStylePage() {
         <Header />
         <div className="container py-20 text-center">
           <h1 className="text-3xl font-display font-bold mb-4">
-            {lang === "es" ? "Estilo de viaje no encontrado" : "Travel style not found"}
+            {content.notFound}
           </h1>
           <Link href="/">
-            <Button>{lang === "es" ? "Volver al inicio" : "Back to home"}</Button>
+            <Button>{content.backHome}</Button>
           </Link>
         </div>
         <Footer />
@@ -120,7 +152,7 @@ export default function TravelStylePage() {
     
     if (!formData.name || !formData.email) {
       toast({
-        title: lang === "es" ? "Campos requeridos" : "Required fields",
+        title: contentLang === "es" ? "Campos requeridos" : contentLang === "pt" ? "Campos obrigatorios" : "Required fields",
         variant: "destructive"
       });
       return;
@@ -133,11 +165,11 @@ export default function TravelStylePage() {
       email: formData.email,
       phone: formData.phone || null,
       originCountry: null,
-      serviceInterest: travelStyle?.name[lang] || null,
+      serviceInterest: travelStyle?.name[dataLang] || null,
       message: messageContent
     }, {
       onSuccess: () => {
-        const whatsappMessage = `Nueva solicitud - ${travelStyle?.name[lang] || "Estilo de viaje"}!
+        const whatsappMessage = `Nueva solicitud - ${travelStyle?.name[dataLang] || "Estilo de viaje"}!
 
 *Nombre:* ${formData.name}
 *Email:* ${formData.email}
@@ -148,9 +180,11 @@ export default function TravelStylePage() {
         window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         toast({
-          title: lang === "es" ? "Solicitud enviada" : "Request sent",
-          description: lang === "es" 
+          title: contentLang === "es" ? "Solicitud enviada" : contentLang === "pt" ? "Solicitacao enviada" : "Request sent",
+          description: contentLang === "es" 
             ? "Un asesor te contactara pronto" 
+            : contentLang === "pt" 
+            ? "Um consultor entrara em contato em breve"
             : "An advisor will contact you soon",
         });
         setFormData({ name: "", email: "", phone: "", travelers: "", travelDate: "", message: "" });
@@ -158,7 +192,7 @@ export default function TravelStylePage() {
       onError: () => {
         toast({
           title: "Error",
-          description: lang === "es" ? "Error al enviar. Intenta de nuevo." : "Error sending. Please try again.",
+          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : contentLang === "pt" ? "Erro ao enviar. Tente novamente." : "Error sending. Please try again.",
           variant: "destructive"
         });
       }
@@ -166,9 +200,9 @@ export default function TravelStylePage() {
   };
 
   const categoryLabels = {
-    season: { es: "Por Temporada", en: "By Season" },
-    interest: { es: "Por Interes", en: "By Interest" },
-    group: { es: "Por Grupo", en: "By Group" }
+    season: { es: "Por Temporada", en: "By Season", pt: "Por Temporada" },
+    interest: { es: "Por Interes", en: "By Interest", pt: "Por Interesse" },
+    group: { es: "Por Grupo", en: "By Group", pt: "Por Grupo" }
   };
 
   return (
@@ -182,7 +216,7 @@ export default function TravelStylePage() {
         <div className="absolute inset-0">
           <img
             src={travelStyle.heroImage}
-            alt={travelStyle.name[lang]}
+            alt={travelStyle.name[dataLang]}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
@@ -193,22 +227,22 @@ export default function TravelStylePage() {
             {content.back}
           </Link>
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30">
-            {categoryLabels[travelStyle.category][lang]}
+            {categoryLabels[travelStyle.category][contentLang]}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 text-accent" data-testid="text-title">
-            {travelStyle.name[lang]}
+            {travelStyle.name[dataLang]}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mb-6">
-            {travelStyle.description[lang]}
+            {travelStyle.description[dataLang]}
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md">
               <Users className="w-5 h-5 text-accent" />
-              <span className="text-sm">{content.bestFor}: {travelStyle.bestFor[lang]}</span>
+              <span className="text-sm">{content.bestFor}: {travelStyle.bestFor[dataLang]}</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">{content.idealDuration}: {travelStyle.idealDuration[lang]}</span>
+              <span className="text-sm">{content.idealDuration}: {travelStyle.idealDuration[dataLang]}</span>
             </div>
           </div>
         </div>
@@ -220,7 +254,7 @@ export default function TravelStylePage() {
             {content.highlights}
           </h2>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {travelStyle.highlights[lang].map((highlight, idx) => (
+            {travelStyle.highlights[dataLang].map((highlight, idx) => (
               <div key={idx} className="flex items-center gap-3 bg-card p-4 rounded-md">
                 <Check className="w-5 h-5 text-accent shrink-0" />
                 <span className="text-sm">{highlight}</span>
@@ -241,19 +275,19 @@ export default function TravelStylePage() {
                 {idx === 0 && (
                   <Badge className="absolute top-4 right-4 bg-accent text-primary z-10">
                     <Star className="w-3 h-3 mr-1" />
-                    {lang === "es" ? "Recomendado" : "Recommended"}
+                    {contentLang === "es" ? "Recomendado" : contentLang === "pt" ? "Recomendado" : "Recommended"}
                   </Badge>
                 )}
                 <div className="relative h-48">
                   <img
                     src={pkg.image}
-                    alt={pkg.name[lang]}
+                    alt={pkg.name[dataLang]}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="font-display font-bold text-lg text-white mb-1">
-                      {pkg.name[lang]}
+                      {pkg.name[dataLang]}
                     </h3>
                     <div className="flex items-center gap-2 text-white/80 text-sm">
                       <MapPin className="w-4 h-4" />
@@ -264,7 +298,7 @@ export default function TravelStylePage() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-2 text-muted-foreground mb-4">
                     <Clock className="w-4 h-4" />
-                    <span className="text-sm">{pkg.duration[lang]}</span>
+                    <span className="text-sm">{pkg.duration[dataLang]}</span>
                   </div>
                   
                   <div className="mb-4">
@@ -277,7 +311,7 @@ export default function TravelStylePage() {
                   </div>
 
                   <ul className="space-y-1 mb-4">
-                    {pkg.highlights[lang].map((h, i) => (
+                    {pkg.highlights[dataLang].map((h, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
                         <Check className="w-4 h-4 text-accent shrink-0" />
                         <span>{h}</span>
@@ -288,7 +322,7 @@ export default function TravelStylePage() {
                   <Button 
                     className="w-full bg-accent text-primary hover:bg-accent/90"
                     onClick={() => {
-                      setFormData(prev => ({ ...prev, message: `Interes en: ${pkg.name[lang]}` }));
+                      setFormData(prev => ({ ...prev, message: `Interes en: ${pkg.name[dataLang]}` }));
                       document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     data-testid={`button-package-${idx}`}
@@ -320,9 +354,9 @@ export default function TravelStylePage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-display font-bold text-accent mb-1">
-                    {content.day} {day.day}: {day.title[lang]}
+                    {content.day} {day.day}: {day.title[dataLang]}
                   </h3>
-                  <p className="text-muted-foreground">{day.description[lang]}</p>
+                  <p className="text-muted-foreground">{day.description[dataLang]}</p>
                 </div>
               </div>
             ))}
@@ -340,10 +374,10 @@ export default function TravelStylePage() {
               {travelStyle.faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`faq-${idx}`}>
                   <AccordionTrigger className="text-left hover:no-underline" data-testid={`faq-${idx}`}>
-                    <span className="font-medium">{faq.question[lang]}</span>
+                    <span className="font-medium">{faq.question[dataLang]}</span>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-muted-foreground">{faq.answer[lang]}</p>
+                    <p className="text-muted-foreground">{faq.answer[dataLang]}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -420,7 +454,7 @@ export default function TravelStylePage() {
                       <Input
                         id="travelDate"
                         type="text"
-                        placeholder={lang === "es" ? "Ej: Marzo 2026" : "Ex: March 2026"}
+                        placeholder={contentLang === "es" ? "Ej: Marzo 2026" : contentLang === "pt" ? "Ex: Marco 2026" : "Ex: March 2026"}
                         value={formData.travelDate}
                         onChange={(e) => setFormData(prev => ({ ...prev, travelDate: e.target.value }))}
                         data-testid="input-date"
@@ -482,8 +516,10 @@ export default function TravelStylePage() {
                   <CardContent className="pt-6 text-white">
                     <MessageSquare className="w-8 h-8 text-accent mb-3" />
                     <p className="text-sm">
-                      {lang === "es" 
+                      {contentLang === "es" 
                         ? "Nuestros asesores estan disponibles de lunes a viernes de 9:00 AM a 7:00 PM y sabados de 9:00 AM a 2:00 PM." 
+                        : contentLang === "pt"
+                        ? "Nossos consultores estao disponiveis de segunda a sexta das 9h as 19h e sabados das 9h as 14h."
                         : "Our advisors are available Monday to Friday from 9:00 AM to 7:00 PM and Saturdays from 9:00 AM to 2:00 PM."}
                     </p>
                   </CardContent>
