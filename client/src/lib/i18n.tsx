@@ -156,7 +156,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Form placeholders and validation
     "form.namePlaceholder": "Tu nombre",
     "form.emailPlaceholder": "tu@email.com",
-    "form.phonePlaceholder": "+57 300 123 4567",
+    "form.phonePlaceholder": "+34 611 105 448",
     "form.validation.nameMin": "El nombre debe tener al menos 2 caracteres",
     "form.validation.emailInvalid": "Ingresa un correo electrónico válido",
     "form.validation.messageMin": "El mensaje debe tener al menos 10 caracteres",

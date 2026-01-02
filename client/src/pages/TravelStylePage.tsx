@@ -418,7 +418,7 @@ export default function TravelStylePage() {
               
               <div className="md:col-span-2 space-y-4">
                 <a 
-                  href="https://wa.me/573001234567" 
+                  href="https://wa.me/34611105448" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white p-4 rounded-md transition-colors"
@@ -427,19 +427,19 @@ export default function TravelStylePage() {
                   <SiWhatsapp className="w-6 h-6" />
                   <div>
                     <p className="font-medium">{content.whatsapp}</p>
-                    <p className="text-sm text-white/80">+57 300 123 4567</p>
+                    <p className="text-sm text-white/80">+34 611 105 448</p>
                   </div>
                 </a>
                 
                 <a 
-                  href="tel:+573001234567" 
+                  href="tel:+34611105448" 
                   className="flex items-center gap-3 bg-accent hover:bg-accent/90 text-primary p-4 rounded-md transition-colors"
                   data-testid="link-phone"
                 >
                   <Phone className="w-6 h-6" />
                   <div>
                     <p className="font-medium">{content.call}</p>
-                    <p className="text-sm">+57 300 123 4567</p>
+                    <p className="text-sm">+34 611 105 448</p>
                   </div>
                 </a>
                 

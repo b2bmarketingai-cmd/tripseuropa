@@ -193,7 +193,7 @@ export default function BlogPost() {
                     <label className="block text-sm font-medium text-foreground mb-1">Telefono / WhatsApp</label>
                     <input 
                       type="tel" 
-                      placeholder="+57 300 000 0000" 
+                      placeholder="+34 611 105 448" 
                       className="w-full px-4 py-2.5 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent"
                       data-testid="input-contact-phone"
                     />

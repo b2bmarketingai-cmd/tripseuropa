@@ -320,12 +320,12 @@ export function Header() {
 
             <div className="hidden lg:flex items-center gap-4">
               <a 
-                href="tel:+573001234567" 
+                href="tel:+34611105448" 
                 className="flex items-center gap-2 text-gray-600 hover:text-primary text-sm transition-colors"
                 data-testid="link-phone-reservar"
               >
                 <span className="text-gray-500">{language === "es" ? "Reservar:" : "Book:"}</span>
-                <span className="font-semibold text-primary">+57 300 123 4567</span>
+                <span className="font-semibold text-primary">+34 611 105 448</span>
               </a>
 
               <div className="w-px h-6 bg-gray-200" />
@@ -353,7 +353,7 @@ export function Header() {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
-                    <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
+                    <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
                       <SiWhatsapp className="w-5 h-5 text-green-600" />
                       <span>WhatsApp</span>
                     </a>
@@ -449,11 +449,11 @@ export function Header() {
           <div className="lg:hidden bg-white border-t border-gray-100 animate-in slide-in-from-top-2 duration-200 shadow-lg">
             <div className="container px-4 py-6 space-y-4">
               <a 
-                href="tel:+573001234567" 
+                href="tel:+34611105448" 
                 className="flex items-center gap-2 text-gray-700 py-2"
               >
                 <Phone className="w-5 h-5 text-accent" />
-                <span>{language === "es" ? "Reservar:" : "Book:"} +57 300 123 4567</span>
+                <span>{language === "es" ? "Reservar:" : "Book:"} +34 611 105 448</span>
               </a>
 
               <div className="h-px bg-gray-100" />
@@ -571,7 +571,7 @@ export function Header() {
                     <HelpCircle className="w-4 h-4" />
                     {language === "es" ? "Centro de Ayuda" : "Help Center"}
                   </Link>
-                  <a href="https://wa.me/573001234567" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
+                  <a href="https://wa.me/34611105448" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
                     <SiWhatsapp className="w-4 h-4 text-green-500" />
                     WhatsApp
                   </a>

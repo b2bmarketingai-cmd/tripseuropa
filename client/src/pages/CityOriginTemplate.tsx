@@ -558,7 +558,7 @@ export default function CityOriginTemplate() {
               </div>
             </div>
 
-            <a href="https://wa.me/34900123456" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-accent text-primary font-bold hover:bg-accent/90 text-lg px-8">
                 {t.cta}
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -805,7 +805,7 @@ export default function CityOriginTemplate() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/34900123456" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-accent text-primary font-bold hover:bg-accent/90">
                 {t.cta}
                 <ArrowRight className="ml-2 w-5 h-5" />

@@ -170,7 +170,7 @@ export function HeroCarousel() {
           </div>
 
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <a href="https://wa.me/34900123456" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-accent text-primary font-bold hover:bg-accent/90 px-8 text-lg"

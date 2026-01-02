@@ -159,7 +159,7 @@ export default function Privacy() {
                 </p>
                 <div className="space-y-2 text-white/80">
                   <p>Email: privacy@tripseuropa.com</p>
-                  <p>WhatsApp: +57 300 123 4567</p>
+                  <p>WhatsApp: +34 611 105 448</p>
                 </div>
               </CardContent>
             </Card>

@@ -65,7 +65,7 @@ export function ContactSupportModal({ trigger }: ContactSupportModalProps) {
     {
       icon: SiWhatsapp,
       label: c.whatsapp,
-      href: "https://wa.me/34900123456",
+      href: "https://wa.me/34611105448",
       external: true,
     },
     {

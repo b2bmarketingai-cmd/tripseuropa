@@ -185,7 +185,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/60">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
-                <a href="tel:+573001234567" className="hover:text-accent">+57 300 123 4567</a>
+                <a href="tel:+34611105448" className="hover:text-accent">+34 611 105 448</a>
               </li>
               <li className="flex items-center gap-2 text-white/60">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
@@ -200,7 +200,7 @@ export function Footer() {
               <a href="https://instagram.com/tripseuropa" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="WhatsApp">
                 <SiWhatsapp className="w-4 h-4" />
               </a>
               <a href="https://youtube.com/@tripseuropa" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="YouTube">
