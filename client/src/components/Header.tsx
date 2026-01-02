@@ -139,14 +139,14 @@ const TRAVEL_STYLE_MENU = {
 
 const OFFERS_MENU = {
   es: [
+    { name: "Ofertas de Ultima Hora", href: "/ofertas-ultima-hora" },
     { name: "Ofertas de Invierno", href: "/packages?offer=invierno" },
-    { name: "Ofertas de Ultima Hora", href: "/packages?offer=ultimahora" },
     { name: "Paquetes Destacados", href: "/packages?offer=destacados" },
     { name: "Programa TripsEuropa GO", href: "/rewards" },
   ],
   en: [
+    { name: "Last Minute Deals", href: "/last-minute-offers" },
     { name: "Winter Deals", href: "/packages?offer=winter" },
-    { name: "Last Minute Deals", href: "/packages?offer=lastminute" },
     { name: "Featured Packages", href: "/packages?offer=featured" },
     { name: "TripsEuropa GO Program", href: "/rewards" },
   ]

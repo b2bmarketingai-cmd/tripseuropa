@@ -56,6 +56,7 @@ import BlogPost from "@/pages/BlogPost";
 import DestinationPage from "@/pages/DestinationPage";
 import Rewards from "@/pages/Rewards";
 import TravelStylePage from "@/pages/TravelStylePage";
+import LastMinuteOffers from "@/pages/LastMinuteOffers";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -99,6 +100,8 @@ function Router() {
       <Route path="/travel-assistant" component={TravelAssistant} />
       <Route path="/rewards" component={Rewards} />
       <Route path="/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/ofertas-ultima-hora" component={LastMinuteOffers} />
+      <Route path="/last-minute-offers" component={LastMinuteOffers} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
