@@ -59,6 +59,11 @@ import TravelStylePage from "@/pages/TravelStylePage";
 import LastMinuteOffers from "@/pages/LastMinuteOffers";
 import ESim from "@/pages/ESim";
 import VisaRequirements from "@/pages/VisaRequirements";
+import Flights from "@/pages/services/Flights";
+import Hotels from "@/pages/services/Hotels";
+import PackagesService from "@/pages/services/Packages";
+import Tours from "@/pages/services/Tours";
+import Insurance from "@/pages/services/Insurance";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -104,6 +109,15 @@ function Router() {
       <Route path="/travel-style/:slug" component={TravelStylePage} />
       <Route path="/ofertas-ultima-hora" component={LastMinuteOffers} />
       <Route path="/last-minute-offers" component={LastMinuteOffers} />
+      <Route path="/services/vuelos" component={Flights} />
+      <Route path="/services/flights" component={Flights} />
+      <Route path="/services/hoteles" component={Hotels} />
+      <Route path="/services/hotels" component={Hotels} />
+      <Route path="/services/paquetes" component={PackagesService} />
+      <Route path="/services/packages" component={PackagesService} />
+      <Route path="/services/tours" component={Tours} />
+      <Route path="/services/seguros" component={Insurance} />
+      <Route path="/services/insurance" component={Insurance} />
       <Route path="/services/esim" component={ESim} />
       <Route path="/esim" component={ESim} />
       <Route path="/requisitos-visa" component={VisaRequirements} />
