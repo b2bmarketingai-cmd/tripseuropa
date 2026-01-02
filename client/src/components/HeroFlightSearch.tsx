@@ -9,6 +9,7 @@ import { es, enUS, ptBR } from "date-fns/locale";
 import { Calendar as CalendarIcon, Plane, ArrowRight, ArrowLeft, Users, Minus, Plus, User, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+import { ShareTrip } from "./ShareTrip";
 
 const AIRPORTS = [
   // Latin America - Colombia
@@ -777,7 +778,19 @@ Can you help me with a quote?`;
           <div className="p-6">
             <div className="max-w-md mx-auto space-y-6">
               <div className="bg-accent/10 rounded-lg p-4 mb-4">
-                <h4 className="font-semibold text-sm text-primary mb-2">{c.tripSummary}</h4>
+                <div className="flex items-start justify-between gap-2">
+                  <h4 className="font-semibold text-sm text-primary mb-2">{c.tripSummary}</h4>
+                  <ShareTrip
+                    origin={origin}
+                    destination={destination}
+                    departureDate={departureDate ? format(departureDate, "d MMM yyyy", { locale: dateLocale }) : undefined}
+                    returnDate={returnDate ? format(returnDate, "d MMM yyyy", { locale: dateLocale }) : undefined}
+                    passengers={passengers}
+                    tripType={tripType}
+                    variant="icon"
+                    className="h-8 w-8"
+                  />
+                </div>
                 <div className="text-sm space-y-1 text-muted-foreground">
                   <p><strong>{c.origin}:</strong> {origin}</p>
                   <p><strong>{c.destination}:</strong> {destination}</p>
