@@ -68,7 +68,7 @@ export function Favorites() {
   const content = {
     es: {
       badge: "Favoritos",
-      title: "Los imperdibles del mes",
+      title: "Los Imperdibles del Mes",
       from: "Desde",
       currency: "USD",
       taxes: "+ IMP",
