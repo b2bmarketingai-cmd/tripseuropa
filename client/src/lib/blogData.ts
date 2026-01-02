@@ -98,7 +98,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Playa del Postiguet",
         content: "Ubicada en el corazon de Alicante, la Playa del Postiguet es la mas emblematica de la ciudad. Con 900 metros de arena dorada y aguas tranquilas, es perfecta para familias. El paseo maritimo ofrece restaurantes, heladerias y vistas al Castillo de Santa Barbara.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1564221710-8f8c82e456a7?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Playa de San Juan",
@@ -140,7 +140,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ibiza: Mas Alla de la Fiesta",
         content: "Aunque Ibiza es mundialmente famosa por su vida nocturna, la isla ofrece mucho mas. Sus calas de aguas turquesas, la ciudad antigua de Dalt Vila (Patrimonio de la Humanidad), los mercadillos hippies y la gastronomia local hacen de Ibiza un destino completo.",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1593352216923-39540b0e7e6e?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dalt Vila: El Corazon Historico",
@@ -168,7 +168,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "emigrar-espana-guia",
     slug: "emigrar-espana-guia",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Emigrar a Espana: Guia Completa para Latinoamericanos", en: "Emigrate to Spain: Complete Guide for Latin Americans" },
     excerpt: { es: "Todo lo que necesitas saber para emigrar a Espana desde Latinoamerica: visados, trabajo, vivienda, sanidad y proceso de regularizacion.", en: "Everything you need to know to emigrate to Spain from Latin America: visas, work, housing, healthcare and regularization process." },
     category: "planificacion",
@@ -182,7 +182,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Emigrar a Espana",
         content: "Espana se ha convertido en uno de los destinos preferidos para latinoamericanos por el idioma compartido, la cultura cercana, el sistema de salud publico, la calidad de vida y las oportunidades de obtener la ciudadania en solo 2 anos (para ciudadanos iberoamericanos). Ademas, ofrece acceso a toda la Union Europea.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visados para Espana",
@@ -230,7 +230,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Espana Vaciada Busca Nuevos Habitantes",
         content: "Muchos pueblos espanoles ofrecen incentivos para atraer nuevos residentes: viviendas a precios muy bajos o gratuitas, ayudas para emprendedores, trabajo garantizado en sectores como agricultura, ganaderia o cuidado de mayores. Es una oportunidad unica para quienes buscan tranquilidad y naturaleza.",
-        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sectores con Demanda en Zonas Rurales",
@@ -272,7 +272,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es la Carta de Invitacion",
         content: "La carta de invitacion es un documento oficial que un residente en Espana tramita para invitar a un extranjero a hospedarse en su domicilio. Es uno de los documentos que pueden solicitar en control migratorio, aunque no es obligatorio si presentas reserva de hotel.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando se Necesita",
@@ -302,7 +302,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "madrid-con-poco-dinero",
     slug: "madrid-con-poco-dinero",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Madrid con Poco Dinero: Guia de Viaje Economico", en: "Madrid on a Budget: Budget Travel Guide" },
     excerpt: { es: "Descubre como disfrutar de Madrid sin gastar mucho: museos gratis, tapas economicas, transporte asequible y alojamiento barato.", en: "Discover how to enjoy Madrid without spending much: free museums, cheap tapas, affordable transport and budget accommodation." },
     category: "dinero",
@@ -316,7 +316,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Museos Gratis en Madrid",
         content: "Madrid ofrece acceso gratuito a algunos de los mejores museos del mundo en horarios especificos. El Museo del Prado es gratis de lunes a sabado de 18:00 a 20:00 y domingos de 17:00 a 19:00. El Reina Sofia es gratis lunes, miercoles a sabado de 19:00 a 21:00.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop",
         list: ["Museo del Prado: Gratis tardes y domingos", "Reina Sofia: Gratis varias tardes", "Museo Thyssen: Gratis lunes tarde", "Museo de America: Gratis domingos", "Templo de Debod: Siempre gratis"]
       },
       {
@@ -359,7 +359,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Oportunidades Laborales Accesibles",
         content: "Espana ofrece multiples oportunidades laborales para personas sin titulo universitario. La clave esta en la experiencia, las habilidades practicas y la disposicion para aprender. Muchos sectores tienen alta demanda de trabajadores y ofrecen formacion en el puesto.",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Hosteleria y Turismo",
@@ -406,7 +406,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Trabajar en Dinamarca",
         content: "Dinamarca consistentemente se clasifica entre los paises mas felices del mundo. Ofrece excelente equilibrio trabajo-vida, altos salarios, sanidad gratuita y educacion de calidad. Aunque el costo de vida es alto, los beneficios sociales lo compensan.",
-        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1586282391129-76a6df230234?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visa de Trabajo",
@@ -453,7 +453,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Europa del Este: Precios de Otra Era",
         content: "Paises como Bulgaria, Rumania, Albania y Macedonia del Norte ofrecen la experiencia europea a una fraccion del costo occidental. Un almuerzo completo puede costar 5-8 euros, y el alojamiento es significativamente mas barato que en Europa Occidental.",
-        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop",
         list: ["Albania: Riviera albanesa espectacular y barata", "Bulgaria: Sofia y la costa del Mar Negro", "Rumania: Castillos y los Carpatos", "Macedonia del Norte: Lago Ohrid, patrimonio UNESCO"]
       },
       {
@@ -481,7 +481,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vivir-espana-vs-eeuu",
     slug: "vivir-espana-vs-eeuu",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Vivir en Espana vs Estados Unidos: Comparativa Real", en: "Living in Spain vs USA: Real Comparison" },
     excerpt: { es: "Analisis detallado comparando calidad de vida, costos, sanidad, trabajo y cultura entre Espana y Estados Unidos desde la perspectiva latinoamericana.", en: "Detailed analysis comparing quality of life, costs, healthcare, work and culture between Spain and the USA from a Latin American perspective." },
     category: "planificacion",
@@ -495,7 +495,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Calidad de Vida General",
         content: "Espana consistentemente se clasifica alto en indices de calidad de vida. Los espanoles priorizan el tiempo libre, las relaciones sociales y disfrutar de la vida sobre la acumulacion de riqueza. Estados Unidos ofrece mas oportunidades economicas pero a costa de menos tiempo libre y mayor estres laboral.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sistema de Salud",
@@ -531,7 +531,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "guia-viaje-espana",
     slug: "guia-viaje-espana",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423571?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa para Viajar a Espana desde Latinoamerica", en: "Complete Guide to Travel to Spain from Latin America" },
     excerpt: { es: "Todo lo que necesitas saber para planificar tu viaje a Espana: vuelos, documentos, alojamiento, presupuesto y consejos practicos.", en: "Everything you need to know to plan your trip to Spain: flights, documents, accommodation, budget and practical tips." },
     category: "planificacion",
@@ -545,7 +545,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Requisitos de Entrada",
         content: "Los ciudadanos de la mayoria de paises latinoamericanos pueden entrar a Espana (y el espacio Schengen) sin visa para estancias turisticas de hasta 90 dias. Necesitas: pasaporte con al menos 3 meses de vigencia, boleto de regreso, seguro de viaje, comprobante de alojamiento y solvencia economica (113 euros por dia).",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentacion Necesaria",
@@ -578,7 +578,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "nueva-ley-extranjeria-espana",
     slug: "nueva-ley-extranjeria-espana",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556388275-bb5585725aca?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Nueva Ley de Extranjeria en Espana: Cambios Clave", en: "New Immigration Law in Spain: Key Changes" },
     excerpt: { es: "La nueva ley de extranjeria promete revolucionar la inmigracion en Espana con regularizacion masiva y nuevas vias para trabajadores.", en: "The new immigration law promises to revolutionize immigration in Spain with mass regularization and new pathways for workers." },
     category: "planificacion",
@@ -592,7 +592,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Contexto de la Reforma",
         content: "Espana enfrenta escasez de mano de obra en multiples sectores mientras tiene medio millon de inmigrantes en situacion irregular. La nueva ley busca regularizar a estos trabajadores y facilitar la llegada de talento extranjero para cubrir las vacantes en el mercado laboral.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534156607-7d1e2c1ce4cf?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Regularizacion Masiva",
@@ -638,7 +638,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ventajas de la Ciudadania Europea",
         content: "Un pasaporte de la UE te permite vivir, trabajar y estudiar en cualquiera de los 27 paises miembros sin restricciones. Acceso a sistemas de salud y educacion de primer nivel, proteccion consular en todo el mundo, y viajes sin visa a mas de 170 paises.",
-        image: "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Espana: El Camino Mas Rapido",
@@ -684,7 +684,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el Turismo Cultural",
         content: "El turismo cultural va mas alla del entretenimiento: busca promover el conocimiento y la apreciacion de las diferentes expresiones culturales de cada destino. Incluye visitar sitios historicos, museos, festivales, eventos culturales y participar en actividades que te sumerjan en la cultura local.",
-        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Beneficios para los Viajeros",
@@ -726,7 +726,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Estudiar en Alemania",
         content: "Alemania ofrece educacion universitaria de alta calidad, muchas veces gratuita incluso para extranjeros. Las universidades alemanas son reconocidas mundialmente, especialmente en ingenieria, ciencias y tecnologia. Ademas, el mercado laboral aleman ofrece excelentes oportunidades tras graduarse.",
-        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Pasos para Obtener la Visa",
@@ -759,7 +759,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trabajar-espana-opciones",
     slug: "trabajar-espana-opciones",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Trabajar en Espana: Mejores Opciones para Extranjeros", en: "Working in Spain: Best Options for Foreigners" },
     excerpt: { es: "Descubre los sectores con mayor demanda laboral en Espana y las mejores oportunidades para trabajadores extranjeros.", en: "Discover the sectors with highest labor demand in Spain and the best opportunities for foreign workers." },
     category: "planificacion",
@@ -773,7 +773,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Mercado Laboral Espanol",
         content: "Espana ofrece diversas oportunidades laborales para extranjeros. Aunque el desempleo es mas alto que en otros paises europeos, hay sectores con gran demanda de trabajadores. El conocimiento del espanol es una ventaja significativa para latinoamericanos.",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555529771-835f59fc5efe?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sector Turistico",
@@ -820,7 +820,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Como Llegar a Londres",
         content: "Londres es muy accesible con seis aeropuertos. Heathrow es el principal para vuelos internacionales. El metro (Tube) conecta la mayoria de aeropuertos con el centro. El Heathrow Express llega a Paddington en 15 minutos. Gatwick Express conecta con Victoria Station.",
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Barrios para Explorar",
@@ -858,7 +858,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "seguro-viaje-beneficios",
     slug: "seguro-viaje-beneficios",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=1200&auto=format&fit=crop",
     title: { es: "10 Beneficios del Seguro Internacional de Viaje", en: "10 Benefits of International Travel Insurance" },
     excerpt: { es: "Descubre por que el seguro de viaje es indispensable: cobertura medica, repatriacion, equipaje y mucho mas para viajar tranquilo.", en: "Discover why travel insurance is essential: medical coverage, repatriation, luggage and much more to travel with peace of mind." },
     category: "consejos",
@@ -872,7 +872,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que es Esencial el Seguro de Viaje",
         content: "Un seguro internacional de viaje es una herramienta indispensable para protegerte ante cualquier imprevisto. No es solo un requisito para entrar al espacio Schengen, sino una inversion en tu tranquilidad y seguridad durante el viaje.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Los 10 Beneficios Principales",
@@ -991,7 +991,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "mejor-agencia-viajes-vacaciones",
     title: { es: "La Mejor Agencia de Viajes Para Reservar Tus Vacaciones a Europa", en: "The Best Travel Agency to Book Your European Vacation" },
     excerpt: { es: "Descubre por que una agencia de viajes especializada puede transformar tu experiencia de viaje a Europa, ofreciendote seguridad, comodidad y experiencias unicas.", en: "Discover why a specialized travel agency can transform your European travel experience, offering you security, comfort and unique experiences." },
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2025-01-01",
@@ -1095,7 +1095,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Aeropuerto de Estambul (IST)",
         content: "El nuevo Aeropuerto de Estambul es uno de los mas modernos y grandes del mundo. Cuenta con excelentes conexiones al centro de la ciudad, areas de descanso, y servicios de primera clase. Las conexiones dentro del aeropuerto son eficientes incluso con tiempos de escala cortos.",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos de Entrada",
@@ -1118,7 +1118,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "descubre-mejores-destinos-espana",
     title: { es: "Descubre Los 3 Mejores Destinos de Espana Para Latinoamericanos", en: "Discover the 3 Best Destinations in Spain for Latin Americans" },
     excerpt: { es: "Explora los destinos espanoles que mas enamoran a los viajeros latinoamericanos. Historia, cultura, gastronomia y experiencias inolvidables en la madre patria.", en: "Explore the Spanish destinations that Latin American travelers love most. History, culture, gastronomy and unforgettable experiences." },
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-29",
@@ -1130,12 +1130,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Madrid: El Corazon de Espana",
         content: "La capital espanola combina historia, arte de primer nivel y una vida nocturna vibrante. El Museo del Prado, el Palacio Real, el Parque del Retiro y los barrios tradicionales como La Latina y Malasana ofrecen experiencias para todos los gustos. La conexion cultural con Latinoamerica es palpable en cada rincon.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Barcelona: Modernismo y Mediterraneo",
         content: "La capital catalana seduce con la arquitectura de Gaudi, playas urbanas, y una escena gastronomica de vanguardia. La Sagrada Familia, el Parque Guell, Las Ramblas y el barrio Gotico son imperdibles. La combinacion de mar, montana y cultura la hacen irresistible.",
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sevilla: El Alma de Andalucia",
@@ -1180,7 +1180,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "3. Parque del Retiro",
         content: "El pulmon verde de Madrid y antiguo jardin real. El Estanque Grande con sus barcas, el Palacio de Cristal, y la Rosaleda son sus joyas. Perfecto para pasear, hacer picnic o simplemente observar la vida madrilena. No te pierdas el Bosque del Recuerdo.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "4. Puerta del Sol y Plaza Mayor",
@@ -1278,7 +1278,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Servicios a Bordo",
         content: "Laser Airlines ofrece diferentes clases de servicio con opciones de equipaje, comidas a bordo y seleccion de asientos. Su programa de viajero frecuente permite acumular beneficios para pasajeros regulares.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Volar con Laser",
@@ -1308,7 +1308,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Aeropuerto Internacional Camilo Daza",
         content: "El aeropuerto de Cucuta (CUC) es la puerta de entrada a esta importante ciudad del nororiente colombiano. Ubicado a 10 minutos del centro, recibe vuelos domesticos principalmente y algunas rutas internacionales.",
-        image: "https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Conexiones Aereas",
@@ -1362,7 +1362,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Venecia, Italia",
         content: "La ciudad flotante es sinonimo de romance. Paseos en gondola por canales serenos, plazas historicas, y la belleza decadente de palacios reflejados en el agua. San Marco al atardecer y perderse en callejuelas es pura magia.",
-        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Planificar",
@@ -1394,7 +1394,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ciudad del Vaticano",
         content: "El corazon del catolicismo mundial. La Basilica de San Pedro, la Capilla Sixtina con los frescos de Miguel Angel, y la posibilidad de asistir a audiencias papales hacen del Vaticano un destino imperdible para cualquier peregrino. Los Museos Vaticanos albergan tesoros artisticos de valor incalculable.",
-        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Santiago de Compostela, Espana",
@@ -1521,7 +1521,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "consulado-espana-tramites",
     title: { es: "Consulado de Espana: Guia de Tramites Para Latinoamericanos", en: "Spanish Consulate: Procedures Guide for Latin Americans" },
     excerpt: { es: "Todo sobre los servicios consulares espanoles en Latinoamerica. Visas, documentacion, citas y tramites esenciales para tu viaje o migracion a Espana.", en: "Everything about Spanish consular services in Latin America. Visas, documentation, appointments and essential procedures for your trip or migration to Spain." },
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-20",
@@ -1633,7 +1633,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Como Funciona el Proceso",
         content: "La solicitud sera completamente online. Deberas proporcionar datos personales, informacion del pasaporte, historial de viajes previos, y responder preguntas de seguridad. La autorizacion sera procesada en minutos en la mayoria de casos, aunque algunos requeriran revision adicional.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Validez y Costo",
@@ -1656,7 +1656,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "requisitos-entrar-espana",
     title: { es: "Requisitos Para Entrar a Espana Desde Latinoamerica", en: "Requirements to Enter Spain from Latin America" },
     excerpt: { es: "Guia actualizada de todos los requisitos de entrada a Espana para ciudadanos latinoamericanos. Documentacion, seguro, dinero y controles migratorios.", en: "Updated guide to all entry requirements to Spain for Latin American citizens. Documentation, insurance, money and immigration controls." },
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-17",
@@ -1701,7 +1701,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "nie-espana-como-conseguirlo",
     title: { es: "Que es el NIE en Espana y Como Conseguirlo", en: "What is NIE in Spain and How to Get It" },
     excerpt: { es: "El Numero de Identidad de Extranjero es esencial para vivir en Espana. Aprende que es, cuando lo necesitas, y el proceso paso a paso para obtenerlo.", en: "The Foreigner Identity Number is essential to live in Spain. Learn what it is, when you need it, and the step-by-step process to obtain it." },
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-16",
@@ -1713,7 +1713,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el NIE",
         content: "El NIE (Numero de Identidad de Extranjero) es un numero de identificacion fiscal asignado a extranjeros en Espana. Es necesario para casi cualquier tramite oficial: abrir cuenta bancaria, firmar contratos, comprar propiedad, trabajar legalmente, y pagar impuestos.",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523287562758-66c7fc58967f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando Necesitas un NIE",
@@ -1723,7 +1723,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Tipos de NIE",
         content: "Hay dos formas principales de obtener NIE: NIE blanco (solo el numero, para tramites puntuales sin residencia) y NIE verde o TIE (Tarjeta de Identidad de Extranjero, para residentes). El proceso y requisitos difieren segun el tipo.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544016768-982d1554f0b8?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Proceso de Solicitud",
@@ -1813,7 +1813,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Cuando Necesitas Pasaporte Vigente",
         content: "Necesitaras pasaporte vigente para: viajar internacionalmente, completar el proceso de juramento de nacionalidad espanola (aunque hay excepciones), tramites que requieren identificacion oficial vigente.",
-        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4c?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Opciones Si Tu Pasaporte Esta Vencido",
@@ -1893,7 +1893,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Servicios Que Ofrecen Las Embajadas",
         content: "Las embajadas y consulados latinoamericanos en Espana ofrecen servicios esenciales para sus ciudadanos: renovacion de pasaportes, legalizacion de documentos, asistencia en emergencias, registro consular, y apoyo en situaciones legales. Son tu conexion oficial con tu pais de origen.",
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551527916-7a00f08ced71?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Embajadas en Madrid",
@@ -1903,7 +1903,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Consulados en Otras Ciudades",
         content: "Ademas de Madrid, varias ciudades espanolas tienen consulados latinoamericanos. Barcelona, Sevilla, Valencia y Bilbao suelen tener representacion de los paises con mayor comunidad de emigrantes. Verifica en la web de tu embajada cual consulado te corresponde.",
-        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a65?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556740758-90de374c12ae?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Solicitar Servicios",
@@ -1948,7 +1948,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Requisitos Por Pais de Origen",
         content: "Cada pais tiene sus propias reglas. En general, la carta debe ser notarizada en tu pais de origen. Algunos paises requieren apostilla para validez internacional. Verifica los requisitos especificos de tu pais y del pais de destino.",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5fg?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Menores Viajando Solos",
@@ -1993,7 +1993,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Proceso de Admision",
         content: "Para pregrado, necesitas homologar tu titulo de secundaria. Para posgrado, el proceso varia por universidad. Generalmente incluye: solicitud online, documentos academicos, carta de motivacion, y en algunos casos, entrevista o examen de admision.",
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1548013146-72479768badh?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Visa de Estudiante",
@@ -2032,7 +2032,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Quien Necesita Visa Para Espana",
         content: "Ciudadanos de la mayoria de paises latinoamericanos (Colombia, Mexico, Argentina, Chile, Brasil, Peru, etc.) NO necesitan visa para estancias turisticas de hasta 90 dias. Sin embargo, para estancias mas largas o propositos especificos (trabajo, estudio, residencia), SI se requiere visado.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b6?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visados Espanoles",
@@ -2042,7 +2042,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Proceso de Solicitud",
         content: "Todas las visas se solicitan en el Consulado de Espana de tu pais de residencia. El proceso general incluye: cita previa online, formulario de solicitud completo, documentacion especifica segun tipo de visa, pago de tasas, y entrevista consular.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b7?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentacion Comun Para Visas",
@@ -2079,7 +2079,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el Jet Lag",
         content: "El jet lag ocurre cuando tu reloj biologico interno no coincide con el horario local de tu destino. Viajar hacia el este (como de Latinoamerica a Europa) suele ser mas dificil porque 'pierdes' horas. Los sintomas incluyen fatiga, insomnio, dificultad de concentracion, y malestar digestivo.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0c?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Preparacion Antes del Viaje",
@@ -2089,7 +2089,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Durante el Vuelo",
         content: "El vuelo es clave para tu adaptacion. Ajusta tu reloj al horario de destino al abordar. Duerme segun el horario de llegada (si llegas de manana, intenta dormir en el avion). Hidrátate mucho y evita alcohol y cafeina en exceso. Muevete periodicamente por el avion.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a66?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Al Llegar a Europa",
@@ -2124,7 +2124,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Llegada y Transporte",
         content: "El Aeropuerto Madrid-Barajas conecta con el centro via metro (Linea 8), autobus (Express Aeropuerto 24h), taxi y apps de transporte. El metro de Madrid es extenso, eficiente y facil de usar. Compra una tarjeta de transporte recargable para ahorrar. La ciudad es muy caminable en el centro.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e048?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Barrios Imprescindibles",
@@ -2161,7 +2161,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "seguro-viaje-elegir-adecuado",
     title: { es: "Como Elegir el Seguro de Viaje Adecuado Para Europa", en: "How to Choose the Right Travel Insurance for Europe" },
     excerpt: { es: "Guia completa para seleccionar el seguro de viaje ideal. Coberturas esenciales, comparativas y consejos para viajeros latinoamericanos a Europa.", en: "Complete guide to selecting the ideal travel insurance. Essential coverages, comparisons and tips for Latin American travelers to Europe." },
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551375703-93c1a30f5a46?q=80&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-06",
@@ -2183,7 +2183,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Coberturas Adicionales Utiles",
         content: "Dependiendo de tu viaje, considera: cobertura COVID-19 y pandemias, deportes de aventura si planeas actividades de riesgo, demoras de vuelos y conexiones perdidas, robo de documentos, asistencia legal en el extranjero.",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb6?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Comparar Seguros",
@@ -2251,7 +2251,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-baratos-ofertas",
     title: { es: "Vuelos Baratos: Como Encontrar las Mejores Ofertas", en: "Cheap Flights: How to Find the Best Deals" },
     excerpt: { es: "Estrategias probadas para encontrar vuelos economicos a Europa. Desde alertas de precio hasta fechas flexibles y aerolineas low cost.", en: "Proven strategies to find cheap flights to Europe. From price alerts to flexible dates and low-cost airlines." },
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3c?q=80&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-04",
@@ -2263,7 +2263,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Flexibilidad es Clave",
         content: "La flexibilidad en fechas y destinos es el secreto mejor guardado para vuelos baratos. Viajar entre semana (martes, miercoles) suele ser mas economico. Evitar temporadas altas y fechas cercanas a feriados marca una gran diferencia en precios.",
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7201?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Herramientas de Busqueda",
@@ -2296,7 +2296,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-baratos-madrid",
     title: { es: "Vuelos Baratos a Madrid Desde Latinoamerica", en: "Cheap Flights to Madrid from Latin America" },
     excerpt: { es: "Guia especifica para encontrar vuelos economicos a Madrid. Mejores epocas, aerolineas, y estrategias para ahorrar en tu viaje a la capital espanola.", en: "Specific guide to finding cheap flights to Madrid. Best times, airlines, and strategies to save on your trip to the Spanish capital." },
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583309219338-a582f1f9ca6c?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-03",
@@ -2388,7 +2388,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "los-roques-destino-paradisiaco",
     title: { es: "Los Roques: Razones Para Visitar Este Destino Paradisiaco", en: "Los Roques: Reasons to Visit This Paradise Destination" },
     excerpt: { es: "Descubre el archipiélago de Los Roques, un parque nacional caribeno con aguas cristalinas, cayos virgenes y una de las mejores experiencias de playa del mundo.", en: "Discover the Los Roques archipelago, a Caribbean national park with crystal clear waters, virgin cays and one of the best beach experiences in the world." },
-    image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea985?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-01",
@@ -2433,7 +2433,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "distancia-latinoamerica-espana",
     title: { es: "Distancia Entre Latinoamerica y Espana: Tiempos de Vuelo Por Ciudad", en: "Distance Between Latin America and Spain: Flight Times by City" },
     excerpt: { es: "Informacion practica sobre la distancia y tiempos de vuelo desde principales ciudades latinoamericanas a Espana. Planifica tu viaje con datos reales.", en: "Practical information about the distance and flight times from major Latin American cities to Spain. Plan your trip with real data." },
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8801?q=80&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-11-30",
@@ -2478,7 +2478,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "resorts-isla-margarita",
     title: { es: "Resorts en Isla de Margarita: Experiencias de Lujo en el Caribe", en: "Resorts in Margarita Island: Luxury Experiences in the Caribbean" },
     excerpt: { es: "Descubre los mejores resorts de Isla de Margarita. Desde all-inclusive hasta boutique hotels, opciones para unas vacaciones caribenas memorables.", en: "Discover the best resorts on Margarita Island. From all-inclusive to boutique hotels, options for memorable Caribbean vacations." },
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1566287935920-6074884b6e6f?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-11-29",
@@ -2490,7 +2490,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Isla de Margarita: Perla del Caribe",
         content: "Isla de Margarita es el destino de playa mas famoso de Venezuela. Con mas de 50 playas, clima tropical todo el ano, zona franca para compras, y una combinacion de resorts de lujo y pueblos pesqueros autenticos, ofrece una experiencia caribena completa.",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551727028-da30e7f87f1g?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Alojamiento Disponibles",
@@ -2568,7 +2568,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-viajar-espana-colombia",
     slug: "requisitos-viajar-espana-desde-colombia",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e3?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Requisitos Para Viajar A Espana Desde Colombia", en: "Requirements To Travel To Spain From Colombia" },
     excerpt: { es: "Viajar a Espana desde Colombia es una experiencia emocionante. Conoce todos los requisitos esenciales: pasaporte vigente, documentacion, solvencia economica, alojamiento y seguro de viaje para pasar los controles migratorios sin contratiempos.", en: "Traveling to Spain from Colombia is an exciting experience. Learn all the essential requirements: valid passport, documentation, financial solvency, accommodation and travel insurance to pass migration controls smoothly." },
     category: "migracion",
@@ -2582,13 +2582,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentos Esenciales Para Tu Viaje",
         content: "Antes de tu viaje a Espana, es fundamental tener toda la documentacion en orden. Estos son los documentos que necesitas preparar con anticipacion para garantizar un viaje sin contratiempos.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb88?q=80&w=1200&auto=format&fit=crop",
         list: ["Pasaporte vigente: Debe contar con al menos seis meses de validez desde la fecha de ingreso a Espana", "Boleto de ida y vuelta: Demuestra tu intencion de regresar a Colombia y tu planificacion de viaje temporal", "Formulario de entrada (si aplica): Algunos periodos requieren declaracion de salud o formularios especificos"]
       },
       {
         title: "Comprobacion de Solvencia Economica",
         content: "Espana exige demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Las autoridades migratorias pueden solicitar evidencia de tus medios economicos al momento de ingresar.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a63?q=80&w=1200&auto=format&fit=crop",
         list: ["Efectivo en euros o dolares", "Tarjetas de credito o debito internacionales con cupo disponible", "Extractos bancarios recientes que demuestren fondos suficientes", "Carta de invitacion si aplica, que puede reducir requisitos economicos"]
       },
       {
@@ -2600,12 +2600,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Seguro de Viaje Obligatorio",
         content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia. El seguro debe cumplir con los requisitos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion. Este documento puede ser solicitado al ingresar a Espana.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1501619757722-90657a39a56f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estancia Permitida Sin Visa",
         content: "Los ciudadanos colombianos pueden ingresar a Espana y al espacio Schengen sin visa para estancias turisticas de hasta 90 dias dentro de cualquier periodo de 180 dias. Es importante respetar este limite y no exceder el tiempo permitido para evitar problemas migratorios futuros.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86dc?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Pasar Migracion Sin Problemas",
@@ -2638,25 +2638,25 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentos Esenciales Para Viajeros Peruanos",
         content: "Antes de tu viaje a Espana, asegurate de tener toda la documentacion en orden. Estos son los documentos imprescindibles que necesitas preparar con anticipacion.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f4?q=80&w=1200&auto=format&fit=crop",
         list: ["Pasaporte vigente con al menos seis meses de validez desde la fecha de ingreso", "Boleto aereo de ida y vuelta que demuestre tu intencion de regresar a Peru", "Documentacion adicional que pueda ser requerida segun temporada"]
       },
       {
         title: "Comprobacion de Solvencia Economica",
         content: "Las autoridades espanolas exigen demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Es importante tener evidencia clara de tus recursos economicos.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ae?q=80&w=1200&auto=format&fit=crop",
         list: ["Efectivo en moneda aceptada (euros preferiblemente)", "Tarjetas de credito o debito internacionales", "Extractos bancarios recientes como respaldo", "Carta de invitacion puede complementar la solvencia"]
       },
       {
         title: "Comprobante de Alojamiento",
         content: "Debes presentar un comprobante de hospedaje valido. Esto asegura que tienes un lugar seguro donde quedarte durante tu viaje y es revisado en migracion.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeag?q=80&w=1200&auto=format&fit=crop",
         list: ["Reserva confirmada de hotel, hostal o apartamento", "Carta de invitacion oficial si te hospedas con familia o amigos", "Direccion completa del alojamiento"]
       },
       {
         title: "Seguro de Viaje Para el Espacio Schengen",
         content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia en Espana. El seguro debe cumplir con los requisitos minimos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512100356356-de1b84283e19?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Duracion de Estancia Permitida",
@@ -2674,7 +2674,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-viajar-espana-argentina",
     slug: "requisitos-viajar-espana-desde-argentina",
-    image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515923019249-6b544314450c?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Requisitos Para Viajar A Espana Desde Argentina", en: "Requirements To Travel To Spain From Argentina" },
     excerpt: { es: "Viajar a Espana desde Argentina es una experiencia emocionante. Descubre los requisitos esenciales de documentacion, solvencia economica y seguro de viaje para disfrutar tu aventura sin estres.", en: "Traveling to Spain from Argentina is an exciting experience. Discover the essential requirements for documentation, financial solvency and travel insurance to enjoy your adventure stress-free." },
     category: "migracion",
@@ -2688,30 +2688,30 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentacion Para Viajeros Argentinos",
         content: "Los viajeros argentinos tienen acceso privilegiado a Espana gracias a los lazos historicos entre ambos paises. Aun asi, es fundamental cumplir con los requisitos basicos de entrada.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1582719508461-905c673771fe?q=80&w=1200&auto=format&fit=crop",
         list: ["Pasaporte argentino vigente con minimo seis meses de validez", "Boleto de ida y vuelta confirmado", "DNI argentino como documento adicional (no obligatorio pero util)"]
       },
       {
         title: "Demostracion de Medios Economicos",
         content: "Espana exige demostrar capacidad economica para cubrir tu estadia. Los argentinos deben preparar documentacion que evidencie sus recursos financieros.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5958?q=80&w=1200&auto=format&fit=crop",
         list: ["Efectivo, tarjetas de credito o debito internacionales", "Extractos bancarios recientes", "Carta de responsabilidad economica si aplica"]
       },
       {
         title: "Alojamiento Confirmado",
         content: "Debes presentar comprobante de donde te hospedaras durante tu estancia en Espana. Esto es verificado en el control migratorio.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eacd?q=80&w=1200&auto=format&fit=crop",
         list: ["Reserva de hotel o alojamiento turistico", "Carta de invitacion si te quedas con familiares", "Contrato de alquiler temporal si aplica"]
       },
       {
         title: "Seguro de Viaje Schengen",
         content: "El seguro de viaje es obligatorio para ingresar al espacio Schengen. Debe cubrir emergencias medicas, hospitalizacion y repatriacion durante toda tu estadia. Asegurate de contratar uno que cumpla los requisitos minimos establecidos.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9c?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Ventajas Para Argentinos Con Ciudadania Italiana o Espanola",
         content: "Muchos argentinos tienen doble ciudadania europea gracias a sus ancestros. Si tienes pasaporte italiano o espanol, puedes ingresar como ciudadano de la UE sin los requisitos adicionales de turista. Esto te permite estancias ilimitadas y derecho a trabajar.",
-        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7202?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -2724,7 +2724,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "espana-destino-turistico-2025",
     slug: "espana-mejor-destino-turistico-2025",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f63?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Espana, Tu Mejor Destino Turistico 2025: Hoteles, Transporte Y Seguridad", en: "Spain, Your Best Tourist Destination 2025: Hotels, Transport And Safety" },
     excerpt: { es: "Espana es uno de los destinos turisticos mas visitados del mundo. Descubre todo sobre hoteles de calidad, transporte publico eficiente, alquiler de vehiculos y seguridad para viajeros en 2025.", en: "Spain is one of the most visited tourist destinations in the world. Discover everything about quality hotels, efficient public transport, vehicle rental and safety for travelers in 2025." },
     category: "destinos",
@@ -2738,7 +2738,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Hoteles En Espana: Variedad Y Calidad Garantizada",
         content: "Espana cuenta con una oferta hotelera excepcional que se adapta a todos los presupuestos y gustos. Desde hoteles de lujo de clase mundial en destinos como Madrid, Barcelona e Ibiza, hasta encantadores hoteles boutique en ciudades historicas como Sevilla y Granada. Para viajeros con presupuesto ajustado, existen opciones economicas como hostales y pensiones que ofrecen excelente relacion calidad-precio.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3f?q=80&w=1200&auto=format&fit=crop",
         list: ["Hoteles de lujo en Madrid, Barcelona e Ibiza", "Hoteles boutique en ciudades historicas", "Hostales y pensiones economicas", "Paradores de Turismo en edificios historicos", "Apartamentos turisticos para estancias largas"]
       },
       {
@@ -2776,7 +2776,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-venezuela-espana-avianca",
     slug: "viajar-venezuela-espana-avianca",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd65?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Viajar De Venezuela A Espana Con Avianca: Tu Mejor Opcion", en: "Traveling From Venezuela To Spain With Avianca: Your Best Option" },
     excerpt: { es: "Avianca conecta Caracas con Madrid a traves de rutas estrategicas que combinan comodidad y frecuencia. Descubre como esta aerolinea se ha convertido en una opcion preferida para volar hacia Espana.", en: "Avianca connects Caracas with Madrid through strategic routes combining comfort and frequency. Discover how this airline has become a preferred option for flying to Spain." },
     category: "vuelos",
@@ -2790,23 +2790,23 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Conexion Directa Y Estrategica",
         content: "Avianca ofrece vuelos desde Caracas hacia Madrid, operando con escalas eficientes en ciudades clave como Bogota. Esta modalidad permite a los pasajeros disfrutar de una red amplia de conexiones internacionales y de un servicio disenado para facilitar el transito entre Latinoamerica y Europa. Los horarios estan pensados para maximizar la comodidad y reducir los tiempos de espera.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cda?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Experiencia De Viaje Con Valor Agregado",
         content: "Volar con Avianca significa mas que llegar a destino. La aerolinea pone a disposicion multiples opciones de clase, entretenimiento a bordo variado y un programa de viajero frecuente que premia la lealtad. La flota moderna asegura mayor seguridad y confort, reforzando la confianza de quienes eligen esta ruta.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca86?q=80&w=1200&auto=format&fit=crop",
         list: ["Diferentes clases de servicio disponibles", "Entretenimiento a bordo completo", "Programa de viajero frecuente LifeMiles", "Flota moderna y segura", "Servicio de atencion en espanol"]
       },
       {
         title: "Madrid Como Puerta A Europa",
         content: "Madrid se posiciona como el punto de entrada ideal a Europa, y Avianca abre esta puerta para los viajeros venezolanos. Desde la capital espanola, es posible acceder facilmente a trenes de alta velocidad, aerolineas de bajo costo y conexiones a ciudades como Paris, Roma, Londres o Berlin. Esto convierte a Madrid en el hub perfecto para negocios, estudios o turismo.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920217?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Oportunidad Para El Viajero Venezolano",
         content: "La ruta Caracas-Madrid de Avianca representa una solucion efectiva ante la demanda de vuelos entre Venezuela y Europa. Con politicas de equipaje flexibles y promociones frecuentes, esta opcion se presenta como una alternativa confiable. Los pasajeros encuentran no solo transporte aereo, sino una experiencia de viaje integral.",
-        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bd?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -2819,7 +2819,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "aerolineas-caracas-madrid",
     slug: "aerolineas-vuelos-caracas-madrid",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386fa?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Aerolineas Que Vuelan De Caracas A Madrid", en: "Airlines Flying From Caracas To Madrid" },
     excerpt: { es: "La ruta aerea entre Caracas y Madrid es una de las mas demandadas. Conoce las principales aerolineas que operan esta conexion y como elegir la mejor opcion para tu viaje a Espana.", en: "The air route between Caracas and Madrid is one of the most demanded. Learn about the main airlines operating this connection and how to choose the best option for your trip to Spain." },
     category: "vuelos",
@@ -2833,23 +2833,23 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Conexion Aerea Entre Caracas Y Madrid",
         content: "Madrid se posiciona como la principal puerta de entrada a Europa para los viajeros venezolanos. Varias aerolineas operan vuelos regulares entre Caracas y la capital espanola, garantizando frecuencias semanales y diferentes opciones de servicio. Esta oferta permite elegir la mejor combinacion segun necesidades individuales.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e318?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Aerolineas En Esta Ruta",
         content: "Iberia, Air Europa, Plus Ultra y Conviasa son las principales aerolineas que conectan Venezuela con Espana. Cada una ofrece caracteristicas diferentes que se adaptan a distintos perfiles de viajero.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef2?q=80&w=1200&auto=format&fit=crop",
         list: ["Iberia: Extensa red de conexiones europeas y servicio premium", "Air Europa: Vuelos directos con buena frecuencia", "Plus Ultra: Tarifas competitivas y atencion personalizada", "Conviasa: Aerolinea venezolana con conexion directa"]
       },
       {
         title: "Madrid Como Hub Europeo",
         content: "El aeropuerto Adolfo Suarez Madrid-Barajas es uno de los mas importantes de Europa y un centro estrategico para viajeros desde Venezuela. Desde alli es posible conectar facilmente con otras ciudades espanolas como Barcelona, Valencia o Sevilla, y con capitales europeas como Paris, Roma o Berlin.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540339832862-474599807837?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Una Ruta Llena De Oportunidades",
         content: "Mas alla del vuelo, la ruta Caracas-Madrid representa una oportunidad para reencontrarse con familiares, emprender proyectos, estudiar o descubrir nuevas experiencias culturales. Gracias a la oferta de aerolineas, los venezolanos cuentan con opciones accesibles y seguras para cruzar el Atlantico. Madrid no es solo un destino, sino el comienzo de nuevos caminos.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235g?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -2862,7 +2862,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-internacionales-venezuela-espana",
     slug: "espana-vuelos-internacionales-venezuela",
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999eg?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Espana Mas Cerca: Vuelos Internacionales Directos Desde Venezuela", en: "Spain Closer: Direct International Flights From Venezuela" },
     excerpt: { es: "Venezuela mantiene conexion aerea con el mundo a traves de diversas aerolineas. Descubre todas las opciones para planificar tu viaje a Espana y otros destinos internacionales.", en: "Venezuela maintains air connection with the world through various airlines. Discover all the options to plan your trip to Spain and other international destinations." },
     category: "vuelos",
@@ -2876,24 +2876,24 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Vuelos Internacionales Desde Venezuela",
         content: "Venezuela se mantiene conectada con el mundo a traves de diversas aerolineas que ofrecen vuelos internacionales. Desde conexiones regionales en America hasta rutas hacia Europa, los viajeros venezolanos cuentan con alternativas confiables que hacen posible cruzar fronteras y vivir nuevas experiencias.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6d?q=80&w=1200&auto=format&fit=crop",
         list: ["Iberia: Vuelos directos a Madrid", "Air Europa: Conexiones frecuentes a Espana", "Turkish Airlines: Ruta hacia Europa via Estambul", "Copa Airlines: Conexiones por Ciudad de Panama", "Plus Ultra: Atencion personalizada hacia Madrid", "Conviasa: Aerolinea venezolana con rutas europeas"]
       },
       {
         title: "La Ruta Venezuela-Espana: Puente Cultural",
         content: "Entre todas las rutas internacionales, los vuelos hacia Espana destacan como los mas solicitados por viajeros venezolanos. Con operaciones de aerolineas como Iberia, Air Europa y Plus Ultra desde Caracas a Madrid, y de Conviasa hacia Madrid y Tenerife, existen varias alternativas para viajar a Espana. Madrid funciona como hub para conectar facilmente con el resto de Europa.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fb?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Aerolineas Que Generan Confianza",
         content: "Cada aerolinea aporta un valor unico a los viajeros. La variedad de opciones permite que cada viajero encuentre la alternativa que mejor se ajuste a sus planes, presupuesto y preferencias de servicio.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77effed?q=80&w=1200&auto=format&fit=crop",
         list: ["Iberia y Air Europa: Extensa red de conexiones europeas", "Plus Ultra: Tarifas accesibles y trato personalizado", "Conviasa: Refuerza conexion historica Venezuela-Espana", "Turkish Airlines: Puerta a Medio Oriente y Asia"]
       },
       {
         title: "Trips Europa: Tu Aliado En La Planificacion",
         content: "En Trips Europa nos encargamos de asesorarte para que tu experiencia sea unica. Te acompanamos en la eleccion de la aerolinea, la ruta mas conveniente y te ayudamos a planificar tu viaje completo. Viajar desde Venezuela al mundo nunca habia sido tan accesible, y Espana se mantiene como uno de los destinos favoritos para reencontrarse, estudiar, trabajar o explorar.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -2906,7 +2906,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-baratos-cuotas-flex",
     slug: "vuelos-baratos-opcion-cuotas-flex",
-    image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Como Acceder A Vuelos Baratos Con La Opcion De Cuotas Flex", en: "How To Access Cheap Flights With Flex Installment Option" },
     excerpt: { es: "Viajar dejo de ser un lujo reservado para pocos. Descubre como las opciones de pago en cuotas hacen mas accesible tu sueno de volar hacia Espana y otros destinos internacionales.", en: "Traveling is no longer a luxury reserved for few. Discover how installment payment options make your dream of flying to Spain and other international destinations more accessible." },
     category: "planificacion",
@@ -2920,18 +2920,18 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viajar Sin Posponer Tus Planes",
         content: "Uno de los principales obstaculos al momento de viajar suele ser el costo del pasaje. Muchas personas terminan postergando sus planes porque no logran reunir el monto completo de inmediato. Las modalidades de pago flexibles se han convertido en una solucion practica para hacer que el viaje sea alcanzable en el presente, sin comprometer la estabilidad financiera.",
-        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e049?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuotas Flex: Mayor Accesibilidad",
         content: "Algunas agencias y aerolineas ofrecen la posibilidad de pagar boletos aereos en cuotas, una modalidad que permite dividir el costo del pasaje en pagos mas comodos. Esta alternativa democratiza la experiencia de viajar, brindando a los pasajeros la oportunidad de planificar con tiempo y distribuir el gasto. Esta opcion marca una diferencia para quienes suenan con destinos internacionales.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a6?q=80&w=1200&auto=format&fit=crop",
         list: ["Division del costo total en pagos manejables", "Permite planificar con anticipacion", "Hace accesibles destinos que parecian lejanos", "Ideal para viajes familiares o grupos"]
       },
       {
         title: "Una Puerta Abierta A Mas Destinos",
         content: "Con facilidades de pago, los viajeros tienen la posibilidad de mirar mas alla y considerar opciones que antes parecian lejanas. Madrid, ciudades europeas o cualquier destino internacional esta mas cerca de quienes se animan a aprovechar estas modalidades. La experiencia de viajar deja de ser un sueno aplazado y se convierte en una meta alcanzable.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc141?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Aprovechar Las Cuotas",
