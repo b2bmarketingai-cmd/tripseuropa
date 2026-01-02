@@ -38,6 +38,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { FloatingContactButtons } from "@/components/support";
 
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -698,6 +699,8 @@ export default function DestinationPage() {
           </div>
         </div>
       </section>
+
+      <FloatingContactButtons />
     </div>
   );
 }

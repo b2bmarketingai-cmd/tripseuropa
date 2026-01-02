@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
+import { FloatingContactButtons } from "@/components/support";
 
 const CONTENT = {
   es: {
@@ -458,6 +459,8 @@ export default function TravelStylePage() {
           </div>
         </div>
       </section>
+
+      <FloatingContactButtons />
 
       <Footer />
     </div>

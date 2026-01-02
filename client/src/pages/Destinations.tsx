@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { FloatingContactButtons, SupportFAQSection, SupportContactSection } from "@/components/support";
 
 const DESTINATIONS = [
   {
@@ -317,6 +318,10 @@ export default function Destinations() {
           </Link>
         </div>
       </section>
+
+      <SupportFAQSection />
+      <SupportContactSection />
+      <FloatingContactButtons />
 
       <Footer />
     </div>

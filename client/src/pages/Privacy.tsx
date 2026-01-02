@@ -86,7 +86,6 @@ export default function Privacy() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
-      
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-privacy-hero">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-privacy">
@@ -102,7 +101,6 @@ export default function Privacy() {
           </p>
         </div>
       </section>
-
       <section className="py-20" data-testid="section-privacy-content">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -158,7 +156,7 @@ export default function Privacy() {
                     : "If you have questions about this privacy policy or wish to exercise your rights, contact us:"}
                 </p>
                 <div className="space-y-2 text-white/80">
-                  <p>Email: privacy@tripseuropa.com</p>
+                  <p>Email: info@tripseuropa.com</p>
                   <p>WhatsApp: +34 611 105 448</p>
                 </div>
               </CardContent>
@@ -166,7 +164,6 @@ export default function Privacy() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

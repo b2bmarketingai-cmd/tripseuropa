@@ -5,11 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MapPin, Clock, Calendar, Tag, ArrowRight, CheckCircle, Phone, Percent, Flame, ChevronDown, Send, MessageCircle } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { MapPin, Clock, Calendar, Tag, ArrowRight, CheckCircle, Phone, Percent, Flame } from "lucide-react";
+import { FloatingContactButtons, SupportFAQSection, SupportContactSection, type FAQItem } from "@/components/support";
 import { Link } from "wouter";
 
 const LAST_MINUTE_OFFERS = [

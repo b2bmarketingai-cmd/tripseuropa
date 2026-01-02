@@ -16,6 +16,7 @@ import {
 import { useI18n } from "@/lib/i18n";
 import { Check, Gift, Star, Users, Plane, Crown, Sparkles, ArrowRight, ChevronRight, Mail } from "lucide-react";
 import { DESTINATIONS_DATA } from "@/lib/destinationsData";
+import { FloatingContactButtons, SupportContactSection } from "@/components/support";
 
 const CONTENT = {
   es: {
@@ -404,6 +405,10 @@ export default function Rewards() {
           </div>
         </div>
       </section>
+
+      <SupportContactSection />
+      <FloatingContactButtons />
+
       <Footer />
     </div>
   );
