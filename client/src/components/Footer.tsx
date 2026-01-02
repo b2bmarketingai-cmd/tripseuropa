@@ -183,10 +183,6 @@ export function Footer() {
               {t("footer.contact")}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2 text-white/60">
-                <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <span>Bogota, Colombia</span>
-              </li>
               <li className="flex items-center gap-2 text-white/60">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
                 <a href="tel:+573001234567" className="hover:text-accent">+57 300 123 4567</a>

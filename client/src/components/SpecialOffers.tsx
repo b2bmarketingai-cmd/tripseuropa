@@ -75,7 +75,7 @@ export function SpecialOffers() {
   const content = {
     es: {
       badge: "Ofertas de Temporada",
-      title: "Semana Santa",
+      title: "Ofertas Flash",
       from: "Desde",
       currency: "USD",
       taxes: "+ IMP",
@@ -83,7 +83,7 @@ export function SpecialOffers() {
     },
     en: {
       badge: "Seasonal Offers",
-      title: "Easter Week",
+      title: "Flash Offers",
       from: "From",
       currency: "USD",
       taxes: "+ Taxes",
