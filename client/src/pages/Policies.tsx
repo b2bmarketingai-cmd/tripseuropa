@@ -84,7 +84,7 @@ export default function Policies() {
 }
 
 function TermsSection({ language }: { language: string }) {
-  const content = language === "es" ? {
+  const contentES = {
     title: "Términos y Condiciones",
     intro: "Al utilizar los servicios de Trips Europa, usted acepta los siguientes términos y condiciones:",
     sections: [
@@ -121,7 +121,48 @@ function TermsSection({ language }: { language: string }) {
         ]
       }
     ]
-  } : {
+  };
+
+  const contentPT = {
+    title: "Termos e Condições",
+    intro: "Ao utilizar os serviços da Trips Europa, você concorda com os seguintes termos e condições:",
+    sections: [
+      {
+        title: "1. Serviços de Viagem",
+        items: [
+          "A Trips Europa atua como intermediária entre o cliente e os prestadores de serviços turísticos.",
+          "Os preços estão sujeitos à disponibilidade e podem mudar sem aviso prévio.",
+          "A confirmação das reservas está sujeita ao recebimento do pagamento integral.",
+        ]
+      },
+      {
+        title: "2. Responsabilidades do Cliente",
+        items: [
+          "Fornecer informações verdadeiras e completas para todas as reservas.",
+          "Verificar se os documentos de viagem (passaporte, visto) estão válidos.",
+          "Cumprir os requisitos de entrada de cada país de destino.",
+        ]
+      },
+      {
+        title: "3. Pagamentos",
+        items: [
+          "Aceitamos pagamentos em USD, EUR e BRL através de cartões de crédito/débito.",
+          "As reservas requerem um depósito mínimo de 30% para confirmação.",
+          "O saldo deve ser pago 30 dias antes da data da viagem.",
+        ]
+      },
+      {
+        title: "4. Proteção de Dados",
+        items: [
+          "Seus dados pessoais serão tratados de acordo com nossa política de privacidade.",
+          "Não compartilhamos informações pessoais com terceiros sem seu consentimento.",
+          "Utilizamos criptografia SSL para proteger todas as transações.",
+        ]
+      }
+    ]
+  };
+
+  const contentEN = {
     title: "Terms and Conditions",
     intro: "By using Trips Europa services, you agree to the following terms and conditions:",
     sections: [
@@ -160,6 +201,8 @@ function TermsSection({ language }: { language: string }) {
     ]
   };
 
+  const content = language === "es" ? contentES : language === "pt" ? contentPT : contentEN;
+
   return (
     <Card data-testid="card-terms">
       <CardHeader>
@@ -189,7 +232,7 @@ function TermsSection({ language }: { language: string }) {
 }
 
 function CancellationsSection({ language }: { language: string }) {
-  const content = language === "es" ? {
+  const contentES = {
     title: "Política de Cancelaciones",
     intro: "Una vez emitidos los servicios, las políticas de cancelación están sujetas a las condiciones de cada proveedor:",
     services: [
@@ -224,7 +267,46 @@ function CancellationsSection({ language }: { language: string }) {
       "Te recomendamos contratar seguro de viaje que cubra cancelaciones imprevistas.",
       "Para cualquier solicitud de cancelación, contáctanos a info@tripseuropa.com / agente@tripseuropa.com o al +34 611 105 448.",
     ]
-  } : {
+  };
+
+  const contentPT = {
+    title: "Política de Cancelamentos",
+    intro: "Uma vez emitidos os serviços, as políticas de cancelamento estão sujeitas às condições de cada fornecedor:",
+    services: [
+      { 
+        service: "Passagens Aéreas", 
+        desc: "Cancelamentos e alterações estão sujeitos às políticas de cada companhia aérea. Algumas tarifas não são reembolsáveis.",
+        icon: "plane"
+      },
+      { 
+        service: "Hotéis", 
+        desc: "Cada hotel tem suas próprias políticas de cancelamento. Consulte as condições específicas da sua reserva.",
+        icon: "hotel"
+      },
+      { 
+        service: "Seguro de Viagem", 
+        desc: "Uma vez emitida a apólice, aplicam-se as condições da seguradora. Revise os termos antes de contratar.",
+        icon: "insurance"
+      },
+      { 
+        service: "eSIM Europa", 
+        desc: "Não reembolsável após ativação. Antes da ativação pode ser cancelado.",
+        icon: "esim"
+      },
+      { 
+        service: "Tours e Excursões", 
+        desc: "Sujeito às políticas do operador turístico. Geralmente requerem aviso prévio de 48-72 horas.",
+        icon: "tour"
+      },
+    ],
+    notes: [
+      "A Trips Europa atua como intermediária. Uma vez emitidos os serviços, as condições de cancelamento são estabelecidas por cada fornecedor.",
+      "Recomendamos contratar seguro de viagem que cubra cancelamentos imprevistos.",
+      "Para qualquer solicitação de cancelamento, entre em contato conosco em info@tripseuropa.com / agente@tripseuropa.com ou +34 611 105 448.",
+    ]
+  };
+
+  const contentEN = {
     title: "Cancellation Policy",
     intro: "Once services are issued, cancellation policies are subject to each provider's conditions:",
     services: [
@@ -260,6 +342,8 @@ function CancellationsSection({ language }: { language: string }) {
       "For any cancellation request, contact us at info@tripseuropa.com / agente@tripseuropa.com or +34 611 105 448.",
     ]
   };
+
+  const content = language === "es" ? contentES : language === "pt" ? contentPT : contentEN;
 
   return (
     <Card data-testid="card-cancellations">
@@ -301,7 +385,7 @@ function CancellationsSection({ language }: { language: string }) {
 }
 
 function RefundsSection({ language }: { language: string }) {
-  const content = language === "es" ? {
+  const contentES = {
     title: "Política de Reembolsos",
     intro: "Los reembolsos están sujetos a las políticas de cada proveedor de servicios:",
     info: [
@@ -312,7 +396,22 @@ function RefundsSection({ language }: { language: string }) {
     ],
     process: "Para solicitar un reembolso, contáctanos con tu número de reserva y te informaremos las condiciones aplicables según cada proveedor.",
     contact: "Escríbenos a info@tripseuropa.com / agente@tripseuropa.com o llámanos al +34 611 105 448"
-  } : {
+  };
+
+  const contentPT = {
+    title: "Política de Reembolsos",
+    intro: "Os reembolsos estão sujeitos às políticas de cada prestador de serviços:",
+    info: [
+      "Os reembolsos de passagens aéreas dependem das condições da companhia aérea e do tipo de tarifa adquirida.",
+      "Os reembolsos de hotéis estão sujeitos às políticas de cancelamento de cada estabelecimento.",
+      "Os seguros de viagem e eSIM têm condições específicas estabelecidas pelo fornecedor.",
+      "A Trips Europa gerenciará sua solicitação de reembolso junto ao fornecedor correspondente.",
+    ],
+    process: "Para solicitar um reembolso, entre em contato conosco com seu número de reserva e informaremos as condições aplicáveis de acordo com cada fornecedor.",
+    contact: "Escreva para info@tripseuropa.com / agente@tripseuropa.com ou ligue para +34 611 105 448"
+  };
+
+  const contentEN = {
     title: "Refund Policy",
     intro: "Refunds are subject to each service provider's policies:",
     info: [
@@ -324,6 +423,8 @@ function RefundsSection({ language }: { language: string }) {
     process: "To request a refund, contact us with your booking number and we will inform you of the applicable conditions for each provider.",
     contact: "Write to us at info@tripseuropa.com / agente@tripseuropa.com or call +34 611 105 448"
   };
+
+  const content = language === "es" ? contentES : language === "pt" ? contentPT : contentEN;
 
   return (
     <Card data-testid="card-refunds">
@@ -357,7 +458,7 @@ function RefundsSection({ language }: { language: string }) {
 }
 
 function ReturnsSection({ language }: { language: string }) {
-  const content = language === "es" ? {
+  const contentES = {
     title: "Información Importante",
     intro: "Trips Europa actúa como intermediario entre tú y los proveedores de servicios turísticos:",
     items: [
@@ -379,7 +480,33 @@ function ReturnsSection({ language }: { language: string }) {
       },
     ],
     contact: "¿Tienes dudas sobre las políticas de tu reserva? Contáctanos:"
-  } : {
+  };
+
+  const contentPT = {
+    title: "Informações Importantes",
+    intro: "A Trips Europa atua como intermediária entre você e os prestadores de serviços turísticos:",
+    items: [
+      {
+        title: "Papel de Intermediário",
+        desc: "Facilitamos a reserva de serviços de companhias aéreas, hotéis, seguradoras e operadores turísticos. Uma vez emitidos os serviços, as políticas de cada fornecedor se aplicam diretamente.",
+      },
+      {
+        title: "Documentação",
+        desc: "Ao realizar sua reserva, você receberá os termos e condições específicos de cada serviço contratado. Recomendamos lê-los cuidadosamente.",
+      },
+      {
+        title: "Assistência Garantida",
+        desc: "Embora as políticas sejam estabelecidas pelos fornecedores, nossa equipe o auxiliará em todo o processo de gestão de alterações, cancelamentos ou reembolsos.",
+      },
+      {
+        title: "Recomendação",
+        desc: "Sempre sugerimos contratar seguro de viagem com cobertura de cancelamento para proteger seu investimento contra imprevistos.",
+      },
+    ],
+    contact: "Tem dúvidas sobre as políticas da sua reserva? Entre em contato:"
+  };
+
+  const contentEN = {
     title: "Important Information",
     intro: "Trips Europa acts as an intermediary between you and tourism service providers:",
     items: [
@@ -402,6 +529,8 @@ function ReturnsSection({ language }: { language: string }) {
     ],
     contact: "Have questions about your booking policies? Contact us:"
   };
+
+  const content = language === "es" ? contentES : language === "pt" ? contentPT : contentEN;
 
   return (
     <Card data-testid="card-returns">

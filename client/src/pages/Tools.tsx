@@ -131,11 +131,11 @@ function SolvencyCalculator() {
                 <SelectValue placeholder={t("tools.solvency.selectCountry")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="spain">{language === "es" ? "España" : "Spain"}</SelectItem>
-                <SelectItem value="france">{language === "es" ? "Francia" : "France"}</SelectItem>
-                <SelectItem value="italy">{language === "es" ? "Italia" : "Italy"}</SelectItem>
-                <SelectItem value="germany">{language === "es" ? "Alemania" : "Germany"}</SelectItem>
-                <SelectItem value="netherlands">{language === "es" ? "Países Bajos" : "Netherlands"}</SelectItem>
+                <SelectItem value="spain">{language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
+                <SelectItem value="france">{language === "es" ? "Francia" : language === "pt" ? "Franca" : "France"}</SelectItem>
+                <SelectItem value="italy">{language === "es" ? "Italia" : language === "pt" ? "Italia" : "Italy"}</SelectItem>
+                <SelectItem value="germany">{language === "es" ? "Alemania" : language === "pt" ? "Alemanha" : "Germany"}</SelectItem>
+                <SelectItem value="netherlands">{language === "es" ? "Países Bajos" : language === "pt" ? "Paises Baixos" : "Netherlands"}</SelectItem>
                 <SelectItem value="portugal">Portugal</SelectItem>
               </SelectContent>
             </Select>
@@ -244,12 +244,12 @@ function TripCalculator() {
                 <SelectValue placeholder={t("tools.calculator.selectDest")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="madrid">Madrid, {language === "es" ? "España" : "Spain"}</SelectItem>
-                <SelectItem value="paris">{language === "es" ? "París, Francia" : "Paris, France"}</SelectItem>
-                <SelectItem value="barcelona">Barcelona, {language === "es" ? "España" : "Spain"}</SelectItem>
-                <SelectItem value="rome">{language === "es" ? "Roma, Italia" : "Rome, Italy"}</SelectItem>
-                <SelectItem value="amsterdam">{language === "es" ? "Ámsterdam, Países Bajos" : "Amsterdam, Netherlands"}</SelectItem>
-                <SelectItem value="london">{language === "es" ? "Londres, Reino Unido" : "London, UK"}</SelectItem>
+                <SelectItem value="madrid">Madrid, {language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
+                <SelectItem value="paris">{language === "es" ? "París, Francia" : language === "pt" ? "Paris, Franca" : "Paris, France"}</SelectItem>
+                <SelectItem value="barcelona">Barcelona, {language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
+                <SelectItem value="rome">{language === "es" ? "Roma, Italia" : language === "pt" ? "Roma, Italia" : "Rome, Italy"}</SelectItem>
+                <SelectItem value="amsterdam">{language === "es" ? "Ámsterdam, Países Bajos" : language === "pt" ? "Amsterda, Paises Baixos" : "Amsterdam, Netherlands"}</SelectItem>
+                <SelectItem value="london">{language === "es" ? "Londres, Reino Unido" : language === "pt" ? "Londres, Reino Unido" : "London, UK"}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -322,12 +322,12 @@ function VisaChecker() {
 
   const visaRequirements: Record<string, Record<string, { required: boolean; type: string; info: string }>> = {
     colombia: {
-      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
-      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : "Standard visitor visa required for UK." },
+      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : language === "pt" ? "Visto Schengen obrigatorio. Permite estadia de ate 90 dias em 180 dias." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
+      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : language === "pt" ? "Visto de visitante padrao obrigatorio para Reino Unido." : "Standard visitor visa required for UK." },
     },
     venezuela: {
-      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
-      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : "Standard visitor visa required for UK." },
+      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : language === "pt" ? "Visto Schengen obrigatorio. Permite estadia de ate 90 dias em 180 dias." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
+      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : language === "pt" ? "Visto de visitante padrao obrigatorio para Reino Unido." : "Standard visitor visa required for UK." },
     },
   };
 
@@ -360,8 +360,8 @@ function VisaChecker() {
                 <SelectValue placeholder={t("tools.visa.selectNationality")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="colombia">{language === "es" ? "Colombiana" : "Colombian"}</SelectItem>
-                <SelectItem value="venezuela">{language === "es" ? "Venezolana" : "Venezuelan"}</SelectItem>
+                <SelectItem value="colombia">{language === "es" ? "Colombiana" : language === "pt" ? "Colombiana" : "Colombian"}</SelectItem>
+                <SelectItem value="venezuela">{language === "es" ? "Venezolana" : language === "pt" ? "Venezuelana" : "Venezuelan"}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -372,11 +372,11 @@ function VisaChecker() {
                 <SelectValue placeholder={t("tools.visa.selectDest")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="spain">{language === "es" ? "España (Schengen)" : "Spain (Schengen)"}</SelectItem>
-                <SelectItem value="france">{language === "es" ? "Francia (Schengen)" : "France (Schengen)"}</SelectItem>
-                <SelectItem value="italy">{language === "es" ? "Italia (Schengen)" : "Italy (Schengen)"}</SelectItem>
-                <SelectItem value="germany">{language === "es" ? "Alemania (Schengen)" : "Germany (Schengen)"}</SelectItem>
-                <SelectItem value="london">{language === "es" ? "Reino Unido" : "United Kingdom"}</SelectItem>
+                <SelectItem value="spain">{language === "es" ? "España (Schengen)" : language === "pt" ? "Espanha (Schengen)" : "Spain (Schengen)"}</SelectItem>
+                <SelectItem value="france">{language === "es" ? "Francia (Schengen)" : language === "pt" ? "Franca (Schengen)" : "France (Schengen)"}</SelectItem>
+                <SelectItem value="italy">{language === "es" ? "Italia (Schengen)" : language === "pt" ? "Italia (Schengen)" : "Italy (Schengen)"}</SelectItem>
+                <SelectItem value="germany">{language === "es" ? "Alemania (Schengen)" : language === "pt" ? "Alemanha (Schengen)" : "Germany (Schengen)"}</SelectItem>
+                <SelectItem value="london">{language === "es" ? "Reino Unido" : language === "pt" ? "Reino Unido" : "United Kingdom"}</SelectItem>
               </SelectContent>
             </Select>
           </div>
