@@ -198,7 +198,7 @@ export function Footer() {
                 <Bot className="w-6 h-6 text-accent" />
               </div>
               <h3 className="text-lg font-display font-bold text-white mb-2 flex items-center gap-2">
-                AI powered chatbot
+                {language === "es" ? "Asistente Virtual para Viajes" : "AI powered chatbot"}
                 <Sparkles className="w-4 h-4 text-accent" />
               </h3>
               <p className="text-white/60 text-sm leading-relaxed">
