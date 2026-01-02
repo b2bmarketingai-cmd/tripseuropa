@@ -82,18 +82,44 @@ const AIRPORTS = [
   { code: "NAS", city: "Nassau", country: "Bahamas (Caribe)", countryCode: "CB" },
   { code: "POS", city: "Puerto Espana", country: "Trinidad (Caribe)", countryCode: "CB" },
   { code: "BGI", city: "Bridgetown", country: "Barbados (Caribe)", countryCode: "CB" },
-  // Others Latin America
+  // VE - Venezuela
+  { code: "CCS", city: "Caracas", country: "Venezuela", countryCode: "VE" },
+  { code: "MAR", city: "Maracaibo", country: "Venezuela", countryCode: "VE" },
+  { code: "VLN", city: "Valencia", country: "Venezuela", countryCode: "VE" },
+  { code: "BLA", city: "Barcelona", country: "Venezuela", countryCode: "VE" },
+  { code: "PMV", city: "Isla Margarita", country: "Venezuela", countryCode: "VE" },
+  { code: "BRM", city: "Barquisimeto", country: "Venezuela", countryCode: "VE" },
+  { code: "MRD", city: "Merida", country: "Venezuela", countryCode: "VE" },
+  // CL - Chile
   { code: "SCL", city: "Santiago", country: "Chile", countryCode: "CL" },
+  { code: "CCP", city: "Concepcion", country: "Chile", countryCode: "CL" },
+  { code: "PUQ", city: "Punta Arenas", country: "Chile", countryCode: "CL" },
+  { code: "IQQ", city: "Iquique", country: "Chile", countryCode: "CL" },
+  { code: "ANF", city: "Antofagasta", country: "Chile", countryCode: "CL" },
+  // EC - Ecuador
   { code: "UIO", city: "Quito", country: "Ecuador", countryCode: "EC" },
   { code: "GYE", city: "Guayaquil", country: "Ecuador", countryCode: "EC" },
-  { code: "CCS", city: "Caracas", country: "Venezuela", countryCode: "VE" },
+  { code: "CUE", city: "Cuenca", country: "Ecuador", countryCode: "EC" },
+  { code: "GPS", city: "Galapagos", country: "Ecuador", countryCode: "EC" },
+  // UY - Uruguay
   { code: "MVD", city: "Montevideo", country: "Uruguay", countryCode: "UY" },
+  { code: "PDP", city: "Punta del Este", country: "Uruguay", countryCode: "UY" },
+  // BO - Bolivia
   { code: "LPB", city: "La Paz", country: "Bolivia", countryCode: "BO" },
   { code: "VVI", city: "Santa Cruz", country: "Bolivia", countryCode: "BO" },
+  { code: "CBB", city: "Cochabamba", country: "Bolivia", countryCode: "BO" },
+  // PY - Paraguay
   { code: "ASU", city: "Asuncion", country: "Paraguay", countryCode: "PY" },
+  // GT - Guatemala
   { code: "GUA", city: "Guatemala City", country: "Guatemala", countryCode: "GT" },
+  { code: "FRS", city: "Flores (Tikal)", country: "Guatemala", countryCode: "GT" },
+  // SV - El Salvador
   { code: "SAL", city: "San Salvador", country: "El Salvador", countryCode: "SV" },
+  // HN - Honduras
   { code: "TGU", city: "Tegucigalpa", country: "Honduras", countryCode: "HN" },
+  { code: "SAP", city: "San Pedro Sula", country: "Honduras", countryCode: "HN" },
+  { code: "RTB", city: "Roatan", country: "Honduras", countryCode: "HN" },
+  // NI - Nicaragua
   { code: "MGA", city: "Managua", country: "Nicaragua", countryCode: "NI" },
   // FR - Francia
   { code: "CDG", city: "Paris (Charles de Gaulle)", country: "Francia", countryCode: "FR" },
