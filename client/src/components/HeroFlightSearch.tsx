@@ -286,23 +286,35 @@ export function HeroFlightSearch() {
 
   const dateLocale = language === "es" ? es : language === "pt" ? ptBR : enUS;
 
+  // Default popular origins (Latin America) - one per country for variety
+  const defaultOrigins = AIRPORTS.filter(a => 
+    ["BOG", "MEX", "GRU", "EZE", "LIM", "PTY", "SJO", "SDQ", "CCS", "SCL", "UIO", "HAV"].includes(a.code)
+  );
+
+  // Default popular destinations (Europe) - one per country for variety
+  const defaultDests = AIRPORTS.filter(a => 
+    ["MAD", "BCN", "CDG", "FCO", "LHR", "AMS", "FRA", "LIS", "ATH", "PRG", "VIE", "ZRH"].includes(a.code)
+  );
+
   const filteredOrigins = originSearch.length > 0 
     ? AIRPORTS.filter(
         (a) =>
           a.city.toLowerCase().includes(originSearch.toLowerCase()) ||
           a.code.toLowerCase().includes(originSearch.toLowerCase()) ||
-          a.country.toLowerCase().includes(originSearch.toLowerCase())
+          a.country.toLowerCase().includes(originSearch.toLowerCase()) ||
+          a.countryCode.toLowerCase().includes(originSearch.toLowerCase())
       )
-    : AIRPORTS;
+    : defaultOrigins;
 
   const filteredDests = destSearch.length > 0
     ? AIRPORTS.filter(
         (a) =>
           a.city.toLowerCase().includes(destSearch.toLowerCase()) ||
           a.code.toLowerCase().includes(destSearch.toLowerCase()) ||
-          a.country.toLowerCase().includes(destSearch.toLowerCase())
+          a.country.toLowerCase().includes(destSearch.toLowerCase()) ||
+          a.countryCode.toLowerCase().includes(destSearch.toLowerCase())
       )
-    : AIRPORTS;
+    : defaultDests;
 
   const handleNextStep = () => {
     if (step === 1) {
