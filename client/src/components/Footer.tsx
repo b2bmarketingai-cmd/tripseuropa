@@ -190,6 +190,10 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 <a href="mailto:info@tripseuropa.com" className="hover:text-accent">info@tripseuropa.com</a>
               </li>
+              <li className="flex items-center gap-2 text-white/60">
+                <Mail className="w-4 h-4 text-accent shrink-0" />
+                <a href="mailto:agente@tripseuropa.com" className="hover:text-accent">agente@tripseuropa.com</a>
+              </li>
             </ul>
 
             <div className="flex gap-2 mt-4">

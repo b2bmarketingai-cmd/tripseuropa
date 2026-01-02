@@ -6,6 +6,7 @@ import { z } from "zod";
 import { setupAuth, registerAuthRoutes } from "./replit_integrations/auth";
 import { registerChatRoutes } from "./replit_integrations/chat";
 import { registerImageRoutes } from "./replit_integrations/image";
+import { sendContactFormEmail } from "./replit_integrations/email";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -145,6 +146,19 @@ export async function registerRoutes(
     try {
       const input = api.leads.create.input.parse(req.body);
       const lead = await storage.createLead(input);
+      
+      // Send email notification to all recipients
+      sendContactFormEmail({
+        name: input.name,
+        email: input.email,
+        phone: input.phone,
+        originCountry: input.originCountry,
+        serviceInterest: input.serviceInterest,
+        message: input.message
+      }).catch(err => {
+        console.error('Failed to send contact form email:', err);
+      });
+      
       res.status(201).json(lead);
     } catch (err) {
        if (err instanceof z.ZodError) {

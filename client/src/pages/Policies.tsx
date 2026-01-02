@@ -222,7 +222,7 @@ function CancellationsSection({ language }: { language: string }) {
     notes: [
       "Trips Europa actúa como intermediario. Una vez emitidos los servicios, las condiciones de cancelación las establece cada proveedor.",
       "Te recomendamos contratar seguro de viaje que cubra cancelaciones imprevistas.",
-      "Para cualquier solicitud de cancelación, contáctanos a info@tripseuropa.com o al +34 611 105 448.",
+      "Para cualquier solicitud de cancelación, contáctanos a info@tripseuropa.com / agente@tripseuropa.com o al +34 611 105 448.",
     ]
   } : {
     title: "Cancellation Policy",
@@ -257,7 +257,7 @@ function CancellationsSection({ language }: { language: string }) {
     notes: [
       "Trips Europa acts as an intermediary. Once services are issued, cancellation conditions are set by each provider.",
       "We recommend purchasing travel insurance that covers unexpected cancellations.",
-      "For any cancellation request, contact us at info@tripseuropa.com or +34 611 105 448.",
+      "For any cancellation request, contact us at info@tripseuropa.com / agente@tripseuropa.com or +34 611 105 448.",
     ]
   };
 
@@ -311,7 +311,7 @@ function RefundsSection({ language }: { language: string }) {
       "Trips Europa gestionará tu solicitud de reembolso ante el proveedor correspondiente.",
     ],
     process: "Para solicitar un reembolso, contáctanos con tu número de reserva y te informaremos las condiciones aplicables según cada proveedor.",
-    contact: "Escríbenos a info@tripseuropa.com o llámanos al +34 611 105 448"
+    contact: "Escríbenos a info@tripseuropa.com / agente@tripseuropa.com o llámanos al +34 611 105 448"
   } : {
     title: "Refund Policy",
     intro: "Refunds are subject to each service provider's policies:",
@@ -322,7 +322,7 @@ function RefundsSection({ language }: { language: string }) {
       "Trips Europa will manage your refund request with the corresponding provider.",
     ],
     process: "To request a refund, contact us with your booking number and we will inform you of the applicable conditions for each provider.",
-    contact: "Write to us at info@tripseuropa.com or call +34 611 105 448"
+    contact: "Write to us at info@tripseuropa.com / agente@tripseuropa.com or call +34 611 105 448"
   };
 
   return (
@@ -433,6 +433,10 @@ function ReturnsSection({ language }: { language: string }) {
             <a href="mailto:info@tripseuropa.com" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />
               info@tripseuropa.com
+            </a>
+            <a href="mailto:agente@tripseuropa.com" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
+              <Mail className="w-4 h-4" />
+              agente@tripseuropa.com
             </a>
             <a href="tel:+34611105448" className="flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />

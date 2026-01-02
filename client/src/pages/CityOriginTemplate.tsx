@@ -801,7 +801,7 @@ export default function CityOriginTemplate() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-accent" />
-              <span>{t.email}: info@tripseuropa.com</span>
+              <span>{t.email}: info@tripseuropa.com | agente@tripseuropa.com</span>
             </div>
           </div>
           

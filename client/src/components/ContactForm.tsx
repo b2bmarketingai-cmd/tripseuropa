@@ -341,7 +341,7 @@ export function ContactInfo() {
         <div>
           <h4 className="font-bold text-lg mb-1">{t("contactInfo.write")}</h4>
           <p className="text-muted-foreground">info@tripseuropa.com</p>
-          <p className="text-muted-foreground">reservas@tripseuropa.com</p>
+          <p className="text-muted-foreground">agente@tripseuropa.com</p>
         </div>
       </div>
       <div className="flex items-start gap-4">
