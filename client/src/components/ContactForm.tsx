@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
-import { Send, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Send, Phone, Mail, CheckCircle } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
 import {
   Form,
@@ -341,16 +341,6 @@ export function ContactInfo() {
           <h4 className="font-bold text-lg mb-1">{t("contactInfo.write")}</h4>
           <p className="text-muted-foreground">info@tripseuropa.com</p>
           <p className="text-muted-foreground">agente@tripseuropa.com</p>
-        </div>
-      </div>
-      <div className="flex items-start gap-4">
-        <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-          <MapPin className="w-5 h-5 text-accent" />
-        </div>
-        <div>
-          <h4 className="font-bold text-lg mb-1">{t("contactInfo.visit")}</h4>
-          <p className="text-muted-foreground">Bogotá: Cra 7 #71-21, Of. 501</p>
-          <p className="text-muted-foreground">Madrid: Gran Vía 42, 3º</p>
         </div>
       </div>
     </div>
