@@ -1038,7 +1038,7 @@ export default function Blog() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <Link href={`/blog/post/${post.id}`} key={post.id}>
+                <Link href={`/blog/post/${'slug' in post && post.slug ? post.slug : post.id}`} key={post.id}>
                   <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-blog-${post.id}`}>
                     <div className="relative h-52 overflow-hidden bg-muted">
                       <img 
