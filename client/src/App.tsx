@@ -58,6 +58,7 @@ import Rewards from "@/pages/Rewards";
 import TravelStylePage from "@/pages/TravelStylePage";
 import LastMinuteOffers from "@/pages/LastMinuteOffers";
 import ESim from "@/pages/ESim";
+import VisaRequirements from "@/pages/VisaRequirements";
 import NotFound from "@/pages/not-found";
 
 // Protected Route Wrapper
@@ -105,6 +106,8 @@ function Router() {
       <Route path="/last-minute-offers" component={LastMinuteOffers} />
       <Route path="/services/esim" component={ESim} />
       <Route path="/esim" component={ESim} />
+      <Route path="/requisitos-visa" component={VisaRequirements} />
+      <Route path="/visa-requirements" component={VisaRequirements} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />

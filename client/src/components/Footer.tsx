@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, ExternalLink, Lock, Building2, Bot, Sparkles } from "lucide-react";
+import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, Lock, Building2, Bot, Sparkles } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance, SiPaypal } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
@@ -161,21 +161,18 @@ export function Footer() {
             </ul>
             
             <div className="mt-6 pt-4 border-t border-white/10">
-              <a 
-                href="https://www.megatravel.com.mx/info/requisitos-tramite-de-visas" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                href="/requisitos-visa"
                 className="flex items-center gap-2 text-sm text-[#d4af37] hover:text-[#f0d060] transition-colors font-medium"
                 data-testid="link-visa-requirements"
               >
                 <Shield className="w-4 h-4" />
                 {language === "es" ? "Requisitos de Visa" : "Visa Requirements"}
-                <ExternalLink className="w-3 h-3" />
-              </a>
+              </Link>
               <p className="text-xs text-white/40 mt-2">
                 {language === "es" 
-                  ? "Canada, China, Dubai, Egipto, EE.UU., India, Sudafrica, Tailandia, Turquia y mas"
-                  : "Canada, China, Dubai, Egypt, USA, India, South Africa, Thailand, Turkey and more"}
+                  ? "EE.UU., Canada, China, India, Sudafrica, Australia, ETIAS y mas"
+                  : "USA, Canada, China, India, South Africa, Australia, ETIAS and more"}
               </p>
             </div>
           </div>
