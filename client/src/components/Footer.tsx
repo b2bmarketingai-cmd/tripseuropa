@@ -70,6 +70,8 @@ export function Footer() {
     { name: "Peru", href: "/blog/peru", code: "PE" },
     { name: "Panama", href: "/blog/panama", code: "PA" },
     { name: "Costa Rica", href: "/blog/costa-rica", code: "CR" },
+    { name: "Rep. Dominicana", href: "/blog/dominicana", code: "DO" },
+    { name: "Caribe", href: "/blog/caribe", code: "CB" },
   ];
 
   return (

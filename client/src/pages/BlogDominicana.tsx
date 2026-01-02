@@ -11,6 +11,7 @@ import {
   Building, CreditCard, Globe, Compass, Camera, Heart,
   HelpCircle, ChevronDown, ChevronUp
 } from "lucide-react";
+import { FloatingContactButtons, SupportContactSection } from "@/components/support";
 import { useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSchema";
@@ -527,13 +528,18 @@ export default function BlogDominicana() {
                 {language === "es" ? "Contactar Asesor" : "Contact Advisor"}
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2">
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp
-            </Button>
+            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </section>
+
+      <SupportContactSection />
+      <FloatingContactButtons />
 
       <Footer />
     </div>
