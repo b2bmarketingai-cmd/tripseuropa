@@ -18,7 +18,7 @@ const TEAM = [
   {
     name: "Carlos Martinez",
     role: { es: "Director de Operaciones", en: "Operations Director", pt: "Diretor de Operacoes" },
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=70&w=400&auto=format&fit=crop",
+    image: "/assets/generated_images/team-carlos-martinez.png",
     experience: "12+"
   },
   {
