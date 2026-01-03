@@ -85,10 +85,10 @@ export default function About() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-about-subtitle">
             {language === "es" 
-              ? "Desde 2014 ayudando a colombianos y venezolanos a descubrir la magia de Europa" 
+              ? "Desde 2016 ayudando a colombianos y venezolanos a descubrir la magia de Europa" 
               : language === "pt"
-              ? "Desde 2014 ajudando colombianos e venezuelanos a descobrir a magia da Europa"
-              : "Since 2014 helping Colombians and Venezuelans discover the magic of Europe"}
+              ? "Desde 2016 ajudando colombianos e venezuelanos a descobrir a magia da Europa"
+              : "Since 2016 helping Colombians and Venezuelans discover the magic of Europe"}
           </p>
         </div>
       </section>
@@ -122,10 +122,10 @@ export default function About() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   {language === "es" 
-                    ? "Trips Europa nacio en 2014 cuando nuestra fundadora, Maria Rodriguez, regreso de su primer viaje a Europa completamente enamorada del continente. Vio la necesidad de una agencia que realmente entendiera las necesidades especificas de los viajeros latinoamericanos."
+                    ? "Trips Europa nacio en 2016 cuando nuestra fundadora, Maria Rodriguez, regreso de su primer viaje a Europa completamente enamorada del continente. Vio la necesidad de una agencia que realmente entendiera las necesidades especificas de los viajeros latinoamericanos."
                     : language === "pt"
-                    ? "A Trips Europa nasceu em 2014 quando nossa fundadora, Maria Rodriguez, retornou de sua primeira viagem a Europa completamente apaixonada pelo continente. Ela viu a necessidade de uma agencia que realmente entendesse as necessidades especificas dos viajantes latino-americanos."
-                    : "Trips Europa was born in 2014 when our founder, Maria Rodriguez, returned from her first trip to Europe completely in love with the continent. She saw the need for an agency that truly understood the specific needs of Latin American travelers."}
+                    ? "A Trips Europa nasceu em 2016 quando nossa fundadora, Maria Rodriguez, retornou de sua primeira viagem a Europa completamente apaixonada pelo continente. Ela viu a necessidade de uma agencia que realmente entendesse as necessidades especificas dos viajantes latino-americanos."
+                    : "Trips Europa was born in 2016 when our founder, Maria Rodriguez, returned from her first trip to Europe completely in love with the continent. She saw the need for an agency that truly understood the specific needs of Latin American travelers."}
                 </p>
                 <p>
                   {language === "es" 
@@ -145,7 +145,7 @@ export default function About() {
               />
               <div className="absolute -bottom-6 -left-6 bg-accent text-primary p-6 rounded-xl shadow-lg">
                 <p className="text-3xl font-bold">10+</p>
-                <p className="text-sm">{language === "es" ? "Anos creando memorias" : language === "pt" ? "Anos criando memorias" : "Years creating memories"}</p>
+                <p className="text-sm">{language === "es" ? "Años creando memorias" : language === "pt" ? "Anos criando memorias" : "Years creating memories"}</p>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function About() {
                     loading="lazy"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4">
-                    <Badge className="bg-accent text-primary mb-2">{member.experience} {language === "es" ? "anos" : language === "pt" ? "anos" : "years"}</Badge>
+                    <Badge className="bg-accent text-primary mb-2">{member.experience} {language === "es" ? "años" : language === "pt" ? "anos" : "years"}</Badge>
                   </div>
                 </div>
                 <CardContent className="p-4 text-center">
