@@ -2775,7 +2775,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-venezuela-espana-avianca",
     slug: "viajar-venezuela-espana-avianca",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd65?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/venezuela-espana-avianca.png",
     title: { es: "Viajar De Venezuela A España Con Avianca: Tu Mejor Opcion", en: "Traveling From Venezuela To Spain With Avianca: Your Best Option" },
     excerpt: { es: "Avianca conecta Caracas con Madrid a traves de rutas estrategicas que combinan comodidad y frecuencia. Descubre como esta aerolinea se ha convertido en una opcion preferida para volar hacia España.", en: "Avianca connects Caracas with Madrid through strategic routes combining comfort and frequency. Discover how this airline has become a preferred option for flying to Spain." },
     category: "vuelos",
