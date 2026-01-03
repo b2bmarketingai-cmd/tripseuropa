@@ -7044,5 +7044,189 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Cual tiene mejor vida nocturna?", answer: "Madrid, sin duda. Es legendaria por su vida nocturna. Los madrilenos cenan a las 22:00 y salen de fiesta hasta las 6:00 de la manana. Barcelona es mas tranquila, con opciones excelentes pero menos intensas." },
       { question: "Puedo visitar ambas ciudades en una semana?", answer: "Si, es el itinerario clasico. 3-4 dias en Madrid + 3 dias en Barcelona (o viceversa). El tren AVE las conecta en 2.5 horas. Es un viaje muy satisfactorio que te da una excelente vision de Espana." }
     ]
+  },
+  {
+    id: "italia-vespa",
+    slug: "italia-vespa",
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Italia en Vespa: Recorre la Toscana Como un Local", en: "Italy by Vespa: Explore Tuscany Like a Local" },
+    excerpt: { es: "Florencia, Siena, Chianti y pueblos medievales. La forma mas autentica de vivir la Toscana italiana.", en: "Florence, Siena, Chianti and medieval towns. The most authentic way to experience Italian Tuscany." },
+    category: "lujo",
+    categoryLabel: { es: "Lujo", en: "Luxury" },
+    date: "27 Dic 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["italia vespa", "toscana tour", "florencia siena", "chianti vespa", "pueblos toscana"],
+    featured: false,
+    sections: [
+      {
+        title: "La Toscana en Vespa: Una Experiencia Unica",
+        content: "Imagina recorrer colinas doradas cubiertas de vinedos, pasar por pueblos medievales donde el tiempo parece detenido, y detenerte en una trattoria familiar para almorzar pasta fresca con vista a los cipreses. Esto es la Toscana en Vespa: la forma mas romantica, autentica e inolvidable de explorar esta region italiana. No es solo transporte, es una experiencia que transforma tu viaje.",
+        list: ["Por que Vespa: La Vespa es un icono italiano. Recorrer la Toscana en Vespa es vivir Italia.", "Libertad total: Puedes detenerte donde quieras, explorar caminos secundarios, descubrir tesoros escondidos.", "Paisajes unicos: Las colinas toscanas, vinedos de Chianti, campos de girasoles, cipreses alineados.", "Experiencia local: Los italianos te saludan, te sonrien, te tratan como uno mas.", "Para quien: Parejas romanticas, aventureros, fotografos, amantes del vino y la gastronomia.", "Duracion ideal: 2-3 dias para recorrer lo esencial. 5-7 dias para explorar profundamente.", "Mejor epoca: Mayo-junio (primavera florecida) o septiembre-octubre (vendimia, colores dorados)."],
+        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Requisitos y Preparacion para Conducir Vespa",
+        content: "Antes de subirte a una Vespa en Italia, hay algunas cosas que debes saber:",
+        list: ["Licencia de conducir: Tu licencia latinoamericana es valida en Italia por turismo (hasta 90 dias).", "Permiso internacional: Recomendado aunque no siempre requerido. Tramitalo en tu pais antes de viajar.", "Edad minima: 18 anos para alquilar Vespa. Algunas empresas piden 21+.", "Experiencia previa: Recomendable haber manejado moto antes. Si eres principiante, practica en zona tranquila.", "Casco obligatorio: Siempre incluido en el alquiler. Es obligatorio por ley.", "Seguro: Basico incluido. Recomendamos seguro adicional (EUR 10-20/dia) que cubre danos propios.", "Documentos: Pasaporte, licencia, tarjeta de credito (deposito de garantia EUR 200-500).", "Equipaje: Mochila pequena. Algunas Vespas tienen baul trasero para una maleta pequena."],
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Donde Alquilar Vespa en la Toscana",
+        content: "Las mejores opciones para alquilar tu Vespa y comenzar la aventura:",
+        list: ["Florencia: La opcion mas popular. Muchas empresas en el centro. Desde EUR 70-100/dia.", "Siena: Buena alternativa si empiezas desde alli. Menos turistas. EUR 60-90/dia.", "San Gimignano: Pequenas empresas locales. Experiencia mas personalizada.", "Empresas recomendadas: Tuscany Vespa Tours, Walkabout Florence, My Tour in Tuscany.", "Tours guiados: Desde EUR 150/persona incluye Vespa, guia, almuerzo, cata de vinos.", "Alquiler libre: Mas flexible pero requiere navegacion. GPS o Google Maps esencial.", "Reserva anticipada: En temporada alta (mayo-septiembre) reserva 1-2 semanas antes.", "Tip: Elige Vespa 125cc minimo. Las 50cc son lentas para las colinas."]
+      },
+      {
+        title: "Ruta Clasica: Florencia - Chianti - Siena (2-3 Dias)",
+        content: "La ruta mas popular y perfecta para primera vez en la Toscana:",
+        list: ["Dia 1 - Florencia a Greve in Chianti: 40km. Salida temprano, llegada a Greve para almuerzo.", "Greve in Chianti: Plaza principal con cafes, tienda de vinos, mercado. Ambiente relajado.", "Por la tarde: Visita bodega en Chianti Classico. Cata de vinos EUR 15-25. Reservar con anticipacion.", "Noche: Dormir en agroturismo en Chianti. EUR 80-150/noche. Experiencia rural autentica.", "Dia 2 - Chianti a Siena: 50km por carreteras secundarias. Vistas espectaculares.", "Parada en Radda in Chianti: Pueblo medieval amurallado. Cafe, fotos, paseo.", "Parada en Castellina in Chianti: Fortaleza medieval, vistas panoramicas.", "Llegada a Siena: Piazza del Campo, Duomo, callejuelas medievales. Cena tradicional.", "Dia 3 - Siena a Florencia: Regreso via San Gimignano (las torres medievales) o directo 70km."],
+        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Ruta Romantica: Val d'Orcia y Pueblos Medievales (3-4 Dias)",
+        content: "Para quienes quieren profundizar y ver los paisajes mas fotografiados de Italia:",
+        list: ["Val d'Orcia: Patrimonio UNESCO. Los paisajes que ves en las postales de Italia.", "Dia 1: Siena - Montalcino. 40km. Pueblo del Brunello, el vino mas prestigioso de Italia.", "Montalcino: Fortaleza con vista, cata de Brunello (EUR 20-40). Dormir aqui.", "Dia 2: Montalcino - Pienza. 20km. 'La ciudad ideal' del Renacimiento. Pecorino famoso.", "Pienza: Queso pecorino, miel, vistas al Val d'Orcia. Almuerzo con vista.", "Por la tarde: Bagno Vignoni. Pueblo con plaza termal. Aguas calientes en el centro.", "Dia 3: Pienza - Montepulciano. 15km. Vino Nobile, arquitectura renacentista.", "Montepulciano: Bodegas en sotanos medievales. Cata en cuevas centenarias.", "Dia 4: Regreso a Siena o Florencia via carreteras panoramicas."],
+        image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Pueblos Imperdibles en Tu Ruta",
+        content: "Los pueblos mas encantadores que debes incluir en tu recorrido:",
+        list: ["San Gimignano: Las 14 torres medievales que sobreviven. 'Manhattan medieval'. Gelato premiado.", "Volterra: Murallas etruscas, alabastro artesanal, ambiente menos turistico que San Gimignano.", "Monteriggioni: Pueblo amurallado perfecto. Murallas completas. Aparece en Assassin's Creed.", "Colle di Val d'Elsa: Pueblo alto medieval, cristal artesanal (70% del cristal italiano).", "Certaldo: Pueblo natal de Boccaccio. Casa museo, funicular, vista panoramica.", "Montefioralle: Pueblo diminuto cerca de Greve. Pocas casas, sin coches, magia pura.", "Consejo: Llegua temprano (antes 10am) o tarde (despues 5pm) para evitar grupos de turistas.", "Parking: Siempre fuera de las murallas. Camina al centro historico."]
+      },
+      {
+        title: "Gastronomia Toscana en la Ruta",
+        content: "La mitad de la experiencia es la comida. Que comer y donde:",
+        list: ["Ribollita: Sopa densa de pan y verduras. Reconfortante. Plato campesino tradicional.", "Pappardelle al cinghiale: Pasta ancha con ragu de jabali. Sabor intenso.", "Bistecca alla fiorentina: El T-bone toscano. 1kg minimo. Solo en restaurantes de confianza.", "Pici: Pasta gruesa artesanal, tipica de Siena. Con ajo y tomate (aglione).", "Pecorino: Queso de oveja. Fresco, semi-curado, o curado. Con miel y nueces.", "Cantucci con Vin Santo: Galletas de almendra mojadas en vino dulce. Postre clasico.", "Donde comer: Evita restaurantes en plazas principales. Busca trattorias en calles secundarias.", "Presupuesto: Almuerzo EUR 15-25, cena EUR 30-50. Menu del dia (pranzo) es mas economico."],
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Vinos de la Toscana: Catas Imperdibles",
+        content: "La Toscana es una de las mejores regiones vinicolas del mundo:",
+        list: ["Chianti Classico: El mas famoso. Sangiovese. Gallo negro en la etiqueta. EUR 12-30/botella.", "Brunello di Montalcino: El mas prestigioso. Minimo 5 anos de envejecimiento. EUR 40-200/botella.", "Vino Nobile di Montepulciano: Elegante, menos conocido que Brunello pero excelente. EUR 20-50.", "Super Toscanos: Vinos premium que mezclan uvas locales e internacionales. Sassicaia, Ornellaia.", "Vin Santo: Vino dulce de postre. Perfecto con cantucci. EUR 15-40/botella.", "Catas: Reserva con anticipacion en bodegas. EUR 15-40/persona incluye 3-5 vinos.", "Consejo: No conduzcas Vespa despues de catar. Espera 1-2 horas o ve con acompanante.", "Compras: Compra directamente en bodega. Precios mejores que en tiendas turisticas."]
+      },
+      {
+        title: "Consejos de Seguridad en Vespa",
+        content: "Para que tu aventura sea segura y sin problemas:",
+        list: ["Carreteras: Las carreteras toscanas son estrechas y con curvas. Conduce con precaucion.", "Velocidad: Limite 50km/h en pueblos, 90km/h en carreteras. Respeta los limites.", "Curvas ciegas: Reduce velocidad en curvas. Los coches locales conducen rapido.", "Grava: Algunas carreteras secundarias tienen grava. Reduce velocidad, no frenes bruscamente.", "Sol y calor: Usa protector solar, hidratate. El sol toscano es fuerte.", "Lluvia: Si llueve, detente y espera. Las carreteras se vuelven muy resbaladizas.", "Gasolina: Las estaciones cierran 13:00-15:30 para almuerzo. Llena el tanque temprano.", "Emergencias: 112 es el numero de emergencias en Italia. Tu seguro incluye asistencia."],
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Donde Dormir: Agriturismos y Hoteles",
+        content: "La mejor experiencia es dormir en agriturismos, fincas rurales convertidas en alojamiento:",
+        list: ["Agroturismo: Finca con habitaciones. Desayuno casero, a veces cena. EUR 80-200/noche.", "Experiencia: Despertar entre vinedos, desayunar con productos de la finca, conocer a los duenos.", "Reserva: Booking.com o Agriturismo.it. Reserva 1-2 semanas antes en temporada alta.", "Alternativa: B&B en pueblos medievales. Ubicacion central, precios EUR 60-120/noche.", "Hoteles boutique: En Siena o pueblos grandes. Mas servicios pero menos autentico.", "Villa privada: Para grupos o familias. EUR 200-500/noche. Con piscina y cocina.", "Consejo: Quédate 2 noches en cada lugar. Cambiar alojamiento cada noche es agotador.", "Ubicacion: Chianti para primera noche, Siena o Val d'Orcia para segunda base."]
+      },
+      {
+        title: "Presupuesto: Cuanto Cuesta la Aventura",
+        content: "Estimacion de costos para un viaje de 3 dias en Vespa por la Toscana:",
+        list: ["Alquiler Vespa: EUR 70-100/dia x 3 dias = EUR 210-300.", "Gasolina: EUR 20-30 total (las Vespas son muy eficientes).", "Alojamiento agroturismo: EUR 100-150/noche x 2 noches = EUR 200-300.", "Comidas: EUR 50-80/dia x 3 dias = EUR 150-240.", "Catas de vino: EUR 25-50/persona x 2 catas = EUR 50-100.", "Entradas: Duomo Siena EUR 15, museos EUR 10-15.", "Total por persona: EUR 700-1,100 para 3 dias (compartiendo Vespa y habitacion en pareja).", "Tip: Reserva tour guiado de 1 dia (EUR 150-200) si prefieres no conducir."],
+        image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Tu Aventura Toscana con Trips Europa",
+        content: "En Tripseuropa.com organizamos experiencias en Vespa por la Toscana a la medida. Te reservamos la Vespa, seleccionamos los mejores agriturismos, agendamos catas en bodegas exclusivas, y te damos un itinerario detallado dia a dia con GPS y mapas. Tambien ofrecemos tours guiados en grupo pequeno si prefieres no conducir. La Toscana es uno de los destinos mas romanticos del mundo, y en Vespa es simplemente magica. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para disenar tu aventura italiana.",
+        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Necesito experiencia en moto para manejar Vespa en la Toscana?", answer: "Es muy recomendable tener experiencia basica. Las Vespas son faciles de manejar, pero las carreteras toscanas tienen curvas y colinas. Si nunca has manejado moto, practica primero en una zona tranquila o considera un tour guiado donde puedes ir de pasajero." },
+      { question: "Cual es la mejor epoca para recorrer la Toscana en Vespa?", answer: "Mayo-junio (primavera con flores) y septiembre-octubre (vendimia, colores dorados) son ideales. Evita julio-agosto: mucho calor (35 C+) y demasiados turistas. Abril es bueno pero puede llover." },
+      { question: "Cuanto cuesta alquilar una Vespa en la Toscana?", answer: "Entre EUR 70-100 por dia dependiendo del modelo y la empresa. El seguro basico esta incluido. Recomendamos pagar EUR 10-20 extra por seguro que cubra danos propios. Deposito de garantia EUR 200-500 con tarjeta de credito." },
+      { question: "Puedo llevar equipaje en la Vespa?", answer: "Limitado. Una mochila mediana cabe en el baul trasero de algunas Vespas. Para mas equipaje, deja maletas en el hotel de Florencia y viaja ligero. Los agriturismos ofrecen lavanderia si necesitas." },
+      { question: "Es seguro manejar Vespa en la Toscana?", answer: "Si, con precaucion. Las carreteras son estrechas pero bien mantenidas. Respeta los limites de velocidad, reduce en curvas, y no conduzcas despues de catar vinos. El casco es obligatorio y siempre incluido." },
+      { question: "Puedo hacer el recorrido sin saber italiano?", answer: "Absolutamente. En zonas turisticas todos hablan ingles basico. Google Translate ayuda para menus y senales. Los italianos son muy amables y te ayudaran con gestos si es necesario. En Tripseuropa.com te damos asistencia en espanol." }
+    ]
+  },
+  {
+    id: "mercados-navidenos",
+    slug: "mercados-navidenos",
+    image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Mercados Navidenos en Europa: Viena, Praga, Estrasburgo", en: "Christmas Markets in Europe: Vienna, Prague, Strasbourg" },
+    excerpt: { es: "Vin chaud, artesanias, luces y magia invernal. Los mejores mercados navidenos europeos para visitar.", en: "Mulled wine, crafts, lights and winter magic. The best European Christmas markets to visit." },
+    category: "cultura",
+    categoryLabel: { es: "Cultura", en: "Culture" },
+    date: "5 Nov 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["mercados navidenos europa", "navidad viena", "navidad praga", "estrasburgo navidad", "weihnachtsmarkt"],
+    featured: false,
+    sections: [
+      {
+        title: "La Magia de los Mercados Navidenos Europeos",
+        content: "Los mercados navidenos europeos son una tradicion de siglos que transforma las ciudades en escenarios de cuento de hadas. Casetas de madera iluminadas, aroma a canela y vino caliente, artesanias unicas, y un ambiente festivo incomparable. Para viajeros latinoamericanos, es una experiencia completamente diferente a la Navidad tropical: nieve, frio, luces, y esa atmosfera acogedora que los europeos llaman 'hygge'. Este articulo te guia por los mejores mercados para visitar en 2026.",
+        list: ["Tradicion: Los mercados navidenos nacieron en Alemania en el siglo XIV. Hoy hay miles en Europa.", "Temporada: Generalmente del ultimo viernes de noviembre al 23-26 de diciembre.", "Que encontrar: Artesanias, adornos navidenos, comida tipica, bebidas calientes, dulces.", "Atmosfera: Luces, musica, villancicos, a veces nieve. Magia pura para adultos y ninos.", "Para quien: Parejas romanticas, familias, amantes de la fotografia, coleccionistas de adornos.", "Clima: Frio (0-10 C). Abrigate bien. Guantes, gorro, bufanda son esenciales.", "Presupuesto: Entrada gratis. Espera gastar EUR 30-50/dia en comida, bebidas y recuerdos."],
+        image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Viena, Austria: El Mercado Mas Elegante",
+        content: "Viena es la capital de los mercados navidenos. La ciudad imperial se viste de gala con multiples mercados, cada uno con su propio encanto:",
+        list: ["Rathausplatz: El mas grande y famoso. Frente al Ayuntamiento. 150 casetas, pista de hielo.", "Fechas 2026: 15 noviembre - 26 diciembre.", "Imperdible: Ponche de frutas (Punsch), no solo Gluhwein. Prueba diferentes variantes.", "Schonbrunn: En el palacio. Ambiente mas exclusivo, menos masificado. Luces espectaculares.", "Spittelberg: Barrio bohemio. Artesanias de calidad, artistas locales, ambiente alternativo.", "Maria-Theresien-Platz: Entre los museos. Pequeno pero elegante. Casetas de diseno.", "Freyung: Mercado de artesanias de alta calidad. Productos austriacos autenticos.", "Tip: Viena tiene 20+ mercados. Visita al menos 3-4 para comparar.", "Alojamiento: Reserva con meses de anticipacion. Viena en Navidad es muy popular."],
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Praga, Republica Checa: Magia Medieval",
+        content: "Praga ofrece una experiencia navidena de cuento de hadas con precios mas accesibles que Europa Occidental:",
+        list: ["Plaza de la Ciudad Vieja: El mercado principal. Bajo el Reloj Astronomico. Arbol gigante iluminado.", "Fechas 2026: 30 noviembre - 6 enero (mas largo que otros mercados).", "Bebida tipica: Svarak (vino caliente checo) y Medovina (hidromiel caliente). EUR 3-4.", "Comida: Trdlo (pastel en forma de chimenea), jamon asado, salchichas checas.", "Plaza Wenceslao: Segundo mercado grande. Mas comercial pero animado.", "Namesti Miru: Mercado local, menos turistico. Productos checos autenticos.", "Precios: 30-40% mas baratos que Viena o Alemania. Excelente relacion calidad-precio.", "Tip: Praga esta hermosa de noche. Camina por el Puente de Carlos iluminado.", "Combinacion ideal: Praga + Viena o Praga + Dresde (Alemania)."],
+        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Estrasburgo, Francia: La Capital de la Navidad",
+        content: "Estrasburgo se autoproclama 'Capital de la Navidad' desde 1570. Tiene el mercado navideno mas antiguo de Francia:",
+        list: ["Marche de Noel: 10 mercados diferentes en toda la ciudad. Cada plaza tiene su tema.", "Fechas 2026: 22 noviembre - 24 diciembre.", "Christkindelsmärik: El mercado original desde 1570. Plaza Broglie. El mas tradicional.", "Grand Sapin: El arbol de Navidad mas alto de Europa (30m) en Place Kleber.", "Petite France: Barrio de canales iluminados. El escenario mas fotografiado.", "Bebida: Vin chaud (vino caliente) con canela y especias. EUR 4-5.", "Comida: Bredele (galletas alsacianas), pain d'epices (pan de especias), foie gras.", "Decoracion: Estrasburgo decora TODA la ciudad. Cada calle, cada ventana. Espectacular.", "Tip: Visita de noche para la iluminacion completa. Paseo en barco por los canales."],
+        image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Nuremberg, Alemania: El Mas Famoso del Mundo",
+        content: "El Christkindlesmarkt de Nuremberg es posiblemente el mercado navideno mas famoso del planeta:",
+        list: ["Historia: Desde 1628. Uno de los mercados mas antiguos y prestigiosos.", "Fechas 2026: 29 noviembre - 24 diciembre.", "Ubicacion: Hauptmarkt (plaza principal). 180 casetas de madera roja y blanca.", "Christkind: Una joven vestida de angel inaugura el mercado. Tradicion unica.", "Lebkuchen: Las famosas galletas de jengibre de Nuremberg. El souvenir perfecto.", "Nurnberger Bratwurst: Salchichas pequenas a la parrilla. 3 en un pan. Imperdibles.", "Gluhwein: Vino caliente en tazas coleccionables. EUR 4-5 (devuelven EUR 3 por la taza).", "Tip: Martes y miercoles menos lleno. Fines de semana muy masificado.", "Mercado de los ninos: Separate market for families with kids. Rides and activities."],
+        image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Colonia, Alemania: Bajo las Torres de la Catedral",
+        content: "Colonia tiene siete mercados navidenos, pero el del Domplatz (junto a la catedral) es espectacular:",
+        list: ["Am Dom: Bajo las torres goticas de la catedral. El escenario mas impresionante.", "Fechas 2026: 25 noviembre - 23 diciembre.", "Ambiente: Mezcla de tradicion y modernidad. Muy animado, mucha musica en vivo.", "Alter Markt: Mercado historico con casetas tradicionales y arbol gigante.", "Hafen-Weihnachtsmarkt: Mercado del puerto. Ambiente diferente, casetas en contenedores.", "Mercado de los gnomos: Heinzelmannchens (gnomos locales). Ideal para ninos.", "Bebida: Kolsch (cerveza local) fria incluso en invierno. Los locales la toman asi.", "Tip: Colonia tiene cerveza propia. Prueba Fruh o Gaffel en las casetas.", "Acceso: Tren desde Paris (4h), Amsterdam (3h), Frankfurt (1h). Excelente conexion."],
+        image: "https://images.unsplash.com/photo-1577613901382-3be88f14db42?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Budapest, Hungria: Elegancia a Buen Precio",
+        content: "Budapest ofrece mercados navidenos hermosos con precios de Europa del Este:",
+        list: ["Vorosmarty ter: El mercado principal. Plaza central. Casetas de madera tradicionales.", "Fechas 2026: 15 noviembre - 1 enero.", "Bebida: Foralt bor (vino caliente hungaro) con miel y especias. EUR 2-3.", "Comida: Langos (pan frito con queso), kurtoskalacs (pastel chimenea), gulash.", "Basilica de San Esteban: Mercado frente a la basilica. Pista de hielo incluida.", "Precios: 40-50% mas barato que Europa Occidental. Excelente valor.", "Tip: Budapest de noche es espectacular. Paseo por el Danubio iluminado.", "Combinacion: Budapest + Viena (2.5h en tren). Dos ciudades, dos ambientes.", "Banos termales: Unico en Europa. Bano en aguas termales en invierno. Experiencia increible."],
+        image: "https://images.unsplash.com/photo-1520986606214-8b456906c813?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Que Comprar en los Mercados Navidenos",
+        content: "Los mercados son perfectos para comprar regalos unicos y recuerdos especiales:",
+        list: ["Adornos navidenos: Bolas de vidrio soplado, estrellas de paja, figuras de madera. EUR 5-30.", "Artesanias locales: Cada region tiene su especialidad. Cristal en Bohemia, ceramica en Alemania.", "Velas: Velas artesanales aromaticas. Canela, pino, naranja. EUR 5-15.", "Lebkuchen/Galletas: Galletas de jengibre decoradas. El regalo perfecto. EUR 5-20.", "Productos gourmet: Vinos especiados, licores, mermeladas, chocolates. EUR 10-30.", "Textiles: Guantes, gorros, bufandas tejidas a mano. EUR 15-40.", "Juguetes de madera: Tradicion alemana. Cascanueces, piramides, carruseles. EUR 20-100.", "Tip: Compara precios entre casetas. Los mismos productos pueden variar mucho.", "Efectivo: Muchas casetas solo aceptan efectivo. Lleva EUR en billetes pequenos."]
+      },
+      {
+        title: "Que Comer y Beber en los Mercados",
+        content: "La gastronomia es parte esencial de la experiencia navidena:",
+        list: ["Gluhwein: Vino caliente con especias. El clasico. EUR 3-5. Tazas coleccionables.", "Punsch: Version austriaca con ron o brandy. Mas fuerte que el Gluhwein.", "Feuerzangenbowle: Vino con cono de azucar flameado. Espectacular.", "Bratwurst: Salchicha alemana a la parrilla. En pan con mostaza. EUR 4-6.", "Raclette: Queso fundido sobre pan o patatas. Tipico de Suiza y Alsacia. EUR 8-12.", "Kartoffelpuffer: Tortitas de patata fritas. Con salsa de manzana. EUR 4-6.", "Stollen: Pan dulce navideno con frutas y mazapan. Alemania. EUR 5-15.", "Churros: Si, tambien hay churros en algunos mercados. EUR 4-6.", "Tip: Prueba especialidades locales de cada ciudad. Cada mercado tiene lo suyo."],
+        image: "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos Practicos para tu Visita",
+        content: "Para aprovechar al maximo tu experiencia en los mercados navidenos:",
+        list: ["Ropa: Capas termicas, abrigo impermeable, guantes, gorro, bufanda. El frio es real.", "Calzado: Botas impermeables y comodas. Caminaras mucho en adoquines.", "Horarios: Generalmente 10:00-21:00. Algunos hasta 22:00 en fines de semana.", "Mejor momento: Atardecer (16:00-17:00) cuando encienden las luces. Magico.", "Evitar multitudes: Martes y miercoles son mas tranquilos. Fines de semana muy llenos.", "Reservas hotel: Reserva 2-3 meses antes. Los hoteles se llenan rapido en Navidad.", "Transporte: Trenes conectan todas las ciudades. Compra con anticipacion para mejores precios.", "Seguro: Contrata seguro de viaje. El frio puede enfermarte."]
+      },
+      {
+        title: "Itinerario Sugerido: 10 Dias Navidad en Europa",
+        content: "Un recorrido perfecto combinando los mejores mercados:",
+        list: ["Dias 1-2: Viena. Mercados de Rathausplatz, Schonbrunn, Spittelberg.", "Dia 3: Tren Viena-Budapest (2.5h). Tarde en mercados de Budapest.", "Dias 4-5: Budapest. Mercados, banos termales, paseo nocturno por el Danubio.", "Dia 6: Vuelo Budapest-Praga. Tarde en Plaza de la Ciudad Vieja.", "Dias 7-8: Praga. Mercados, Puente de Carlos, cerveza checa, cena de ganso.", "Dia 9: Tren Praga-Nuremberg (3h). Tarde en Christkindlesmarkt.", "Dia 10: Nuremberg. Manana mercado, vuelo de regreso por la tarde.", "Alternativa: Reemplaza Praga-Nuremberg por Estrasburgo si prefieres Francia.", "Costo estimado: EUR 2,000-3,000/persona (vuelos, hoteles, comidas, transportes)."],
+        image: "https://images.unsplash.com/photo-1510255914770-fae8c8a65808?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Vive la Navidad Europea con Trips Europa",
+        content: "En Tripseuropa.com organizamos viajes navidenos inolvidables a Europa. Te armamos itinerarios personalizados combinando los mejores mercados, te reservamos hoteles con anticipacion (crucial en esta epoca), coordinamos trenes y vuelos, y te damos un kit de supervivencia invernal. La Navidad europea es una experiencia que todo latinoamericano deberia vivir al menos una vez: la nieve, las luces, el Gluhwein, y esa magia que solo existe en esta epoca del ano. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje navideno.",
+        image: "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuando es la mejor epoca para visitar los mercados navidenos?", answer: "Los mercados abren generalmente del ultimo viernes de noviembre al 23-24 de diciembre. La primera semana de diciembre es ideal: mercados abiertos, menos multitudes que las ultimas semanas, y los vuelos/hoteles son algo mas baratos." },
+      { question: "Hace mucho frio en los mercados navidenos?", answer: "Si, espera temperaturas entre -5 C y 10 C. Necesitas abrigo grueso, capas termicas, guantes, gorro, y bufanda. Botas impermeables son esenciales. El Gluhwein ayuda a calentarse desde adentro." },
+      { question: "Cuanto dinero necesito para gastar en los mercados?", answer: "La entrada es gratis. Presupuesta EUR 30-50 por dia para comida, bebidas y pequenos recuerdos. Si quieres comprar artesanias de calidad, agrega EUR 50-100 extra. Las ciudades de Europa del Este (Praga, Budapest) son 30-40% mas baratas." },
+      { question: "Cual es el mejor mercado navideno para una primera visita?", answer: "Viena es la experiencia mas completa: multiples mercados, ciudad elegante, musica clasica, cafes historicos. Praga ofrece mejor relacion calidad-precio. Nuremberg es el mas autentico y tradicional alemán." },
+      { question: "Los mercados son buenos para viajar con ninos?", answer: "Si, son muy familiares. Muchos tienen areas especiales para ninos con carruseles, talleres de galletas, y visitas de San Nicolas. Nuremberg y Colonia tienen mercados infantiles dedicados." },
+      { question: "Puedo combinar varios mercados en un viaje?", answer: "Absolutamente, es lo recomendable. Las ciudades estan bien conectadas por tren. Viena-Budapest (2.5h), Praga-Nuremberg (3h), Paris-Estrasburgo (2h). Un viaje de 7-10 dias permite visitar 3-4 ciudades comodamente." }
+    ]
   }
 ];
