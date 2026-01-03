@@ -6005,5 +6005,99 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Es muy caro Amsterdam en temporada de tulipanes?", answer: "Si, es temporada alta y los precios de hoteles suben 30-50%. Presupuesta EUR 150-200/dia para un viaje moderado (sin vuelos). Reservar con antelacion ayuda a conseguir mejores precios." },
       { question: "Puedo llevar bulbos de tulipan a Latinoamerica?", answer: "Depende de tu pais. Muchos paises tienen restricciones fitosanitarias. Los bulbos holandeses vienen con certificados, pero verifica las regulaciones de tu pais antes de comprar. En el Mercado de Flores te informan." }
     ]
+  },
+  {
+    id: "flamenco-sevilla",
+    slug: "flamenco-sevilla",
+    image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Flamenco en Sevilla: Donde Ver Shows Autenticos", en: "Flamenco in Seville: Where to See Authentic Shows" },
+    excerpt: { es: "Tablaos, penas flamencas y festivales. Guia para vivir el flamenco como los locales.", en: "Tablaos, flamenco clubs and festivals. Guide to experience flamenco like the locals." },
+    category: "cultura",
+    categoryLabel: { es: "Cultura", en: "Culture" },
+    date: "14 Nov 2024",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["flamenco sevilla", "tablaos sevilla", "espectaculo flamenco", "penas flamencas", "baile flamenco", "cultura andaluza"],
+    featured: true,
+    sections: [
+      {
+        title: "El Flamenco: Patrimonio de la Humanidad",
+        content: "El flamenco es mucho mas que un espectaculo: es el alma de Andalucia, una expresion artistica que combina cante (canto), baile y toque (guitarra) en una experiencia emocional unica. Declarado Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2010, el flamenco nacio de la fusion de culturas gitana, arabe, judia y andaluza en el sur de Espana. Sevilla es una de las cunas de este arte, y experimentarlo aqui es vivirlo en su forma mas pura. Para viajeros latinoamericanos, el flamenco conecta con nuestras propias raices hispanicas y ofrece una experiencia cultural profunda e inolvidable.",
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Entender el Flamenco: Los Palos y Sus Emociones",
+        content: "Para apreciar mejor un espectaculo, conoce los diferentes estilos (palos) del flamenco:",
+        list: ["Alegrias: Ritmo alegre y festivo, originario de Cadiz. Ideal para iniciarse en el flamenco.", "Buleria: Rapido, intenso, improvisado. El palo mas tecnico y dificil. Explosivo.", "Solea: Profundo y melancolico. Considerado la 'madre' del flamenco. Ritmo lento y solemne.", "Seguiriya: El mas tragico y doloroso. Expresa sufrimiento profundo. Intensamente emotivo.", "Fandango: Origen arabe, muy popular en Huelva. Alegre pero con toques melancolicos.", "Tango flamenco: Sensual y cadencioso. Diferente al tango argentino. Ritmo marcado.", "Rumba: Influencia cubana, festivo y bailable. El mas accesible para nuevos publicos.", "Taranto: De las minas de Almeria. Melancolico, cuenta historias de trabajo duro."]
+      },
+      {
+        title: "Tablaos: La Experiencia Clasica del Flamenco",
+        content: "Los tablaos son locales dedicados exclusivamente al flamenco, con espectaculos profesionales de alta calidad:",
+        list: ["Casa del Flamenco: En el Barrio de Santa Cruz. Espacio intimo en palacio del siglo XV. EUR 22-26. Sin amplificacion, muy autentico.", "Museo del Baile Flamenco: Fundado por Cristina Hoyos. Combina museo + espectaculo. EUR 26. Ideal para entender la historia.", "Casa de la Memoria: 90 asientos, acustica perfecta. Sin cena, puro flamenco. EUR 20-22. Reserva obligatoria.", "Tablao El Arenal: Mas comercial pero artistas de primer nivel. Con cena opcional. EUR 42-85. Grupos grandes.", "Los Gallos: En activo desde 1966. Leyendas han actuado aqui. EUR 35. Ambiente tradicional.", "La Casa del Flamenco: Ubicacion perfecta junto a la Catedral. Palacio historico. EUR 24. Muy recomendado.", "Tip: Reserva siempre con antelacion, especialmente fines de semana y temporada alta."],
+        image: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Penas Flamencas: El Flamenco de los Locales",
+        content: "Las penas son clubes privados donde los aficionados se reunen a disfrutar del flamenco. Experiencia mas autentica y menos turistica:",
+        list: ["Pena Torres Macarena: En el barrio de la Macarena. Ambiente familiar, artistas locales. Entrada libre o muy economica.", "Pena Flamenca Triana: En el corazon del barrio mas flamenco. Solo abre ciertos dias. Consulta horarios.", "Pena Cultural Flamenca Nino Miguel: Shows los viernes. Ambiente intimo y cercano.", "Como funcionan: Suelen ser de acceso libre o con cuota minima (EUR 5-10). No hay reservas, llegas y te sientas.", "Que esperar: Ambiente informal, publico local, a veces los artistas surgen espontaneamente del publico.", "Desventaja: Horarios irregulares, no garantizado que haya espectaculo. Pregunta en tu hotel.", "Ventaja: Precios minimos, experiencia genuina, sin turistas. El flamenco 'de verdad'."],
+        image: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Triana: El Barrio del Flamenco",
+        content: "Triana, al otro lado del rio Guadalquivir, es cuna de leyendas del flamenco y mantiene viva la tradicion:",
+        list: ["Historia: Barrio gitano historico. Aqui nacieron artistas como Manolo Caracol, Camarillo y La Nina de los Peines.", "Calles clave: Calle Betis (junto al rio), Calle Pureza, Plaza del Altozano. Pasea y siente el ambiente.", "Bares con flamenco: T de Triana, Bar Anselma (improvisaciones espontaneas, cierra tarde), Lola de los Reyes.", "Centro Ceramica Triana: Museo de la ceramica tradicional. Triana es famosa por sus azulejos.", "Cuando ir: Jueves a sabado por la noche. Empieza tarde (22:00-23:00). La madrugada es cuando florece.", "Mercado de Triana: Para tapas de dia. Ambiente local, menos turistico que el centro.", "Tip: Cruza el Puente de Triana al atardecer. Vistas increibles de Sevilla con la Giralda al fondo."]
+      },
+      {
+        title: "Festivales de Flamenco en Sevilla",
+        content: "Si tu visita coincide con estos eventos, tendras experiencias excepcionales:",
+        list: ["Bienal de Flamenco (septiembre, anos pares): El festival mas importante del mundo. 2 semanas de espectaculos en teatros, plazas, tablaos. Artistas de talla mundial.", "Noche Blanca del Flamenco (junio): Una noche de espectaculos gratuitos por toda la ciudad. Ambiente magico.", "Festival de Cante de las Minas (agosto, La Union): A 4 horas de Sevilla, pero vale la pena si amas el cante jondo.", "Feria de Abril (abril): Aunque no es exclusivamente flamenco, veras sevillanas bailadas en todas las casetas. Vestidos de flamenca, ambiente unico.", "Semana Santa: Saetas (cante flamenco religioso) cantadas a las procesiones desde balcones. Emocionante.", "Potaje Gitano (junio, Utrera): Festival en pueblo cercano. Ambiente autentico, entrada gratuita.", "Consejo: Para la Bienal, reserva entradas y hotel con meses de antelacion. Se agotan rapidamente."],
+        image: "https://images.unsplash.com/photo-1566219417547-a1dc67b82a2a?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Flamenco Gratuito en Sevilla",
+        content: "No necesitas gastar mucho para experimentar el flamenco. Opciones gratuitas o muy economicas:",
+        list: ["Parque de Maria Luisa: Guitarristas practicando, a veces improvisaciones. Especialmente tardes de primavera.", "Alameda de Hercules: Zona bohemia con bares donde a veces hay flamenco espontaneo.", "Calle Sierpes: Musicos callejeros tocando guitarra flamenca.", "Jueves Flamencos (Fundacion Cajasol): Ciclo de conciertos gratuitos en verano. Consulta programacion.", "Iglesias durante Semana Santa: Saetas desde balcones, completamente gratuito.", "Videos en Museo del Baile Flamenco: El museo (EUR 10) incluye videos de actuaciones legendarias.", "Tip: Pregunta en la Oficina de Turismo (Plaza del Triunfo) por eventos flamencos gratuitos durante tu visita."]
+      },
+      {
+        title: "Como Elegir un Espectaculo de Flamenco",
+        content: "No todos los shows son iguales. Aqui como elegir segun tus preferencias:",
+        list: ["Primera vez: Casa del Flamenco o Museo del Baile Flamenco. Explicaciones, ambiente intimo, artistas de calidad.", "Experiencia autentica: Penas flamencas o bares en Triana. Menos pulido pero mas genuino.", "Lujo con cena: El Arenal o El Palacio Andaluz. Espectaculo + gastronomia. EUR 60-90.", "Aficionados serios: Bienal de Flamenco o conciertos en Teatro Lope de Vega.", "Familias con ninos: Museo del Baile Flamenco (visita de dia + show de tarde). Interactivo.", "Grupos grandes: Tablaos grandes como El Arenal o Auditorio Alvarez Quintero.", "Presupuesto ajustado: Penas flamencas (EUR 5-10) o flamenco callejero gratuito."]
+      },
+      {
+        title: "Etiqueta Durante un Espectaculo",
+        content: "Para disfrutar y respetar el arte flamenco, sigue estas normas:",
+        list: ["Ole: Gritalo cuando el artista hace algo excepcional. Es participacion, no interrupcion. Pero no lo digas todo el rato.", "Palmas: Si sabes llevar el ritmo, acompana con palmas suaves. Si no, mejor abstente.", "Silencio: Durante los momentos intensos (cante jondo), silencio absoluto. Es respeto.", "Fotos: Generalmente permitidas sin flash. Algunos tablaos las prohiben. Pregunta antes.", "Movil: Silenciado. Si suena, es muy mal visto.", "Propinas: No se espera en tablaos (pagas entrada). En penas o bares, apreciadas.", "Vestimenta: No hay codigo especifico. Casual elegante esta bien. Evita ropa de playa.", "Llegada: Puntualidad. Llegar tarde interrumpe y es irrespetuoso."]
+      },
+      {
+        title: "Clases de Flamenco Para Principiantes",
+        content: "Si quieres probar el baile flamenco, Sevilla ofrece clases para todos los niveles:",
+        list: ["Museo del Baile Flamenco: Clases de 1 hora para principiantes. EUR 25-30. Divertido e instructivo.", "Taller Flamenco: Escuela seria con opciones para turistas. Desde EUR 20/hora.", "Fundacion Cristina Heeren: Cursos mas largos, pero ofrecen talleres cortos para visitantes.", "Clases privadas: Muchos bailaores ofrecen clases particulares. EUR 40-60/hora.", "Que aprenderas: Postura, braceo basico, zapateado simple, expresion corporal.", "Que llevar: Ropa comoda pero ajustada. Zapatos de tacon bajo o zapatillas (te prestan zapatos de flamenco).", "Tip: Reserva con antelacion. Las clases para turistas se llenan, especialmente en temporada alta."],
+        image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Flamenco Fuera de Sevilla",
+        content: "Si tu itinerario incluye otras ciudades andaluzas, aqui donde encontrar flamenco autentico:",
+        list: ["Granada: Sacromonte, cuevas con espectaculos flamencos. Zambra, estilo unico gitano. EUR 20-35.", "Jerez de la Frontera: Cuna de grandes artistas. Pena La Buleria, Centro Andaluz de Flamenco. Festivales en febrero.", "Cadiz: Origen de las alegrias. Tablaos en el casco historico. Carnaval tiene influencia flamenca.", "Cordoba: Tablaos intimos, menos turistico que Sevilla. Conecta con ruta del Califato.", "Madrid: Corral de la Moreria, Casa Patas. Muy turistico pero artistas de primer nivel.", "Barcelona: Tablao de Carmen, Palacio del Flamenco. Flamenco de calidad, aunque no es tierra flamenca.", "Consejo: Un itinerario Sevilla-Jerez-Granada cubre las mejores experiencias flamencas de Espana."],
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Itinerario Flamenco: 2-3 Dias en Sevilla",
+        content: "Como organizar tu visita para maximizar la experiencia flamenca:",
+        list: ["Dia 1 tarde: Museo del Baile Flamenco (exposicion + historia). Noche: Tablao Casa del Flamenco o Casa de la Memoria.", "Dia 2: Paseo por Triana de dia (mercado, ceramica, ambiente). Noche: Pena flamenca o bares con flamenco en Triana.", "Dia 3: Clase de flamenco por la manana. Tarde libre para explorar. Noche: Otro tablao o improvisation en Alameda.", "Alternativa corta (1 dia): Tarde en Museo del Baile + Noche en tablao de calidad.", "Con Bienal: Programa varios espectaculos. Mezcla teatro grande con tablao intimo.", "Feria de Abril: Dedica un dia completo a la Feria. Sevillanas todo el dia y noche.", "Consejo: Combina flamenco con otras experiencias sevillanas (Alcazar, Catedral, tapas)."]
+      },
+      {
+        title: "Vive el Flamenco Autentico con Trips Europa",
+        content: "En Tripseuropa.com te llevamos mas alla de lo turistico. Reservamos entradas en los mejores tablaos con asientos preferenciales, organizamos visitas a penas flamencas con locales que nos conocen, y te llevamos a eventos y festivales que los turistas normales no encuentran. Disenamos itinerarios que combinan flamenco con la gastronomia, historia y cultura de Andalucia. Si quieres vivir el flamenco como un sevillano, no como un turista, contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia flamenca.",
+        image: "https://images.unsplash.com/photo-1540859922-33c8e7d8f18e?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cual es el mejor tablao de flamenco en Sevilla?", answer: "Depende de lo que busques. Para experiencia intima y autentica: Casa del Flamenco o Casa de la Memoria. Para historia y contexto: Museo del Baile Flamenco. Para espectaculo grande con cena: El Arenal. Todos tienen artistas de calidad, la diferencia es el ambiente." },
+      { question: "Cuanto cuesta ver un espectaculo de flamenco?", answer: "Tablaos: EUR 20-35 solo show, EUR 45-90 con cena. Penas flamencas: EUR 5-15 o gratis. Festivales: varia segun evento (algunos gratuitos). Presupuesta EUR 25-40 por persona para una buena experiencia en tablao." },
+      { question: "Que noche es mejor para ver flamenco?", answer: "Jueves a sabado son las noches mas animadas, con mas variedad de espectaculos. Viernes y sabado los tablaos estan llenos (reserva con antelacion). Los domingos y lunes algunos locales cierran. Entre semana hay menos turistas pero igual calidad." },
+      { question: "El flamenco es apropiado para ninos?", answer: "Si, el flamenco es apto para todas las edades. Los ninos suelen fascinarse con el zapateado y los vestidos. Elige espectaculos de tarde (19:00-20:00) que terminan a hora razonable. El Museo del Baile Flamenco es especialmente family-friendly." },
+      { question: "Necesito entender espanol para disfrutar el flamenco?", answer: "No es necesario. El flamenco comunica a traves de la emocion, el ritmo y el movimiento. Sentiras la pasion aunque no entiendas las letras. Algunos tablaos ofrecen programas con traducciones o explicaciones previas." },
+      { question: "Que diferencia hay entre tablao y pena flamenca?", answer: "El tablao es un local comercial con espectaculos programados, artistas profesionales y entrada de pago. La pena es un club privado donde aficionados se reunen; el ambiente es mas informal, los artistas pueden ser locales, y a veces surge flamenco espontaneo. El tablao es mas seguro para turistas; la pena, mas autentica pero impredecible." }
+    ]
   }
 ];
