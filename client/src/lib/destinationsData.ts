@@ -1,14 +1,17 @@
+export type MultiLangText = { es: string; en: string; pt: string };
+export type MultiLangArray = { es: string[]; en: string[]; pt: string[] };
+
 export interface ItineraryDay {
   day: number;
-  title: { es: string; en: string };
-  description: { es: string; en: string };
-  activities: { es: string[]; en: string[] };
+  title: MultiLangText;
+  description: MultiLangText;
+  activities: MultiLangArray;
 }
 
 export interface CategorizedItinerary {
   id: string;
-  name: { es: string; en: string };
-  description: { es: string; en: string };
+  name: MultiLangText;
+  description: MultiLangText;
   days: ItineraryDay[];
 }
 
@@ -20,33 +23,33 @@ export interface ItinerariesByCategory {
 
 export interface DestinationPackage {
   id: string;
-  name: { es: string; en: string };
-  duration: { es: string; en: string };
+  name: MultiLangText;
+  duration: MultiLangText;
   price: string;
   taxes: string;
-  includes: { es: string[]; en: string[] };
+  includes: MultiLangArray;
 }
 
 export interface DestinationFAQ {
-  question: { es: string; en: string };
-  answer: { es: string; en: string };
+  question: MultiLangText;
+  answer: MultiLangText;
 }
 
 export interface DestinationData {
   slug: string;
-  name: { es: string; en: string };
+  name: MultiLangText;
   heroImage: string;
   galleryImages: string[];
-  description: { es: string; en: string };
-  highlights: { es: string[]; en: string[] };
+  description: MultiLangText;
+  highlights: MultiLangArray;
   packages: DestinationPackage[];
   itinerary: ItineraryDay[];
   categorizedItineraries?: ItinerariesByCategory;
   faqs: DestinationFAQ[];
-  bestTimeToVisit: { es: string; en: string };
+  bestTimeToVisit: MultiLangText;
   currency: string;
-  language: { es: string; en: string };
-  visaInfo: { es: string; en: string };
+  language: MultiLangText;
+  visaInfo: MultiLangText;
 }
 
 export const DESTINATIONS_DATA: DestinationData[] = [
