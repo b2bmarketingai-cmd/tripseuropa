@@ -6772,5 +6772,97 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "El seguro cubre COVID-19?", answer: "La mayoria de los seguros actuales cubren gastos medicos por COVID-19, pero no todos cubren cancelacion por COVID. Lee la poliza cuidadosamente. Si COVID es una preocupacion, busca polizas que especificamente incluyan cobertura completa por COVID." },
       { question: "Puedo usar el seguro de mi tarjeta de credito?", answer: "El seguro de tarjetas de credito rara vez cumple los requisitos Schengen. Generalmente tienen cobertura insuficiente (EUR 10,000-20,000 vs. EUR 30,000 requeridos), no incluyen repatriacion, y tienen muchas exclusiones. Usalo como complemento, pero compra un seguro de viaje real." }
     ]
+  },
+  {
+    id: "ruta-del-amor",
+    slug: "ruta-del-amor",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Ruta del Amor: Paris y Madrid para Parejas", en: "Route of Love: Paris and Madrid for Couples" },
+    excerpt: { es: "La ciudad del amor y la capital espanola. Dos destinos romanticos perfectos para una escapada en pareja.", en: "The city of love and the Spanish capital. Two perfect romantic destinations for a couple's getaway." },
+    category: "lujo",
+    categoryLabel: { es: "Lujo", en: "Luxury" },
+    date: "26 Dic 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["paris madrid pareja", "viaje romantico europa", "luna de miel", "escapada romantica", "paris en pareja"],
+    featured: false,
+    sections: [
+      {
+        title: "Por Que Paris y Madrid Son Perfectas para Parejas",
+        content: "Paris es la ciudad del amor por excelencia: la Torre Eiffel iluminada, paseos por el Sena, cafes romanticos en Montmartre. Madrid ofrece un romanticismo diferente: tapas compartidas, atardeceres en el Retiro, flamenco apasionado y una energia nocturna inigualable. Juntas, estas dos capitales crean el viaje romantico perfecto: la elegancia francesa y la pasion espanola. Un combinado Paris-Madrid de 7-10 dias es ideal para una luna de miel, aniversario, o simplemente reconectar con tu pareja.",
+        list: ["Paris: La ciudad del amor, romanticismo clasico, elegancia francesa.", "Madrid: Pasion espanola, noches vibrantes, gastronomia para compartir.", "Conexion facil: Vuelo directo Paris-Madrid 2 horas, tren alta velocidad pronto disponible.", "Contraste perfecto: De la sofisticacion parisina a la alegria madrilena.", "Ideal para: Luna de miel, aniversarios, pedidas de mano, o simplemente romance.", "Temporada: Primavera (abril-mayo) y otono (septiembre-octubre) son perfectos.", "Presupuesto: EUR 200-400/dia en pareja para una experiencia romantica de calidad."],
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Paris Romantico: Dia 1-3",
+        content: "Tus primeros dias en la ciudad del amor. Aqui un itinerario romantico optimizado:",
+        list: ["Dia 1 Manana: Llegada, check-in hotel boutique en Le Marais o Saint-Germain. Paseo por Ile de la Cite.", "Dia 1 Tarde: Catedral de Notre-Dame (exterior), Shakespeare and Company, cafe en la orilla del Sena.", "Dia 1 Noche: Crucero por el Sena al atardecer (EUR 15-20/persona). Cena en un bistro romantico.", "Dia 2 Manana: Montmartre, Sacre-Coeur, desayuno en Place du Tertre. Eviten artistas que cobran por retratos.", "Dia 2 Tarde: Museo de Orsay (impresionistas), paseo por Tuileries hasta Place de la Concorde.", "Dia 2 Noche: Torre Eiffel al atardecer, champagne en el segundo piso (EUR 25-50). Cena en Champ de Mars.", "Dia 3: Versalles (excursion de medio dia, EUR 20), tarde libre para compras o museo Rodin."],
+        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Experiencias Romanticas Imperdibles en Paris",
+        content: "Paris ofrece experiencias unicas para parejas. Estas son las mas romanticas:",
+        list: ["Candados del amor: Aunque los del Pont des Arts fueron retirados, hay nuevos spots en el Pont de l'Archeveche.", "Picnic en los jardines: Compren queso, baguette, vino en un marche y disfruten en Luxembourg o Tuileries.", "Moulin Rouge: Espectaculo legendario. EUR 100-200/persona con champagne. Reservar con anticipacion.", "Cafe de Flore / Les Deux Magots: Los cafes literarios mas famosos. EUR 8-12 por un cafe con historia.", "Paseo nocturno: Paris iluminado es magico. Caminen del Louvre a la Torre Eiffel por la noche.", "Macarons en Laduree: La casa original en Champs-Elysees. EUR 2-3 por macaron, caja para llevar EUR 20-40.", "Misa en Notre-Dame: Cuando reabra, la experiencia espiritual es unica (gratis)."],
+        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Donde Hospedarse en Paris para Parejas",
+        content: "El hotel correcto transforma la experiencia. Estas son nuestras recomendaciones por zona y presupuesto:",
+        list: ["Le Marais: Barrio gay-friendly, boutiques, ambiente joven. Hotel Caron de Beaumarchais EUR 180-250.", "Saint-Germain: Literario, elegante, cafes clasicos. Hotel d'Aubusson EUR 300-450.", "Montmartre: Bohemio, artistico, vistas a la ciudad. Hotel Particulier EUR 350-500.", "Ile Saint-Louis: Exclusivo, tranquilo, central. Hotel Saint-Louis en l'Isle EUR 200-300.", "Opera: Central, teatros, grandes almacenes. Hotel Edouard 7* EUR 250-400.", "Airbnb: Apartamento con vista a la Torre Eiffel desde EUR 150-250/noche.", "Consejo: Pide habitacion con vista, balcon, o detalle romantico al reservar."],
+        image: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "De Paris a Madrid: Opciones de Transporte",
+        content: "Hay varias formas de conectar las dos capitales. La mejor depende de tu presupuesto y tiempo:",
+        list: ["Vuelo directo: 2 horas. Air France, Iberia, Vueling. Desde EUR 50-150 ida. Opcion mas rapida.", "Tren nocturno: Trenhotel Elipsos (cuando opere). Romantico, despiertas en Madrid. EUR 80-150.", "Tren alta velocidad: Pronto con conexion via Barcelona. 6-7 horas totales.", "Coche: 12 horas. Solo recomendable si quieren parar en Burdeos, San Sebastian, o Bilbao.", "Consejo: Vuelo por la manana, llegas a Madrid para almuerzo y tienes toda la tarde.", "Aeropuertos: Vuelen de CDG o Orly a Madrid Barajas. Metro/taxi facil en ambos.", "Precio/tiempo: Vuelo gana en ambos. Reserven con 2-3 semanas de anticipacion."]
+      },
+      {
+        title: "Madrid Romantico: Dia 4-6",
+        content: "Madrid ofrece un romanticismo diferente: pasional, espontaneo, nocturno. Tu itinerario:",
+        list: ["Dia 4 Manana: Llegada, check-in en barrio de las Letras o Salamanca. Desayuno en San Gines (churros con chocolate).", "Dia 4 Tarde: Museo del Prado (EUR 15, gratis 18:00-20:00). Paseo por Retiro, alquilen bote en el estanque (EUR 6).", "Dia 4 Noche: Tapas en La Latina (El Tigre, Casa Lucio). Tertulia en azotea con vistas.", "Dia 5 Manana: Palacio Real (EUR 14), Catedral de la Almudena (gratis), Mercado de San Miguel (tapas).", "Dia 5 Tarde: Gran Via, compras, Callao. Descanso en hotel.", "Dia 5 Noche: Show de flamenco en Corral de la Moreria (EUR 50-80 con bebida). Cena tardia en Malasana.", "Dia 6: Excursion Toledo o Segovia (EUR 30-50 tour), o dia libre para shopping y spa."],
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Experiencias Romanticas Imperdibles en Madrid",
+        content: "Madrid tiene su propio encanto romantico. No te pierdas estas experiencias:",
+        list: ["Atardecer en el Templo de Debod: Templo egipcio con las mejores vistas del atardecer madrileno. Gratis.", "Flamenco intimo: Tablao en Lavapiés o Las Tablas. Mas autentico y economico que Corral de la Moreria.", "Rooftop bars: Circulo de Bellas Artes (EUR 5 entrada), Dear Hotel, Gymage. Vistas y cocktails.", "Paseo nocturno por el Retiro: El parque abre hasta medianoche en verano. Romantico bajo las estrellas.", "Chocolateria San Gines: Abierta 24 horas. Churros con chocolate a las 3am despues de una noche de fiesta.", "Rastro dominical: Si estan el domingo, el mercadillo mas grande de Espana. Romantico buscar tesoros juntos.", "Cena en Botin: Restaurante mas antiguo del mundo (1725). Cochinillo asado. EUR 40-60/persona. Reservar."],
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Donde Hospedarse en Madrid para Parejas",
+        content: "Madrid tiene barrios con personalidades muy diferentes. Elige segun tu estilo:",
+        list: ["Barrio de las Letras: Literario, central, ambiente. Hotel ME Madrid EUR 200-350. Only YOU Boutique EUR 150-250.", "Salamanca: Elegante, lujoso, compras. Hotel Rosewood Villa Magna EUR 500+. Hotel Unico EUR 300-450.", "Malasana: Hipster, artistico, nocturno. Hotel 7 Islas EUR 100-150. Room Mate Oscar EUR 120-180.", "La Latina: Castizo, tapas, autentico. Posada del Leon de Oro EUR 80-120.", "Gran Via: Central, teatros, bullicioso. Hotel Atlantico EUR 150-200.", "Airbnb: Atico con terraza desde EUR 100-180/noche.", "Consejo: Eviten hoteles en Sol/Puerta del Sol, muy turistico y ruidoso para romance."]
+      },
+      {
+        title: "Gastronomia Romantica: Donde Comer en Pareja",
+        content: "Compartir comida es uno de los actos mas romanticos. Estos son los mejores lugares para parejas:",
+        list: ["Paris - Le Comptoir du Pantheon: Bistro clasico, terraza, EUR 30-40/persona. Perfecto para cena romantica.", "Paris - Pink Mamma: Italiano trendy, decoracion increible, EUR 25-35/persona. Reservar obligatorio.", "Paris - Laperouse: Historico, cabinets prives (saloncitos privados), EUR 80-100/persona. Experiencia unica.", "Madrid - Casa Lucio: Huevos rotos legendarios, ambiente castizo, EUR 35-50/persona.", "Madrid - StreetXO: Fusion asiatica de David Munoz, informal, EUR 30-40/persona.", "Madrid - Coque: 2 estrellas Michelin, experiencia completa, EUR 150-200/persona. Para ocasiones especiales.", "Consejo: Reserven con anticipacion, pidan mesa apartada o con vista."],
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Presupuesto para Escapada Romantica Paris-Madrid",
+        content: "Un viaje romantico de 7 dias Paris-Madrid para dos personas. Presupuesto detallado 2026:",
+        list: ["Vuelos Latinoamerica-Paris + Madrid-Latinoamerica: EUR 1,200-1,800 por pareja (multi-city).", "Vuelo Paris-Madrid: EUR 100-200 por pareja.", "Hotel Paris 3 noches (4 estrellas): EUR 600-900 total.", "Hotel Madrid 3 noches (4 estrellas): EUR 400-600 total.", "Comidas (desayuno, almuerzo, cena): EUR 100-150/dia pareja = EUR 700-1,050 total.", "Actividades y entradas: EUR 200-400 pareja (museos, crucero, flamenco).", "Transporte local: EUR 100-150 pareja (metro, taxis, Uber).", "Extras (compras, souvenirs, propinas): EUR 200-400.", "Total estimado: EUR 3,500-5,500 por pareja para viaje romantico de calidad."]
+      },
+      {
+        title: "Consejos para una Escapada Romantica Perfecta",
+        content: "Pequenos detalles que hacen la diferencia en un viaje en pareja:",
+        list: ["Desconecten: Limiten el uso del telefono. Vivan el momento juntos, no para Instagram.", "Sorpresas: Planeen una sorpresa secreta cada uno. Una cena especial, un regalo, una experiencia.", "Tiempo libre: No planeen cada minuto. Dejen espacio para perderse y descubrir juntos.", "Fotos: Contraten fotografo profesional 1 hora (EUR 150-250) para fotos de pareja increibles.", "Madruguen: Algunos lugares (Torre Eiffel, Retiro) son mas romanticos al amanecer sin multitudes.", "Noches: Ambas ciudades son magicas de noche. No se acuesten temprano.", "Comunicacion: Viajan para reconectar. Hablen, compartan, disfruten la compania."],
+        image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Tu Escapada Romantica con Trips Europa",
+        content: "En Tripseuropa.com disenamos escapadas romanticas a medida para parejas latinoamericanas. Te conseguimos los hoteles boutique mas romanticos, reservamos los restaurantes perfectos, organizamos sorpresas especiales, y nos encargamos de todos los detalles para que solo te preocupes por disfrutar con tu pareja. Nuestros paquetes romanticos Paris-Madrid incluyen vuelos, hoteles con encanto, transfers privados, experiencias exclusivas, y asistencia 24/7 en espanol. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje romantico perfecto.",
+        image: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuantos dias necesito para Paris y Madrid en pareja?", answer: "Recomendamos minimo 7 dias: 3-4 en Paris, 3-4 en Madrid. Esto permite un ritmo relajado, perfecto para una escapada romantica. Con 10 dias puedes anadir una excursion a Versalles, Toledo, o incluso una noche en la Provenza o Andalucia." },
+      { question: "Cual es la mejor epoca para un viaje romantico a Paris y Madrid?", answer: "Primavera (abril-mayo) y otono (septiembre-octubre) son ideales. Clima agradable, menos turistas que en verano, y precios mas razonables. Paris en primavera con flores y Madrid en otono con luz dorada son especialmente romanticos." },
+      { question: "Cuanto cuesta una escapada romantica Paris-Madrid?", answer: "Para 7 dias, espera EUR 3,500-5,500 por pareja incluyendo vuelos, hoteles 4 estrellas, comidas de calidad, y experiencias. Puedes gastar menos (EUR 2,500) siendo mas austero o mas (EUR 8,000+) eligiendo hoteles de lujo y restaurantes Michelin." },
+      { question: "Es mejor empezar por Paris o por Madrid?", answer: "Empezar por Paris es ligeramente mejor: llegas con energia fresca para la ciudad mas grande y turistica, y terminas en Madrid con su ambiente relajado y nocturno. Pero ambos ordenes funcionan bien." },
+      { question: "Necesitamos reservar restaurantes romanticos con anticipacion?", answer: "Si, especialmente para cenas de viernes y sabado, restaurantes famosos, y lugares con vistas especiales. Reserva 1-2 semanas antes para restaurantes normales, 1-2 meses para Michelin o muy populares. Apps como TheFork facilitan la reserva." },
+      { question: "Que sorpresas romanticas podemos organizar?", answer: "Algunas ideas: Propuesta de matrimonio en Torre Eiffel (podemos organizar fotografo y champagne), cena privada en bodega de vinos, paseo en globo sobre los vinedos, spa de lujo, show privado de flamenco. Contactanos en Tripseuropa.com y te ayudamos a organizar sorpresas inolvidables." }
+    ]
   }
 ];
