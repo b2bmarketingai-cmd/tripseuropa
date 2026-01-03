@@ -920,6 +920,75 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "barcelona-gaudi",
+    slug: "barcelona-gaudi",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Ruta Gaudi en Barcelona: Sagrada Familia, Park Guell y Mas", en: "Gaudi Route in Barcelona: Sagrada Familia, Park Guell and More" },
+    excerpt: { es: "Todas las obras del arquitecto mas famoso de Espana. Entradas, horarios y consejos de visita.", en: "All the works of Spain's most famous architect. Tickets, schedules and visiting tips." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "16 Oct 2024",
+    readTime: 10,
+    author: "Trips Europa",
+    keywords: ["gaudi barcelona", "sagrada familia", "park guell", "casa batllo", "la pedrera"],
+    featured: false,
+    sections: [
+      {
+        title: "Antoni Gaudi: El Genio de Barcelona",
+        content: "Antoni Gaudi (1852-1926) es el arquitecto mas celebre de Espana y uno de los mas originales del mundo. Su estilo unico, inspirado en formas naturales, colores vibrantes y una espiritualidad profunda, transformo Barcelona en un museo al aire libre. Siete de sus obras son Patrimonio de la Humanidad. Para viajeros latinoamericanos, la ruta Gaudi es una experiencia imprescindible que combina arte, arquitectura y la vibrante energia de Barcelona.",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "La Sagrada Familia: La Obra Maestra Inacabada",
+        content: "La Basilica de la Sagrada Familia es la obra cumbre de Gaudi y el monumento mas visitado de Espana. Comenzada en 1882, sigue en construccion mas de 140 anos despues. Se espera completarla en 2026, centenario de la muerte de Gaudi. El interior es una explosion de luz y color que deja sin aliento a todos los visitantes.",
+        list: ["Fachadas: Nacimiento (Gaudi), Pasion (moderna, dramatica), Gloria (en construccion)", "Interior: Columnas como arboles, vidrieras que crean arcoiris de luz", "Torres: Sube a las torres para vistas panoramicas de Barcelona", "Cripta: Tumba de Gaudi, incluida en la visita", "Entrada: 26-40 EUR segun opciones, RESERVA OBLIGATORIA online", "Horarios: 9:00-20:00 (varia por temporada), cerrado 25-26 diciembre y 1-6 enero"]
+      },
+      {
+        title: "Park Guell: El Jardin de los Suenos",
+        content: "El Park Guell es un jardin publico con elementos arquitectonicos de Gaudi, originalmente disenado como urbanizacion de lujo que fracaso comercialmente. Hoy es uno de los espacios mas magicos de Barcelona, con mosaicos de trencadis, formas organicas y vistas espectaculares de la ciudad.",
+        list: ["Zona Monumental: Requiere entrada (10-14 EUR), incluye la salamandra, sala hipostila y banco ondulante", "Zonas gratuitas: Jardines y miradores, bellisimos tambien", "Salamandra (El Drac): El dragon de mosaico, icono de Barcelona", "Banco ondulante: El banco mas largo del mundo, cubierto de ceramica", "Casa-Museo Gaudi: Donde vivio el arquitecto, entrada adicional", "Mejor hora: Apertura (8:30 AM) o atardecer para fotos y menos gente"]
+      },
+      {
+        title: "Casa Batllo: La Casa de los Huesos",
+        content: "La Casa Batllo, en el Paseo de Gracia, es una de las obras mas fantasticas de Gaudi. Reforma de un edificio existente, la fachada ondulante parece un ser vivo, con balcones como mascaras, tejado como dragon y un interior que fluye como el mar.",
+        list: ["Fachada: Mosaicos brillantes, balcones de hierro como mascaras", "Interior: Patios de luz, escalera organica, muebles disenados por Gaudi", "Tejado: Chimeneas esculturales, columna de San Jorge matando al dragon", "Visita nocturna: Experiencia especial con musica y copas, muy recomendable", "Entrada: 35-45 EUR, incluye audioguia con realidad aumentada", "Consejo: Reserva la primera hora (9 AM) para evitar multitudes"]
+      },
+      {
+        title: "Casa Mila (La Pedrera): La Cantera",
+        content: "La Casa Mila, conocida como La Pedrera por su apariencia de cantera, es el ultimo edificio civil de Gaudi antes de dedicarse exclusivamente a la Sagrada Familia. Su fachada ondulante de piedra y sus chimeneas esculturales la convierten en una obra maestra del modernismo.",
+        list: ["Fachada: Piedra ondulante sin lineas rectas, balcones de hierro forjado", "Azotea: Chimeneas como guerreros, vistas panoramicas de Barcelona", "Espai Gaudi: Museo en el atico sobre la obra de Gaudi", "Piso de Epoca: Apartamento amueblado al estilo del siglo XX", "Entrada: 25-35 EUR, nocturnas con espectaculo de luz", "Horarios: 9:00-20:30, nocturnas hasta 23:00 en verano"]
+      },
+      {
+        title: "Palau Guell: El Patron de Gaudi",
+        content: "El Palau Guell fue el primer encargo importante de Gaudi, construido para el industrial Eusebi Guell. Este palacio urbano muestra el nacimiento del estilo gaudiniano, con una fachada sobria que esconde un interior espectacular.",
+        list: ["Ubicacion: Cerca de Las Ramblas, en el Raval", "Interior: Salon central con cupula parabolica, juegos de luz", "Azotea: Chimeneas coloridas precursoras de las de La Pedrera", "Sotano: Caballerizas con columnas de ladrillo", "Entrada: 12 EUR, menos concurrido que otras obras", "Patrimonio UNESCO: Una de las 7 obras de Gaudi protegidas"]
+      },
+      {
+        title: "Otras Obras de Gaudi en Barcelona",
+        content: "Ademas de los monumentos principales, Barcelona esconde otras joyas de Gaudi menos conocidas pero igualmente fascinantes.",
+        list: ["Casa Vicens: Primera obra importante de Gaudi, estilo orientalista, Gracia", "Casa Calvet: La mas 'convencional' de Gaudi, restaurante en planta baja", "Colegio Teresiano: Sobrio exterior, luminoso interior con arcos parabolicos", "Pavellons Guell: Puerta del Dragon en hierro forjado, Pedralbes", "Torre Bellesguard: Estilo neogotico, menos visitada, visitas guiadas", "Farolas de Plaza Real: Disenadas por un joven Gaudi, Las Ramblas"]
+      },
+      {
+        title: "Como Organizar tu Ruta Gaudi",
+        content: "Con tantas obras que ver, planificar bien es esencial. Te proponemos itinerarios segun el tiempo disponible.",
+        list: ["1 dia intenso: Sagrada Familia (manana) + Casa Batllo + La Pedrera (tarde) + Park Guell (atardecer)", "2 dias relajados: Dia 1: Sagrada Familia + Hospital Sant Pau. Dia 2: Park Guell + Casa Batllo + La Pedrera + Palau Guell", "Ruta completa (3+ dias): Anade Casa Vicens, Torre Bellesguard, Pavellons Guell", "Pase combinado: Algunos monumentos ofrecen entradas combinadas con descuento", "Reservas: TODAS las atracciones principales requieren reserva previa", "Transporte: Metro lineas L3 y L4 conectan las principales obras"]
+      },
+      {
+        title: "Consejos Practicos",
+        content: "Estos consejos te ayudaran a disfrutar al maximo de la ruta Gaudi.",
+        list: ["Reserva con antelacion: 2-4 semanas antes en temporada alta, especialmente Sagrada Familia", "Primera hora: Las atracciones estan mas vacias en la apertura", "Zapatos comodos: Caminaras mucho, algunas visitas incluyen escaleras", "Agua y protector solar: Park Guell tiene poca sombra", "Audioguias: Incluidas en la mayoria de entradas, muy recomendables", "Fotografia: Permitida sin flash en todos los lugares", "Evita agosto: Barcelona muy calurosa y llena de turistas"]
+      }
+    ],
+    faqs: [
+      { question: "Cuanto cuesta ver todas las obras de Gaudi?", answer: "Los costos aproximados son: Sagrada Familia 26-40 EUR, Park Guell 10-14 EUR, Casa Batllo 35-45 EUR, La Pedrera 25-35 EUR, Palau Guell 12 EUR. Total aproximado: 110-150 EUR si visitas las 5 principales. Hay pases combinados con descuento." },
+      { question: "Cuantos dias necesito para la ruta Gaudi?", answer: "Minimo 1 dia intenso para las 3 principales (Sagrada Familia, Casa Batllo, Park Guell). Idealmente 2 dias para disfrutar sin prisas. Si quieres verlo todo, incluyendo obras menores, necesitas 3-4 dias." },
+      { question: "Es necesario reservar entradas con anticipacion?", answer: "ABSOLUTAMENTE. La Sagrada Familia y Park Guell agotan entradas con dias o semanas de antelacion. Casa Batllo y La Pedrera tambien tienen cupos limitados. Reserva todo online antes de tu viaje." },
+      { question: "Cual es la mejor obra de Gaudi para visitar?", answer: "La Sagrada Familia es imprescindible - es su obra maestra y una experiencia espiritual unica. Si solo puedes ver dos, anade Park Guell o Casa Batllo. Cada obra tiene su magia especial." },
+      { question: "Las obras de Gaudi son accesibles para sillas de ruedas?", answer: "La Sagrada Familia, Casa Batllo y La Pedrera tienen buena accesibilidad (ascensores, rampas). Park Guell es mas dificil por las pendientes. Palau Guell tiene acceso limitado. Consulta cada web oficial para detalles." },
+      { question: "Puedo visitar las obras de Gaudi gratis?", answer: "Park Guell tiene zonas gratuitas (aunque la zona monumental es de pago). Las fachadas de Casa Batllo y La Pedrera se ven desde la calle. La Sagrada Familia solo permite ver el exterior sin entrada. Algunos dias festivos hay acceso gratuito limitado." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
