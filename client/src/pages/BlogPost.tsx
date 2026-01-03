@@ -165,17 +165,6 @@ export default function BlogPost() {
               <section key={index} className="mb-10">
                 <h2 className="text-2xl font-display text-accent mb-4">{section.title}</h2>
                 
-                {section.image && (
-                  <div className="relative w-full aspect-video md:aspect-[16/9] rounded-lg overflow-hidden mb-4">
-                    <img 
-                      src={section.image} 
-                      alt={section.title}
-                      className="w-full h-full object-cover object-center"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
-                
                 <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
                 
                 {section.list && (
