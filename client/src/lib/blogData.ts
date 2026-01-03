@@ -4639,5 +4639,88 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Puedo viajar a Europa con boleto solo de ida?", answer: "No es recomendable y puede resultar en denegacion de entrada. Siempre debes tener boleto de salida del espacio Schengen dentro de los 90 dias permitidos. Si no tienes fecha fija, compra un boleto modificable o uno economico a un pais fuera de Schengen." },
       { question: "Que pasa si mi pasaporte vence durante el viaje?", answer: "No podras entrar a Europa. Tu pasaporte debe tener al menos 3 meses de validez DESPUES de tu fecha de salida del espacio Schengen. Si vence antes, renuevalo antes de comprar tus boletos." }
     ]
+  },
+
+  {
+    id: "cinque-terre-guia",
+    slug: "cinque-terre-guia",
+    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Cinque Terre: Las 5 Aldeas Coloridas de Italia", en: "Cinque Terre: Italy's 5 Colorful Villages" },
+    excerpt: { es: "Riomaggiore, Manarola, Corniglia, Vernazza y Monterosso. Como visitarlas en un dia.", en: "Riomaggiore, Manarola, Corniglia, Vernazza and Monterosso. How to visit them in one day." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "20 Dic 2026",
+    readTime: 9,
+    author: "Trips Europa",
+    keywords: ["cinque terre", "cinco tierras italia", "aldeas coloridas italia", "liguria italia", "pueblos costa italia", "riomaggiore manarola"],
+    featured: true,
+    sections: [
+      {
+        title: "Cinque Terre: Un Sueno de Colores Sobre el Mar",
+        content: "Cinque Terre, las Cinco Tierras, es uno de los destinos mas fotografiados de Italia y del mundo entero. Cinco pequenas aldeas de pescadores aferradas a acantilados verticales sobre el Mar de Liguria, con casas de colores pastel que parecen pintadas por un artista. Riomaggiore, Manarola, Corniglia, Vernazza y Monterosso al Mare forman este Patrimonio de la Humanidad UNESCO que atrae millones de visitantes cada ano. En Tripseuropa.com hemos recorrido estos senderos decenas de veces y te contamos todo lo que necesitas saber para disfrutar Cinque Terre al maximo.",
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Riomaggiore: La Puerta de Entrada",
+        content: "Riomaggiore es el pueblo mas oriental de Cinque Terre y suele ser el punto de partida para muchos visitantes. Sus casas de colores rosa, amarillo y terracota se apilan en una garganta estrecha que desciende hasta un pequeno puerto. La calle principal, Via Colombo, esta llena de restaurantes, tiendas de artesania y gelaterias. Desde aqui comenzaba la famosa Via dell'Amore hacia Manarola, aunque actualmente esta cerrada por reparaciones. Los asesores de Trips Europa te recomiendan llegar temprano para disfrutar las calles sin multitudes.",
+        list: ["Que ver: Puerto pesquero, Iglesia de San Giovanni Battista, castillo medieval", "Mejor foto: Desde el mirador sobre el puerto al atardecer", "Gastronomia: Focaccia ligure, anchoas fritas, vino local Sciacchetra", "Tip: Sube hasta el castillo para las mejores vistas panoramicas", "Tiempo recomendado: 1-2 horas para recorrer con calma"],
+        image: "https://images.unsplash.com/photo-1538599955786-6d7296a26e01?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Manarola: La Postal Perfecta",
+        content: "Manarola es, probablemente, el pueblo mas fotografiado de Cinque Terre. Sus casas de colores vibrantes formando una piramide sobre la roca negra del acantilado crean una imagen que parece irreal. Es el segundo pueblo mas pequeno de los cinco, pero quiza el mas pintoresco. Aqui se produce el Sciacchetra, el vino dulce tipico de la region. El sendero hacia Corniglia ofrece vistas espectaculares de la costa. En Tripseuropa.com incluimos Manarola en todos nuestros tours de la Liguria.",
+        list: ["Que ver: El puerto diminuto, vinedos en terrazas, torre campanario", "Mejor foto: Desde el sendero de Punta Bonfiglio al atardecer", "Gastronomia: Sciacchetra (vino dulce), pesto genoves fresco", "Tip: Visita la marina para ver los barcos de colores", "Pesebre gigante: En Navidad se ilumina el pesebre mas grande del mundo en la colina"],
+        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Corniglia: El Pueblo en las Alturas",
+        content: "Corniglia es el unico pueblo de Cinque Terre que no tiene acceso directo al mar. Esta situado sobre un promontorio a 100 metros de altura, rodeado de vinedos. Para llegar desde la estacion de tren hay que subir 382 escalones (la famosa Lardarina) o tomar un pequeno autobus. Este esfuerzo se recompensa con menos turistas y vistas panoramicas unicas de la costa. Es el pueblo mas autentico y tranquilo de los cinco, ideal para quienes buscan escapar de las multitudes.",
+        list: ["Que ver: Iglesia de San Pietro (siglo XIV), terrazas panoramicas", "Mejor foto: Desde el mirador de Santa Maria con vista a Manarola", "Gastronomia: Miel local, vino blanco de los vinedos cercanos", "Tip: Hay autobus desde la estacion si no quieres subir las 382 escaleras", "Tiempo recomendado: 1 hora es suficiente al ser el mas pequeno"]
+      },
+      {
+        title: "Vernazza: La Joya de la Corona",
+        content: "Vernazza es considerado por muchos el pueblo mas hermoso de Cinque Terre. Tiene el unico puerto natural de los cinco pueblos, dominado por la torre del Castillo Doria del siglo XI. La plaza principal, Piazza Marconi, esta junto al mar y es perfecta para tomar un aperitivo mientras ves los barcos pesqueros. Sus calles medievales estan llenas de encanto. Es el pueblo con mejor equilibrio entre belleza, servicios y autenticidad. En Tripseuropa.com recomendamos dedicar mas tiempo a Vernazza.",
+        list: ["Que ver: Castillo Doria, Iglesia de Santa Margherita, puerto natural", "Mejor foto: Desde el sendero hacia Monterosso con vista del pueblo completo", "Gastronomia: Trofie al pesto, focaccia rellena, gelato artesanal", "Tip: Sube al castillo (entrada EUR 2) para vistas de 360 grados", "Tiempo recomendado: 2-3 horas minimo, ideal para almorzar aqui"],
+        image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Monterosso al Mare: Sol y Playa",
+        content: "Monterosso al Mare es el pueblo mas grande y el unico con playa de arena extensa. Esta dividido en dos partes: el centro historico (Fegina) y la parte nueva separados por un tunel. Es el destino ideal si quieres combinar turismo con un dia de playa. Tiene mas hoteles y servicios que los otros pueblos. La estatua del Gigante, un coloso de 14 metros, es uno de sus simbolos. Monterosso es perfecto como base para explorar Cinque Terre, y los paquetes de Trips Europa incluyen hoteles aqui.",
+        list: ["Que ver: Playa Fegina, estatua del Gigante, Convento de los Capuchinos", "Mejor foto: Desde el Convento con vista a la bahia y los vinedos", "Gastronomia: Anchoas de Monterosso (famosas en toda Italia), limon cedro", "Tip: Alquila una sombrilla en la playa para descansar tras caminar", "Vida nocturna: El unico pueblo con cierta vida nocturna y bares"]
+      },
+      {
+        title: "Como Moverse Entre los Cinco Pueblos",
+        content: "Hay tres formas de moverse entre los pueblos de Cinque Terre: tren, barco o a pie. Cada una tiene sus ventajas y puedes combinarlas para una experiencia completa.",
+        list: ["Tren: La forma mas rapida y economica. Conecta los 5 pueblos en minutos. Compra la Cinque Terre Card (EUR 16-18/dia) que incluye trenes ilimitados + senderos.", "Barco: Espectacular para ver los pueblos desde el mar. Opera de abril a octubre. No para en Corniglia (no tiene puerto). EUR 35-40 billete diario.", "A pie: Los senderos costeros son la forma mas autentica. El sendero azul conecta los 5 pueblos (12 km, 5-6 horas). Algunos tramos pueden estar cerrados.", "Tip: Haz un tramo a pie, regresa en tren, y toma el barco al atardecer.", "Coches: Esta prohibido circular en coche en Cinque Terre. Deja el auto en La Spezia."]
+      },
+      {
+        title: "Itinerario de Un Dia: Ruta Optima",
+        content: "Si solo tienes un dia para visitar Cinque Terre, este es el itinerario que recomendamos en Tripseuropa.com para aprovecharlo al maximo:",
+        list: ["8:00 - Llega temprano a Riomaggiore en tren desde La Spezia", "8:30 - Explora Riomaggiore, desayuno con focaccia", "9:30 - Tren a Manarola (2 min), paseo y fotos", "10:30 - Sendero a Corniglia (1h caminando) o tren (4 min)", "11:30 - Corniglia, el pueblo tranquilo, vistas panoramicas", "12:30 - Tren a Vernazza, almuerzo en el puerto", "14:30 - Explora Vernazza, sube al castillo", "16:00 - Tren a Monterosso, relax en la playa", "18:00 - Barco de regreso a Riomaggiore o La Spezia viendo el atardecer"]
+      },
+      {
+        title: "Mejor Epoca Para Visitar Cinque Terre",
+        content: "El momento de tu visita puede marcar la diferencia entre una experiencia magica y una saturada de turistas.",
+        list: ["Abril-Mayo: Nuestra recomendacion. Clima agradable, flores en los senderos, menos turistas.", "Junio: Buen clima pero empiezan las multitudes. Dias largos para aprovechar.", "Julio-Agosto: Evitar si es posible. Calor extremo, senderos abarrotados, hoteles carisimos.", "Septiembre: Excelente opcion. Mar calido para nadar, menos gente que en verano.", "Octubre: Todavia buen clima, colores de otono, muy recomendable.", "Invierno: Muchos servicios cerrados, pero pueblos vacios y autenticos. Para aventureros."]
+      },
+      {
+        title: "Donde Hospedarse en Cinque Terre",
+        content: "El alojamiento en Cinque Terre es limitado y caro, especialmente en verano. Reserva con meses de antelacion. Estas son las opciones:",
+        list: ["Monterosso: Mas opciones de hoteles, playas, servicios. Ideal para familias.", "Vernazza: El mas romantico, pocos alojamientos pero encantadores.", "Manarola: Apartamentos con vistas espectaculares, cocina propia.", "Riomaggiore: Buen equilibrio calidad-precio, cerca de La Spezia.", "La Spezia: Fuera de Cinque Terre pero hoteles mas economicos y mejor conectados.", "Presupuesto: Desde EUR 80/noche en temporada baja hasta EUR 250+ en agosto.", "Trips Europa: Reservamos alojamiento con meses de antelacion en los mejores puntos."]
+      },
+      {
+        title: "Visita Cinque Terre con Trips Europa",
+        content: "En Tripseuropa.com organizamos excursiones a Cinque Terre como parte de nuestros circuitos por Italia. Conocemos cada sendero, cada restaurante escondido, cada mirador secreto. Nuestros paquetes incluyen transporte desde tu hotel en Florencia, Pisa o Milan, la Cinque Terre Card, guia en espanol que conoce la zona, y recomendaciones gastronomicas. Tambien ofrecemos circuitos que combinan Cinque Terre con la Toscana, Portofino y la Costa Amalfitana. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia en las aldeas mas coloridas de Italia.",
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Se puede visitar Cinque Terre en un solo dia?", answer: "Si, es posible ver los cinco pueblos en un dia usando el tren. Llegaras temprano (8am), usaras la Cinque Terre Card para trenes ilimitados, y podras ver cada pueblo dedicando 1-2 horas a cada uno. Para caminar los senderos completos necesitas 2 dias." },
+      { question: "Cual es el pueblo mas bonito de Cinque Terre?", answer: "Es subjetivo, pero Vernazza y Manarola suelen considerarse los mas fotograficos. Vernazza por su puerto natural y castillo, Manarola por sus casas coloridas apiladas. Cada pueblo tiene su encanto unico." },
+      { question: "Se puede nadar en Cinque Terre?", answer: "Si. Monterosso tiene la mejor playa de arena. Los demas pueblos tienen pequenas playas de rocas o muelles donde puedes banarte. El agua es cristalina. Julio-septiembre es la mejor epoca para nadar." },
+      { question: "Como llego a Cinque Terre desde Florencia o Milan?", answer: "Desde Florencia: tren a La Spezia (2.5h), luego tren local a Cinque Terre (5-10 min). Desde Milan: tren a La Spezia o Monterosso (3h directo). Trips Europa organiza excursiones de un dia desde ambas ciudades." },
+      { question: "Los senderos de Cinque Terre son dificiles?", answer: "Varian. El sendero entre Monterosso y Vernazza es el mas exigente (2h, muchas escaleras). Otros tramos son mas faciles. La Via dell'Amore (facil) sigue cerrada. Lleva zapatos comodos, agua y proteccion solar." },
+      { question: "Cuanto cuesta visitar Cinque Terre?", answer: "La Cinque Terre Card cuesta EUR 16-18/dia e incluye trenes ilimitados y acceso a senderos. Alojamiento desde EUR 80-250/noche. Comida: EUR 15-25 por plato. Una excursion de un dia con Trips Europa desde Florencia cuesta aproximadamente EUR 120-150 por persona." }
+    ]
   }
 ];
