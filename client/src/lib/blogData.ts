@@ -2160,7 +2160,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "seguro-viaje-elegir-adecuado",
     title: { es: "Como Elegir el Seguro de Viaje Adecuado Para Europa", en: "How to Choose the Right Travel Insurance for Europe" },
     excerpt: { es: "Guia completa para seleccionar el seguro de viaje ideal. Coberturas esenciales, comparativas y consejos para viajeros latinoamericanos a Europa.", en: "Complete guide to selecting the ideal travel insurance. Essential coverages, comparisons and tips for Latin American travelers to Europe." },
-    image: "https://images.unsplash.com/photo-1551375703-93c1a30f5a46?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/seguro-viaje-europa.png",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-06",
