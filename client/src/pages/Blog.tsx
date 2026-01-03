@@ -775,14 +775,14 @@ export default function Blog() {
   const { toast } = useToast();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterForm, setNewsletterForm] = useState({ name: "", email: "", phone: "" });
   const [newsletterLoading, setNewsletterLoading] = useState(false);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newsletterEmail || !newsletterEmail.includes("@")) {
+    if (!newsletterForm.name || !newsletterForm.email || !newsletterForm.email.includes("@")) {
       toast({
-        title: language === "es" ? "Email requerido" : language === "pt" ? "E-mail obrigatorio" : "Email required",
+        title: language === "es" ? "Nombre y email son requeridos" : language === "pt" ? "Nome e e-mail sao obrigatorios" : "Name and email are required",
         variant: "destructive"
       });
       return;
@@ -793,16 +793,50 @@ export default function Blog() {
       await fetch("/api/newsletter/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: newsletterEmail })
+        body: JSON.stringify({ 
+          name: newsletterForm.name,
+          email: newsletterForm.email,
+          phone: newsletterForm.phone
+        })
       });
 
-      const whatsappMessage = `Nueva suscripcion al Newsletter Blog!\n\nEmail: ${newsletterEmail}`;
+      const whatsappMessage = language === "es" 
+        ? `Nueva suscripcion al Newsletter Blog!
+
+*Nombre:* ${newsletterForm.name}
+*Email:* ${newsletterForm.email}
+*Telefono:* ${newsletterForm.phone || "No proporcionado"}
+
+Solicita la guia PDF: Top 10 Ciudades Imprescindibles de Europa
+
+Desde: Tripseuropa.com/blog`
+        : language === "pt"
+        ? `Nova inscricao no Newsletter Blog!
+
+*Nome:* ${newsletterForm.name}
+*Email:* ${newsletterForm.email}
+*Telefone:* ${newsletterForm.phone || "Nao fornecido"}
+
+Solicita o guia PDF: Top 10 Cidades Imperdiveis da Europa
+
+De: Tripseuropa.com/blog`
+        : `New Newsletter Blog Subscription!
+
+*Name:* ${newsletterForm.name}
+*Email:* ${newsletterForm.email}
+*Phone:* ${newsletterForm.phone || "Not provided"}
+
+Requesting PDF guide: Top 10 Must-See Cities in Europe
+
+From: Tripseuropa.com/blog`;
+
       window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       toast({
-        title: language === "es" ? "Suscripcion exitosa" : language === "pt" ? "Inscricao realizada" : "Subscription successful"
+        title: language === "es" ? "Suscripcion exitosa" : language === "pt" ? "Inscricao realizada" : "Subscription successful",
+        description: language === "es" ? "Te contactaremos pronto" : language === "pt" ? "Entraremos em contato em breve" : "We will contact you soon"
       });
-      setNewsletterEmail("");
+      setNewsletterForm({ name: "", email: "", phone: "" });
     } catch (error) {
       console.error("Newsletter error:", error);
     } finally {
@@ -1145,18 +1179,38 @@ export default function Blog() {
               ? "Inscreva-se e receba nosso guia PDF gratuito: 'Top 10 Cidades Imperdiveis da Europa' + 10% de desconto na sua primeira viagem"
               : "Subscribe and receive our free PDF guide: 'Top 10 Must-See Cities in Europe' + 10% discount on your first trip"}
           </p>
-          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
-              value={newsletterEmail}
-              onChange={(e) => setNewsletterEmail(e.target.value)}
-              placeholder={language === "es" ? "Tu correo electronico" : language === "pt" ? "Seu e-mail" : "Your email address"}
-              className="flex-1 px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-accent"
-              data-testid="input-newsletter-email"
-            />
-            <Button type="submit" disabled={newsletterLoading} className="bg-accent text-primary hover:bg-accent/90" data-testid="button-newsletter-subscribe">
-              {newsletterLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : (language === "es" ? "Suscribirse" : language === "pt" ? "Inscrever-se" : "Subscribe")}
-            </Button>
+          <form onSubmit={handleNewsletterSubmit} className="space-y-4 max-w-lg mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input 
+                type="text" 
+                value={newsletterForm.name}
+                onChange={(e) => setNewsletterForm(prev => ({ ...prev, name: e.target.value }))}
+                placeholder={language === "es" ? "Nombre completo *" : language === "pt" ? "Nome completo *" : "Full name *"}
+                className="px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-accent"
+                data-testid="input-newsletter-name"
+              />
+              <input 
+                type="email" 
+                value={newsletterForm.email}
+                onChange={(e) => setNewsletterForm(prev => ({ ...prev, email: e.target.value }))}
+                placeholder={language === "es" ? "Correo electronico *" : language === "pt" ? "E-mail *" : "Email address *"}
+                className="px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-accent"
+                data-testid="input-newsletter-email"
+              />
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input 
+                type="tel" 
+                value={newsletterForm.phone}
+                onChange={(e) => setNewsletterForm(prev => ({ ...prev, phone: e.target.value }))}
+                placeholder={language === "es" ? "Telefono / WhatsApp" : language === "pt" ? "Telefone / WhatsApp" : "Phone / WhatsApp"}
+                className="flex-1 px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-accent"
+                data-testid="input-newsletter-phone"
+              />
+              <Button type="submit" disabled={newsletterLoading} className="bg-accent text-primary hover:bg-accent/90" data-testid="button-newsletter-subscribe">
+                {newsletterLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : (language === "es" ? "Suscribirse" : language === "pt" ? "Inscrever-se" : "Subscribe")}
+              </Button>
+            </div>
           </form>
           <p className="text-white/50 text-xs mt-4">
             {language === "es" ? "Sin spam. Puedes darte de baja cuando quieras." : language === "pt" ? "Sem spam. Voce pode cancelar a qualquer momento." : "No spam. You can unsubscribe anytime."}
