@@ -4403,5 +4403,83 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Se puede recorrer Paris caminando o necesito transporte?", answer: "Paris es muy caminable y parte del encanto es pasear por sus calles. Sin embargo, el metro es excelente y economico para distancias largas. Recomendamos combinar caminatas con metro. Para Versalles necesitaras el tren RER C." },
       { question: "Es caro comer en Paris?", answer: "Paris puede ser caro pero hay opciones para todos los presupuestos. Un almuerzo en un bistro cuesta EUR 15-25, mientras que una cena con vino puede ser EUR 40-60. Las boulangeries ofrecen sandwiches y pasteles economicos. Los supermercados como Monoprix son buena opcion para ahorrar." }
     ]
+  },
+
+  {
+    id: "encanto-mediterraneo",
+    slug: "encanto-mediterraneo",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Encanto Mediterraneo: Italia, Francia y España Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
+    excerpt: { es: "Costa Amalfitana, Riviera Francesa, Costa Brava. Las costas mas hermosas del Mediterraneo en un viaje.", en: "Amalfi Coast, French Riviera, Costa Brava. The most beautiful Mediterranean coasts in one trip." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "28 Dic 2026",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["mediterraneo europa", "costa amalfitana", "riviera francesa", "costa brava", "viaje mediterraneo", "italia costa", "francia costa"],
+    featured: true,
+    sections: [
+      {
+        title: "El Mediterraneo: Un Mar de Suenos Para Latinoamericanos",
+        content: "El Mar Mediterraneo ha sido cuna de civilizaciones, escenario de historias de amor y destino de viajeros durante milenios. Para los latinoamericanos, las costas mediterraneas representan la esencia del viaje europeo: pueblos pintorescos colgados de acantilados, aguas turquesas, gastronomia excepcional y un estilo de vida que invita a disfrutar cada momento. En Tripseuropa.com hemos disenado rutas que combinan las tres joyas costeras del Mediterraneo occidental: Italia, Francia y España. Un viaje que transformara tu vision de la vida y te dejara recuerdos imborrables.",
+        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Costa Amalfitana: La Joya del Sur de Italia",
+        content: "La Costa Amalfitana es, sin duda, una de las costas mas espectaculares del mundo. Declarada Patrimonio de la Humanidad por la UNESCO, esta franja de 50 kilometros al sur de Napoles ofrece un paisaje de ensueno: pueblos de colores pasteles aferrados a acantilados verticales, limoneros perfumados y el azul intenso del Tirreno. Positano, con sus casas rosadas cayendo hacia el mar, es la postal perfecta. Amalfi, la historica republica maritima, conserva su catedral arabe-normanda. Ravello, en las alturas, ofrece jardines con las mejores vistas de la costa. Los expertos de Trips Europa conocen cada rincon de esta costa y pueden organizar tu experiencia perfecta.",
+        list: ["Positano: El pueblo mas fotografiado de Italia, boutiques y playas", "Amalfi: Catedral del siglo IX, fabrica de papel artesanal, historia maritima", "Ravello: Villa Rufolo y Villa Cimbrone, jardines con vistas panoramicas", "Praiano: Pueblo autentico sin multitudes, atardeceres espectaculares", "Furore: El fiordo oculto de la costa", "Limoncello: Licor de limon tipico de la region"],
+        image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "La Riviera Francesa: Glamour y Belleza Natural",
+        content: "La Cote d'Azur, como la llaman los franceses, es sinonimo de elegancia, sol y jet set. Desde Niza hasta Monaco, la Riviera Francesa ofrece una combinacion unica de playas, cultura y sofisticacion. Niza, con su famoso Paseo de los Ingleses y casco antiguo provenzal, es la puerta de entrada ideal. Cannes evoca el glamour del festival de cine. Saint-Tropez mantiene su encanto pesquero mientras atrae a celebridades. Monaco, el principado de los Grimaldi, deslumbra con su casino, yates y Formula 1. En Tripseuropa.com te ayudamos a vivir la Riviera como un local, evitando las trampas turisticas.",
+        list: ["Niza: Paseo de los Ingleses, Vieux Nice, Museo Matisse", "Cannes: La Croisette, islas Lerins, mercado Forville", "Monaco: Casino de Monte Carlo, Palacio Principesco, Puerto Hercules", "Saint-Tropez: Puerto pesquero, playas Pampelonne, Place des Lices", "Eze: Pueblo medieval en las alturas con jardin exotico", "Antibes: Murallas, Museo Picasso, Port Vauban"],
+        image: "https://images.unsplash.com/photo-1491166617655-0723a0999cfc?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Costa Brava: El Mediterraneo Español Mas Autentico",
+        content: "La Costa Brava, en Cataluna, ofrece quiza las aguas mas cristalinas del Mediterraneo espanol. Su nombre, que significa Costa Salvaje, describe perfectamente los acantilados, calas escondidas y pinos que llegan hasta el mar. Cadaques, el pueblo blanco que enamoro a Dali, conserva su encanto de pueblo pesquero. Tossa de Mar, con su vila vella amurallada, parece sacada de un cuento. El legado de Salvador Dali impregna toda la region: su casa-museo en Port Lligat, el Teatro-Museo en Figueres y el Castillo de Pubol. En Tripseuropa.com combinamos playa, cultura y gastronomia catalana en experiencias inolvidables.",
+        list: ["Cadaques: Pueblo blanco de Dali, Casa-Museo Port Lligat", "Tossa de Mar: Murallas medievales sobre el mar", "Lloret de Mar: Playas amplias y vida nocturna", "Calella de Palafrugell: Calas de postal y chiringuitos", "Begur: Casas indianas y calas secretas como Aiguablava", "Cap de Creus: Parque natural con paisajes lunares"],
+        image: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Itinerario Sugerido: 14 Dias por Tres Costas",
+        content: "Para experimentar lo mejor del Mediterraneo occidental, te sugerimos este itinerario de dos semanas que los asesores de Tripseuropa.com pueden personalizar segun tus preferencias:",
+        list: ["Dias 1-4: Costa Amalfitana - Vuelo a Napoles, Positano, Amalfi, Ravello, excursion a Capri", "Dias 5-6: Traslado a Francia - Tren Roma-Niza o vuelo low cost", "Dias 7-10: Riviera Francesa - Niza, Monaco, Cannes, Saint-Tropez, Eze", "Dias 11-12: Traslado a España - Tren Niza-Barcelona (espectacular ruta costera)", "Dias 13-14: Costa Brava - Cadaques, Tossa de Mar, Figueres (Museo Dali)", "Extension opcional: 2-3 dias en Barcelona antes de regresar"]
+      },
+      {
+        title: "Gastronomia Mediterranea: Sabores de Tres Paises",
+        content: "El Mediterraneo es tambien un viaje gastronomico. Cada region tiene sus especialidades, pero todas comparten el aceite de oliva, productos frescos del mar y vinos excepcionales. En la Costa Amalfitana, no te pierdas la pizza napolitana autentica, los sfogliatelle y el limoncello. En la Riviera, la socca (crepe de garbanzos), la salade nicoise y los vinos de Provenza. En la Costa Brava, el suquet de peix, la escalivada y el cava catalan. Los asesores de Trips Europa pueden reservarte en restaurantes locales donde comen los lugarenos.",
+        list: ["Italia: Pizza napolitana, pasta alle vongole, sfogliatelle, limoncello", "Francia: Socca, salade nicoise, bouillabaisse, rose de Provence", "España: Suquet de peix, arros negre, escalivada, cava", "Comun: Aceite de oliva virgen, mariscos frescos, tomates de temporada"]
+      },
+      {
+        title: "Mejor Epoca Para Visitar el Mediterraneo",
+        content: "El clima mediterraneo es una de las razones por las que esta region atrae millones de visitantes. Sin embargo, elegir bien la epoca marca la diferencia entre una experiencia perfecta y una saturada de turistas.",
+        list: ["Mayo-Junio: Clima ideal (20-25C), playas tranquilas, precios moderados. Nuestra recomendacion.", "Julio-Agosto: Temporada alta, 30-35C, playas llenas, precios maximos. Evitar si es posible.", "Septiembre: Excelente opcion, agua del mar calida, menos turistas, clima agradable.", "Octubre: Buen clima para Costa Brava y Amalfi, Riviera puede ser fresca.", "Abril: Perfecto para recorrer ciudades y pueblos, agua aun fria para banarse."]
+      },
+      {
+        title: "Transporte: Como Moverte Entre Costas",
+        content: "Conectar las tres costas es mas facil de lo que parece gracias a la excelente red de transporte europea. Aqui las mejores opciones que recomendamos en Tripseuropa.com:",
+        list: ["Tren: Espectacular ruta costera Niza-Barcelona (5-6h). Roma-Niza con cambio en Ventimiglia.", "Vuelos low cost: Napoles-Niza o Roma-Barcelona con Ryanair, easyJet, Vueling.", "Coche de alquiler: Ideal para flexibilidad en cada costa, no recomendado entre paises.", "Ferry: Napoles-Capri, Niza-Corsica para extensiones.", "Transfer privado: Trips Europa organiza traslados puerta a puerta con chofer."]
+      },
+      {
+        title: "Alojamiento: Donde Hospedarse en Cada Costa",
+        content: "En Tripseuropa.com trabajamos con una seleccion de hoteles que combinan ubicacion, calidad y experiencia local autentica.",
+        list: ["Costa Amalfitana: Positano para fotos, Ravello para tranquilidad, Amalfi para equilibrio. Hoteles boutique con terrazas al mar.", "Riviera Francesa: Niza como base economica, Monaco para lujo, Antibes para ambiente local. Evita julio-agosto en Saint-Tropez.", "Costa Brava: Cadaques para romanticismo, Tossa de Mar para familias, Begur para calas. Reserva con antelacion en verano.", "Presupuesto: EUR 80-150/noche en temporada media. Lujo desde EUR 300/noche."]
+      },
+      {
+        title: "Reserva Tu Viaje Mediterraneo con Trips Europa",
+        content: "En Tripseuropa.com somos especialistas en crear viajes mediterraneos a medida para latinoamericanos. Conocemos cada pueblo, cada cala secreta, cada restaurante autentico. Nuestros paquetes incluyen vuelos internacionales, hoteles seleccionados, traslados entre costas, excursiones con guias locales y asistencia 24/7 en espanol. Ofrecemos financiamiento flexible y salidas desde las principales ciudades de Latinoamerica. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje sonado por las costas del Mediterraneo. El mar te espera.",
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuanto cuesta un viaje de 14 dias por el Mediterraneo?", answer: "Un viaje de 2 semanas cubriendo las tres costas puede costar desde USD 3,500 por persona en temporada media, incluyendo vuelos, hoteles 3-4 estrellas, algunos traslados y desayunos. Los paquetes premium con hoteles boutique y experiencias exclusivas parten de USD 5,500. Trips Europa ofrece financiamiento flexible." },
+      { question: "Cual es la mejor costa para familias con ninos?", answer: "La Costa Brava es ideal para familias: playas con aguas tranquilas, actividades para ninos, y ciudades como Barcelona cerca. La Costa Amalfitana es mas romantica y tiene menos playas de arena. La Riviera es sofisticada y puede resultar cara para familias." },
+      { question: "Necesito alquilar coche para recorrer las costas?", answer: "Depende. En la Costa Amalfitana, el transporte publico (buses SITA) funciona bien y conducir es estresante por carreteras estrechas. En la Riviera, el tren conecta todas las ciudades principales. En la Costa Brava, un coche es util para explorar calas escondidas. Entre paises, recomendamos tren o avion." },
+      { question: "Es posible combinar las tres costas en 10 dias?", answer: "Es posible pero ajustado. Recomendamos elegir 2 costas para 10 dias, o extender a 14 dias para las tres. Mejor disfrutar con calma que correr entre destinos. Los asesores de Trips Europa pueden ayudarte a optimizar tu itinerario." },
+      { question: "Cual costa tiene las mejores playas para nadar?", answer: "La Costa Brava tiene las aguas mas cristalinas y calas perfectas para snorkel. La Costa Amalfitana tiene playas pequenas pero el agua es espectacular. La Riviera tiene playas de piedra en muchas zonas, pero Antibes y Saint-Tropez tienen arena." },
+      { question: "Puedo hacer el viaje en temporada baja?", answer: "Primavera (abril-mayo) y otono (septiembre-octubre) son ideales: clima agradable, menos turistas, mejores precios. En invierno muchos hoteles y restaurantes costeros cierran, especialmente en pueblos pequenos. Evita julio-agosto si no te gustan las multitudes." }
+    ]
   }
 ];
