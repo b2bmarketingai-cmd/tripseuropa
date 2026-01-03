@@ -126,7 +126,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/descubre-ibiza.png",
     title: { es: "Descubre Ibiza: Un Paraiso en el Mediterraneo", en: "Discover Ibiza: A Paradise in the Mediterranean" },
     excerpt: { es: "Ibiza es mucho mas que fiestas. Descubre calas escondidas, pueblos con encanto, gastronomia mediterranea y atardeceres inolvidables.", en: "Ibiza is much more than parties. Discover hidden coves, charming villages, Mediterranean gastronomy and unforgettable sunsets." },
     category: "destinos",
