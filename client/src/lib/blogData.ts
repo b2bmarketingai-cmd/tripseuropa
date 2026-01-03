@@ -2295,7 +2295,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-baratos-madrid",
     title: { es: "Vuelos Baratos a Madrid Desde Latinoamerica", en: "Cheap Flights to Madrid from Latin America" },
     excerpt: { es: "Guia especifica para encontrar vuelos economicos a Madrid. Mejores epocas, aerolineas, y estrategias para ahorrar en tu viaje a la capital espanola.", en: "Specific guide to finding cheap flights to Madrid. Best times, airlines, and strategies to save on your trip to the Spanish capital." },
-    image: "https://images.unsplash.com/photo-1583309219338-a582f1f9ca6c?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/vuelos-baratos-madrid.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-03",
