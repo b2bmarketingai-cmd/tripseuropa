@@ -1971,7 +1971,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "estudiar-espana-latinoamericanos",
     title: { es: "Estudiar en España: Guia Para Estudiantes Latinoamericanos", en: "Studying in Spain: Guide for Latin American Students" },
     excerpt: { es: "Todo sobre estudiar en universidades espanolas. Desde la homologacion de titulos hasta becas y vida estudiantil para latinoamericanos.", en: "Everything about studying at Spanish universities. From degree validation to scholarships and student life for Latin Americans." },
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/estudiar-espana.png",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-10",
