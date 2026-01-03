@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useI18n } from "@/lib/i18n";
-import { Calculator, Plane, MapPin, FileCheck, Euro, Calendar, Users, ArrowRight } from "lucide-react";
+import { Calculator, Plane, MapPin, FileCheck, Euro, Calendar, Users, ArrowRight, CheckCircle } from "lucide-react";
 
 export default function Tools() {
   const { t } = useI18n();
@@ -538,28 +538,181 @@ function VisaChecker() {
   const { t, language } = useI18n();
   const [nationality, setNationality] = useState("");
   const [destination, setDestination] = useState("");
-  const [result, setResult] = useState<{ required: boolean; type: string; info: string } | null>(null);
+  const [result, setResult] = useState<{ required: boolean; type: string; info: string; documents: string[]; processingTime: string; cost: string } | null>(null);
 
-  const visaRequirements: Record<string, Record<string, { required: boolean; type: string; info: string }>> = {
-    colombia: {
-      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : language === "pt" ? "Visto Schengen obrigatorio. Permite estadia de ate 90 dias em 180 dias." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
-      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : language === "pt" ? "Visto de visitante padrao obrigatorio para Reino Unido." : "Standard visitor visa required for UK." },
-    },
-    venezuela: {
-      schengen: { required: true, type: "Schengen", info: language === "es" ? "Visa Schengen requerida. Permite estancia de hasta 90 días en 180 días." : language === "pt" ? "Visto Schengen obrigatorio. Permite estadia de ate 90 dias em 180 dias." : "Schengen visa required. Allows stay of up to 90 days in 180 days." },
-      uk: { required: true, type: "UK Standard Visitor", info: language === "es" ? "Visa de visitante estándar requerida para Reino Unido." : language === "pt" ? "Visto de visitante padrao obrigatorio para Reino Unido." : "Standard visitor visa required for UK." },
-    },
+  const schengenCountries = ["france", "italy", "spain", "germany", "portugal", "greece", "netherlands", "switzerland", "croatia", "austria", "belgium", "czechia", "denmark", "finland", "hungary", "iceland", "norway", "poland", "sweden", "baltics"];
+  const ukCountries = ["uk", "scotland"];
+  
+  const visaFreeSchengen = ["mexico", "brasil", "argentina", "peru", "panama", "costarica", "chile"];
+  const visaRequiredSchengen = ["colombia", "dominicana", "caribe", "venezuela", "ecuador"];
+  
+  const visaFreeUK = ["mexico", "brasil", "argentina", "chile", "costarica", "panama"];
+  const visaRequiredUK = ["colombia", "peru", "dominicana", "caribe", "venezuela", "ecuador"];
+
+  const getVisaInfo = (nat: string, dest: string) => {
+    const isSchengen = schengenCountries.includes(dest);
+    const isUK = ukCountries.includes(dest);
+    const isIreland = dest === "ireland";
+    const isAlbania = dest === "albania";
+    const isCyprus = dest === "cyprus";
+    const isRomania = dest === "romania";
+
+    if (isSchengen) {
+      if (visaFreeSchengen.includes(nat)) {
+        return {
+          required: false,
+          type: language === "es" ? "Exento de Visa Schengen" : language === "pt" ? "Isento de Visto Schengen" : "Schengen Visa Exempt",
+          info: language === "es" 
+            ? "No necesitas visa para el Espacio Schengen. Puedes permanecer hasta 90 dias en un periodo de 180 dias para turismo o negocios."
+            : language === "pt"
+            ? "Voce nao precisa de visto para o Espaco Schengen. Pode permanecer ate 90 dias em um periodo de 180 dias para turismo ou negocios."
+            : "You don't need a visa for the Schengen Area. You can stay up to 90 days within a 180-day period for tourism or business.",
+          documents: language === "es" 
+            ? ["Pasaporte vigente (minimo 6 meses)", "Reserva de hotel o carta de invitacion", "Boleto de avion de ida y vuelta", "Seguro de viaje (minimo 30,000 EUR)", "Comprobante de solvencia economica (65 EUR/dia)", "Itinerario de viaje"]
+            : language === "pt"
+            ? ["Passaporte valido (minimo 6 meses)", "Reserva de hotel ou carta convite", "Passagem aerea ida e volta", "Seguro viagem (minimo 30.000 EUR)", "Comprovante de solvencia economica (65 EUR/dia)", "Itinerario de viagem"]
+            : ["Valid passport (minimum 6 months)", "Hotel reservation or invitation letter", "Round-trip flight ticket", "Travel insurance (minimum 30,000 EUR)", "Proof of financial solvency (65 EUR/day)", "Travel itinerary"],
+          processingTime: language === "es" ? "N/A - Sin visa" : language === "pt" ? "N/A - Sem visto" : "N/A - No visa needed",
+          cost: language === "es" ? "Gratis" : language === "pt" ? "Gratis" : "Free"
+        };
+      } else {
+        return {
+          required: true,
+          type: language === "es" ? "Visa Schengen (Tipo C)" : language === "pt" ? "Visto Schengen (Tipo C)" : "Schengen Visa (Type C)",
+          info: language === "es"
+            ? "Necesitas solicitar una Visa Schengen de corta duracion (Tipo C) en el consulado del pais principal de destino. Permite estancia de hasta 90 dias en 180 dias."
+            : language === "pt"
+            ? "Voce precisa solicitar um Visto Schengen de curta duracao (Tipo C) no consulado do pais principal de destino. Permite estadia de ate 90 dias em 180 dias."
+            : "You need to apply for a Short-stay Schengen Visa (Type C) at the consulate of the main destination country. Allows stay of up to 90 days in 180 days.",
+          documents: language === "es"
+            ? ["Formulario de solicitud de visa completado", "Pasaporte vigente (minimo 6 meses, 2 paginas en blanco)", "2 fotos tamano pasaporte recientes", "Seguro de viaje (cobertura minima 30,000 EUR)", "Comprobante de alojamiento", "Boleto de avion reservado (ida y vuelta)", "Comprobante de solvencia economica (extractos bancarios 3 meses)", "Carta de empleo o constancia de ingresos", "Itinerario detallado del viaje", "Pago de tasa consular (80 EUR aproximadamente)"]
+            : language === "pt"
+            ? ["Formulario de solicitacao de visto preenchido", "Passaporte valido (minimo 6 meses, 2 paginas em branco)", "2 fotos tamanho passaporte recentes", "Seguro viagem (cobertura minima 30.000 EUR)", "Comprovante de hospedagem", "Passagem aerea reservada (ida e volta)", "Comprovante de solvencia economica (extratos bancarios 3 meses)", "Carta de emprego ou comprovante de renda", "Roteiro detalhado da viagem", "Pagamento da taxa consular (80 EUR aproximadamente)"]
+            : ["Completed visa application form", "Valid passport (minimum 6 months, 2 blank pages)", "2 recent passport-size photos", "Travel insurance (minimum coverage 30,000 EUR)", "Proof of accommodation", "Reserved flight ticket (round-trip)", "Proof of financial solvency (3-month bank statements)", "Employment letter or income proof", "Detailed travel itinerary", "Consular fee payment (approximately 80 EUR)"],
+          processingTime: language === "es" ? "15-30 dias habiles" : language === "pt" ? "15-30 dias uteis" : "15-30 business days",
+          cost: "80 EUR"
+        };
+      }
+    }
+
+    if (isUK) {
+      if (visaFreeUK.includes(nat)) {
+        return {
+          required: false,
+          type: language === "es" ? "Exento de Visa Reino Unido" : language === "pt" ? "Isento de Visto Reino Unido" : "UK Visa Exempt",
+          info: language === "es"
+            ? "No necesitas visa para Reino Unido. Puedes permanecer hasta 6 meses como visitante para turismo, negocios o visita familiar."
+            : language === "pt"
+            ? "Voce nao precisa de visto para o Reino Unido. Pode permanecer ate 6 meses como visitante para turismo, negocios ou visita familiar."
+            : "You don't need a visa for the UK. You can stay up to 6 months as a visitor for tourism, business, or family visits.",
+          documents: language === "es"
+            ? ["Pasaporte vigente", "Comprobante de alojamiento", "Boleto de avion de regreso", "Comprobante de fondos suficientes", "Itinerario de viaje"]
+            : language === "pt"
+            ? ["Passaporte valido", "Comprovante de hospedagem", "Passagem aerea de retorno", "Comprovante de fundos suficientes", "Itinerario de viagem"]
+            : ["Valid passport", "Proof of accommodation", "Return flight ticket", "Proof of sufficient funds", "Travel itinerary"],
+          processingTime: language === "es" ? "N/A - Sin visa" : language === "pt" ? "N/A - Sem visto" : "N/A - No visa needed",
+          cost: language === "es" ? "Gratis" : language === "pt" ? "Gratis" : "Free"
+        };
+      } else {
+        return {
+          required: true,
+          type: language === "es" ? "Visa de Visitante Estandar UK" : language === "pt" ? "Visto de Visitante Padrao UK" : "UK Standard Visitor Visa",
+          info: language === "es"
+            ? "Necesitas solicitar una Visa de Visitante Estandar del Reino Unido. Permite estancias de hasta 6 meses para turismo, negocios o tratamiento medico."
+            : language === "pt"
+            ? "Voce precisa solicitar um Visto de Visitante Padrao do Reino Unido. Permite estadias de ate 6 meses para turismo, negocios ou tratamento medico."
+            : "You need to apply for a UK Standard Visitor Visa. Allows stays of up to 6 months for tourism, business, or medical treatment.",
+          documents: language === "es"
+            ? ["Formulario de solicitud en linea completado", "Pasaporte vigente", "Foto digital reciente", "Comprobante de empleo o estudios", "Extractos bancarios (6 meses)", "Comprobante de alojamiento en UK", "Itinerario de viaje detallado", "Boletos de avion reservados", "Carta de invitacion (si aplica)", "Pago de tasa de visa"]
+            : language === "pt"
+            ? ["Formulario de solicitacao online preenchido", "Passaporte valido", "Foto digital recente", "Comprovante de emprego ou estudos", "Extratos bancarios (6 meses)", "Comprovante de hospedagem no UK", "Itinerario de viagem detalhado", "Passagens aereas reservadas", "Carta convite (se aplicavel)", "Pagamento da taxa de visto"]
+            : ["Completed online application form", "Valid passport", "Recent digital photo", "Proof of employment or studies", "Bank statements (6 months)", "Proof of accommodation in UK", "Detailed travel itinerary", "Reserved flight tickets", "Invitation letter (if applicable)", "Visa fee payment"],
+          processingTime: language === "es" ? "3-6 semanas" : language === "pt" ? "3-6 semanas" : "3-6 weeks",
+          cost: "115 GBP"
+        };
+      }
+    }
+
+    if (isIreland) {
+      const needsVisa = ["colombia", "dominicana", "caribe", "venezuela", "ecuador"].includes(nat);
+      if (needsVisa) {
+        return {
+          required: true,
+          type: language === "es" ? "Visa de Visitante Irlanda" : language === "pt" ? "Visto de Visitante Irlanda" : "Ireland Visitor Visa",
+          info: language === "es"
+            ? "Necesitas solicitar una visa de visitante para Irlanda. Irlanda no es parte del Espacio Schengen pero es parte de la UE."
+            : language === "pt"
+            ? "Voce precisa solicitar um visto de visitante para a Irlanda. A Irlanda nao faz parte do Espaco Schengen mas faz parte da UE."
+            : "You need to apply for an Ireland visitor visa. Ireland is not part of the Schengen Area but is part of the EU.",
+          documents: language === "es"
+            ? ["Formulario de solicitud completado", "Pasaporte vigente", "2 fotos tamano pasaporte", "Comprobante de alojamiento", "Seguro de viaje", "Comprobante de fondos", "Boleto de avion ida y vuelta"]
+            : language === "pt"
+            ? ["Formulario de solicitacao preenchido", "Passaporte valido", "2 fotos tamanho passaporte", "Comprovante de hospedagem", "Seguro viagem", "Comprovante de fundos", "Passagem aerea ida e volta"]
+            : ["Completed application form", "Valid passport", "2 passport-size photos", "Proof of accommodation", "Travel insurance", "Proof of funds", "Round-trip flight ticket"],
+          processingTime: language === "es" ? "8 semanas" : language === "pt" ? "8 semanas" : "8 weeks",
+          cost: "60 EUR"
+        };
+      } else {
+        return {
+          required: false,
+          type: language === "es" ? "Exento de Visa Irlanda" : language === "pt" ? "Isento de Visto Irlanda" : "Ireland Visa Exempt",
+          info: language === "es"
+            ? "No necesitas visa para Irlanda. Puedes permanecer hasta 90 dias para turismo."
+            : language === "pt"
+            ? "Voce nao precisa de visto para a Irlanda. Pode permanecer ate 90 dias para turismo."
+            : "You don't need a visa for Ireland. You can stay up to 90 days for tourism.",
+          documents: language === "es"
+            ? ["Pasaporte vigente", "Comprobante de alojamiento", "Boleto de regreso", "Comprobante de fondos"]
+            : language === "pt"
+            ? ["Passaporte valido", "Comprovante de hospedagem", "Passagem de retorno", "Comprovante de fundos"]
+            : ["Valid passport", "Proof of accommodation", "Return ticket", "Proof of funds"],
+          processingTime: language === "es" ? "N/A" : language === "pt" ? "N/A" : "N/A",
+          cost: language === "es" ? "Gratis" : language === "pt" ? "Gratis" : "Free"
+        };
+      }
+    }
+
+    if (isAlbania || isCyprus || isRomania) {
+      const countryName = dest === "albania" ? (language === "es" ? "Albania" : language === "pt" ? "Albania" : "Albania") 
+        : dest === "cyprus" ? (language === "es" ? "Chipre" : language === "pt" ? "Chipre" : "Cyprus")
+        : (language === "es" ? "Rumania" : language === "pt" ? "Romenia" : "Romania");
+      
+      return {
+        required: false,
+        type: language === "es" ? `Sin visa para ${countryName}` : language === "pt" ? `Sem visto para ${countryName}` : `No visa for ${countryName}`,
+        info: language === "es"
+          ? `La mayoria de nacionalidades latinoamericanas no requieren visa para ${countryName} para estancias cortas de turismo (hasta 90 dias).`
+          : language === "pt"
+          ? `A maioria das nacionalidades latino-americanas nao requer visto para ${countryName} para estadias curtas de turismo (ate 90 dias).`
+          : `Most Latin American nationalities don't require a visa for ${countryName} for short tourism stays (up to 90 days).`,
+        documents: language === "es"
+          ? ["Pasaporte vigente", "Comprobante de alojamiento", "Boleto de regreso", "Comprobante de fondos"]
+          : language === "pt"
+          ? ["Passaporte valido", "Comprovante de hospedagem", "Passagem de retorno", "Comprovante de fundos"]
+          : ["Valid passport", "Proof of accommodation", "Return ticket", "Proof of funds"],
+        processingTime: language === "es" ? "N/A" : language === "pt" ? "N/A" : "N/A",
+        cost: language === "es" ? "Gratis" : language === "pt" ? "Gratis" : "Free"
+      };
+    }
+
+    return {
+      required: true,
+      type: language === "es" ? "Verificar Requisitos" : language === "pt" ? "Verificar Requisitos" : "Verify Requirements",
+      info: language === "es"
+        ? "Recomendamos verificar los requisitos especificos con el consulado del pais de destino."
+        : language === "pt"
+        ? "Recomendamos verificar os requisitos especificos com o consulado do pais de destino."
+        : "We recommend verifying specific requirements with the destination country's consulate.",
+      documents: [],
+      processingTime: language === "es" ? "Variable" : language === "pt" ? "Variavel" : "Variable",
+      cost: language === "es" ? "Variable" : language === "pt" ? "Variavel" : "Variable"
+    };
   };
 
   const check = () => {
     if (!nationality || !destination) return;
-    
-    const destKey = destination === "london" ? "uk" : "schengen";
-    const req = visaRequirements[nationality]?.[destKey];
-    
-    if (req) {
-      setResult(req);
-    }
+    const visaInfo = getVisaInfo(nationality, destination);
+    setResult(visaInfo);
   };
 
   return (
@@ -638,16 +791,54 @@ function VisaChecker() {
         </Button>
 
         {result && (
-          <div className={`rounded-lg p-6 ${result.required ? "bg-amber-50 border border-amber-200" : "bg-green-50 border border-green-200"}`} data-testid="result-visa">
+          <div className={`rounded-lg p-6 ${result.required ? "bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800" : "bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800"}`} data-testid="result-visa">
             <div className="flex items-center gap-3 mb-3">
               <Badge className={result.required ? "bg-amber-500" : "bg-green-500"}>
                 {result.required ? t("tools.visa.required") : t("tools.visa.notRequired")}
               </Badge>
               <span className="font-bold text-primary">{result.type}</span>
             </div>
-            <p className="text-sm text-muted-foreground">{result.info}</p>
-            <Button variant="outline" className="mt-4 gap-2" data-testid="button-visa-help">
-              {t("tools.visa.getHelp")} <ArrowRight className="w-4 h-4" />
+            <p className="text-sm text-muted-foreground mb-4">{result.info}</p>
+            
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="bg-background/50 rounded-md p-3">
+                <p className="text-xs text-muted-foreground mb-1">{language === "es" ? "Tiempo de Tramite" : language === "pt" ? "Tempo de Processamento" : "Processing Time"}</p>
+                <p className="font-bold text-sm">{result.processingTime}</p>
+              </div>
+              <div className="bg-background/50 rounded-md p-3">
+                <p className="text-xs text-muted-foreground mb-1">{language === "es" ? "Costo Aproximado" : language === "pt" ? "Custo Aproximado" : "Approximate Cost"}</p>
+                <p className="font-bold text-sm">{result.cost}</p>
+              </div>
+            </div>
+
+            {result.documents.length > 0 && (
+              <div className="mb-4">
+                <p className="font-bold text-sm mb-2">{language === "es" ? "Documentos Requeridos:" : language === "pt" ? "Documentos Necessarios:" : "Required Documents:"}</p>
+                <ul className="space-y-1">
+                  {result.documents.map((doc, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>{doc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <Button 
+              variant="outline" 
+              className="mt-2 gap-2" 
+              data-testid="button-visa-help"
+              onClick={() => {
+                const message = language === "es" 
+                  ? `Hola! Necesito ayuda con los requisitos de visa para viajar a Europa. Mi nacionalidad es ${nationality} y quiero ir a ${destination}.`
+                  : language === "pt"
+                  ? `Ola! Preciso de ajuda com os requisitos de visto para viajar a Europa. Minha nacionalidade e ${nationality} e quero ir a ${destination}.`
+                  : `Hello! I need help with visa requirements for traveling to Europe. My nationality is ${nationality} and I want to go to ${destination}.`;
+                window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, '_blank');
+              }}
+            >
+              {language === "es" ? "Solicitar Asesoria por WhatsApp" : language === "pt" ? "Solicitar Assessoria pelo WhatsApp" : "Request Advice via WhatsApp"} <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
         )}
