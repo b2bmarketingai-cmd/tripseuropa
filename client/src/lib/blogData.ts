@@ -2724,8 +2724,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "espana-destino-turistico-2025",
     slug: "espana-mejor-destino-turistico-2025",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f63?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "España, Tu Mejor Destino Turistico 2025: Hoteles, Transporte Y Seguridad", en: "Spain, Your Best Tourist Destination 2025: Hotels, Transport And Safety" },
+    image: "/assets/generated_images/espana-destino-turistico-2025.png",
+    title: { es: "España, Tu Mejor Destino Turistico 2026: Hoteles, Transporte Y Seguridad", en: "Spain, Your Best Tourist Destination 2026: Hotels, Transport And Safety" },
     excerpt: { es: "España es uno de los destinos turisticos mas visitados del mundo. Descubre todo sobre hoteles de calidad, transporte publico eficiente, alquiler de vehiculos y seguridad para viajeros en 2025.", en: "Spain is one of the most visited tourist destinations in the world. Discover everything about quality hotels, efficient public transport, vehicle rental and safety for travelers in 2025." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
