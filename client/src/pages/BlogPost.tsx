@@ -14,6 +14,8 @@ import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple"
 import { useToast } from "@/hooks/use-toast";
 import { useCreateLead } from "@/hooks/use-leads";
 
+import Gemini_Generated_Image_aeza91aeza91aeza from "@assets/Gemini_Generated_Image_aeza91aeza91aeza.png";
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
@@ -109,7 +111,6 @@ export default function BlogPost() {
         type="article"
       />
       <Header />
-      
       <main>
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
@@ -168,7 +169,7 @@ export default function BlogPost() {
                 {section.image && (
                   <div className="my-6 rounded-lg overflow-hidden">
                     <img 
-                      src={section.image} 
+                      src={Gemini_Generated_Image_aeza91aeza91aeza} 
                       alt={section.title}
                       className="w-full h-auto object-cover"
                     />
@@ -286,7 +287,6 @@ export default function BlogPost() {
           </div>
         </article>
       </main>
-      
       <FloatingContactButtons />
       <Footer />
     </div>
