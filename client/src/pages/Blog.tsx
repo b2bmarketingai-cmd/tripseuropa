@@ -868,11 +868,11 @@ export default function Blog() {
             {featuredPosts.map((post) => (
               <Link href={`/blog/post/${'slug' in post ? post.slug : post.id}`} key={post.id}>
                 <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-featured-${post.id}`}>
-                  <div className="relative h-48 overflow-hidden bg-muted">
+                  <div className="relative h-48 sm:h-52 overflow-hidden bg-muted">
                     <img 
                       src={post.image} 
                       alt={post.title[language as "es" | "en" | "pt"] || post.title.es} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       loading="lazy"
                     />
                     <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language as "es" | "en" | "pt"] || post.categoryLabel.es}</Badge>
@@ -906,11 +906,12 @@ export default function Blog() {
             <Card className="bg-primary/95 border-accent/30 hover:bg-primary transition-all cursor-pointer overflow-hidden" data-testid="link-vacaciones-europa">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row items-center">
-                  <div className="relative w-full md:w-1/3 h-48 md:h-auto">
+                  <div className="relative w-full md:w-1/3 h-48 md:h-56">
                     <img 
                       src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=600&auto=format&fit=crop" 
                       alt="Vacaciones para Europa" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/90 md:block hidden" />
                   </div>
@@ -1081,11 +1082,11 @@ export default function Blog() {
               {filteredPosts.map((post) => (
                 <Link href={`/blog/post/${'slug' in post && post.slug ? post.slug : post.id}`} key={post.id}>
                   <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-blog-${post.id}`}>
-                    <div className="relative h-52 overflow-hidden bg-muted">
+                    <div className="relative h-48 sm:h-52 overflow-hidden bg-muted">
                       <img 
                         src={post.image} 
                         alt={post.title[language as "es" | "en" | "pt"] || post.title.es} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                         loading="lazy"
                       />
                       <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language as "es" | "en" | "pt"] || post.categoryLabel.es}</Badge>

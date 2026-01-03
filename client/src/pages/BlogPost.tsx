@@ -146,11 +146,12 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <div className="relative aspect-video rounded-lg overflow-hidden mb-8">
+          <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-lg overflow-hidden mb-8">
             <img 
               src={post.image} 
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
+              loading="eager"
               data-testid="img-post-hero"
             />
           </div>
@@ -163,6 +164,18 @@ export default function BlogPost() {
             {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
               <section key={index} className="mb-10">
                 <h2 className="text-2xl font-display text-accent mb-4">{section.title}</h2>
+                
+                {section.image && (
+                  <div className="relative w-full aspect-video md:aspect-[16/9] rounded-lg overflow-hidden mb-4">
+                    <img 
+                      src={section.image} 
+                      alt={section.title}
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                
                 <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
                 
                 {section.list && (
