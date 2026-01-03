@@ -991,7 +991,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "mejor-agencia-viajes-vacaciones",
     title: { es: "La Mejor Agencia de Viajes Para Reservar Tus Vacaciones a Europa", en: "The Best Travel Agency to Book Your European Vacation" },
     excerpt: { es: "Descubre por que una agencia de viajes especializada puede transformar tu experiencia de viaje a Europa, ofreciendote seguridad, comodidad y experiencias unicas.", en: "Discover why a specialized travel agency can transform your European travel experience, offering you security, comfort and unique experiences." },
-    image: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/mejor-agencia-viajes.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2025-01-01",
