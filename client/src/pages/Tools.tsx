@@ -581,7 +581,17 @@ function VisaChecker() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="colombia">{language === "es" ? "Colombiana" : language === "pt" ? "Colombiana" : "Colombian"}</SelectItem>
+                <SelectItem value="mexico">{language === "es" ? "Mexicana" : language === "pt" ? "Mexicana" : "Mexican"}</SelectItem>
+                <SelectItem value="brasil">{language === "es" ? "Brasilena" : language === "pt" ? "Brasileira" : "Brazilian"}</SelectItem>
+                <SelectItem value="argentina">{language === "es" ? "Argentina" : language === "pt" ? "Argentina" : "Argentine"}</SelectItem>
+                <SelectItem value="peru">{language === "es" ? "Peruana" : language === "pt" ? "Peruana" : "Peruvian"}</SelectItem>
+                <SelectItem value="panama">{language === "es" ? "Panamena" : language === "pt" ? "Panamenha" : "Panamanian"}</SelectItem>
+                <SelectItem value="costarica">{language === "es" ? "Costarricense" : language === "pt" ? "Costarriquenha" : "Costa Rican"}</SelectItem>
+                <SelectItem value="dominicana">{language === "es" ? "Dominicana" : language === "pt" ? "Dominicana" : "Dominican"}</SelectItem>
+                <SelectItem value="caribe">{language === "es" ? "Caribena" : language === "pt" ? "Caribenha" : "Caribbean"}</SelectItem>
                 <SelectItem value="venezuela">{language === "es" ? "Venezolana" : language === "pt" ? "Venezuelana" : "Venezuelan"}</SelectItem>
+                <SelectItem value="chile">{language === "es" ? "Chilena" : language === "pt" ? "Chilena" : "Chilean"}</SelectItem>
+                <SelectItem value="ecuador">{language === "es" ? "Ecuatoriana" : language === "pt" ? "Equatoriana" : "Ecuadorian"}</SelectItem>
               </SelectContent>
             </Select>
           </div>
