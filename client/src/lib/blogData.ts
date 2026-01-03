@@ -1210,7 +1210,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelo-largo-estambul-consejos",
     title: { es: "Vuelo Largo a Estambul: Consejos Para Sobrevivir el Viaje", en: "Long Flight to Istanbul: Tips to Survive the Journey" },
     excerpt: { es: "Todo lo que necesitas saber para hacer mas llevadero un vuelo largo a Turquia. Desde que llevar hasta como combatir el jet lag y aprovechar las escalas.", en: "Everything you need to know to make a long flight to Turkey more bearable. From what to bring to how to combat jet lag and make the most of layovers." },
-    image: "https://images.unsplash.com/photo-1436491865332-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/vuelo-largo-estambul.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-27",
