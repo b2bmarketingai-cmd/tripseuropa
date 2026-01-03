@@ -2818,7 +2818,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "aerolineas-caracas-madrid",
     slug: "aerolineas-vuelos-caracas-madrid",
-    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386fa?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/aerolineas-caracas-madrid.png",
     title: { es: "Aerolineas Que Vuelan De Caracas A Madrid", en: "Airlines Flying From Caracas To Madrid" },
     excerpt: { es: "La ruta aerea entre Caracas y Madrid es una de las mas demandadas. Conoce las principales aerolineas que operan esta conexion y como elegir la mejor opcion para tu viaje a España.", en: "The air route between Caracas and Madrid is one of the most demanded. Learn about the main airlines operating this connection and how to choose the best option for your trip to Spain." },
     category: "vuelos",
