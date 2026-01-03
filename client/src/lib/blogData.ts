@@ -1790,7 +1790,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "pasaporte-vencido-nacionalidad",
     title: { es: "Pasaporte Vencido: Es Posible Obtener la Nacionalidad Con Pasaporte Vencido", en: "Expired Passport: Is It Possible to Obtain Nationality With Expired Passport" },
     excerpt: { es: "Muchos se preguntan si pueden tramitar nacionalidad o documentos con pasaporte vencido. Aclaramos las dudas y opciones disponibles.", en: "Many wonder if they can process nationality or documents with an expired passport. We clarify doubts and available options." },
-    image: "https://images.unsplash.com/photo-1553867669-4e7b7b5a1b4c?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/pasaporte-vencido-nacionalidad.png",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-14",
