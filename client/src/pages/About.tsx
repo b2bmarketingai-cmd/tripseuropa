@@ -117,7 +117,7 @@ export default function About() {
                 {language === "es" ? "Nuestra Historia" : language === "pt" ? "Nossa Historia" : "Our Story"}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                {language === "es" ? "Nacimos de un Sueno Europeo" : language === "pt" ? "Nascemos de um Sonho Europeu" : "Born from a European Dream"}
+                {language === "es" ? "Nacimos de un Sueño Europeo" : language === "pt" ? "Nascemos de um Sonho Europeu" : "Born from a European Dream"}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
