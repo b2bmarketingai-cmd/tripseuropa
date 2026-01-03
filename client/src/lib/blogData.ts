@@ -1031,7 +1031,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-republica-dominicana",
     title: { es: "Consejos Para Reservar Vuelos a Republica Dominicana Desde Latinoamerica", en: "Tips for Booking Flights to Dominican Republic from Latin America" },
     excerpt: { es: "Guia completa para encontrar los mejores vuelos al Caribe dominicano. Rutas, aerolineas y consejos practicos para tu proximo viaje al paraiso.", en: "Complete guide to finding the best flights to the Dominican Caribbean. Routes, airlines and practical tips for your next trip to paradise." },
-    image: "https://images.unsplash.com/photo-1569700802224-f4c1c8f45d35?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/vuelos-republica-dominicana.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2025-01-01",
