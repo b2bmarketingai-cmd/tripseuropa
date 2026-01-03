@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, ArrowLeft, Calendar, User, Share2, Phone, Loader2 } from "lucide-react";
+import { ArrowLeft, Calendar, User, Share2, Phone, Loader2 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
@@ -132,10 +132,6 @@ export default function BlogPost() {
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 <span>{post.date}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                <span>{post.readTime} min de lectura</span>
               </div>
               {fullPost?.author && (
                 <div className="flex items-center gap-1">
