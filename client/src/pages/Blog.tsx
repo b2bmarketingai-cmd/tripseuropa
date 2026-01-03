@@ -531,11 +531,11 @@ const BLOG_POSTS = [
   {
     id: "pasaporte-europa-requisitos",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Requisitos del Pasaporte para Viajar a Europa 2025", en: "Passport Requirements for Traveling to Europe 2025", pt: "Requisitos do Passaporte para Viajar para Europa 2025" },
+    title: { es: "Requisitos del Pasaporte para Viajar a Europa 2026", en: "Passport Requirements for Traveling to Europe 2026", pt: "Requisitos do Passaporte para Viajar para Europa 2026" },
     excerpt: { es: "Vigencia minima, paginas en blanco, renovacion y casos especiales para pasaportes latinoamericanos.", en: "Minimum validity, blank pages, renewal and special cases for Latin American passports.", pt: "Validade minima, paginas em branco, renovacao e casos especiais para passaportes latino-americanos." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning", pt: "Planejamento" },
-    date: "20 Oct 2024",
+    date: "20 Oct 2025",
     readTime: 6,
     featured: false,
     keywords: ["pasaporte europa", "requisitos pasaporte", "vigencia pasaporte"],
