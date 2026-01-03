@@ -346,6 +346,81 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "budapest-baños-termales",
+    slug: "budapest-baños-termales",
+    image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Budapest: Banos Termales, Ruin Bars y el Danubio", en: "Budapest: Thermal Baths, Ruin Bars and the Danube" },
+    excerpt: { es: "Szechenyi, Gellert, Parlamento y la vida nocturna en bares de ruinas. Budapest completo.", en: "Szechenyi, Gellert, Parliament and nightlife in ruin bars. Complete Budapest." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "2 Oct 2024",
+    readTime: 10,
+    author: "Trips Europa",
+    keywords: ["budapest baños termales", "ruin bars", "hungria turismo", "szechenyi", "gellert", "parlamento budapest"],
+    featured: false,
+    sections: [
+      {
+        title: "Budapest: La Perla del Danubio",
+        content: "Budapest es una de las ciudades mas espectaculares de Europa y un destino imprescindible para viajeros latinoamericanos. La capital hungara combina la majestuosidad imperial del antiguo Imperio Austrohungaro con una vibrante escena cultural contemporanea. Dividida por el rio Danubio en dos partes - Buda (la colina historica) y Pest (la planicie dinamica) - la ciudad ofrece arquitectura impresionante, banos termales milenarios, gastronomia unica y una vida nocturna legendaria.",
+        image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Los Banos Termales: Tradicion de 2000 Anos",
+        content: "Budapest es la unica capital del mundo con mas de 120 fuentes termales naturales. Los romanos ya disfrutaban de estas aguas curativas, y los otomanos construyeron hammams que aun funcionan. Sumergirse en estas piscinas calientes es una experiencia obligatoria, especialmente en invierno cuando el vapor crea una atmosfera magica.",
+        list: ["Szechenyi: El mas grande de Europa, estilo neobarroco, abierto todo el ano", "Gellert: El mas lujoso, arquitectura Art Nouveau, olas artificiales", "Rudas: Bano otomano del siglo XVI, piscina en la azotea con vistas al Danubio", "Kiraly: Intimo y autentico, cupula otomana original", "Palatinus: Al aire libre en la Isla Margarita, ideal para verano", "Lukacs: Frecuentado por locales, mas economico y autentico"]
+      },
+      {
+        title: "Como Disfrutar los Banos Termales",
+        content: "Para aprovechar al maximo tu experiencia termal, sigue estos consejos practicos que te ayudaran a integrarte como un local.",
+        list: ["Lleva traje de bano propio o alquila uno en la entrada", "Las chanclas son utiles pero no obligatorias", "Lleva gorra de natacion para las piscinas interiores", "Los lockers requieren deposito o monedas", "Szechenyi ofrece fiestas nocturnas 'Sparty' en verano", "Alternativa entre piscinas calientes (36-40 grados) y frias", "Los masajes y tratamientos requieren reserva anticipada"]
+      },
+      {
+        title: "El Parlamento Hungaro: Joya Arquitectonica",
+        content: "El Parlamento de Budapest es el tercer edificio legislativo mas grande del mundo y el icono absoluto de la ciudad. Su arquitectura neogotica con 691 habitaciones es impresionante tanto de dia como iluminado de noche. Una visita guiada te permite ver la Sagrada Corona de Hungria y los fastuosos interiores.",
+        image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=80&w=1200&auto=format&fit=crop",
+        list: ["Reserva tu entrada online con anticipacion (se agotan rapido)", "Tours en espanol disponibles en horarios limitados", "La vista desde el lado de Buda al atardecer es espectacular", "El edificio tiene 40 kilos de oro en su decoracion interior"]
+      },
+      {
+        title: "Buda: La Orilla Historica",
+        content: "El lado de Buda alberga el Castillo Real, el Bastión de los Pescadores con sus torres de cuento de hadas, y el barrio historico con calles empedradas y casas medievales. Subir hasta aqui ofrece las mejores panoramicas de Pest y el Danubio.",
+        list: ["Castillo de Buda: Palacio real con Galeria Nacional y Museo de Historia", "Bastion de los Pescadores: Torres neogoticas con vistas 360 grados", "Iglesia de Matias: Gotica con tejas de ceramica colorida", "Hospital en la Roca: Museo de historia militar en tuneles subterraneos", "Funicular de Buda: Transporte historico desde el Puente de las Cadenas", "Colina Gellert: Ciudadela con la mejor panoramica de la ciudad"]
+      },
+      {
+        title: "Pest: El Corazon Dinamico",
+        content: "Pest es donde late el pulso de la ciudad moderna. Grandes avenidas, el elegante edificio de la Opera, la Basilica de San Esteban, y la vibrante calle Vaci con sus tiendas y cafes. El barrio judio ofrece historia conmovedora y la famosa escena de los ruin bars.",
+        list: ["Basilica de San Esteban: Subir a la cupula para vistas panoramicas", "Opera de Budapest: Tours o entradas economicas para conciertos", "Avenida Andrassy: Patrimonio UNESCO, boutiques y embajadas", "Sinagoga de la Calle Dohany: La segunda mas grande del mundo", "Heroes Square: Monumento milenario con Museo de Bellas Artes", "Mercado Central: Gastronomia local, souvenirs y arquitectura"]
+      },
+      {
+        title: "Los Ruin Bars: La Vida Nocturna Unica de Budapest",
+        content: "Los 'romkocsma' o bares de ruinas son la contribucion mas original de Budapest a la cultura global. Estos bares surgen en edificios abandonados del barrio judio, decorados de forma eclectica con muebles vintage, arte callejero y objetos random. Cada uno tiene su personalidad unica.",
+        list: ["Szimpla Kert: El original y mas famoso, laberintico y caótico en el mejor sentido", "Instant-Fogas: El mas grande, multiples niveles y pistas de baile", "Mazel Tov: Bar-restaurante con jardin interior y cocina mediterranea", "Anker't: Mas tranquilo y sofisticado, buena cocina", "Ellato Kert: Atmosfera de jardin, ideal para empezar la noche", "Csendes: Galeria de arte y bar alternativo, ambiente intelectual"]
+      },
+      {
+        title: "Gastronomia Hungara: Sabores Intensos",
+        content: "La cocina hungara es robusta, sabrosa y reconfortante. El paprika es el ingrediente estrella, dando color y sabor a platos emblematicos. Los precios son muy accesibles comparados con Europa occidental, permitiendo comer muy bien por poco dinero.",
+        list: ["Goulash: El plato nacional, sopa-estofado de ternera con paprika", "Langos: Masa frita cubierta de crema agria y queso (street food)", "Chimney Cake (Kurtoskalacs): Postre enrollado, crujiente y dulce", "Chicken Paprikash: Pollo en salsa cremosa de paprika", "Tokaji: Vino dulce de postre, de los mejores del mundo", "Palinka: Aguardiente de frutas, digestivo tradicional", "Dobos Torte: Tarta de capas con crema de chocolate y caramelo"]
+      },
+      {
+        title: "Crucero por el Danubio",
+        content: "Ver Budapest desde el agua es una experiencia que no te puedes perder. Los cruceros nocturnos cuando la ciudad esta iluminada son particularmente magicos. Desde el rio apreciaras la simetria perfecta entre Buda y Pest conectadas por sus puentes historicos.",
+        list: ["Crucero nocturno: La ciudad iluminada es impresionante", "Crucero con cena: Combinacion perfecta de vistas y gastronomia", "Puente de las Cadenas: El primero permanente sobre el Danubio (1849)", "Puente de la Libertad: Art Nouveau verde con esculturas", "Isla Margarita: Oasis verde perfecto para pasear o picnic"]
+      },
+      {
+        title: "Consejos Practicos para tu Viaje",
+        content: "Budapest ofrece una relacion calidad-precio excepcional para viajeros latinos. Aqui te dejamos consejos para maximizar tu experiencia.",
+        list: ["Mejor epoca: Abril-mayo y septiembre-octubre (clima agradable, menos turistas)", "Moneda: Forinto hungaro (HUF), no euros (1 EUR = aprox. 400 HUF)", "Transporte: Compra pase de 72 horas para metro, tranvia y bus", "Propinas: 10-15% en restaurantes, no obligatorio", "Idioma: El hungaro es dificil, pero el ingles funciona en zonas turisticas", "Seguridad: Ciudad muy segura, cuidado normal con carteristas en zonas turisticas", "WiFi: Excelente cobertura, la mayoria de cafes y restaurantes ofrecen gratis"]
+      }
+    ],
+    faqs: [
+      { question: "Hungria usa el euro?", answer: "No, la moneda oficial es el Forinto Hungaro (HUF). Aunque algunos lugares turisticos aceptan euros, el cambio suele ser desfavorable. Usa cajeros automaticos para obtener forintos al mejor tipo de cambio." },
+      { question: "Cuantos dias necesito para ver Budapest?", answer: "Minimo 3 dias para lo esencial: un dia para Buda y el castillo, un dia para Pest y el Parlamento, y un dia para banos termales y ruin bars. Con 4-5 dias puedes explorar con mas calma y hacer excursiones." },
+      { question: "Son los ruin bars seguros?", answer: "Si, absolutamente. Son bares tematicos en edificios rehabilitados, no lugares abandonados. Szimpla Kert y los principales son muy turisticos y seguros. Como en cualquier bar, cuida tus pertenencias." },
+      { question: "Cual es el mejor bano termal para principiantes?", answer: "Szechenyi es perfecto para primera vez: es grande, facil de navegar, con multiples piscinas interiores y exteriores. Gellert es mas elegante pero mas caro. Rudas ofrece experiencia otomana autentica." },
+      { question: "Necesito visa para visitar Hungria siendo latinoamericano?", answer: "Hungria es parte del espacio Schengen. Colombianos, peruanos y ecuatorianos necesitan visa Schengen. Mexicanos, argentinos, chilenos, brasileños y uruguayos pueden entrar sin visa hasta 90 dias." },
+      { question: "Es Budapest economica comparada con otras capitales europeas?", answer: "Muy economica. Puedes comer bien por 8-15 EUR, alojamiento desde 30 EUR/noche, entrada a banos termales 15-25 EUR. El transporte publico es muy barato. Es perfecta para viajeros con presupuesto ajustado." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
