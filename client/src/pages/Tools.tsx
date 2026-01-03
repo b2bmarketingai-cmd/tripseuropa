@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useI18n } from "@/lib/i18n";
 import { Calculator, Plane, MapPin, FileCheck, Euro, Calendar, Users, ArrowRight } from "lucide-react";
@@ -383,16 +383,46 @@ function TripCalculator() {
                 <SelectValue placeholder={t("tools.calculator.selectOrigin")} />
               </SelectTrigger>
               <SelectContent>
+                <SelectLabel>Colombia</SelectLabel>
                 <SelectItem value="bogota">Bogota, Colombia</SelectItem>
                 <SelectItem value="medellin">Medellin, Colombia</SelectItem>
                 <SelectItem value="cartagena">Cartagena, Colombia</SelectItem>
                 <SelectItem value="cali">Cali, Colombia</SelectItem>
-                <SelectItem value="lima">Lima, Peru</SelectItem>
+                <SelectItem value="barranquilla">Barranquilla, Colombia</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Mexico</SelectLabel>
                 <SelectItem value="mexico">Ciudad de Mexico, Mexico</SelectItem>
-                <SelectItem value="buenos_aires">Buenos Aires, Argentina</SelectItem>
-                <SelectItem value="santiago">Santiago, Chile</SelectItem>
+                <SelectItem value="guadalajara">Guadalajara, Mexico</SelectItem>
+                <SelectItem value="monterrey">Monterrey, Mexico</SelectItem>
+                <SelectItem value="cancun">Cancun, Mexico</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Brasil</SelectLabel>
                 <SelectItem value="sao_paulo">Sao Paulo, Brasil</SelectItem>
-                <SelectItem value="caracas">Caracas, Venezuela</SelectItem>
+                <SelectItem value="rio_janeiro">Rio de Janeiro, Brasil</SelectItem>
+                <SelectItem value="brasilia">Brasilia, Brasil</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Argentina</SelectLabel>
+                <SelectItem value="buenos_aires">Buenos Aires, Argentina</SelectItem>
+                <SelectItem value="cordoba_ar">Cordoba, Argentina</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Peru</SelectLabel>
+                <SelectItem value="lima">Lima, Peru</SelectItem>
+                <SelectItem value="cusco">Cusco, Peru</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Panama</SelectLabel>
+                <SelectItem value="panama_city">Ciudad de Panama, Panama</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Costa Rica</SelectLabel>
+                <SelectItem value="san_jose">San Jose, Costa Rica</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Rep. Dominicana</SelectLabel>
+                <SelectItem value="santo_domingo">Santo Domingo, Rep. Dominicana</SelectItem>
+                <SelectItem value="punta_cana">Punta Cana, Rep. Dominicana</SelectItem>
+                <SelectSeparator />
+                <SelectLabel>Caribe</SelectLabel>
+                <SelectItem value="san_juan">San Juan, Puerto Rico</SelectItem>
+                <SelectItem value="la_habana">La Habana, Cuba</SelectItem>
+                <SelectItem value="kingston">Kingston, Jamaica</SelectItem>
               </SelectContent>
             </Select>
           </div>
