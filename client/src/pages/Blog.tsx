@@ -850,7 +850,7 @@ export default function Blog() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-blog-subtitle">
             {language === "es" 
-              ? "Visa Schengen, presupuestos, itinerarios y experiencias reales de viajeros latinoamericanos" 
+              ? "Visa Schengen, presupuestos, itinerarios y experiencias reales de viajeros latinoamericanos, Brazil y el Caribe" 
               : language === "pt"
               ? "Visto Schengen, orcamentos, roteiros e experiencias reais de viajantes latino-americanos"
               : "Schengen visa, budgets, itineraries and real experiences from Latin American travelers"}
