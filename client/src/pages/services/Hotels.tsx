@@ -153,8 +153,20 @@ export default function Hotels() {
                     ))}
                   </div>
                   
-                  <div className="pt-4 border-t">
+                  <div className="pt-4 border-t flex items-center justify-between gap-2">
                     <span className="text-lg font-bold text-accent">{category.priceRange}</span>
+                    <Button 
+                      size="sm" 
+                      className="bg-accent text-primary"
+                      onClick={() => openWhatsAppQuote({ 
+                        es: `hotel ${category.name.es} en Europa`, 
+                        en: `${category.name.en} hotel in Europe`, 
+                        pt: `hotel ${category.name.es} na Europa` 
+                      }, language)}
+                      data-testid={`button-quote-category-${idx}`}
+                    >
+                      {language === "es" ? "Cotizar Ahora" : language === "pt" ? "Orcamento" : "Quote Now"}
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
