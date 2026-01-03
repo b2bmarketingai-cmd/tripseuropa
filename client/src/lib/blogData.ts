@@ -124,6 +124,90 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "hoteles-lujo-paris",
+    slug: "hoteles-lujo-paris",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "10 Hoteles de Lujo Imperdibles en Paris 2026", en: "10 Must-Stay Luxury Hotels in Paris 2026" },
+    excerpt: { es: "Ritz, Four Seasons, Le Bristol y mas. Los hoteles mas exclusivos de Paris con vista a la Torre Eiffel, servicio impecable y experiencias inolvidables para viajeros exigentes.", en: "Ritz, Four Seasons, Le Bristol and more. The most exclusive hotels in Paris with Eiffel Tower views, impeccable service and unforgettable experiences for discerning travelers." },
+    category: "lujo",
+    categoryLabel: { es: "Lujo", en: "Luxury" },
+    date: "03 Ene 2026",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["hoteles paris", "hoteles lujo paris", "ritz paris", "four seasons paris", "le bristol paris", "hotel torre eiffel"],
+    featured: true,
+    sections: [
+      {
+        title: "Paris: La Capital del Lujo Mundial",
+        content: "Paris no es solo la Ciudad de la Luz, es tambien la capital mundial del lujo. Sus hoteles de cinco estrellas representan el maximo exponente de la hospitalidad francesa, combinando historia centenaria con servicios modernos de clase mundial. Desde palacios del siglo XIX hasta propiedades boutique contemporaneas, hospedarse en un hotel de lujo en Paris es una experiencia que trasciende el simple alojamiento.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "1. Ritz Paris - Place Vendome",
+        content: "El legendario Ritz Paris, fundado en 1898 por Cesar Ritz, es sinonimo de elegancia atemporal. Ubicado en la prestigiosa Place Vendome, este palace hotel ha hospedado a realeza, celebridades y figuras historicas. Tras una renovacion de cuatro anos, el Ritz combina su herencia clasica con comodidades contemporaneas. El Bar Hemingway, el Spa Chanel y el restaurante L'Espadon son experiencias unicas.",
+        list: ["Suites con decoracion de epoca y tecnologia moderna", "Bar Hemingway: cocteleria de clase mundial", "Escuela de cocina Ritz Escoffier", "Spa Chanel exclusivo", "Jardin privado en el corazon de Paris"]
+      },
+      {
+        title: "2. Four Seasons Hotel George V",
+        content: "A pasos de los Champs-Elysees, el Four Seasons George V es reconocido por sus espectaculares arreglos florales y tres restaurantes con estrellas Michelin. Sus suites ofrecen vistas a la Torre Eiffel y los techos de Paris. El servicio personalizado del Four Seasons establece el estandar de la hospitalidad de lujo.",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "3. Le Bristol Paris",
+        content: "Este palace hotel en la Rue du Faubourg Saint-Honore combina elegancia clasica francesa con un ambiente sorprendentemente calido y acogedor. Su jardin frances, uno de los pocos jardines privados de hoteles en Paris, es un oasis de tranquilidad. El restaurante Epicure, con tres estrellas Michelin del chef Eric Frechon, ofrece alta cocina francesa en su maxima expresion.",
+        list: ["Jardin frances de 1,200 m2", "Piscina en la azotea con vista a Paris", "Restaurante Epicure - 3 estrellas Michelin", "Spa La Prairie", "Residencia del gato Fa-Raon, mascota del hotel"]
+      },
+      {
+        title: "4. Hotel Plaza Athenee",
+        content: "Situado en la elegante Avenue Montaigne, el Plaza Athenee es iconico por sus balcones con geranios rojos. Es el hotel preferido de las estrellas de Hollywood y la alta costura. El restaurante Alain Ducasse au Plaza Athenee redefine la gastronomia francesa contemporanea. Las vistas a la Torre Eiffel desde las suites son espectaculares.",
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "5. Shangri-La Hotel Paris",
+        content: "Ubicado en la antigua residencia del Principe Roland Bonaparte, el Shangri-La ofrece las mejores vistas a la Torre Eiffel de cualquier hotel en Paris. Sus habitaciones y suites combinan elegancia francesa con toques asiaticos. La Suite Chaillot tiene la vista mas fotografiada de Paris, con la Torre Eiffel enmarcada perfectamente desde la terraza.",
+        list: ["Vistas frontales a la Torre Eiffel", "Palacio historico del siglo XIX", "Restaurante Shang Palace - dim sum de lujo", "Spa Chi con piscina interior", "Ubicacion privilegiada en Trocadero"]
+      },
+      {
+        title: "6. Le Meurice",
+        content: "Conocido como el hotel de los reyes, Le Meurice fue el primer hotel de lujo de Paris. Frente a los Jardines de las Tullerias, combina opulencia del siglo XVIII con arte contemporaneo. El restaurante Le Meurice Alain Ducasse ofrece una experiencia gastronomica sublime bajo frescos historicos. Salvador Dali residio aqui durante 30 anos.",
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "7. Mandarin Oriental Paris",
+        content: "Un oasis de calma en el corazon del distrito de la moda, el Mandarin Oriental ocupa un edificio Art Deco renovado. Su jardin interior con restaurante al aire libre es un secreto bien guardado. El Spa con piscina ofrece tratamientos exclusivos, y el Camellia es perfecto para el te de la tarde.",
+        list: ["Jardin interior secreto", "Spa de 900 m2 con piscina", "Restaurante Sur Mesure par Thierry Marx", "Ubicacion en Rue Saint-Honore", "Diseno contemporaneo con toques orientales"]
+      },
+      {
+        title: "8. Park Hyatt Paris-Vendome",
+        content: "Este hotel boutique de lujo destaca por su diseno contemporaneo minimalista, obra del arquitecto Ed Tuttle. Las suites duplex con terrazas privadas ofrecen experiencias unicas. El restaurante Pur' ofrece cocina francesa moderna, y el bar subterraneo es uno de los mas exclusivos de Paris.",
+        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "9. Hotel de Crillon - A Rosewood Hotel",
+        content: "Reabierto en 2017 tras una renovacion de 200 millones de euros, el Crillon en la Place de la Concorde es un monumento historico. Las Apartments Grands ofrece 500 m2 de lujo supremo. El bar Les Ambassadeurs y el jardin de invierno son espectaculares. Karl Lagerfeld diseno dos suites antes de su fallecimiento.",
+        list: ["Ubicacion en Place de la Concorde", "Historia desde 1758", "Suites disenadas por Karl Lagerfeld", "Piscina subterranea de marmol", "Restaurante L'Ecrin con chef Jerome Banctel"]
+      },
+      {
+        title: "10. The Peninsula Paris",
+        content: "El mas reciente de los palace hotels de Paris, The Peninsula ocupa un edificio Haussmanniano restaurado frente al Arco del Triunfo. Cada habitacion tiene tecnologia de punta, incluyendo tablets para controlar iluminacion y servicios. El restaurante en la azotea L'Oiseau Blanc ofrece vistas panoramicas de 360 grados con un avion de epoca como decoracion.",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos para Reservar Hoteles de Lujo en Paris",
+        content: "Para obtener la mejor experiencia en estos hoteles exclusivos, considera estos consejos practicos que maximizaran tu estancia.",
+        list: ["Reserva con 3-6 meses de anticipacion para temporada alta", "Solicita habitaciones con vista a la Torre Eiffel al reservar", "Aprovecha los paquetes romanticos o de celebracion", "Contacta al concierge antes de llegar para reservas de restaurantes", "Considera unirte a programas de fidelidad para upgrades", "La temporada baja (enero-marzo) ofrece mejores tarifas"]
+      }
+    ],
+    faqs: [
+      { question: "Cual es el precio promedio de una noche en estos hoteles de lujo?", answer: "Los precios varian desde EUR 800 por noche en habitacion estandar hasta EUR 20,000+ por las suites presidenciales. En temporada alta (junio-agosto, Navidad), los precios aumentan significativamente." },
+      { question: "Cual hotel tiene las mejores vistas a la Torre Eiffel?", answer: "El Shangri-La Paris ofrece las vistas frontales mas impresionantes a la Torre Eiffel. El Plaza Athenee y el Peninsula tambien tienen suites con vistas privilegiadas." },
+      { question: "Los hoteles ofrecen traslado desde el aeropuerto?", answer: "Si, todos estos hoteles palace ofrecen servicio de limusina desde Charles de Gaulle o Orly. El costo tipico es EUR 150-300 dependiendo del vehiculo." },
+      { question: "Cual es la mejor epoca para visitar Paris y hospedarse en estos hoteles?", answer: "La primavera (abril-junio) y el otono (septiembre-octubre) ofrecen el mejor clima y precios mas razonables. Diciembre es magico pero muy concurrido." },
+      { question: "Necesito reservar los restaurantes del hotel con anticipacion?", answer: "Los restaurantes con estrellas Michelin requieren reserva con semanas o meses de anticipacion. Contacta al concierge del hotel antes de tu llegada para asegurar disponibilidad." },
+      { question: "Estos hoteles son apropiados para familias con ninos?", answer: "Muchos palace hotels como Le Bristol y el Four Seasons son muy family-friendly, ofreciendo programas para ninos, habitaciones conectadas y servicios de ninera." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
