@@ -425,9 +425,11 @@ export function Header() {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-64 bg-white p-2">
-                  <DropdownMenuItem className="cursor-pointer gap-3">
-                    <MessageCircle className="w-5 h-5" />
-                    <span>{labels.asistenciaChat[currentLang]}</span>
+                  <DropdownMenuItem asChild className="cursor-pointer gap-3">
+                    <Link href="/travel-assistant" className="flex items-center gap-3 w-full">
+                      <MessageCircle className="w-5 h-5" />
+                      <span>{labels.asistenciaChat[currentLang]}</span>
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
                     <Link href="/faq" className="flex items-center gap-3 w-full">
@@ -661,10 +663,10 @@ export function Header() {
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2">
-                  <button className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left">
+                  <Link href="/travel-assistant" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsOpen(false)}>
                     <MessageCircle className="w-4 h-4" />
                     {labels.asistenciaChat[currentLang]}
-                  </button>
+                  </Link>
                   <Link href="/faq" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
                     <HelpCircle className="w-4 h-4" />
                     {labels.centroAyudaMobile[currentLang]}
