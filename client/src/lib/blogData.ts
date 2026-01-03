@@ -853,7 +853,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "museo-louvre-guia",
     slug: "museo-louvre-guia",
-    image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=80&w=1200&auto=format&fit=crop",
+    image: "/attached_assets/Gemini_Generated_Image_hgg09hhgg09hhgg0_1767456672646.png",
     title: { es: "Museo del Louvre: Guia para No Perderte Nada", en: "Louvre Museum: Guide to Not Miss Anything" },
     excerpt: { es: "Mona Lisa, Venus de Milo y 35,000 obras. Como recorrerlo en 3 horas sin agotarte.", en: "Mona Lisa, Venus de Milo and 35,000 works. How to tour it in 3 hours without exhaustion." },
     category: "destinos",
