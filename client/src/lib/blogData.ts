@@ -5231,5 +5231,99 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Cuanto cuesta un island hopping de 2 semanas?", answer: "Presupuesto medio: EUR 2,500-3,500 por persona incluyendo ferries, hoteles 3-4 estrellas, comidas y algunas excursiones. Sin vuelos internacionales. Puedes gastar menos o mucho mas segun tu estilo." },
       { question: "Las islas griegas son seguras?", answer: "Muy seguras. Grecia tiene indices de criminalidad muy bajos. El mayor riesgo es el sol y la conduccion en carreteras estrechas. Usa protector solar, bebe agua, y conduce con cuidado." }
     ]
+  },
+
+  {
+    id: "vinos-toscana",
+    slug: "vinos-toscana",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Ruta del Vino en la Toscana: Chianti y Brunello", en: "Wine Route in Tuscany: Chianti and Brunello" },
+    excerpt: { es: "Bodegas, catas, paisajes y gastronomia. La guia definitiva para los amantes del vino italiano.", en: "Wineries, tastings, landscapes and gastronomy. The ultimate guide for Italian wine lovers." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "22 Dic 2026",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["vinos toscana", "chianti tour", "bodegas italia", "brunello montalcino", "enoturismo italia", "ruta vino toscana"],
+    featured: true,
+    sections: [
+      {
+        title: "La Toscana: El Paraiso del Vino Italiano",
+        content: "La Toscana no es solo una region vinicola, es un estilo de vida. Colinas ondulantes cubiertas de vinedos, cipreses que marcan caminos centenarios, pueblos medievales posados sobre cumbres, y bodegas donde familias producen vino desde hace generaciones. En Tripseuropa.com hemos recorrido cada rincon de esta tierra bendecida y te traemos la guia definitiva para vivir el enoturismo toscano. Desde el legendario Chianti hasta el sublime Brunello di Montalcino, prepara tus sentidos para una experiencia inolvidable.",
+        image: "https://images.unsplash.com/photo-1523528283115-9bf9b1699245?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Los Grandes Vinos de la Toscana",
+        content: "La Toscana produce algunos de los vinos mas prestigiosos del mundo. Conocerlos es esencial para disfrutar tu ruta vinicola.",
+        list: ["Chianti Classico DOCG: El mas famoso. Sangiovese puro o mezclado. Notas de cereza, violeta, especias. El Gallo Negro es su simbolo. EUR 10-50 por botella.", "Brunello di Montalcino DOCG: El rey de los tintos italianos. 100% Sangiovese Grosso. Envejece minimo 5 anos. Complejo, elegante, longevo. EUR 40-300+.", "Vino Nobile di Montepulciano DOCG: El 'vino de los nobles'. Elegante, menos conocido que Brunello pero excelente. EUR 15-60.", "Super Tuscans: Vinos rebeldes que mezclan uvas francesas (Cabernet, Merlot) con Sangiovese. Sassicaia, Ornellaia, Tignanello. EUR 50-500+.", "Vernaccia di San Gimignano DOCG: El unico blanco DOCG de la Toscana. Fresco, mineral, perfecto para aperitivo. EUR 8-25.", "Vin Santo: Vino dulce de postre. Uvas secadas, envejecido anos en pequenas barricas. Se moja con cantucci (galletas de almendra). EUR 15-60."]
+      },
+      {
+        title: "Region del Chianti: El Corazon del Vino Toscano",
+        content: "El Chianti Classico se produce entre Florencia y Siena, en una de las regiones vinicolas mas bellas del mundo. Cada colina tiene una bodega.",
+        list: ["Greve in Chianti: Capital del Chianti. Plaza medieval con mercado de vinos, Enoteca Falorni (300+ vinos para catar).", "Castellina in Chianti: Pueblo amurallado con vistas espectaculares. Bodegas como Rocca delle Macie y Castello di Fonterutoli.", "Radda in Chianti: El mas alto y escondido. Ambiente medieval intacto. Bodegas familiares autenticas.", "Panzano in Chianti: Pequeno pero famoso por Dario Cecchini (el carnicero mas famoso de Italia).", "Badia a Passignano: Abadia benedictina del siglo XI. Bodega Antinori produce aqui vinos excepcionales. Visita imprescindible.", "La Strada del Vino: Ruta senalizada que conecta bodegas, pueblos y agroturismos. Ideal para conducir sin prisa."],
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Montalcino: La Catedral del Brunello",
+        content: "Montalcino es un pequeno pueblo amurallado que produce uno de los vinos mas caros y codiciados del mundo: el Brunello di Montalcino.",
+        list: ["Fortaleza de Montalcino: Castillo medieval con enoteca publica. Cata vinos con vistas al Valle de Orcia.", "Biondi-Santi: La bodega que 'invento' el Brunello en 1888. Visitas solo con reserva muy anticipada.", "Casanova di Neri: Bodega moderna, vinos premiados, experiencia accesible. Buena introduccion al Brunello.", "Poggio di Sotto: Produccion limitada, metodos tradicionales, vinos de coleccion. Para conocedores.", "Banfi: La bodega mas grande. Castillo medieval, museo del vino, restaurante gourmet, hotel. Experiencia completa.", "Rosso di Montalcino: El 'hermano menor' del Brunello. Mismo terroir, menos envejecimiento, precio accesible. EUR 15-35."]
+      },
+      {
+        title: "Montepulciano: El Vino de los Nobles",
+        content: "No confundir con la uva Montepulciano (de otra region). Aqui el Vino Nobile se hace con Sangiovese y el pueblo es simplemente espectacular.",
+        list: ["Piazza Grande: Una de las plazas renacentistas mas bellas de Italia. Catedral, palacio, cafes con vistas.", "Cantinas historicas: Bodegas excavadas bajo el pueblo desde el siglo XIV. Contucci, De' Ricci, Gattavecchi ofrecen visitas.", "Tempio di San Biagio: Iglesia renacentista aislada entre vinedos. Antonio da Sangallo el Viejo. Perfeccion arquitectonica.", "Cantine aperte: Muchas bodegas tienen tienda abierta sin cita. Prueba y compra directamente del productor.", "Pecorino di Pienza: El queso perfecto para acompanar Vino Nobile. Pienza esta a 15 minutos.", "Notte del Vino Nobile: Festival en julio con catas, musica, comida. El pueblo entero celebra."],
+        image: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Bolgheri: Donde Nacieron los Super Tuscans",
+        content: "La costa toscana alberga una revolucion vinicola. Aqui nacieron vinos que desafiaron las reglas y conquistaron el mundo.",
+        list: ["Viale dei Cipressi: Avenida de 5 km bordeada de cipreses. Icono de la Toscana. Conduce hasta Bolgheri.", "Tenuta San Guido: Cuna del Sassicaia, primer Super Tuscan. Visitas muy limitadas, reserva con meses.", "Ornellaia: Vinos de culto, arquitectura moderna, experiencia premium. Menos exclusivo que Sassicaia.", "Antinori en Bolgheri: La familia Antinori tambien produce aqui. Guado al Tasso es su estrella.", "Pueblo de Bolgheri: Diminuto pero encantador. Murallas, osteria, ambiente italiano puro.", "Costa cercana: Combina bodegas con playa. Castiglioncello, Marina di Bibbona. Relax despues del vino."]
+      },
+      {
+        title: "Experiencias de Cata: Desde Basica Hasta Premium",
+        content: "Las bodegas toscanas ofrecen experiencias para todos los niveles y presupuestos.",
+        list: ["Cata basica (EUR 15-30): 3-4 vinos, breve explicacion, en tienda de la bodega. Sin cita en muchas bodegas.", "Cata guiada (EUR 30-60): Recorrido por vinedos y bodega, 4-6 vinos, maridaje con productos locales.", "Experiencia premium (EUR 80-150+): Vinos de reserva, visita exclusiva, almuerzo gourmet, encuentro con enologo.", "Clases de cocina + vino (EUR 100-200): Aprende a cocinar toscano, maridaje con vinos de la finca. Medio dia.", "Vendimia (septiembre-octubre): Algunas bodegas permiten participar en la cosecha. Experiencia unica.", "Reservas: Bodegas grandes aceptan visitas espontaneas. Las pequenas y premium requieren reserva anticipada."]
+      },
+      {
+        title: "Gastronomia Toscana: El Maridaje Perfecto",
+        content: "El vino toscano nacio para acompanar la cocina local. Platos simples, ingredientes excepcionales.",
+        list: ["Bistecca alla Fiorentina: Chuleton de buey chianina. 4-5 cm de grosor, a la brasa, solo sal. Con Chianti o Brunello joven.", "Pici: Pasta gruesa hecha a mano. Con ragu de carne, aglione (ajo), o cacio e pepe.", "Ribollita: Sopa de pan y verduras. Comfort food toscana. Plato de invierno reconfortante.", "Crostini toscani: Pan tostado con pate de higado de pollo. Aperitivo clasico.", "Finocchiona: Salami con hinojo. Solo se hace en Toscana. Perfecto con Vernaccia fresca.", "Cantucci e Vin Santo: Final obligatorio. Galletas de almendra mojadas en vino dulce.", "Aceite de oliva: La Toscana produce aceite excepcional. Pruebalo 'en crudo' sobre pan y tomate."]
+      },
+      {
+        title: "Donde Alojarse: Agroturismos y Hoteles",
+        content: "La mejor forma de vivir la Toscana vinicola es quedarse en el campo, rodeado de vinedos.",
+        list: ["Agroturismos: Fincas que ofrecen alojamiento. Desayuno con productos propios, vinos incluidos. EUR 80-200/noche.", "Relais de lujo: Antiguas villas y castillos convertidos en hoteles boutique. Castello Banfi, Borgo San Felice. EUR 300-800/noche.", "B&B en pueblos: Opcion mas economica. Ambiente autentico, propietarios locales. EUR 60-120/noche.", "Florencia como base: Si no quieres cambiar de hotel, el Chianti esta a 30-45 minutos. Menos romantico pero practico.", "Siena como base: Mejor ubicada para Chianti, Montalcino y Montepulciano. Ciudad medieval espectacular.", "Reserva con antelacion: En temporada alta (mayo-octubre), los mejores agroturismos se llenan rapido."],
+        image: "https://images.unsplash.com/photo-1534445967719-8ae7b972b1a5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Como Moverse: Coche, Tour o Chofer",
+        content: "La Toscana rural requiere transporte propio. Las opciones tienen pros y contras.",
+        list: ["Coche de alquiler: Maxima libertad, paras donde quieras. Problema: conductor no puede catar. EUR 40-80/dia.", "Conductor designado: Turnarse para que uno no beba. Solucion practica para parejas/grupos.", "Tours organizados: Desde Florencia o Siena. Todo incluido, sin conducir. Menos flexibilidad pero seguro. EUR 80-150/persona.", "Chofer privado: Lujo total. Conoce las bodegas, te lleva donde quieras. EUR 300-500/dia para 2-4 personas.", "Escupir: Los profesionales escupen el vino despues de catarlo. Permite probar muchos sin emborracharse.", "Bicicleta electrica: Para los atrevidos. Tours guiados por vinedos. Fisicamente exigente pero memorable."]
+      },
+      {
+        title: "Itinerario Sugerido: 5 Dias de Vino",
+        content: "Un recorrido completo por las mejores zonas vinicolas de la Toscana:",
+        list: ["Dia 1 - Llegada y Florencia: Aterriza, recoge coche, noche en Florencia o Chianti.", "Dia 2 - Chianti Classico: Greve, Castellina, Radda. 2-3 bodegas. Cena en Panzano (Dario Cecchini).", "Dia 3 - San Gimignano y Vernaccia: Torres medievales, Vernaccia blanca, almuerzo con vistas. Noche en Montepulciano.", "Dia 4 - Montepulciano y Montalcino: Vino Nobile por la manana, Brunello por la tarde. Valle de Orcia al atardecer.", "Dia 5 - Bolgheri o regreso: Super Tuscans en la costa o regreso tranquilo a Florencia con paradas.", "Tip: No intentes ver todo. Menos bodegas, mas calma. La Toscana se disfruta lento."],
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Mejor Epoca Para la Ruta del Vino",
+        content: "La Toscana es bella todo el ano, pero cada estacion tiene su encanto especial para el enoturismo.",
+        list: ["Primavera (abril-mayo): Vinedos verdes, amapolas rojas, clima perfecto. Menos turistas. Nuestra recomendacion.", "Verano (junio-agosto): Calor intenso (35C+), muchos turistas. Evitar mediodias, visitar mananas y tardes.", "Vendimia (septiembre-octubre): La epoca magica. Actividad en vinedos, olores de mosto, festivales. Muy popular.", "Otono (noviembre): Colores dorados, trufa blanca, aceite nuevo. Menos turistas, bodegas mas tranquilas.", "Invierno (diciembre-febrero): Muchas bodegas cerradas o con horarios reducidos. Pero precios minimos y paz total.", "Fines de semana: Bodegas mas llenas. Entre semana hay mas tranquilidad y atencion personalizada."]
+      },
+      {
+        title: "Descubre la Toscana del Vino con Trips Europa",
+        content: "En Tripseuropa.com organizamos tu ruta vinicola perfecta: reservamos las mejores bodegas (incluidas las exclusivas), te conseguimos conductor privado para que todos puedan catar, seleccionamos agroturismos con encanto, y disenamos itinerarios personalizados segun tus gustos. Conocemos a los productores, las joyas escondidas, y los restaurantes donde comen los locales. La Toscana del vino merece ser vivida sin prisas ni preocupaciones. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia enoturistica en Italia.",
+        image: "https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Necesito reservar las visitas a bodegas con antelacion?", answer: "Depende de la bodega. Las grandes (Antinori, Banfi) aceptan visitas espontaneas. Las pequenas y prestigiosas (Biondi-Santi, Sassicaia) requieren reserva con semanas o meses. En temporada alta, siempre es mejor reservar." },
+      { question: "Puedo conducir y catar vino?", answer: "Legalmente, el limite en Italia es 0.5g/l. Practicamente, despues de 2-3 catas ya superas el limite. Opciones: conductor designado, escupir el vino, contratar chofer, o hacer tours organizados." },
+      { question: "Cual es la mejor epoca para visitar las bodegas de la Toscana?", answer: "Abril-mayo y septiembre-octubre son ideales: clima perfecto, vinedos hermosos, menos turistas que verano. La vendimia (septiembre-octubre) es especialmente magica pero hay que reservar con antelacion." },
+      { question: "Cuantas bodegas puedo visitar en un dia?", answer: "Maximo 2-3 para disfrutar sin prisas. Cada visita toma 1-2 horas. Incluye tiempo para almorzar y pasear por los pueblos. Menos es mas en enoturismo." },
+      { question: "Cuanto cuesta una visita con cata en la Toscana?", answer: "Cata basica: EUR 15-30. Cata guiada con tour: EUR 30-60. Experiencia premium con almuerzo: EUR 80-150+. Hay opciones para todos los presupuestos." },
+      { question: "Puedo comprar vino y enviarlo a casa?", answer: "Si, muchas bodegas ofrecen envio internacional. Tambien puedes comprar y llevar en maleta (limite de 5 litros sin declarar en aduana). Algunas tiendas especializadas en aeropuertos tienen buena seleccion." }
+    ]
   }
 ];
