@@ -708,6 +708,80 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "viena-musica-clasica",
+    slug: "viena-musica-clasica",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Viena Musical: Opera, Mozart y Conciertos", en: "Musical Vienna: Opera, Mozart and Concerts" },
+    excerpt: { es: "Opera de Viena, conciertos en palacios, casa de Mozart. Guia para amantes de la musica clasica.", en: "Vienna Opera, palace concerts, Mozart's house. Guide for classical music lovers." },
+    category: "lujo",
+    categoryLabel: { es: "Lujo", en: "Luxury" },
+    date: "10 Oct 2024",
+    readTime: 10,
+    author: "Trips Europa",
+    keywords: ["viena opera", "conciertos viena", "musica clasica europa", "mozart", "filarmonica viena"],
+    featured: false,
+    sections: [
+      {
+        title: "Viena: La Capital Mundial de la Musica Clasica",
+        content: "Viena no es solo una ciudad con tradicion musical: es LA ciudad de la musica clasica. Aqui vivieron, compusieron y murieron Mozart, Beethoven, Schubert, Brahms, Strauss y Mahler. Las calles resuenan con siglos de historia musical, desde los palacios imperiales hasta las salas de conciertos mas prestigiosas del mundo. Para viajeros latinoamericanos amantes de la musica, Viena es una peregrinacion obligatoria que combina arte, historia y experiencias sonoras inolvidables.",
+        image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "La Opera Estatal de Viena (Wiener Staatsoper)",
+        content: "La Wiener Staatsoper es una de las casas de opera mas prestigiosas del mundo. Inaugurada en 1869, presenta mas de 300 funciones al ano con un repertorio que abarca desde Mozart hasta Wagner. La acustica es excepcional y la arquitectura neorenascentista te transporta a la epoca imperial.",
+        list: ["Temporada: Septiembre a junio, casi todos los dias hay funcion", "Entradas: Desde 15 EUR (de pie) hasta 300+ EUR (palcos)", "Stehplätze: Entradas de pie a 15 EUR, se venden 80 minutos antes", "Dress code: Elegante pero no obligatorio traje formal", "Tours guiados: Diarios cuando no hay ensayo, 13 EUR", "Consejo: Reserva online con meses de anticipacion para las mejores localidades"]
+      },
+      {
+        title: "Musikverein: El Templo de la Filarmonica de Viena",
+        content: "El Musikverein alberga la sala de conciertos con la mejor acustica del mundo: la Goldener Saal (Sala Dorada). Es la casa de la Filarmonica de Viena, considerada una de las mejores orquestas del planeta. Cada 1 de enero, el Concierto de Ano Nuevo se transmite a millones de hogares desde aqui.",
+        list: ["Filarmonica de Viena: Entradas dificiles de conseguir, reserva con meses de antelacion", "Concierto de Ano Nuevo: Loteria en febrero del ano anterior", "Otras orquestas: Conciertos frecuentes de orquestas visitantes", "Tours: Visitas guiadas diarias para ver la sala sin concierto", "Acustica: La sala tiene forma de 'caja de zapatos', ideal para el sonido", "Precio: Desde 40 EUR hasta 200+ EUR segun ubicacion y evento"]
+      },
+      {
+        title: "Conciertos en Palacios Imperiales",
+        content: "Vivir la musica de Mozart o Strauss en los mismos palacios donde se tocaron originalmente es una experiencia magica. Varios palacios vieneses ofrecen conciertos de camara en salones historicos con musicos vestidos de epoca.",
+        list: ["Palacio de Schönbrunn: Conciertos en la Orangerie, cena opcional", "Palacio Liechtenstein: Camara intima, acustica excepcional", "Kursalon: Valses de Strauss con bailarines, experiencia turistica clasica", "Palacio Eschenbach: Conciertos Mozart y Strauss, ambiente elegante", "Palacio Auersperg: Camara en salones barrocos", "Precio tipico: 50-100 EUR, con cena 150-200 EUR"]
+      },
+      {
+        title: "Tras las Huellas de Mozart",
+        content: "Wolfgang Amadeus Mozart vivio gran parte de su vida adulta en Viena, donde compuso sus obras maestras y murio a los 35 anos. Puedes seguir sus pasos visitando los lugares donde vivio, compuso y fue enterrado.",
+        list: ["Mozarthaus Vienna: Unico apartamento de Mozart conservado, donde compuso Las Bodas de Figaro", "Cementerio de St. Marx: Lugar aproximado de su tumba (la ubicacion exacta se desconoce)", "Catedral de San Esteban: Donde se caso y donde se celebro su funeral", "Cafe Frauenhuber: El cafe mas antiguo de Viena, Mozart toco aqui", "Theater an der Wien: Estreno de La Flauta Magica (reconstruido)", "Monumento a Mozart: En el Burggarten, rodeado de jardines imperiales"]
+      },
+      {
+        title: "Beethoven en Viena",
+        content: "Ludwig van Beethoven paso la mayor parte de su vida en Viena, donde compuso sus nueve sinfonias y sus ultimos cuartetos de cuerda mientras luchaba contra la sordera. Su legado impregna la ciudad.",
+        list: ["Beethoven Museum (Heiligenstadt): Casa donde escribio el 'Testamento de Heiligenstadt'", "Pasqualatihaus: Donde compuso Fidelio y varias sinfonias", "Cementerio Central: Tumba de Beethoven junto a Schubert y Brahms", "Theater an der Wien: Estreno de la Tercera y Quinta Sinfonias", "Casa de la Eroica: Donde estreno la Sinfonia Eroica (privada)", "Monumento en Beethovenplatz: Estatua imponente del compositor"]
+      },
+      {
+        title: "Otros Grandes Compositores",
+        content: "Viena fue hogar de una constelacion de genios musicales. Sus casas, tumbas y monumentos estan dispersos por la ciudad, creando una ruta musical fascinante.",
+        list: ["Schubert: Nacio y murio en Viena, museo en su casa natal", "Johann Strauss II: El 'Rey del Vals', museo en su apartamento", "Brahms: Vivio sus ultimos anos en Viena, tumba en el Cementerio Central", "Haydn: Museo en su casa donde compuso Las Estaciones", "Mahler: Director de la Opera de Viena, monumento en el Stadtpark", "Cementerio Central: Zona de honor con tumbas de compositores, visita imprescindible"]
+      },
+      {
+        title: "Experiencias Musicales Unicas",
+        content: "Mas alla de los conciertos tradicionales, Viena ofrece experiencias musicales que no encontraras en ningun otro lugar del mundo.",
+        list: ["Coro de los Ninos de Viena: Domingos en la Capilla Imperial (Hofburg), reserva obligatoria", "Misa en San Esteban: Musica coral gratuita los domingos", "Opera para ninos: Producciones adaptadas en la Volksoper", "Ensayos abiertos: Algunas orquestas permiten asistir a ensayos (consultar)", "Haus der Musik: Museo interactivo del sonido, ideal para familias", "Busking clasico: Musicos callejeros de alto nivel en Stephansplatz"]
+      },
+      {
+        title: "Planifica tu Viaje Musical",
+        content: "Para aprovechar al maximo la oferta musical de Viena, necesitas planificar con anticipacion. Las mejores entradas se agotan meses antes.",
+        list: ["Reservas: Opera y Filarmonica requieren reserva 2-3 meses antes", "Temporada alta: Septiembre-junio para conciertos, verano para festivales al aire libre", "Vienna Pass: Incluye algunos museos musicales pero no conciertos", "Dress code: Elegante para opera/Musikverein, casual para otros conciertos", "Combinacion perfecta: 3-4 dias para musica + turismo clasico", "Presupuesto: Desde 15 EUR (opera de pie) hasta 500+ EUR (palco VIP)"]
+      },
+      {
+        title: "Consejos Practicos",
+        content: "Estos consejos te ayudaran a vivir la experiencia musical vienesa como un verdadero conocedor.",
+        list: ["Compra anticipada: Entradas para eventos principales con 2-3 meses de antelacion", "Stehplätze: Entradas de pie son economicas pero requieren hacer cola", "Intermission: El champan en los foyers es tradicion, pruebalo", "Aplausos: En opera, no aplaudir entre movimientos; en recitales de lieder, al final de cada ciclo", "Vestuario: Los vieneses van elegantes, es parte del ritual", "Apps: Wiener Staatsoper y Musikverein tienen apps con programacion"]
+      }
+    ],
+    faqs: [
+      { question: "Cuanto cuestan las entradas para la Opera de Viena?", answer: "Los precios varian enormemente. Las entradas de pie (Stehplätze) cuestan solo 15 EUR y se venden 80 minutos antes de cada funcion. Las butacas van desde 50 EUR hasta mas de 300 EUR para palcos. Reserva online con anticipacion para las mejores ubicaciones." },
+      { question: "Necesito vestir formal para ir a la opera en Viena?", answer: "No hay codigo de vestimenta estricto, pero los vieneses van elegantes. Para opera y Musikverein, se recomienda vestido o traje de negocios. Para conciertos en palacios y otros venues, 'smart casual' es aceptable. Evita jeans rotos o zapatillas deportivas." },
+      { question: "Puedo conseguir entradas de ultima hora?", answer: "Si, las Stehplätze (entradas de pie) se venden el mismo dia, 80 minutos antes. Tambien hay taquillas de descuento para jovenes y estudiantes. Algunos conciertos en palacios tienen disponibilidad inmediata. Para la Filarmonica, es practicamente imposible sin reserva previa." },
+      { question: "Cual es la mejor epoca para visitar Viena por la musica?", answer: "La temporada de conciertos va de septiembre a junio. El Concierto de Ano Nuevo (1 de enero) es legendario pero las entradas son por loteria. En verano hay festivales al aire libre y la ciudad es menos concurrida. Navidad es magica pero turistica." },
+      { question: "Vale la pena un concierto en palacio o son demasiado turisticos?", answer: "Son experiencias turisticas pero muy disfrutablemente. La combinacion de musica de camara en salones historicos con trajes de epoca es unica. No esperes el nivel de la Filarmonica, pero si una velada encantadora. Perfectos para una primera experiencia musical vienesa." },
+      { question: "Puedo visitar el Musikverein sin asistir a un concierto?", answer: "Si, hay tours guiados diarios que te permiten ver la famosa Sala Dorada y aprender sobre la acustica. Cuestan aproximadamente 15-20 EUR y duran unos 45 minutos. Es una buena alternativa si no consigues entradas para concierto." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
