@@ -15,9 +15,6 @@ import { useToast } from "@/hooks/use-toast";
 import { useCreateLead } from "@/hooks/use-leads";
 
 
-import Gemini_Generated_Image_jw4y04jw4y04jw4y from "@assets/Gemini_Generated_Image_jw4y04jw4y04jw4y.png";
-
-
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
@@ -147,7 +144,7 @@ export default function BlogPost() {
 
           <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-lg overflow-hidden mb-8">
             <img 
-              src={Gemini_Generated_Image_jw4y04jw4y04jw4y} 
+              src={post.image} 
               alt={title}
               className="w-full h-full object-cover object-center"
               loading="eager"
