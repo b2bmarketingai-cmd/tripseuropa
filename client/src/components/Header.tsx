@@ -432,7 +432,7 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
-                    <Link href="/faq" className="flex items-center gap-3 w-full">
+                    <Link href="/contact" className="flex items-center gap-3 w-full">
                       <HelpCircle className="w-5 h-5" />
                       <span>{labels.centroAyuda[currentLang]}</span>
                     </Link>
@@ -667,7 +667,7 @@ export function Header() {
                     <MessageCircle className="w-4 h-4" />
                     {labels.asistenciaChat[currentLang]}
                   </Link>
-                  <Link href="/faq" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link href="/contact" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
                     <HelpCircle className="w-4 h-4" />
                     {labels.centroAyudaMobile[currentLang]}
                   </Link>
