@@ -26,7 +26,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "mejores-lugares-espana",
     slug: "mejores-lugares-espana",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/mejores-lugares-espana.png",
     title: { es: "20 Mejores Lugares de España que Debes Visitar", en: "20 Best Places in Spain You Must Visit" },
     excerpt: { es: "España es un pais fascinante lleno de paisajes impresionantes y rica historia. Descubre los mejores lugares para explorar desde Barcelona hasta Sevilla.", en: "Spain is a fascinating country full of stunning landscapes and rich history. Discover the best places to explore from Barcelona to Seville." },
     category: "destinos",

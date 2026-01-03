@@ -14,9 +14,6 @@ import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple"
 import { useToast } from "@/hooks/use-toast";
 import { useCreateLead } from "@/hooks/use-leads";
 
-import Gemini_Generated_Image_aeza91aeza91aeza from "@assets/Gemini_Generated_Image_aeza91aeza91aeza.png";
-
-import Gemini_Generated_Image_cksi0bcksi0bcksi from "@assets/Gemini_Generated_Image_cksi0bcksi0bcksi.png";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -151,7 +148,7 @@ export default function BlogPost() {
 
           <div className="relative aspect-video rounded-lg overflow-hidden mb-8">
             <img 
-              src={Gemini_Generated_Image_cksi0bcksi0bcksi} 
+              src={post.image} 
               alt={title}
               className="w-full h-full object-cover"
               data-testid="img-post-hero"
@@ -171,7 +168,7 @@ export default function BlogPost() {
                 {section.image && (
                   <div className="my-6 rounded-lg overflow-hidden">
                     <img 
-                      src={Gemini_Generated_Image_aeza91aeza91aeza} 
+                      src={section.image} 
                       alt={section.title}
                       className="w-full h-auto object-cover"
                     />
