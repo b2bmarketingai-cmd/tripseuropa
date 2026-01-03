@@ -8,10 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { 
   MapPin, Globe, Star, ChevronRight, Plane, 
   Mountain, Ship, Heart, Wine, Castle,
-  ArrowRight, Quote, Sparkles, Loader2
+  ArrowRight, Quote, Sparkles, Loader2, Calendar,
+  Users, CheckCircle, Phone, Mail
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
@@ -245,12 +248,262 @@ const FAQS = [
   },
 ];
 
+const PACKAGE_DETAILS: Record<string, {
+  duration: string;
+  groupSize: string;
+  description: string;
+  highlights: string[];
+  itinerary: { day: string; title: string; description: string }[];
+  includes: string[];
+  price: string;
+  faqs: { question: string; answer: string }[];
+}> = {
+  "portugal-coastal": {
+    duration: "10 dias / 9 noches",
+    groupSize: "2-16 personas",
+    description: "Descubre la magia de Portugal en este viaje inolvidable. Desde las calles empedradas de Lisboa hasta los vinos del Douro, pasando por los palacios de Sintra y la vibrante ciudad de Porto. Portugal te espera con su hospitalidad unica, gastronomia exquisita y paisajes que enamoran.",
+    highlights: ["Torre de Belem y Monasterio de los Jeronimos", "Palacios de colores de Sintra", "Cata de vino de Oporto", "Librerias historicas de Coimbra", "Paseo en barco por el Douro"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Lisboa", description: "Llegada a Lisboa. Visita al barrio de Alfama, Belem, y paseo en tranvia 28. Cena de bienvenida con fado." },
+      { day: "Dia 3", title: "Sintra", description: "Excursion a Sintra: Palacio da Pena, Quinta da Regaleira, y Cabo da Roca." },
+      { day: "Dia 4-5", title: "Coimbra", description: "Viaje a Coimbra. Universidad historica, libreria Joanina, y ambiente estudiantil." },
+      { day: "Dia 6-8", title: "Porto", description: "Exploracion de Porto: Ribeira, Livraria Lello, bodegas de vino. Crucero por el Douro." },
+      { day: "Dia 9-10", title: "Regreso", description: "Tiempo libre para compras. Traslado al aeropuerto." }
+    ],
+    includes: ["Vuelos internacionales ida y vuelta", "Hoteles 4 estrellas con desayuno", "Traslados privados", "Guia en espanol", "Entradas a monumentos", "Cata de vinos", "Cena de bienvenida"],
+    price: "Desde EUR 2,190",
+    faqs: [
+      { question: "Cual es la mejor epoca para visitar Portugal?", answer: "Primavera (abril-junio) y otono (septiembre-octubre) son ideales. Clima agradable y menos turistas que en verano." },
+      { question: "Se incluye seguro de viaje?", answer: "El seguro basico esta incluido. Recomendamos contratar seguro adicional con cobertura medica ampliada." },
+      { question: "Puedo extender mi estadia?", answer: "Si, podemos agregar noches adicionales en cualquier ciudad. Contactanos para cotizar." }
+    ]
+  },
+  "spain-complete": {
+    duration: "14 dias / 13 noches",
+    groupSize: "2-20 personas",
+    description: "Espana en su maxima expresion. Desde la elegancia de Madrid hasta la creatividad de Barcelona, pasando por el duende andaluz de Sevilla y la modernidad de Valencia. Arte, gastronomia, flamenco, playas y una cultura vibrante te esperan.",
+    highlights: ["Museo del Prado y Palacio Real", "Alhambra de Granada", "Sagrada Familia", "Ciudad de las Artes y las Ciencias", "Show de flamenco autentico"],
+    itinerary: [
+      { day: "Dia 1-3", title: "Madrid", description: "Capital de Espana. Prado, Reina Sofia, Retiro, tapas en La Latina. Excursion a Toledo." },
+      { day: "Dia 4-6", title: "Andalucia", description: "Sevilla (Alcazar, Catedral), Cordoba (Mezquita), Granada (Alhambra). Flamenco en tablao." },
+      { day: "Dia 7-9", title: "Valencia", description: "Ciudad de las Artes, playa de la Malvarrosa, paella autentica, barrio del Carmen." },
+      { day: "Dia 10-13", title: "Barcelona", description: "Gaudi (Sagrada Familia, Park Guell), Las Ramblas, Barrio Gotico, Montjuic." },
+      { day: "Dia 14", title: "Regreso", description: "Tiempo libre. Traslado al aeropuerto de Barcelona." }
+    ],
+    includes: ["Vuelos internacionales", "Hoteles 4 estrellas", "Tren AVE entre ciudades", "Guia local en espanol", "Entradas principales", "Show de flamenco", "Clase de paella"],
+    price: "Desde EUR 3,290",
+    faqs: [
+      { question: "El tren AVE esta incluido?", answer: "Si, todos los trenes de alta velocidad entre ciudades estan incluidos en el paquete." },
+      { question: "Hay tiempo libre para explorar?", answer: "Absolutamente. Cada ciudad tiene tardes libres para que explores a tu ritmo." },
+      { question: "Puedo agregar San Sebastian?", answer: "Si, podemos personalizar el itinerario. San Sebastian agrega 2-3 dias al viaje." }
+    ]
+  },
+  "ireland-emerald": {
+    duration: "9 dias / 8 noches",
+    groupSize: "2-14 personas",
+    description: "La isla esmeralda te espera con sus paisajes de ensueno, castillos milenarios, pubs acogedores y la hospitalidad irlandesa. Desde Dublin cosmopolita hasta los acantilados de Moher, Irlanda te robara el corazon.",
+    highlights: ["Acantilados de Moher", "Ring of Kerry", "Destileria de whisky", "Castillo de Blarney", "Pubs tradicionales con musica en vivo"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Dublin", description: "Temple Bar, Trinity College, Libro de Kells, Guinness Storehouse. Pub crawl." },
+      { day: "Dia 3-4", title: "Galway", description: "Ciudad bohemia, Connemara, Acantilados de Moher." },
+      { day: "Dia 5-6", title: "Ring of Kerry", description: "Ruta escenica, Killarney, lagos y montanas." },
+      { day: "Dia 7-8", title: "Cork", description: "Castillo de Blarney, destileria Jameson, English Market." },
+      { day: "Dia 9", title: "Regreso", description: "Vuelo de regreso desde Dublin o Cork." }
+    ],
+    includes: ["Vuelos ida y vuelta", "Hoteles con desayuno irlandes", "Coche de alquiler o minibus", "Guia", "Entradas", "Tour de whisky"],
+    price: "Desde EUR 2,490",
+    faqs: [
+      { question: "El clima es muy lluvioso?", answer: "Irlanda tiene clima variable. Recomendamos capas y chaqueta impermeable. La lluvia es parte del encanto." },
+      { question: "Necesito licencia internacional?", answer: "Si alquilas coche, si. Si vas en grupo con guia, no es necesario." },
+      { question: "Se puede ver auroras boreales?", answer: "En invierno, ocasionalmente se ven desde la costa norte. No es garantizado." }
+    ]
+  },
+  "italy-eternal": {
+    duration: "12 dias / 11 noches",
+    groupSize: "2-18 personas",
+    description: "Italia eterna: donde el arte, la historia y la gastronomia se fusionan en una experiencia inolvidable. Roma imperial, Florencia renacentista, Venecia romantica y Milan elegante. La dolce vita te espera.",
+    highlights: ["Coliseo y Vaticano", "Galeria Uffizi", "Paseo en gondola", "Duomo de Milan", "Cata de vinos en Toscana"],
+    itinerary: [
+      { day: "Dia 1-3", title: "Roma", description: "Coliseo, Foro, Vaticano, Fontana di Trevi, Trastevere." },
+      { day: "Dia 4-6", title: "Florencia", description: "Uffizi, Duomo, Ponte Vecchio. Excursion a Toscana con cata de vinos." },
+      { day: "Dia 7-9", title: "Venecia", description: "San Marco, Rialto, gondola, Murano y Burano." },
+      { day: "Dia 10-11", title: "Milan", description: "Duomo, Ultima Cena, Galleria Vittorio Emanuele, compras." },
+      { day: "Dia 12", title: "Regreso", description: "Traslado al aeropuerto de Milan." }
+    ],
+    includes: ["Vuelos internacionales", "Hoteles centricos", "Trenes de alta velocidad", "Guia en espanol", "Entradas sin fila", "Gondola", "Cata de vinos"],
+    price: "Desde EUR 3,590",
+    faqs: [
+      { question: "Las entradas sin fila estan garantizadas?", answer: "Si, reservamos con anticipacion para evitar colas en Vaticano, Uffizi y principales atracciones." },
+      { question: "Puedo agregar la Costa Amalfitana?", answer: "Absolutamente. Es una extension popular de 3-4 dias desde Roma." },
+      { question: "Hay opciones vegetarianas?", answer: "Italia tiene excelentes opciones vegetarianas. Informanos y coordinamos con restaurantes." }
+    ]
+  },
+  "portugal-algarve": {
+    duration: "11 dias / 10 noches",
+    groupSize: "2-14 personas",
+    description: "Lo mejor de Portugal con extension al paradisiaco Algarve. Combina cultura, historia y playas espectaculares en un solo viaje. Desde Lisboa y Porto hasta las calas escondidas del sur.",
+    highlights: ["Playas de Lagos y Albufeira", "Grutas de Benagil", "Cuevas marinas en kayak", "Fortaleza de Sagres", "Atardeceres en el Atlantico"],
+    itinerary: [
+      { day: "Dia 1-3", title: "Lisboa", description: "Capital portuguesa con sus barrios historicos y gastronomia." },
+      { day: "Dia 4-5", title: "Porto", description: "Ciudad del vino, Ribeira, bodegas." },
+      { day: "Dia 6-10", title: "Algarve", description: "Faro, Lagos, Albufeira, Benagil, Sagres. Playas y relajacion." },
+      { day: "Dia 11", title: "Regreso", description: "Vuelo desde Faro." }
+    ],
+    includes: ["Vuelos", "Hoteles y resorts", "Traslados", "Excursion en barco a grutas", "Guia"],
+    price: "Desde EUR 2,490",
+    faqs: [
+      { question: "Cuando es mejor para playas?", answer: "Junio a septiembre tiene el mejor clima. Julio-agosto mas lleno." },
+      { question: "El hotel en Algarve tiene playa?", answer: "Ofrecemos hoteles frente al mar o a corta distancia caminando." },
+      { question: "Hay actividades acuaticas?", answer: "Si, kayak, paddleboard, snorkel y paseos en barco disponibles." }
+    ]
+  },
+  "portugal-douro": {
+    duration: "8 dias / 7 noches",
+    groupSize: "2-12 personas",
+    description: "Un viaje enfocado en el norte de Portugal y el magico Valle del Douro. Vinos, paisajes de terrazas y ciudades con siglos de historia. Ideal para amantes del vino y la naturaleza.",
+    highlights: ["Crucero por el Rio Douro", "Quintas vinicolas", "Braga religiosa", "Guimaraes medieval", "Porto autentico"],
+    itinerary: [
+      { day: "Dia 1-3", title: "Porto", description: "Exploracion profunda de Porto, bodegas, gastronomia." },
+      { day: "Dia 4-5", title: "Valle del Douro", description: "Crucero, visita a quintas, catas de vino, paisajes." },
+      { day: "Dia 6", title: "Braga", description: "Bom Jesus, catedral, tradicion religiosa." },
+      { day: "Dia 7", title: "Guimaraes", description: "Cuna de Portugal, castillo, centro historico." },
+      { day: "Dia 8", title: "Regreso", description: "Vuelo desde Porto." }
+    ],
+    includes: ["Vuelos", "Hoteles con encanto", "Crucero Douro", "Catas", "Guia", "Comidas en quintas"],
+    price: "Desde EUR 1,990",
+    faqs: [
+      { question: "Cuantas catas de vino incluye?", answer: "Minimo 4 catas en diferentes quintas y bodegas." },
+      { question: "El crucero es de todo el dia?", answer: "El crucero principal es de 6-7 horas con almuerzo a bordo." },
+      { question: "Hay opcion sin alcohol?", answer: "Si, podemos adaptar con jugos de uva y experiencias gastronomicas." }
+    ]
+  },
+  "italy-amalfi": {
+    duration: "9 dias / 8 noches",
+    groupSize: "2-14 personas",
+    description: "El sur de Italia en todo su esplendor. La isla de Ischia, la espectacular Costa Amalfitana y las ruinas de Pompeya. Limoncello, casas coloridas y el azul del Mediterraneo.",
+    highlights: ["Positano y Amalfi", "Ravello con vistas infinitas", "Ruinas de Pompeya", "Termas de Ischia", "Capri opcional"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Napoles", description: "Llegada, centro historico, pizza napoletana original." },
+      { day: "Dia 3-4", title: "Ischia", description: "Isla termal, jardines, playas, relajacion." },
+      { day: "Dia 5-7", title: "Costa Amalfitana", description: "Positano, Amalfi, Ravello. Paseos, limoncellos, atardeceres." },
+      { day: "Dia 8", title: "Pompeya", description: "Ruinas romanas con guia experto." },
+      { day: "Dia 9", title: "Regreso", description: "Vuelo desde Napoles." }
+    ],
+    includes: ["Vuelos", "Hoteles con vista al mar", "Ferrys", "Guia", "Entradas Pompeya", "Cata limoncello"],
+    price: "Desde EUR 2,790",
+    faqs: [
+      { question: "El transporte en la costa es complicado?", answer: "Nosotros coordinamos todo: ferrys, buses, traslados privados. Tu solo disfrutas." },
+      { question: "Se puede agregar Capri?", answer: "Si, es una excursion de dia completo muy recomendada." },
+      { question: "Los hoteles tienen piscina?", answer: "Varios de nuestros hoteles tienen piscina con vista al mar." }
+    ]
+  },
+  "ireland-celtic": {
+    duration: "10 dias / 9 noches",
+    groupSize: "2-14 personas",
+    description: "Irlanda completa: la Republica de Irlanda e Irlanda del Norte en un viaje que combina historia celta, paisajes dramaticos y ciudades vibrantes. La Calzada del Gigante te espera.",
+    highlights: ["Calzada del Gigante", "Titanic Belfast", "Dark Hedges (Game of Thrones)", "Acantilados de Moher", "Dublin historico"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Dublin", description: "Exploracion de la capital irlandesa." },
+      { day: "Dia 3-4", title: "Belfast", description: "Museo Titanic, murales, Queen's Quarter." },
+      { day: "Dia 5", title: "Costa Norte", description: "Calzada del Gigante, Dark Hedges, Carrick-a-Rede." },
+      { day: "Dia 6-7", title: "Galway", description: "Costa oeste, Connemara, islas Aran." },
+      { day: "Dia 8-9", title: "Cliffs of Moher", description: "Acantilados, Burren, regreso a Dublin." },
+      { day: "Dia 10", title: "Regreso", description: "Vuelo desde Dublin." }
+    ],
+    includes: ["Vuelos", "Hoteles", "Transporte terrestre", "Guia bilingue", "Entradas", "Cena tradicional"],
+    price: "Desde EUR 2,690",
+    faqs: [
+      { question: "Necesito pasaporte para cruzar a Irlanda del Norte?", answer: "No hay control fronterizo, pero lleva pasaporte ya que tecnicamente es Reino Unido." },
+      { question: "Hay locaciones de Game of Thrones?", answer: "Si, visitamos Dark Hedges y otros puntos de filmacion en Irlanda del Norte." },
+      { question: "El clima es muy diferente al sur?", answer: "Similar, quizas un poco mas fresco en el norte. Siempre impredecible." }
+    ]
+  },
+  "italy-puglia": {
+    duration: "11 dias / 10 noches",
+    groupSize: "2-14 personas",
+    description: "El sur italiano menos explorado: Puglia con sus trulli unicos, playas cristalinas y gastronomia autentica, combinado con la belleza de la Costa Amalfitana.",
+    highlights: ["Trulli de Alberobello", "Matera (ciudad cueva)", "Lecce barroco", "Polignano a Mare", "Costa Amalfitana"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Napoles/Amalfi", description: "Llegada, inicio en la Costa Amalfitana." },
+      { day: "Dia 3-4", title: "Matera", description: "Sassi de Matera, ciudad cueva Patrimonio UNESCO." },
+      { day: "Dia 5-7", title: "Puglia", description: "Alberobello, Ostuni, Lecce, Polignano a Mare." },
+      { day: "Dia 8-9", title: "Bari", description: "Capital pugliese, casco antiguo, gastronomia." },
+      { day: "Dia 10-11", title: "Regreso", description: "Tiempo libre, vuelo desde Bari." }
+    ],
+    includes: ["Vuelos", "Hoteles con encanto", "Coche alquiler o traslados", "Guia", "Experiencia gastronomica"],
+    price: "Desde EUR 2,890",
+    faqs: [
+      { question: "Que son los trulli?", answer: "Casas conicas tradicionales de piedra, unicas en el mundo, Patrimonio UNESCO." },
+      { question: "Es recomendable alquilar coche?", answer: "Si, Puglia se disfruta mejor con coche. Podemos incluirlo o ofrecer traslados privados." },
+      { question: "La comida es diferente al norte de Italia?", answer: "Si, cocina mediterranea con aceite de oliva, burrata, orecchiette, mariscos frescos." }
+    ]
+  },
+  "france-normandy": {
+    duration: "12 dias / 11 noches",
+    groupSize: "2-16 personas",
+    description: "Francia de norte a sur: la elegancia parisina, la historia de Normandia, y el glamour de la Riviera Francesa. Arte, playas del Dia D, y atardeceres en la Costa Azul.",
+    highlights: ["Torre Eiffel y Louvre", "Mont Saint-Michel", "Playas del Desembarco", "Niza y Cannes", "Mónaco"],
+    itinerary: [
+      { day: "Dia 1-4", title: "Paris", description: "Torre Eiffel, Louvre, Versalles, Montmartre, crucero Sena." },
+      { day: "Dia 5-7", title: "Normandia", description: "Mont Saint-Michel, playas Dia D, Rouen, Honfleur." },
+      { day: "Dia 8-11", title: "Riviera Francesa", description: "Niza, Cannes, Mónaco, Eze, Saint-Tropez." },
+      { day: "Dia 12", title: "Regreso", description: "Vuelo desde Niza." }
+    ],
+    includes: ["Vuelos", "Hoteles 4 estrellas", "TGV Paris-Niza", "Guia", "Entradas principales", "Crucero por el Sena"],
+    price: "Desde EUR 3,490",
+    faqs: [
+      { question: "El TGV esta incluido?", answer: "Si, el tren de alta velocidad Paris-Costa Azul esta incluido." },
+      { question: "Hay tiempo para playas?", answer: "Si, en la Riviera Francesa hay tiempo libre para disfrutar las playas." },
+      { question: "Monaco requiere ropa formal?", answer: "Para el casino si, pero para turismo normal no es necesario." }
+    ]
+  },
+  "switzerland-alps": {
+    duration: "8 dias / 7 noches",
+    groupSize: "2-12 personas",
+    description: "Suiza de postal: montanas majestuosas, lagos cristalinos, trenes panoramicos y chocolates. El pais mas bello de Europa en un viaje compacto pero completo.",
+    highlights: ["Matterhorn en Zermatt", "Jungfraujoch (cima de Europa)", "Lago Lucerna", "Tren Glacier Express", "Chocolates y quesos"],
+    itinerary: [
+      { day: "Dia 1-2", title: "Zurich", description: "Llegada, casco antiguo, lago, excursion a cataratas del Rin." },
+      { day: "Dia 3-4", title: "Lucerna", description: "Puente de la Capilla, Monte Pilatus o Rigi." },
+      { day: "Dia 5-6", title: "Interlaken", description: "Lagos, Jungfraujoch, paisajes alpinos." },
+      { day: "Dia 7", title: "Zermatt", description: "Vista al Matterhorn, pueblo alpino." },
+      { day: "Dia 8", title: "Regreso", description: "Tren a Zurich, vuelo de regreso." }
+    ],
+    includes: ["Vuelos", "Hoteles", "Swiss Travel Pass", "Excursiones", "Guia", "Degustacion chocolate"],
+    price: "Desde EUR 3,290",
+    faqs: [
+      { question: "El Swiss Travel Pass que incluye?", answer: "Trenes, buses, barcos ilimitados, mas descuentos en telecabinas y museos." },
+      { question: "Hace frio en verano?", answer: "En las cimas si (0-10C). En valles es agradable (15-25C). Lleva capas." },
+      { question: "Es muy caro Suiza?", answer: "Si, es de los paises mas caros. El paquete incluye lo esencial para controlar gastos." }
+    ]
+  },
+  "baltics-guided": {
+    duration: "10 dias / 9 noches",
+    groupSize: "2-14 personas",
+    description: "Los paises balticos: joyas escondidas de Europa. Vilna, Riga y Tallin son ciudades medievales con historia fascinante, gastronomia sorprendente y precios accesibles.",
+    highlights: ["Casco antiguo de Tallin", "Art Nouveau en Riga", "Colina de las Cruces", "Helsinki de bonus", "Ciudades UNESCO"],
+    itinerary: [
+      { day: "Dia 1-3", title: "Vilna, Lituania", description: "Capital barroca, Trakai, Colina de las Cruces." },
+      { day: "Dia 4-6", title: "Riga, Letonia", description: "Art Nouveau, mercado central, bosques cercanos." },
+      { day: "Dia 7-9", title: "Tallin, Estonia", description: "Ciudad medieval perfecta, digital, moderna." },
+      { day: "Dia 10", title: "Helsinki", description: "Ferry a Helsinki, dia de exploracion, vuelo de regreso." }
+    ],
+    includes: ["Vuelos", "Hoteles centricos", "Buses entre ciudades", "Ferry a Helsinki", "Guia", "Entradas"],
+    price: "Desde EUR 2,190",
+    faqs: [
+      { question: "Se necesita visa para los balticos?", answer: "Son parte de Schengen. Mismas reglas que Espana o Francia." },
+      { question: "Que moneda usan?", answer: "Los tres paises usan Euro. Muy conveniente." },
+      { question: "Es seguro viajar alli?", answer: "Extremadamente seguro. Ciudades muy tranquilas y organizadas." }
+    ]
+  }
+};
+
 const TESTIMONIALS = [
   {
     name: "Maria Fernandez",
     location: "Bogota, Colombia",
     rating: 5,
-    comment: "Nuestro viaje a Italia fue magico. Todo estuvo perfectamente organizado, desde los vuelos hasta las visitas guiadas. Volveremos a viajar con TripsEuropa.",
+    comment: "Nuestro viaje a Italia fue magico. Todo estuvo perfectamente organizado, desde los vuelos hasta las visitas guiadas. Volveremos a viajar con Trips Europa.",
     date: "Noviembre 2024",
     trip: "Italia en 12 dias",
   },
@@ -278,7 +531,45 @@ export default function VacacionesEuropa() {
   const [showFullIntro, setShowFullIntro] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+  const [contactForm, setContactForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [isContactSubmitting, setIsContactSubmitting] = useState(false);
   const { toast } = useToast();
+  
+  const currentPackage = selectedPackage ? FEATURED_PACKAGES.find(p => p.id === selectedPackage) : null;
+  const currentDetails = selectedPackage ? PACKAGE_DETAILS[selectedPackage] : null;
+
+  const handleContactFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!contactForm.name || !contactForm.email) {
+      toast({ title: "Completa los campos requeridos", variant: "destructive" });
+      return;
+    }
+    
+    setIsContactSubmitting(true);
+    try {
+      const packageName = currentPackage?.title || "Paquete Europa";
+      const whatsappMessage = `Nueva consulta de paquete!
+
+*Paquete:* ${packageName}
+*Nombre:* ${contactForm.name}
+*Email:* ${contactForm.email}
+*Telefono:* ${contactForm.phone || "No proporcionado"}
+*Mensaje:* ${contactForm.message || "Solicita informacion"}
+
+Desde: Tripseuropa.com`;
+      
+      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      
+      toast({ title: "Consulta enviada", description: "Te contactaremos pronto" });
+      setContactForm({ name: "", email: "", phone: "", message: "" });
+      setSelectedPackage(null);
+    } catch {
+      toast({ title: "Error", variant: "destructive" });
+    } finally {
+      setIsContactSubmitting(false);
+    }
+  };
 
   const filteredPackages = selectedRegion === "all" 
     ? FEATURED_PACKAGES 
@@ -496,7 +787,11 @@ export default function VacacionesEuropa() {
                       </Badge>
                     )}
                   </div>
-                  <Button className="w-full bg-primary text-white" data-testid={`button-view-${pkg.id}`}>
+                  <Button 
+                    className="w-full bg-primary text-white" 
+                    data-testid={`button-view-${pkg.id}`}
+                    onClick={() => setSelectedPackage(pkg.id)}
+                  >
                     Ver Detalles
                   </Button>
                 </CardContent>
@@ -703,6 +998,176 @@ export default function VacacionesEuropa() {
           </div>
         </div>
       </section>
+
+      <Dialog open={!!selectedPackage} onOpenChange={(open) => !open && setSelectedPackage(null)}>
+        <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+          <ScrollArea className="max-h-[90vh]">
+            {currentPackage && currentDetails && (
+              <div className="p-6">
+                <DialogHeader className="mb-6">
+                  <div className="relative h-48 -mx-6 -mt-6 mb-4 overflow-hidden rounded-t-lg">
+                    <img 
+                      src={currentPackage.image} 
+                      alt={currentPackage.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <Badge className="mb-2 bg-accent text-primary">{currentPackage.country}</Badge>
+                      <DialogTitle className="text-2xl font-playfair text-white">{currentPackage.title}</DialogTitle>
+                    </div>
+                  </div>
+                </DialogHeader>
+
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Calendar className="w-4 h-4 text-accent" />
+                    <span>{currentDetails.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Users className="w-4 h-4 text-accent" />
+                    <span>{currentDetails.groupSize}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm font-semibold text-accent">
+                    <span>{currentDetails.price}</span>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground mb-6">{currentDetails.description}</p>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-lg mb-3" style={{ color: "#d4af37" }}>Destacados del Viaje</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {currentDetails.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-lg mb-3" style={{ color: "#d4af37" }}>Itinerario</h3>
+                  <div className="space-y-3">
+                    {currentDetails.itinerary.map((item, idx) => (
+                      <div key={idx} className="flex gap-4 p-3 bg-muted/30 rounded-lg">
+                        <div className="font-semibold text-accent whitespace-nowrap">{item.day}</div>
+                        <div>
+                          <div className="font-medium">{item.title}</div>
+                          <div className="text-sm text-muted-foreground">{item.description}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-lg mb-3" style={{ color: "#d4af37" }}>El Paquete Incluye</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {currentDetails.includes.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-accent" />
+                        <span className="text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-lg mb-3" style={{ color: "#d4af37" }}>Preguntas Frecuentes</h3>
+                  <Accordion type="single" collapsible className="w-full">
+                    {currentDetails.faqs.map((faq, idx) => (
+                      <AccordionItem key={idx} value={`faq-${idx}`}>
+                        <AccordionTrigger className="text-left text-sm">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-sm text-muted-foreground">{faq.answer}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+
+                <div className="border-t pt-6">
+                  <h3 className="font-semibold text-lg mb-4" style={{ color: "#d4af37" }}>Solicita Informacion</h3>
+                  <form onSubmit={handleContactFormSubmit} className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-sm font-medium mb-1 block">Nombre *</label>
+                        <input
+                          type="text"
+                          value={contactForm.name}
+                          onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                          className="w-full px-3 py-2 border rounded-md bg-background"
+                          placeholder="Tu nombre"
+                          data-testid="input-contact-name"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-1 block">Email *</label>
+                        <input
+                          type="email"
+                          value={contactForm.email}
+                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                          className="w-full px-3 py-2 border rounded-md bg-background"
+                          placeholder="tu@email.com"
+                          data-testid="input-contact-email"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-1 block">Telefono / WhatsApp</label>
+                      <input
+                        type="tel"
+                        value={contactForm.phone}
+                        onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                        className="w-full px-3 py-2 border rounded-md bg-background"
+                        placeholder="+57 300 123 4567"
+                        data-testid="input-contact-phone"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-1 block">Mensaje</label>
+                      <textarea
+                        value={contactForm.message}
+                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                        className="w-full px-3 py-2 border rounded-md bg-background min-h-[80px]"
+                        placeholder="Cuentanos sobre tu viaje ideal..."
+                        data-testid="input-contact-message"
+                      />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        type="submit" 
+                        className="flex-1 bg-accent text-primary"
+                        disabled={isContactSubmitting}
+                        data-testid="button-submit-contact"
+                      >
+                        {isContactSubmitting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Mail className="w-4 h-4 mr-2" />}
+                        Enviar Consulta
+                      </Button>
+                      <Button 
+                        type="button"
+                        variant="outline"
+                        className="flex-1"
+                        onClick={() => {
+                          const msg = `Hola! Me interesa el paquete "${currentPackage.title}" a ${currentPackage.country}. Quisiera mas informacion. Gracias!`;
+                          window.open(`https://wa.me/34611105448?text=${encodeURIComponent(msg)}`, "_blank");
+                        }}
+                        data-testid="button-whatsapp-package"
+                      >
+                        <Phone className="w-4 h-4 mr-2" />
+                        WhatsApp Directo
+                      </Button>
+                    </div>
+                  </form>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    Todo lo puedes conseguir en Tripseuropa.com - Especialistas en viajes a Europa desde Latinoamerica
+                  </p>
+                </div>
+              </div>
+            )}
+          </ScrollArea>
+        </DialogContent>
+      </Dialog>
 
       <FloatingContactButtons />
       <Footer />
