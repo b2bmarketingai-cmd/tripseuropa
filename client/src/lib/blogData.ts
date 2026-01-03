@@ -3021,5 +3021,89 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Que tarjeta bancaria es mejor para Europa?", answer: "Tarjetas sin comision por cambio de divisa como las de algunos bancos digitales (Nubank, Revolut, Wise) son ideales. Consulta con tu banco las comisiones antes de viajar." },
       { question: "Los precios cambian mucho entre temporadas?", answer: "Si, significativamente. La temporada alta (verano europeo y Navidad) puede ser 30-50% mas cara en vuelos y alojamiento. Primavera y otono ofrecen el mejor equilibrio precio-clima." }
     ]
+  },
+
+  {
+    id: "circuito-balcanes",
+    slug: "circuito-balcanes",
+    image: "/assets/generated_images/circuito-balcanes.png",
+    title: { es: "Circuito Balcanes: Descubre 10 Naciones en un Solo Viaje", en: "Balkans Circuit: Discover 10 Nations in One Trip" },
+    excerpt: { es: "Bulgaria, Grecia, Macedonia, Albania, Montenegro, Croacia, Bosnia y Serbia. La ruta mas completa por los Balcanes europeos con historia milenaria, paisajes impresionantes y cultura unica.", en: "Bulgaria, Greece, Macedonia, Albania, Montenegro, Croatia, Bosnia and Serbia. The most complete route through the European Balkans with ancient history, stunning landscapes and unique culture." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "29 Dic 2024",
+    readTime: 14,
+    author: "Trips Europa",
+    keywords: ["balcanes europa", "circuito balcanes", "croacia montenegro albania", "viaje balcanes", "dubrovnik mostar"],
+    featured: true,
+    sections: [
+      {
+        title: "Por Que Elegir un Circuito por los Balcanes",
+        content: "Los Balcanes son una de las regiones mas fascinantes y menos exploradas de Europa. Esta peninsula al sureste del continente ofrece una combinacion unica de historia milenaria, paisajes dramaticos, costas pristinas y una mezcla cultural extraordinaria. Un circuito por los Balcanes te permite descubrir multiples paises con fronteras cercanas, cada uno con su propia identidad, gastronomia y tradiciones. Es la alternativa perfecta para viajeros que buscan algo diferente a los destinos turisticos tradicionales.",
+        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Croacia: Perla del Adriatico",
+        content: "Croacia es el destino estrella de los Balcanes y frecuentemente el punto de inicio del circuito. Dubrovnik, conocida como la 'Perla del Adriatico', es famosa por sus murallas medievales perfectamente conservadas y por ser escenario de Game of Thrones. Split ofrece el impresionante Palacio de Diocleciano. Plitvice, con sus lagos de aguas turquesas y cascadas, es Patrimonio de la Humanidad y uno de los paisajes naturales mas bellos de Europa.",
+        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=80&w=1200&auto=format&fit=crop",
+        list: ["Dubrovnik: murallas medievales y casco historico impresionante", "Split: Palacio de Diocleciano, 1700 anos de historia", "Lagos de Plitvice: 16 lagos conectados por cascadas", "Isla de Hvar: lavanda, playas y vida nocturna", "Zagreb: capital con arquitectura austrohungara"]
+      },
+      {
+        title: "Montenegro: Montanas y Fiordos",
+        content: "Montenegro es pequeno pero impactante. La Bahia de Kotor, a menudo llamada el fiordo del sur de Europa, es espectacular con montanas que se elevan directamente desde el agua. La ciudad medieval de Kotor es Patrimonio de la Humanidad. Budva ofrece playas hermosas y un casco antiguo encantador. La carretera costera entre Croacia y Montenegro es una de las mas escenicas del mundo.",
+        image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=80&w=1200&auto=format&fit=crop",
+        list: ["Bahia de Kotor: el fiordo mas meridional de Europa", "Kotor: ciudad medieval amurallada", "Budva: playas y vida nocturna balcanica", "Sveti Stefan: isla hotel iconica", "Parque Nacional Durmitor: montanas y canones"]
+      },
+      {
+        title: "Albania: El Secreto Mejor Guardado",
+        content: "Albania es quizas el destino mas sorprendente del circuito. Despues de decadas de aislamiento, el pais ha abierto sus puertas revelando playas virgenes en la Riviera Albanesa, ciudades otomanas como Berat y Gjirokaster (ambas Patrimonio de la Humanidad), y una hospitalidad extraordinaria. Tirana, la capital, es vibrante y colorida, con arquitectura comunista transformada en arte urbano.",
+        image: "https://images.unsplash.com/photo-1589491106922-a8c2ac305552?q=80&w=1200&auto=format&fit=crop",
+        list: ["Riviera Albanesa: playas pristinas sin masificacion", "Berat: la ciudad de las mil ventanas", "Gjirokaster: ciudad otomana de piedra", "Tirana: capital vibrante y colorida", "Lago Ohrid: compartido con Macedonia del Norte"]
+      },
+      {
+        title: "Macedonia del Norte: Encrucijada de Culturas",
+        content: "Macedonia del Norte ofrece una mezcla fascinante de influencias otomanas, bizantinas y eslavas. Skopje, la capital, sorprende con su ambicioso proyecto de estatuas y edificios neoclasicos. El lago Ohrid, compartido con Albania, es uno de los mas antiguos del mundo con aguas cristalinas y monasterios bizantinos en sus orillas. El Canon Matka ofrece paisajes naturales impresionantes cerca de la capital.",
+        list: ["Skopje: capital con arquitectura neoclasica y bazares otomanos", "Lago Ohrid: uno de los lagos mas antiguos del mundo", "Canon Matka: kayak y senderismo espectacular", "Monasterio de San Naum: joya bizantina junto al lago"]
+      },
+      {
+        title: "Bosnia y Herzegovina: Historia y Resiliencia",
+        content: "Bosnia y Herzegovina es un pais de contrastes y profunda historia. Sarajevo, donde comenzo la Primera Guerra Mundial, mezcla mezquitas otomanas, iglesias catolicas y sinagogas en un area pequena. Mostar, con su iconico Puente Viejo (reconstruido tras la guerra), es simbolo de reconciliacion. Los rios Neretva y Una ofrecen paisajes naturales espectaculares para rafting y aventura.",
+        image: "https://images.unsplash.com/photo-1577890432592-9e3cd9f55f5b?q=80&w=1200&auto=format&fit=crop",
+        list: ["Sarajevo: la Jerusalen de Europa, ciudad multicultural", "Mostar: el Puente Viejo y casco historico otomano", "Cataratas de Kravice: cascadas espectaculares", "Blagaj: tekija sufi junto al rio subterraneo", "Trebinje: ciudad del vino y la piedra"]
+      },
+      {
+        title: "Serbia: Corazon de los Balcanes",
+        content: "Serbia ofrece una cultura rica, vida nocturna legendaria y gastronomia abundante. Belgrado, la capital, tiene una energia unica con fortalezas milenarias, barrios bohemios y los famosos 'splavovi' (clubs flotantes) sobre el Danubio. Novi Sad, capital europea de la cultura, celebra el famoso festival EXIT. Las rutas del vino serbio estan ganando reconocimiento internacional.",
+        list: ["Belgrado: fortaleza Kalemegdan y vida nocturna legendaria", "Novi Sad: ciudad cultural y festival EXIT", "Nis: cuna de Constantino el Grande", "Region vinicola de Fruska Gora: monasteries y bodegas"]
+      },
+      {
+        title: "Bulgaria: Tesoros por Descubrir",
+        content: "Bulgaria sorprende con su diversidad: desde playas en el Mar Negro hasta montanas de esqui, pasando por monasterios bizantinos y ciudades romanas. Sofia, la capital, mezcla ruinas romanas con iglesias ortodoxas y arquitectura comunista. El Monasterio de Rila, Patrimonio de la Humanidad, es una joya del arte bizantino. Plovdiv, una de las ciudades habitadas mas antiguas del mundo, fue Capital Europea de la Cultura.",
+        image: "https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?q=80&w=1200&auto=format&fit=crop",
+        list: ["Sofia: capital con ruinas romanas y catedrales ortodoxas", "Monasterio de Rila: joya bizantina en las montanas", "Plovdiv: ciudad habitada hace 8000 anos", "Costa del Mar Negro: Varna y Burgas", "Valle de las Rosas: donde se produce el aceite de rosa bulgaro"]
+      },
+      {
+        title: "Grecia del Norte: Tesalonica y Meteora",
+        content: "Aunque Grecia es destino conocido, el norte ofrece experiencias diferentes. Tesalonica, segunda ciudad del pais, tiene historia bizantina, gastronomia excepcional y vida universitaria vibrante. Meteora, con sus monasterios construidos sobre pilares de roca imposibles, es uno de los paisajes mas extraordinarios del mundo. Desde aqui puedes conectar con Atenas o las islas griegas.",
+        list: ["Tesalonica: Torre Blanca, museos bizantinos y gastronomia", "Meteora: monasterios sobre rocas imposibles", "Monte Olimpo: la montana de los dioses", "Vergina: tumbas de los reyes macedonios"]
+      },
+      {
+        title: "Itinerario Sugerido de 14-21 Dias",
+        content: "Un circuito completo por los Balcanes requiere al menos dos semanas para hacerle justicia a la region. Aqui te sugerimos un itinerario que optimiza tiempos y experiencias:",
+        list: ["Dias 1-3: Dubrovnik y costa croata", "Dias 4-5: Bahia de Kotor y Montenegro", "Dias 6-7: Albania - Berat, Gjirokaster o Riviera", "Dias 8-9: Macedonia del Norte - Ohrid y Skopje", "Dias 10-11: Bosnia - Sarajevo y Mostar", "Dias 12-13: Serbia - Belgrado", "Dias 14-15: Bulgaria - Sofia y Plovdiv", "Dias 16-18: Grecia del Norte - Meteora y Tesalonica", "Extension opcional: islas griegas o costa croata"]
+      },
+      {
+        title: "Consejos Practicos Para el Circuito",
+        content: "Viajar por los Balcanes es relativamente facil pero requiere planificacion. Algunos paises estan en la UE (Croacia, Bulgaria, Grecia), otros en espacio Schengen, y otros son independientes (Serbia, Bosnia, Albania, Montenegro, Macedonia del Norte). Verifica los requisitos de visado segun tu nacionalidad.",
+        list: ["Monedas: euro en Montenegro y Kosovo, kuna croata (ahora euro), lev bulgaro, dinar serbio, lek albanes", "Transporte: buses son la opcion mas comun y economica entre ciudades", "Mejor epoca: mayo-junio o septiembre-octubre (clima ideal, menos turistas)", "Idiomas: ingles se habla ampliamente en zonas turisticas", "Seguridad: la region es muy segura para turistas", "Contacta a Trips Europa para un circuito organizado sin preocupaciones"]
+      }
+    ],
+    faqs: [
+      { question: "Necesito visa para viajar por los Balcanes?", answer: "Depende de tu nacionalidad. Croacia, Bulgaria y Grecia son UE/Schengen. Serbia, Bosnia, Montenegro, Albania y Macedonia del Norte permiten entrada sin visa para muchos latinoamericanos. Verifica los requisitos especificos para tu pais." },
+      { question: "Cual es la mejor forma de moverse entre paises?", answer: "Los buses son la opcion mas practica y economica. Hay rutas frecuentes entre todas las capitales. El alquiler de auto tambien es buena opcion para mayor flexibilidad, especialmente en la costa." },
+      { question: "Cuanto cuesta un circuito por los Balcanes?", answer: "Los Balcanes son mas economicos que Europa occidental. Un presupuesto de USD 80-120 diarios cubre alojamiento de gama media, comidas y transporte. Es posible hacerlo con menos si eliges hostales." },
+      { question: "Es seguro viajar por los Balcanes?", answer: "Si, la region es muy segura para turistas. La guerra de los 90s termino hace casi 30 anos y los paises han avanzado enormemente. Toma las precauciones normales de cualquier viaje." },
+      { question: "Cuantos dias necesito para ver los Balcanes?", answer: "Minimo 10-14 dias para un circuito basico (3-4 paises). Para ver todos los paises con calma, 3 semanas es ideal. Tambien puedes elegir una sub-region (costa adriatica o interior) en viajes mas cortos." }
+    ]
   }
 ];
