@@ -532,7 +532,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "guia-viaje-espana",
     slug: "guia-viaje-espana",
     image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423571?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Guia Completa para Viajar a Espana desde Latinoamerica", en: "Complete Guide to Travel to Spain from Latin America" },
+    title: { es: "Guia Completa para Viajar a España desde Latinoamerica", en: "Complete Guide to Travel to Spain from Latin America" },
     excerpt: { es: "Todo lo que necesitas saber para planificar tu viaje a Espana: vuelos, documentos, alojamiento, presupuesto y consejos practicos.", en: "Everything you need to know to plan your trip to Spain: flights, documents, accommodation, budget and practical tips." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
