@@ -24,7 +24,7 @@ const BENEFITS = [
     icon: Headphones,
     title: { es: "Soporte 24/7", en: "24/7 Support", pt: "Suporte 24/7" },
     description: {
-      es: "Asistencia en espanol durante todo tu viaje",
+      es: "Asistencia en español durante todo tu viaje",
       en: "Spanish assistance throughout your trip",
       pt: "Assistencia em portugues durante toda a sua viagem",
     },
@@ -64,7 +64,7 @@ export function WhyChooseUs() {
 
   const content = {
     es: {
-      title: "Por que elegir TripsEuropa?",
+      title: "Por que elegir Trips Europa?",
       subtitle: "Mas de 10 años de experiencia creando viajes inolvidables por Europa",
       years: "Años de experiencia",
       travelers: "Viajeros felices",
@@ -72,7 +72,7 @@ export function WhyChooseUs() {
       countries: "Paises en Europa",
     },
     en: {
-      title: "Why choose TripsEuropa?",
+      title: "Why choose Trips Europa?",
       subtitle: "More than 10 years of experience creating unforgettable trips through Europe",
       years: "Years of experience",
       travelers: "Happy travelers",
@@ -80,9 +80,9 @@ export function WhyChooseUs() {
       countries: "Countries in Europe",
     },
     pt: {
-      title: "Por que escolher TripsEuropa?",
-      subtitle: "Mais de 10 años de experiencia criando viagens inesqueciveis pela Europa",
-      years: "Años de experiencia",
+      title: "Por que escolher Trips Europa?",
+      subtitle: "Mais de 10 anos de experiencia criando viagens inesqueciveis pela Europa",
+      years: "Anos de experiencia",
       travelers: "Viajantes felizes",
       packages: "Pacotes disponiveis",
       countries: "Paises na Europa",
