@@ -13,28 +13,28 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const FLIGHT_FAQS: FAQItem[] = [
   {
-    question: { es: "Que aerolineas operan vuelos desde Latinoamerica a Europa?", en: "Which airlines operate flights from Latin America to Europe?" },
-    answer: { es: "Las principales aerolineas incluyen Iberia, Air Europa, Lufthansa, Air France, KLM, British Airways, TAP Portugal, y Avianca. Tambien hay opciones con conexiones como Turkish Airlines, Emirates y Qatar Airways.", en: "Major airlines include Iberia, Air Europa, Lufthansa, Air France, KLM, British Airways, TAP Portugal, and Avianca. There are also connection options like Turkish Airlines, Emirates, and Qatar Airways." }
+    question: { es: "Que aerolineas operan vuelos desde Latinoamerica a Europa?", en: "Which airlines operate flights from Latin America to Europe?", pt: "Quais companhias aereas operam voos da America Latina para a Europa?" },
+    answer: { es: "Las principales aerolineas incluyen Iberia, Air Europa, Lufthansa, Air France, KLM, British Airways, TAP Portugal, y Avianca. Tambien hay opciones con conexiones como Turkish Airlines, Emirates y Qatar Airways.", en: "Major airlines include Iberia, Air Europa, Lufthansa, Air France, KLM, British Airways, TAP Portugal, and Avianca. There are also connection options like Turkish Airlines, Emirates, and Qatar Airways.", pt: "As principais companhias aereas incluem Iberia, Air Europa, Lufthansa, Air France, KLM, British Airways, TAP Portugal e Avianca. Tambem ha opcoes com conexoes como Turkish Airlines, Emirates e Qatar Airways." }
   },
   {
-    question: { es: "Cual es la duracion promedio de un vuelo a Europa?", en: "What is the average flight duration to Europe?" },
-    answer: { es: "Los vuelos directos desde ciudades como Bogota, Ciudad de Mexico o Sao Paulo a Madrid o Paris duran entre 9-11 horas. Con escalas, el tiempo puede ser de 14-20 horas dependiendo de la conexion.", en: "Direct flights from cities like Bogota, Mexico City, or Sao Paulo to Madrid or Paris take 9-11 hours. With layovers, travel time can be 14-20 hours depending on the connection." }
+    question: { es: "Cual es la duracion promedio de un vuelo a Europa?", en: "What is the average flight duration to Europe?", pt: "Qual e a duracao media de um voo para a Europa?" },
+    answer: { es: "Los vuelos directos desde ciudades como Bogota, Ciudad de Mexico o Sao Paulo a Madrid o Paris duran entre 9-11 horas. Con escalas, el tiempo puede ser de 14-20 horas dependiendo de la conexion.", en: "Direct flights from cities like Bogota, Mexico City, or Sao Paulo to Madrid or Paris take 9-11 hours. With layovers, travel time can be 14-20 hours depending on the connection.", pt: "Voos diretos de cidades como Bogota, Cidade do Mexico ou Sao Paulo para Madri ou Paris duram entre 9-11 horas. Com escalas, o tempo pode ser de 14-20 horas dependendo da conexao." }
   },
   {
-    question: { es: "Cuando es mas barato volar a Europa?", en: "When is it cheapest to fly to Europe?" },
-    answer: { es: "Los meses mas economicos suelen ser enero-marzo y octubre-noviembre. Evita Semana Santa, verano europeo (junio-agosto) y Navidad. Reservar con 2-3 meses de anticipacion ofrece mejores precios.", en: "The cheapest months are usually January-March and October-November. Avoid Easter, European summer (June-August), and Christmas. Booking 2-3 months in advance offers better prices." }
+    question: { es: "Cuando es mas barato volar a Europa?", en: "When is it cheapest to fly to Europe?", pt: "Quando e mais barato voar para a Europa?" },
+    answer: { es: "Los meses mas economicos suelen ser enero-marzo y octubre-noviembre. Evita Semana Santa, verano europeo (junio-agosto) y Navidad. Reservar con 2-3 meses de anticipacion ofrece mejores precios.", en: "The cheapest months are usually January-March and October-November. Avoid Easter, European summer (June-August), and Christmas. Booking 2-3 months in advance offers better prices.", pt: "Os meses mais economicos costumam ser janeiro-marco e outubro-novembro. Evite a Semana Santa, verao europeu (junho-agosto) e Natal. Reservar com 2-3 meses de antecedencia oferece melhores precos." }
   },
   {
-    question: { es: "Cuanto equipaje puedo llevar en vuelos a Europa?", en: "How much luggage can I take on flights to Europe?" },
-    answer: { es: "Generalmente incluyen 1 maleta de mano (8-10kg) y 1 maleta documentada (23kg). Las tarifas premium pueden incluir 2 maletas. Siempre verifica con la aerolinea especifica.", en: "Generally includes 1 carry-on bag (8-10kg) and 1 checked bag (23kg). Premium fares may include 2 bags. Always verify with the specific airline." }
+    question: { es: "Cuanto equipaje puedo llevar en vuelos a Europa?", en: "How much luggage can I take on flights to Europe?", pt: "Quanta bagagem posso levar em voos para a Europa?" },
+    answer: { es: "Generalmente incluyen 1 maleta de mano (8-10kg) y 1 maleta documentada (23kg). Las tarifas premium pueden incluir 2 maletas. Siempre verifica con la aerolinea especifica.", en: "Generally includes 1 carry-on bag (8-10kg) and 1 checked bag (23kg). Premium fares may include 2 bags. Always verify with the specific airline.", pt: "Geralmente incluem 1 mala de mao (8-10kg) e 1 mala despachada (23kg). As tarifas premium podem incluir 2 malas. Sempre verifique com a companhia aerea especifica." }
   },
   {
-    question: { es: "Puedo reservar solo el vuelo sin paquete completo?", en: "Can I book just the flight without a full package?" },
-    answer: { es: "Si, ofrecemos reservas de vuelos individuales. Sin embargo, nuestros paquetes que incluyen vuelo + hotel suelen ofrecer mejor valor y conveniencia.", en: "Yes, we offer individual flight bookings. However, our packages that include flight + hotel usually offer better value and convenience." }
+    question: { es: "Puedo reservar solo el vuelo sin paquete completo?", en: "Can I book just the flight without a full package?", pt: "Posso reservar apenas o voo sem pacote completo?" },
+    answer: { es: "Si, ofrecemos reservas de vuelos individuales. Sin embargo, nuestros paquetes que incluyen vuelo + hotel suelen ofrecer mejor valor y conveniencia.", en: "Yes, we offer individual flight bookings. However, our packages that include flight + hotel usually offer better value and convenience.", pt: "Sim, oferecemos reservas de voos individuais. No entanto, nossos pacotes que incluem voo + hotel geralmente oferecem melhor valor e conveniencia." }
   },
   {
-    question: { es: "Que sucede si mi vuelo se cancela o retrasa?", en: "What happens if my flight is cancelled or delayed?" },
-    answer: { es: "Te asistimos con reprogramaciones y reclamaciones. Los vuelos en la UE tienen proteccion bajo el Reglamento EC 261/2004 que puede incluir compensaciones de hasta 600 EUR.", en: "We assist with rebookings and claims. EU flights are protected under EC Regulation 261/2004 which can include compensation of up to 600 EUR." }
+    question: { es: "Que sucede si mi vuelo se cancela o retrasa?", en: "What happens if my flight is cancelled or delayed?", pt: "O que acontece se meu voo for cancelado ou atrasado?" },
+    answer: { es: "Te asistimos con reprogramaciones y reclamaciones. Los vuelos en la UE tienen proteccion bajo el Reglamento EC 261/2004 que puede incluir compensaciones de hasta 600 EUR.", en: "We assist with rebookings and claims. EU flights are protected under EC Regulation 261/2004 which can include compensation of up to 600 EUR.", pt: "Ajudamos com remarcacoes e reclamacoes. Os voos na UE tem protecao sob o Regulamento EC 261/2004 que pode incluir compensacoes de ate 600 EUR." }
   }
 ];
 
@@ -77,32 +77,34 @@ export default function Flights() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Plane className="w-6 h-6 text-accent" />
             <Badge className="bg-accent/20 text-accent border-accent/30" data-testid="badge-flights">
-              {language === "es" ? "Vuelos Internacionales" : "International Flights"}
+              {language === "es" ? "Vuelos Internacionales" : language === "pt" ? "Voos Internacionais" : "International Flights"}
             </Badge>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-flights-title">
-            <span className="text-accent">{language === "es" ? "Vuelos a Europa" : "Flights to Europe"}</span>
+            <span className="text-accent">{language === "es" ? "Vuelos a Europa" : language === "pt" ? "Voos para Europa" : "Flights to Europe"}</span>
           </h1>
           
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" data-testid="text-flights-subtitle">
             {language === "es" 
               ? "Las mejores tarifas en vuelos desde Latinoamerica a todos los destinos europeos. Directos y con conexiones convenientes." 
+              : language === "pt"
+              ? "As melhores tarifas em voos da America Latina para todos os destinos europeus. Diretos e com conexoes convenientes."
               : "The best fares on flights from Latin America to all European destinations. Direct and with convenient connections."}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
             <div className="flex items-center gap-2">
               <Globe className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "50+ destinos europeos" : "50+ European destinations"}</span>
+              <span>{language === "es" ? "50+ destinos europeos" : language === "pt" ? "50+ destinos europeus" : "50+ European destinations"}</span>
             </div>
             <div className="flex items-center gap-2">
               <DollarSign className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Mejores precios garantizados" : "Best prices guaranteed"}</span>
+              <span>{language === "es" ? "Mejores precios garantizados" : language === "pt" ? "Melhores precos garantidos" : "Best prices guaranteed"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Flexibilidad en cambios" : "Flexible changes"}</span>
+              <span>{language === "es" ? "Flexibilidad en cambios" : language === "pt" ? "Flexibilidade em mudancas" : "Flexible changes"}</span>
             </div>
           </div>
         </div>
@@ -112,11 +114,13 @@ export default function Flights() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Rutas Populares" : "Popular Routes"}</span>
+              <span className="text-accent">{language === "es" ? "Rutas Populares" : language === "pt" ? "Rotas Populares" : "Popular Routes"}</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {language === "es" 
                 ? "Las conexiones mas solicitadas por nuestros viajeros latinoamericanos." 
+                : language === "pt"
+                ? "As conexoes mais solicitadas pelos nossos viajantes latino-americanos."
                 : "The most requested connections by our Latin American travelers."}
             </p>
           </div>
@@ -130,14 +134,14 @@ export default function Flights() {
                       <MapPin className="w-5 h-5 text-accent" />
                       <div>
                         <p className="font-bold">{route.from}</p>
-                        <p className="text-xs text-muted-foreground">{language === "es" ? "Origen" : "Origin"}</p>
+                        <p className="text-xs text-muted-foreground">{language === "es" ? "Origen" : language === "pt" ? "Origem" : "Origin"}</p>
                       </div>
                     </div>
                     <Plane className="w-5 h-5 text-muted-foreground rotate-90" />
                     <div className="flex items-center gap-3">
                       <div className="text-right">
                         <p className="font-bold">{route.to}</p>
-                        <p className="text-xs text-muted-foreground">{language === "es" ? "Destino" : "Destination"}</p>
+                        <p className="text-xs text-muted-foreground">{language === "es" ? "Destino" : language === "pt" ? "Destino" : "Destination"}</p>
                       </div>
                       <MapPin className="w-5 h-5 text-accent" />
                     </div>
@@ -150,7 +154,7 @@ export default function Flights() {
                     </div>
                     {route.direct && (
                       <Badge variant="secondary" className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
-                        {language === "es" ? "Directo" : "Direct"}
+                        {language === "es" ? "Directo" : language === "pt" ? "Direto" : "Direct"}
                       </Badge>
                     )}
                     <span className="font-bold text-accent">{route.price}</span>
@@ -166,7 +170,7 @@ export default function Flights() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Por Que Reservar Con Nosotros" : "Why Book With Us"}</span>
+              <span className="text-accent">{language === "es" ? "Por Que Reservar Con Nosotros" : language === "pt" ? "Por Que Reservar Conosco" : "Why Book With Us"}</span>
             </h2>
           </div>
 
@@ -176,9 +180,9 @@ export default function Flights() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Mejor Precio" : "Best Price"}</h3>
+                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Mejor Precio" : language === "pt" ? "Melhor Preco" : "Best Price"}</h3>
                 <p className="text-sm text-muted-foreground">
-                  {language === "es" ? "Tarifas negociadas directamente con aerolineas." : "Fares negotiated directly with airlines."}
+                  {language === "es" ? "Tarifas negociadas directamente con aerolineas." : language === "pt" ? "Tarifas negociadas diretamente com companhias aereas." : "Fares negotiated directly with airlines."}
                 </p>
               </CardContent>
             </Card>
@@ -188,9 +192,9 @@ export default function Flights() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
                   <Shield className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Flexibilidad" : "Flexibility"}</h3>
+                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Flexibilidad" : language === "pt" ? "Flexibilidade" : "Flexibility"}</h3>
                 <p className="text-sm text-muted-foreground">
-                  {language === "es" ? "Cambios y cancelaciones con condiciones flexibles." : "Changes and cancellations with flexible conditions."}
+                  {language === "es" ? "Cambios y cancelaciones con condiciones flexibles." : language === "pt" ? "Alteracoes e cancelamentos com condicoes flexiveis." : "Changes and cancellations with flexible conditions."}
                 </p>
               </CardContent>
             </Card>
@@ -200,9 +204,9 @@ export default function Flights() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
                   <Luggage className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Equipaje Incluido" : "Luggage Included"}</h3>
+                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Equipaje Incluido" : language === "pt" ? "Bagagem Incluida" : "Luggage Included"}</h3>
                 <p className="text-sm text-muted-foreground">
-                  {language === "es" ? "Maleta documentada incluida en la mayoria de tarifas." : "Checked bag included in most fares."}
+                  {language === "es" ? "Maleta documentada incluida en la mayoria de tarifas." : language === "pt" ? "Mala despachada incluida na maioria das tarifas." : "Checked bag included in most fares."}
                 </p>
               </CardContent>
             </Card>
@@ -212,9 +216,9 @@ export default function Flights() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
                   <Users className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Soporte 24/7" : "24/7 Support"}</h3>
+                <h3 className="font-display font-bold text-lg mb-2">{language === "es" ? "Soporte 24/7" : language === "pt" ? "Suporte 24/7" : "24/7 Support"}</h3>
                 <p className="text-sm text-muted-foreground">
-                  {language === "es" ? "Asistencia en español durante todo tu viaje." : "Spanish-language assistance throughout your trip."}
+                  {language === "es" ? "Asistencia en español durante todo tu viaje." : language === "pt" ? "Assistencia em portugues durante toda a sua viagem." : "Spanish-language assistance throughout your trip."}
                 </p>
               </CardContent>
             </Card>
@@ -226,7 +230,7 @@ export default function Flights() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Aerolineas Asociadas" : "Partner Airlines"}</span>
+              <span className="text-accent">{language === "es" ? "Aerolineas Asociadas" : language === "pt" ? "Companhias Aereas Parceiras" : "Partner Airlines"}</span>
             </h2>
           </div>
 
@@ -247,11 +251,13 @@ export default function Flights() {
       <section className="py-16 bg-primary" data-testid="section-flights-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-display font-bold text-accent mb-4">
-            {language === "es" ? "Encuentra Tu Vuelo Ideal" : "Find Your Ideal Flight"}
+            {language === "es" ? "Encuentra Tu Vuelo Ideal" : language === "pt" ? "Encontre Seu Voo Ideal" : "Find Your Ideal Flight"}
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             {language === "es" 
               ? "Nuestros asesores te ayudan a encontrar las mejores opciones de vuelo para tu viaje." 
+              : language === "pt"
+              ? "Nossos consultores ajudam voce a encontrar as melhores opcoes de voo para sua viagem."
               : "Our advisors help you find the best flight options for your trip."}
           </p>
           <Button 
