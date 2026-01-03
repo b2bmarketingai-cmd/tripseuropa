@@ -5,7 +5,7 @@ import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Clock, ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Shield, Smartphone, Heart, Camera, Utensils, Globe, Loader2 } from "lucide-react";
+import { ArrowRight, Search, TrendingUp, BookOpen, Plane, MapPin, CreditCard, Heart, Utensils, Globe, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useMemo } from "react";
 import { BLOG_POSTS_DATA } from "@/lib/blogData";
@@ -881,12 +881,8 @@ export default function Blog() {
                     </Badge>
                   </div>
                   <CardContent className="p-5">
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
+                    <div className="text-sm text-muted-foreground mb-2">
                       <span>{post.date}</span>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime} min</span>
-                      </div>
                     </div>
                     <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors">
                       {post.title[language as "es" | "en" | "pt"] || post.title.es}
@@ -1092,12 +1088,8 @@ export default function Blog() {
                       <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language as "es" | "en" | "pt"] || post.categoryLabel.es}</Badge>
                     </div>
                     <CardContent className="p-6">
-                      <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
+                      <div className="text-sm text-muted-foreground mb-3">
                         <span data-testid={`text-date-${post.id}`}>{post.date}</span>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span data-testid={`text-readtime-${post.id}`}>{post.readTime} min</span>
-                        </div>
                       </div>
                       
                       <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors" data-testid={`text-title-${post.id}`}>
