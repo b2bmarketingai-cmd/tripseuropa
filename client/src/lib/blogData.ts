@@ -2568,7 +2568,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-viajar-espana-colombia",
     slug: "requisitos-viajar-espana-desde-colombia",
-    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e3?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/requisitos-viajar-espana-colombia.png",
     title: { es: "Requisitos Para Viajar A España Desde Colombia", en: "Requirements To Travel To Spain From Colombia" },
     excerpt: { es: "Viajar a España desde Colombia es una experiencia emocionante. Conoce todos los requisitos esenciales: pasaporte vigente, documentacion, solvencia economica, alojamiento y seguro de viaje para pasar los controles migratorios sin contratiempos.", en: "Traveling to Spain from Colombia is an exciting experience. Learn all the essential requirements: valid passport, documentation, financial solvency, accommodation and travel insurance to pass migration controls smoothly." },
     category: "migracion",
