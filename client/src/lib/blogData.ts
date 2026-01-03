@@ -4803,5 +4803,90 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Puedo hacer Tax Free si viajo a varios paises europeos?", answer: "Si. Debes sellar todos tus formularios Tax Free en el ultimo pais de la UE antes de salir hacia Latinoamerica. Por ejemplo, si viajas Paris-Roma-Madrid y vuelas a casa desde Madrid, sellas todos los formularios en el aeropuerto de Madrid." },
       { question: "Cuanta franquicia tengo al regresar a mi pais?", answer: "Varia por pais. Colombia: USD 1,500, Mexico: USD 500, Argentina: USD 500, Peru: USD 500, Chile: USD 800. Valores mayores pagan impuestos. Consulta la aduana de tu pais antes de viajar." }
     ]
+  },
+
+  {
+    id: "portugal-10-dias",
+    slug: "portugal-10-dias",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Portugal en 10 Dias: Lisboa, Porto, Algarve y Sintra", en: "Portugal in 10 Days: Lisbon, Porto, Algarve and Sintra" },
+    excerpt: { es: "El pais mas accesible de Europa. Itinerario completo, precios y consejos.", en: "Europe's most accessible country. Complete itinerary, prices and tips." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "15 Dic 2026",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["portugal 10 dias", "itinerario portugal", "lisboa porto", "algarve portugal", "sintra portugal", "viaje portugal"],
+    featured: true,
+    sections: [
+      {
+        title: "Portugal: El Secreto Mejor Guardado de Europa",
+        content: "Portugal es, sin duda, el pais mas accesible de Europa para viajeros latinoamericanos. Precios razonables, idioma hermano del espanol, gastronomia exquisita, paisajes de pelicula y una hospitalidad que te hara sentir como en casa. En 10 dias puedes recorrer lo mejor de este pequeno gigante: Lisboa la vibrante, Porto la romantica, el Algarve paradisiaco y Sintra la magica. En Tripseuropa.com hemos disenado el itinerario perfecto para que no te pierdas nada. Esta guia completa te llevara de la mano por cada rincon de Portugal.",
+        image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 1-3: Lisboa, La Capital de las Siete Colinas",
+        content: "Lisboa merece al menos 3 dias completos. Es una ciudad que se recorre a pie, en tranvia y con mucha calma. Cada barrio tiene su personalidad unica.",
+        list: ["Dia 1 - Baixa y Alfama: Praca do Comercio, Arco da Rua Augusta, Catedral Se, Castillo de San Jorge, callejuelas de Alfama, miradores de Santa Luzia y Portas do Sol.", "Dia 2 - Belem y Bairro Alto: Torre de Belem, Monasterio de los Jeronimos, Pasteis de Belem (los originales), MAAT, Bairro Alto al atardecer, cena con fado en vivo.", "Dia 3 - Sintra (excursion): Palacio da Pena, Castillo de los Moros, Quinta da Regaleira, centro historico. Regreso por Cascais opcional.", "Imperdibles: Tranvia 28 (mejor temprano), Elevador de Santa Justa, Time Out Market para comer.", "Donde dormir: Chiado o Baixa son las mejores zonas. Hoteles desde EUR 80/noche.", "Presupuesto diario: EUR 80-120 incluyendo hotel, comidas y transporte."],
+        image: "https://images.unsplash.com/photo-1536663815808-535e2280d2c2?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Sintra: El Pueblo de Cuento de Hadas",
+        content: "A solo 40 minutos de Lisboa, Sintra es Patrimonio de la Humanidad y parece sacado de un cuento de hadas. Palacios romanticos, jardines misteriosos y bosques encantados. Merece al menos un dia completo desde Lisboa.",
+        list: ["Palacio da Pena: El icono de Sintra. Colores vibrantes, arquitectura romantica, vistas espectaculares. EUR 14 entrada. Llega a las 9am para evitar multitudes.", "Quinta da Regaleira: Jardines misterios, torres, tuneles y el famoso Pozo Iniciativo. Ambiente mistico. EUR 10 entrada.", "Castillo de los Moros: Murallas medievales con vistas panoramicas a Sintra y el oceano. EUR 8 entrada.", "Palacio Nacional de Sintra: En el centro del pueblo. Chimeneas conicas iconicas. Interior impresionante.", "Centro historico: Calles empedradas, tiendas de artesanias, travesseiros (dulces tipicos).", "Como llegar: Tren desde Lisboa Rossio (EUR 4.50 ida y vuelta, 40 min). Luego bus 434 a los palacios."],
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 4-6: Porto, La Ciudad del Vino y el Romanticismo",
+        content: "Porto es quiza la ciudad mas romantica de Portugal. Casas de azulejos, el rio Duero, las bodegas de vino y una gastronomia excepcional. Merece 3 dias completos.",
+        list: ["Dia 4 - Centro historico: Ribeira (Patrimonio UNESCO), Puente Dom Luis I, Catedral Se, Estacion Sao Bento (azulejos espectaculares), Torre dos Clerigos.", "Dia 5 - Vila Nova de Gaia: Cruzar el puente, visitar bodegas (Graham's, Sandeman, Taylor's), cata de vino de Porto, crucero de los 6 puentes al atardecer.", "Dia 6 - Mas Porto: Libreria Lello (inspiro Harry Potter), Mercado do Bolhao, Foz do Douro, playa y faro, Serralves.", "Imperdibles: Francesinha (sandwich tipico), vino de Porto, tripas a moda do Porto.", "Donde dormir: Ribeira o Centro tienen los mejores hoteles. Desde EUR 70/noche.", "Transporte desde Lisboa: Tren alta velocidad (2h45, EUR 25-35) o vuelo low cost (1h, desde EUR 30)."],
+        image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Valle del Duero: Excursion desde Porto",
+        content: "El Valle del Duero es una de las regiones vinicolas mas antiguas y bellas del mundo. Patrimonio de la Humanidad, sus terrazas de vinedos sobre el rio son un espectaculo visual. Excursion imprescindible desde Porto.",
+        list: ["Paisaje: Terrazas de vinedos cayendo hacia el rio Duero. Quintas historicas. Uno de los paisajes mas fotografiados de Europa.", "Quintas para visitar: Quinta do Crasto, Quinta da Pacheca, Quinta do Bomfim. Catas y almuerzos maridados.", "Crucero por el Duero: Desde Porto o Peso da Regua. 1 a 8 horas dependiendo del recorrido. Paisajes unicos.", "Tren historico: Linea del Duero, una de las mas bonitas de Europa. Desde Porto hasta Pocinho.", "Pinhao: Pueblo pintoresco con estacion de tren decorada con azulejos. Punto central del valle.", "Tour organizado: Recomendamos tour de un dia desde Porto. Trips Europa organiza visitas con transporte, bodegas y almuerzo. Contactanos."],
+        image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 7-9: Algarve, El Paraiso del Sur",
+        content: "El Algarve es el sur de Portugal: playas de acantilados dorados, aguas turquesas, pueblos blancos y el mejor clima del pais. 3 dias te permiten conocer los highlights.",
+        list: ["Dia 7 - Lagos: Centro historico, Ponta da Piedade (formaciones rocosas espectaculares), Praia Dona Ana, cuevas en kayak o bote.", "Dia 8 - Benagil y alrededores: Cueva de Benagil (la mas famosa de Portugal), Praia da Marinha, Carvoeiro, tour en bote por la costa.", "Dia 9 - Faro y Tavira: Casco antiguo de Faro, Ria Formosa (parque natural), Tavira (pueblo con encanto), Ilha de Tavira (playa paradisiaca).", "Mejores playas: Praia da Marinha, Praia de Benagil, Praia Dona Ana, Praia de Falesia.", "Donde dormir: Lagos o Albufeira como base. Hoteles desde EUR 60/noche. Villas con piscina muy accesibles.", "Como llegar: Vuelo Lisboa-Faro (45 min, EUR 40-80) o carro alquilado (3h, la mejor opcion para el Algarve)."],
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 10: Regreso a Lisboa y Ultimas Compras",
+        content: "Tu ultimo dia en Portugal es perfecto para compras, ultimos paseos y despedirte de este pais increible.",
+        list: ["Manana: Vuelo o tren desde Algarve a Lisboa (1-3 horas dependiendo del medio).", "Compras: Corcho portugues (carteras, accesorios), azulejos, conservas de sardinas, vino de Porto, pasteles de nata.", "Mercados: LX Factory (creativo, vintage, gastronomia), Mercado da Ribeira / Time Out Market.", "Ultimo almuerzo: Bacalhau a Bras, arroz de mariscos, o una ultima francesinha.", "Despedida: Mirador de Senhora do Monte al atardecer antes de ir al aeropuerto.", "Aeropuerto: El aeropuerto de Lisboa esta a 20 minutos del centro en metro o taxi (EUR 15-20)."]
+      },
+      {
+        title: "Gastronomia Portuguesa: Que Comer y Donde",
+        content: "La cocina portuguesa es una de las mejores de Europa y una de las mas accesibles para el paladar latinoamericano. Productos frescos, sabores intensos y porciones generosas.",
+        list: ["Bacalhau: El ingrediente rey. Dicen que hay 365 recetas, una para cada dia. Prueba Bacalhau a Bras, com natas, o a la parrilla.", "Pasteis de nata: El postre iconico. Los originales estan en Pasteis de Belem, pero los de Manteigaria son igual de buenos.", "Francesinha (Porto): Sandwich con carnes, queso, huevo y salsa de cerveza. Contundente y delicioso.", "Sardinas asadas: Especialmente en Lisboa en verano (fiestas de San Antonio, junio).", "Polvo a lagareiro: Pulpo asado con aceite de oliva, ajo y papas. Sublime.", "Vino de Porto: Tinto, blanco, rosado, tawny, vintage... catas obligatorias en las bodegas de Vila Nova de Gaia.", "Presupuesto: Comida completa desde EUR 10-15. Restaurante con estilo EUR 25-35. Mucho mas barato que Francia o Italia."]
+      },
+      {
+        title: "Presupuesto Detallado Para 10 Dias en Portugal",
+        content: "Portugal ofrece una excelente relacion calidad-precio. Aqui un presupuesto realista para 10 dias:",
+        list: ["Vuelos desde Latinoamerica: USD 600-1200 ida y vuelta dependiendo de la ciudad y temporada.", "Alojamiento (10 noches): EUR 70-100/noche promedio = EUR 700-1000 total.", "Comidas: EUR 40-60/dia = EUR 400-600 total.", "Transporte interno: Trenes + carro Algarve = EUR 150-250.", "Entradas y actividades: EUR 100-150 (palacios, catas, tours).", "Total aproximado: EUR 1350-2000 por persona (sin vuelos).", "Trips Europa: Nuestros paquetes todo incluido desde EUR 1500/persona incluyen hoteles 4 estrellas, desayunos, transporte y guia en espanol."]
+      },
+      {
+        title: "Consejos Practicos Para Viajar a Portugal",
+        content: "Estos consejos de los expertos de Tripseuropa.com haran tu viaje mas facil:",
+        list: ["Idioma: El portugues es comprensible para hispanohablantes. Los portugueses aprecian si intentas hablar su idioma.", "Propinas: No son obligatorias pero se aprecian (5-10% en restaurantes).", "Enchufes: Tipo F (europeo). Mismo voltaje que Europa (220V).", "Mejor epoca: Abril-junio y septiembre-octubre. Verano muy caluroso en el sur.", "Moneda: Euro. Cajeros abundantes. Tarjetas aceptadas casi en todas partes.", "Seguridad: Muy seguro. Precauciones normales en zonas turisticas.", "Transporte: Red de trenes excelente. Alquilar carro recomendable para Algarve y Duero.", "Lisboa Card: EUR 20-40 segun dias. Incluye transporte y entradas. Vale la pena."]
+      },
+      {
+        title: "Viaja a Portugal con Trips Europa",
+        content: "En Tripseuropa.com somos especialistas en Portugal. Conocemos cada rincon, cada restaurante escondido, cada mirador secreto. Nuestros paquetes de 10 dias incluyen vuelos desde tu ciudad, hoteles 4 estrellas en ubicaciones centrales, desayunos diarios, traslados, excursion al Valle del Duero, carro de alquiler en Algarve, y asistencia 24/7 en espanol. Tambien organizamos viajes a medida para lunas de miel, familias, grupos de amigos o viajes en solitario. Portugal es el destino perfecto para tu primer viaje a Europa. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura portuguesa.",
+        image: "https://images.unsplash.com/photo-1558369981-f9ca78462e61?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Es Portugal un buen destino para un primer viaje a Europa?", answer: "Es el mejor. Precios accesibles, idioma similar al espanol, seguridad alta, gastronomia familiar, y paisajes diversos. En 10 dias puedes ver ciudades, playas y pueblos sin agotarte. Recomendamos Portugal como primera experiencia europea." },
+      { question: "Cuantos dias necesito para conocer Portugal?", answer: "Minimo 7 dias para Lisboa, Sintra y Porto. Ideal 10-14 dias para incluir Algarve y el Valle del Duero. Con 10 dias puedes ver los principales atractivos sin prisas." },
+      { question: "Es mejor alquilar carro o usar transporte publico?", answer: "Depende. Lisboa y Porto se recorren perfectamente en transporte publico. Para Algarve y Valle del Duero, alquilar carro es muy recomendable (desde EUR 25/dia). Los trenes portugueses son excelentes y puntuales." },
+      { question: "Cual es la mejor epoca para visitar Portugal?", answer: "Primavera (abril-junio) y otono (septiembre-octubre) tienen el mejor clima y menos turistas. Verano (julio-agosto) es temporada alta con precios elevados y calor extremo en el sur. Invierno es suave pero lluvioso." },
+      { question: "Cuanto cuesta un viaje de 10 dias a Portugal?", answer: "Presupuesto medio: EUR 1500-2000 por persona sin vuelos. Incluye hoteles 3-4 estrellas, comidas, transporte y entradas. Vuelos desde Latinoamerica: USD 600-1200. Los paquetes de Trips Europa empiezan desde EUR 1500 todo incluido." },
+      { question: "Necesito visa para viajar a Portugal desde Latinoamerica?", answer: "La mayoria de paises latinoamericanos no requieren visa para estancias de hasta 90 dias. Necesitas pasaporte vigente (6 meses minimo), seguro de viaje, reserva de hotel y fondos suficientes. A partir de 2026, se requiere autorizacion ETIAS (EUR 7)." }
+    ]
   }
 ];
