@@ -1566,7 +1566,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "estudiar-alemania-latinoamericanos",
     title: { es: "Estudiar en Alemania: Guia Completa Para Latinoamericanos", en: "Studying in Germany: Complete Guide for Latin Americans" },
     excerpt: { es: "Descubre como estudiar en universidades alemanas. Requisitos, costos, becas y el proceso completo para latinoamericanos que buscan educacion de primer nivel.", en: "Discover how to study at German universities. Requirements, costs, scholarships and the complete process for Latin Americans seeking top-level education." },
-    image: "https://images.unsplash.com/photo-1527269534026-c86f4009eace?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/estudiar-alemania.png",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-19",
