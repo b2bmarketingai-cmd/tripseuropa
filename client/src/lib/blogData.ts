@@ -1118,7 +1118,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "descubre-mejores-destinos-espana",
     title: { es: "Descubre Los 3 Mejores Destinos de España Para Latinoamericanos", en: "Discover the 3 Best Destinations in Spain for Latin Americans" },
     excerpt: { es: "Explora los destinos espanoles que mas enamoran a los viajeros latinoamericanos. Historia, cultura, gastronomia y experiencias inolvidables en la madre patria.", en: "Explore the Spanish destinations that Latin American travelers love most. History, culture, gastronomy and unforgettable experiences." },
-    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/mejores-destinos-espana.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-29",
