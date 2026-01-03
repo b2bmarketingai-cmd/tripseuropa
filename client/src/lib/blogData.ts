@@ -421,6 +421,81 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "noruega-fiordos",
+    slug: "noruega-fiordos",
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Fiordos de Noruega: Geiranger, Trolltunga y Mas", en: "Norwegian Fjords: Geiranger, Trolltunga and More" },
+    excerpt: { es: "Los paisajes mas espectaculares de Europa. Como recorrer los fiordos noruegos en 7 dias.", en: "Europe's most spectacular landscapes. How to tour the Norwegian fjords in 7 days." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "4 Oct 2024",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["fiordos noruega", "geiranger", "trolltunga", "bergen", "flam", "auroras boreales"],
+    featured: false,
+    sections: [
+      {
+        title: "Noruega: El Pais de los Fiordos",
+        content: "Noruega ofrece algunos de los paisajes naturales mas impresionantes del planeta. Los fiordos - valles glaciares inundados por el mar - crean escenarios de dramatica belleza con paredes de roca vertical, cascadas que caen cientos de metros y aguas color esmeralda. Para viajeros latinoamericanos, Noruega representa la naturaleza europea en su maxima expresion, un contraste total con nuestros paisajes tropicales que te dejara sin aliento.",
+        image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1-2: Bergen, la Puerta de los Fiordos",
+        content: "Bergen es el punto de partida perfecto para explorar los fiordos. Esta encantadora ciudad portuaria tiene un casco antiguo de casas de madera coloridas (Bryggen, Patrimonio UNESCO) y esta rodeada de siete montanas. Es considerada la ciudad mas lluviosa de Europa, pero eso solo anade a su atmosfera magica.",
+        list: ["Bryggen: Casco historico de madera, tiendas de artesanias", "Floibanen: Funicular a la montana Floyen con vistas panoramicas", "Mercado de Pescado: Salmon fresco, cangrejo real y especialidades noruegas", "Barrio de Nordnes: Paseo costero y acuario", "Museo Hanseatico: Historia de los comerciantes alemanes medievales", "Torgallmenningen: Plaza principal con cafes y vida urbana"]
+      },
+      {
+        title: "Dia 3: Flam y el Tren mas Espectacular del Mundo",
+        content: "El Flamsbana (Tren de Flam) es considerado uno de los viajes en tren mas bellos del mundo. En solo 20 km desciende 866 metros atravesando 20 tuneles, pasando junto a cascadas impresionantes y paisajes de cuento. El pueblo de Flam, al final del Aurlandsfjord, es pequeno pero encantador.",
+        image: "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=80&w=1200&auto=format&fit=crop",
+        list: ["Flamsbana: Reserva con anticipacion, especialmente en verano", "Cascada Kjosfossen: El tren hace parada para admirarla", "Crucero por el Aurlandsfjord: Combinable con el tren", "Stegastein: Mirador espectacular sobre el fiordo", "Undredal: Pueblo de 100 habitantes famoso por su queso de cabra"]
+      },
+      {
+        title: "Dia 4: Geirangerfjord, Patrimonio de la Humanidad",
+        content: "El Geirangerfjord es quizas el fiordo mas fotografiado del mundo y Patrimonio de la Humanidad por la UNESCO. Sus 15 km de longitud estan flanqueados por montanas de hasta 1700 metros con cascadas espectaculares como Las Siete Hermanas (De Syv Sostre) y El Pretendiente (Friaren).",
+        list: ["Las Siete Hermanas: Cascada iconica con siete chorros de agua", "El Pretendiente: Cascada frente a Las Siete Hermanas", "Ornesvingen (Carretera del Aguila): Mirador con 11 curvas y vistas vertiginosas", "Crucero por el fiordo: La mejor manera de apreciar las cascadas", "Geiranger: Pueblo pequeno pero con excelentes restaurantes", "Dalsnibba: Mirador a 1500 metros con vista de todo el fiordo"]
+      },
+      {
+        title: "Dia 5: Trolltunga, el Icono de Noruega",
+        content: "Trolltunga (La Lengua del Troll) es una formacion rocosa que sobresale horizontalmente 700 metros sobre el lago Ringedalsvatnet. Es la foto mas emblematica de Noruega, pero llegar ahi requiere una caminata exigente de 10-12 horas ida y vuelta (27 km). No es para todos, pero es inolvidable.",
+        list: ["Dificultad: Alta - requiere buena condicion fisica", "Duracion: 10-12 horas ida y vuelta", "Mejor epoca: Junio a septiembre (el resto esta cubierto de nieve)", "Preparacion: Lleva comida, agua, ropa impermeable y de abrigo", "Alternativa: Tours guiados con transporte y guia", "Via Ferrata: Opcion mas corta pero requiere equipo de escalada"]
+      },
+      {
+        title: "Dia 6: Alesund y la Arquitectura Art Nouveau",
+        content: "Alesund es una ciudad unica reconstruida en estilo Art Nouveau despues de un incendio devastador en 1904. Sus edificios coloridos con torres, torrecillas y ornamentos crean una estetica de cuento. Es tambien punto de partida para excursiones a islas y a la famosa Atlanterhavsveien (Carretera del Atlantico).",
+        list: ["Jugendstil Senteret: Centro de Art Nouveau, explica la reconstruccion", "Monte Aksla: 418 escalones hasta el mejor mirador de la ciudad", "Atlanterhavsveien: Carretera sobre el oceano, 8 km de puentes espectaculares", "Islas Giske y Godoy: Playas, faros y naturaleza virgen", "Aquario de Alesund: Uno de los mejores de Escandinavia", "Excursion a Bird Island Runde: Colonias de frailecillos"]
+      },
+      {
+        title: "Dia 7: Sognefjord, el Rey de los Fiordos",
+        content: "El Sognefjord es el fiordo mas largo y profundo de Noruega (204 km de largo, 1308 metros de profundidad). Sus brazos incluyen el estrecho Naeroyfjord (Patrimonio UNESCO), uno de los mas angostos del mundo con solo 250 metros de ancho en algunos puntos.",
+        list: ["Naeroyfjord: Brazo estrecho y dramatico, Patrimonio UNESCO", "Gudvangen: Pueblo vikingo reconstruido con artesanos en vivo", "Iglesia de Urnes: La iglesia de madera mas antigua de Noruega (1130)", "Glaciar Jostedalsbreen: El mas grande de Europa continental", "Kayak en el fiordo: Experiencia unica de cercania con la naturaleza"]
+      },
+      {
+        title: "Auroras Boreales: El Espectaculo Magico",
+        content: "Si visitas Noruega entre septiembre y marzo, puedes tener la suerte de ver las auroras boreales. Aunque el norte (Tromso, Lofoten) ofrece mejores probabilidades, incluso en la zona de los fiordos hay posibilidades si las condiciones son favorables.",
+        list: ["Mejor epoca: Septiembre-marzo, noches oscuras y cielos despejados", "Mejor zona: Norte de Noruega (Tromso, Lofoten, Nordkapp)", "Apps utiles: Aurora Forecast, Norway Lights para predicciones", "Consejos: Alejarse de luces urbanas, paciencia y ropa muy abrigada", "Tours: Excursiones nocturnas con guias expertos en cazar auroras"]
+      },
+      {
+        title: "Gastronomia Noruega: Del Mar a la Mesa",
+        content: "La cocina noruega se centra en pescados y mariscos de excepcional calidad. El salmon noruego es mundialmente famoso, pero hay mucho mas por descubrir. Los precios son altos, pero la calidad es insuperable.",
+        list: ["Salmon: Ahumado, curado (gravlax), fresco - imprescindible probarlo", "Bacalao: Fresco, seco (klippfisk) o en bolas (fiskekaker)", "Cangrejo Real: De las aguas articas, carne dulce y abundante", "Rakfisk: Trucha fermentada, para paladares aventureros", "Brunost: Queso marron dulce, tipico en el desayuno", "Aquavit: Licor de patata con semillas de alcaravea, digestivo tradicional"]
+      },
+      {
+        title: "Consejos Practicos y Presupuesto",
+        content: "Noruega es uno de los paises mas caros del mundo, pero con planificacion puedes disfrutar sin arruinarte. Aqui te dejamos consejos para optimizar tu viaje.",
+        list: ["Mejor epoca: Mayo-septiembre para fiordos, septiembre-marzo para auroras", "Transporte: Norway in a Nutshell combina tren, barco y bus con descuento", "Alojamiento: Cabanas (hytter) con cocina ahorran en comidas", "Comidas: Supermercados (Rema 1000, Kiwi) para picnics economicos", "Moneda: Corona Noruega (NOK), aproximadamente 11 NOK = 1 EUR", "Clima: Capas, impermeable y ropa de abrigo incluso en verano", "Derecho a acampar: Allemannsretten permite acampar gratis en la naturaleza"]
+      }
+    ],
+    faqs: [
+      { question: "Es Noruega muy cara para viajeros latinoamericanos?", answer: "Si, Noruega es cara. Una comida en restaurante cuesta 25-40 EUR, alojamiento desde 100 EUR/noche. Sin embargo, puedes ahorrar cocinando en cabanas, usando supermercados, y aprovechando el derecho a acampar gratis en la naturaleza (Allemannsretten)." },
+      { question: "Cual es la mejor epoca para ver los fiordos?", answer: "Mayo a septiembre ofrece el mejor clima, dias muy largos (hasta 24 horas de luz en junio) y todas las atracciones abiertas. Junio-agosto es temporada alta. Para auroras boreales, septiembre a marzo pero hace frio." },
+      { question: "Necesito visa para visitar Noruega siendo latinoamericano?", answer: "Noruega es parte del espacio Schengen. Mexicanos, argentinos, chilenos, brasileños y uruguayos pueden entrar sin visa hasta 90 dias. Colombianos, peruanos y ecuatorianos necesitan visa Schengen." },
+      { question: "Es posible ver fiordos sin caminar mucho?", answer: "Absolutamente. Los cruceros por los fiordos, el tren de Flam y las carreteras panoramicas ofrecen vistas espectaculares sin esfuerzo fisico. Trolltunga requiere caminata seria, pero hay muchas alternativas accesibles." },
+      { question: "Puedo alquilar coche para recorrer los fiordos?", answer: "Si, y es una excelente opcion para flexibilidad. Las carreteras son espectaculares pero estrechas. Hay ferries que conectan los fiordos (incluidos en el precio del coche). Conduce con precaucion en curvas y tuneles." },
+      { question: "Que tal el clima en verano en Noruega?", answer: "El verano noruego es fresco pero agradable: 15-20 grados en promedio. Puede llover en cualquier momento, especialmente en Bergen. Lleva siempre ropa impermeable y varias capas. Los dias son muy largos, con luz hasta medianoche." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
