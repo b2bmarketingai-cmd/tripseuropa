@@ -2019,7 +2019,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "visado-espana-imprescindible",
     title: { es: "Visado España: Por Que es Imprescindible Para Entrar al Pais", en: "Spain Visa: Why It's Essential to Enter the Country" },
     excerpt: { es: "Entiende el sistema de visados espanoles. Quien necesita visa, tipos disponibles, y el proceso de solicitud para viajeros latinoamericanos.", en: "Understand the Spanish visa system. Who needs a visa, available types, and the application process for Latin American travelers." },
-    image: "https://images.unsplash.com/photo-1551727028-da30e7f87f1f?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/visado-espana-imprescindible.png",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-09",
