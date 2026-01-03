@@ -1744,7 +1744,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "ley-nietos-nacionalidad-espanola",
     slug: "ley-nietos-nacionalidad-espanola",
-    title: { es: "Ley de Nietos: Como Obtener la Nacionalidad Espanola Por Ascendencia", en: "Grandchildren's Law: How to Obtain Spanish Nationality by Ancestry" },
+    title: { es: "Ley de Nietos: Como Obtener la Nacionalidad Española Por Ascendencia", en: "Grandchildren's Law: How to Obtain Spanish Nationality by Ancestry" },
     excerpt: { es: "La Ley de Memoria Democratica permite a descendientes de espanoles obtener la nacionalidad. Conoce los requisitos, plazos y proceso completo.", en: "The Democratic Memory Law allows descendants of Spaniards to obtain nationality. Learn about the requirements, deadlines and complete process." },
     image: "/assets/generated_images/ley-nietos.png",
     category: "migracion",
