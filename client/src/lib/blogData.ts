@@ -2673,7 +2673,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-viajar-espana-argentina",
     slug: "requisitos-viajar-espana-desde-argentina",
-    image: "https://images.unsplash.com/photo-1515923019249-6b544314450c?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/requisitos-espana-argentina.png",
     title: { es: "Requisitos Para Viajar A España Desde Argentina", en: "Requirements To Travel To Spain From Argentina" },
     excerpt: { es: "Viajar a España desde Argentina es una experiencia emocionante. Descubre los requisitos esenciales de documentacion, solvencia economica y seguro de viaje para disfrutar tu aventura sin estres.", en: "Traveling to Spain from Argentina is an exciting experience. Discover the essential requirements for documentation, financial solvency and travel insurance to enjoy your adventure stress-free." },
     category: "migracion",
