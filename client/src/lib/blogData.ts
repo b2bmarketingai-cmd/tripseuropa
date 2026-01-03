@@ -2073,7 +2073,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     image: "https://images.unsplash.com/photo-1574182245530-967d9b3831af?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
-    date: "2025-01-02",
+    date: "02 Ene 2026",
     readTime: 9,
     author: "Trips Europa",
     keywords: ["vuelos tenerife", "islas canarias", "vuelos latinoamerica europa", "tenerife desde colombia", "tenerife desde mexico"],
