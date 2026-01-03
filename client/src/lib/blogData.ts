@@ -4323,5 +4323,89 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Es seguro viajar por los Balcanes?", answer: "Si, la region es muy segura para turistas. La guerra de los 90s termino hace casi 30 anos y los paises han avanzado enormemente. Toma las precauciones normales de cualquier viaje." },
       { question: "Cuantos dias necesito para ver los Balcanes?", answer: "Minimo 10-14 dias para un circuito basico (3-4 paises). Para ver todos los paises con calma, 3 semanas es ideal. Tambien puedes elegir una sub-region (costa adriatica o interior) en viajes mas cortos." }
     ]
+  },
+  {
+    id: "paris-5-dias-guia",
+    slug: "paris-5-dias-guia",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Paris en 5 Dias: Itinerario Perfecto para Latinoamericanos", en: "Paris in 5 Days: Perfect Itinerary for Latin Americans" },
+    excerpt: { es: "Torre Eiffel, Louvre, Versalles, Montmartre y mas. El itinerario dia a dia para aprovechar Paris al maximo. Descubre la Ciudad de la Luz con Trips Europa.", en: "Eiffel Tower, Louvre, Versailles, Montmartre and more. The day by day itinerary to make the most of Paris. Discover the City of Light with Trips Europa." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "26 Dic 2025",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["paris 5 dias", "itinerario paris", "que hacer en paris", "torre eiffel", "louvre", "versalles", "montmartre", "viaje paris"],
+    featured: true,
+    sections: [
+      {
+        title: "Por que Paris en 5 Dias es Perfecto",
+        content: "Paris es una de las ciudades mas romanticas y fascinantes del mundo, y 5 dias te permiten explorar sus iconos principales sin prisas. Este itinerario esta disenado especialmente para viajeros latinoamericanos que quieren aprovechar cada momento en la Ciudad de la Luz. Desde la majestuosa Torre Eiffel hasta los tesoros del Louvre, pasando por el encanto de Montmartre y la grandeza de Versalles, te guiamos dia a dia para que vivas una experiencia inolvidable.\n\nEn Tripseuropa.com encontraras paquetes completos que incluyen vuelos, hoteles y tours guiados en espanol, facilitando tu viaje a Paris sin preocupaciones.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1: Llegada y Torre Eiffel",
+        content: "Tu aventura parisina comienza con la llegada al Aeropuerto Charles de Gaulle o Orly. Recomendamos tomar el tren RER B hacia el centro de Paris (aproximadamente 45 minutos). Despues de instalarte en tu hotel, dirigete a la Torre Eiffel para una primera toma de contacto con la ciudad.\n\nLa Torre Eiffel, simbolo indiscutible de Paris, ofrece vistas espectaculares desde sus tres niveles. Reserva tus entradas con anticipacion en Tripseuropa.com para evitar largas filas. El atardecer es el mejor momento para subir y ver la ciudad iluminarse.",
+        image: "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?q=80&w=1200&auto=format&fit=crop",
+        list: ["Llegada y traslado al hotel (incluido en paquetes Trips Europa)", "Paseo por el Campo de Marte", "Subida a la Torre Eiffel al atardecer", "Cena en el barrio de Trocadero con vistas a la torre iluminada", "Crucero nocturno por el Sena (opcional pero muy recomendado)"]
+      },
+      {
+        title: "Dia 2: Museo del Louvre y Centro Historico",
+        content: "El Louvre es el museo mas visitado del mundo y merece al menos medio dia. Hogar de la Mona Lisa, la Venus de Milo y mas de 35,000 obras de arte, es imposible verlo todo en una visita. Recomendamos contratar un tour guiado en espanol a traves de Tripseuropa.com para no perderte las obras mas importantes.\n\nDespues del Louvre, pasea por el Jardin de las Tullerias hacia la Plaza de la Concordia. Continua por los Campos Eliseos hasta el Arco del Triunfo, donde puedes subir para otra vista panoramica de Paris.",
+        image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=80&w=1200&auto=format&fit=crop",
+        list: ["Visita guiada al Louvre (3-4 horas)", "Almuerzo en el Cafe Marly con vista a la piramide", "Paseo por Jardin des Tuileries", "Caminata por los Campos Eliseos", "Subida al Arco del Triunfo al atardecer", "Cena en el barrio de Champs-Elysees"]
+      },
+      {
+        title: "Dia 3: Montmartre y Bohemia Parisina",
+        content: "Montmartre es el barrio mas encantador de Paris, con sus calles empedradas, artistas callejeros y la majestuosa Basilica del Sacre-Coeur. Sube las escaleras o toma el funicular para llegar a la basilica, desde donde tendras una de las mejores vistas de la ciudad.\n\nExplora la Place du Tertre, donde artistas han pintado durante siglos. Visita el famoso Moulin Rouge (por fuera o reserva un espectaculo nocturno). El Museo de Montmartre cuenta la historia artistica del barrio donde vivieron Picasso, Van Gogh y Renoir.",
+        image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?q=80&w=1200&auto=format&fit=crop",
+        list: ["Basilica del Sacre-Coeur y sus vistas panoramicas", "Place du Tertre y artistas callejeros", "Museo de Montmartre", "Vinoteca tipica para almuerzo", "Muro de los Te Amo (Le Mur des Je t'aime)", "Moulin Rouge y Pigalle", "Cena en restaurante tipico del barrio"]
+      },
+      {
+        title: "Dia 4: Versalles - El Palacio del Rey Sol",
+        content: "Dedica un dia completo al Palacio de Versalles, residencia de Luis XIV, el Rey Sol. A solo 40 minutos en tren desde Paris, este palacio Patrimonio de la Humanidad te dejara sin aliento con su Galeria de los Espejos, los Apartamentos Reales y los jardines mas espectaculares de Europa.\n\nReserva tu excursion con anticipacion en Tripseuropa.com para incluir transporte y guia en espanol. Los jardines de Versalles son tan impresionantes como el palacio, con fuentes, esculturas y el Gran Trianon.",
+        image: "https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?q=80&w=1200&auto=format&fit=crop",
+        list: ["Tren RER C desde Paris a Versalles (o transporte incluido con Trips Europa)", "Tour guiado del Palacio de Versalles", "Galeria de los Espejos y Apartamentos Reales", "Almuerzo en los jardines o cafeteria del palacio", "Paseo por los Jardines de Versalles", "Gran Trianon y Pequeno Trianon", "Regreso a Paris y cena libre"]
+      },
+      {
+        title: "Dia 5: Barrio Latino, Notre-Dame e Isla de la Cite",
+        content: "Tu ultimo dia lo dedicamos al corazon historico de Paris. Comienza en el Barrio Latino, el barrio universitario mas antiguo de Europa, con sus librerias, cafes y ambiente bohemio. Visita el Panteon, donde descansan Victor Hugo, Marie Curie y otros franceses ilustres.\n\nCruza a la Isla de la Cite para ver la Catedral de Notre-Dame (actualmente en restauracion tras el incendio de 2019). Pasea por la encantadora Isla de San Luis y termina tu viaje con un crucero por el Sena para despedirte de Paris de manera magica.",
+        image: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?q=80&w=1200&auto=format&fit=crop",
+        list: ["Barrio Latino y Sorbona", "Panteon de Paris", "Jardines de Luxemburgo", "Notre-Dame e Isla de la Cite (vistas exteriores)", "Isla de San Luis y helado en Berthillon", "Crucero de despedida por el Sena", "Ultima cena parisina en Saint-Germain-des-Pres"]
+      },
+      {
+        title: "Donde Alojarse en Paris",
+        content: "La ubicacion del hotel es clave para aprovechar tu tiempo en Paris. Recomendamos zonas bien conectadas por metro y cerca de las principales atracciones. En Tripseuropa.com ofrecemos hoteles cuidadosamente seleccionados en las mejores zonas:",
+        list: ["Le Marais: Barrio historico, elegante y central. Ideal para caminar a muchas atracciones.", "Saint-Germain-des-Pres: Bohemio y romantico, cerca del Barrio Latino.", "Opera/Grands Boulevards: Excelente conexion de transporte, cerca de galerias comerciales.", "Champs-Elysees: Lujo y glamour, cerca del Arco del Triunfo.", "Torre Eiffel/7mo distrito: Vistas iconicas, ambiente residencial elegante."]
+      },
+      {
+        title: "Gastronomia Parisina Imperdible",
+        content: "Paris es capital mundial de la gastronomia. No te vayas sin probar estos clasicos franceses. En Tripseuropa.com podemos incluir experiencias gastronomicas en tu paquete:",
+        list: ["Croissants y pain au chocolat en boulangeries tradicionales", "Crepes en Montmartre o el Barrio Latino", "Quesos franceses en fromageries", "Macarons de Laduree o Pierre Herme", "Escargots (caracoles) en bistrots tipicos", "Coq au vin o boeuf bourguignon", "Vinos de Borgoña y Champagne", "Almuerzo en un cafe parisino tipico"]
+      },
+      {
+        title: "Consejos Practicos para Tu Viaje",
+        content: "Para que tu viaje a Paris sea perfecto, ten en cuenta estos consejos de nuestros expertos en Trips Europa:",
+        list: ["Mejor epoca: Primavera (abril-junio) y otono (septiembre-octubre) ofrecen clima agradable y menos turistas.", "Metro de Paris: Compra un carnet de 10 billetes o el Paris Visite Pass para ahorrar.", "Reserva anticipada: La Torre Eiffel, Louvre y Versalles requieren reserva previa, especialmente en temporada alta.", "Idioma: Aprende algunas frases en frances; los parisinos aprecian el esfuerzo.", "Propinas: No son obligatorias pero se agradece dejar 5-10% en restaurantes.", "Seguridad: Cuidado con carteristas en zonas turisticas y metro.", "Contacta a Trips Europa para un paquete todo incluido sin preocupaciones."]
+      },
+      {
+        title: "Presupuesto Estimado para 5 Dias en Paris",
+        content: "Paris puede adaptarse a diferentes presupuestos. Aqui te damos una estimacion por persona, sin incluir vuelo internacional (consulta paquetes completos en Tripseuropa.com):",
+        list: ["Economico: EUR 500-700 (hostales, comida economica, atracciones gratuitas)", "Confortable: EUR 800-1,200 (hoteles 3*, restaurantes de gama media, todas las atracciones)", "Lujo: EUR 1,500-2,500+ (hoteles 4-5*, restaurantes gourmet, experiencias exclusivas)", "Paquetes Trips Europa: Desde EUR 899 todo incluido (vuelo + hotel + tours + traslados)"]
+      },
+      {
+        title: "Reserva Tu Viaje a Paris con Trips Europa",
+        content: "En Tripseuropa.com somos especialistas en viajes a Europa para latinoamericanos. Nuestros paquetes a Paris incluyen vuelos, hoteles seleccionados, tours guiados en espanol y asistencia 24/7. Llevamos mas de 10 años creando experiencias inolvidables para viajeros de Colombia, Mexico, Argentina, Peru y toda Latinoamerica.\n\nContactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje perfecto a Paris. Nuestros asesores te ayudaran a personalizar tu itinerario segun tus intereses y presupuesto.",
+        image: "https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Necesito visa para viajar a Paris desde Latinoamerica?", answer: "Ciudadanos de la mayoria de paises latinoamericanos (Colombia, Mexico, Argentina, Chile, Peru, etc.) pueden entrar a Francia sin visa por hasta 90 dias para turismo. Solo necesitas pasaporte vigente con al menos 3 meses de validez." },
+      { question: "Cual es la mejor epoca para visitar Paris?", answer: "Primavera (abril-junio) y otono (septiembre-octubre) ofrecen clima agradable y menos multitudes. Verano es temporada alta con precios mas altos. Invierno es magico para Navidad pero frio." },
+      { question: "Cuanto dinero necesito para 5 dias en Paris?", answer: "Un presupuesto confortable es EUR 150-200 por dia (sin vuelo), incluyendo hotel, comidas, transporte y atracciones. Los paquetes de Trips Europa desde EUR 899 incluyen todo excepto comidas libres." },
+      { question: "Es seguro Paris para turistas latinoamericanos?", answer: "Si, Paris es una ciudad segura. Como en cualquier gran ciudad, ten precaucion con tus pertenencias en zonas turisticas y metro. Evita mostrar objetos de valor y usa bolsos con cierre." },
+      { question: "Se puede visitar Paris sin saber frances?", answer: "Si, en zonas turisticas muchos hablan ingles. Sin embargo, los parisinos aprecian si intentas algunas frases en frances. Con los tours de Trips Europa tendras guias en espanol." },
+      { question: "Como me muevo dentro de Paris?", answer: "El metro de Paris es excelente y cubre toda la ciudad. Compra el Paris Visite Pass o carnets de 10 billetes. Caminar es la mejor forma de descubrir los barrios. Uber y taxis tambien estan disponibles." }
+    ]
   }
 ];
