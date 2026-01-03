@@ -851,6 +851,75 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "museo-louvre-guia",
+    slug: "museo-louvre-guia",
+    image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Museo del Louvre: Guia para No Perderte Nada", en: "Louvre Museum: Guide to Not Miss Anything" },
+    excerpt: { es: "Mona Lisa, Venus de Milo y 35,000 obras. Como recorrerlo en 3 horas sin agotarte.", en: "Mona Lisa, Venus de Milo and 35,000 works. How to tour it in 3 hours without exhaustion." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "14 Oct 2024",
+    readTime: 9,
+    author: "Trips Europa",
+    keywords: ["louvre paris", "museo louvre", "que ver louvre", "mona lisa", "venus de milo"],
+    featured: false,
+    sections: [
+      {
+        title: "El Louvre: El Museo Mas Grande del Mundo",
+        content: "El Museo del Louvre es el museo de arte mas visitado del planeta, con casi 10 millones de visitantes anuales. Alberga mas de 35,000 obras en 72,735 metros cuadrados de galerias. Verlo todo es imposible - necesitarias semanas. Por eso, esta guia te ayudara a concentrarte en las obras imprescindibles y recorrer el museo de manera estrategica, disfrutando sin agotarte. Para viajeros latinoamericanos, el Louvre es una parada obligatoria que combina arte, historia y la magia de Paris.",
+        image: "https://images.unsplash.com/photo-1565799557186-1a0a73c37d8b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Antes de Ir: Preparacion Esencial",
+        content: "Una visita exitosa al Louvre comienza con buena planificacion. Estos pasos te ahorraran tiempo y frustracion.",
+        list: ["Compra entradas online: Evita colas de hasta 2 horas, reserva en louvre.fr", "Elige tu entrada: Hay varias con acceso por diferentes puertas", "Mejor dia: Miercoles y viernes (abierto hasta las 21:45), evita fines de semana", "Mejor hora: Apertura (9 AM) o ultimas 2 horas para menos gente", "Gratis: Primer domingo del mes (muy lleno) y menores de 26 anos de la UE", "Descarga el mapa: App oficial 'Louvre' con rutas tematicas"]
+      },
+      {
+        title: "Como Entrar: Evitando las Colas",
+        content: "Hay varias entradas al Louvre, y elegir la correcta puede ahorrarte mucho tiempo de espera.",
+        list: ["Piramide: La entrada principal, espectacular pero con mas cola", "Passage Richelieu: Entrada por la calle, menos conocida y mas rapida", "Carrousel du Louvre: Entrada subterranea desde el centro comercial, sin colas", "Porte des Lions: Entrada lateral, cerrada a veces pero muy tranquila", "Consejo: Con entrada online puedes usar cualquier acceso, la Piramide es rapida"]
+      },
+      {
+        title: "Las 10 Obras Imprescindibles",
+        content: "Si solo tienes tiempo limitado, estas son las obras que no puedes perderte bajo ningun concepto.",
+        list: ["La Mona Lisa (La Gioconda): Leonardo da Vinci, Sala 711, siempre llena pero iconica", "La Venus de Milo: Escultura griega, planta baja, ala Sully", "La Victoria Alada de Samotracia: Escultura helenistica, escalera Daru", "La Libertad Guiando al Pueblo: Delacroix, simbolo de Francia revolucionaria", "Las Bodas de Cana: Veronese, el cuadro mas grande del museo (frente a la Mona Lisa)", "La Coronacion de Napoleon: David, impresionante por su tamano y detalle", "El Juramento de los Horacios: David, neoclasicismo frances", "La Balsa de la Medusa: Gericault, dramatismo romantico", "La Gran Odalisca: Ingres, orientalismo y sensualidad", "El Codigo de Hammurabi: Estela babilonica, una de las primeras leyes escritas"]
+      },
+      {
+        title: "Ruta Express: 3 Horas sin Agotarte",
+        content: "Esta ruta optimizada te lleva por las obras maestras principales sin perder tiempo ni energia.",
+        list: ["Inicio: Entra por Carrousel o Richelieu para evitar colas", "Parada 1: Victoria Alada de Samotracia (escalera Daru, espectacular)", "Parada 2: Pinturas italianas, hacia la Mona Lisa (Sala 711)", "Parada 3: Venus de Milo (ala Sully, planta baja)", "Parada 4: Antiguedades egipcias (momias, sarcofagos)", "Parada 5: Apartamentos de Napoleon III (lujo imperial)", "Parada 6: Pinturas francesas grandes (David, Delacroix)", "Final: Sal por la Piramide para la foto clasica", "Duracion: 2.5-3 horas caminando a ritmo pausado"]
+      },
+      {
+        title: "Departamentos del Museo",
+        content: "El Louvre esta organizado en ocho departamentos curatoriales, cada uno con tesoros unicos. Conocerlos te ayuda a planificar segun tus intereses.",
+        list: ["Antiguedades Egipcias: Momias, sarcofagos, el escriba sentado", "Antiguedades Griegas y Romanas: Venus de Milo, Victoria, esculturas clasicas", "Antiguedades Orientales: Codigo de Hammurabi, puertas de Jorsabad", "Arte Islamico: Ceramicas, textiles, patio con techo ondulante", "Pinturas: Mona Lisa, maestros italianos, franceses, flamencos", "Esculturas: Miguel Angel, Canova, obras monumentales", "Artes Decorativas: Apartamentos de Napoleon III, joyas de la corona", "Artes Graficas: Dibujos y grabados (exposiciones temporales)"]
+      },
+      {
+        title: "Mas Alla de la Mona Lisa",
+        content: "La Mona Lisa es la estrella, pero el Louvre esconde tesoros menos conocidos que merecen tu atencion si tienes mas tiempo.",
+        list: ["El Escriba Sentado: Escultura egipcia de 4,500 anos, mirada hipnotica", "El Toro Alado Asirio: Gigantesco guardian de palacio mesopotamico", "La Encajera: Vermeer, pequena pero exquisita, intimidad flamenca", "Gabrielle d'Estrees y su hermana: Intrigante y sensual retrato", "Apartamentos de Napoleon III: Opulencia del Segundo Imperio", "Foso del Louvre Medieval: Ruinas del castillo original bajo el museo", "Psique reanimada por el beso del Amor: Canova, romanticismo en marmol"]
+      },
+      {
+        title: "Servicios y Comodidades",
+        content: "El Louvre es enorme y agotador. Conocer los servicios disponibles hara tu visita mas comoda.",
+        list: ["Guardarropa: Gratuito, obligatorio dejar mochilas grandes", "Cafeterias: Varias opciones, Cafe Marly tiene terraza con vistas a la Piramide", "Tiendas: Librerias y souvenirs en cada ala", "Wifi: Gratis en todo el museo", "Audioguias: 5 EUR, disponibles en espanol", "Sillas de ruedas: Disponibles gratis, museo mayormente accesible", "Aseos: Bien senalizados, puede haber colas en temporada alta"]
+      },
+      {
+        title: "Consejos de Experto",
+        content: "Estos trucos de visitantes experimentados haran tu experiencia mucho mejor.",
+        list: ["Ve a la Mona Lisa primero o ultimo: En apertura esta vacia, al cierre igual", "Mira lo que otros ignoran: Las obras 'menores' son increibles sin multitud", "Descansa estrategicamente: Bancos frente a obras grandes, patios interiores", "Lleva snacks: Puedes comer en areas designadas, cafeterias caras", "Zapatos comodos: Caminaras 5-8 km facilmente", "Segunda visita: Si tienes tiempo, regresa otro dia para ver mas", "Foto de la Mona Lisa: Disfruta primero con los ojos, foto despues"]
+      }
+    ],
+    faqs: [
+      { question: "Cuanto tiempo necesito para ver el Louvre?", answer: "Minimo 3 horas para lo esencial. Idealmente 4-5 horas para una visita completa sin prisas. Ver todo el museo tomaria semanas - concentrate en tus intereses principales." },
+      { question: "Cuanto cuesta la entrada al Louvre?", answer: "La entrada general cuesta 22 EUR (2024). Gratis el primer domingo del mes y para menores de 18 anos (cualquier nacionalidad) y menores de 26 anos residentes de la UE. Reserva online para evitar colas." },
+      { question: "Vale la pena madrugar para ver la Mona Lisa?", answer: "Absolutamente. Llegar a la apertura (9 AM) te permite ver la Mona Lisa con menos gente. Dirígete directamente a la Sala 711. Alternativamente, visita en las ultimas horas antes del cierre, especialmente miercoles y viernes cuando cierra a las 21:45." },
+      { question: "Puedo tomar fotos en el Louvre?", answer: "Si, fotos sin flash estan permitidas en la coleccion permanente. Algunas exposiciones temporales prohiben fotografia. Los selfie sticks estan prohibidos. Respeta a otros visitantes al fotografiar." },
+      { question: "Hay visitas guiadas en espanol?", answer: "Si, el Louvre ofrece visitas guiadas en espanol, pero debes reservar con anticipacion. Tambien puedes contratar guias privados o usar la audioguia en espanol (5 EUR). La app oficial tiene tours virtuales gratuitos." },
+      { question: "Que dias esta cerrado el Louvre?", answer: "El Louvre cierra los martes y el 1 de enero, 1 de mayo y 25 de diciembre. Miercoles y viernes tiene horario extendido hasta las 21:45, ideal para visitas nocturnas con menos gente." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
