@@ -5612,5 +5612,107 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Puedo llevar maletas grandes en el tren?", answer: "Si, no hay restricciones como en aviones. Hay portaequipajes sobre los asientos y al final de los vagones. Pero recuerda: tu las cargas. No hay ayuda. Viaja con lo que puedas manejar solo." },
       { question: "Como funciona el control de pasaportes en trenes internacionales?", answer: "En la zona Schengen (la mayoria de la UE), no hay control. Simplemente cruzas la frontera. Excepciones: Eurostar (Reino Unido), trenes a/desde Suiza ocasionalmente, y trenes nocturnos donde a veces piden pasaporte." }
     ]
+  },
+  {
+    id: "itinerario-espana-15-dias",
+    slug: "itinerario-espana-15-dias",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Espana en 15 Dias: El Itinerario Perfecto", en: "Spain in 15 Days: The Perfect Itinerary" },
+    excerpt: { es: "El itinerario perfecto para recorrer Espana. Rutas, transporte, alojamiento y consejos.", en: "The perfect itinerary for touring Spain. Routes, transport, accommodation and tips." },
+    category: "guias",
+    categoryLabel: { es: "Guias", en: "Guides" },
+    date: "6 Dic 2024",
+    readTime: 15,
+    author: "Trips Europa",
+    keywords: ["espana 15 dias", "itinerario espana", "que hacer en espana", "ruta espana", "viaje espana", "circuito espana"],
+    featured: true,
+    sections: [
+      {
+        title: "Espana: Un Pais de Contrastes Increibles",
+        content: "Espana es uno de los destinos mas completos del mundo. En 15 dias puedes experimentar playas mediterraneas, ciudades cosmopolitas, pueblos blancos de ensueno, arquitectura morisca, gastronomia de clase mundial, y una cultura vibrante que mezcla tradicion con modernidad. Desde la elegancia de Madrid hasta el genio de Gaudi en Barcelona, pasando por el flamenco de Andalucia y las fiestas de San Sebastian, Espana ofrece experiencias para todos los gustos. Este itinerario esta disenado para viajeros latinoamericanos que quieren ver lo esencial sin prisas, con tiempo para disfrutar cada destino.",
+        image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 1-3: Madrid, La Capital con Corazon",
+        content: "Comienza tu viaje en Madrid, el corazon de Espana. Tres dias te permiten explorar la capital sin prisas.",
+        list: ["Dia 1: Llegada y Barrio de los Austrias. Puerta del Sol, Plaza Mayor, Palacio Real (exterior o interior si reservas). Tapeo en La Latina.", "Dia 2: Triangulo del Arte. Museo del Prado (imprescindible), Parque del Retiro, barrio de Salamanca. Cena en Chueca o Malasana.", "Dia 3: Reina Sofia (Guernica de Picasso), Mercado de San Miguel, Gran Via. Opcional: excursion a Toledo (1 hora en tren).", "Alojamiento: Zona Sol/Gran Via para estar centrico. EUR 80-150/noche hotel 3-4 estrellas.", "Gastronomia: Bocadillo de calamares, cocido madrileno, churros con chocolate en San Gines.", "Transporte: Metro excelente. Tarjeta turistica de 3 dias EUR 18.40. Caminar es la mejor opcion en el centro."],
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 4-5: Toledo y Segovia (Excursiones desde Madrid)",
+        content: "Dos ciudades Patrimonio de la Humanidad perfectas para excursiones de un dia desde Madrid.",
+        list: ["Toledo (Dia 4): La ciudad de las tres culturas. Catedral gotica, Alcazar, sinagoga, mezquita. Tren AVE 30 minutos desde Atocha (EUR 13).", "Segovia (Dia 5): Acueducto romano impresionante, Alcazar (inspiro el castillo de Disney), cochinillo asado. Tren 30 min o bus 1h15.", "Alternativa: Si prefieres quedarte en Madrid, visita el Estadio Santiago Bernabeu o el Museo Thyssen.", "Tip Toledo: Sube al Mirador del Valle al atardecer. Las mejores fotos de la ciudad.", "Tip Segovia: Almuerza cochinillo en Casa Candido o Meson de Candido. Experiencia gastronomica.", "Regreso: Vuelve a Madrid cada noche. Buena conexion de transporte."]
+      },
+      {
+        title: "Dias 6-8: Barcelona, La Ciudad de Gaudi",
+        content: "AVE de Madrid a Barcelona en 2h30. Tres dias para explorar la ciudad mas cosmopolita de Espana.",
+        list: ["Dia 6: Llegada y Barrio Gotico. Catedral, Las Ramblas, Mercado de la Boqueria, Playa de la Barceloneta. Tapas en el Born.", "Dia 7: Gaudi completo. Sagrada Familia (reserva obligatoria), Park Guell (reserva recomendada), Casa Batllo o Casa Mila.", "Dia 8: Montjuic (teleferico, Fundacion Miro, vistas), Barrio de Gracia, cena de despedida en el Raval.", "Alojamiento: Eixample o Gotico. EUR 100-180/noche. Evita apartamentos turisticos ilegales.", "Gastronomia: Pan con tomate, jamon iberico, patatas bravas, crema catalana, cava.", "Tip: Compra entradas a Sagrada Familia con 2-3 semanas de antelacion. Se agotan."],
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 9-11: Andalucia - Sevilla, Cordoba y Granada",
+        content: "Vuelo Barcelona-Sevilla (1h30) o tren Barcelona-Sevilla (5h30). Tres ciudades andaluzas imprescindibles.",
+        list: ["Dia 9 - Sevilla: Alcazar (reserva online), Catedral y Giralda, Barrio de Santa Cruz. Espectaculo flamenco por la noche.", "Dia 10 - Cordoba: Excursion de medio dia (45 min en AVE). Mezquita-Catedral, Juderia, Patios. Regreso a Sevilla.", "Dia 11 - Granada: AVE Sevilla-Granada (2h40). Alhambra (reserva con MESES de antelacion), Albaicin al atardecer, tapas gratis.", "Alojamiento: 2 noches Sevilla, 1 noche Granada. EUR 70-130/noche.", "Alhambra: Las entradas se agotan. Reserva en la web oficial 2-3 meses antes. Es IMPRESCINDIBLE.", "Flamenco: Tablao en Sevilla o cueva en Granada. EUR 30-50 con bebida. Experiencia autentica."],
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 12-13: Costa del Sol y Pueblos Blancos",
+        content: "Desde Granada, explora la costa mediterranea andaluza y los pueblos blancos mas bonitos.",
+        list: ["Dia 12: Granada a Malaga (1h30 en coche). Museo Picasso, Alcazaba, playa. Noche en Malaga.", "Dia 13: Ruta pueblos blancos. Mijas, Ronda (imprescindible), Marbella. Noche en Marbella o Malaga.", "Ronda: Puente Nuevo espectacular, plaza de toros historica, vistas al Tajo. Almuerzo con vistas.", "Alternativa: Si prefieres playa, quédate en la Costa del Sol. Nerja, Frigiliana, Marbella.", "Alquiler coche: EUR 30-50/dia. Necesario para pueblos blancos. Devuelve en Malaga aeropuerto.", "Gastronomia: Pescaito frito, espetos de sardinas, gazpacho, salmorejo, vino de Malaga."],
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dias 14-15: Valencia o San Sebastian (Elige Tu Favorito)",
+        content: "Tienes dos opciones para cerrar tu viaje, segun tus preferencias:",
+        list: ["Opcion A - Valencia (2 dias): Vuelo Malaga-Valencia (1h). Ciudad de las Artes y las Ciencias, playa, paella autentica, Barrio del Carmen.", "Opcion B - San Sebastian (2 dias): Vuelo Malaga-Bilbao (1h30) + bus a San Sebastian (1h15). Playa de la Concha, pintxos, Monte Igueldo.", "Valencia: Ideal si quieres playa, arquitectura futurista, y la paella original.", "San Sebastian: Ideal si eres foodie. La ciudad con mas estrellas Michelin per capita del mundo.", "Ultimo dia: Regreso a Madrid o vuelo directo desde Valencia/Bilbao a tu pais.", "Tip: San Sebastian en verano esta muy lleno. Valencia es mejor opcion en julio-agosto."],
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Transporte: Como Moverse por Espana",
+        content: "Espana tiene excelente infraestructura de transporte. Aqui te explicamos las mejores opciones.",
+        list: ["AVE (tren alta velocidad): Madrid-Barcelona 2h30, Madrid-Sevilla 2h20, Madrid-Malaga 2h30. Rapido, comodo, puntual.", "Vuelos internos: Iberia, Vueling, Ryanair. Utiles para distancias largas (Barcelona-Sevilla, Malaga-Bilbao).", "Alquiler de coche: Imprescindible para pueblos blancos y Costa del Sol. EUR 30-50/dia. Reserva con antelacion.", "Autobuses ALSA: Mas baratos que trenes, cubren rutas que el tren no llega. Comodos para distancias medias.", "Blablacar: Compartir coche. Popular en Espana, economico, conoces gente local.", "Renfe app: Compra billetes AVE con antelacion. Precio sube mucho cerca de la fecha. Ofertas Promo desde EUR 25."],
+        image: "https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Alojamiento: Donde Dormir en Espana",
+        content: "Espana ofrece opciones para todos los presupuestos. Aqui nuestras recomendaciones por ciudad.",
+        list: ["Madrid: Sol/Gran Via (centrico), Malasana/Chueca (hipster), Salamanca (elegante). EUR 80-150/noche.", "Barcelona: Eixample (Gaudi), Gotico (historico), Gracia (local). EUR 100-180/noche.", "Sevilla: Santa Cruz (romantico), Triana (autentico), Centro (practico). EUR 70-130/noche.", "Granada: Albaicin (vistas Alhambra), Centro (practico). EUR 60-100/noche.", "Paradores: Hoteles en edificios historicos (castillos, monasterios). Experiencia unica. EUR 100-200/noche.", "Airbnb: Legal en algunas ciudades, revisa regulaciones locales. Cuidado con apartamentos ilegales.", "Reserva con antelacion: En temporada alta (Semana Santa, verano, fiestas locales) los hoteles suben mucho."]
+      },
+      {
+        title: "Gastronomia: Que Comer en Cada Region",
+        content: "Espana es un paraiso gastronomico. Cada region tiene sus especialidades.",
+        list: ["Madrid: Cocido madrileno, bocadillo de calamares, churros con chocolate, oreja a la plancha.", "Cataluna: Pa amb tomaquet, escalivada, calcots (en temporada), crema catalana, cava.", "Andalucia: Gazpacho, salmorejo, pescaito frito, jamon iberico, rabo de toro, flamenquin.", "Pais Vasco: Pintxos (tapas vascas), txuleton, bacalao al pil-pil, marmitako, txakoli.", "Valencia: Paella valenciana (pollo y conejo, NO mariscos), horchata, fideua.", "Galicia: Pulpo a feira, empanada, percebes, queimada, tarta de Santiago.", "Vino: Rioja (tintos), Ribera del Duero (tintos), Rias Baixas (blancos), Jerez (sherry), Cava (espumoso)."],
+        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Presupuesto: Cuanto Cuesta Viajar por Espana",
+        content: "Espana ofrece buena relacion calidad-precio comparada con otros paises europeos.",
+        list: ["Economico (EUR 80-100/dia): Hostales, tapas y menu del dia, transporte publico, atracciones gratis.", "Moderado (EUR 120-180/dia): Hotel 3 estrellas, restaurantes locales, entradas principales, AVE.", "Confort (EUR 200-300/dia): Hotel 4 estrellas, restaurantes recomendados, experiencias (flamenco, catas).", "15 dias economico: EUR 1,200-1,500 + vuelos internacionales.", "15 dias moderado: EUR 1,800-2,700 + vuelos internacionales.", "15 dias confort: EUR 3,000-4,500 + vuelos internacionales.", "Vuelos desde Latinoamerica: EUR 600-1,200 ida y vuelta segun temporada. Madrid o Barcelona."]
+      },
+      {
+        title: "Mejor Epoca Para Visitar Espana",
+        content: "Espana tiene buen clima casi todo el ano, pero cada temporada tiene sus caracteristicas.",
+        list: ["Primavera (abril-mayo): Nuestra recomendacion. Clima perfecto, Semana Santa, patios de Cordoba, menos turistas que verano.", "Verano (junio-agosto): Calor intenso en el sur (40C+). Ideal para norte (San Sebastian, Galicia) y playas.", "Otono (septiembre-octubre): Excelente. Vendimia en La Rioja, clima agradable, precios moderados.", "Invierno (noviembre-marzo): Ciudades culturales perfectas. Esqui en Sierra Nevada o Pirineos. Navidad magica.", "Semana Santa: Procesiones espectaculares en Sevilla, Malaga, Granada. Reserva con MESES de antelacion.", "Fiestas: San Fermin (julio, Pamplona), Feria de Abril (Sevilla), La Tomatina (agosto, Bunol), Las Fallas (marzo, Valencia)."],
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos Practicos Para Tu Viaje",
+        content: "Detalles que haran tu experiencia en Espana mas facil y agradable.",
+        list: ["Horarios espanoles: Almuerzo 14:00-16:00, cena 21:00-23:00. Los restaurantes no abren antes.", "Siesta: Muchas tiendas cierran 14:00-17:00, especialmente fuera de grandes ciudades.", "Propinas: No obligatorias. Redondear la cuenta o dejar EUR 1-2 es suficiente.", "Idioma: Castellano en todas partes. Catalan en Barcelona, Euskera en Pais Vasco, Gallego en Galicia.", "Visa: Latinoamericanos no necesitan visa para turismo (hasta 90 dias en zona Schengen).", "Seguridad: Espana es muy segura. Cuidado con carteristas en Barcelona y Madrid (zonas turisticas).", "Electricidad: Enchufes tipo C/F (europeo). Voltaje 230V. Lleva adaptador si vienes de Latinoamerica."]
+      },
+      {
+        title: "Planifica tu Viaje a Espana con Trips Europa",
+        content: "En Tripseuropa.com somos expertos en viajes por Espana. Reservamos tus entradas a la Alhambra y Sagrada Familia con meses de antelacion (sabemos cuando se abren las reservas), organizamos traslados y alquiler de coches, conseguimos hoteles con encanto, y disenamos itinerarios personalizados segun tus intereses. Conocemos cada rincon de Espana y te ayudamos a evitar las trampas turisticas. Viaja tranquilo, con todo organizado, y disfruta al maximo. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura espanola.",
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "15 dias son suficientes para ver Espana?", answer: "Para los highlights principales si: Madrid, Barcelona, Andalucia (Sevilla, Granada). Si quieres incluir Pais Vasco, Galicia, o las islas, necesitas 3 semanas o elegir una region para profundizar." },
+      { question: "Es mejor alquilar coche o usar trenes?", answer: "Depende. Entre ciudades grandes (Madrid-Barcelona-Sevilla), el AVE es perfecto. Para pueblos blancos, Costa del Sol, y zonas rurales, el coche es imprescindible. Muchos viajeros combinan ambos." },
+      { question: "Necesito reservar la Alhambra con tanta antelacion?", answer: "Si, absolutamente. Las entradas se agotan 2-3 meses antes, especialmente para los Palacios Nazaries. Reserva en la web oficial (alhambra-patronato.es) tan pronto confirmes tus fechas." },
+      { question: "Cual es la mejor ciudad para empezar el viaje?", answer: "Madrid o Barcelona, segun donde consigas mejor vuelo. Madrid esta mas centrica para conectar con el resto de Espana. Barcelona tiene playa y mas vuelos desde algunas ciudades latinoamericanas." },
+      { question: "Es muy cara Espana para viajeros latinoamericanos?", answer: "Es mas economica que Francia, Italia o Reino Unido. El sur (Andalucia) es mas barato que Barcelona o San Sebastian. Con EUR 100-150/dia puedes viajar comodamente." },
+      { question: "Es seguro viajar sola/solo por Espana?", answer: "Muy seguro. Espana es uno de los paises mas seguros de Europa. Los unicos problemas son carteristas en zonas muy turisticas (Ramblas, Sol). Usa sentido comun y no tendras ningun problema." }
+    ]
   }
 ];
