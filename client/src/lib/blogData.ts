@@ -2905,7 +2905,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-baratos-cuotas-flex",
     slug: "vuelos-baratos-opcion-cuotas-flex",
-    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/vuelos-baratos-cuotas-flex.png",
     title: { es: "Como Acceder A Vuelos Baratos Con La Opcion De Cuotas Flex", en: "How To Access Cheap Flights With Flex Installment Option" },
     excerpt: { es: "Viajar dejo de ser un lujo reservado para pocos. Descubre como las opciones de pago en cuotas hacen mas accesible tu sueno de volar hacia España y otros destinos internacionales.", en: "Traveling is no longer a luxury reserved for few. Discover how installment payment options make your dream of flying to Spain and other international destinations more accessible." },
     category: "planificacion",
