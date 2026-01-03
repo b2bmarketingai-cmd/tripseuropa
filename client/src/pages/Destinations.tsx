@@ -262,7 +262,7 @@ export default function Destinations() {
                     <div className="relative h-56 overflow-hidden">
                       <img 
                         src={dest.image} 
-                        alt={dest.name[lang]} 
+                        alt={dest.name[dataLang]} 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
