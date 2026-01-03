@@ -2861,7 +2861,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-internacionales-venezuela-espana",
     slug: "espana-vuelos-internacionales-venezuela",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999eg?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/espana-mas-cerca-venezuela.png",
     title: { es: "España Mas Cerca: Vuelos Internacionales Directos Desde Venezuela", en: "Spain Closer: Direct International Flights From Venezuela" },
     excerpt: { es: "Venezuela mantiene conexion aerea con el mundo a traves de diversas aerolineas. Descubre todas las opciones para planificar tu viaje a España y otros destinos internacionales.", en: "Venezuela maintains air connection with the world through various airlines. Discover all the options to plan your trip to Spain and other international destinations." },
     category: "vuelos",
