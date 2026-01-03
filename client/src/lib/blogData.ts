@@ -578,7 +578,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "nueva-ley-extranjeria-espana",
     slug: "nueva-ley-extranjeria-espana",
-    image: "https://images.unsplash.com/photo-1556388275-bb5585725aca?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/ley-extranjeria-espana.png",
     title: { es: "Nueva Ley de Extranjeria en España: Cambios Clave", en: "New Immigration Law in Spain: Key Changes" },
     excerpt: { es: "La nueva ley de extranjeria promete revolucionar la inmigracion en España con regularizacion masiva y nuevas vias para trabajadores.", en: "The new immigration law promises to revolutionize immigration in Spain with mass regularization and new pathways for workers." },
     category: "planificacion",
@@ -591,8 +591,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Contexto de la Reforma",
-        content: "España enfrenta escasez de mano de obra en multiples sectores mientras tiene medio millon de inmigrantes en situacion irregular. La nueva ley busca regularizar a estos trabajadores y facilitar la llegada de talento extranjero para cubrir las vacantes en el mercado laboral.",
-        image: "https://images.unsplash.com/photo-1534156607-7d1e2c1ce4cf?q=80&w=1200&auto=format&fit=crop"
+        content: "España enfrenta escasez de mano de obra en multiples sectores mientras tiene medio millon de inmigrantes en situacion irregular. La nueva ley busca regularizar a estos trabajadores y facilitar la llegada de talento extranjero para cubrir las vacantes en el mercado laboral."
       },
       {
         title: "Regularizacion Masiva",
