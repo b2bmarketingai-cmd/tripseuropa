@@ -272,6 +272,80 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "escocia-highlands",
+    slug: "escocia-highlands",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Escocia: Highlands, Castillos y Whisky en 7 Dias", en: "Scotland: Highlands, Castles and Whisky in 7 Days" },
+    excerpt: { es: "Edimburgo, Loch Ness, Isle of Skye. Ruta por las tierras altas escocesas.", en: "Edinburgh, Loch Ness, Isle of Skye. Route through the Scottish Highlands." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "30 Sep 2024",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["escocia highlands", "castillos escocia", "whisky tour", "edimburgo", "lago ness", "isla de skye"],
+    featured: false,
+    sections: [
+      {
+        title: "Escocia: Tierra de Leyendas y Paisajes Dramaticos",
+        content: "Escocia es uno de los destinos mas magicos de Europa. Desde los callejones medievales de Edimburgo hasta los paisajes salvajes de las Highlands, pasando por castillos de cuento y destilerias centenarias, este pais tiene todo para cautivar al viajero latinoamericano. La hospitalidad escocesa, combinada con tradiciones milenarias como el clan, el tartán y la gaita, crean una experiencia cultural unica.",
+        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eace?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1-2: Edimburgo, la Capital Magica",
+        content: "Comienza tu aventura en Edimburgo, una ciudad que parece sacada de un libro de fantasia. La Royal Mile conecta el Castillo de Edimburgo con el Palacio de Holyrood, residencia oficial de la monarquía britanica en Escocia.",
+        list: ["Castillo de Edimburgo: Fortaleza medieval con las Joyas de la Corona escocesa", "Royal Mile: Calle historica con tiendas de tartán, pubs y artistas callejeros", "Arthur's Seat: Volcan extinto con vistas panoramicas de la ciudad", "Old Town y New Town: Patrimonio de la Humanidad UNESCO", "Grassmarket: Vida nocturna, restaurantes y mercados", "Camera Obscura: Museo interactivo de ilusiones opticas"]
+      },
+      {
+        title: "Dia 3: Stirling y los Campos de Batalla",
+        content: "Stirling es el corazon historico de Escocia, donde William Wallace y Robert the Bruce libraron sus batallas por la independencia. El Castillo de Stirling rivaliza en grandeza con el de Edimburgo y ofrece vistas espectaculares sobre los campos de batalla historicos.",
+        list: ["Castillo de Stirling: Residencia favorita de los reyes escoceses", "Monumento a William Wallace: Torre gotica con vistas de 360 grados", "Batalla de Bannockburn: Centro interactivo sobre la victoria de 1314", "Stirling Old Town: Calles medievales y arquitectura renacentista"]
+      },
+      {
+        title: "Dia 4: Loch Lomond y Entrada a las Highlands",
+        content: "Deja atras las tierras bajas y adentrate en las Highlands escocesas. Loch Lomond, el lago mas grande de Gran Bretaña, marca la puerta de entrada a paisajes cada vez mas salvajes y dramaticos. El Parque Nacional Trossachs ofrece senderos, cascadas y la posibilidad de avistar ciervos rojos.",
+        image: "https://images.unsplash.com/photo-1551918120-9739cb430c6d?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 5: Glencoe y Fort William",
+        content: "Glencoe es posiblemente el valle mas fotografiado de Escocia. Sus montanas imponentes y su historia tragica (la masacre del clan MacDonald en 1692) crean una atmosfera unica. Fort William, a los pies del Ben Nevis (la montana mas alta de Gran Bretaña), es la base perfecta para explorar la region.",
+        list: ["Valle de Glencoe: Paisajes de peliculas como Harry Potter y James Bond", "Ben Nevis: Senderismo hacia la cumbre mas alta del Reino Unido", "Tren de Jacobite: El famoso 'Hogwarts Express' cruza el viaducto de Glenfinnan", "Neptuno's Staircase: Escalera de esclusas del Canal Caledoniano"]
+      },
+      {
+        title: "Dia 6: Loch Ness y el Misterio del Monstruo",
+        content: "Ningun viaje a Escocia esta completo sin visitar el legendario Loch Ness. Con 37 km de largo y 230 metros de profundidad, sus aguas oscuras han alimentado la leyenda del monstruo Nessie desde 1933. Mas alla del mito, el area ofrece castillos en ruinas, naturaleza espectacular y encantadores pueblos.",
+        list: ["Castillo de Urquhart: Ruinas medievales con vistas al lago", "Loch Ness Centre: Museo sobre la historia y el misterio de Nessie", "Crucero por el lago: Busca al monstruo mientras disfrutas del paisaje", "Inverness: Capital de las Highlands, perfecta para compras y gastronomia", "Campo de batalla de Culloden: Donde termino la rebelion jacobita en 1746"]
+      },
+      {
+        title: "Dia 7: Isla de Skye, el Paraiso Terrenal",
+        content: "La Isle of Skye es la joya de la corona escocesa. Sus paisajes sobrenaturales incluyen formaciones rocosas unicas, acantilados dramaticos, castillos de cuento y pueblos de pescadores pintorescos. Reserva al menos un dia completo, aunque facilmente podrias pasar una semana explorando.",
+        list: ["Old Man of Storr: Formacion rocosa iconica, senderismo de 2 horas", "Fairy Pools: Piscinas naturales de aguas cristalinas (frias pero magicas)", "Castillo de Dunvegan: Hogar del clan MacLeod por 800 anos", "Portree: Pueblo principal con casas de colores en el puerto", "Quiraing: Paisaje lunar con vistas espectaculares", "Neist Point: Faro en el punto mas occidental de Skye"]
+      },
+      {
+        title: "La Experiencia del Whisky Escoces",
+        content: "Escocia tiene mas de 130 destilerias activas, cada una con su caracter unico. Una visita a una destileria es imprescindible para entender la cultura escocesa. Desde las malterias de Speyside hasta las destilerias ahumadas de Islay, el whisky escoces es un viaje sensorial.",
+        list: ["Speyside: La region con mas destilerias, whiskies suaves y afrutados", "Islay: Whiskies ahumados y turbosos, intensos y distintivos", "Highland Park (Orkney): Uno de los mejores whiskies del mundo", "Glenlivet y Glenfiddich: Tours accesibles cerca de Inverness", "Talisker (Skye): Whisky maritimo con notas de sal y pimienta", "The Scotch Whisky Experience (Edimburgo): Introduccion perfecta para principiantes"]
+      },
+      {
+        title: "Gastronomia Escocesa: Mas que Haggis",
+        content: "La cocina escocesa ha evolucionado enormemente. Aunque el haggis sigue siendo emblematico, encontraras mariscos frescos de las costas, carne de caza de las Highlands, salmon ahumado de primera calidad y pastelerias tradicionales que te sorprenderan.",
+        list: ["Haggis: El plato nacional, probarlo es obligatorio", "Salmon escoces ahumado: De los mejores del mundo", "Cullen Skink: Sopa cremosa de pescado ahumado", "Shortbread: Galletas de mantequilla, perfectas con te", "Cranachan: Postre de crema, avena, miel y frutos rojos", "Black Pudding: Morcilla escocesa, imprescindible en el desayuno"]
+      },
+      {
+        title: "Consejos Practicos para tu Viaje",
+        content: "Escocia tiene un clima impredecible pero esto es parte de su encanto. Prepara tu viaje con estos consejos practicos para disfrutar al maximo.",
+        list: ["Mejor epoca: Mayo-septiembre para dias largos y mejor clima", "Alquiler de coche: Imprescindible para explorar las Highlands con libertad", "Conduce por la izquierda: Las carreteras de un solo carril tienen passing places", "Midges: Pequenos insectos molestos en verano, lleva repelente", "Reserva con anticipacion: Alojamientos en Skye se llenan rapidamente", "Ropa en capas: El clima cambia varias veces al dia"]
+      }
+    ],
+    faqs: [
+      { question: "Cual es la mejor epoca para visitar Escocia?", answer: "Mayo a septiembre ofrece los mejores dias (hasta 18 horas de luz en verano). Abril y octubre son buenos para menos turistas. El invierno es frio y oscuro pero magico para ver la aurora boreal en el norte." },
+      { question: "Necesito visa para visitar Escocia siendo latinoamericano?", answer: "Escocia es parte del Reino Unido, no de la UE. Colombianos, mexicanos y argentinos necesitan visa. Chilenos y brasileños pueden entrar sin visa hasta 6 meses. Verifica los requisitos actuales antes de viajar." },
+      { question: "Es caro viajar por Escocia?", answer: "Escocia es mas economica que Londres pero sigue siendo cara para estandares latinos. Alojamiento desde EUR 80/noche, comidas EUR 15-25, entradas a castillos EUR 12-20. Alquilar coche cuesta aproximadamente EUR 40-60 por dia." },
+      { question: "Puedo hacer el recorrido de las Highlands sin coche?", answer: "Es posible con tours organizados o transporte publico, pero tendras menos flexibilidad. Los tours de varios dias desde Edimburgo son populares y cubren los principales puntos. En Trips Europa organizamos itinerarios personalizados." },
+      { question: "Que tipo de ropa debo llevar?", answer: "Capas impermeables son esenciales. Incluso en verano puedes tener lluvia, viento y sol en el mismo dia. Calzado de senderismo para las caminatas, chaqueta cortaviento y siempre un paraguas pequeno." },
+      { question: "El haggis es realmente tan extrano como dicen?", answer: "El haggis es mucho mas delicioso de lo que su descripcion sugiere. Es una mezcla sazonada de visceras de cordero con avena, servida con pure de nabos y papas. Te sorprendera gratamente si lo pruebas con mente abierta." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
