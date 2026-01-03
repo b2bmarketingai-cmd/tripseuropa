@@ -7320,5 +7320,97 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Es mejor moverse en tren o en avion?", answer: "Entre Viena, Budapest y Praga, el tren es excelente: comodo, llega al centro, paisajes hermosos. Para Estambul solo es practico volar. Los trenes europeos son puntuales y tienen WiFi." },
       { question: "Cual ciudad tiene la mejor gastronomia?", answer: "Estambul tiene la comida mas variada y deliciosa (kebabs, mezes, baklava). Budapest sorprende con el goulash y los pasteles. Viena es mas refinada (schnitzel, cafes). Praga es mas simple pero la cerveza es extraordinaria." }
     ]
+  },
+  {
+    id: "costa-amalfitana-guia",
+    slug: "costa-amalfitana-guia",
+    image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Costa Amalfitana: Positano, Amalfi y Ravello", en: "Amalfi Coast: Positano, Amalfi and Ravello" },
+    excerpt: { es: "Limoncello, casas coloridas y vistas al mar. Como recorrer la costa mas bella de Italia.", en: "Limoncello, colorful houses and sea views. How to tour the most beautiful coast in Italy." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "16 Nov 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["costa amalfitana", "positano italia", "amalfi ravello", "sur de italia", "napoles sorrento"],
+    featured: false,
+    sections: [
+      {
+        title: "La Costa Amalfitana: El Paraiso Italiano",
+        content: "Casas de colores pastel colgadas de acantilados vertiginosos, limoneros perfumando el aire, aguas turquesas del Tirreno, y pueblos que parecen sacados de un sueno. La Costa Amalfitana, Patrimonio de la Humanidad UNESCO, es la joya del sur de Italia y uno de los destinos mas romanticos y fotografiados del mundo. Desde Positano hasta Ravello, esta franja de apenas 50 kilometros concentra belleza, historia, gastronomia, y la esencia del dolce vita italiano.",
+        list: ["Ubicacion: Costa sur de la peninsula de Sorrento, region de Campania, sur de Italia.", "Extension: 50 km de costa entre Positano y Vietri sul Mare.", "Pueblos principales: Positano, Amalfi, Ravello, Praiano, Furore, Atrani, Maiori.", "Patrimonio UNESCO: Desde 1997 por su paisaje cultural unico.", "Mejor epoca: Mayo-junio y septiembre-octubre. Julio-agosto muy lleno y caluroso.", "Como llegar: Napoles es el aeropuerto mas cercano. Luego bus, ferry, o coche.", "Duracion recomendada: 3-5 dias minimo para disfrutar sin prisas."],
+        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Positano: El Pueblo Vertical",
+        content: "Positano es la postal perfecta de la Costa Amalfitana. Sus casas rosadas, blancas y amarillas descienden en cascada por el acantilado hasta la playa. Es el pueblo mas famoso, mas fotografiado, y tambien el mas caro:",
+        list: ["Spiaggia Grande: Playa principal. Sombrillas coloridas, chiringuitos, vista de las casas. EUR 20-30/sombrilla.", "Chiesa di Santa Maria Assunta: Cupula de mayolica que brilla bajo el sol. Icono de Positano.", "Escaleras infinitas: Todo es escaleras. Prepara tus piernas. Lleva calzado comodo.", "Boutiques de moda: Positano es famoso por su moda playera. Vestidos, sandalias hechas a mano.", "Nocchiero: Paseo en barco al atardecer. Vista de Positano desde el mar. Inolvidable.", "Restaurantes: Da Vincenzo (pasta con mariscos), Chez Black (terraza en la playa), Le Sirenuse (lujo).", "Presupuesto: El pueblo mas caro. Cena promedio EUR 50-80. Hotel EUR 200-500/noche.", "Tip: Visita temprano o al atardecer. Mediodia muy lleno de turistas de crucero."],
+        image: "https://images.unsplash.com/photo-1533656623540-13c8f6f6bfe5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Amalfi: La Capital Historica",
+        content: "Amalfi fue una poderosa republica maritima que rivalizaba con Venecia, Genova y Pisa. Hoy es el corazon de la costa, con su catedral imponente y su ambiente mas accesible que Positano:",
+        list: ["Duomo di Amalfi: Catedral arabe-normanda del siglo IX. Escalinata monumental. Claustro del Paraiso.", "Piazza del Duomo: Centro neuralgio. Cafes, heladerias, ambiente relajado.", "Valle de los Molinos: Ruta de senderismo entre ruinas de molinos de papel. Amalfi fue famoso por su papel.", "Museo del Papel: La historia del papel artesanal de Amalfi. Talleres demostrativos.", "Playa de Amalfi: Pequena pero encantadora. Menos llena que Positano.", "Pasticceria Pansa: Desde 1830. Sfogliatella, delizia al limone, dulces tipicos.", "Limoncello: Amalfi es la tierra del limon. Visita fabricas artesanales. Degustaciones gratuitas.", "Presupuesto: Mas accesible que Positano. Cena EUR 30-50. Hotel EUR 120-300/noche."],
+        image: "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Ravello: El Balcon del Mediterraneo",
+        content: "Ravello esta en las alturas, a 350 metros sobre el mar, lejos del bullicio costero. Es el refugio de artistas, musicos, y viajeros que buscan paz y belleza sublime:",
+        list: ["Villa Rufolo: Jardines colgantes con vistas infinitas al mar. Wagner se inspiro aqui para Parsifal.", "Villa Cimbrone: Los jardines mas bellos de Italia. La Terraza del Infinito te deja sin aliento.", "Duomo di Ravello: Catedral del siglo XI. Pulpito con mosaicos. Museo con tesoros medievales.", "Festival de Ravello: Julio-agosto. Conciertos de musica clasica al aire libre con fondo del mar.", "Ceramica de Vietri: Ravello y Vietri son famosos por ceramica colorida. Recuerdos unicos.", "Restaurantes: Vittoria (vista panoramica), Cumpa Cosimo (cocina casera), Rossellinis (estrella Michelin).", "Ambiente: Mas tranquilo, menos turistas de un dia. Ideal para parejas y lunas de miel.", "Acceso: Bus desde Amalfi (25 min). Taxi EUR 30. No te pierdas el recorrido en carretera."],
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Otros Pueblos Imperdibles de la Costa",
+        content: "Mas alla de los tres pueblos principales, la costa esconde joyas menos turisticas pero igualmente encantadoras:",
+        list: ["Praiano: Entre Positano y Amalfi. Mas tranquilo y autentico. Playa Marina di Praia escondida.", "Furore: El 'fiordo' italiano. Pueblo minusculo entre acantilados. Clavadistas en verano.", "Atrani: El pueblo mas pequeno de Italia. Junto a Amalfi pero sin turistas. Piazzetta encantadora.", "Conca dei Marini: Gruta dello Smeraldo. Cueva con aguas color esmeralda. EUR 5 entrada.", "Maiori: La playa mas larga de la costa. Mas familiar y economica que Positano.", "Minori: Ruinas romanas, excelente pasta, ambiente local. La 'hermana menor' de Amalfi.", "Cetara: Pueblo pesquero autentico. Famoso por la colatura di alici (salsa de anchoas).", "Vietri sul Mare: Puerta de entrada a la costa. Ceramica artesanal en cada esquina."]
+      },
+      {
+        title: "Como Llegar a la Costa Amalfitana",
+        content: "Llegar requiere planificacion porque no hay aeropuerto directo y las carreteras son estrechas:",
+        list: ["Aeropuerto Napoles (NAP): El mas cercano. 60 km de Positano. Vuelos desde toda Europa.", "Napoles a Sorrento: Tren Circumvesuviana. 1 hora, EUR 4. Frecuente pero sin aire acondicionado.", "Sorrento a Costa Amalfitana: Bus SITA. 1.5 horas a Positano. EUR 2.50. Vistas espectaculares.", "Ferry: Napoles/Sorrento a Positano/Amalfi. 40-80 min. EUR 15-25. La forma mas escenica.", "Coche: No recomendado para visitar. Carreteras muy estrechas, parking imposible y caro.", "Traslado privado: Napoles-Positano desde EUR 100-150 por coche. Comodo si viajas en grupo.", "Desde Roma: Tren Roma-Napoles (1.5h, EUR 25-50). Luego bus/ferry a la costa.", "Consejo: Si vienes de Roma, considera parar en Pompeya en el camino."],
+        image: "https://images.unsplash.com/photo-1515859005217-8a1f08870f59?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Como Moverse por la Costa Amalfitana",
+        content: "Moverse por la costa puede ser un reto pero tambien parte de la aventura:",
+        list: ["Bus SITA: La opcion mas economica. EUR 2.50/viaje. Frecuente pero lleno en verano.", "24h Travel Pass: EUR 8 por viajes ilimitados en bus SITA. Vale la pena.", "Ferry: Conecta Positano, Amalfi, Minori, Maiori. EUR 8-15. Mas rapido y escenico que bus.", "Taxi: Caro pero util para subir a Ravello o llegar a hoteles. Tarifas fijas publicadas.", "A pie: Senderos historicos conectan pueblos. Sentiero degli Dei (Camino de los Dioses) es espectacular.", "Scooter: Opcion para valientes. Carreteras estrechas y trafico intenso. EUR 40-60/dia.", "Barco privado: Alquila un bote para explorar calas escondidas. EUR 150-300/medio dia.", "Tip: Evita conducir. Los locales conocen las curvas, tu no. Parking EUR 5-10/hora."]
+      },
+      {
+        title: "Gastronomia de la Costa Amalfitana",
+        content: "La cocina amalfitana es simple, fresca, y dominada por limones, mariscos, y productos locales:",
+        list: ["Limones de Amalfi: Limones gigantes, dulces, perfumados. Todo lleva limon aqui.", "Limoncello: Licor de cascara de limon. Tomalo helado despues de comer. Compra botellas artesanales.", "Scialatielli ai frutti di mare: Pasta fresca local con mariscos. El plato tipico.", "Delizia al limone: Postre de esponja con crema de limon. Perfeccion dulce.", "Sfogliatella: Pasta hojaldrada rellena de ricotta. De Napoles pero presente en toda la costa.", "Pescado fresco: Lubina, dorada, calamares, pulpo. Siempre del dia. A la parrilla o al forno.", "Mozzarella di bufala: De las granjas cercanas. Caprese con tomates de Sorrento.", "Vino: Vinos locales de las vinas de la costa. Greco di Tufo, Falanghina.", "Gelato: Limon, fior di latte, nocciola. Heladerias artesanales en cada pueblo."],
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Experiencias Unicas en la Costa",
+        content: "Mas alla de pasear por los pueblos, la costa ofrece experiencias memorables:",
+        list: ["Sentiero degli Dei: Senderismo celestial. 8 km entre Bomerano y Positano. Vistas increibles.", "Capri en ferry: Isla cercana. 30-40 min desde Positano. Gruta Azul, compras de lujo, glamour.", "Pompeya/Herculano: Excursion de dia completo. Ruinas romanas a 1 hora. Imprescindible.", "Degustacion de limoncello: Visita a fabricas artesanales. Prueba variedades. Compra para llevar.", "Clase de cocina: Aprende pasta fresca, recetas locales. EUR 80-150. Muchas incluyen cena.", "Paseo en barco al atardecer: Ver la costa dorada por el sol. Incluye prosecco. EUR 50-100.", "Buceo/Snorkel: Aguas cristalinas. Centros en Positano y Amalfi. Descubre fondos marinos.", "Kayak: Explora calas escondidas a tu ritmo. Alquiler EUR 20-40/hora."],
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Donde Alojarse en la Costa Amalfitana",
+        content: "El alojamiento es caro pero hay opciones para distintos presupuestos:",
+        list: ["Positano lujo: Le Sirenuse (el iconico), Il San Pietro (acantilado privado). EUR 500-1500/noche.", "Positano medio: Hotel Buca di Bacco (playa), Villa Franca (piscina panoramica). EUR 200-400.", "Amalfi: Hotel Luna (claustro historico), Marina Riviera (terraza mar). EUR 150-350.", "Ravello lujo: Belmond Caruso (piscina infinita), Palazzo Avino (romantico). EUR 400-800.", "Presupuesto: B&B en Praiano, Maiori, o Atrani. EUR 80-150. Menos turistas, mas autentico.", "Sorrento base: Mas opciones economicas. Ferry/bus a la costa. EUR 80-200.", "Agroturismos: Fincas en las colinas. Vino, limoneros, tranquilidad. EUR 100-200.", "Consejo: Reserva con 2-3 meses de anticipacion para verano. Todo se llena rapido."]
+      },
+      {
+        title: "Itinerario Perfecto: 5 Dias en la Costa Amalfitana",
+        content: "Un recorrido equilibrado para ver lo mejor sin prisas:",
+        list: ["Dia 1: Llegada a Napoles. Traslado a Positano. Tarde explorando el pueblo. Cena con vista al mar.", "Dia 2: Positano manana (playa, tiendas). Ferry a Amalfi por la tarde. Duomo, limoncellos.", "Dia 3: Amalfi manana. Bus a Ravello. Villa Rufolo, Villa Cimbrone, almuerzo panoramico.", "Dia 4: Excursion a Capri en ferry. Gruta Azul, Marina Piccola, compras. Regreso al atardecer.", "Dia 5: Sendero degli Dei (senderismo) o excursion a Pompeya. Cena de despedida.", "Alternativa 3 dias: Dia 1 Positano, Dia 2 Amalfi+Ravello, Dia 3 Capri o Pompeya.", "Tip: No intentes ver todo. La costa es para disfrutar lento, como los italianos.", "Epoca: Mayo-junio ideal. Septiembre perfecto. Julio-agosto calor extremo y multitudes."],
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Vive la Costa Amalfitana con Trips Europa",
+        content: "En Tripseuropa.com disenamos tu viaje perfecto a la Costa Amalfitana. Te organizamos traslados privados desde Napoles (evita el estres del transporte publico), hoteles con las mejores vistas, reservas en restaurantes exclusivos, excursiones a Capri y Pompeya, y experiencias como clases de cocina y paseos en barco privado. Conocemos los secretos de la costa: los mejores miradores, las horas sin turistas, los restaurantes donde comen los locales. La Costa Amalfitana es un destino de ensueno que merece ser disfrutado sin preocupaciones. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu escapada mediterranea.",
+        image: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cual es la mejor epoca para visitar la Costa Amalfitana?", answer: "Mayo-junio y septiembre-octubre son ideales: clima calido, menos turistas, precios razonables. Julio-agosto es temporada alta con multitudes, calor intenso, y precios maximos. Abril puede ser fresco pero bonito. Noviembre-marzo muchos lugares cierran." },
+      { question: "Cuantos dias necesito para la Costa Amalfitana?", answer: "Minimo 3 dias para ver Positano, Amalfi, y Ravello. Ideal 5-7 dias para disfrutar con calma, incluir excursiones a Capri y Pompeya, y tomar el sol en la playa. Con menos de 3 dias es una carrera." },
+      { question: "Es muy cara la Costa Amalfitana?", answer: "Si, es uno de los destinos mas caros de Italia. Positano especialmente. Hoteles desde EUR 150-500/noche, cenas EUR 40-80/persona. Amalfi y pueblos menores son algo mas economicos. Usar transporte publico y B&B ayuda a reducir costos." },
+      { question: "Debo alquilar coche en la Costa Amalfitana?", answer: "No lo recomendamos. Las carreteras son muy estrechas, con curvas cerradas, y el parking es carisimo y escaso (EUR 5-10/hora). Los buses SITA y ferries son suficientes y mas relajados. Si insistes en conducir, hazlo fuera de temporada alta." },
+      { question: "Es posible visitar la Costa Amalfitana como excursion de un dia?", answer: "Es posible desde Napoles o Sorrento, pero no recomendable. Perderas mucho tiempo en transporte y solo podras ver un pueblo superficialmente. La costa merece al menos 2-3 noches para disfrutarla como se debe." },
+      { question: "Cual pueblo de la Costa Amalfitana es mejor para alojarse?", answer: "Positano es el mas iconico pero caro y turistico. Amalfi es central y con mas servicios. Ravello es romantico y tranquilo pero arriba de la costa. Praiano o Atrani son mas autenticos y economicos. Sorrento es buena base economica con ferry a la costa." }
+    ]
   }
 ];
