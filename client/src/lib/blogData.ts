@@ -5143,5 +5143,93 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Como me muevo entre ciudades en Suiza?", answer: "En tren, sin duda. La red ferroviaria suiza es la mejor del mundo: puntual, limpia, comoda y con vistas espectaculares. Los trenes van a casi cualquier rincon del pais. Compra el Swiss Travel Pass para viajes ilimitados." },
       { question: "Necesito reservar los trenes panoramicos con antelacion?", answer: "Glacier Express y Bernina Express requieren reserva obligatoria (CHF 30-50). Los demas trenes panoramicos como GoldenPass no requieren reserva. En temporada alta, reserva con 1-2 semanas de antelacion." }
     ]
+  },
+
+  {
+    id: "grecia-islas-2-semanas",
+    slug: "grecia-islas-2-semanas",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Islas Griegas en 2 Semanas: Santorini, Mykonos y Mas", en: "Greek Islands in 2 Weeks: Santorini, Mykonos and More" },
+    excerpt: { es: "El island hopping perfecto. Que islas visitar, como moverse y donde alojarse.", en: "The perfect island hopping. Which islands to visit, how to get around and where to stay." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "20 Dic 2026",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["islas griegas", "santorini mykonos", "grecia vacaciones", "island hopping", "cicladas", "creta", "ferries grecia"],
+    featured: true,
+    sections: [
+      {
+        title: "Islas Griegas: El Sueno Mediterraneo",
+        content: "Grecia tiene mas de 6,000 islas, de las cuales unas 200 estan habitadas. Cada una tiene su propia personalidad: desde la iconica Santorini con sus atardeceres legendarios hasta islas secretas donde el tiempo parece haberse detenido. En Tripseuropa.com hemos navegado por todas las rutas y te traemos el itinerario perfecto para dos semanas de island hopping inolvidable. Aguas turquesa, pueblos blancos, historia antigua, y la mejor gastronomia mediterranea te esperan.",
+        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1-2: Atenas, La Puerta a las Islas",
+        content: "Comienza tu aventura en Atenas, donde la historia antigua se encuentra con la vibrante vida moderna. Dedica 1-2 dias antes de saltar a las islas.",
+        list: ["Acropolis: El Partenon, Erecteion, Teatro de Dionisio. Llega a las 8am para evitar multitudes y calor.", "Plaka: El barrio mas antiguo. Callejuelas con tabernas, tiendas de artesanias, ambiente bohemio.", "Museo de la Acropolis: Imprescindible. Explica la historia de los monumentos que acabas de ver.", "Monastiraki: Mercado de pulgas, plaza animada, vista al Acropolis. Perfecto para atardecer.", "Gastronomia: Moussaka, souvlaki, gyros, ensalada griega. Tabernas en Psiri y Plaka.", "Donde dormir: Plaka o Monastiraki para estar cerca del centro historico. EUR 80-150/noche.", "Tip: Compra el billete combinado (EUR 30) que incluye Acropolis y otros 6 sitios arqueologicos.", "Puerto del Pireo: A 30 minutos del centro. Desde aqui salen los ferries a las islas."]
+      },
+      {
+        title: "Dia 3-5: Santorini, La Isla de los Suenos",
+        content: "Santorini es probablemente la isla mas fotografiada del mundo. Creada por una erupcion volcanica, sus acantilados con pueblos blancos y cupulas azules son iconicos.",
+        list: ["Oia: El pueblo mas famoso. Casas cueva, boutique hotels, el mejor atardecer del Mediterraneo. Llega 2 horas antes para buen sitio.", "Fira: La capital. Mas animada que Oia. Tiendas, restaurantes, vida nocturna. Camino a Oia (10 km) espectacular.", "Caldera: El crater volcanico sumergido. Tours en barco incluyen visita al volcan activo y aguas termales.", "Playas: Red Beach (arena roja volcanica), Perissa (arena negra), Kamari. Diferentes a cualquier otra.", "Akrotiri: 'La Pompeya griega'. Ciudad minoica enterrada por la erupcion hace 3,600 anos.", "Vinos: Santorini produce vinos unicos. Visita bodegas como Santo Wines o Venetsanos para cata con vistas.", "Donde dormir: Oia (romantico, caro), Fira (practico, opciones variadas), Imerovigli (tranquilo, vistas). EUR 150-400/noche.", "Tip: Reserva hotel con vista a la caldera. Vale cada euro extra."],
+        image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 6-8: Mykonos, Fiesta y Glamour",
+        content: "Mykonos es la isla del jet set, famosa por sus playas, vida nocturna, y ambiente cosmopolita. Pero tambien tiene un encanto tradicional en su casco antiguo.",
+        list: ["Chora (Mykonos Town): Laberinto de callejuelas blancas, iglesias pintorescas, Little Venice al atardecer.", "Molinos de viento: Simbolo de la isla. Vistas panoramicas sobre Chora. Perfectos para fotos.", "Little Venice: Casas sobre el mar. Cocktails viendo el atardecer. Muy romantico.", "Playas: Paradise y Super Paradise (fiesta), Psarou (glamour), Agios Sostis (tranquila, sin servicios).", "Vida nocturna: Los beach clubs (Scorpios, Nammos) se convierten en discotecas. Caro pero unico.", "Delos: Excursion de medio dia a la isla sagrada. Ruinas antiguas, cuna de Apolo. UNESCO.", "Gastronomia: Mariscos frescos en Kiki's Tavern (sin reservas, cola larga pero vale la pena).", "Donde dormir: Chora para vida nocturna, Ornos o Platis Gialos para familias. EUR 150-500/noche."]
+      },
+      {
+        title: "Dia 9-10: Naxos, La Isla Autentica",
+        content: "Naxos es la isla mas grande de las Cicladas y quizas la mas autentica. Menos turistica que Santorini o Mykonos, ofrece playas espectaculares, pueblos de montana y ruinas antiguas.",
+        list: ["Portara: La puerta del templo de Apolo sin terminar. Simbolo de Naxos. Atardecer magico.", "Chora: Casco antiguo veneciano, castillo, callejuelas con tiendas artesanales y tabernas.", "Playas: Agios Prokopios, Agia Anna, Plaka (kilometros de arena, aguas cristalinas, chiringuitos).", "Interior montanoso: Pueblos como Halki (destilerias de kitron), Apiranthos (marmol), Filoti.", "Monte Zas: La montana mas alta de las Cicladas (1,004m). Senderismo con vistas increibles.", "Gastronomia: Queso naxiano, patatas famosas, kitron (licor de citricos local).", "Donde dormir: Chora o Agios Prokopios. Precios mas razonables que Santorini/Mykonos. EUR 80-180/noche.", "Tip: Alquila coche o quad para explorar el interior. Naxos es grande."],
+        image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 11-12: Paros, El Equilibrio Perfecto",
+        content: "Paros combina lo mejor de las Cicladas: playas hermosas, pueblos con encanto, vida nocturna animada, y precios mas accesibles. Es el secreto mejor guardado.",
+        list: ["Naoussa: Pueblo pesquero convertido en destino de moda. Puerto pintoresco, restaurantes, bares.", "Parikia: La capital. Casco antiguo, iglesia bizantina Panagia Ekatontapiliani (100 puertas).", "Playas: Kolymbithres (rocas esculpidas), Santa Maria (deportes acuaticos), Golden Beach (kitesurf).", "Antiparos: Isla vecina accesible en 10 minutos de ferry. Cueva espectacular, Tom Hanks tiene casa aqui.", "Vida nocturna: Naoussa tiene bares animados. Menos intensa que Mykonos pero divertida.", "Gastronomia: Gouna (pescado seco al sol), octopus, vino local. Tabernas frente al mar.", "Donde dormir: Naoussa para ambiente joven, Parikia para practicidad. EUR 90-200/noche.", "Tip: Paros es hub de ferries. Desde aqui conectas facilmente a otras islas."]
+      },
+      {
+        title: "Dia 13-14: Milos o Creta (Elige Tu Final)",
+        content: "Para cerrar tu viaje, elige entre Milos (la isla de las playas imposibles) o Creta (historia y naturaleza en grande). Ambas son espectaculares.",
+        list: ["MILOS - Playas unicas: Sarakiniko (paisaje lunar blanco), Kleftiko (solo en barco), Tsigrado (cueva secreta).", "MILOS - Pueblos: Plaka (capital con vistas), Klima (casas de pescadores coloridas sobre el agua).", "MILOS - Catacumbas: Las mas grandes de Grecia despues de Roma. Historia cristiana primitiva.", "CRETA - Knossos: Palacio minoico, laberinto del Minotauro. La civilizacion mas antigua de Europa.", "CRETA - Chania: Puerto veneciano espectacular. La ciudad mas bonita de Creta.", "CRETA - Elafonisi: Playa de arena rosa. Una de las mejores de Grecia.", "CRETA - Gastronomia: Dakos, kalitsounia, raki. La cocina cretense es patrimonio inmaterial.", "Regreso: Ferry de noche a Atenas (Milos 5h, Creta 9h) o vuelo directo desde Heraklion/Chania."],
+        image: "https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Como Moverse: Ferries y Vuelos",
+        content: "El island hopping requiere planificacion de transporte. Los ferries son la forma clasica y economica, pero hay alternativas.",
+        list: ["Ferries regulares: Lentos pero economicos. Blue Star Ferries, Hellenic Seaways. Atenas-Santorini: 8 horas, EUR 35-50.", "Ferries rapidos (highspeed): Mas caros pero la mitad de tiempo. SeaJets, Golden Star. Atenas-Santorini: 4.5 horas, EUR 60-80.", "Vuelos: Olympic Air y Sky Express conectan Atenas con Santorini, Mykonos, Creta. 45 minutos, EUR 60-120.", "Reservas: En temporada alta (julio-agosto), reserva ferries con 2-4 semanas de antelacion. Webs: ferries.gr, directferries.com.", "Horarios: Los ferries pueden retrasarse por viento (meltemi). Ten flexibilidad en tu itinerario.", "Equipaje: Los ferries tienen espacio. Los vuelos tienen limites estrictos.", "Tip: Ferry de noche = ahorras una noche de hotel + llegas descansado.", "Apps: Ferryhopper es la mejor app para buscar y reservar ferries."]
+      },
+      {
+        title: "Donde Alojarse: Tipos y Precios",
+        content: "Las islas griegas ofrecen alojamientos para todos los presupuestos, desde hostels hasta villas de lujo.",
+        list: ["Hoteles boutique: La experiencia clasica. Vistas a la caldera, piscinas infinitas, desayuno griego. EUR 200-600/noche.", "Apartamentos: Perfectos para familias o estancias largas. Cocina propia ahorra dinero. EUR 80-200/noche.", "Villas privadas: Lujo y privacidad. Piscina privada, vistas, servicio. EUR 300-1000/noche.", "Hostels: Opcion economica en islas grandes. Dormitorios compartidos. EUR 20-40/noche.", "Studios: Opcion griega clasica. Basico pero limpio, cerca de playas. EUR 50-100/noche.", "Reserva con antelacion: En julio-agosto, 3-6 meses antes para hoteles populares.", "Ubicacion: Centro del pueblo = mas vida nocturna, ruido. Afueras = tranquilidad, necesitas transporte.", "Tip: Booking y Airbnb funcionan bien. Los hoteles boutique a veces tienen mejores precios en sus webs."]
+      },
+      {
+        title: "Presupuesto Para 2 Semanas",
+        content: "Grecia puede ser tan economica o lujosa como quieras. Aqui un desglose realista para diferentes estilos.",
+        list: ["PRESUPUESTO BAJO: EUR 1,200-1,800. Hostels, ferries lentos, tabernas locales, playas publicas.", "PRESUPUESTO MEDIO: EUR 2,500-3,500. Hoteles 3-4 estrellas, ferries rapidos, restaurantes variados, alguna excursion.", "PRESUPUESTO ALTO: EUR 5,000-8,000+. Hoteles boutique, vuelos entre islas, restaurantes gourmet, barco privado.", "Ferries: EUR 150-300 total (dependiendo velocidad y numero de islas).", "Alojamiento: EUR 70-400/noche (promedio EUR 120-180 para calidad decente).", "Comida: EUR 25-50/dia (tabernas locales mas economicas que zonas turisticas).", "Excursiones: EUR 50-150 por actividad (tours en barco, catas de vino, buceo).", "Moneda: Euro (EUR). Tarjetas aceptadas en casi todos lados. Efectivo para tabernas pequenas."]
+      },
+      {
+        title: "Mejor Epoca y Clima",
+        content: "El clima mediterraneo hace que Grecia sea destino de verano por excelencia, pero hay matices importantes.",
+        list: ["Temporada alta (julio-agosto): Sol garantizado, 30-35C, todo abierto, precios altos, multitudes.", "Temporada media (mayo-junio, septiembre-octubre): Ideal. 25-30C, menos gente, precios moderados, mar calido.", "Temporada baja (noviembre-abril): Muchos negocios cerrados, ferries reducidos, pero precios minimos y autenticidad maxima.", "Meltemi: Viento fuerte del norte en julio-agosto. Puede retrasar ferries y hacer playas del norte incomodas.", "Agua: El Egeo se calienta en junio, perfecto julio-septiembre. Mayo y octubre aun banables.", "Pascua ortodoxa: Experiencia cultural unica. Procesiones, tradiciones, gastronomia especial. Fechas varian (abril-mayo).", "Nuestra recomendacion: Septiembre. Menos turistas que agosto, precios bajando, mar calido, clima perfecto.", "Tip: Evita primera quincena de agosto si puedes. Es cuando toda Grecia esta de vacaciones."]
+      },
+      {
+        title: "Navega las Islas Griegas con Trips Europa",
+        content: "En Tripseuropa.com organizamos tu island hopping perfecto: reservamos todos los ferries coordinados, hoteles con las mejores vistas, transfers desde puertos, y excursiones exclusivas. Conocemos cada isla y te ayudamos a elegir las que mejor se adaptan a tus gustos. Desde lunas de miel romanticas hasta aventuras con amigos, disenamos itinerarios a medida. Las islas griegas merecen ser navegadas sin estres. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura en el Egeo.",
+        image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuantas islas puedo visitar en 2 semanas?", answer: "Recomendamos 4-5 islas en 2 semanas para disfrutar sin prisas. Mas islas significa mas tiempo en ferries y menos tiempo explorando. Calidad sobre cantidad siempre." },
+      { question: "Es mejor ferry o avion entre islas?", answer: "Depende del tiempo y presupuesto. Ferry es mas economico y pintoresco, pero toma mas tiempo. Vuelo es rapido pero solo conecta islas grandes con Atenas. Combinar ambos es buena estrategia." },
+      { question: "Cual es la mejor epoca para visitar las islas griegas?", answer: "Septiembre es ideal: mar calido, menos turistas que agosto, precios moderados, clima perfecto. Mayo-junio tambien excelente. Julio-agosto esta saturado y caro pero garantiza sol." },
+      { question: "Necesito alquilar coche en las islas?", answer: "Depende de la isla. En Santorini y Mykonos puedes moverte en bus o taxi. En Naxos, Paros y Creta, el coche te da libertad para explorar. Quads y motos son populares pero mas peligrosos." },
+      { question: "Cuanto cuesta un island hopping de 2 semanas?", answer: "Presupuesto medio: EUR 2,500-3,500 por persona incluyendo ferries, hoteles 3-4 estrellas, comidas y algunas excursiones. Sin vuelos internacionales. Puedes gastar menos o mucho mas segun tu estilo." },
+      { question: "Las islas griegas son seguras?", answer: "Muy seguras. Grecia tiene indices de criminalidad muy bajos. El mayor riesgo es el sol y la conduccion en carreteras estrechas. Usa protector solar, bebe agua, y conduce con cuidado." }
+    ]
   }
 ];
