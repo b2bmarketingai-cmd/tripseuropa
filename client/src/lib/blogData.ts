@@ -5420,5 +5420,101 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Vale la pena la Prague Card?", answer: "Solo si planeas visitar muchos museos y atracciones con entrada. Cuesta EUR 62 por 2 dias. Calcula cuanto gastarias en entradas individuales. Para la mayoria de viajeros, no compensa." },
       { question: "Es segura Praga para turistas?", answer: "Muy segura. Los unicos problemas son carteristas en zonas muy turisticas y casas de cambio con comisiones abusivas. De noche es tranquila. Usa sentido comun y no tendras problemas." }
     ]
+  },
+  {
+    id: "londres-4-dias",
+    slug: "londres-4-dias",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Londres en 4 Dias: Big Ben, Tower Bridge y Harry Potter", en: "London in 4 Days: Big Ben, Tower Bridge and Harry Potter" },
+    excerpt: { es: "Itinerario completo incluyendo los estudios de Harry Potter. Imprescindibles y secretos locales.", en: "Complete itinerary including Harry Potter studios. Must-sees and local secrets." },
+    category: "guias",
+    categoryLabel: { es: "Guias", en: "Guides" },
+    date: "2 Dic 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["londres 4 dias", "que hacer londres", "harry potter londres", "big ben", "tower bridge", "london itinerary"],
+    featured: true,
+    sections: [
+      {
+        title: "Londres: Una Ciudad que Enamora",
+        content: "Londres es una de las ciudades mas fascinantes del mundo. Historia milenaria, cultura vibrante, parques magnificos, pubs acogedores y una energia inconfundible. En 4 dias puedes ver los iconos imprescindibles, visitar los estudios de Harry Potter, y descubrir rincones que solo conocen los locales. Esta guia te muestra exactamente como aprovechar cada minuto, con itinerarios dia por dia, consejos practicos y secretos que convertiran tu viaje en una experiencia inolvidable.",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1: Westminster y los Iconos Clasicos",
+        content: "Tu primer dia debe empezar con los monumentos que definen Londres. Comienza temprano para evitar multitudes.",
+        list: ["Big Ben y Parlamento: Llegad a las 8:00 AM. Fotos sin turistas. El Parlamento es Patrimonio de la Humanidad. Tour interior disponible (reserva online).", "Abadia de Westminster: Donde se coronan los reyes desde 1066. Tumba de Newton, Darwin, reyes y poetas. Entrada GBP 27, audio-guia incluida.", "Changing of the Guard: Palacio de Buckingham a las 11:00 AM (lunes, miercoles, viernes, y diario en verano). Llegad a las 10:15 para buen sitio.", "St. James's Park: Paseo entre el Palacio y Whitehall. Ardillas, pelicanos, vistas del London Eye. Perfecto para descansar.", "Trafalgar Square: Los leones de Nelson, la National Gallery (gratis y espectacular), ambiente londinense puro.", "Covent Garden: Artistas callejeros, tiendas, mercado historico. Cena en alguno de los restaurantes del mercado."],
+        image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 2: La Torre de Londres y el Este",
+        content: "El lado este de Londres combina historia medieval con modernidad vanguardista. Un contraste fascinante.",
+        list: ["Tower of London: Fortaleza de 1000 anos. Las Joyas de la Corona, los cuervos, los Beefeaters. Abre 9:00 AM, llegad pronto. GBP 34, reserva online para evitar colas.", "Tower Bridge: Cruzalo a pie (gratis). Para la pasarela de cristal elevada, GBP 12. Fotos iconicas desde ambas orillas.", "Borough Market: Mercado gastronomico. Brunch epico: scotch eggs, fish & chips, pasteles. Ambiente local autentico.", "The Shard: El rascacielos mas alto de Europa Occidental. Vistas desde la plataforma (GBP 32) o coctel en el bar (gratis subir, pagas consumicion).", "South Bank: Paseo junto al Tamesis. Tate Modern (gratis), Shakespeare's Globe, artistas callejeros. Londres contemporaneo.", "Pub en Southwark: Termina en un pub historico como The George Inn (de 1677) o Anchor Bankside."],
+        image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 3: Los Estudios de Harry Potter",
+        content: "El sueno de todo Potterhead. Los Warner Bros Studios donde se filmaron las 8 peliculas merecen un dia completo.",
+        list: ["Reserva obligatoria: Las entradas se agotan semanas o meses antes. GBP 53 adultos, GBP 42 ninos. Compra en la web oficial NUNCA en reventa.", "Como llegar: Tren desde Euston a Watford Junction (20 min, GBP 8-15). Bus lanzadera desde la estacion (gratis con entrada).", "Duracion: 3-4 horas minimo. Hay fans que pasan 6 horas. No hay limite de tiempo.", "Que veras: El Gran Comedor, Diagon Alley, el Hogwarts Express, la oficina de Dumbledore, el Bosque Prohibido, la maqueta gigante de Hogwarts.", "Cerveza de Mantequilla: Si, puedes probarla. Dulce, cremosa, sin alcohol. Imprescindible.", "Tienda: La tienda mas grande de merchandising de Harry Potter del mundo. Varitas, bufandas, ranas de chocolate. Prepara la cartera.", "Por la tarde: Regresa a Londres y visita King's Cross (Platform 9 3/4) y la tienda Harry Potter de la estacion."],
+        image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 4: Museos, Parques y Notting Hill",
+        content: "Tu ultimo dia combina cultura gratuita, naturaleza urbana y uno de los barrios mas fotografiados de Londres.",
+        list: ["British Museum: El museo mas visitado del Reino Unido. Piedra Rosetta, momias egipcias, esculturas del Partenon. GRATIS. Abre 10:00 AM.", "Hyde Park: El pulmon verde de Londres. Paseo, barcas en el Serpentine, Speakers' Corner. Si tienes tiempo, visita los Kensington Gardens.", "Notting Hill: Casas de colores pastel, librerias, cafes instagrameables. Pasea por Portobello Road (mercado los sabados).", "Kensington: Barrio elegante. Si te interesa, entrada al Palacio de Kensington (GBP 21) o Natural History Museum (gratis).", "Harrods: Aunque no compres nada, pasear por los grandes almacenes mas famosos del mundo es una experiencia.", "Despedida: Cena de despedida en un gastropub del West End o un curry en Brick Lane."],
+        image: "https://images.unsplash.com/photo-1534695215921-52f8a19e7909?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Secretos Locales: Lo que No Sale en las Guias",
+        content: "Despues de anos organizando viajes a Londres, estos son nuestros consejos favoritos:",
+        list: ["Leadenhall Market: Mercado victoriano precioso, sirvio como Diagon Alley en las peliculas. Pocos turistas.", "Little Venice: Canales, barcas, cafeterias flotantes. A 10 minutos de Paddington. Londres sin aglomeraciones.", "Sky Garden: Jardin en un rascacielos con vistas gratuitas de 360 grados. Reserva online (gratis) con antelacion.", "Columbia Road Flower Market: Solo domingos por la manana. Flores, brunch, ambiente hipster del East End.", "Gordon's Wine Bar: El bar de vinos mas antiguo de Londres (1890). Velas, vino, queso. Romantico y autentico.", "Dennis Severs' House: Casa museo inmersivo. Viajas al siglo XVIII con velas y olores. Experiencia unica.", "Hampstead Heath: Colina con vistas de todo Londres. Perfecto al atardecer. Los londinenses van aqui a escapar."]
+      },
+      {
+        title: "Transporte: Como Moverse por Londres",
+        content: "Londres tiene el mejor transporte publico del mundo. Usarlo bien te ahorrara tiempo y dinero.",
+        list: ["Oyster Card: Tarjeta recargable. Precio capped (maximo diario). Se compra en cualquier estacion. GBP 5 deposito.", "Contactless: Tu tarjeta de credito funciona igual que Oyster. Mismo precio, sin comprar tarjeta.", "Tube (Metro): Rapido, frecuente, cubre toda la ciudad. Funciona 5:00 AM a medianoche (24h viernes/sabados algunas lineas).", "Buses rojos: Iconicos, baratos (GBP 1.75), buenas vistas. El bus 11 hace un tour gratis por el centro.", "Uber/Bolt: Funcionan bien. Mas caros que metro pero utiles de noche o con equipaje.", "Desde aeropuertos: Heathrow (Tube GBP 6, 1 hora), Gatwick (tren GBP 15-20, 30 min), Stansted (bus GBP 10-15, 1.5 horas).", "Evita: Taxis negros (muy caros), tarjetas de transporte para turistas (peor valor que Oyster)."]
+      },
+      {
+        title: "Donde Comer: Fish & Chips, Curries y Mas",
+        content: "Londres ha evolucionado de capital de mala comida a paraiso gastronomico multicultural.",
+        list: ["Fish & Chips: Poppies (Spitalfields), The Golden Hind (Marylebone), Rock & Sole Plaice (Covent Garden). GBP 12-18.", "Curry: Brick Lane es la calle curry. Dishoom es el restaurante indio mas famoso de Londres (cola pero vale la pena).", "Gastropubs: Comida de pub elevada. The Harwood Arms, The Anchor & Hope, The Marksman. GBP 15-25 plato.", "Mercados: Borough Market (comida global), Camden Market (street food), Maltby Street (brunch dominguero).", "Afternoon Tea: Tradicion britanica. The Ritz (lujo, GBP 75+), Sketch (artistico), o cualquier hotel elegante.", "Economico: Pret A Manger, Leon, Wasabi. Comida rapida de calidad. GBP 6-10. Hay en todas partes.", "Propina: 10-12.5% en restaurantes. A veces incluida en la cuenta. En pubs no se deja propina."],
+        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Alojamiento: Donde Dormir en Londres",
+        content: "Londres es caro para dormir. Pero con estrategia puedes encontrar opciones razonables.",
+        list: ["Zonas recomendadas: South Kensington (museos), Shoreditch (hipster), King's Cross (transporte), Southwark (moderno).", "Hoteles economicos: Premier Inn, Travelodge, Ibis. GBP 80-120/noche. Basicos pero limpios y bien ubicados.", "Boutique accesibles: CitizenM, Hub by Premier Inn, Z Hotels. GBP 100-150. Disenoo moderno, habitaciones pequenas.", "Apartamentos: Airbnb o Plum Guide. Desde GBP 100/noche. Cocina para ahorrar en comidas.", "Lujo: The Savoy, Claridge's, The Ned. GBP 400+. Para ocasiones especiales.", "Evita: Hoteles en Piccadilly Circus o Leicester Square. Caros, ruidosos, mala relacion calidad-precio.", "Reserva con antelacion: Precios suben mucho cerca de la fecha. 2-3 meses antes es ideal."],
+        image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Presupuesto: Cuanto Cuesta Londres",
+        content: "Londres es cara, pero con planificacion puedes disfrutarla sin arruinarte.",
+        list: ["Economico (GBP 100-150/dia): Hostal o Airbnb compartido, comida en mercados y pubs, atracciones gratis, transporte publico.", "Moderado (GBP 150-250/dia): Hotel 3 estrellas, restaurantes variados, entradas principales (Torre, Harry Potter), alguna experiencia especial.", "Confort (GBP 250-400/dia): Hotel 4 estrellas, todos los museos pagados, afternoon tea, teatro West End.", "Vuelos desde Latinoamerica: GBP 400-800 ida y vuelta segun epoca y aerolinea. Iberia via Madrid suele tener buenos precios.", "Ahorra en: Museos nacionales (gratis), parques (gratis), caminatas (lo mejor de Londres es gratuito).", "Gasta en: Harry Potter Studios, Torre de Londres, un buen afternoon tea, teatro. Experiencias que recordaras."]
+      },
+      {
+        title: "Mejor Epoca Para Visitar Londres",
+        content: "Londres tiene encanto todo el ano, pero cada temporada ofrece experiencias diferentes.",
+        list: ["Primavera (abril-mayo): Parques en flor, clima agradable (12-18C), dias mas largos. Nuestra recomendacion.", "Verano (junio-agosto): Dias larguisimos (luz hasta 21:30), festivales, terrazas. Pero mas turistas y precios altos.", "Otono (septiembre-octubre): Colores en los parques, menos turistas, precios moderados. Septiembre es excelente.", "Invierno (noviembre-febrero): Navidad magica (luces, mercados), pero frio (2-8C), dias cortos, puede llover mucho.", "Evita: Semana Santa, agosto (todo lleno), fin de ano (carisimo).", "Lluvia: Siempre puede llover. Lleva paraguas pequeno y capas. No dejes que te arruine el dia."],
+        image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos Practicos Para Tu Viaje",
+        content: "Detalles que haran tu viaje mas facil y agradable.",
+        list: ["Visa: Latinoamericanos no necesitan visa para estancias hasta 6 meses (turismo). Solo pasaporte vigente.", "Moneda: Libra esterlina (GBP). Cajeros automaticos en todas partes. Tarjeta contactless funciona en el 99% de sitios.", "Enchufes: Tipo G (tres clavijas). Necesitaras adaptador. Compra antes de viajar o en cualquier tienda de Londres.", "Idioma: Ingles. Pero hay mucho personal de servicio hispanohablante. Google Translate ayuda.", "Seguridad: Muy segura. Cuidado con carteristas en metro y zonas turisticas. Sentido comun.", "Horarios: Tiendas cierran a las 18:00-20:00. Pubs a las 23:00. Supermercados algunos 24h.", "Domingo: Tiendas abren solo 6 horas (12:00-18:00 generalmente). Planifica en consecuencia."]
+      },
+      {
+        title: "Planifica tu Viaje a Londres con Trips Europa",
+        content: "En Tripseuropa.com somos expertos en viajes a Londres. Reservamos tus entradas a los Estudios Harry Potter con meses de antelacion (cuando tu no puedes por la diferencia horaria), conseguimos hoteles con buena relacion calidad-precio, organizamos traslados desde cualquier aeropuerto, y disenamos itinerarios personalizados. Si quieres combinar Londres con Paris, Escocia o Irlanda, creamos el circuito perfecto. No pierdas tiempo ni dinero: viaja tranquilo con expertos que conocen cada rincon de la ciudad. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura londinense.",
+        image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Necesito reservar los Estudios Harry Potter con mucha antelacion?", answer: "Si, absolutamente. Las entradas se agotan 2-3 meses antes en temporada alta (verano, Navidad, Semana Santa). En temporada baja, 3-4 semanas pueden ser suficientes. Nunca compres en reventa, solo en la web oficial de Warner Bros." },
+      { question: "Cuantos dias son suficientes para ver Londres?", answer: "4 dias es el minimo para ver lo esencial sin prisas. Con 5-6 dias puedes profundizar en museos o hacer excursiones (Stonehenge, Oxford, Bath). Menos de 3 dias es muy justo." },
+      { question: "Es Londres muy cara para viajeros latinoamericanos?", answer: "Es cara, pero manejable. Muchos museos son gratis, el transporte publico es eficiente, y hay opciones de comida para todos los presupuestos. Presupuesta GBP 100-200/dia segun tu estilo." },
+      { question: "Cual es la mejor forma de llegar del aeropuerto al centro?", answer: "Desde Heathrow: Tube (Elizabeth Line) por GBP 6 en 1 hora. Desde Gatwick: tren GBP 15-20 en 30 min. Desde Stansted: bus National Express GBP 10-15 en 1.5 horas. Evita taxis (muy caros)." },
+      { question: "Necesito visa para entrar al Reino Unido?", answer: "La mayoria de latinoamericanos (Colombia, Mexico, Argentina, Chile, Peru, etc.) no necesitan visa para turismo hasta 6 meses. Solo pasaporte vigente. Verifica tu nacionalidad especifica en la web del gobierno britanico." },
+      { question: "Vale la pena el London Pass?", answer: "Solo si planeas visitar muchas atracciones de pago en poco tiempo. Haz la cuenta: Torre de Londres + Harry Potter Studios + The Shard + Westminster = casi GBP 150. Si vas a gastar eso, puede compensar. Para la mayoria, comprar entradas por separado es mejor." }
+    ]
   }
 ];
