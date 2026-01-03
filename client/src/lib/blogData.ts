@@ -6584,5 +6584,103 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Hay tours guiados sobre el Muro en espanol?", answer: "Si, varias companias ofrecen tours a pie sobre el Muro en espanol. Duran 3-4 horas y cuestan EUR 15-25. El contexto historico que proporcionan los guias hace que la experiencia sea mucho mas significativa que visitar por tu cuenta." },
       { question: "Es Berlin adecuada para viajar con ninos?", answer: "El Museo de la DDR es interactivo y divertido para ninos. Los memoriales pueden ser intensos para ninos pequenos. Berlin tiene excelentes parques, el zoo (uno de los mejores de Europa), y museos de ciencia. Es una ciudad muy family-friendly." }
     ]
+  },
+  {
+    id: "roma-3-dias",
+    slug: "roma-3-dias",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Roma en 3 Dias: Coliseo, Vaticano y Trastevere", en: "Rome in 3 Days: Colosseum, Vatican and Trastevere" },
+    excerpt: { es: "Itinerario optimizado para ver lo mejor de Roma. Evita filas, mejores horarios y tips locales.", en: "Optimized itinerary to see the best of Rome. Skip lines, best times and local tips." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "16 Dic 2024",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["roma 3 dias", "que hacer en roma", "itinerario roma", "coliseo", "vaticano", "trastevere"],
+    featured: false,
+    sections: [
+      {
+        title: "Roma en 3 Dias: El Itinerario Perfecto",
+        content: "Roma es una ciudad que necesita tiempo. Cada esquina esconde 2,000 anos de historia, cada plaza tiene una fuente barroca, cada callejon lleva a un descubrimiento. Pero si solo tienes 3 dias, este itinerario optimizado te permitira ver lo esencial sin agotarte, evitando filas y aprovechando los mejores horarios. Hemos disenado este recorrido basandonos en anos de experiencia llevando viajeros latinos por la Ciudad Eterna.",
+        list: ["Dia 1: Roma Antigua - Coliseo, Foro Romano, Palatino, Piazza Venezia.", "Dia 2: Vaticano y Centro Historico - San Pedro, Museos Vaticanos, Piazza Navona, Pantheon.", "Dia 3: Roma Autentica - Trastevere, Campo de Fiori, Fontana di Trevi, Escalinatas de Espana.", "Distancias: Todo es caminable o a pocos minutos en metro/bus.", "Ritmo: Este itinerario equilibra visitas con tiempo para cafe y gelato.", "Flexibilidad: Cada dia puede ajustarse segun tus intereses.", "Reservas: Obligatorias para Coliseo y Museos Vaticanos. Te explicamos como."],
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1 Manana: Coliseo y Foro Romano",
+        content: "Comienza tu aventura romana en el corazon del Imperio. El Coliseo es el monumento mas iconico de Roma y el anfiteatro mas grande jamas construido. Inaugurado en el ano 80 d.C., podia albergar 50,000 espectadores. Llegando temprano evitas las multitudes y el calor del mediodia.",
+        list: ["Horario ideal: 8:30 AM, primera entrada. Menos gente, luz perfecta para fotos.", "Entradas: EUR 18 incluye Coliseo, Foro Romano y Palatino. Valido 24 horas.", "Reserva obligatoria: Compra online con al menos 3-4 dias de anticipacion en coopculture.it.", "Arena: Con entrada especial (EUR 24) puedes bajar a la arena. Reserva aparte.", "Duracion: 1-1.5 horas en el Coliseo, 2 horas en el Foro.", "Audio guia: EUR 6 extra. Disponible en espanol. Altamente recomendada.", "Tip: Entra al Foro por la entrada del Palatino (menos fila) y baja hacia el Coliseo."],
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1 Tarde: Palatino y Piazza Venezia",
+        content: "Tras el Foro, sube al Palatino, la colina donde segun la leyenda Roma fue fundada. Aqui vivian los emperadores y las vistas del Foro son espectaculares. Luego camina hacia Piazza Venezia para ver el imponente Altar de la Patria.",
+        list: ["Palatino: Jardines, ruinas de palacios imperiales, vistas panoramicas. Muy fotografiable.", "Altar de la Patria (Vittoriano): Monumento blanco gigante. Entrada gratuita.", "Terraza panoramica: Ascensor EUR 10 para vistas 360 grados de Roma. Vale la pena.", "Almuerzo: Evita restaurantes frente al Coliseo (turisticos y caros). Camina 5 minutos hacia Monti.", "Barrio Monti: Bohemio, con trattorias autenticas. Prueba La Taverna dei Fori Imperiali.", "Descanso: Tras almuerzo, cafe en una terraza. Roma se disfruta con pausa.", "Cena: Regresa a Monti o explora Testaccio para cena romana autentica."]
+      },
+      {
+        title: "Dia 2 Manana: Museos Vaticanos y Capilla Sixtina",
+        content: "El segundo dia dedicalo al Vaticano. Los Museos Vaticanos albergan una de las colecciones de arte mas importantes del mundo, culminando en la Capilla Sixtina de Miguel Angel. La clave es llegar temprano para evitar las masas que colapsan los pasillos al mediodia.",
+        list: ["Horario ideal: 8:00 AM, primera entrada. Reserva obligatoria online.", "Entradas: EUR 17 + EUR 4 reserva online. Gratis ultimo domingo del mes (pero abarrotado).", "Reserva: museivaticani.va. Reserva 2-3 semanas antes en temporada alta.", "Duracion: 2.5-3 horas minimo. Los pasillos son de 7 km.", "Ruta: Galeria de los Candelabros, Galeria de los Tapices, Galeria de los Mapas, Estancias de Rafael, Capilla Sixtina.", "Capilla Sixtina: Silencio obligatorio. No fotos (aunque todos sacan). El Juicio Final es sobrecogedor.", "Tip: Hay una salida directa desde la Sixtina a San Pedro. Usala para evitar volver a los museos."],
+        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 2 Mediodia: Basilica de San Pedro",
+        content: "La basilica mas grande del cristianismo es impresionante por dentro y por fuera. La entrada es gratuita, pero las filas de seguridad pueden ser largas. Si saliste por la puerta de la Sixtina, ya estas dentro.",
+        list: ["Entrada: Gratuita. Control de seguridad obligatorio.", "Codigo de vestimenta: Hombros y rodillas cubiertos. Estricto.", "La Pieta: Obra maestra de Miguel Angel. Esta a la derecha al entrar.", "Cupula: Subida EUR 10 (ascensor + escaleras) o EUR 8 (solo escaleras, 551 escalones).", "Vistas: Desde la cupula, vistas de la Plaza de San Pedro y toda Roma.", "Duracion: 1-1.5 horas basilica, 45 min cupula.", "Cripta: Tumbas de Papas, incluyendo Juan Pablo II. Gratuita."],
+        image: "https://images.unsplash.com/photo-1526676317768-d9b14f15615a?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 2 Tarde: Piazza Navona y Pantheon",
+        content: "Despues del Vaticano, cruza el Tiber hacia el centro historico. Piazza Navona es una de las plazas mas hermosas de Roma, con tres fuentes barrocas. A pocos minutos esta el Pantheon, templo romano con la cupula de hormigon mas grande del mundo antiguo.",
+        list: ["Almuerzo: Cerca de Piazza Navona hay opciones. Evita las terrazas de la plaza (carisimas).", "Piazza Navona: Fuente de los Cuatro Rios de Bernini. Artistas callejeros, ambiente animado.", "Pantheon: Entrada EUR 5 (antes era gratis). Construido en 126 d.C., cupula intacta.", "Oculus: El agujero en el techo del Pantheon. Cuando llueve, entra agua.", "Gelato: Giolitti (desde 1900) a 2 cuadras del Pantheon. Clasico romano.", "Caffe: Sant'Eustachio il Caffe, el espresso mas famoso de Roma. Cerca del Pantheon.", "Cena: Trastevere. Cruza el rio para cena en el barrio mas encantador de Roma."],
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 3 Manana: Trastevere",
+        content: "El tercer dia es para la Roma menos turistica pero mas autentica. Trastevere, al otro lado del rio Tiber, es el barrio mas encantador de Roma: callejones empedrados, fachadas de colores, ropa tendida entre balcones, trattorias familiares.",
+        list: ["Desayuno: Cornetto y cappuccino en un bar de Trastevere. Autentica experiencia romana.", "Santa Maria in Trastevere: Una de las iglesias mas antiguas de Roma. Mosaicos bizantinos espectaculares.", "Mercado: Porta Portese (solo domingos) es el mercado de pulgas mas grande de Roma.", "Paseo: Pierdete por las callejuelas sin mapa. Esa es la magia de Trastevere.", "Vistas: Sube al Gianicolo para las mejores vistas panoramicas de Roma.", "Almuerzo: Da Enzo al 29 o Tonnarello. Carbonara y cacio e pepe autenticos.", "Tip: Trastevere cobra vida por la noche. Vuelve para aperitivo y cena."],
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 3 Tarde: Campo de Fiori y Fontana di Trevi",
+        content: "Cruza de vuelta al centro para visitar Campo de Fiori, la plaza del mercado por las mananas y de la vida nocturna por las noches. Luego, camina hacia la Fontana di Trevi, la fuente mas famosa del mundo.",
+        list: ["Campo de Fiori: Mercado de frutas, verduras, flores. Por la tarde se transforma en zona de bares.", "Estatua de Giordano Bruno: Filosofo quemado aqui en 1600. Centro de la plaza.", "Fontana di Trevi: Llega antes de las 9 AM o despues de las 10 PM para verla sin multitudes.", "Tradicion: Tira una moneda con la mano derecha sobre el hombro izquierdo para volver a Roma.", "Recaudacion: EUR 3,000 diarios en monedas. Se donan a caridad.", "Escalinatas de Espana (Piazza di Spagna): A 10 minutos caminando. Prohibido sentarse.", "Via Condotti: Calle de tiendas de lujo desde Piazza di Spagna. Escaparates impresionantes."],
+        image: "https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos para Evitar Filas en Roma",
+        content: "Roma puede ser abrumadora si no planificas. Estas estrategias te ahorraran horas de espera:",
+        list: ["Reserva online siempre: Coliseo, Museos Vaticanos, Galeria Borghese requieren reserva.", "Primera hora: Los monumentos estan mas vacios a primera hora. Madruga.", "Roma Pass: EUR 53 (3 dias). Incluye 2 atracciones + transporte. Filas preferentes.", "Omnia Card: EUR 149 (3 dias). Todo incluido: Vaticano, Coliseo, transporte. Cara pero conveniente.", "Temporada: Evita Semana Santa, agosto, puentes festivos. Marzo, octubre, noviembre son ideales.", "Lunes: Muchos museos cierran los lunes. Verifica horarios.", "Tours guiados: Algunos incluyen acceso prioritario. Vale la pena el costo extra."]
+      },
+      {
+        title: "Donde Comer en Roma: Recomendaciones Locales",
+        content: "La gastronomia romana es sencilla pero perfecta. Estos son los platos que debes probar y donde encontrarlos:",
+        list: ["Carbonara: Da Enzo al 29 (Trastevere), Roscioli (Centro). EUR 12-15. Huevo, guanciale, pecorino.", "Cacio e Pepe: Felice a Testaccio. EUR 12. Solo queso pecorino y pimienta negra.", "Supplí: Bolas de arroz fritas con ragu y mozzarella. EUR 2-3. En cualquier pizzeria al taglio.", "Pizza al Taglio: Bonci (Prati) o Antico Forno Roscioli. Pizza al peso. EUR 3-5.", "Gelato: Giolitti (clasico), Fatamorgana (creativo), Fior di Luna (Trastevere). EUR 3-5.", "Aperitivo: En Roma incluye buffet. Freni e Frizioni (Trastevere) es legendario.", "Evita: Restaurantes con fotos en el menu, meseros que te jalan, menus en 8 idiomas."],
+        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Transporte en Roma",
+        content: "Roma es muy caminable, pero el transporte publico te ahorra tiempo y energia:",
+        list: ["Metro: 2 lineas (A y B) que cruzan la ciudad. EUR 1.50 por viaje.", "Billete 24h: EUR 7. Ilimitado en metro, bus, tranvia.", "Billete 72h: EUR 18. Mejor opcion para 3 dias.", "Taxis: Tarifa fija desde Fiumicino EUR 50, desde Ciampino EUR 31 al centro.", "Uber: Funciona pero es mas caro que taxi. FREE NOW es la app local de taxis.", "Caminando: Del Coliseo a Fontana di Trevi son 20 minutos. Roma es compacta.", "Tip: Valida siempre el billete antes de subir al metro/bus. Multas de EUR 100."]
+      },
+      {
+        title: "Cuando Visitar Roma",
+        content: "El clima y las multitudes varian drasticamente segun la temporada:",
+        list: ["Primavera (marzo-mayo): Ideal. Clima templado (15-22 C), flores, Semana Santa es especial pero llena.", "Verano (junio-agosto): Calor intenso (30-35 C). Agosto muchos romanos se van, pero turismo maximo.", "Otono (septiembre-noviembre): Excelente. Menos turistas, clima agradable, colores otoñales.", "Invierno (diciembre-febrero): Frio pero soportable (5-12 C). Menos filas, precios bajos, Navidad es magica.", "Eventos: Evita Roma durante grandes conferencias o partidos de futbol importantes.", "Fiestas: 25 abril, 1 mayo, 2 junio muchos sitios cierran.", "Ideal 2026: Segunda quincena de abril o primera de octubre. Clima perfecto, multitudes manejables."],
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Descubre Roma con Trips Europa",
+        content: "En Tripseuropa.com disenamos experiencias romanas a medida. Te conseguimos entradas sin filas al Coliseo y Vaticano, te reservamos en las trattorias donde comen los romanos, te llevamos a los miradores secretos y te conectamos con guias que hacen que las piedras antiguas cobren vida. Nuestros paquetes a Roma incluyen alojamiento en barrios autenticos, traslados, visitas guiadas en espanol, y recomendaciones exclusivas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje a la Ciudad Eterna.",
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuantos dias necesito para ver Roma?", answer: "3 dias es el minimo para ver lo esencial: Coliseo, Vaticano, y centro historico. 4-5 dias te permiten explorar con calma, anadir la Galeria Borghese, y disfrutar mas la gastronomia. Una semana es ideal para Roma sin prisas, incluyendo excursiones a Tivoli o los Castelli Romani." },
+      { question: "Es necesario reservar entradas con anticipacion?", answer: "Si, absolutamente. El Coliseo y los Museos Vaticanos requieren reserva obligatoria, especialmente en temporada alta (abril-octubre). Compra con 2-4 semanas de anticipacion. Sin reserva, puedes esperar 2-3 horas o no entrar." },
+      { question: "Cuanto dinero necesito por dia en Roma?", answer: "Presupuesto medio: EUR 80-120 por persona por dia (sin alojamiento). Esto incluye entradas (EUR 20-35), comidas (EUR 30-50), transporte (EUR 7), y extras. Roma puede ser economica si comes pizza al taglio y evitas trampas turisticas." },
+      { question: "El Roma Pass vale la pena?", answer: "Depende. El Roma Pass (EUR 53, 3 dias) incluye 2 atracciones + transporte ilimitado + descuentos. Si vas a Coliseo (EUR 18) y Museos Vaticanos (EUR 21) y usas transporte, apenas empatas. La ventaja real es el acceso preferente al Coliseo. Para Vaticano necesitas reserva aparte igualmente." },
+      { question: "Que barrio es mejor para hospedarse?", answer: "Centro Storico (Navona, Pantheon): Ubicacion perfecta, caro. Trastevere: Encantador, ambiente local, algo alejado. Monti: Bohemio, cerca del Coliseo, buena relacion calidad-precio. Prati: Cerca del Vaticano, residencial, tranquilo. Evita Termini (zona de estacion, menos seguro de noche)." },
+      { question: "Roma es segura para turistas?", answer: "Si, Roma es segura. El principal riesgo son los carteristas en el metro, atracciones turisticas y mercados. Usa bolsos cruzados, no lleves cartera en bolsillo trasero, cuidado con grupos de ninos que te rodean. Por la noche, evita zonas alrededor de Termini. En general, es una ciudad muy segura." }
+    ]
   }
 ];
