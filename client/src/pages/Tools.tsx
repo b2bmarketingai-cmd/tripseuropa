@@ -265,27 +265,77 @@ function TripCalculator() {
   const [destination, setDestination] = useState("");
   const [travelers, setTravelers] = useState("1");
   const [days, setDays] = useState("");
-  const [result, setResult] = useState<{ flight: number; hotel: number; daily: number; total: number } | null>(null);
+  const [result, setResult] = useState<{ flight: number; hotel: number; daily: number; total: number; destName: string } | null>(null);
 
   const baseFlights: Record<string, number> = {
-    "bogota-madrid": 850,
-    "bogota-paris": 950,
-    "bogota-rome": 1050,
-    "bogota-barcelona": 900,
-    "medellin-madrid": 900,
-    "caracas-madrid": 750,
-    "caracas-paris": 850,
     default: 950,
   };
 
   const dailyCosts: Record<string, number> = {
-    madrid: 150,
     paris: 200,
     rome: 170,
+    madrid: 150,
     barcelona: 160,
+    lisbon: 130,
+    athens: 120,
     amsterdam: 180,
+    zurich: 280,
+    geneva: 260,
+    zagreb: 100,
     london: 220,
-    default: 170,
+    edinburgh: 180,
+    tirana: 80,
+    vienna: 160,
+    brussels: 150,
+    prague: 110,
+    copenhagen: 200,
+    helsinki: 180,
+    budapest: 95,
+    reykjavik: 250,
+    dublin: 180,
+    oslo: 220,
+    warsaw: 100,
+    bucharest: 90,
+    stockholm: 190,
+    riga: 100,
+    nicosia: 120,
+    default: 150,
+  };
+
+  const destNames: Record<string, { es: string; en: string; pt: string }> = {
+    paris: { es: "Paris, Francia", en: "Paris, France", pt: "Paris, Franca" },
+    rome: { es: "Roma, Italia", en: "Rome, Italy", pt: "Roma, Italia" },
+    madrid: { es: "Madrid, Espana", en: "Madrid, Spain", pt: "Madrid, Espanha" },
+    barcelona: { es: "Barcelona, Espana", en: "Barcelona, Spain", pt: "Barcelona, Espanha" },
+    lisbon: { es: "Lisboa, Portugal", en: "Lisbon, Portugal", pt: "Lisboa, Portugal" },
+    athens: { es: "Atenas, Grecia", en: "Athens, Greece", pt: "Atenas, Grecia" },
+    amsterdam: { es: "Amsterdam, Paises Bajos", en: "Amsterdam, Netherlands", pt: "Amsterdam, Paises Baixos" },
+    zurich: { es: "Zurich, Suiza", en: "Zurich, Switzerland", pt: "Zurique, Suica" },
+    geneva: { es: "Ginebra, Suiza", en: "Geneva, Switzerland", pt: "Genebra, Suica" },
+    zagreb: { es: "Zagreb, Croacia", en: "Zagreb, Croatia", pt: "Zagreb, Croacia" },
+    london: { es: "Londres, Reino Unido", en: "London, United Kingdom", pt: "Londres, Reino Unido" },
+    edinburgh: { es: "Edimburgo, Escocia", en: "Edinburgh, Scotland", pt: "Edimburgo, Escocia" },
+    tirana: { es: "Tirana, Albania", en: "Tirana, Albania", pt: "Tirana, Albania" },
+    vienna: { es: "Viena, Austria", en: "Vienna, Austria", pt: "Viena, Austria" },
+    brussels: { es: "Bruselas, Belgica", en: "Brussels, Belgium", pt: "Bruxelas, Belgica" },
+    prague: { es: "Praga, Republica Checa", en: "Prague, Czech Republic", pt: "Praga, Republica Tcheca" },
+    copenhagen: { es: "Copenhague, Dinamarca", en: "Copenhagen, Denmark", pt: "Copenhague, Dinamarca" },
+    helsinki: { es: "Helsinki, Finlandia", en: "Helsinki, Finland", pt: "Helsinquia, Finlandia" },
+    budapest: { es: "Budapest, Hungria", en: "Budapest, Hungary", pt: "Budapeste, Hungria" },
+    reykjavik: { es: "Reykjavik, Islandia", en: "Reykjavik, Iceland", pt: "Reykjavik, Islandia" },
+    dublin: { es: "Dublin, Irlanda", en: "Dublin, Ireland", pt: "Dublin, Irlanda" },
+    oslo: { es: "Oslo, Noruega", en: "Oslo, Norway", pt: "Oslo, Noruega" },
+    warsaw: { es: "Varsovia, Polonia", en: "Warsaw, Poland", pt: "Varsovia, Polonia" },
+    bucharest: { es: "Bucarest, Rumania", en: "Bucharest, Romania", pt: "Bucareste, Romenia" },
+    stockholm: { es: "Estocolmo, Suecia", en: "Stockholm, Sweden", pt: "Estocolmo, Suecia" },
+    riga: { es: "Riga, Estados Balticos", en: "Riga, Baltic States", pt: "Riga, Estados Balticos" },
+    nicosia: { es: "Nicosia, Chipre", en: "Nicosia, Cyprus", pt: "Nicosia, Chipre" },
+  };
+
+  const getDestLabel = (key: string) => {
+    const names = destNames[key];
+    if (!names) return key;
+    return language === "es" ? names.es : language === "pt" ? names.pt : names.en;
   };
 
   const calculate = () => {
@@ -293,16 +343,26 @@ function TripCalculator() {
     const numTravelers = parseInt(travelers) || 1;
     if (numDays <= 0 || !origin || !destination) return;
 
-    const flightKey = `${origin}-${destination}`;
-    const flightPerPerson = baseFlights[flightKey] || baseFlights.default;
+    const flightPerPerson = baseFlights.default;
     const dailyCost = dailyCosts[destination] || dailyCosts.default;
     
     const flightTotal = flightPerPerson * numTravelers;
     const hotelTotal = (dailyCost * 0.6) * numDays * Math.ceil(numTravelers / 2);
     const dailyTotal = (dailyCost * 0.4) * numDays * numTravelers;
     const total = flightTotal + hotelTotal + dailyTotal;
+    const destName = getDestLabel(destination);
 
-    setResult({ flight: flightTotal, hotel: hotelTotal, daily: dailyTotal, total });
+    setResult({ flight: flightTotal, hotel: hotelTotal, daily: dailyTotal, total, destName });
+  };
+
+  const handleWhatsAppContact = () => {
+    if (!result) return;
+    const message = language === "es" 
+      ? `Hola! Estoy interesado en un viaje a ${result.destName}. Somos ${travelers} viajero(s) por ${days} dias. Presupuesto estimado: $${result.total.toLocaleString()} USD. Me gustaria recibir una cotizacion personalizada.`
+      : language === "pt"
+      ? `Ola! Estou interessado em uma viagem para ${result.destName}. Somos ${travelers} viajante(s) por ${days} dias. Orcamento estimado: $${result.total.toLocaleString()} USD. Gostaria de receber um orcamento personalizado.`
+      : `Hello! I'm interested in a trip to ${result.destName}. We are ${travelers} traveler(s) for ${days} days. Estimated budget: $${result.total.toLocaleString()} USD. I would like to receive a personalized quote.`;
+    window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -327,9 +387,12 @@ function TripCalculator() {
                 <SelectItem value="medellin">Medellin, Colombia</SelectItem>
                 <SelectItem value="cartagena">Cartagena, Colombia</SelectItem>
                 <SelectItem value="cali">Cali, Colombia</SelectItem>
+                <SelectItem value="lima">Lima, Peru</SelectItem>
+                <SelectItem value="mexico">Ciudad de Mexico, Mexico</SelectItem>
+                <SelectItem value="buenos_aires">Buenos Aires, Argentina</SelectItem>
+                <SelectItem value="santiago">Santiago, Chile</SelectItem>
+                <SelectItem value="sao_paulo">Sao Paulo, Brasil</SelectItem>
                 <SelectItem value="caracas">Caracas, Venezuela</SelectItem>
-                <SelectItem value="maracaibo">Maracaibo, Venezuela</SelectItem>
-                <SelectItem value="valencia">Valencia, Venezuela</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -340,12 +403,33 @@ function TripCalculator() {
                 <SelectValue placeholder={t("tools.calculator.selectDest")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="madrid">Madrid, {language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
-                <SelectItem value="paris">{language === "es" ? "París, Francia" : language === "pt" ? "Paris, Franca" : "Paris, France"}</SelectItem>
-                <SelectItem value="barcelona">Barcelona, {language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
-                <SelectItem value="rome">{language === "es" ? "Roma, Italia" : language === "pt" ? "Roma, Italia" : "Rome, Italy"}</SelectItem>
-                <SelectItem value="amsterdam">{language === "es" ? "Ámsterdam, Países Bajos" : language === "pt" ? "Amsterda, Paises Baixos" : "Amsterdam, Netherlands"}</SelectItem>
-                <SelectItem value="london">{language === "es" ? "Londres, Reino Unido" : language === "pt" ? "Londres, Reino Unido" : "London, UK"}</SelectItem>
+                <SelectItem value="paris">{getDestLabel("paris")}</SelectItem>
+                <SelectItem value="rome">{getDestLabel("rome")}</SelectItem>
+                <SelectItem value="madrid">{getDestLabel("madrid")}</SelectItem>
+                <SelectItem value="barcelona">{getDestLabel("barcelona")}</SelectItem>
+                <SelectItem value="lisbon">{getDestLabel("lisbon")}</SelectItem>
+                <SelectItem value="athens">{getDestLabel("athens")}</SelectItem>
+                <SelectItem value="amsterdam">{getDestLabel("amsterdam")}</SelectItem>
+                <SelectItem value="zurich">{getDestLabel("zurich")}</SelectItem>
+                <SelectItem value="geneva">{getDestLabel("geneva")}</SelectItem>
+                <SelectItem value="zagreb">{getDestLabel("zagreb")}</SelectItem>
+                <SelectItem value="london">{getDestLabel("london")}</SelectItem>
+                <SelectItem value="edinburgh">{getDestLabel("edinburgh")}</SelectItem>
+                <SelectItem value="tirana">{getDestLabel("tirana")}</SelectItem>
+                <SelectItem value="vienna">{getDestLabel("vienna")}</SelectItem>
+                <SelectItem value="brussels">{getDestLabel("brussels")}</SelectItem>
+                <SelectItem value="prague">{getDestLabel("prague")}</SelectItem>
+                <SelectItem value="copenhagen">{getDestLabel("copenhagen")}</SelectItem>
+                <SelectItem value="helsinki">{getDestLabel("helsinki")}</SelectItem>
+                <SelectItem value="budapest">{getDestLabel("budapest")}</SelectItem>
+                <SelectItem value="reykjavik">{getDestLabel("reykjavik")}</SelectItem>
+                <SelectItem value="dublin">{getDestLabel("dublin")}</SelectItem>
+                <SelectItem value="oslo">{getDestLabel("oslo")}</SelectItem>
+                <SelectItem value="warsaw">{getDestLabel("warsaw")}</SelectItem>
+                <SelectItem value="bucharest">{getDestLabel("bucharest")}</SelectItem>
+                <SelectItem value="stockholm">{getDestLabel("stockholm")}</SelectItem>
+                <SelectItem value="riga">{getDestLabel("riga")}</SelectItem>
+                <SelectItem value="nicosia">{getDestLabel("nicosia")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -403,6 +487,16 @@ function TripCalculator() {
             <p className="text-xs text-muted-foreground text-center">
               {t("tools.calculator.note")}
             </p>
+            <Button 
+              onClick={handleWhatsAppContact} 
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-bold mt-4"
+              data-testid="button-calc-whatsapp"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              {language === "es" ? "Solicitar Cotizacion por WhatsApp" : language === "pt" ? "Solicitar Orcamento pelo WhatsApp" : "Request Quote via WhatsApp"}
+            </Button>
           </div>
         )}
       </CardContent>
