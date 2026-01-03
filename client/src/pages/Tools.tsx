@@ -80,25 +80,91 @@ function SolvencyCalculator() {
   const { t, language } = useI18n();
   const [days, setDays] = useState("");
   const [country, setCountry] = useState("");
-  const [result, setResult] = useState<{ amount: number; perDay: number } | null>(null);
+  const [result, setResult] = useState<{ amount: number; perDay: number; countryName: string } | null>(null);
 
   const schengenRates: Record<string, number> = {
-    spain: 120,
     france: 120,
     italy: 110,
+    spain: 120,
     germany: 100,
-    netherlands: 105,
     portugal: 85,
+    greece: 80,
+    netherlands: 105,
+    switzerland: 150,
+    croatia: 75,
+    uk: 130,
+    albania: 60,
+    austria: 110,
+    belgium: 100,
+    czechia: 75,
+    denmark: 120,
+    finland: 115,
+    hungary: 70,
+    iceland: 140,
+    ireland: 120,
+    norway: 130,
+    poland: 70,
+    romania: 65,
+    sweden: 120,
+    baltics: 75,
+    cyprus: 85,
+    scotland: 130,
     default: 100,
+  };
+
+  const countryNames: Record<string, { es: string; en: string; pt: string }> = {
+    france: { es: "Francia", en: "France", pt: "Franca" },
+    italy: { es: "Italia", en: "Italy", pt: "Italia" },
+    spain: { es: "España", en: "Spain", pt: "Espanha" },
+    germany: { es: "Alemania", en: "Germany", pt: "Alemanha" },
+    portugal: { es: "Portugal", en: "Portugal", pt: "Portugal" },
+    greece: { es: "Grecia", en: "Greece", pt: "Grecia" },
+    netherlands: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" },
+    switzerland: { es: "Suiza", en: "Switzerland", pt: "Suica" },
+    croatia: { es: "Croacia", en: "Croatia", pt: "Croacia" },
+    uk: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" },
+    albania: { es: "Albania", en: "Albania", pt: "Albania" },
+    austria: { es: "Austria", en: "Austria", pt: "Austria" },
+    belgium: { es: "Belgica", en: "Belgium", pt: "Belgica" },
+    czechia: { es: "Republica Checa", en: "Czech Republic", pt: "Republica Tcheca" },
+    denmark: { es: "Dinamarca", en: "Denmark", pt: "Dinamarca" },
+    finland: { es: "Finlandia", en: "Finland", pt: "Finlandia" },
+    hungary: { es: "Hungria", en: "Hungary", pt: "Hungria" },
+    iceland: { es: "Islandia", en: "Iceland", pt: "Islandia" },
+    ireland: { es: "Irlanda", en: "Ireland", pt: "Irlanda" },
+    norway: { es: "Noruega", en: "Norway", pt: "Noruega" },
+    poland: { es: "Polonia", en: "Poland", pt: "Polonia" },
+    romania: { es: "Rumania", en: "Romania", pt: "Romenia" },
+    sweden: { es: "Suecia", en: "Sweden", pt: "Suecia" },
+    baltics: { es: "Estados Balticos", en: "Baltic States", pt: "Estados Balticos" },
+    cyprus: { es: "Chipre", en: "Cyprus", pt: "Chipre" },
+    scotland: { es: "Escocia", en: "Scotland", pt: "Escocia" },
+  };
+
+  const getCountryLabel = (key: string) => {
+    const names = countryNames[key];
+    if (!names) return key;
+    return language === "es" ? names.es : language === "pt" ? names.pt : names.en;
   };
 
   const calculate = () => {
     const numDays = parseInt(days) || 0;
-    if (numDays <= 0) return;
+    if (numDays <= 0 || !country) return;
     
     const perDay = schengenRates[country] || schengenRates.default;
     const amount = perDay * numDays;
-    setResult({ amount, perDay });
+    const countryName = getCountryLabel(country);
+    setResult({ amount, perDay, countryName });
+  };
+
+  const handleWhatsAppContact = () => {
+    if (!result) return;
+    const message = language === "es" 
+      ? `Hola! Acabo de calcular la solvencia economica para mi viaje a ${result.countryName}. Necesito ${result.amount.toLocaleString()} EUR para ${days} dias. Me gustaria recibir mas informacion sobre como planificar mi viaje.`
+      : language === "pt"
+      ? `Ola! Acabei de calcular a solvencia economica para minha viagem a ${result.countryName}. Preciso de ${result.amount.toLocaleString()} EUR para ${days} dias. Gostaria de receber mais informacoes sobre como planejar minha viagem.`
+      : `Hello! I just calculated the economic solvency for my trip to ${result.countryName}. I need ${result.amount.toLocaleString()} EUR for ${days} days. I would like to receive more information about planning my trip.`;
+    window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -131,12 +197,32 @@ function SolvencyCalculator() {
                 <SelectValue placeholder={t("tools.solvency.selectCountry")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="spain">{language === "es" ? "España" : language === "pt" ? "Espanha" : "Spain"}</SelectItem>
-                <SelectItem value="france">{language === "es" ? "Francia" : language === "pt" ? "Franca" : "France"}</SelectItem>
-                <SelectItem value="italy">{language === "es" ? "Italia" : language === "pt" ? "Italia" : "Italy"}</SelectItem>
-                <SelectItem value="germany">{language === "es" ? "Alemania" : language === "pt" ? "Alemanha" : "Germany"}</SelectItem>
-                <SelectItem value="netherlands">{language === "es" ? "Países Bajos" : language === "pt" ? "Paises Baixos" : "Netherlands"}</SelectItem>
-                <SelectItem value="portugal">Portugal</SelectItem>
+                <SelectItem value="france">{getCountryLabel("france")}</SelectItem>
+                <SelectItem value="italy">{getCountryLabel("italy")}</SelectItem>
+                <SelectItem value="spain">{getCountryLabel("spain")}</SelectItem>
+                <SelectItem value="germany">{getCountryLabel("germany")}</SelectItem>
+                <SelectItem value="portugal">{getCountryLabel("portugal")}</SelectItem>
+                <SelectItem value="greece">{getCountryLabel("greece")}</SelectItem>
+                <SelectItem value="netherlands">{getCountryLabel("netherlands")}</SelectItem>
+                <SelectItem value="switzerland">{getCountryLabel("switzerland")}</SelectItem>
+                <SelectItem value="croatia">{getCountryLabel("croatia")}</SelectItem>
+                <SelectItem value="uk">{getCountryLabel("uk")}</SelectItem>
+                <SelectItem value="albania">{getCountryLabel("albania")}</SelectItem>
+                <SelectItem value="austria">{getCountryLabel("austria")}</SelectItem>
+                <SelectItem value="belgium">{getCountryLabel("belgium")}</SelectItem>
+                <SelectItem value="czechia">{getCountryLabel("czechia")}</SelectItem>
+                <SelectItem value="denmark">{getCountryLabel("denmark")}</SelectItem>
+                <SelectItem value="finland">{getCountryLabel("finland")}</SelectItem>
+                <SelectItem value="hungary">{getCountryLabel("hungary")}</SelectItem>
+                <SelectItem value="iceland">{getCountryLabel("iceland")}</SelectItem>
+                <SelectItem value="ireland">{getCountryLabel("ireland")}</SelectItem>
+                <SelectItem value="norway">{getCountryLabel("norway")}</SelectItem>
+                <SelectItem value="poland">{getCountryLabel("poland")}</SelectItem>
+                <SelectItem value="romania">{getCountryLabel("romania")}</SelectItem>
+                <SelectItem value="sweden">{getCountryLabel("sweden")}</SelectItem>
+                <SelectItem value="baltics">{getCountryLabel("baltics")}</SelectItem>
+                <SelectItem value="cyprus">{getCountryLabel("cyprus")}</SelectItem>
+                <SelectItem value="scotland">{getCountryLabel("scotland")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -147,7 +233,7 @@ function SolvencyCalculator() {
         </Button>
 
         {result && (
-          <div className="bg-accent/10 rounded-lg p-6 text-center" data-testid="result-solvency">
+          <div className="bg-accent/10 rounded-lg p-6 text-center space-y-4" data-testid="result-solvency">
             <p className="text-sm text-muted-foreground mb-2">{t("tools.solvency.required")}</p>
             <p className="text-4xl font-bold text-primary font-display">{result.amount.toLocaleString()} EUR</p>
             <p className="text-sm text-muted-foreground mt-2">
@@ -156,6 +242,16 @@ function SolvencyCalculator() {
             <p className="text-xs text-muted-foreground mt-4 max-w-md mx-auto">
               {t("tools.solvency.note")}
             </p>
+            <Button 
+              onClick={handleWhatsAppContact} 
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-bold mt-4"
+              data-testid="button-solvency-whatsapp"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              {language === "es" ? "Contactar por WhatsApp" : language === "pt" ? "Contatar pelo WhatsApp" : "Contact via WhatsApp"}
+            </Button>
           </div>
         )}
       </CardContent>
