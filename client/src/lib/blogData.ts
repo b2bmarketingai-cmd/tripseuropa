@@ -2527,7 +2527,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     excerpt: { es: "Requisitos actualizados, documentos necesarios, costo, tiempo de tramite y consejos para aprobar tu visa Schengen desde Colombia.", en: "Updated requirements, necessary documents, cost, processing time and tips to get your Schengen visa from Colombia approved." },
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
-    date: "25 Dic 2024",
+    date: "02 Ene 2026",
     readTime: 12,
     author: "Trips Europa",
     keywords: ["visa schengen colombia", "requisitos visa europa", "visa schengen 2026", "schengen colombianos", "visa europa colombia"],
