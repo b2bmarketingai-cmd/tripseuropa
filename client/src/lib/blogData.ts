@@ -496,6 +496,80 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "tapas-madrid-guia",
+    slug: "tapas-madrid-guia",
+    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Mejores Bares de Tapas en Madrid: Ruta Gastronomica", en: "Best Tapas Bars in Madrid: Gastronomic Route" },
+    excerpt: { es: "La Latina, Malasana, Chueca. Los barrios con las mejores tapas y como hacer un 'tapeo'.", en: "La Latina, Malasana, Chueca. The neighborhoods with the best tapas and how to do a 'tapeo'." },
+    category: "gastronomia",
+    categoryLabel: { es: "Gastronomia", en: "Gastronomy" },
+    date: "30 Nov 2024",
+    readTime: 9,
+    author: "Trips Europa",
+    keywords: ["tapas madrid", "donde comer madrid", "ruta tapas", "la latina", "malasana", "chueca"],
+    featured: false,
+    sections: [
+      {
+        title: "El Arte del Tapeo Madrileno",
+        content: "Las tapas son mucho mas que comida: son una forma de vida espanola. En Madrid, 'ir de tapas' o 'tapear' significa recorrer varios bares, tomando una cana (cerveza pequena) o un vino en cada uno, acompanado de pequenas porciones de comida. Es una experiencia social, gastronomica y cultural que todo viajero latinoamericano debe vivir. La tradicion dice que nunca te quedas en un solo bar - el tapeo es un paseo culinario por la ciudad.",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Como Hacer un Tapeo Como un Madrileno",
+        content: "Para disfrutar el tapeo como un local, sigue estas reglas no escritas que te haran sentir como un autentico madrileno.",
+        list: ["Empieza temprano: El aperitivo es a las 13:00-14:00, la cena a las 21:00-22:00", "Una cana por bar: Maximo dos consumiciones, luego cambias de sitio", "Pide en la barra: Es mas economico y mas autentico que sentarse", "Comparte: Las raciones son para compartir entre el grupo", "Sigue a los locales: Si el bar esta lleno de madrilenos, es buena senal", "Paga al final: En bares tradicionales pides la cuenta cuando te vas", "No tengas prisa: El tapeo es social, disfruta la conversacion"]
+      },
+      {
+        title: "La Latina: El Epicentro del Tapeo",
+        content: "La Latina es el barrio historico por excelencia para tapear. Sus calles empedradas alrededor del Mercado de la Cebada y la Cava Baja concentran decenas de bares miticos. Los domingos despues del Rastro (mercadillo) es tradicion acabar aqui de tapas.",
+        list: ["Juana La Loca: Famosa por su tortilla de patatas jugosa, de las mejores de Madrid", "Casa Lucas: Tapas creativas y vinos naturales, ambiente moderno", "El Tempranillo: Especialista en vinos espanoles, tapas tradicionales", "Txirimiri: Pintxos vascos de alta calidad, croquetas espectaculares", "Casa Lucio: Legendarios huevos rotos con jamon iberico", "La Barraca: Arroces y paellas, ideal para grupos"]
+      },
+      {
+        title: "Malasana: Tapas Alternativas y Modernas",
+        content: "Malasana es el barrio hipster de Madrid, lleno de tiendas vintage, arte urbano y bares con personalidad. Aqui encontraras tapas creativas, fusion y vegetarianas, junto a tabernas clasicas que sobreviven desde hace decadas.",
+        list: ["Bodega de la Ardosa: Abierta desde 1892, vermut de grifo y tortilla perfecta", "La Musa: Tapas modernas, brunch los fines de semana", "Ojalá: Restaurante con playa interior, cocina fusion mediterranea", "El Tigre: Tapas gratis abundantes con cada bebida (turistico pero divertido)", "Lateral: Tapas gourmet en ambiente elegante", "Federal Cafe: Brunch australiano, opciones vegetarianas y veganas"]
+      },
+      {
+        title: "Chueca: Diversidad y Sabor",
+        content: "Chueca es el vibrante barrio LGBTQ+ de Madrid, conocido por su ambiente acogedor, terrazas animadas y excelente oferta gastronomica. Aqui conviven tabernas clasicas con propuestas internacionales y modernas.",
+        list: ["Mercado de San Anton: Tres plantas de puestos gourmet y terraza con vistas", "Bazaar: Tapas creativas en ambiente trendy, excelente relacion calidad-precio", "El Bocaito: Clasico andaluz, pescaitos fritos y gazpacho", "La Barraca: Referente de arroces desde hace decadas", "Celso y Manolo: Vermuteria clasica con tapas tradicionales", "Stop Madrid: Bocadillos de calamares legendarios"]
+      },
+      {
+        title: "Lavapies: Multiculturalidad y Autenticidad",
+        content: "Lavapies es el barrio mas multicultural de Madrid, donde conviven tabernas centenarias con restaurantes de todo el mundo. Es autentico, economico y lleno de vida. Perfecto para quienes buscan experiencias fuera de lo turistico.",
+        list: ["Taberna de Antonio Sanchez: La mas antigua de Madrid (1830), puro viaje en el tiempo", "Casa Amadeo: Los mejores caracoles de Madrid, solo abierto en temporada", "Bar Santurce: Sardinas a la brasa en plena calle, experiencia unica", "El Economico: Cocina casera, precios de otra epoca", "Frida: Cocina mexicana autentica, tacos y mezcal", "Tribuetxe: Pintxos vascos de calidad en ambiente informal"]
+      },
+      {
+        title: "Tapas Imprescindibles que Debes Probar",
+        content: "La cocina madrilena tiene platos emblematicos que no puedes perderte. Estas son las tapas clasicas que definen la gastronomia de la capital.",
+        list: ["Tortilla de patatas: El clasico por excelencia, jugosa o cuajada segun preferencia", "Patatas bravas: Patatas fritas con salsa picante, cada bar tiene su version", "Croquetas: De jamon, bacalao o boletus, cremosas por dentro", "Huevos rotos: Huevos fritos sobre jamon y patatas, originales de Casa Lucio", "Bocadillo de calamares: Pan crujiente con calamares fritos, tipico de la Plaza Mayor", "Oreja a la plancha: Para aventureros, oreja de cerdo crujiente", "Jamon iberico: El rey de los embutidos espanoles, cortado a mano"]
+      },
+      {
+        title: "Mercados Gastronomicos: Otra Forma de Tapear",
+        content: "Madrid ha transformado sus mercados tradicionales en destinos gastronomicos. Combinan puestos de productos frescos con espacios de degustacion donde puedes probar de todo un poco.",
+        list: ["Mercado de San Miguel: El mas turistico pero espectacular, junto a Plaza Mayor", "Mercado de San Anton (Chueca): Tres plantas, terraza con vistas en la azotea", "Mercado de San Fernando (Lavapies): Alternativo, productos organicos y bares vintage", "Mercado de Vallehermoso (Chamberi): Para locales, excelente calidad-precio", "Mercado de Anton Martin (Lavapies): Multicultural, puestos de todo el mundo", "Mercado de la Paz (Salamanca): Elegante, productos gourmet de alta calidad"]
+      },
+      {
+        title: "Rutas de Tapeo Recomendadas",
+        content: "Te proponemos rutas tematicas para organizar tu tapeo madrileno segun tus intereses y el tiempo disponible.",
+        list: ["Ruta Clasica (La Latina): Juana La Loca > El Tempranillo > Casa Lucio (3 horas)", "Ruta Hipster (Malasana): Bodega de la Ardosa > La Musa > Federal Cafe (2-3 horas)", "Ruta Vermut (varios barrios): Mercado de la Paz > La Venencia > Casa Camacho (2 horas)", "Ruta Gastronomica (Chueca): Mercado San Anton > Bazaar > Lateral (3 horas)", "Ruta Multicultural (Lavapies): Taberna Antonio Sanchez > Frida > Casa Amadeo (3 horas)", "Ruta Economica: El Tigre > Stop Madrid > Bar Santurce (2 horas, muy barata)"]
+      },
+      {
+        title: "Consejos Practicos para el Tapeo",
+        content: "Para aprovechar al maximo tu experiencia gastronómica en Madrid, ten en cuenta estos consejos practicos.",
+        list: ["Horarios: Almuerzo 13:30-16:00, cena desde las 21:00 (antes los bares estan vacios)", "Domingos: La Latina despues del Rastro es tradicion, llega temprano", "Precios: Una cana 2-3 EUR, tapa 3-8 EUR, racion 8-15 EUR para compartir", "Menu del dia: Opcion economica (10-15 EUR) con primer plato, segundo, postre y bebida", "Propina: No obligatoria, redondear o dejar 5-10% si el servicio fue excelente", "Reservas: No suelen necesitarse para tapear, solo en restaurantes formales", "Terrazas: Geniales pero 10-15% mas caras que en barra"]
+      }
+    ],
+    faqs: [
+      { question: "Que diferencia hay entre tapa, pincho y racion?", answer: "La tapa es una porcion pequena (a veces gratis con la bebida). El pincho es lo mismo pero servido sobre pan con un palillo (tipico del Pais Vasco). La racion es una porcion grande para compartir entre 2-4 personas." },
+      { question: "Las tapas son gratis en Madrid?", answer: "A diferencia de Granada o Leon donde son gratis, en Madrid generalmente se pagan. Algunos bares como El Tigre ofrecen tapas gratis abundantes con cada bebida, pero son la excepcion." },
+      { question: "Cuanto cuesta un tapeo completo?", answer: "Un tapeo tipico visitando 3-4 bares con una cana y tapa en cada uno cuesta aproximadamente 20-30 EUR por persona. Si pides raciones para compartir, puede subir a 40-50 EUR." },
+      { question: "A que hora debo ir de tapas?", answer: "Para el aperitivo, entre 13:00-14:30. Para la cena, desde las 21:00 (antes los bares estan vacios). Los domingos por la manana despues del Rastro (10:00-14:00) es tradicion en La Latina." },
+      { question: "Hay opciones vegetarianas o veganas?", answer: "Cada vez mas. Malasana tiene muchas opciones modernas. Tapas clasicas vegetarianas incluyen: patatas bravas, pimientos de padron, tortilla, queso manchego, gazpacho y berenjenas con miel." },
+      { question: "Cual es el mejor barrio para tapear?", answer: "Depende de tu estilo. La Latina es clasico y tradicional. Malasana es alternativo y moderno. Chueca es diverso y animado. Lavapies es multicultural y autentico. Todos son excelentes opciones." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
