@@ -65,8 +65,8 @@ export function WhyChooseUs() {
   const content = {
     es: {
       title: "Por que elegir TripsEuropa?",
-      subtitle: "Mas de 10 anos de experiencia creando viajes inolvidables por Europa",
-      years: "Anos de experiencia",
+      subtitle: "Mas de 10 años de experiencia creando viajes inolvidables por Europa",
+      years: "Años de experiencia",
       travelers: "Viajeros felices",
       packages: "Paquetes disponibles",
       countries: "Paises en Europa",
@@ -81,8 +81,8 @@ export function WhyChooseUs() {
     },
     pt: {
       title: "Por que escolher TripsEuropa?",
-      subtitle: "Mais de 10 anos de experiencia criando viagens inesqueciveis pela Europa",
-      years: "Anos de experiencia",
+      subtitle: "Mais de 10 años de experiencia criando viagens inesqueciveis pela Europa",
+      years: "Años de experiencia",
       travelers: "Viajantes felizes",
       packages: "Pacotes disponiveis",
       countries: "Paises na Europa",
