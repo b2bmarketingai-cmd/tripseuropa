@@ -165,16 +165,6 @@ export default function BlogPost() {
                 <h2 className="text-2xl font-display text-accent mb-4">{section.title}</h2>
                 <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
                 
-                {section.image && (
-                  <div className="my-6 rounded-lg overflow-hidden">
-                    <img 
-                      src={section.image} 
-                      alt={section.title}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                )}
-                
                 {section.list && (
                   <ul className="list-disc pl-6 space-y-2 text-foreground">
                     {section.list.map((item: string, i: number) => (
