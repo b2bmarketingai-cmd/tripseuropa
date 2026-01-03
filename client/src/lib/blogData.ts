@@ -6194,5 +6194,101 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Los ATMs en Europa cobran comision?", answer: "Depende del ATM. Los cajeros de bancos reales (Santander, BNP Paribas, Deutsche Bank) generalmente no cobran comision propia. Los ATMs privados (Euronet, Travelex) cobran EUR 4-8 por transaccion ademas de mala tasa de cambio. Tu banco tambien puede cobrar comision aparte. Usa ATMs de bancos y tarjetas sin comision como Wise." },
       { question: "Es seguro usar tarjetas contactless en Europa?", answer: "Si, muy seguro. Europa tiene excelente infraestructura de pagos contactless. Puedes usar tarjeta o telefono (Apple Pay, Google Pay) en casi todos los comercios. Para mayor seguridad, usa cartera anti-RFID, activa notificaciones de transacciones, y ten la opcion de bloquear la tarjeta rapidamente desde la app." }
     ]
+  },
+  {
+    id: "pasaporte-europa-requisitos",
+    slug: "pasaporte-europa-requisitos",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Requisitos del Pasaporte para Viajar a Europa 2026", en: "Passport Requirements for Traveling to Europe 2026" },
+    excerpt: { es: "Vigencia minima, paginas en blanco, renovacion y casos especiales para pasaportes latinoamericanos.", en: "Minimum validity, blank pages, renewal and special cases for Latin American passports." },
+    category: "consejos",
+    categoryLabel: { es: "Consejos", en: "Tips" },
+    date: "20 Oct 2025",
+    readTime: 9,
+    author: "Trips Europa",
+    keywords: ["pasaporte europa", "requisitos pasaporte", "vigencia pasaporte", "renovar pasaporte", "pasaporte latinoamericano"],
+    featured: false,
+    sections: [
+      {
+        title: "Requisitos Basicos del Pasaporte para Europa",
+        content: "Para viajar a los paises del Espacio Schengen (la mayoria de Europa occidental), tu pasaporte debe cumplir requisitos especificos. No basta con que sea valido: hay reglas adicionales que muchos viajeros desconocen y que pueden arruinar tu viaje si no las cumples.",
+        list: ["Vigencia minima: Tu pasaporte debe ser valido por al menos 3 meses DESPUES de tu fecha de salida prevista de Europa.", "Antiguedad maxima: El pasaporte no debe haber sido emitido hace mas de 10 anos.", "Paginas en blanco: Necesitas al menos 2 paginas completamente en blanco para sellos de entrada/salida.", "Estado del pasaporte: Debe estar en buen estado, sin paginas rotas, manchas de agua, o danos que dificulten la lectura.", "Tipo de pasaporte: Pasaporte ordinario o de turismo. Pasaportes de emergencia tienen restricciones.", "Fotografia: Debe ser claramente reconocible y no estar danada o despegada."],
+        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Vigencia Minima: La Regla de los 3+3 Meses",
+        content: "La regla de vigencia es la mas importante y la que mas confunde. Aqui te la explicamos claramente:",
+        list: ["Regla oficial: Tu pasaporte debe ser valido por al menos 3 meses despues de la fecha en que planeas SALIR del Espacio Schengen.", "Ejemplo: Si tu vuelo de regreso es el 15 de agosto de 2026, tu pasaporte debe ser valido hasta al menos el 15 de noviembre de 2026.", "Recomendacion real: Ten al menos 6 meses de vigencia. Las aerolineas a veces son mas estrictas que los gobiernos.", "Aerolineas estrictas: Algunas (especialmente low-cost) te pueden negar el embarque si no cumples sus propias reglas de vigencia.", "Control en destino: Aunque la aerolinea te deje volar, el oficial de migracion puede rechazarte si no cumples.", "Calculo seguro: Suma 6 meses a tu fecha de regreso. Si tu pasaporte vence antes, renovalo.", "Casos reales: Hemos visto viajeros devueltos en el aeropuerto por 1 semana de diferencia. No tomes riesgos."]
+      },
+      {
+        title: "Paginas en Blanco: Cuantas Necesitas",
+        content: "Aunque Europa no es tan estricta como algunos paises asiaticos o africanos, necesitas espacio para sellos:",
+        list: ["Minimo requerido: 2 paginas completamente en blanco (consecutivas o no).", "Sello de entrada Schengen: Ocupa aproximadamente 1/4 de pagina.", "Sello de salida: Otro 1/4 de pagina aproximadamente.", "Multiples entradas: Si entras y sales del Espacio Schengen varias veces (ej: escala en Londres), necesitas mas espacio.", "Reino Unido: No es Schengen. Requiere sellos adicionales de entrada/salida.", "Paginas de visas: Si tienes visas antiguas, esas paginas ya NO cuentan como en blanco.", "Recomendacion: Ten al menos 4 paginas en blanco para un viaje de 2-3 semanas por Europa."],
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Pasaportes Latinoamericanos: Requisitos por Pais",
+        content: "Cada pais latinoamericano tiene acuerdos diferentes con Europa. Aqui el resumen actualizado para 2026:",
+        list: ["Mexico: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido desde 2025.", "Colombia: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido.", "Argentina: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido.", "Chile: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido.", "Peru: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido.", "Brasil: Sin visa para turismo hasta 90 dias en Schengen. ETIAS requerido.", "Ecuador: Visa Schengen REQUERIDA para turismo. Tramite ante consulado.", "Venezuela: Visa Schengen REQUERIDA para turismo. Situacion compleja, consulta con expertos.", "Bolivia: Visa Schengen REQUERIDA para turismo.", "Cuba: Visa Schengen REQUERIDA para turismo."]
+      },
+      {
+        title: "ETIAS: El Nuevo Requisito para 2026",
+        content: "A partir de 2025, los viajeros latinoamericanos exentos de visa necesitan autorizacion ETIAS:",
+        list: ["Que es ETIAS: Sistema Europeo de Informacion y Autorizacion de Viajes. Similar al ESTA de Estados Unidos.", "Quien lo necesita: Todos los ciudadanos exentos de visa (Mexico, Colombia, Argentina, Chile, Peru, Brasil, etc.).", "Como solicitarlo: Online en el sitio oficial de ETIAS. Proceso de 10-15 minutos.", "Costo: EUR 7 para adultos. Menores de 18 y mayores de 70 gratis.", "Validez: 3 anos o hasta que expire tu pasaporte (lo que ocurra primero).", "Tiempo de aprobacion: La mayoria se aprueban en minutos. Algunos casos pueden tardar hasta 30 dias.", "Cuando solicitarlo: Al menos 72 horas antes de viajar, idealmente 2 semanas antes.", "Importante: ETIAS no es visa. Solo es autorizacion de viaje. No garantiza entrada, el oficial de migracion decide."],
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Renovacion del Pasaporte: Tiempos y Consejos",
+        content: "Si tu pasaporte no cumple los requisitos, debes renovarlo. Aqui consejos por pais:",
+        list: ["Mexico (SRE): Cita online en gob.mx/pasaportes. Tiempo: 1-3 semanas segun demanda. Costo: ~USD 100.", "Colombia (Cancilleria): Cita online. Entrega en 1-2 semanas. Costo: ~USD 80.", "Argentina (RENAPER): Turno online. Puede demorar varias semanas en temporada alta. Costo: ~USD 80.", "Chile (Registro Civil): Solicitud online o presencial. 10-15 dias habiles. Costo: ~USD 100.", "Peru (Migraciones): Cita online obligatoria. 7-10 dias. Costo: ~USD 80.", "Pasaporte de emergencia: Algunos paises ofrecen pasaportes express (24-72 horas) por costo adicional.", "Consejo general: Inicia el tramite 3-4 meses antes de tu viaje. Los tiempos pueden extenderse inesperadamente.", "Temporada alta: Antes de vacaciones de verano (junio-julio) hay mas demanda. Anticipa."],
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Casos Especiales: Doble Nacionalidad y Menores",
+        content: "Algunas situaciones requieren atencion especial:",
+        list: ["Doble nacionalidad: Si tienes pasaporte europeo, usalo para entrar a Europa. Facilita todo.", "Pasaporte europeo vencido: Algunos paises permiten renovar pasaporte europeo en consulados antes de viajar.", "Menores de edad: Requieren pasaporte propio. No pueden viajar con pasaporte de los padres.", "Menores viajando solos: Autorizacion notarial de ambos padres. Requisitos varian por pais de origen.", "Menores con un solo padre: Autorizacion del padre ausente o sentencia de custodia.", "Apellidos diferentes: Si el menor tiene apellido diferente al adulto acompanante, lleva acta de nacimiento apostillada.", "Adopcion: Documentos de adopcion apostillados si los apellidos no coinciden.", "Refugiados/asilados: Documentos de viaje especiales. Consulta con ACNUR o autoridades migratorias."]
+      },
+      {
+        title: "Control de Migracion: Que Esperar al Llegar",
+        content: "Al llegar a Europa, pasaras por control migratorio. Esto es lo que sucede:",
+        list: ["Primer punto de entrada: El control se realiza en el primer pais Schengen al que llegas.", "Documentos a mostrar: Pasaporte, ETIAS (impreso o en telefono), tarjeta de embarque.", "Preguntas comunes: Motivo del viaje, duracion, donde te alojaras, fondos disponibles.", "Comprobantes recomendados: Reserva de hotel, vuelo de regreso, seguro de viaje, extracto bancario reciente.", "Actitud: Tranquilo, respetuoso, respuestas claras y concisas. No te pongas nervioso.", "Sello de entrada: Te sellaran el pasaporte con fecha. Este sello es tu 'reloj' de los 90 dias.", "Si hay problemas: Mantén la calma. Pide hablar con supervisor si sientes trato injusto.", "Control automatico: Algunos aeropuertos tienen puertas automaticas para pasaportes biometricos."],
+        image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "La Regla de los 90/180 Dias",
+        content: "Entender esta regla es crucial para no tener problemas migratorios:",
+        list: ["Regla basica: Puedes estar maximo 90 dias dentro de cualquier periodo de 180 dias en el Espacio Schengen.", "Calculo: Los 180 dias se cuentan hacia atras desde cualquier dia de estancia.", "Ejemplo: Si entraste el 1 de enero y saliste el 31 de marzo (90 dias), no puedes volver hasta el 1 de julio.", "Acumulativo: Todos los dias en CUALQUIER pais Schengen cuentan juntos.", "Paises no Schengen: Reino Unido, Irlanda, Croacia (hasta 2023), Chipre, Bulgaria, Rumania tienen sus propios conteos.", "Consecuencias de exceder: Multa, deportacion, prohibicion de entrada futura (1-5 anos tipicamente).", "Calculadora oficial: Usa la calculadora Schengen de la Comision Europea para verificar.", "Si necesitas mas tiempo: Visa de larga duracion o residencia requerida. Consulta antes de viajar."]
+      },
+      {
+        title: "Seguro de Viaje: Requisito No Siempre Obligatorio",
+        content: "Aunque tecnicamente no es obligatorio para latinoamericanos exentos de visa, es altamente recomendado:",
+        list: ["Requisito formal: Solo obligatorio para quienes necesitan visa Schengen (Ecuador, Venezuela, Bolivia, etc.).", "Cobertura minima: EUR 30,000 en gastos medicos. Repatriacion incluida.", "Recomendacion real: Aunque no te lo pidan, lleva seguro. Una hospitalizacion puede costar EUR 5,000-50,000.", "Comprobante: Lleva copia impresa o en telefono. Algunos oficiales lo piden aunque no sea obligatorio.", "Que cubre: Gastos medicos, cancelacion de vuelo, perdida de equipaje, repatriacion.", "Costo aproximado: EUR 30-100 para viaje de 2-3 semanas segun cobertura.", "Donde comprar: World Nomads, Allianz, IATI, Chapka. Compara coberturas.", "COVID y pandemias: Verifica que tu seguro cubra enfermedades infecciosas."],
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Documentos Adicionales Recomendados",
+        content: "Ademas del pasaporte, lleva estos documentos para facilitar tu entrada:",
+        list: ["Reserva de vuelo de regreso: Impresa o en telefono. Demuestra intencion de salir.", "Reservas de alojamiento: Hoteles, Airbnb, carta de invitacion si te quedas con amigos/familia.", "Extracto bancario: Ultimos 3 meses mostrando fondos suficientes (recomendado EUR 50-100/dia de estancia).", "Carta de trabajo/estudios: Si tienes empleo o estudias, demuestra que tienes razon para volver.", "Tarjetas de credito: Muestran solvencia economica.", "Seguro de viaje: Copia de poliza con detalles de cobertura.", "Itinerario: Un plan general de que haras y donde iras.", "Copias de todo: Lleva copias fisicas y digitales (en nube) de todos los documentos importantes."]
+      },
+      {
+        title: "Errores Comunes y Como Evitarlos",
+        content: "Estos son los errores mas frecuentes que vemos en viajeros latinoamericanos:",
+        list: ["Calcular mal la vigencia: Cuentan desde la entrada, no desde la salida. Error costoso.", "No revisar paginas en blanco: Llegan al aeropuerto y no tienen espacio para sellos.", "Pasaporte danado: Agua, dobleces, paginas rotas. Pueden rechazarte.", "Olvidar ETIAS: Nuevo requisito que muchos desconocen.", "No llevar comprobantes: Hotel, vuelo de regreso, fondos. Te los pueden pedir.", "Exceder los 90 dias: Calculan mal y se pasan. Consecuencias serias.", "Viajar sin seguro: No obligatorio pero un accidente puede costar miles de euros.", "No avisar al banco: Tarjetas bloqueadas por actividad sospechosa en el extranjero."],
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Viaja Tranquilo con Trips Europa",
+        content: "En Tripseuropa.com te ayudamos a tener todos tus documentos en regla antes de viajar. Revisamos que tu pasaporte cumpla todos los requisitos, te guiamos en el proceso de ETIAS, te asesoramos sobre seguros de viaje, y te preparamos con todos los comprobantes necesarios para una entrada sin problemas. Nuestros paquetes incluyen asistencia documental completa para que solo te preocupes de disfrutar tu viaje. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con tranquilidad total.",
+        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuanta vigencia debe tener mi pasaporte para viajar a Europa?", answer: "Tu pasaporte debe ser valido por al menos 3 meses despues de tu fecha de SALIDA prevista del Espacio Schengen, y no haber sido emitido hace mas de 10 anos. Recomendamos tener al menos 6 meses de vigencia para evitar problemas con aerolineas." },
+      { question: "Cuantas paginas en blanco necesito en mi pasaporte?", answer: "Necesitas al menos 2 paginas completamente en blanco para sellos de entrada y salida. Si tu itinerario incluye paises fuera del Espacio Schengen (como Reino Unido), necesitaras mas paginas. Recomendamos tener 4 paginas en blanco." },
+      { question: "Que es ETIAS y cuando entra en vigor?", answer: "ETIAS es el Sistema Europeo de Informacion y Autorizacion de Viajes, similar al ESTA de EE.UU. Entro en vigor en 2025 y es obligatorio para ciudadanos latinoamericanos exentos de visa (Mexico, Colombia, Argentina, Chile, Peru, Brasil, etc.). Cuesta EUR 7 y se solicita online." },
+      { question: "Cuanto tiempo puedo estar en Europa como turista?", answer: "Puedes estar maximo 90 dias dentro de cualquier periodo de 180 dias en el Espacio Schengen. Esto es acumulativo: si pasas 30 dias en Espana y 60 en Francia, has usado tus 90 dias. Despues debes esperar para volver." },
+      { question: "Necesito visa si soy de Ecuador o Venezuela?", answer: "Si, ciudadanos de Ecuador, Venezuela, Bolivia y Cuba necesitan visa Schengen para turismo. Debes solicitarla en el consulado del pais principal de destino con antelacion. El proceso toma 2-4 semanas tipicamente." },
+      { question: "Que pasa si mi pasaporte esta danado?", answer: "Un pasaporte con paginas rotas, manchas de agua, cubierta danada o foto despegada puede ser rechazado. Los oficiales de migracion pueden considerar que no es un documento valido. Si tu pasaporte tiene danos, renovalo antes de viajar." }
+    ]
   }
 ];
