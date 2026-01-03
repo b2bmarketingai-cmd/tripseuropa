@@ -2250,7 +2250,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-baratos-ofertas",
     title: { es: "Vuelos Baratos: Como Encontrar las Mejores Ofertas", en: "Cheap Flights: How to Find the Best Deals" },
     excerpt: { es: "Estrategias probadas para encontrar vuelos economicos a Europa. Desde alertas de precio hasta fechas flexibles y aerolineas low cost.", en: "Proven strategies to find cheap flights to Europe. From price alerts to flexible dates and low-cost airlines." },
-    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3c?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/vuelos-baratos-ofertas.png",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-04",
