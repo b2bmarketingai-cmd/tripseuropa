@@ -27,8 +27,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "mejores-lugares-espana",
     slug: "mejores-lugares-espana",
     image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "20 Mejores Lugares de Espana que Debes Visitar", en: "20 Best Places in Spain You Must Visit" },
-    excerpt: { es: "Espana es un pais fascinante lleno de paisajes impresionantes y rica historia. Descubre los mejores lugares para explorar desde Barcelona hasta Sevilla.", en: "Spain is a fascinating country full of stunning landscapes and rich history. Discover the best places to explore from Barcelona to Seville." },
+    title: { es: "20 Mejores Lugares de España que Debes Visitar", en: "20 Best Places in Spain You Must Visit" },
+    excerpt: { es: "España es un pais fascinante lleno de paisajes impresionantes y rica historia. Descubre los mejores lugares para explorar desde Barcelona hasta Sevilla.", en: "Spain is a fascinating country full of stunning landscapes and rich history. Discover the best places to explore from Barcelona to Seville." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "02 Ene 2025",
@@ -39,12 +39,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Barcelona: La Joya del Mediterraneo",
-        content: "Barcelona es, sin duda, una de las ciudades mas vibrantes y visitadas de Espana. Conocida por su arquitectura unica, especialmente las obras de Antoni Gaudi como la Sagrada Familia y el Parque Guell, esta ciudad ofrece una mezcla perfecta de historia, cultura y modernidad. Pasear por Las Ramblas, disfrutar de las playas de la Barceloneta y explorar el Barrio Gotico son experiencias imperdibles.",
+        content: "Barcelona es, sin duda, una de las ciudades mas vibrantes y visitadas de España. Conocida por su arquitectura unica, especialmente las obras de Antoni Gaudi como la Sagrada Familia y el Parque Guell, esta ciudad ofrece una mezcla perfecta de historia, cultura y modernidad. Pasear por Las Ramblas, disfrutar de las playas de la Barceloneta y explorar el Barrio Gotico son experiencias imperdibles.",
         image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Madrid: La Capital con Corazon",
-        content: "Madrid, la capital de Espana, es una ciudad llena de vida y cultura. Desde el impresionante Palacio Real hasta el famoso Museo del Prado, hay algo para todos. La Gran Via, con sus tiendas y teatros, es el corazon palpitante de la ciudad. No te pierdas el Parque del Retiro para un paseo relajante.",
+        content: "Madrid, la capital de España, es una ciudad llena de vida y cultura. Desde el impresionante Palacio Real hasta el famoso Museo del Prado, hay algo para todos. La Gran Via, con sus tiendas y teatros, es el corazon palpitante de la ciudad. No te pierdas el Parque del Retiro para un paseo relajante.",
         image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -76,9 +76,9 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Cual es la mejor epoca para visitar Espana?", answer: "La primavera (abril-junio) y el otono (septiembre-octubre) ofrecen temperaturas agradables y menos turistas. El verano es ideal para playas pero puede ser muy caluroso en el interior." },
-      { question: "Cuantos dias necesito para ver lo mejor de Espana?", answer: "Un minimo de 10-14 dias permite visitar las principales ciudades. Para una experiencia completa, recomendamos 3 semanas." },
-      { question: "Los latinoamericanos necesitan visa para Espana?", answer: "Ciudadanos de la mayoria de paises latinoamericanos pueden entrar a Espana sin visa por hasta 90 dias para turismo." }
+      { question: "Cual es la mejor epoca para visitar España?", answer: "La primavera (abril-junio) y el otono (septiembre-octubre) ofrecen temperaturas agradables y menos turistas. El verano es ideal para playas pero puede ser muy caluroso en el interior." },
+      { question: "Cuantos dias necesito para ver lo mejor de España?", answer: "Un minimo de 10-14 dias permite visitar las principales ciudades. Para una experiencia completa, recomendamos 3 semanas." },
+      { question: "Los latinoamericanos necesitan visa para España?", answer: "Ciudadanos de la mayoria de paises latinoamericanos pueden entrar a España sin visa por hasta 90 dias para turismo." }
     ]
   },
   {
@@ -107,7 +107,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Cala Granadella en Javea",
-        content: "Considerada una de las mejores calas de Espana, Granadella ofrece aguas turquesas rodeadas de acantilados. Es perfecta para snorkel y buceo. Aunque es pequena, su belleza natural la convierte en imprescindible."
+        content: "Considerada una de las mejores calas de España, Granadella ofrece aguas turquesas rodeadas de acantilados. Es perfecta para snorkel y buceo. Aunque es pequena, su belleza natural la convierte en imprescindible."
       },
       {
         title: "Playa de la Cala del Moraig",
@@ -169,8 +169,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "emigrar-espana-guia",
     slug: "emigrar-espana-guia",
     image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Emigrar a Espana: Guia Completa para Latinoamericanos", en: "Emigrate to Spain: Complete Guide for Latin Americans" },
-    excerpt: { es: "Todo lo que necesitas saber para emigrar a Espana desde Latinoamerica: visados, trabajo, vivienda, sanidad y proceso de regularizacion.", en: "Everything you need to know to emigrate to Spain from Latin America: visas, work, housing, healthcare and regularization process." },
+    title: { es: "Emigrar a España: Guia Completa para Latinoamericanos", en: "Emigrate to Spain: Complete Guide for Latin Americans" },
+    excerpt: { es: "Todo lo que necesitas saber para emigrar a España desde Latinoamerica: visados, trabajo, vivienda, sanidad y proceso de regularizacion.", en: "Everything you need to know to emigrate to Spain from Latin America: visas, work, housing, healthcare and regularization process." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "28 Dic 2024",
@@ -180,14 +180,14 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: true,
     sections: [
       {
-        title: "Por Que Emigrar a Espana",
-        content: "Espana se ha convertido en uno de los destinos preferidos para latinoamericanos por el idioma compartido, la cultura cercana, el sistema de salud publico, la calidad de vida y las oportunidades de obtener la ciudadania en solo 2 anos (para ciudadanos iberoamericanos). Ademas, ofrece acceso a toda la Union Europea.",
+        title: "Por Que Emigrar a España",
+        content: "España se ha convertido en uno de los destinos preferidos para latinoamericanos por el idioma compartido, la cultura cercana, el sistema de salud publico, la calidad de vida y las oportunidades de obtener la ciudadania en solo 2 anos (para ciudadanos iberoamericanos). Ademas, ofrece acceso a toda la Union Europea.",
         image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        title: "Tipos de Visados para Espana",
+        title: "Tipos de Visados para España",
         content: "Existen diferentes opciones segun tu situacion:",
-        list: ["Visa de trabajo por cuenta ajena: Requiere oferta laboral", "Visa de emprendedor: Para iniciar un negocio", "Visa no lucrativa: Sin permiso de trabajo, requiere medios economicos", "Visa de estudiante: Permite trabajar hasta 20 horas semanales", "Arraigo: Regularizacion tras 3 anos en Espana"]
+        list: ["Visa de trabajo por cuenta ajena: Requiere oferta laboral", "Visa de emprendedor: Para iniciar un negocio", "Visa no lucrativa: Sin permiso de trabajo, requiere medios economicos", "Visa de estudiante: Permite trabajar hasta 20 horas semanales", "Arraigo: Regularizacion tras 3 anos en España"]
       },
       {
         title: "Requisitos Basicos",
@@ -200,16 +200,16 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Ciudadania Espanola",
-        content: "Los ciudadanos de paises iberoamericanos pueden solicitar la nacionalidad espanola tras solo 2 anos de residencia legal (frente a los 10 anos requeridos para otras nacionalidades). Este es uno de los mayores incentivos para emigrar a Espana."
+        content: "Los ciudadanos de paises iberoamericanos pueden solicitar la nacionalidad espanola tras solo 2 anos de residencia legal (frente a los 10 anos requeridos para otras nacionalidades). Este es uno de los mayores incentivos para emigrar a España."
       },
       {
         title: "Sistema de Salud",
-        content: "Espana cuenta con un sistema de salud publico de alta calidad. Una vez que obtienes la residencia y cotizas a la Seguridad Social, tienes acceso gratuito a la sanidad publica. Mientras tanto, es obligatorio contar con seguro privado."
+        content: "España cuenta con un sistema de salud publico de alta calidad. Una vez que obtienes la residencia y cotizas a la Seguridad Social, tienes acceso gratuito a la sanidad publica. Mientras tanto, es obligatorio contar con seguro privado."
       }
     ],
     faqs: [
-      { question: "Cuanto dinero necesito para emigrar a Espana?", answer: "Para una visa no lucrativa necesitas demostrar ingresos de al menos 2.400 euros mensuales. Para estudiar, aproximadamente 600 euros mensuales. Para trabajar, la empresa gestiona los tramites." },
-      { question: "Puedo emigrar como turista y luego regularizarme?", answer: "El arraigo social permite regularizarse tras 3 anos en Espana, demostrando integracion social. El arraigo laboral requiere 2 anos y contrato de trabajo." },
+      { question: "Cuanto dinero necesito para emigrar a España?", answer: "Para una visa no lucrativa necesitas demostrar ingresos de al menos 2.400 euros mensuales. Para estudiar, aproximadamente 600 euros mensuales. Para trabajar, la empresa gestiona los tramites." },
+      { question: "Puedo emigrar como turista y luego regularizarme?", answer: "El arraigo social permite regularizarse tras 3 anos en España, demostrando integracion social. El arraigo laboral requiere 2 anos y contrato de trabajo." },
       { question: "Cuanto tiempo tarda el proceso de visa?", answer: "Los tiempos varian: visa de estudiante 1-2 meses, visa de trabajo 3-6 meses, arraigo puede tardar hasta 1 ano." }
     ]
   },
@@ -217,7 +217,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "trabajar-pueblos-espana",
     slug: "trabajar-pueblos-espana",
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Trabajar en Pueblos de Espana: Oportunidades Rurales", en: "Working in Spanish Villages: Rural Opportunities" },
+    title: { es: "Trabajar en Pueblos de España: Oportunidades Rurales", en: "Working in Spanish Villages: Rural Opportunities" },
     excerpt: { es: "Descubre las oportunidades laborales en los pueblos espanoles, desde agricultura hasta teletrabajo, con menor costo de vida y mejor calidad de vida.", en: "Discover job opportunities in Spanish villages, from agriculture to remote work, with lower cost of living and better quality of life." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
@@ -228,7 +228,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: false,
     sections: [
       {
-        title: "La Espana Vaciada Busca Nuevos Habitantes",
+        title: "La España Vaciada Busca Nuevos Habitantes",
         content: "Muchos pueblos espanoles ofrecen incentivos para atraer nuevos residentes: viviendas a precios muy bajos o gratuitas, ayudas para emprendedores, trabajo garantizado en sectores como agricultura, ganaderia o cuidado de mayores. Es una oportunidad unica para quienes buscan tranquilidad y naturaleza.",
         image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"
       },
@@ -259,8 +259,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "carta-invitacion-espana",
     slug: "carta-invitacion-espana",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Carta de Invitacion para Espana: Guia Completa", en: "Invitation Letter for Spain: Complete Guide" },
-    excerpt: { es: "Todo sobre la carta de invitacion para viajar a Espana: requisitos, costos, tramite y alternativas de alojamiento.", en: "Everything about the invitation letter to travel to Spain: requirements, costs, procedures and accommodation alternatives." },
+    title: { es: "Carta de Invitacion para España: Guia Completa", en: "Invitation Letter for Spain: Complete Guide" },
+    excerpt: { es: "Todo sobre la carta de invitacion para viajar a España: requisitos, costos, tramite y alternativas de alojamiento.", en: "Everything about the invitation letter to travel to Spain: requirements, costs, procedures and accommodation alternatives." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "24 Dic 2024",
@@ -271,17 +271,17 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Que es la Carta de Invitacion",
-        content: "La carta de invitacion es un documento oficial que un residente en Espana tramita para invitar a un extranjero a hospedarse en su domicilio. Es uno de los documentos que pueden solicitar en control migratorio, aunque no es obligatorio si presentas reserva de hotel.",
+        content: "La carta de invitacion es un documento oficial que un residente en España tramita para invitar a un extranjero a hospedarse en su domicilio. Es uno de los documentos que pueden solicitar en control migratorio, aunque no es obligatorio si presentas reserva de hotel.",
         image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando se Necesita",
-        content: "La carta de invitacion se requiere cuando planeas hospedarte con un familiar o amigo en Espana sin reservar hotel. Aunque muchos viajeros pasan control sin problemas, tenerla evita posibles inconvenientes.",
+        content: "La carta de invitacion se requiere cuando planeas hospedarte con un familiar o amigo en España sin reservar hotel. Aunque muchos viajeros pasan control sin problemas, tenerla evita posibles inconvenientes.",
         list: ["Hospedaje gratuito con familiares", "Hospedaje con amigos", "Estancias largas sin reserva hotelera"]
       },
       {
         title: "Requisitos para el Anfitrion",
-        content: "El anfitrion (quien invita) debe ser residente legal en Espana y cumplir estos requisitos: tener NIE o DNI vigente, estar empadronado en la vivienda donde alojara al visitante, demostrar que la vivienda tiene espacio suficiente, y pagar las tasas correspondientes."
+        content: "El anfitrion (quien invita) debe ser residente legal en España y cumplir estos requisitos: tener NIE o DNI vigente, estar empadronado en la vivienda donde alojara al visitante, demostrar que la vivienda tiene espacio suficiente, y pagar las tasas correspondientes."
       },
       {
         title: "Proceso de Tramite",
@@ -295,7 +295,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ],
     faqs: [
       { question: "Es obligatoria la carta de invitacion?", answer: "No es estrictamente obligatoria, pero si te hospedas con alguien sin carta ni reserva de hotel, el oficial de inmigracion puede solicitarla." },
-      { question: "Cuanto cuesta la carta de invitacion?", answer: "La tasa oficial es aproximadamente 75 euros, que paga el anfitrion en Espana." },
+      { question: "Cuanto cuesta la carta de invitacion?", answer: "La tasa oficial es aproximadamente 75 euros, que paga el anfitrion en España." },
       { question: "Puedo viajar mientras tramitan la carta?", answer: "No, debes esperar a tener el documento original antes de viajar." }
     ]
   },
@@ -346,8 +346,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "trabajos-sin-estudios-espana",
     slug: "trabajos-sin-estudios-espana",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Trabajos en Espana sin Estudios: Opciones Reales", en: "Jobs in Spain Without Studies: Real Options" },
-    excerpt: { es: "Descubre oportunidades laborales en Espana que no requieren titulo universitario: hosteleria, construccion, cuidados y mas.", en: "Discover job opportunities in Spain that don't require a university degree: hospitality, construction, care work and more." },
+    title: { es: "Trabajos en España sin Estudios: Opciones Reales", en: "Jobs in Spain Without Studies: Real Options" },
+    excerpt: { es: "Descubre oportunidades laborales en España que no requieren titulo universitario: hosteleria, construccion, cuidados y mas.", en: "Discover job opportunities in Spain that don't require a university degree: hospitality, construction, care work and more." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "20 Dic 2024",
@@ -358,7 +358,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Oportunidades Laborales Accesibles",
-        content: "Espana ofrece multiples oportunidades laborales para personas sin titulo universitario. La clave esta en la experiencia, las habilidades practicas y la disposicion para aprender. Muchos sectores tienen alta demanda de trabajadores y ofrecen formacion en el puesto.",
+        content: "España ofrece multiples oportunidades laborales para personas sin titulo universitario. La clave esta en la experiencia, las habilidades practicas y la disposicion para aprender. Muchos sectores tienen alta demanda de trabajadores y ofrecen formacion en el puesto.",
         image: "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -386,7 +386,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ],
     faqs: [
       { question: "Necesito permiso de trabajo para estos empleos?", answer: "Si, como extranjero necesitas autorizacion de trabajo. Algunas empresas ayudan a tramitarla, especialmente en sectores con escasez de mano de obra." },
-      { question: "Cual es el salario minimo en Espana?", answer: "El salario minimo interprofesional en 2024 es de aproximadamente 1.134 euros mensuales en 14 pagas." }
+      { question: "Cual es el salario minimo en España?", answer: "El salario minimo interprofesional en 2024 es de aproximadamente 1.134 euros mensuales en 14 pagas." }
     ]
   },
   {
@@ -458,7 +458,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Portugal: Sorprendentemente Asequible",
-        content: "Aunque es Europa Occidental, Portugal ofrece mejor relacion calidad-precio que Espana o Italia. Lisboa y Porto son accesibles, y el interior (Alentejo, Serra da Estrela) es muy economico. La gastronomia es excelente y el vino muy barato."
+        content: "Aunque es Europa Occidental, Portugal ofrece mejor relacion calidad-precio que España o Italia. Lisboa y Porto son accesibles, y el interior (Alentejo, Serra da Estrela) es muy economico. La gastronomia es excelente y el vino muy barato."
       },
       {
         title: "Turquia: Donde el Dolar Rinde",
@@ -482,8 +482,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "vivir-espana-vs-eeuu",
     slug: "vivir-espana-vs-eeuu",
     image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Vivir en Espana vs Estados Unidos: Comparativa Real", en: "Living in Spain vs USA: Real Comparison" },
-    excerpt: { es: "Analisis detallado comparando calidad de vida, costos, sanidad, trabajo y cultura entre Espana y Estados Unidos desde la perspectiva latinoamericana.", en: "Detailed analysis comparing quality of life, costs, healthcare, work and culture between Spain and the USA from a Latin American perspective." },
+    title: { es: "Vivir en España vs Estados Unidos: Comparativa Real", en: "Living in Spain vs USA: Real Comparison" },
+    excerpt: { es: "Analisis detallado comparando calidad de vida, costos, sanidad, trabajo y cultura entre España y Estados Unidos desde la perspectiva latinoamericana.", en: "Detailed analysis comparing quality of life, costs, healthcare, work and culture between Spain and the USA from a Latin American perspective." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "14 Dic 2024",
@@ -494,29 +494,29 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Calidad de Vida General",
-        content: "Espana consistentemente se clasifica alto en indices de calidad de vida. Los espanoles priorizan el tiempo libre, las relaciones sociales y disfrutar de la vida sobre la acumulacion de riqueza. Estados Unidos ofrece mas oportunidades economicas pero a costa de menos tiempo libre y mayor estres laboral.",
+        content: "España consistentemente se clasifica alto en indices de calidad de vida. Los espanoles priorizan el tiempo libre, las relaciones sociales y disfrutar de la vida sobre la acumulacion de riqueza. Estados Unidos ofrece mas oportunidades economicas pero a costa de menos tiempo libre y mayor estres laboral.",
         image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sistema de Salud",
-        content: "Esta es una de las mayores diferencias. Espana tiene sanidad publica universal y gratuita de alta calidad. En Estados Unidos, la salud esta ligada al empleo y los costos pueden ser devastadores. Una cirugia que en Espana es gratuita puede costar decenas de miles de dolares en USA."
+        content: "Esta es una de las mayores diferencias. España tiene sanidad publica universal y gratuita de alta calidad. En Estados Unidos, la salud esta ligada al empleo y los costos pueden ser devastadores. Una cirugia que en España es gratuita puede costar decenas de miles de dolares en USA."
       },
       {
         title: "Salarios vs Costo de Vida",
-        content: "Los salarios estadounidenses son significativamente mas altos, pero el costo de vida (especialmente salud, educacion y vivienda en grandes ciudades) erosiona gran parte de esa diferencia. En Espana los salarios son menores pero los servicios publicos compensan.",
-        list: ["Salario medio EEUU: $60,000/ano", "Salario medio Espana: 26,000 euros/ano", "Pero sanidad gratuita en Espana", "Educacion publica de calidad en Espana"]
+        content: "Los salarios estadounidenses son significativamente mas altos, pero el costo de vida (especialmente salud, educacion y vivienda en grandes ciudades) erosiona gran parte de esa diferencia. En España los salarios son menores pero los servicios publicos compensan.",
+        list: ["Salario medio EEUU: $60,000/ano", "Salario medio España: 26,000 euros/ano", "Pero sanidad gratuita en España", "Educacion publica de calidad en España"]
       },
       {
         title: "Cultura y Estilo de Vida",
-        content: "La vida social en Espana es fundamental. Las comidas son eventos sociales, los bares y terrazas estan llenos, y hay tiempo para disfrutar. En Estados Unidos la cultura es mas individualista y orientada al trabajo. Para latinoamericanos, el choque cultural es menor en Espana."
+        content: "La vida social en España es fundamental. Las comidas son eventos sociales, los bares y terrazas estan llenos, y hay tiempo para disfrutar. En Estados Unidos la cultura es mas individualista y orientada al trabajo. Para latinoamericanos, el choque cultural es menor en España."
       },
       {
         title: "Transporte y Movilidad",
-        content: "En Espana puedes vivir perfectamente sin coche: el transporte publico es excelente, las ciudades son caminables. En la mayoria de Estados Unidos, el coche es indispensable, con todos los gastos asociados."
+        content: "En España puedes vivir perfectamente sin coche: el transporte publico es excelente, las ciudades son caminables. En la mayoria de Estados Unidos, el coche es indispensable, con todos los gastos asociados."
       },
       {
         title: "Seguridad",
-        content: "Espana es significativamente mas segura. Las tasas de criminalidad violenta son mucho menores, no hay preocupacion por armas de fuego, y es comun caminar de noche sin problemas. La seguridad es una de las razones principales para elegir Espana."
+        content: "España es significativamente mas segura. Las tasas de criminalidad violenta son mucho menores, no hay preocupacion por armas de fuego, y es comun caminar de noche sin problemas. La seguridad es una de las razones principales para elegir España."
       },
       {
         title: "Ciudadania",
@@ -524,8 +524,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Es mejor vivir en Espana o Estados Unidos?", answer: "Depende de tus prioridades. Si buscas mas dinero y oportunidades economicas: USA. Si priorizas calidad de vida, sanidad, seguridad y cercania cultural: Espana." },
-      { question: "Donde se vive mejor como latinoamericano?", answer: "Culturalmente, Espana es mas cercana. El idioma, la comida, las costumbres y el ritmo de vida son mas familiares para latinoamericanos." }
+      { question: "Es mejor vivir en España o Estados Unidos?", answer: "Depende de tus prioridades. Si buscas mas dinero y oportunidades economicas: USA. Si priorizas calidad de vida, sanidad, seguridad y cercania cultural: España." },
+      { question: "Donde se vive mejor como latinoamericano?", answer: "Culturalmente, España es mas cercana. El idioma, la comida, las costumbres y el ritmo de vida son mas familiares para latinoamericanos." }
     ]
   },
   {
@@ -533,7 +533,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "guia-viaje-espana",
     image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423571?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa para Viajar a España desde Latinoamerica", en: "Complete Guide to Travel to Spain from Latin America" },
-    excerpt: { es: "Todo lo que necesitas saber para planificar tu viaje a Espana: vuelos, documentos, alojamiento, presupuesto y consejos practicos.", en: "Everything you need to know to plan your trip to Spain: flights, documents, accommodation, budget and practical tips." },
+    excerpt: { es: "Todo lo que necesitas saber para planificar tu viaje a España: vuelos, documentos, alojamiento, presupuesto y consejos practicos.", en: "Everything you need to know to plan your trip to Spain: flights, documents, accommodation, budget and practical tips." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "12 Dic 2024",
@@ -544,7 +544,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Requisitos de Entrada",
-        content: "Los ciudadanos de la mayoria de paises latinoamericanos pueden entrar a Espana (y el espacio Schengen) sin visa para estancias turisticas de hasta 90 dias. Necesitas: pasaporte con al menos 3 meses de vigencia, boleto de regreso, seguro de viaje, comprobante de alojamiento y solvencia economica (113 euros por dia).",
+        content: "Los ciudadanos de la mayoria de paises latinoamericanos pueden entrar a España (y el espacio Schengen) sin visa para estancias turisticas de hasta 90 dias. Necesitas: pasaporte con al menos 3 meses de vigencia, boleto de regreso, seguro de viaje, comprobante de alojamiento y solvencia economica (113 euros por dia).",
         image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -558,20 +558,20 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Principales Ciudades y Destinos",
-        content: "Espana ofrece una diversidad increible:",
+        content: "España ofrece una diversidad increible:",
         list: ["Madrid: Capital cultural, museos de clase mundial", "Barcelona: Gaudi, playas, gastronomia catalana", "Sevilla: Flamenco, Alhambra, tradicion andaluza", "Valencia: Ciudad de las Artes, paella original", "Bilbao: Guggenheim, pintxos vascos", "Islas Baleares: Mallorca, Ibiza, Menorca", "Islas Canarias: Playa todo el ano"]
       },
       {
         title: "Presupuesto Recomendado",
-        content: "Un presupuesto medio-alto permite disfrutar Espana comodamente. Para un viaje de 10 dias, considera: vuelo 800-1500 USD, alojamiento 80-150 euros/noche, comidas 40-60 euros/dia, transporte interno 100-200 euros total, actividades y entradas 150-300 euros total."
+        content: "Un presupuesto medio-alto permite disfrutar España comodamente. Para un viaje de 10 dias, considera: vuelo 800-1500 USD, alojamiento 80-150 euros/noche, comidas 40-60 euros/dia, transporte interno 100-200 euros total, actividades y entradas 150-300 euros total."
       },
       {
-        title: "Transporte en Espana",
+        title: "Transporte en España",
         content: "El AVE (tren de alta velocidad) conecta las principales ciudades. Los vuelos internos son economicos con Vueling o Iberia Express. Alquilar coche es ideal para zonas rurales. El transporte publico urbano es excelente."
       }
     ],
     faqs: [
-      { question: "Cuantos dias se recomienda para visitar Espana?", answer: "Un minimo de 7-10 dias para ver Madrid, Barcelona y una tercera ciudad. Idealmente 2-3 semanas para explorar mas destinos." },
+      { question: "Cuantos dias se recomienda para visitar España?", answer: "Un minimo de 7-10 dias para ver Madrid, Barcelona y una tercera ciudad. Idealmente 2-3 semanas para explorar mas destinos." },
       { question: "Es obligatorio el seguro de viaje?", answer: "Tecnicamente si. Aunque no siempre lo solicitan, es un requisito oficial de entrada al espacio Schengen y altamente recomendable." }
     ]
   },
@@ -579,8 +579,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "nueva-ley-extranjeria-espana",
     slug: "nueva-ley-extranjeria-espana",
     image: "https://images.unsplash.com/photo-1556388275-bb5585725aca?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Nueva Ley de Extranjeria en Espana: Cambios Clave", en: "New Immigration Law in Spain: Key Changes" },
-    excerpt: { es: "La nueva ley de extranjeria promete revolucionar la inmigracion en Espana con regularizacion masiva y nuevas vias para trabajadores.", en: "The new immigration law promises to revolutionize immigration in Spain with mass regularization and new pathways for workers." },
+    title: { es: "Nueva Ley de Extranjeria en España: Cambios Clave", en: "New Immigration Law in Spain: Key Changes" },
+    excerpt: { es: "La nueva ley de extranjeria promete revolucionar la inmigracion en España con regularizacion masiva y nuevas vias para trabajadores.", en: "The new immigration law promises to revolutionize immigration in Spain with mass regularization and new pathways for workers." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "10 Dic 2024",
@@ -591,12 +591,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Contexto de la Reforma",
-        content: "Espana enfrenta escasez de mano de obra en multiples sectores mientras tiene medio millon de inmigrantes en situacion irregular. La nueva ley busca regularizar a estos trabajadores y facilitar la llegada de talento extranjero para cubrir las vacantes en el mercado laboral.",
+        content: "España enfrenta escasez de mano de obra en multiples sectores mientras tiene medio millon de inmigrantes en situacion irregular. La nueva ley busca regularizar a estos trabajadores y facilitar la llegada de talento extranjero para cubrir las vacantes en el mercado laboral.",
         image: "https://images.unsplash.com/photo-1534156607-7d1e2c1ce4cf?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Regularizacion Masiva",
-        content: "Se estima que medio millon de inmigrantes podran regularizar su situacion. Los requisitos incluyen empadronamiento, contribuciones a la seguridad social y demostracion de vinculos laborales o familiares en Espana."
+        content: "Se estima que medio millon de inmigrantes podran regularizar su situacion. Los requisitos incluyen empadronamiento, contribuciones a la seguridad social y demostracion de vinculos laborales o familiares en España."
       },
       {
         title: "Cambios para Estudiantes",
@@ -618,7 +618,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ],
     faqs: [
       { question: "Cuando entra en vigor la nueva ley?", answer: "La ley esta en proceso de tramitacion parlamentaria. Se espera su aprobacion e implementacion en los proximos meses." },
-      { question: "Quien puede beneficiarse de la regularizacion?", answer: "Inmigrantes en situacion irregular que cumplan requisitos de empadronamiento, contribuciones sociales y vinculos en Espana." }
+      { question: "Quien puede beneficiarse de la regularizacion?", answer: "Inmigrantes en situacion irregular que cumplan requisitos de empadronamiento, contribuciones sociales y vinculos en España." }
     ]
   },
   {
@@ -626,7 +626,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "ciudadania-europea-facil",
     image: "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?q=80&w=1200&auto=format&fit=crop",
     title: { es: "4 Paises Mas Faciles para Obtener Ciudadania Europea", en: "4 Easiest Countries to Get European Citizenship" },
-    excerpt: { es: "Descubre los paises de la UE donde es mas facil obtener la ciudadania: Espana, Portugal, Belgica y Paises Bajos, con tiempos y requisitos.", en: "Discover the EU countries where it's easiest to obtain citizenship: Spain, Portugal, Belgium and Netherlands, with timelines and requirements." },
+    excerpt: { es: "Descubre los paises de la UE donde es mas facil obtener la ciudadania: España, Portugal, Belgica y Paises Bajos, con tiempos y requisitos.", en: "Discover the EU countries where it's easiest to obtain citizenship: Spain, Portugal, Belgium and Netherlands, with timelines and requirements." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "08 Dic 2024",
@@ -641,8 +641,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        title: "Espana: El Camino Mas Rapido",
-        content: "Para ciudadanos iberoamericanos, Espana ofrece la ruta mas rapida: solo 2 anos de residencia legal para solicitar la nacionalidad. Esto es significativamente mas rapido que los 10 anos requeridos para otras nacionalidades. Requisitos: residencia legal, examen de cultura espanola (CCSE) y prueba de idioma (DELE A2).",
+        title: "España: El Camino Mas Rapido",
+        content: "Para ciudadanos iberoamericanos, España ofrece la ruta mas rapida: solo 2 anos de residencia legal para solicitar la nacionalidad. Esto es significativamente mas rapido que los 10 anos requeridos para otras nacionalidades. Requisitos: residencia legal, examen de cultura espanola (CCSE) y prueba de idioma (DELE A2).",
         list: ["2 anos de residencia para iberoamericanos", "Examen CCSE de cultura espanola", "Prueba DELE A2 de espanol", "No se requiere renuncia a nacionalidad original"]
       },
       {
@@ -659,12 +659,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Consideraciones Importantes",
-        content: "La ciudadania europea es un compromiso a largo plazo. Considera factores como idioma, cultura, oportunidades laborales y clima. Espana ofrece la ventaja del idioma para hispanohablantes, Portugal tiene un idioma mas facil de aprender, y Holanda/Belgica ofrecen mas empleos en ingles."
+        content: "La ciudadania europea es un compromiso a largo plazo. Considera factores como idioma, cultura, oportunidades laborales y clima. España ofrece la ventaja del idioma para hispanohablantes, Portugal tiene un idioma mas facil de aprender, y Holanda/Belgica ofrecen mas empleos en ingles."
       }
     ],
     faqs: [
-      { question: "Puedo mantener mi nacionalidad original?", answer: "Espana y Portugal permiten doble nacionalidad con paises iberoamericanos. Belgica y Paises Bajos generalmente no, aunque hay excepciones." },
-      { question: "Cual es el pais mas recomendable?", answer: "Para hispanohablantes, Espana es la opcion mas logica por idioma, cultura y tiempo (solo 2 anos). Portugal es una buena alternativa si prefieres un pais mas pequeno." }
+      { question: "Puedo mantener mi nacionalidad original?", answer: "España y Portugal permiten doble nacionalidad con paises iberoamericanos. Belgica y Paises Bajos generalmente no, aunque hay excepciones." },
+      { question: "Cual es el pais mas recomendable?", answer: "Para hispanohablantes, España es la opcion mas logica por idioma, cultura y tiempo (solo 2 anos). Portugal es una buena alternativa si prefieres un pais mas pequeno." }
     ]
   },
   {
@@ -760,8 +760,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "trabajar-espana-opciones",
     slug: "trabajar-espana-opciones",
     image: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Trabajar en Espana: Mejores Opciones para Extranjeros", en: "Working in Spain: Best Options for Foreigners" },
-    excerpt: { es: "Descubre los sectores con mayor demanda laboral en Espana y las mejores oportunidades para trabajadores extranjeros.", en: "Discover the sectors with highest labor demand in Spain and the best opportunities for foreign workers." },
+    title: { es: "Trabajar en España: Mejores Opciones para Extranjeros", en: "Working in Spain: Best Options for Foreigners" },
+    excerpt: { es: "Descubre los sectores con mayor demanda laboral en España y las mejores oportunidades para trabajadores extranjeros.", en: "Discover the sectors with highest labor demand in Spain and the best opportunities for foreign workers." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "02 Dic 2024",
@@ -772,12 +772,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Mercado Laboral Espanol",
-        content: "Espana ofrece diversas oportunidades laborales para extranjeros. Aunque el desempleo es mas alto que en otros paises europeos, hay sectores con gran demanda de trabajadores. El conocimiento del espanol es una ventaja significativa para latinoamericanos.",
+        content: "España ofrece diversas oportunidades laborales para extranjeros. Aunque el desempleo es mas alto que en otros paises europeos, hay sectores con gran demanda de trabajadores. El conocimiento del espanol es una ventaja significativa para latinoamericanos.",
         image: "https://images.unsplash.com/photo-1555529771-835f59fc5efe?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sector Turistico",
-        content: "El turismo es fundamental en la economia espanola y ofrece numerosas oportunidades. Con su clima, playas y cultura, Espana atrae millones de turistas que necesitan ser atendidos.",
+        content: "El turismo es fundamental en la economia espanola y ofrece numerosas oportunidades. Con su clima, playas y cultura, España atrae millones de turistas que necesitan ser atendidos.",
         list: ["Hoteles y restaurantes", "Agencias de viajes", "Guias turisticos", "Empresas de entretenimiento", "Transporte turistico"]
       },
       {
@@ -795,7 +795,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Agricultura y Ganaderia",
-        content: "Espana es un importante productor agricola. Hay trabajo estacional en la recogida de frutas, vendimia, invernaderos y granjas. Algunas regiones rurales ofrecen trabajo permanente y alojamiento."
+        content: "España es un importante productor agricola. Hay trabajo estacional en la recogida de frutas, vendimia, invernaderos y granjas. Algunas regiones rurales ofrecen trabajo permanente y alojamiento."
       }
     ],
     faqs: [
@@ -847,7 +847,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Consejos Practicos",
-        content: "Se conduce por la izquierda (cuidado al cruzar). En el metro, parate a la derecha en las escaleras mecanicas. Los pubs cierran temprano comparado con Espana. Lleva paraguas siempre. Reserva entradas con anticipacion para atracciones populares. Usa CityMapper para el transporte."
+        content: "Se conduce por la izquierda (cuidado al cruzar). En el metro, parate a la derecha en las escaleras mecanicas. Los pubs cierran temprano comparado con España. Lleva paraguas siempre. Reserva entradas con anticipacion para atracciones populares. Usa CityMapper para el transporte."
       }
     ],
     faqs: [
@@ -916,7 +916,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Por Que Elegir Tenerife Como Destino",
-        content: "Tenerife es la joya de las Islas Canarias y uno de los destinos mas atractivos de Espana para viajeros latinoamericanos. Con clima primaveral todo el ano, playas espectaculares, el impresionante Teide (el pico mas alto de Espana) y una vibrante cultura, esta isla ofrece una experiencia unica que combina naturaleza, aventura y relajacion.",
+        content: "Tenerife es la joya de las Islas Canarias y uno de los destinos mas atractivos de España para viajeros latinoamericanos. Con clima primaveral todo el ano, playas espectaculares, el impresionante Teide (el pico mas alto de España) y una vibrante cultura, esta isla ofrece una experiencia unica que combina naturaleza, aventura y relajacion.",
         image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -1116,7 +1116,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "descubre-mejores-destinos-espana",
     slug: "descubre-mejores-destinos-espana",
-    title: { es: "Descubre Los 3 Mejores Destinos de Espana Para Latinoamericanos", en: "Discover the 3 Best Destinations in Spain for Latin Americans" },
+    title: { es: "Descubre Los 3 Mejores Destinos de España Para Latinoamericanos", en: "Discover the 3 Best Destinations in Spain for Latin Americans" },
     excerpt: { es: "Explora los destinos espanoles que mas enamoran a los viajeros latinoamericanos. Historia, cultura, gastronomia y experiencias inolvidables en la madre patria.", en: "Explore the Spanish destinations that Latin American travelers love most. History, culture, gastronomy and unforgettable experiences." },
     image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop",
     category: "destinos",
@@ -1128,7 +1128,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: true,
     sections: [
       {
-        title: "Madrid: El Corazon de Espana",
+        title: "Madrid: El Corazon de España",
         content: "La capital espanola combina historia, arte de primer nivel y una vida nocturna vibrante. El Museo del Prado, el Palacio Real, el Parque del Retiro y los barrios tradicionales como La Latina y Malasana ofrecen experiencias para todos los gustos. La conexion cultural con Latinoamerica es palpable en cada rincon.",
         image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
       },
@@ -1139,7 +1139,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Sevilla: El Alma de Andalucia",
-        content: "Sevilla encarna la esencia de la Espana mas tradicional. El flamenco, la Giralda, el Alcazar, y los patios llenos de flores crean una atmosfera magica. La calidez de su gente y su ritmo de vida relajado resuenan especialmente con los viajeros latinoamericanos."
+        content: "Sevilla encarna la esencia de la España mas tradicional. El flamenco, la Giralda, el Alcazar, y los patios llenos de flores crean una atmosfera magica. La calidez de su gente y su ritmo de vida relajado resuenan especialmente con los viajeros latinoamericanos."
       },
       {
         title: "Como Combinar Estos Destinos",
@@ -1148,7 +1148,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Cual ciudad es mejor para una primera visita?", answer: "Madrid es ideal como puerta de entrada a Espana. Tiene excelentes conexiones aereas internacionales y es perfecta base para explorar el centro del pais." },
+      { question: "Cual ciudad es mejor para una primera visita?", answer: "Madrid es ideal como puerta de entrada a España. Tiene excelentes conexiones aereas internacionales y es perfecta base para explorar el centro del pais." },
       { question: "Cuantos dias necesito en cada ciudad?", answer: "Minimo 3-4 dias en Madrid y Barcelona para ver lo esencial, y 2-3 dias en Sevilla. Con mas tiempo podras explorar sin prisas." },
       { question: "Es mejor volar entre ciudades o tomar el tren?", answer: "El AVE (tren alta velocidad) es la mejor opcion. Es comodo, puntual, y las estaciones estan en el centro de las ciudades, ahorrando tiempo respecto a volar." }
     ]
@@ -1184,7 +1184,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "4. Puerta del Sol y Plaza Mayor",
-        content: "El corazon geografico y simbolico de Espana. El Kilometro Cero marca el inicio de todas las carreteras radiales. La cercana Plaza Mayor, con sus soportales y arquitectura del siglo XVII, es perfecta para un cafe con vistas."
+        content: "El corazon geografico y simbolico de España. El Kilometro Cero marca el inicio de todas las carreteras radiales. La cercana Plaza Mayor, con sus soportales y arquitectura del siglo XVII, es perfecta para un cafe con vistas."
       },
       {
         title: "5. Gran Via y Barrio de Malasana",
@@ -1397,7 +1397,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        title: "Santiago de Compostela, Espana",
+        title: "Santiago de Compostela, España",
         content: "Meta final del legendario Camino de Santiago. Miles de peregrinos llegan cada ano a la catedral donde se venera al Apostol Santiago. El casco historico es Patrimonio de la Humanidad. Aunque no hagas el camino completo, puedes caminar los ultimos kilometros para vivir la experiencia.",
         image: "https://images.unsplash.com/photo-1551375703-93c1a30f5a45?q=80&w=1200&auto=format&fit=crop"
       },
@@ -1413,7 +1413,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Otros Destinos de Fe",
         content: "Europa ofrece innumerables sitios de significado espiritual:",
-        list: ["Asisi, Italia: Cuna de San Francisco", "Cracovia, Polonia: Santuario de la Divina Misericordia", "Medjugorje, Bosnia: Apariciones marianas contemporaneas", "Montserrat, Espana: Monasterio benedictino con la Virgen Negra", "Canterbury, Inglaterra: Catedral historica anglicana", "Monte Athos, Grecia: Republica monastica ortodoxa"]
+        list: ["Asisi, Italia: Cuna de San Francisco", "Cracovia, Polonia: Santuario de la Divina Misericordia", "Medjugorje, Bosnia: Apariciones marianas contemporaneas", "Montserrat, España: Monasterio benedictino con la Virgen Negra", "Canterbury, Inglaterra: Catedral historica anglicana", "Monte Athos, Grecia: Republica monastica ortodoxa"]
       }
     ],
     faqs: [
@@ -1519,8 +1519,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "consulado-espana-tramites",
     slug: "consulado-espana-tramites",
-    title: { es: "Consulado de Espana: Guia de Tramites Para Latinoamericanos", en: "Spanish Consulate: Procedures Guide for Latin Americans" },
-    excerpt: { es: "Todo sobre los servicios consulares espanoles en Latinoamerica. Visas, documentacion, citas y tramites esenciales para tu viaje o migracion a Espana.", en: "Everything about Spanish consular services in Latin America. Visas, documentation, appointments and essential procedures for your trip or migration to Spain." },
+    title: { es: "Consulado de España: Guia de Tramites Para Latinoamericanos", en: "Spanish Consulate: Procedures Guide for Latin Americans" },
+    excerpt: { es: "Todo sobre los servicios consulares espanoles en Latinoamerica. Visas, documentacion, citas y tramites esenciales para tu viaje o migracion a España.", en: "Everything about Spanish consular services in Latin America. Visas, documentation, appointments and essential procedures for your trip or migration to Spain." },
     image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
@@ -1532,13 +1532,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Ubicacion de Consulados en Latinoamerica",
-        content: "Espana tiene representacion consular en las principales ciudades latinoamericanas. Ademas de las embajadas en capitales, hay consulados en ciudades importantes. Verifica cual corresponde a tu jurisdiccion segun tu lugar de residencia.",
+        content: "España tiene representacion consular en las principales ciudades latinoamericanas. Ademas de las embajadas en capitales, hay consulados en ciudades importantes. Verifica cual corresponde a tu jurisdiccion segun tu lugar de residencia.",
         image: "https://images.unsplash.com/photo-1577415124269-fc1140815a65?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Servicios Consulares",
         content: "Los consulados espanoles ofrecen diversos servicios:",
-        list: ["Visados: Turisticos, de trabajo, estudio, reagrupacion familiar", "Legalizaciones: Apostilla y validacion de documentos", "Pasaportes: Renovacion para ciudadanos espanoles", "Registro Civil: Inscripcion de nacimientos, matrimonios", "Asistencia consular: Ayuda a ciudadanos espanoles en el extranjero", "Informacion migratoria: Requisitos para residir en Espana"]
+        list: ["Visados: Turisticos, de trabajo, estudio, reagrupacion familiar", "Legalizaciones: Apostilla y validacion de documentos", "Pasaportes: Renovacion para ciudadanos espanoles", "Registro Civil: Inscripcion de nacimientos, matrimonios", "Asistencia consular: Ayuda a ciudadanos espanoles en el extranjero", "Informacion migratoria: Requisitos para residir en España"]
       },
       {
         title: "Como Solicitar Cita Consular",
@@ -1654,8 +1654,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-entrar-espana",
     slug: "requisitos-entrar-espana",
-    title: { es: "Requisitos Para Entrar a Espana Desde Latinoamerica", en: "Requirements to Enter Spain from Latin America" },
-    excerpt: { es: "Guia actualizada de todos los requisitos de entrada a Espana para ciudadanos latinoamericanos. Documentacion, seguro, dinero y controles migratorios.", en: "Updated guide to all entry requirements to Spain for Latin American citizens. Documentation, insurance, money and immigration controls." },
+    title: { es: "Requisitos Para Entrar a España Desde Latinoamerica", en: "Requirements to Enter Spain from Latin America" },
+    excerpt: { es: "Guia actualizada de todos los requisitos de entrada a España para ciudadanos latinoamericanos. Documentacion, seguro, dinero y controles migratorios.", en: "Updated guide to all entry requirements to Spain for Latin American citizens. Documentation, insurance, money and immigration controls." },
     image: "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
@@ -1667,7 +1667,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Documentacion Basica Requerida",
-        content: "Para entrar a Espana como turista, los ciudadanos de Colombia, Mexico, Argentina, Chile, Brasil, Peru, Costa Rica, Panama y otros paises latinoamericanos necesitan pasaporte vigente con al menos 3 meses de validez posterior a la fecha de salida prevista. Exencion de visa permite estancia de hasta 90 dias en cualquier periodo de 180 dias.",
+        content: "Para entrar a España como turista, los ciudadanos de Colombia, Mexico, Argentina, Chile, Brasil, Peru, Costa Rica, Panama y otros paises latinoamericanos necesitan pasaporte vigente con al menos 3 meses de validez posterior a la fecha de salida prevista. Exencion de visa permite estancia de hasta 90 dias en cualquier periodo de 180 dias.",
         image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -1686,12 +1686,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "El Control Migratorio",
-        content: "Al llegar a Espana, pasaras por control de pasaportes. El oficial puede hacerte preguntas sobre tu viaje: proposito, duracion, alojamiento, medios economicos. Responde con calma y honestidad. Ten tus documentos organizados y accesibles."
+        content: "Al llegar a España, pasaras por control de pasaportes. El oficial puede hacerte preguntas sobre tu viaje: proposito, duracion, alojamiento, medios economicos. Responde con calma y honestidad. Ten tus documentos organizados y accesibles."
       }
     ],
     faqs: [
-      { question: "Pueden negarme la entrada a Espana?", answer: "Tecnicamente si, si no cumples los requisitos o el oficial tiene dudas sobre tu intencion de regresar. Sin embargo, con documentacion completa y respuestas claras, la entrada es generalmente aprobada." },
-      { question: "Necesito carta de invitacion si me quedo en hotel?", answer: "No, la carta de invitacion solo es necesaria si te hospedaras en casa de un residente en Espana. Con reserva de hotel, no es requerida." },
+      { question: "Pueden negarme la entrada a España?", answer: "Tecnicamente si, si no cumples los requisitos o el oficial tiene dudas sobre tu intencion de regresar. Sin embargo, con documentacion completa y respuestas claras, la entrada es generalmente aprobada." },
+      { question: "Necesito carta de invitacion si me quedo en hotel?", answer: "No, la carta de invitacion solo es necesaria si te hospedaras en casa de un residente en España. Con reserva de hotel, no es requerida." },
       { question: "Que pasa si me quedo mas de 90 dias?", answer: "Estarias en situacion irregular, lo cual puede tener consecuencias legales incluyendo prohibicion de reingreso al espacio Schengen." }
     ]
   },
@@ -1699,8 +1699,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "nie-espana-como-conseguirlo",
     slug: "nie-espana-como-conseguirlo",
-    title: { es: "Que es el NIE en Espana y Como Conseguirlo", en: "What is NIE in Spain and How to Get It" },
-    excerpt: { es: "El Numero de Identidad de Extranjero es esencial para vivir en Espana. Aprende que es, cuando lo necesitas, y el proceso paso a paso para obtenerlo.", en: "The Foreigner Identity Number is essential to live in Spain. Learn what it is, when you need it, and the step-by-step process to obtain it." },
+    title: { es: "Que es el NIE en España y Como Conseguirlo", en: "What is NIE in Spain and How to Get It" },
+    excerpt: { es: "El Numero de Identidad de Extranjero es esencial para vivir en España. Aprende que es, cuando lo necesitas, y el proceso paso a paso para obtenerlo.", en: "The Foreigner Identity Number is essential to live in Spain. Learn what it is, when you need it, and the step-by-step process to obtain it." },
     image: "https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
@@ -1712,13 +1712,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Que es el NIE",
-        content: "El NIE (Numero de Identidad de Extranjero) es un numero de identificacion fiscal asignado a extranjeros en Espana. Es necesario para casi cualquier tramite oficial: abrir cuenta bancaria, firmar contratos, comprar propiedad, trabajar legalmente, y pagar impuestos.",
+        content: "El NIE (Numero de Identidad de Extranjero) es un numero de identificacion fiscal asignado a extranjeros en España. Es necesario para casi cualquier tramite oficial: abrir cuenta bancaria, firmar contratos, comprar propiedad, trabajar legalmente, y pagar impuestos.",
         image: "https://images.unsplash.com/photo-1523287562758-66c7fc58967f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando Necesitas un NIE",
         content: "Necesitaras NIE si planeas:",
-        list: ["Trabajar en Espana (empleado o autonomo)", "Abrir una cuenta bancaria espanola", "Comprar o alquilar propiedad a largo plazo", "Matricular un vehiculo", "Realizar inversiones", "Cualquier operacion que requiera identificacion fiscal"]
+        list: ["Trabajar en España (empleado o autonomo)", "Abrir una cuenta bancaria espanola", "Comprar o alquilar propiedad a largo plazo", "Matricular un vehiculo", "Realizar inversiones", "Cualquier operacion que requiera identificacion fiscal"]
       },
       {
         title: "Tipos de NIE",
@@ -1735,7 +1735,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Puedo solicitar NIE desde mi pais?", answer: "Si, puedes solicitarlo en el Consulado de Espana de tu pais, aunque los tiempos pueden ser mas largos." },
+      { question: "Puedo solicitar NIE desde mi pais?", answer: "Si, puedes solicitarlo en el Consulado de España de tu pais, aunque los tiempos pueden ser mas largos." },
       { question: "El NIE tiene fecha de vencimiento?", answer: "El numero NIE es permanente. El certificado papel si vence pero el numero sigue siendo el mismo de por vida." },
       { question: "Cuanto cuesta obtener el NIE?", answer: "La tasa varia y cambia periodicamente. Verifica el monto actualizado en la web oficial antes de tu cita." }
     ]
@@ -1772,7 +1772,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "El Proceso de Solicitud",
-        content: "La solicitud se presenta en el Consulado de Espana correspondiente a tu lugar de residencia. Requiere cita previa. Se verifica la documentacion y, si es aprobada, se procede a la inscripcion en el Registro Civil Central. El proceso puede tomar varios meses o incluso anos."
+        content: "La solicitud se presenta en el Consulado de España correspondiente a tu lugar de residencia. Requiere cita previa. Se verifica la documentacion y, si es aprobada, se procede a la inscripcion en el Registro Civil Central. El proceso puede tomar varios meses o incluso anos."
       },
       {
         title: "Plazos Importantes",
@@ -1782,7 +1782,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     faqs: [
       { question: "Puedo solicitarla si mi bisabuelo era espanol?", answer: "Generalmente la ley cubre hasta nietos. Para bisnietos, los requisitos son mas restrictivos y dependen de circunstancias especificas." },
       { question: "Que beneficios otorga la nacionalidad espanola?", answer: "Pasaporte espanol (UE), derecho a vivir y trabajar en cualquier pais de la Union Europea, acceso a educacion y sanidad, y derechos civiles plenos." },
-      { question: "Debo renunciar a mi nacionalidad actual?", answer: "Depende de tu pais. Espana permite doble nacionalidad con paises iberoamericanos. Verifica las leyes de tu pais de origen." }
+      { question: "Debo renunciar a mi nacionalidad actual?", answer: "Depende de tu pais. España permite doble nacionalidad con paises iberoamericanos. Verifica las leyes de tu pais de origen." }
     ]
   },
 
@@ -1827,7 +1827,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     faqs: [
       { question: "Puedo viajar con pasaporte vencido?", answer: "No. Para viajes internacionales necesitas pasaporte vigente. Algunas aerolineas ni siquiera te permiten abordar." },
       { question: "Cuanto tarda renovar un pasaporte latinoamericano en el exterior?", answer: "Varia por pais, pero generalmente entre 2-8 semanas. Algunos paises ofrecen servicio express con costo adicional." },
-      { question: "Pierdo mi nacionalidad de origen al obtener la espanola?", answer: "Espana tiene acuerdos de doble nacionalidad con paises iberoamericanos. Verifica las leyes de tu pais de origen." }
+      { question: "Pierdo mi nacionalidad de origen al obtener la espanola?", answer: "España tiene acuerdos de doble nacionalidad con paises iberoamericanos. Verifica las leyes de tu pais de origen." }
     ]
   },
 
@@ -1857,7 +1857,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Paises Con Programas de Descendencia",
-        content: "Varios paises europeos facilitan la ciudadania por descendencia. Italia permite recuperar ciudadania por linea paterna sin limite generacional. Espana tiene la Ley de Nietos. Portugal ofrece opciones para descendientes de sefardies. Irlanda permite ciudadania si tienes abuelo irlandes.",
+        content: "Varios paises europeos facilitan la ciudadania por descendencia. Italia permite recuperar ciudadania por linea paterna sin limite generacional. España tiene la Ley de Nietos. Portugal ofrece opciones para descendientes de sefardies. Irlanda permite ciudadania si tienes abuelo irlandes.",
         image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -1879,8 +1879,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "embajada-latinoamerica-espana",
     slug: "embajada-latinoamerica-espana",
-    title: { es: "Embajadas de Latinoamerica en Espana: Servicios y Contacto", en: "Latin American Embassies in Spain: Services and Contact" },
-    excerpt: { es: "Informacion util sobre las embajadas latinoamericanas en Espana. Servicios consulares, direcciones y como pueden ayudarte durante tu estancia.", en: "Useful information about Latin American embassies in Spain. Consular services, addresses and how they can help you during your stay." },
+    title: { es: "Embajadas de Latinoamerica en España: Servicios y Contacto", en: "Latin American Embassies in Spain: Services and Contact" },
+    excerpt: { es: "Informacion util sobre las embajadas latinoamericanas en España. Servicios consulares, direcciones y como pueden ayudarte durante tu estancia.", en: "Useful information about Latin American embassies in Spain. Consular services, addresses and how they can help you during your stay." },
     image: "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
@@ -1892,7 +1892,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Servicios Que Ofrecen Las Embajadas",
-        content: "Las embajadas y consulados latinoamericanos en Espana ofrecen servicios esenciales para sus ciudadanos: renovacion de pasaportes, legalizacion de documentos, asistencia en emergencias, registro consular, y apoyo en situaciones legales. Son tu conexion oficial con tu pais de origen.",
+        content: "Las embajadas y consulados latinoamericanos en España ofrecen servicios esenciales para sus ciudadanos: renovacion de pasaportes, legalizacion de documentos, asistencia en emergencias, registro consular, y apoyo en situaciones legales. Son tu conexion oficial con tu pais de origen.",
         image: "https://images.unsplash.com/photo-1551527916-7a00f08ced71?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -1911,12 +1911,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Registro Consular",
-        content: "Es altamente recomendable registrarte en tu consulado al llegar a Espana. Facilita cualquier tramite futuro, permite que te localicen en emergencias, y en algunos paises es obligatorio para ciertos servicios. El registro generalmente es gratuito y sencillo."
+        content: "Es altamente recomendable registrarte en tu consulado al llegar a España. Facilita cualquier tramite futuro, permite que te localicen en emergencias, y en algunos paises es obligatorio para ciertos servicios. El registro generalmente es gratuito y sencillo."
       }
     ],
     faqs: [
-      { question: "Puedo votar desde Espana en elecciones de mi pais?", answer: "Generalmente si, pero debes estar registrado en el consulado con anticipacion. Los procesos varian por pais." },
-      { question: "Que hago si pierdo mi pasaporte en Espana?", answer: "Acude inmediatamente a tu consulado con denuncia policial. Te pueden emitir un documento de viaje temporal o pasaporte de emergencia." },
+      { question: "Puedo votar desde España en elecciones de mi pais?", answer: "Generalmente si, pero debes estar registrado en el consulado con anticipacion. Los procesos varian por pais." },
+      { question: "Que hago si pierdo mi pasaporte en España?", answer: "Acude inmediatamente a tu consulado con denuncia policial. Te pueden emitir un documento de viaje temporal o pasaporte de emergencia." },
       { question: "Las embajadas ayudan en problemas legales?", answer: "Ofrecen orientacion y listas de abogados, pero no pueden intervenir directamente en procesos legales ni pagar fianzas o multas." }
     ]
   },
@@ -1969,7 +1969,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "estudiar-espana-latinoamericanos",
     slug: "estudiar-espana-latinoamericanos",
-    title: { es: "Estudiar en Espana: Guia Para Estudiantes Latinoamericanos", en: "Studying in Spain: Guide for Latin American Students" },
+    title: { es: "Estudiar en España: Guia Para Estudiantes Latinoamericanos", en: "Studying in Spain: Guide for Latin American Students" },
     excerpt: { es: "Todo sobre estudiar en universidades espanolas. Desde la homologacion de titulos hasta becas y vida estudiantil para latinoamericanos.", en: "Everything about studying at Spanish universities. From degree validation to scholarships and student life for Latin Americans." },
     image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
@@ -1981,13 +1981,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: true,
     sections: [
       {
-        title: "Por Que Estudiar en Espana",
-        content: "Espana ofrece educacion universitaria de alta calidad en tu mismo idioma. Universidades reconocidas mundialmente, costos mas accesibles que otros paises europeos, y una cultura familiar para latinoamericanos hacen de Espana un destino ideal para estudiar.",
+        title: "Por Que Estudiar en España",
+        content: "España ofrece educacion universitaria de alta calidad en tu mismo idioma. Universidades reconocidas mundialmente, costos mas accesibles que otros paises europeos, y una cultura familiar para latinoamericanos hacen de España un destino ideal para estudiar.",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Estudios Disponibles",
-        content: "Opciones academicas en Espana:",
+        content: "Opciones academicas en España:",
         list: ["Grado (equivalente a licenciatura): 4 anos tipicamente", "Master oficial: 1-2 anos, valido en toda la UE", "Doctorado: Investigacion de alto nivel", "Cursos de idiomas: Espanol para extranjeros", "Formacion profesional: Educacion tecnica y vocacional"]
       },
       {
@@ -1997,15 +1997,15 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Visa de Estudiante",
-        content: "Para estudios de mas de 90 dias necesitas visa de estudiante. Requisitos: carta de admision, seguro medico, prueba de fondos economicos, antecedentes penales, y pasaporte vigente. Se solicita en el consulado de Espana en tu pais."
+        content: "Para estudios de mas de 90 dias necesitas visa de estudiante. Requisitos: carta de admision, seguro medico, prueba de fondos economicos, antecedentes penales, y pasaporte vigente. Se solicita en el consulado de España en tu pais."
       },
       {
         title: "Becas Para Latinoamericanos",
-        content: "Hay multiples opciones de financiamiento: becas del gobierno espanol (MAEC-AECID), becas de las propias universidades, becas de la Fundacion Carolina especificamente para latinoamericanos, y programas bilaterales entre Espana y tu pais de origen."
+        content: "Hay multiples opciones de financiamiento: becas del gobierno espanol (MAEC-AECID), becas de las propias universidades, becas de la Fundacion Carolina especificamente para latinoamericanos, y programas bilaterales entre España y tu pais de origen."
       },
       {
         title: "Vida Estudiantil",
-        content: "Espana ofrece excelente calidad de vida estudiantil. Residencias universitarias accesibles, amplia vida cultural y social, oportunidades de trabajo a tiempo parcial (permitido con visa de estudiante), y comunidades latinoamericanas en todas las ciudades universitarias importantes."
+        content: "España ofrece excelente calidad de vida estudiantil. Residencias universitarias accesibles, amplia vida cultural y social, oportunidades de trabajo a tiempo parcial (permitido con visa de estudiante), y comunidades latinoamericanas en todas las ciudades universitarias importantes."
       }
     ],
     faqs: [
@@ -2018,7 +2018,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "visado-espana-imprescindible",
     slug: "visado-espana-imprescindible",
-    title: { es: "Visado Espana: Por Que es Imprescindible Para Entrar al Pais", en: "Spain Visa: Why It's Essential to Enter the Country" },
+    title: { es: "Visado España: Por Que es Imprescindible Para Entrar al Pais", en: "Spain Visa: Why It's Essential to Enter the Country" },
     excerpt: { es: "Entiende el sistema de visados espanoles. Quien necesita visa, tipos disponibles, y el proceso de solicitud para viajeros latinoamericanos.", en: "Understand the Spanish visa system. Who needs a visa, available types, and the application process for Latin American travelers." },
     image: "https://images.unsplash.com/photo-1551727028-da30e7f87f1f?q=80&w=1200&auto=format&fit=crop",
     category: "migracion",
@@ -2030,18 +2030,18 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: false,
     sections: [
       {
-        title: "Quien Necesita Visa Para Espana",
+        title: "Quien Necesita Visa Para España",
         content: "Ciudadanos de la mayoria de paises latinoamericanos (Colombia, Mexico, Argentina, Chile, Brasil, Peru, etc.) NO necesitan visa para estancias turisticas de hasta 90 dias. Sin embargo, para estancias mas largas o propositos especificos (trabajo, estudio, residencia), SI se requiere visado.",
         image: "https://images.unsplash.com/photo-1552832230-c0197dd311b6?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visados Espanoles",
         content: "Los principales tipos de visa incluyen:",
-        list: ["Visa de turismo: Para nacionalidades que la requieren (no aplicaa mayoria de latinoamericanos)", "Visa de estudiante: Para estudios de mas de 90 dias", "Visa de trabajo: Requiere oferta laboral previa", "Visa de residencia no lucrativa: Para quienes tienen medios economicos propios", "Visa de emprendedor: Para iniciar negocios en Espana", "Visa de reagrupacion familiar: Para unirse a familiares residentes"]
+        list: ["Visa de turismo: Para nacionalidades que la requieren (no aplicaa mayoria de latinoamericanos)", "Visa de estudiante: Para estudios de mas de 90 dias", "Visa de trabajo: Requiere oferta laboral previa", "Visa de residencia no lucrativa: Para quienes tienen medios economicos propios", "Visa de emprendedor: Para iniciar negocios en España", "Visa de reagrupacion familiar: Para unirse a familiares residentes"]
       },
       {
         title: "El Proceso de Solicitud",
-        content: "Todas las visas se solicitan en el Consulado de Espana de tu pais de residencia. El proceso general incluye: cita previa online, formulario de solicitud completo, documentacion especifica segun tipo de visa, pago de tasas, y entrevista consular.",
+        content: "Todas las visas se solicitan en el Consulado de España de tu pais de residencia. El proceso general incluye: cita previa online, formulario de solicitud completo, documentacion especifica segun tipo de visa, pago de tasas, y entrevista consular.",
         image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b7?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -2054,7 +2054,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Puedo cambiar de visa estando en Espana?", answer: "Generalmente no es posible. Debes regresar a tu pais y solicitar la nueva visa desde alli, salvo excepciones muy especificas." },
+      { question: "Puedo cambiar de visa estando en España?", answer: "Generalmente no es posible. Debes regresar a tu pais y solicitar la nueva visa desde alli, salvo excepciones muy especificas." },
       { question: "Si me niegan la visa, puedo volver a aplicar?", answer: "Si, pero debes corregir las razones de la denegacion. Esperar un tiempo prudencial y presentar una solicitud mas solida." },
       { question: "La visa Schengen me permite trabajar?", answer: "No. La visa Schengen de turismo no autoriza trabajo. Para trabajar necesitas visa de trabajo especifica." }
     ]
@@ -2368,8 +2368,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        title: "Turismo de Naturaleza en Espana",
-        content: "Espana tiene biodiversidad sorprendente. Desde los Picos de Europa hasta las Islas Canarias, parques como Donana, y la Espana rural de Extremadura o Asturias. Hay rutas de senderismo, observacion de aves, y experiencias en fincas ecologicas."
+        title: "Turismo de Naturaleza en España",
+        content: "España tiene biodiversidad sorprendente. Desde los Picos de Europa hasta las Islas Canarias, parques como Donana, y la España rural de Extremadura o Asturias. Hay rutas de senderismo, observacion de aves, y experiencias en fincas ecologicas."
       },
       {
         title: "El Impacto de Tus Elecciones",
@@ -2431,8 +2431,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "distancia-latinoamerica-espana",
     slug: "distancia-latinoamerica-espana",
-    title: { es: "Distancia Entre Latinoamerica y Espana: Tiempos de Vuelo Por Ciudad", en: "Distance Between Latin America and Spain: Flight Times by City" },
-    excerpt: { es: "Informacion practica sobre la distancia y tiempos de vuelo desde principales ciudades latinoamericanas a Espana. Planifica tu viaje con datos reales.", en: "Practical information about the distance and flight times from major Latin American cities to Spain. Plan your trip with real data." },
+    title: { es: "Distancia Entre Latinoamerica y España: Tiempos de Vuelo Por Ciudad", en: "Distance Between Latin America and Spain: Flight Times by City" },
+    excerpt: { es: "Informacion practica sobre la distancia y tiempos de vuelo desde principales ciudades latinoamericanas a España. Planifica tu viaje con datos reales.", en: "Practical information about the distance and flight times from major Latin American cities to Spain. Plan your trip with real data." },
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8801?q=80&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
@@ -2444,7 +2444,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Entendiendo la Distancia",
-        content: "El Oceano Atlantico separa Latinoamerica de Espana, pero la distancia varia significativamente segun tu punto de partida. Desde Mexico estas mas cerca que desde Argentina. Esta diferencia impacta el tiempo de vuelo, la fatiga, y las conexiones disponibles.",
+        content: "El Oceano Atlantico separa Latinoamerica de España, pero la distancia varia significativamente segun tu punto de partida. Desde Mexico estas mas cerca que desde Argentina. Esta diferencia impacta el tiempo de vuelo, la fatiga, y las conexiones disponibles.",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -2463,11 +2463,11 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "El Viaje de Regreso",
-        content: "Los vuelos de regreso (Espana a Latinoamerica) suelen ser ligeramente mas largos debido a los vientos. Volar hacia el oeste va contra la corriente en chorro (jet stream), lo que puede agregar 30-60 minutos al tiempo de vuelo."
+        content: "Los vuelos de regreso (España a Latinoamerica) suelen ser ligeramente mas largos debido a los vientos. Volar hacia el oeste va contra la corriente en chorro (jet stream), lo que puede agregar 30-60 minutos al tiempo de vuelo."
       }
     ],
     faqs: [
-      { question: "Cual es el vuelo mas largo de Latinoamerica a Espana?", answer: "Los vuelos desde el sur de Chile o Argentina son los mas largos, superando las 13 horas de vuelo efectivo." },
+      { question: "Cual es el vuelo mas largo de Latinoamerica a España?", answer: "Los vuelos desde el sur de Chile o Argentina son los mas largos, superando las 13 horas de vuelo efectivo." },
       { question: "Hay vuelos nocturnos disponibles?", answer: "Si, muchas rutas tienen opciones de vuelo nocturno que te permiten dormir en el avion y llegar por la manana a Europa." },
       { question: "Cuantas horas de diferencia horaria hay?", answer: "Varia por ubicacion. Mexico tiene 7 horas de diferencia, Colombia 6 horas, Argentina 4-5 horas (depende del horario de verano europeo)." }
     ]
@@ -2569,8 +2569,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "requisitos-viajar-espana-colombia",
     slug: "requisitos-viajar-espana-desde-colombia",
     image: "https://images.unsplash.com/photo-1508672019048-805c876b67e3?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Requisitos Para Viajar A Espana Desde Colombia", en: "Requirements To Travel To Spain From Colombia" },
-    excerpt: { es: "Viajar a Espana desde Colombia es una experiencia emocionante. Conoce todos los requisitos esenciales: pasaporte vigente, documentacion, solvencia economica, alojamiento y seguro de viaje para pasar los controles migratorios sin contratiempos.", en: "Traveling to Spain from Colombia is an exciting experience. Learn all the essential requirements: valid passport, documentation, financial solvency, accommodation and travel insurance to pass migration controls smoothly." },
+    title: { es: "Requisitos Para Viajar A España Desde Colombia", en: "Requirements To Travel To Spain From Colombia" },
+    excerpt: { es: "Viajar a España desde Colombia es una experiencia emocionante. Conoce todos los requisitos esenciales: pasaporte vigente, documentacion, solvencia economica, alojamiento y seguro de viaje para pasar los controles migratorios sin contratiempos.", en: "Traveling to Spain from Colombia is an exciting experience. Learn all the essential requirements: valid passport, documentation, financial solvency, accommodation and travel insurance to pass migration controls smoothly." },
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "29 Ago 2025",
@@ -2581,41 +2581,41 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Documentos Esenciales Para Tu Viaje",
-        content: "Antes de tu viaje a Espana, es fundamental tener toda la documentacion en orden. Estos son los documentos que necesitas preparar con anticipacion para garantizar un viaje sin contratiempos.",
+        content: "Antes de tu viaje a España, es fundamental tener toda la documentacion en orden. Estos son los documentos que necesitas preparar con anticipacion para garantizar un viaje sin contratiempos.",
         image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb88?q=80&w=1200&auto=format&fit=crop",
-        list: ["Pasaporte vigente: Debe contar con al menos seis meses de validez desde la fecha de ingreso a Espana", "Boleto de ida y vuelta: Demuestra tu intencion de regresar a Colombia y tu planificacion de viaje temporal", "Formulario de entrada (si aplica): Algunos periodos requieren declaracion de salud o formularios especificos"]
+        list: ["Pasaporte vigente: Debe contar con al menos seis meses de validez desde la fecha de ingreso a España", "Boleto de ida y vuelta: Demuestra tu intencion de regresar a Colombia y tu planificacion de viaje temporal", "Formulario de entrada (si aplica): Algunos periodos requieren declaracion de salud o formularios especificos"]
       },
       {
         title: "Comprobacion de Solvencia Economica",
-        content: "Espana exige demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Las autoridades migratorias pueden solicitar evidencia de tus medios economicos al momento de ingresar.",
+        content: "España exige demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Las autoridades migratorias pueden solicitar evidencia de tus medios economicos al momento de ingresar.",
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a63?q=80&w=1200&auto=format&fit=crop",
         list: ["Efectivo en euros o dolares", "Tarjetas de credito o debito internacionales con cupo disponible", "Extractos bancarios recientes que demuestren fondos suficientes", "Carta de invitacion si aplica, que puede reducir requisitos economicos"]
       },
       {
         title: "Reserva de Alojamiento",
-        content: "Debes presentar un comprobante de hospedaje que demuestre donde te quedaras durante tu estancia en Espana. Esto es fundamental para pasar los controles migratorios.",
+        content: "Debes presentar un comprobante de hospedaje que demuestre donde te quedaras durante tu estancia en España. Esto es fundamental para pasar los controles migratorios.",
         image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
-        list: ["Reserva de hotel, hostal o apartamento confirmada", "Carta de invitacion oficial si te alojas con familiares o amigos en Espana", "Direccion completa del alojamiento para declarar en migracion"]
+        list: ["Reserva de hotel, hostal o apartamento confirmada", "Carta de invitacion oficial si te alojas con familiares o amigos en España", "Direccion completa del alojamiento para declarar en migracion"]
       },
       {
         title: "Seguro de Viaje Obligatorio",
-        content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia. El seguro debe cumplir con los requisitos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion. Este documento puede ser solicitado al ingresar a Espana.",
+        content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia. El seguro debe cumplir con los requisitos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion. Este documento puede ser solicitado al ingresar a España.",
         image: "https://images.unsplash.com/photo-1501619757722-90657a39a56f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estancia Permitida Sin Visa",
-        content: "Los ciudadanos colombianos pueden ingresar a Espana y al espacio Schengen sin visa para estancias turisticas de hasta 90 dias dentro de cualquier periodo de 180 dias. Es importante respetar este limite y no exceder el tiempo permitido para evitar problemas migratorios futuros.",
+        content: "Los ciudadanos colombianos pueden ingresar a España y al espacio Schengen sin visa para estancias turisticas de hasta 90 dias dentro de cualquier periodo de 180 dias. Es importante respetar este limite y no exceder el tiempo permitido para evitar problemas migratorios futuros.",
         image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86dc?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Pasar Migracion Sin Problemas",
-        content: "Prepararte con anticipacion te permite enfocarte en explorar y disfrutar Espana con tranquilidad. Recuerda: Informate, preparate y viaja feliz.",
+        content: "Prepararte con anticipacion te permite enfocarte en explorar y disfrutar España con tranquilidad. Recuerda: Informate, preparate y viaja feliz.",
         list: ["Lleva todos los documentos impresos y en formato digital", "Se claro y conciso al responder preguntas del oficial", "Ten a mano la reserva de alojamiento y boleto de regreso", "Muestra seguridad y tranquilidad durante el proceso", "Consulta con Trips Europa para asesorarte antes de tu viaje"]
       }
     ],
     faqs: [
-      { question: "Necesito visa para viajar a Espana desde Colombia?", answer: "No, los ciudadanos colombianos pueden viajar a Espana sin visa para estancias turisticas de hasta 90 dias dentro de un periodo de 180 dias." },
-      { question: "Cuanto tiempo de validez debe tener mi pasaporte?", answer: "Tu pasaporte debe tener al menos 6 meses de validez desde la fecha de entrada a Espana y paginas en blanco disponibles." },
+      { question: "Necesito visa para viajar a España desde Colombia?", answer: "No, los ciudadanos colombianos pueden viajar a España sin visa para estancias turisticas de hasta 90 dias dentro de un periodo de 180 dias." },
+      { question: "Cuanto tiempo de validez debe tener mi pasaporte?", answer: "Tu pasaporte debe tener al menos 6 meses de validez desde la fecha de entrada a España y paginas en blanco disponibles." },
       { question: "Es obligatorio el seguro de viaje?", answer: "Si, el seguro de viaje es requisito oficial para ingresar al espacio Schengen. Debe cubrir emergencias medicas y repatriacion." },
       { question: "Que pasa si me preguntan por solvencia economica?", answer: "Debes poder demostrar medios economicos suficientes para tu estadia. Lleva extractos bancarios, tarjetas de credito o efectivo." }
     ]
@@ -2625,8 +2625,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "requisitos-viajar-espana-peru",
     slug: "requisitos-viajar-espana-desde-peru",
     image: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Requisitos Para Viajar A Espana Desde Peru", en: "Requirements To Travel To Spain From Peru" },
-    excerpt: { es: "Viajar a Espana desde Peru es una experiencia emocionante. Conoce todos los requisitos esenciales para pasar los controles migratorios con tranquilidad y disfrutar tu aventura europea.", en: "Traveling to Spain from Peru is an exciting experience. Learn all the essential requirements to pass migration controls smoothly and enjoy your European adventure." },
+    title: { es: "Requisitos Para Viajar A España Desde Peru", en: "Requirements To Travel To Spain From Peru" },
+    excerpt: { es: "Viajar a España desde Peru es una experiencia emocionante. Conoce todos los requisitos esenciales para pasar los controles migratorios con tranquilidad y disfrutar tu aventura europea.", en: "Traveling to Spain from Peru is an exciting experience. Learn all the essential requirements to pass migration controls smoothly and enjoy your European adventure." },
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "29 Ago 2025",
@@ -2637,7 +2637,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Documentos Esenciales Para Viajeros Peruanos",
-        content: "Antes de tu viaje a Espana, asegurate de tener toda la documentacion en orden. Estos son los documentos imprescindibles que necesitas preparar con anticipacion.",
+        content: "Antes de tu viaje a España, asegurate de tener toda la documentacion en orden. Estos son los documentos imprescindibles que necesitas preparar con anticipacion.",
         image: "https://images.unsplash.com/photo-1474487548417-781cb71495f4?q=80&w=1200&auto=format&fit=crop",
         list: ["Pasaporte vigente con al menos seis meses de validez desde la fecha de ingreso", "Boleto aereo de ida y vuelta que demuestre tu intencion de regresar a Peru", "Documentacion adicional que pueda ser requerida segun temporada"]
       },
@@ -2655,17 +2655,17 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Seguro de Viaje Para el Espacio Schengen",
-        content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia en Espana. El seguro debe cumplir con los requisitos minimos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion.",
+        content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia en España. El seguro debe cumplir con los requisitos minimos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion.",
         image: "https://images.unsplash.com/photo-1512100356356-de1b84283e19?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Duracion de Estancia Permitida",
-        content: "Los ciudadanos peruanos pueden ingresar a Espana sin visa para estancias turisticas de hasta 90 dias en cualquier periodo de 180 dias. Respeta este limite para evitar inconvenientes en futuros viajes.",
+        content: "Los ciudadanos peruanos pueden ingresar a España sin visa para estancias turisticas de hasta 90 dias en cualquier periodo de 180 dias. Respeta este limite para evitar inconvenientes en futuros viajes.",
         image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
-      { question: "Los peruanos necesitan visa para Espana?", answer: "No, los ciudadanos peruanos pueden viajar a Espana sin visa para turismo hasta 90 dias." },
+      { question: "Los peruanos necesitan visa para España?", answer: "No, los ciudadanos peruanos pueden viajar a España sin visa para turismo hasta 90 dias." },
       { question: "Que seguro de viaje necesito?", answer: "Necesitas un seguro que cumpla requisitos Schengen: cobertura medica amplia y repatriacion." },
       { question: "Puedo trabajar durante mi estancia turistica?", answer: "No, la estancia turistica no permite trabajar. Para trabajar necesitas el visado correspondiente." }
     ]
@@ -2675,8 +2675,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "requisitos-viajar-espana-argentina",
     slug: "requisitos-viajar-espana-desde-argentina",
     image: "https://images.unsplash.com/photo-1515923019249-6b544314450c?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Requisitos Para Viajar A Espana Desde Argentina", en: "Requirements To Travel To Spain From Argentina" },
-    excerpt: { es: "Viajar a Espana desde Argentina es una experiencia emocionante. Descubre los requisitos esenciales de documentacion, solvencia economica y seguro de viaje para disfrutar tu aventura sin estres.", en: "Traveling to Spain from Argentina is an exciting experience. Discover the essential requirements for documentation, financial solvency and travel insurance to enjoy your adventure stress-free." },
+    title: { es: "Requisitos Para Viajar A España Desde Argentina", en: "Requirements To Travel To Spain From Argentina" },
+    excerpt: { es: "Viajar a España desde Argentina es una experiencia emocionante. Descubre los requisitos esenciales de documentacion, solvencia economica y seguro de viaje para disfrutar tu aventura sin estres.", en: "Traveling to Spain from Argentina is an exciting experience. Discover the essential requirements for documentation, financial solvency and travel insurance to enjoy your adventure stress-free." },
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "29 Ago 2025",
@@ -2687,19 +2687,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     sections: [
       {
         title: "Documentacion Para Viajeros Argentinos",
-        content: "Los viajeros argentinos tienen acceso privilegiado a Espana gracias a los lazos historicos entre ambos paises. Aun asi, es fundamental cumplir con los requisitos basicos de entrada.",
+        content: "Los viajeros argentinos tienen acceso privilegiado a España gracias a los lazos historicos entre ambos paises. Aun asi, es fundamental cumplir con los requisitos basicos de entrada.",
         image: "https://images.unsplash.com/photo-1582719508461-905c673771fe?q=80&w=1200&auto=format&fit=crop",
         list: ["Pasaporte argentino vigente con minimo seis meses de validez", "Boleto de ida y vuelta confirmado", "DNI argentino como documento adicional (no obligatorio pero util)"]
       },
       {
         title: "Demostracion de Medios Economicos",
-        content: "Espana exige demostrar capacidad economica para cubrir tu estadia. Los argentinos deben preparar documentacion que evidencie sus recursos financieros.",
+        content: "España exige demostrar capacidad economica para cubrir tu estadia. Los argentinos deben preparar documentacion que evidencie sus recursos financieros.",
         image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5958?q=80&w=1200&auto=format&fit=crop",
         list: ["Efectivo, tarjetas de credito o debito internacionales", "Extractos bancarios recientes", "Carta de responsabilidad economica si aplica"]
       },
       {
         title: "Alojamiento Confirmado",
-        content: "Debes presentar comprobante de donde te hospedaras durante tu estancia en Espana. Esto es verificado en el control migratorio.",
+        content: "Debes presentar comprobante de donde te hospedaras durante tu estancia en España. Esto es verificado en el control migratorio.",
         image: "https://images.unsplash.com/photo-1527269534026-c86f4009eacd?q=80&w=1200&auto=format&fit=crop",
         list: ["Reserva de hotel o alojamiento turistico", "Carta de invitacion si te quedas con familiares", "Contrato de alquiler temporal si aplica"]
       },
@@ -2715,9 +2715,9 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       }
     ],
     faqs: [
-      { question: "Argentina necesita visa para Espana?", answer: "No, los argentinos pueden viajar a Espana sin visa para turismo hasta 90 dias en un periodo de 180 dias." },
-      { question: "Puedo usar mi DNI argentino para entrar a Espana?", answer: "No, necesitas pasaporte. El DNI solo es valido para viajes dentro de Sudamerica en paises del Mercosur." },
-      { question: "Si tengo ciudadania italiana, que pasaporte uso?", answer: "Puedes usar tu pasaporte italiano para ingresar a Espana como ciudadano de la UE, sin restricciones de tiempo." }
+      { question: "Argentina necesita visa para España?", answer: "No, los argentinos pueden viajar a España sin visa para turismo hasta 90 dias en un periodo de 180 dias." },
+      { question: "Puedo usar mi DNI argentino para entrar a España?", answer: "No, necesitas pasaporte. El DNI solo es valido para viajes dentro de Sudamerica en paises del Mercosur." },
+      { question: "Si tengo ciudadania italiana, que pasaporte uso?", answer: "Puedes usar tu pasaporte italiano para ingresar a España como ciudadano de la UE, sin restricciones de tiempo." }
     ]
   },
 
@@ -2725,8 +2725,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "espana-destino-turistico-2025",
     slug: "espana-mejor-destino-turistico-2025",
     image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f63?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Espana, Tu Mejor Destino Turistico 2025: Hoteles, Transporte Y Seguridad", en: "Spain, Your Best Tourist Destination 2025: Hotels, Transport And Safety" },
-    excerpt: { es: "Espana es uno de los destinos turisticos mas visitados del mundo. Descubre todo sobre hoteles de calidad, transporte publico eficiente, alquiler de vehiculos y seguridad para viajeros en 2025.", en: "Spain is one of the most visited tourist destinations in the world. Discover everything about quality hotels, efficient public transport, vehicle rental and safety for travelers in 2025." },
+    title: { es: "España, Tu Mejor Destino Turistico 2025: Hoteles, Transporte Y Seguridad", en: "Spain, Your Best Tourist Destination 2025: Hotels, Transport And Safety" },
+    excerpt: { es: "España es uno de los destinos turisticos mas visitados del mundo. Descubre todo sobre hoteles de calidad, transporte publico eficiente, alquiler de vehiculos y seguridad para viajeros en 2025.", en: "Spain is one of the most visited tourist destinations in the world. Discover everything about quality hotels, efficient public transport, vehicle rental and safety for travelers in 2025." },
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "29 Ago 2025",
@@ -2736,38 +2736,38 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     featured: true,
     sections: [
       {
-        title: "Hoteles En Espana: Variedad Y Calidad Garantizada",
-        content: "Espana cuenta con una oferta hotelera excepcional que se adapta a todos los presupuestos y gustos. Desde hoteles de lujo de clase mundial en destinos como Madrid, Barcelona e Ibiza, hasta encantadores hoteles boutique en ciudades historicas como Sevilla y Granada. Para viajeros con presupuesto ajustado, existen opciones economicas como hostales y pensiones que ofrecen excelente relacion calidad-precio.",
+        title: "Hoteles En España: Variedad Y Calidad Garantizada",
+        content: "España cuenta con una oferta hotelera excepcional que se adapta a todos los presupuestos y gustos. Desde hoteles de lujo de clase mundial en destinos como Madrid, Barcelona e Ibiza, hasta encantadores hoteles boutique en ciudades historicas como Sevilla y Granada. Para viajeros con presupuesto ajustado, existen opciones economicas como hostales y pensiones que ofrecen excelente relacion calidad-precio.",
         image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3f?q=80&w=1200&auto=format&fit=crop",
         list: ["Hoteles de lujo en Madrid, Barcelona e Ibiza", "Hoteles boutique en ciudades historicas", "Hostales y pensiones economicas", "Paradores de Turismo en edificios historicos", "Apartamentos turisticos para estancias largas"]
       },
       {
         title: "Alquiler de Vehiculos: Libertad Para Explorar",
-        content: "El alquiler de coches es una de las mejores formas de conocer Espana a tu propio ritmo. Encontraras oficinas de alquiler en todos los aeropuertos principales y estaciones de tren. Companias reconocidas como Europcar, Hertz y Sixt ofrecen flotas modernas ideales para recorrer la Costa del Sol, la Costa Brava o la ruta de los pueblos blancos en Andalucia.",
+        content: "El alquiler de coches es una de las mejores formas de conocer España a tu propio ritmo. Encontraras oficinas de alquiler en todos los aeropuertos principales y estaciones de tren. Companias reconocidas como Europcar, Hertz y Sixt ofrecen flotas modernas ideales para recorrer la Costa del Sol, la Costa Brava o la ruta de los pueblos blancos en Andalucia.",
         image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop",
         list: ["Disponible en aeropuertos y estaciones de tren", "Companias reconocidas: Europcar, Hertz, Sixt", "Ideal para rutas como Costa del Sol y Costa Brava", "Consulta requisitos si tu licencia no es europea"]
       },
       {
         title: "Transporte Publico: Rapido Y Eficiente",
-        content: "El transporte urbano en Espana es eficiente, puntual y accesible. Las grandes ciudades cuentan con sistemas de metro modernos, redes de autobuses urbanos con tarifas integradas, y trenes de cercanias que conectan areas metropolitanas. Madrid y Barcelona tienen algunos de los mejores sistemas de transporte publico de Europa.",
+        content: "El transporte urbano en España es eficiente, puntual y accesible. Las grandes ciudades cuentan con sistemas de metro modernos, redes de autobuses urbanos con tarifas integradas, y trenes de cercanias que conectan areas metropolitanas. Madrid y Barcelona tienen algunos de los mejores sistemas de transporte publico de Europa.",
         image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1200&auto=format&fit=crop",
         list: ["Metro moderno en Madrid y Barcelona", "Autobuses urbanos con tarifas integradas", "Trenes de cercanias (Renfe Cercanias)", "Tranvias en ciudades como Valencia y Sevilla", "Aplicaciones moviles para planificar rutas"]
       },
       {
         title: "Seguridad Para Turistas",
-        content: "Espana es considerado uno de los paises mas seguros de Europa para turistas. Sin embargo, conviene tomar precauciones basicas especialmente en areas muy turisticas. Las grandes ciudades cuentan con policia turistica dedicada y el numero de emergencias 112 esta disponible en todo el pais las 24 horas.",
+        content: "España es considerado uno de los paises mas seguros de Europa para turistas. Sin embargo, conviene tomar precauciones basicas especialmente en areas muy turisticas. Las grandes ciudades cuentan con policia turistica dedicada y el numero de emergencias 112 esta disponible en todo el pais las 24 horas.",
         image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
-        list: ["Cuidado con carteristas en zonas muy concurridas", "Policia turistica disponible en grandes ciudades", "Numero de emergencias: 112 (disponible 24/7)", "Zonas turisticas bien vigiladas", "Espana tiene bajo indice de criminalidad violenta"]
+        list: ["Cuidado con carteristas en zonas muy concurridas", "Policia turistica disponible en grandes ciudades", "Numero de emergencias: 112 (disponible 24/7)", "Zonas turisticas bien vigiladas", "España tiene bajo indice de criminalidad violenta"]
       },
       {
         title: "Transporte Entre Ciudades: Opciones Para Todos",
-        content: "Moverse entre ciudades en Espana es facil y comodo gracias a una red de transporte moderna y eficiente. Los trenes de Alta Velocidad (AVE) conectan las principales ciudades en tiempos record. Tambien hay opciones de autobuses interurbanos y vuelos domesticos economicos.",
+        content: "Moverse entre ciudades en España es facil y comodo gracias a una red de transporte moderna y eficiente. Los trenes de Alta Velocidad (AVE) conectan las principales ciudades en tiempos record. Tambien hay opciones de autobuses interurbanos y vuelos domesticos economicos.",
         image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
         list: ["Trenes AVE: Madrid-Barcelona en menos de 3 horas", "Autobuses interurbanos con companias como Alsa", "Vuelos internos con Iberia, Vueling o Air Europa", "BlaBlaCar para viajes compartidos economicos"]
       }
     ],
     faqs: [
-      { question: "Es seguro viajar solo por Espana?", answer: "Si, Espana es muy seguro para viajeros solos. Toma precauciones normales como en cualquier destino turistico popular." },
+      { question: "Es seguro viajar solo por España?", answer: "Si, España es muy seguro para viajeros solos. Toma precauciones normales como en cualquier destino turistico popular." },
       { question: "Necesito licencia internacional para alquilar coche?", answer: "Si tu licencia no es europea, es recomendable obtener un permiso internacional de conducir. Consulta requisitos especificos con la empresa de alquiler." },
       { question: "Cual es la mejor forma de viajar entre Madrid y Barcelona?", answer: "El tren AVE es la opcion mas rapida y comoda, conectando ambas ciudades en menos de 3 horas con salidas frecuentes." }
     ]
@@ -2777,8 +2777,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "vuelos-venezuela-espana-avianca",
     slug: "viajar-venezuela-espana-avianca",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd65?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Viajar De Venezuela A Espana Con Avianca: Tu Mejor Opcion", en: "Traveling From Venezuela To Spain With Avianca: Your Best Option" },
-    excerpt: { es: "Avianca conecta Caracas con Madrid a traves de rutas estrategicas que combinan comodidad y frecuencia. Descubre como esta aerolinea se ha convertido en una opcion preferida para volar hacia Espana.", en: "Avianca connects Caracas with Madrid through strategic routes combining comfort and frequency. Discover how this airline has become a preferred option for flying to Spain." },
+    title: { es: "Viajar De Venezuela A España Con Avianca: Tu Mejor Opcion", en: "Traveling From Venezuela To Spain With Avianca: Your Best Option" },
+    excerpt: { es: "Avianca conecta Caracas con Madrid a traves de rutas estrategicas que combinan comodidad y frecuencia. Descubre como esta aerolinea se ha convertido en una opcion preferida para volar hacia España.", en: "Avianca connects Caracas with Madrid through strategic routes combining comfort and frequency. Discover how this airline has become a preferred option for flying to Spain." },
     category: "vuelos",
     categoryLabel: { es: "Vuelos", en: "Flights" },
     date: "15 Sep 2025",
@@ -2821,7 +2821,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "aerolineas-vuelos-caracas-madrid",
     image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386fa?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Aerolineas Que Vuelan De Caracas A Madrid", en: "Airlines Flying From Caracas To Madrid" },
-    excerpt: { es: "La ruta aerea entre Caracas y Madrid es una de las mas demandadas. Conoce las principales aerolineas que operan esta conexion y como elegir la mejor opcion para tu viaje a Espana.", en: "The air route between Caracas and Madrid is one of the most demanded. Learn about the main airlines operating this connection and how to choose the best option for your trip to Spain." },
+    excerpt: { es: "La ruta aerea entre Caracas y Madrid es una de las mas demandadas. Conoce las principales aerolineas que operan esta conexion y como elegir la mejor opcion para tu viaje a España.", en: "The air route between Caracas and Madrid is one of the most demanded. Learn about the main airlines operating this connection and how to choose the best option for your trip to Spain." },
     category: "vuelos",
     categoryLabel: { es: "Vuelos", en: "Flights" },
     date: "15 Sep 2025",
@@ -2837,7 +2837,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       },
       {
         title: "Principales Aerolineas En Esta Ruta",
-        content: "Iberia, Air Europa, Plus Ultra y Conviasa son las principales aerolineas que conectan Venezuela con Espana. Cada una ofrece caracteristicas diferentes que se adaptan a distintos perfiles de viajero.",
+        content: "Iberia, Air Europa, Plus Ultra y Conviasa son las principales aerolineas que conectan Venezuela con España. Cada una ofrece caracteristicas diferentes que se adaptan a distintos perfiles de viajero.",
         image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef2?q=80&w=1200&auto=format&fit=crop",
         list: ["Iberia: Extensa red de conexiones europeas y servicio premium", "Air Europa: Vuelos directos con buena frecuencia", "Plus Ultra: Tarifas competitivas y atencion personalizada", "Conviasa: Aerolinea venezolana con conexion directa"]
       },
@@ -2863,8 +2863,8 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     id: "vuelos-internacionales-venezuela-espana",
     slug: "espana-vuelos-internacionales-venezuela",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999eg?q=80&w=1200&auto=format&fit=crop",
-    title: { es: "Espana Mas Cerca: Vuelos Internacionales Directos Desde Venezuela", en: "Spain Closer: Direct International Flights From Venezuela" },
-    excerpt: { es: "Venezuela mantiene conexion aerea con el mundo a traves de diversas aerolineas. Descubre todas las opciones para planificar tu viaje a Espana y otros destinos internacionales.", en: "Venezuela maintains air connection with the world through various airlines. Discover all the options to plan your trip to Spain and other international destinations." },
+    title: { es: "España Mas Cerca: Vuelos Internacionales Directos Desde Venezuela", en: "Spain Closer: Direct International Flights From Venezuela" },
+    excerpt: { es: "Venezuela mantiene conexion aerea con el mundo a traves de diversas aerolineas. Descubre todas las opciones para planificar tu viaje a España y otros destinos internacionales.", en: "Venezuela maintains air connection with the world through various airlines. Discover all the options to plan your trip to Spain and other international destinations." },
     category: "vuelos",
     categoryLabel: { es: "Vuelos", en: "Flights" },
     date: "16 Sep 2025",
@@ -2877,29 +2877,29 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Vuelos Internacionales Desde Venezuela",
         content: "Venezuela se mantiene conectada con el mundo a traves de diversas aerolineas que ofrecen vuelos internacionales. Desde conexiones regionales en America hasta rutas hacia Europa, los viajeros venezolanos cuentan con alternativas confiables que hacen posible cruzar fronteras y vivir nuevas experiencias.",
         image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6d?q=80&w=1200&auto=format&fit=crop",
-        list: ["Iberia: Vuelos directos a Madrid", "Air Europa: Conexiones frecuentes a Espana", "Turkish Airlines: Ruta hacia Europa via Estambul", "Copa Airlines: Conexiones por Ciudad de Panama", "Plus Ultra: Atencion personalizada hacia Madrid", "Conviasa: Aerolinea venezolana con rutas europeas"]
+        list: ["Iberia: Vuelos directos a Madrid", "Air Europa: Conexiones frecuentes a España", "Turkish Airlines: Ruta hacia Europa via Estambul", "Copa Airlines: Conexiones por Ciudad de Panama", "Plus Ultra: Atencion personalizada hacia Madrid", "Conviasa: Aerolinea venezolana con rutas europeas"]
       },
       {
-        title: "La Ruta Venezuela-Espana: Puente Cultural",
-        content: "Entre todas las rutas internacionales, los vuelos hacia Espana destacan como los mas solicitados por viajeros venezolanos. Con operaciones de aerolineas como Iberia, Air Europa y Plus Ultra desde Caracas a Madrid, y de Conviasa hacia Madrid y Tenerife, existen varias alternativas para viajar a Espana. Madrid funciona como hub para conectar facilmente con el resto de Europa.",
+        title: "La Ruta Venezuela-España: Puente Cultural",
+        content: "Entre todas las rutas internacionales, los vuelos hacia España destacan como los mas solicitados por viajeros venezolanos. Con operaciones de aerolineas como Iberia, Air Europa y Plus Ultra desde Caracas a Madrid, y de Conviasa hacia Madrid y Tenerife, existen varias alternativas para viajar a España. Madrid funciona como hub para conectar facilmente con el resto de Europa.",
         image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fb?q=80&w=1200&auto=format&fit=crop"
       },
       {
         title: "Aerolineas Que Generan Confianza",
         content: "Cada aerolinea aporta un valor unico a los viajeros. La variedad de opciones permite que cada viajero encuentre la alternativa que mejor se ajuste a sus planes, presupuesto y preferencias de servicio.",
         image: "https://images.unsplash.com/photo-1583422409516-2895a77effed?q=80&w=1200&auto=format&fit=crop",
-        list: ["Iberia y Air Europa: Extensa red de conexiones europeas", "Plus Ultra: Tarifas accesibles y trato personalizado", "Conviasa: Refuerza conexion historica Venezuela-Espana", "Turkish Airlines: Puerta a Medio Oriente y Asia"]
+        list: ["Iberia y Air Europa: Extensa red de conexiones europeas", "Plus Ultra: Tarifas accesibles y trato personalizado", "Conviasa: Refuerza conexion historica Venezuela-España", "Turkish Airlines: Puerta a Medio Oriente y Asia"]
       },
       {
         title: "Trips Europa: Tu Aliado En La Planificacion",
-        content: "En Trips Europa nos encargamos de asesorarte para que tu experiencia sea unica. Te acompanamos en la eleccion de la aerolinea, la ruta mas conveniente y te ayudamos a planificar tu viaje completo. Viajar desde Venezuela al mundo nunca habia sido tan accesible, y Espana se mantiene como uno de los destinos favoritos para reencontrarse, estudiar, trabajar o explorar.",
+        content: "En Trips Europa nos encargamos de asesorarte para que tu experiencia sea unica. Te acompanamos en la eleccion de la aerolinea, la ruta mas conveniente y te ayudamos a planificar tu viaje completo. Viajar desde Venezuela al mundo nunca habia sido tan accesible, y España se mantiene como uno de los destinos favoritos para reencontrarse, estudiar, trabajar o explorar.",
         image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=80&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
-      { question: "Cual es la aerolinea mas economica para viajar de Venezuela a Espana?", answer: "Los precios varian segun temporada y anticipacion de compra. Plus Ultra y Conviasa suelen tener tarifas competitivas, pero compara siempre antes de reservar." },
+      { question: "Cual es la aerolinea mas economica para viajar de Venezuela a España?", answer: "Los precios varian segun temporada y anticipacion de compra. Plus Ultra y Conviasa suelen tener tarifas competitivas, pero compara siempre antes de reservar." },
       { question: "Puedo hacer conexion a otros paises europeos desde Madrid?", answer: "Si, Madrid-Barajas es un hub importante con conexiones a toda Europa. Puedes continuar facilmente a Paris, Roma, Londres y otras ciudades." },
-      { question: "Que documentos necesito para volar de Venezuela a Espana?", answer: "Necesitas pasaporte vigente con al menos 6 meses de validez, boleto de regreso, seguro de viaje y comprobante de alojamiento y solvencia economica." }
+      { question: "Que documentos necesito para volar de Venezuela a España?", answer: "Necesitas pasaporte vigente con al menos 6 meses de validez, boleto de regreso, seguro de viaje y comprobante de alojamiento y solvencia economica." }
     ]
   },
 
@@ -2908,7 +2908,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-baratos-opcion-cuotas-flex",
     image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Como Acceder A Vuelos Baratos Con La Opcion De Cuotas Flex", en: "How To Access Cheap Flights With Flex Installment Option" },
-    excerpt: { es: "Viajar dejo de ser un lujo reservado para pocos. Descubre como las opciones de pago en cuotas hacen mas accesible tu sueno de volar hacia Espana y otros destinos internacionales.", en: "Traveling is no longer a luxury reserved for few. Discover how installment payment options make your dream of flying to Spain and other international destinations more accessible." },
+    excerpt: { es: "Viajar dejo de ser un lujo reservado para pocos. Descubre como las opciones de pago en cuotas hacen mas accesible tu sueno de volar hacia España y otros destinos internacionales.", en: "Traveling is no longer a luxury reserved for few. Discover how installment payment options make your dream of flying to Spain and other international destinations more accessible." },
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "17 Sep 2025",
