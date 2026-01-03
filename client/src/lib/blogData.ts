@@ -5325,5 +5325,100 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Cuanto cuesta una visita con cata en la Toscana?", answer: "Cata basica: EUR 15-30. Cata guiada con tour: EUR 30-60. Experiencia premium con almuerzo: EUR 80-150+. Hay opciones para todos los presupuestos." },
       { question: "Puedo comprar vino y enviarlo a casa?", answer: "Si, muchas bodegas ofrecen envio internacional. Tambien puedes comprar y llevar en maleta (limite de 5 litros sin declarar en aduana). Algunas tiendas especializadas en aeropuertos tienen buena seleccion." }
     ]
+  },
+  {
+    id: "praga-presupuesto",
+    slug: "praga-presupuesto",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Praga con Poco Presupuesto: Guia para Ahorrar", en: "Prague on a Budget: Money-Saving Guide" },
+    excerpt: { es: "Praga es una de las capitales mas economicas de Europa. Alojamiento, comida y actividades baratas.", en: "Prague is one of Europe's most affordable capitals. Cheap accommodation, food and activities." },
+    category: "consejos",
+    categoryLabel: { es: "Consejos", en: "Tips" },
+    date: "26 Nov 2024",
+    readTime: 11,
+    author: "Trips Europa",
+    keywords: ["praga barato", "praga presupuesto", "europa economica", "viaje economico", "praga low cost", "republica checa"],
+    featured: true,
+    sections: [
+      {
+        title: "Praga: La Joya Economica de Europa Central",
+        content: "Praga es una de las capitales mas hermosas y accesibles de Europa. Mientras ciudades como Paris, Londres o Amsterdam pueden vaciar tu cartera rapidamente, la capital checa ofrece arquitectura gotica impresionante, historia fascinante y vida nocturna vibrante a precios que parecen de hace una decada. Con planificacion inteligente, puedes disfrutar de Praga gastando entre EUR 40-60 diarios, incluyendo alojamiento, comida y actividades. Esta guia te mostrara exactamente como hacerlo sin sacrificar la experiencia.",
+        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Alojamiento Economico: Donde Dormir Barato",
+        content: "El alojamiento es donde puedes ahorrar mas en Praga. Los precios son significativamente mas bajos que en Europa Occidental.",
+        list: ["Hostales: EUR 10-20/noche en dormitorio, EUR 30-50 habitacion privada. Czech Inn, Mosaic House, Sir Toby's son excelentes.", "Apartamentos Airbnb: EUR 35-60/noche para 2 personas. Cocina incluida para ahorrar en comidas. Busca en Zizkov o Vinohrady.", "Hoteles economicos: EUR 40-70/noche para habitacion doble. Menos centricos pero limpios y funcionales.", "Hoteles boutique: EUR 70-100/noche. Lujo accesible comparado con otras capitales. Design hotels checos son geniales.", "Barrios recomendados: Zizkov (autentico, barato), Vinohrady (hipster, buen precio), Karlin (moderno, en auge). Evita el centro historico para dormir.", "Temporada baja: Noviembre-marzo (excepto Navidad) precios caen 30-50%. Hace frio pero la ciudad es magica."],
+        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Comida Barata: Donde Comer Como un Local",
+        content: "La comida checa es abundante, sabrosa y economica. Evita los restaurantes turisticos de la Plaza de la Ciudad Vieja y come donde comen los checos.",
+        list: ["Kantyny (cantinas): Buffets de autoservicio. Plato principal desde EUR 3-5. Lokals, Sisters, Kantyna son populares.", "Hospodas (tabernas): Pubs tradicionales con comida casera. Menu del dia EUR 5-8. Ambiente autentico.", "Svickova: El plato nacional. Ternera en crema con arandanos y knedliky (dumplings). EUR 6-9 en sitios locales.", "Trdelnik: El chimney cake que veras en todas partes NO es tradicional checo (es hungaro). Pero esta rico y cuesta EUR 3-4.", "Mercados: Naplavka (sabados, junto al rio), Manifesto Market (contenedores hipster), Farmarske trziste (productos locales).", "Supermercados: Billa, Albert, Lidl. Compra quesos, embutidos, pan y cena picnic. EUR 5-10 para dos personas.", "Cerveza: Pilsner Urquell, Kozel, Staropramen. En pub local EUR 1.5-2.5 por medio litro. En zona turistica EUR 4-5."],
+        image: "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Transporte: Moverse Gastando Poco",
+        content: "El transporte publico de Praga es excelente, barato y te lleva a todas partes. No necesitas taxi ni Uber.",
+        list: ["Billete sencillo (30 min): 30 CZK (EUR 1.20). Valido para metro, tranvia y bus.", "Billete 24 horas: 120 CZK (EUR 4.80). Ilimitado. Perfecto para un dia de exploracion intensiva.", "Billete 72 horas: 330 CZK (EUR 13.20). Ideal para una estancia de 3-4 dias.", "App Litacka: Compra billetes digitales. Evita colas y maquinas.", "Tranvias historicos: La linea 22 recorre los principales monumentos. Tour turistico gratis con billete normal.", "A pie: El centro historico es compacto. Puente de Carlos, Plaza de la Ciudad Vieja, Castillo: todo caminable.", "Desde aeropuerto: Bus 119 + metro = EUR 1.20. El taxi cuesta EUR 25-30. No hay razon para pagar mas."]
+      },
+      {
+        title: "Atracciones Gratis: Lo Mejor Sin Pagar",
+        content: "Muchas de las mejores experiencias de Praga son completamente gratuitas.",
+        list: ["Puente de Carlos: Iconico. Mejor al amanecer (sin turistas) o al atardecer (luz magica). Gratis siempre.", "Plaza de la Ciudad Vieja: Reloj Astronomico (cada hora en punto), arquitectura gotica y barroca. Gratis.", "Barrio Judio (Josefov): Pasear por sus calles es gratis. Los museos y sinagogas cuestan entrada.", "Petrin Hill: Colina con vistas panoramicas. Subida a pie gratis. El funicular cuesta un billete de transporte normal.", "Letna Park: Parque con metronomico gigante y las mejores vistas de la ciudad. Terraza de cerveza barata.", "Vysehrad: Fortaleza medieval, cementerio de artistas famosos, vistas al Moldava. Gratis.", "Cambio de guardia: En el Castillo de Praga, cada hora. Ceremonia completa al mediodia. Gratis."],
+        image: "https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Atracciones con Entrada: Cuales Valen la Pena",
+        content: "Algunas atracciones requieren entrada. Aqui te decimos cuales justifican el gasto.",
+        list: ["Castillo de Praga: Circuito B (Catedral, Palacio, Basilica, Callejon Dorado) EUR 10. Imprescindible.", "Torre del Reloj Astronomico: EUR 5 por subir. Vistas de la plaza. Alternativa gratis: terraza de cualquier cafeteria cercana.", "Biblioteca Clementinum: La mas bella de Europa. Tour guiado EUR 12. Para amantes de libros y arquitectura.", "Museo Nacional: Recien renovado, impresionante edificio. EUR 8. Colecciones de historia natural y cultural.", "Free walking tours: Propina voluntaria (EUR 5-10 recomendado). Sandeman's y otros ofrecen tours de 2-3 horas.", "Prague Card: EUR 62 por 2 dias. Solo vale si visitas muchos museos. Calcula antes de comprar."],
+        image: "https://images.unsplash.com/photo-1458150945447-7fb764c11a92?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "La Cerveza Mas Barata de Europa",
+        content: "Republica Checa es el pais con mayor consumo de cerveza per capita del mundo. Y la cerveza aqui es mas barata que el agua embotellada.",
+        list: ["Pubs locales: Medio litro EUR 1.50-2.50. Lokal, U Medvidku, Pivovarsky Dum, U Fleku (cerveceria desde 1499).", "Happy hours: Muchos bares tienen 2x1 o descuentos de 16:00-18:00. Aprovecha.", "Cerveza checa: Pilsner Urquell (la original), Budvar (Budweiser checo), Kozel, Staropramen. Todas excelentes.", "Microperveries: Praga tiene una escena craft creciente. Zly Casy, BeerGeek, Vinohradsky Pivovar.", "Pub crawls: EUR 15-20 incluyen varias cervezas y entrada a clubs. Divertido para jovenes y grupos.", "Evita: Bares en Plaza de la Ciudad Vieja y Puente de Carlos. Pagan hasta EUR 5 por cerveza mediocre."]
+      },
+      {
+        title: "Vida Nocturna Economica",
+        content: "Praga tiene una vida nocturna legendaria a precios accesibles. Desde clubs de techno hasta jazz intimo.",
+        list: ["Clubs: Cross Club (industrial/techno, entrada gratis o EUR 5), Roxy, Lucerna Music Bar. Covers EUR 3-10.", "Cocktails: EUR 5-8 en buenos bares. En ciudades como Londres o Paris pagas EUR 15-20.", "Jazz: Jazz Dock (junto al rio), U Maleho Glena. Entrada EUR 5-10. Nivel altisimo.", "Bares de vinilo: Vinyl Bar, Bukowski's. Para hipsters y amantes de la musica.", "Zona de fiesta: Dlouha Street es el epicentro. Muchas opciones en pocos metros.", "Seguridad: Praga es muy segura de noche. Unico peligro: vendedores callejeros de drogas falsas (ignoralos)."],
+        image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Excursiones de un Dia Economicas",
+        content: "Cerca de Praga hay destinos increibles accesibles en tren o bus por muy poco dinero.",
+        list: ["Kutna Hora: Osario con 40,000 esqueletos, catedral gotica. Tren EUR 4-6, 1 hora. Entrada osario EUR 4.", "Cesky Krumlov: Pueblo medieval Patrimonio UNESCO. Bus RegioJet EUR 5-8, 3 horas. Un dia magico.", "Karlstejn: Castillo gotico de cuento. Tren EUR 3, 40 min. Entrada EUR 8-12 segun circuito.", "Terezin: Campo de concentracion/ghetto. Memorial historico importante. Bus EUR 4, 1 hora. Entrada EUR 10.", "RegioJet: Compania de buses/trenes checa. Precios imbatibles, wifi gratis, cafe incluido.", "Tip: Compra billetes online con antelacion. Algunos servicios tienen plazas limitadas a precios bajos."]
+      },
+      {
+        title: "Trucos Extra Para Ahorrar",
+        content: "Consejos adicionales de viajeros experimentados para estirar tu presupuesto al maximo.",
+        list: ["Coronas checas: Paga siempre en CZK (coronas), nunca en euros. El cambio en comercios es terrible.", "Cambio de moneda: Evita casas de cambio en zonas turisticas (comisiones abusivas). Usa cajeros automaticos o cambia en bancos.", "Propinas: 10% es suficiente y apreciado. No obligatorio como en USA.", "Agua: El agua del grifo es potable y excelente. Lleva botella reutilizable.", "SIM local: EUR 5-10 por tarjeta con datos ilimitados. Evita roaming.", "Temporada baja: Enero-febrero precios minimos. Hace frio pero hay menos turistas y todo es mas barato.", "Mercados navidenos: Diciembre es magico pero mas caro y lleno. Considera principios de diciembre."],
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Presupuesto Diario Realista",
+        content: "Esto es lo que puedes esperar gastar en Praga segun tu estilo de viaje:",
+        list: ["Mochilero (EUR 35-50/dia): Hostal en dormitorio, comida en cantinas y supermercados, atracciones gratis, cervezas en pubs locales.", "Economico (EUR 50-70/dia): Habitacion privada/Airbnb, restaurantes locales, algunas entradas pagadas, buena cerveza.", "Confort (EUR 80-120/dia): Hotel 3-4 estrellas, restaurantes variados, todas las atracciones, experiencias como tours o conciertos.", "Lujo (EUR 150+/dia): Hotel boutique, restaurantes gourmet, tours privados, taxis, spa. Aun asi mas barato que Europa Occidental.", "Comparacion: El mismo viaje 'confort' en Paris o Londres costaria EUR 200-300/dia facilmente.", "Una semana en Praga: EUR 400-600 para viajero economico. EUR 700-1000 para viaje confortable. Vuelos aparte."]
+      },
+      {
+        title: "Errores Comunes a Evitar",
+        content: "Estos errores pueden arruinar tu presupuesto o tu experiencia. Evitalos.",
+        list: ["Comer en Plaza de la Ciudad Vieja: Turistico, caro, calidad mediocre. Camina 5 minutos en cualquier direccion.", "Cambio de moneda en la calle: Casas de cambio con 0% commission te roban en el tipo de cambio. Usa cajeros.", "Pagar en euros: Siempre peor cambio. Insiste en pagar en coronas.", "Taxis sin taximetro: Negocia precio antes o usa apps como Bolt, Liftago. Los taxis del aeropuerto son caros.", "Tours en espanol muy caros: Hay opciones economicas. Compara precios. Free walking tours son excelentes.", "Trdelnik como tradicion: Rico pero es marketing turistico. No pierdas tiempo en colas."]
+      },
+      {
+        title: "Planifica tu Viaje a Praga con Trips Europa",
+        content: "En Tripseuropa.com te ayudamos a organizar tu escapada a Praga y Europa Central con el mejor valor. Conocemos los hostales con mejor relacion calidad-precio, los restaurantes locales autenticos, y podemos combinarte Praga con Viena, Budapest o Berlin en circuitos optimizados. Tambien organizamos traslados, excursiones a Cesky Krumlov y reservamos entradas sin colas. Viaja inteligente, gasta menos, disfruta mas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje economico a Praga.",
+        image: "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Es realmente Praga barata?", answer: "Si, comparada con Europa Occidental. Cerveza EUR 1.5-2.5, comida EUR 5-10, alojamiento EUR 30-60. Es un 40-60% mas barata que Paris, Londres o Amsterdam para el mismo nivel de experiencia." },
+      { question: "Cuantos dias necesito en Praga?", answer: "3-4 dias son ideales para ver lo principal sin prisas. Con 5-6 dias puedes anadir excursiones a Kutna Hora o Cesky Krumlov. Menos de 2 dias se queda muy corto." },
+      { question: "Es mejor pagar en euros o coronas checas?", answer: "Siempre en coronas checas (CZK). Aunque muchos lugares aceptan euros, el tipo de cambio que aplican es muy desfavorable. Usa cajeros automaticos para obtener coronas." },
+      { question: "Cual es la mejor epoca para visitar Praga economicamente?", answer: "Enero-febrero son los meses mas baratos (precios de hotel caen 30-50%) pero hace mucho frio. Marzo-abril y noviembre ofrecen buen equilibrio entre precio y clima. Evita Semana Santa, verano y Navidad si buscas ahorrar." },
+      { question: "Vale la pena la Prague Card?", answer: "Solo si planeas visitar muchos museos y atracciones con entrada. Cuesta EUR 62 por 2 dias. Calcula cuanto gastarias en entradas individuales. Para la mayoria de viajeros, no compensa." },
+      { question: "Es segura Praga para turistas?", answer: "Muy segura. Los unicos problemas son carteristas en zonas muy turisticas y casas de cambio con comisiones abusivas. De noche es tranquila. Usa sentido comun y no tendras problemas." }
+    ]
   }
 ];
