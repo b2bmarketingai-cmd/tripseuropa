@@ -570,6 +570,144 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   },
   {
+    id: "brujas-belgica",
+    slug: "brujas-belgica",
+    image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Brujas: La Ciudad Medieval de Chocolate y Canales", en: "Bruges: The Medieval City of Chocolate and Canals" },
+    excerpt: { es: "Canales, chocolate, cervezas trapenses y arquitectura medieval. Brujas en un dia.", en: "Canals, chocolate, Trappist beers and medieval architecture. Bruges in one day." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "6 Oct 2024",
+    readTime: 7,
+    author: "Trips Europa",
+    keywords: ["brujas belgica", "chocolate belga", "canales brujas", "cervezas trapenses", "flandes"],
+    featured: false,
+    sections: [
+      {
+        title: "Brujas: Un Cuento de Hadas Medieval",
+        content: "Brujas (Brugge en flamenco) es una de las ciudades medievales mejor preservadas de Europa. Con sus canales serpenteantes, puentes de piedra, casas con fachadas escalonadas y torres goticas, parece sacada de un libro de cuentos. Es conocida como la 'Venecia del Norte' y fue declarada Patrimonio de la Humanidad por la UNESCO. Para viajeros latinoamericanos, Brujas ofrece una experiencia romantica e inolvidable que se puede disfrutar perfectamente en un dia.",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Markt: El Corazon de Brujas",
+        content: "La Plaza del Mercado (Markt) es el centro historico de Brujas, rodeada de edificios gremiales con fachadas coloridas y dominada por el imponente Campanario (Belfort). Subir los 366 escalones del campanario ofrece vistas panoramicas espectaculares de la ciudad y los campos circundantes.",
+        list: ["Campanario (Belfort): Torre de 83 metros, simbolo de la ciudad", "Casas Gremiales: Fachadas coloridas que cuentan la historia comercial", "Provinciaal Hof: Palacio neogótico, antigua sede del gobierno provincial", "Estatua de Jan Breydel y Pieter de Coninck: Heroes locales medievales", "Paseos en calesa: Recorrer la plaza con encanto tradicional"]
+      },
+      {
+        title: "Burg: El Centro del Poder",
+        content: "A pocos pasos del Markt se encuentra la Plaza Burg, centro administrativo y religioso de Brujas durante siglos. Aqui confluyen varios estilos arquitectonicos, desde el romanico hasta el renacentista.",
+        list: ["Basilica de la Santa Sangre: Guarda una reliquia de la sangre de Cristo", "Ayuntamiento (Stadhuis): Gotico flamígero del siglo XIV", "Antiguo Registro Civil: Fachada renacentista espectacular", "Palacio de Justicia: Antigua residencia de los condes de Flandes"]
+      },
+      {
+        title: "Paseo en Barco por los Canales",
+        content: "Un paseo en barco por los canales de Brujas es imprescindible. Durante 30 minutos navegaras bajo puentes medievales, pasando por jardines secretos, casas historicas y rincones inaccesibles a pie. Es la mejor manera de entender por que la llaman la 'Venecia del Norte'.",
+        list: ["Duracion: Aproximadamente 30 minutos", "Precio: 12-15 EUR por persona", "Embarques: Varios puntos en el centro historico", "Mejor hora: Por la manana para evitar multitudes", "Incluye: Comentarios en varios idiomas"]
+      },
+      {
+        title: "El Paraiso del Chocolate Belga",
+        content: "Belgica es famosa por su chocolate, y Brujas es su capital espiritual. Encontraras decenas de chocolaterias artesanales donde maestros chocolateros crean bombones, pralines y trufas usando tecnicas tradicionales. Una visita a Brujas sin probar chocolate es incompleta.",
+        list: ["The Chocolate Line: Dominique Persoone, el 'rockstar' del chocolate", "Dumon: Bombones artesanales desde 1992, sin conservantes", "Choco-Story: Museo del chocolate con degustaciones", "Depla Pol: Chocolateria familiar desde 1936", "Spegelaere: Pralines clasicos y galletas speculoos cubiertas", "Consejo: Prueba los 'cuberdons' (dulces de goma belgas)"]
+      },
+      {
+        title: "Cervezas Trapenses y Belgas",
+        content: "Belgica tiene una cultura cervecera unica, y Brujas es el lugar perfecto para descubrirla. Las cervezas trapenses (elaboradas por monjes) son las joyas de la corona, pero hay cientos de estilos para explorar.",
+        list: ["De Halve Maan: Cerveceria historica en el centro, tours con degustacion", "Brugse Zot: Cerveza local elaborada en De Halve Maan", "2be Beer Wall: Bar con 100+ cervezas belgas, vistas al canal", "Bierbrasserie Cambrinus: 400 cervezas diferentes", "Westvleteren: La trapense mas codiciada (dificil de encontrar)", "Consejo: Cada cerveza tiene su copa especifica, es parte de la tradicion"]
+      },
+      {
+        title: "Rincones Romanticos y Secretos",
+        content: "Mas alla de las plazas principales, Brujas esconde rincones magicos que pocos turistas descubren. Perderse por sus calles empedradas es la mejor manera de encontrarlos.",
+        list: ["Begijnhof: Antiguo convento con jardin de narcisos en primavera", "Minnewater: El 'Lago del Amor', romantico paseo junto al agua", "Groeninge Museum: Maestros flamencos como Van Eyck y Memling", "Rozenhoedkaai: El rincon mas fotografiado de Brujas", "Sint-Janshospitaal: Hospital medieval convertido en museo", "Callejones del barrio de Santa Ana: Tranquilos y autenticos"]
+      },
+      {
+        title: "Gastronomia Flamenca",
+        content: "Ademas del chocolate y la cerveza, la gastronomia flamenca ofrece platos sustanciosos y reconfortantes, perfectos despues de caminar por la ciudad.",
+        list: ["Moules-frites: Mejillones con papas fritas, plato nacional", "Stoofvlees: Estofado de ternera a la cerveza", "Waterzooi: Guiso cremoso de pollo o pescado, tipico de Flandes", "Wafles (gaufres): Crujientes, con chocolate, crema o fruta", "Frieten: Papas fritas belgas, las mejores del mundo", "Speculoos: Galletas especiadas, perfectas con cafe"]
+      },
+      {
+        title: "Como Llegar y Consejos Practicos",
+        content: "Brujas es facilmente accesible y perfecta para una excursion de un dia desde Bruselas, Gante o incluso Paris.",
+        list: ["Desde Bruselas: Tren directo, 1 hora, aproximadamente 15 EUR", "Desde Gante: Tren, 25 minutos, muy recomendable combinar ambas", "Desde Paris: Thalys, 2.5 horas, excursion de dia factible", "Mejor epoca: Abril-junio y septiembre-octubre (menos turistas)", "Navidad: Mercados navidenos magicos pero muy concurridos", "Caminar: El centro es peatonal y compacto, no necesitas transporte"]
+      }
+    ],
+    faqs: [
+      { question: "Cuanto tiempo necesito para ver Brujas?", answer: "Un dia completo (8-10 horas) es suficiente para los principales atractivos. Si quieres visitar museos con calma o quedarte a cenar, considera pasar la noche. Es muy romantica iluminada de noche." },
+      { question: "Es mejor visitar Brujas o Gante?", answer: "Ambas son espectaculares. Brujas es mas romantica y turistica, perfecta para parejas. Gante es mas universitaria, dinamica y menos turistica. Lo ideal es visitar ambas, estan a solo 25 minutos en tren." },
+      { question: "Los precios en Brujas son caros?", answer: "Brujas es turistica y los precios reflejan eso. Un almuerzo cuesta 15-25 EUR, la cerveza 4-6 EUR, chocolates 25-40 EUR/kg. Para ahorrar, come en bares locales alejados del Markt y compra chocolate en tiendas menos turisticas." },
+      { question: "Puedo hacer Brujas como excursion desde Paris?", answer: "Si, es factible. El Thalys tarda 2.5 horas. Saliendo temprano (7-8 AM) y regresando tarde (20-21 PM) tienes tiempo suficiente. Tambien puedes combinar con parada en Bruselas." },
+      { question: "Cual es la mejor chocolateria de Brujas?", answer: "Depende del gusto. The Chocolate Line es innovadora y atrevida. Dumon es tradicional y artesanal. Para probar variedad, visita Choco-Story (museo) o compra una caja mixta en cualquier tienda artesanal." },
+      { question: "Necesito visa para visitar Belgica siendo latinoamericano?", answer: "Belgica es parte del espacio Schengen. Mexicanos, argentinos, chilenos, brasileños y uruguayos pueden entrar sin visa hasta 90 dias. Colombianos, peruanos y ecuatorianos necesitan visa Schengen." }
+    ]
+  },
+  {
+    id: "dublin-pubs-guinness",
+    slug: "dublin-pubs-guinness",
+    image: "https://images.unsplash.com/photo-1549918864-48ac978761a4?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Dublin: Pubs, Guinness y Encanto Irlandes", en: "Dublin: Pubs, Guinness and Irish Charm" },
+    excerpt: { es: "Temple Bar, Guinness Storehouse, Trinity College. La capital irlandesa en 3 dias.", en: "Temple Bar, Guinness Storehouse, Trinity College. The Irish capital in 3 days." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "8 Oct 2024",
+    readTime: 9,
+    author: "Trips Europa",
+    keywords: ["dublin pubs", "guinness storehouse", "irlanda turismo", "temple bar", "trinity college"],
+    featured: false,
+    sections: [
+      {
+        title: "Dublin: Donde la Historia se Bebe en Pubs",
+        content: "Dublin es una ciudad donde la literatura, la musica y la cerveza se entrelazan en cada esquina. Capital de Irlanda, esta ciudad compacta y caminable tiene una energia contagiosa, alimentada por la hospitalidad irlandesa y una cultura de pub unica en el mundo. Para viajeros latinoamericanos, Dublin ofrece una conexion especial: ambas culturas valoran la familia, la conversacion y la buena fiesta. Tres dias son perfectos para capturar su esencia.",
+        image: "https://images.unsplash.com/photo-1565791380713-1756b9a05343?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Dia 1: Trinity College y el Centro Historico",
+        content: "Comienza tu aventura en el corazon academico de Dublin. Trinity College, fundado en 1592, alberga el famoso Libro de Kells, un manuscrito ilustrado del siglo IX considerado una obra maestra del arte medieval.",
+        list: ["Trinity College: Campus historico, gratuito para caminar", "Libro de Kells: Manuscrito medieval, reserva entrada online", "Long Room: Biblioteca espectacular con 200,000 libros antiguos", "Grafton Street: Calle peatonal comercial con artistas callejeros", "St. Stephen's Green: Parque victoriano perfecto para descansar", "Molly Malone: Estatua iconica, 'la chica de los cockles'"]
+      },
+      {
+        title: "Guinness Storehouse: La Catedral de la Cerveza",
+        content: "La Guinness Storehouse es la atraccion mas visitada de Irlanda, y con razon. Este museo interactivo de siete pisos te lleva por la historia, los ingredientes y el proceso de elaboracion de la cerveza mas famosa del mundo. La culminacion es el Gravity Bar en la azotea, donde disfrutas una pinta perfecta con vistas panoramicas de Dublin.",
+        list: ["Reserva online: Entrada mas barata y evitas colas", "Duracion: 2-3 horas para recorrerlo con calma", "Incluye: Una pinta de Guinness en el Gravity Bar", "Connoisseur Experience: Curso de cata premium (opcional)", "Tienda: Merchandising oficial de Guinness", "Consejo: Ve al atardecer para las mejores vistas"]
+      },
+      {
+        title: "Dia 2: Temple Bar y Vida Nocturna",
+        content: "Temple Bar es el barrio bohemio de Dublin, lleno de pubs coloridos, musica en vivo y ambiente festivo. Aunque es turistico, la energia es autentica y la musica irlandesa tradicional te atrapara. De dia, explora sus tiendas vintage, galerias y mercados.",
+        list: ["The Temple Bar: El pub mas fotografiado, musica en vivo diaria", "Oliver St. John Gogarty: Tres pisos de musica tradicional", "The Porterhouse: Cerveceria artesanal con cervezas propias", "Vintage markets: Mercados de antigüedades los fines de semana", "Irish Film Institute: Cine alternativo y cafe cultural", "Ha'penny Bridge: Puente iconico de hierro sobre el Liffey"]
+      },
+      {
+        title: "Pubs Autenticos Fuera de Temple Bar",
+        content: "Para una experiencia mas local, alejate de Temple Bar y descubre pubs donde los dublineses realmente beben. La cultura del pub irlandes es sobre conversacion, musica y comunidad, no solo alcohol.",
+        list: ["The Cobblestone (Smithfield): Musica tradicional autentica, frecuentado por locales", "Kehoe's: Pub victoriano sin modificar desde 1803", "The Long Hall: Interior de madera tallada, ambiente intimo", "Mulligan's: Dicen que sirve la mejor Guinness de Dublin", "The Brazen Head: El pub mas antiguo de Irlanda (1198)", "Consejo: Los pubs cierran a las 23:30, despues hay clubes"]
+      },
+      {
+        title: "Dia 3: Historia y Excursiones",
+        content: "Dedica tu ultimo dia a la historia irlandesa y considera una excursion a los espectaculares alrededores de Dublin.",
+        list: ["Kilmainham Gaol: Prision historica clave en la independencia irlandesa", "EPIC Museum: Historia de la emigracion irlandesa, muy interactivo", "Dublin Castle: Mil anos de historia, sede del poder britanico", "Chester Beatty Library: Tesoros de civilizaciones antiguas, entrada gratis", "Phoenix Park: Uno de los parques urbanos mas grandes de Europa, ciervos salvajes"]
+      },
+      {
+        title: "Excursiones desde Dublin",
+        content: "Los alrededores de Dublin ofrecen paisajes espectaculares que complementan perfectamente tu visita a la ciudad.",
+        list: ["Cliffs of Moher: Acantilados dramaticos, excursion de dia completo", "Wicklow Mountains: 'El jardin de Irlanda', monasterio de Glendalough", "Howth: Pueblo pesquero a 30 minutos en tren, mariscos frescos", "Malahide Castle: Castillo medieval y jardines, accesible en DART", "Giants Causeway: Formaciones basalticas en Irlanda del Norte (viaje largo pero espectacular)"]
+      },
+      {
+        title: "Gastronomia Irlandesa",
+        content: "La cocina irlandesa ha evolucionado enormemente. Mas alla del estereotipo del estofado, encontraras productos frescos, mariscos excepcionales y una escena culinaria vibrante.",
+        list: ["Irish Stew: Estofado de cordero con papas y verduras", "Fish & Chips: Pescado rebozado con papas, mejor en Burdock's", "Irish Breakfast: Huevos, bacon, salchichas, morcilla, judias y tostadas", "Oysters: Ostras de Galway, maridadas con Guinness", "Boxty: Tortitas de papa, tipicas del norte", "Soda Bread: Pan de soda tradicional, perfecto con mantequilla irlandesa"]
+      },
+      {
+        title: "Consejos Practicos",
+        content: "Dublin es una ciudad facil de navegar, pero estos consejos te ayudaran a aprovechar mejor tu tiempo.",
+        list: ["Clima: Lluvia frecuente todo el ano, lleva chaqueta impermeable siempre", "Moneda: Euro (aunque Irlanda del Norte usa libras)", "Propinas: 10-15% en restaurantes, no obligatorio en pubs", "Transporte: DART (tren suburbano) y tranvia LUAS cubren la ciudad", "Leap Card: Tarjeta de transporte recargable, mas economica", "Enchufes: Tipo G (tres clavijas), necesitaras adaptador"]
+      }
+    ],
+    faqs: [
+      { question: "Irlanda es parte de la Union Europea?", answer: "Si, la Republica de Irlanda (Dublin) es parte de la UE. Sin embargo, Irlanda del Norte (Belfast, Giants Causeway) es parte del Reino Unido y ha dejado la UE. Para viajeros latinoamericanos, esto puede afectar visados en viajes combinados." },
+      { question: "Necesito visa para visitar Irlanda siendo latinoamericano?", answer: "Irlanda NO es parte del espacio Schengen. Tiene su propio regimen de visados. Mexicanos, argentinos, chilenos y brasileños pueden entrar sin visa hasta 90 dias. Colombianos y otros necesitan visa irlandesa especifica (no la Schengen)." },
+      { question: "Es Dublin caro?", answer: "Dublin es una de las ciudades mas caras de Europa. Una pinta cuesta 6-8 EUR, alojamiento desde 100 EUR/noche, comidas 15-25 EUR. Para ahorrar, usa hostales, come en pubs (menu del dia) y aprovecha atracciones gratuitas." },
+      { question: "Cual es la mejor epoca para visitar Dublin?", answer: "Mayo-septiembre ofrece el mejor clima y dias largos. Marzo (St. Patrick's Day, 17 de marzo) es festivo pero muy concurrido. El invierno es frio y oscuro pero tiene menos turistas y mercados navidenos." },
+      { question: "La Guinness sabe igual en Dublin que en otros paises?", answer: "Los irlandeses juran que sabe mejor en Dublin, y hay algo de verdad. La frescura, el nitrogeno y la manera de servirla (el famoso 'two-part pour') hacen diferencia. Una Guinness en la Storehouse es experiencia obligatoria." },
+      { question: "Puedo combinar Dublin con otras ciudades?", answer: "Si, hay vuelos baratos a otras ciudades europeas. Belfast (Irlanda del Norte) esta a 2 horas en bus. Edimburgo y Londres tienen vuelos frecuentes y economicos. Trips Europa puede ayudarte a disenar un itinerario combinado." }
+    ]
+  },
+  {
     id: "ibiza-guia-completa",
     slug: "ibiza-guia-completa",
     image: "/assets/generated_images/descubre-ibiza.png",
