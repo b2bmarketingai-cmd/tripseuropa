@@ -1336,7 +1336,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "luna-de-miel-destinos-europa",
     title: { es: "Luna de Miel en Europa: Destinos Romanticos Para Recien Casados", en: "Honeymoon in Europe: Romantic Destinations for Newlyweds" },
     excerpt: { es: "Descubre los destinos europeos mas romanticos para celebrar tu luna de miel. Desde Paris hasta la Costa Amalfitana, planifica una experiencia inolvidable.", en: "Discover the most romantic European destinations to celebrate your honeymoon. From Paris to the Amalfi Coast, plan an unforgettable experience." },
-    image: "https://images.unsplash.com/photo-1515923019249-6b544314450b?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/luna-miel-europa.png",
     category: "experiencias",
     categoryLabel: { es: "Experiencias", en: "Experiences" },
     date: "2024-12-24",
