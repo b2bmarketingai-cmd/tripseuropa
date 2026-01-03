@@ -14,73 +14,73 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGE_FAQS: FAQItem[] = [
   {
-    question: { es: "Que incluyen los paquetes de viaje?", en: "What do travel packages include?" },
-    answer: { es: "Nuestros paquetes tipicamente incluyen: vuelos ida y vuelta, alojamiento en hoteles seleccionados, traslados aeropuerto-hotel, tours guiados, algunas comidas y seguro de viaje. El contenido especifico varia segun el paquete.", en: "Our packages typically include: round-trip flights, accommodation in selected hotels, airport-hotel transfers, guided tours, some meals, and travel insurance. Specific content varies by package." }
+    question: { es: "Que incluyen los paquetes de viaje?", en: "What do travel packages include?", pt: "O que os pacotes de viagem incluem?" },
+    answer: { es: "Nuestros paquetes tipicamente incluyen: vuelos ida y vuelta, alojamiento en hoteles seleccionados, traslados aeropuerto-hotel, tours guiados, algunas comidas y seguro de viaje. El contenido especifico varia segun el paquete.", en: "Our packages typically include: round-trip flights, accommodation in selected hotels, airport-hotel transfers, guided tours, some meals, and travel insurance. Specific content varies by package.", pt: "Nossos pacotes geralmente incluem: voos de ida e volta, hospedagem em hoteis selecionados, traslados aeroporto-hotel, tours guiados, algumas refeicoes e seguro de viagem. O conteudo especifico varia conforme o pacote." }
   },
   {
-    question: { es: "Puedo personalizar un paquete?", en: "Can I customize a package?" },
-    answer: { es: "Si, todos nuestros paquetes son personalizables. Puedes agregar noches adicionales, cambiar hoteles, añadir excursiones o modificar itinerarios segun tus preferencias.", en: "Yes, all our packages are customizable. You can add extra nights, change hotels, add excursions, or modify itineraries according to your preferences." }
+    question: { es: "Puedo personalizar un paquete?", en: "Can I customize a package?", pt: "Posso personalizar um pacote?" },
+    answer: { es: "Si, todos nuestros paquetes son personalizables. Puedes agregar noches adicionales, cambiar hoteles, añadir excursiones o modificar itinerarios segun tus preferencias.", en: "Yes, all our packages are customizable. You can add extra nights, change hotels, add excursions, or modify itineraries according to your preferences.", pt: "Sim, todos os nossos pacotes sao personalizaveis. Voce pode adicionar noites extras, trocar hoteis, adicionar excursoes ou modificar itinerarios conforme suas preferencias." }
   },
   {
-    question: { es: "Los tours son en español?", en: "Are tours in Spanish?" },
-    answer: { es: "Si, todos nuestros tours incluyen guias profesionales en español. En algunos casos tambien disponemos de guias bilingues.", en: "Yes, all our tours include professional Spanish-speaking guides. In some cases, we also have bilingual guides available." }
+    question: { es: "Los tours son en español?", en: "Are tours in Spanish?", pt: "Os tours sao em portugues?" },
+    answer: { es: "Si, todos nuestros tours incluyen guias profesionales en español. En algunos casos tambien disponemos de guias bilingues.", en: "Yes, all our tours include professional Spanish-speaking guides. In some cases, we also have bilingual guides available.", pt: "Sim, todos os nossos tours incluem guias profissionais. Em alguns casos, tambem dispomos de guias bilingues." }
   },
   {
-    question: { es: "Cual es la politica de pago?", en: "What is the payment policy?" },
-    answer: { es: "Generalmente requerimos un deposito del 30% para confirmar la reserva y el saldo 30 dias antes del viaje. Ofrecemos planes de financiamiento hasta 12 cuotas.", en: "We generally require a 30% deposit to confirm the booking and the balance 30 days before the trip. We offer financing plans up to 12 installments." }
+    question: { es: "Cual es la politica de pago?", en: "What is the payment policy?", pt: "Qual e a politica de pagamento?" },
+    answer: { es: "Generalmente requerimos un deposito del 30% para confirmar la reserva y el saldo 30 dias antes del viaje. Ofrecemos planes de financiamiento hasta 12 cuotas.", en: "We generally require a 30% deposit to confirm the booking and the balance 30 days before the trip. We offer financing plans up to 12 installments.", pt: "Geralmente exigimos um deposito de 30% para confirmar a reserva e o saldo 30 dias antes da viagem. Oferecemos planos de financiamento em ate 12 parcelas." }
   },
   {
-    question: { es: "Que pasa si necesito cancelar el viaje?", en: "What happens if I need to cancel the trip?" },
-    answer: { es: "Nuestros paquetes incluyen seguro de cancelacion. Las condiciones varian segun el momento de la cancelacion y el tipo de tarifa. Consulta los terminos especificos de cada paquete.", en: "Our packages include cancellation insurance. Conditions vary according to the cancellation timing and rate type. Check the specific terms of each package." }
+    question: { es: "Que pasa si necesito cancelar el viaje?", en: "What happens if I need to cancel the trip?", pt: "O que acontece se eu precisar cancelar a viagem?" },
+    answer: { es: "Nuestros paquetes incluyen seguro de cancelacion. Las condiciones varian segun el momento de la cancelacion y el tipo de tarifa. Consulta los terminos especificos de cada paquete.", en: "Our packages include cancellation insurance. Conditions vary according to the cancellation timing and rate type. Check the specific terms of each package.", pt: "Nossos pacotes incluem seguro de cancelamento. As condicoes variam conforme o momento do cancelamento e o tipo de tarifa. Consulte os termos especificos de cada pacote." }
   },
   {
-    question: { es: "Hay paquetes para grupos?", en: "Are there group packages?" },
-    answer: { es: "Si, ofrecemos tarifas especiales para grupos de 10 o mas personas. Incluyen beneficios adicionales como guia privado y actividades exclusivas.", en: "Yes, we offer special rates for groups of 10 or more people. They include additional benefits such as private guide and exclusive activities." }
+    question: { es: "Hay paquetes para grupos?", en: "Are there group packages?", pt: "Ha pacotes para grupos?" },
+    answer: { es: "Si, ofrecemos tarifas especiales para grupos de 10 o mas personas. Incluyen beneficios adicionales como guia privado y actividades exclusivas.", en: "Yes, we offer special rates for groups of 10 or more people. They include additional benefits such as private guide and exclusive activities.", pt: "Sim, oferecemos tarifas especiais para grupos de 10 ou mais pessoas. Incluem beneficios adicionais como guia privado e atividades exclusivas." }
   }
 ];
 
 const FEATURED_PACKAGES = [
   {
     id: "espana-portugal",
-    name: { es: "España y Portugal Clasico", en: "Classic Spain and Portugal" },
-    duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+    name: { es: "España y Portugal Clasico", en: "Classic Spain and Portugal", pt: "Espanha e Portugal Classico" },
+    duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
     cities: ["Madrid", "Toledo", "Sevilla", "Lisboa", "Sintra"],
     price: "desde $2,490 USD",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600",
-    highlights: { es: ["Vuelos incluidos", "Hoteles 4*", "Tours guiados", "Desayunos"], en: ["Flights included", "4* Hotels", "Guided tours", "Breakfasts"] }
+    highlights: { es: ["Vuelos incluidos", "Hoteles 4*", "Tours guiados", "Desayunos"], en: ["Flights included", "4* Hotels", "Guided tours", "Breakfasts"], pt: ["Voos incluidos", "Hoteis 4*", "Tours guiados", "Cafes da manha"] }
   },
   {
     id: "italia-clasica",
-    name: { es: "Italia Clasica", en: "Classic Italy" },
-    duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights" },
+    name: { es: "Italia Clasica", en: "Classic Italy", pt: "Italia Classica" },
+    duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
     cities: ["Roma", "Florencia", "Venecia", "Milan"],
     price: "desde $2,890 USD",
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=600",
-    highlights: { es: ["Vuelos incluidos", "Hoteles 4*", "Entradas museos", "Tren alta velocidad"], en: ["Flights included", "4* Hotels", "Museum tickets", "High-speed train"] }
+    highlights: { es: ["Vuelos incluidos", "Hoteles 4*", "Entradas museos", "Tren alta velocidad"], en: ["Flights included", "4* Hotels", "Museum tickets", "High-speed train"], pt: ["Voos incluidos", "Hoteis 4*", "Ingressos museus", "Trem de alta velocidade"] }
   },
   {
     id: "paris-londres",
-    name: { es: "Paris y Londres", en: "Paris and London" },
-    duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+    name: { es: "Paris y Londres", en: "Paris and London", pt: "Paris e Londres" },
+    duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
     cities: ["Paris", "Londres"],
     price: "desde $2,190 USD",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=600",
-    highlights: { es: ["Vuelos incluidos", "Eurostar incluido", "Tours panoramicos", "Desayunos"], en: ["Flights included", "Eurostar included", "Panoramic tours", "Breakfasts"] }
+    highlights: { es: ["Vuelos incluidos", "Eurostar incluido", "Tours panoramicos", "Desayunos"], en: ["Flights included", "Eurostar included", "Panoramic tours", "Breakfasts"], pt: ["Voos incluidos", "Eurostar incluido", "Tours panoramicos", "Cafes da manha"] }
   },
 ];
 
 const PACKAGE_INCLUDES = [
-  { icon: Plane, name: { es: "Vuelos Internacionales", en: "International Flights" } },
-  { icon: Building, name: { es: "Hoteles Seleccionados", en: "Selected Hotels" } },
-  { icon: Bus, name: { es: "Traslados", en: "Transfers" } },
-  { icon: Camera, name: { es: "Tours Guiados", en: "Guided Tours" } },
-  { icon: Shield, name: { es: "Seguro de Viaje", en: "Travel Insurance" } },
-  { icon: Users, name: { es: "Asistencia 24/7", en: "24/7 Assistance" } },
+  { icon: Plane, name: { es: "Vuelos Internacionales", en: "International Flights", pt: "Voos Internacionais" } },
+  { icon: Building, name: { es: "Hoteles Seleccionados", en: "Selected Hotels", pt: "Hoteis Selecionados" } },
+  { icon: Bus, name: { es: "Traslados", en: "Transfers", pt: "Traslados" } },
+  { icon: Camera, name: { es: "Tours Guiados", en: "Guided Tours", pt: "Tours Guiados" } },
+  { icon: Shield, name: { es: "Seguro de Viaje", en: "Travel Insurance", pt: "Seguro de Viagem" } },
+  { icon: Users, name: { es: "Asistencia 24/7", en: "24/7 Assistance", pt: "Assistencia 24/7" } },
 ];
 
 export default function Packages() {
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -100,32 +100,34 @@ export default function Packages() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Package className="w-6 h-6 text-accent" />
             <Badge className="bg-accent/20 text-accent border-accent/30" data-testid="badge-packages">
-              {language === "es" ? "Todo Incluido" : "All Inclusive"}
+              {language === "es" ? "Todo Incluido" : language === "pt" ? "Tudo Incluido" : "All Inclusive"}
             </Badge>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-packages-title">
-            <span className="text-accent">{language === "es" ? "Paquetes de Viaje" : "Travel Packages"}</span>
+            <span className="text-accent">{language === "es" ? "Paquetes de Viaje" : language === "pt" ? "Pacotes de Viagem" : "Travel Packages"}</span>
           </h1>
           
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" data-testid="text-packages-subtitle">
             {language === "es" 
               ? "Paquetes completos con vuelo, hotel, tours y traslados. Todo organizado para que solo te preocupes de disfrutar." 
+              : language === "pt"
+              ? "Pacotes completos com voo, hotel, tours e traslados. Tudo organizado para que voce so se preocupe em aproveitar."
               : "Complete packages with flight, hotel, tours, and transfers. All organized so you only worry about enjoying."}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Todo incluido" : "All included"}</span>
+              <span>{language === "es" ? "Todo incluido" : language === "pt" ? "Tudo incluido" : "All included"}</span>
             </div>
             <div className="flex items-center gap-2">
               <DollarSign className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Financiamiento disponible" : "Financing available"}</span>
+              <span>{language === "es" ? "Financiamiento disponible" : language === "pt" ? "Financiamento disponivel" : "Financing available"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Guias en español" : "Spanish-speaking guides"}</span>
+              <span>{language === "es" ? "Guias en español" : language === "pt" ? "Guias em portugues" : "Spanish-speaking guides"}</span>
             </div>
           </div>
         </div>
@@ -135,7 +137,7 @@ export default function Packages() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Que Incluyen Nuestros Paquetes" : "What Our Packages Include"}</span>
+              <span className="text-accent">{language === "es" ? "Que Incluyen Nuestros Paquetes" : language === "pt" ? "O Que Nossos Pacotes Incluem" : "What Our Packages Include"}</span>
             </h2>
           </div>
 
@@ -156,7 +158,7 @@ export default function Packages() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Paquetes Destacados" : "Featured Packages"}</span>
+              <span className="text-accent">{language === "es" ? "Paquetes Destacados" : language === "pt" ? "Pacotes em Destaque" : "Featured Packages"}</span>
             </h2>
           </div>
 
@@ -212,7 +214,7 @@ export default function Packages() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-                <span className="text-accent">{language === "es" ? "Ventajas de Viajar Con Paquete" : "Benefits of Package Travel"}</span>
+                <span className="text-accent">{language === "es" ? "Ventajas de Viajar Con Paquete" : language === "pt" ? "Vantagens de Viajar com Pacote" : "Benefits of Package Travel"}</span>
               </h2>
             </div>
 
@@ -224,10 +226,12 @@ export default function Packages() {
                       <DollarSign className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-bold mb-2">{language === "es" ? "Ahorro Garantizado" : "Guaranteed Savings"}</h3>
+                      <h3 className="font-bold mb-2">{language === "es" ? "Ahorro Garantizado" : language === "pt" ? "Economia Garantida" : "Guaranteed Savings"}</h3>
                       <p className="text-sm text-muted-foreground">
                         {language === "es" 
                           ? "Los paquetes ofrecen hasta 30% de ahorro comparado con reservar todo por separado." 
+                          : language === "pt"
+                          ? "Os pacotes oferecem ate 30% de economia comparado com reservar tudo separadamente."
                           : "Packages offer up to 30% savings compared to booking everything separately."}
                       </p>
                     </div>
@@ -242,10 +246,12 @@ export default function Packages() {
                       <Clock className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-bold mb-2">{language === "es" ? "Sin Preocupaciones" : "Worry-Free"}</h3>
+                      <h3 className="font-bold mb-2">{language === "es" ? "Sin Preocupaciones" : language === "pt" ? "Sem Preocupacoes" : "Worry-Free"}</h3>
                       <p className="text-sm text-muted-foreground">
                         {language === "es" 
                           ? "Todo esta organizado y coordinado. Solo disfrutas de tu viaje." 
+                          : language === "pt"
+                          ? "Tudo esta organizado e coordenado. Voce so aproveita sua viagem."
                           : "Everything is organized and coordinated. You just enjoy your trip."}
                       </p>
                     </div>
@@ -260,10 +266,12 @@ export default function Packages() {
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-bold mb-2">{language === "es" ? "Proteccion Total" : "Full Protection"}</h3>
+                      <h3 className="font-bold mb-2">{language === "es" ? "Proteccion Total" : language === "pt" ? "Protecao Total" : "Full Protection"}</h3>
                       <p className="text-sm text-muted-foreground">
                         {language === "es" 
                           ? "Seguro de viaje incluido y asistencia 24/7 en español." 
+                          : language === "pt"
+                          ? "Seguro de viagem incluido e assistencia 24/7 em portugues."
                           : "Travel insurance included and 24/7 Spanish-language assistance."}
                       </p>
                     </div>
@@ -278,10 +286,12 @@ export default function Packages() {
                       <Calendar className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-bold mb-2">{language === "es" ? "Fechas Flexibles" : "Flexible Dates"}</h3>
+                      <h3 className="font-bold mb-2">{language === "es" ? "Fechas Flexibles" : language === "pt" ? "Datas Flexiveis" : "Flexible Dates"}</h3>
                       <p className="text-sm text-muted-foreground">
                         {language === "es" 
                           ? "Salidas durante todo el año. Tu eliges cuando viajar." 
+                          : language === "pt"
+                          ? "Partidas durante todo o ano. Voce escolhe quando viajar."
                           : "Departures throughout the year. You choose when to travel."}
                       </p>
                     </div>
@@ -296,11 +306,13 @@ export default function Packages() {
       <section className="py-16 bg-primary" data-testid="section-packages-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-display font-bold text-accent mb-4">
-            {language === "es" ? "Diseñamos Tu Paquete Ideal" : "We Design Your Ideal Package"}
+            {language === "es" ? "Diseñamos Tu Paquete Ideal" : language === "pt" ? "Criamos Seu Pacote Ideal" : "We Design Your Ideal Package"}
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             {language === "es" 
               ? "Cuentanos tus preferencias y creamos un paquete a tu medida." 
+              : language === "pt"
+              ? "Conte-nos suas preferencias e criamos um pacote sob medida para voce."
               : "Tell us your preferences and we'll create a package tailored to you."}
           </p>
           <Button 

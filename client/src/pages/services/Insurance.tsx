@@ -13,79 +13,82 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const INSURANCE_FAQS: FAQItem[] = [
   {
-    question: { es: "Es obligatorio el seguro de viaje para Europa?", en: "Is travel insurance mandatory for Europe?" },
-    answer: { es: "Para ingresar al espacio Schengen, se recomienda contar con seguro de viaje con cobertura medica minima de 30,000 EUR. Aunque no siempre lo solicitan en la frontera, es imprescindible para tu proteccion.", en: "To enter the Schengen area, travel insurance with minimum medical coverage of 30,000 EUR is recommended. Although it's not always requested at the border, it's essential for your protection." }
+    question: { es: "Es obligatorio el seguro de viaje para Europa?", en: "Is travel insurance mandatory for Europe?", pt: "O seguro de viagem e obrigatorio para a Europa?" },
+    answer: { es: "Para ingresar al espacio Schengen, se recomienda contar con seguro de viaje con cobertura medica minima de 30,000 EUR. Aunque no siempre lo solicitan en la frontera, es imprescindible para tu proteccion.", en: "To enter the Schengen area, travel insurance with minimum medical coverage of 30,000 EUR is recommended. Although it's not always requested at the border, it's essential for your protection.", pt: "Para entrar no espaco Schengen, recomenda-se ter seguro de viagem com cobertura medica minima de 30.000 EUR. Embora nem sempre seja solicitado na fronteira, e essencial para sua protecao." }
   },
   {
-    question: { es: "Que cubre el seguro de viaje?", en: "What does travel insurance cover?" },
-    answer: { es: "Nuestros seguros cubren: gastos medicos y hospitalizacion, evacuacion y repatriacion, perdida de equipaje, cancelacion de viaje, retrasos de vuelos, responsabilidad civil y asistencia 24/7 en español.", en: "Our insurance covers: medical expenses and hospitalization, evacuation and repatriation, lost luggage, trip cancellation, flight delays, civil liability, and 24/7 Spanish-language assistance." }
+    question: { es: "Que cubre el seguro de viaje?", en: "What does travel insurance cover?", pt: "O que o seguro de viagem cobre?" },
+    answer: { es: "Nuestros seguros cubren: gastos medicos y hospitalizacion, evacuacion y repatriacion, perdida de equipaje, cancelacion de viaje, retrasos de vuelos, responsabilidad civil y asistencia 24/7 en español.", en: "Our insurance covers: medical expenses and hospitalization, evacuation and repatriation, lost luggage, trip cancellation, flight delays, civil liability, and 24/7 Spanish-language assistance.", pt: "Nossos seguros cobrem: despesas medicas e hospitalizacao, evacuacao e repatriacao, perda de bagagem, cancelamento de viagem, atrasos de voos, responsabilidade civil e assistencia 24/7 em portugues." }
   },
   {
-    question: { es: "Cubren enfermedades preexistentes?", en: "Do you cover pre-existing conditions?" },
-    answer: { es: "Depende del plan. Algunos planes premium incluyen cobertura limitada para condiciones preexistentes estables. Consulta las condiciones especificas antes de contratar.", en: "It depends on the plan. Some premium plans include limited coverage for stable pre-existing conditions. Check the specific conditions before purchasing." }
+    question: { es: "Cubren enfermedades preexistentes?", en: "Do you cover pre-existing conditions?", pt: "Voces cobrem doencas preexistentes?" },
+    answer: { es: "Depende del plan. Algunos planes premium incluyen cobertura limitada para condiciones preexistentes estables. Consulta las condiciones especificas antes de contratar.", en: "It depends on the plan. Some premium plans include limited coverage for stable pre-existing conditions. Check the specific conditions before purchasing.", pt: "Depende do plano. Alguns planos premium incluem cobertura limitada para condicoes preexistentes estaveis. Consulte as condicoes especificas antes de contratar." }
   },
   {
-    question: { es: "Desde cuando estoy cubierto?", en: "When does my coverage start?" },
-    answer: { es: "La cobertura comienza desde el momento de salida de tu pais de origen y termina al regresar. Algunos planes tambien cubren cancelaciones previas al viaje.", en: "Coverage starts from the moment of departure from your home country and ends upon return. Some plans also cover pre-trip cancellations." }
+    question: { es: "Desde cuando estoy cubierto?", en: "When does my coverage start?", pt: "A partir de quando estou coberto?" },
+    answer: { es: "La cobertura comienza desde el momento de salida de tu pais de origen y termina al regresar. Algunos planes tambien cubren cancelaciones previas al viaje.", en: "Coverage starts from the moment of departure from your home country and ends upon return. Some plans also cover pre-trip cancellations.", pt: "A cobertura comeca a partir do momento da partida do seu pais de origem e termina ao retornar. Alguns planos tambem cobrem cancelamentos antes da viagem." }
   },
   {
-    question: { es: "Como hago un reclamo si tengo una emergencia?", en: "How do I file a claim if I have an emergency?" },
-    answer: { es: "Contacta la linea de asistencia 24/7 incluida en tu poliza. Guarda todos los recibos y documentacion medica. Te guiaremos en todo el proceso de reclamacion.", en: "Contact the 24/7 assistance line included in your policy. Keep all receipts and medical documentation. We'll guide you through the entire claims process." }
+    question: { es: "Como hago un reclamo si tengo una emergencia?", en: "How do I file a claim if I have an emergency?", pt: "Como faco uma reclamacao se tiver uma emergencia?" },
+    answer: { es: "Contacta la linea de asistencia 24/7 incluida en tu poliza. Guarda todos los recibos y documentacion medica. Te guiaremos en todo el proceso de reclamacion.", en: "Contact the 24/7 assistance line included in your policy. Keep all receipts and medical documentation. We'll guide you through the entire claims process.", pt: "Entre em contato com a linha de assistencia 24/7 incluida em sua apolice. Guarde todos os recibos e documentacao medica. Orientaremos voce em todo o processo de reclamacao." }
   },
   {
-    question: { es: "Puedo extender mi seguro si prolongo el viaje?", en: "Can I extend my insurance if I extend my trip?" },
-    answer: { es: "Si, puedes solicitar una extension antes de que expire tu poliza actual. Contactanos para gestionar la ampliacion de cobertura.", en: "Yes, you can request an extension before your current policy expires. Contact us to manage the coverage extension." }
+    question: { es: "Puedo extender mi seguro si prolongo el viaje?", en: "Can I extend my insurance if I extend my trip?", pt: "Posso estender meu seguro se prolongar a viagem?" },
+    answer: { es: "Si, puedes solicitar una extension antes de que expire tu poliza actual. Contactanos para gestionar la ampliacion de cobertura.", en: "Yes, you can request an extension before your current policy expires. Contact us to manage the coverage extension.", pt: "Sim, voce pode solicitar uma extensao antes que sua apolice atual expire. Entre em contato conosco para gerenciar a ampliacao da cobertura." }
   }
 ];
 
 const INSURANCE_PLANS = [
   {
     id: "basic",
-    name: { es: "Esencial", en: "Essential" },
+    name: { es: "Esencial", en: "Essential", pt: "Essencial" },
     coverage: "30,000 EUR",
-    price: { es: "desde $2/dia", en: "from $2/day" },
+    price: { es: "desde $2/dia", en: "from $2/day", pt: "a partir de $2/dia" },
     features: {
       es: ["Gastos medicos hasta 30,000 EUR", "Asistencia 24/7 en español", "Perdida de equipaje hasta 500 EUR", "Repatriacion sanitaria"],
-      en: ["Medical expenses up to 30,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 500 EUR", "Medical repatriation"]
+      en: ["Medical expenses up to 30,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 500 EUR", "Medical repatriation"],
+      pt: ["Despesas medicas ate 30.000 EUR", "Assistencia 24/7 em portugues", "Perda de bagagem ate 500 EUR", "Repatriacao medica"]
     },
     popular: false
   },
   {
     id: "plus",
-    name: { es: "Plus", en: "Plus" },
+    name: { es: "Plus", en: "Plus", pt: "Plus" },
     coverage: "50,000 EUR",
-    price: { es: "desde $4/dia", en: "from $4/day" },
+    price: { es: "desde $4/dia", en: "from $4/day", pt: "a partir de $4/dia" },
     features: {
       es: ["Gastos medicos hasta 50,000 EUR", "Asistencia 24/7 en español", "Perdida de equipaje hasta 1,500 EUR", "Cancelacion de viaje", "Retrasos de vuelo"],
-      en: ["Medical expenses up to 50,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 1,500 EUR", "Trip cancellation", "Flight delays"]
+      en: ["Medical expenses up to 50,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 1,500 EUR", "Trip cancellation", "Flight delays"],
+      pt: ["Despesas medicas ate 50.000 EUR", "Assistencia 24/7 em portugues", "Perda de bagagem ate 1.500 EUR", "Cancelamento de viagem", "Atrasos de voos"]
     },
     popular: true
   },
   {
     id: "premium",
-    name: { es: "Premium", en: "Premium" },
+    name: { es: "Premium", en: "Premium", pt: "Premium" },
     coverage: "100,000 EUR",
-    price: { es: "desde $7/dia", en: "from $7/day" },
+    price: { es: "desde $7/dia", en: "from $7/day", pt: "a partir de $7/dia" },
     features: {
       es: ["Gastos medicos hasta 100,000 EUR", "Asistencia 24/7 en español", "Perdida de equipaje hasta 3,000 EUR", "Cancelacion por cualquier motivo", "Deportes de aventura", "Cobertura COVID-19"],
-      en: ["Medical expenses up to 100,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 3,000 EUR", "Cancel for any reason", "Adventure sports", "COVID-19 coverage"]
+      en: ["Medical expenses up to 100,000 EUR", "24/7 Spanish-language assistance", "Lost luggage up to 3,000 EUR", "Cancel for any reason", "Adventure sports", "COVID-19 coverage"],
+      pt: ["Despesas medicas ate 100.000 EUR", "Assistencia 24/7 em portugues", "Perda de bagagem ate 3.000 EUR", "Cancelamento por qualquer motivo", "Esportes de aventura", "Cobertura COVID-19"]
     },
     popular: false
   },
 ];
 
 const COVERAGE_ITEMS = [
-  { icon: Heart, name: { es: "Gastos Medicos", en: "Medical Expenses" }, description: { es: "Hospitalizacion, consultas, medicamentos", en: "Hospitalization, consultations, medications" } },
-  { icon: Plane, name: { es: "Repatriacion", en: "Repatriation" }, description: { es: "Traslado de emergencia a tu pais", en: "Emergency transfer to your country" } },
-  { icon: Luggage, name: { es: "Equipaje", en: "Luggage" }, description: { es: "Perdida, robo o daño de equipaje", en: "Lost, stolen, or damaged luggage" } },
-  { icon: AlertTriangle, name: { es: "Cancelacion", en: "Cancellation" }, description: { es: "Cancelacion o interrupcion de viaje", en: "Trip cancellation or interruption" } },
-  { icon: Clock, name: { es: "Retrasos", en: "Delays" }, description: { es: "Compensacion por retrasos de vuelo", en: "Compensation for flight delays" } },
-  { icon: Phone, name: { es: "Asistencia 24/7", en: "24/7 Assistance" }, description: { es: "Linea de ayuda en español siempre", en: "Spanish help line always available" } },
+  { icon: Heart, name: { es: "Gastos Medicos", en: "Medical Expenses", pt: "Despesas Medicas" }, description: { es: "Hospitalizacion, consultas, medicamentos", en: "Hospitalization, consultations, medications", pt: "Hospitalizacao, consultas, medicamentos" } },
+  { icon: Plane, name: { es: "Repatriacion", en: "Repatriation", pt: "Repatriacao" }, description: { es: "Traslado de emergencia a tu pais", en: "Emergency transfer to your country", pt: "Transferencia de emergencia para seu pais" } },
+  { icon: Luggage, name: { es: "Equipaje", en: "Luggage", pt: "Bagagem" }, description: { es: "Perdida, robo o daño de equipaje", en: "Lost, stolen, or damaged luggage", pt: "Perda, roubo ou dano de bagagem" } },
+  { icon: AlertTriangle, name: { es: "Cancelacion", en: "Cancellation", pt: "Cancelamento" }, description: { es: "Cancelacion o interrupcion de viaje", en: "Trip cancellation or interruption", pt: "Cancelamento ou interrupcao de viagem" } },
+  { icon: Clock, name: { es: "Retrasos", en: "Delays", pt: "Atrasos" }, description: { es: "Compensacion por retrasos de vuelo", en: "Compensation for flight delays", pt: "Compensacao por atrasos de voos" } },
+  { icon: Phone, name: { es: "Asistencia 24/7", en: "24/7 Assistance", pt: "Assistencia 24/7" }, description: { es: "Linea de ayuda en español siempre", en: "Spanish help line always available", pt: "Linha de ajuda sempre disponivel" } },
 ];
 
 export default function Insurance() {
   const { language } = useI18n();
-  const lang = language as "es" | "en";
+  const lang = language as "es" | "en" | "pt";
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -105,32 +108,34 @@ export default function Insurance() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Shield className="w-6 h-6 text-accent" />
             <Badge className="bg-accent/20 text-accent border-accent/30" data-testid="badge-insurance">
-              {language === "es" ? "Viaja Protegido" : "Travel Protected"}
+              {language === "es" ? "Viaja Protegido" : language === "pt" ? "Viaje Protegido" : "Travel Protected"}
             </Badge>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-insurance-title">
-            <span className="text-accent">{language === "es" ? "Seguros de Viaje" : "Travel Insurance"}</span>
+            <span className="text-accent">{language === "es" ? "Seguros de Viaje" : language === "pt" ? "Seguros de Viagem" : "Travel Insurance"}</span>
           </h1>
           
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" data-testid="text-insurance-subtitle">
             {language === "es" 
               ? "Proteccion completa para tu viaje a Europa. Gastos medicos, cancelaciones, equipaje y asistencia 24/7 en español." 
+              : language === "pt"
+              ? "Protecao completa para sua viagem a Europa. Despesas medicas, cancelamentos, bagagem e assistencia 24/7 em portugues."
               : "Complete protection for your trip to Europe. Medical expenses, cancellations, luggage, and 24/7 Spanish-language assistance."}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
             <div className="flex items-center gap-2">
               <Heart className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Cobertura medica completa" : "Full medical coverage"}</span>
+              <span>{language === "es" ? "Cobertura medica completa" : language === "pt" ? "Cobertura medica completa" : "Full medical coverage"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Asistencia 24/7 en español" : "24/7 Spanish assistance"}</span>
+              <span>{language === "es" ? "Asistencia 24/7 en español" : language === "pt" ? "Assistencia 24/7 em portugues" : "24/7 Spanish assistance"}</span>
             </div>
             <div className="flex items-center gap-2">
               <DollarSign className="w-4 h-4 text-accent" />
-              <span>{language === "es" ? "Desde $2/dia" : "From $2/day"}</span>
+              <span>{language === "es" ? "Desde $2/dia" : language === "pt" ? "A partir de $2/dia" : "From $2/day"}</span>
             </div>
           </div>
         </div>
@@ -140,7 +145,7 @@ export default function Insurance() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Que Cubrimos" : "What We Cover"}</span>
+              <span className="text-accent">{language === "es" ? "Que Cubrimos" : language === "pt" ? "O Que Cobrimos" : "What We Cover"}</span>
             </h2>
           </div>
 
@@ -162,7 +167,7 @@ export default function Insurance() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              <span className="text-accent">{language === "es" ? "Nuestros Planes" : "Our Plans"}</span>
+              <span className="text-accent">{language === "es" ? "Nuestros Planes" : language === "pt" ? "Nossos Planos" : "Our Plans"}</span>
             </h2>
           </div>
 
@@ -175,14 +180,14 @@ export default function Insurance() {
               >
                 {plan.popular && (
                   <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-primary">
-                    {language === "es" ? "Mas Popular" : "Most Popular"}
+                    {language === "es" ? "Mas Popular" : language === "pt" ? "Mais Popular" : "Most Popular"}
                   </Badge>
                 )}
                 <CardContent className="pt-8 pb-6">
                   <h3 className="font-display font-bold text-xl text-center mb-2">{plan.name[lang]}</h3>
                   <div className="text-center mb-4">
                     <span className="text-3xl font-bold text-accent">{plan.coverage}</span>
-                    <p className="text-sm text-muted-foreground">{language === "es" ? "Cobertura medica" : "Medical coverage"}</p>
+                    <p className="text-sm text-muted-foreground">{language === "es" ? "Cobertura medica" : language === "pt" ? "Cobertura medica" : "Medical coverage"}</p>
                   </div>
                   <div className="text-center mb-6">
                     <span className="text-lg font-bold">{plan.price[lang]}</span>
@@ -199,7 +204,7 @@ export default function Insurance() {
                     className={`w-full ${plan.popular ? 'bg-accent text-primary hover:bg-accent/90' : ''}`}
                     variant={plan.popular ? "default" : "outline"}
                     data-testid={`button-insurance-plan-${idx}`}
-                    onClick={() => openWhatsAppQuote({ es: `seguro ${plan.name.es}`, en: `${plan.name.en} insurance`, pt: `seguro ${plan.name.es}` }, language)}
+                    onClick={() => openWhatsAppQuote({ es: `seguro ${plan.name.es}`, en: `${plan.name.en} insurance`, pt: `seguro ${plan.name.pt}` }, language)}
                   >
                     {language === "es" ? "Cotizar" : language === "pt" ? "Orcamento" : "Quote"}
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -222,21 +227,23 @@ export default function Insurance() {
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-lg mb-2">
-                      {language === "es" ? "Requisito Schengen" : "Schengen Requirement"}
+                      {language === "es" ? "Requisito Schengen" : language === "pt" ? "Requisito Schengen" : "Schengen Requirement"}
                     </h3>
                     <p className="text-muted-foreground text-sm mb-4">
                       {language === "es" 
                         ? "Para viajar a los 26 paises del espacio Schengen, se recomienda contar con un seguro de viaje con cobertura medica minima de 30,000 EUR. Todos nuestros planes cumplen con este requisito." 
+                        : language === "pt"
+                        ? "Para viajar aos 26 paises do espaco Schengen, recomenda-se ter seguro de viagem com cobertura medica minima de 30.000 EUR. Todos os nossos planos atendem a este requisito."
                         : "To travel to the 26 Schengen area countries, travel insurance with minimum medical coverage of 30,000 EUR is recommended. All our plans meet this requirement."}
                     </p>
                     <div className="flex flex-wrap gap-4 text-sm">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-accent" />
-                        <span>{language === "es" ? "Cobertura minima 30,000 EUR" : "Minimum coverage 30,000 EUR"}</span>
+                        <span>{language === "es" ? "Cobertura minima 30,000 EUR" : language === "pt" ? "Cobertura minima 30.000 EUR" : "Minimum coverage 30,000 EUR"}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-accent" />
-                        <span>{language === "es" ? "Valido en todos los paises Schengen" : "Valid in all Schengen countries"}</span>
+                        <span>{language === "es" ? "Valido en todos los paises Schengen" : language === "pt" ? "Valido em todos os paises Schengen" : "Valid in all Schengen countries"}</span>
                       </div>
                     </div>
                   </div>
@@ -250,11 +257,13 @@ export default function Insurance() {
       <section className="py-16 bg-primary" data-testid="section-insurance-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-display font-bold text-accent mb-4">
-            {language === "es" ? "Viaja Con Tranquilidad" : "Travel With Peace of Mind"}
+            {language === "es" ? "Viaja Con Tranquilidad" : language === "pt" ? "Viaje Com Tranquilidade" : "Travel With Peace of Mind"}
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             {language === "es" 
               ? "Cotiza tu seguro de viaje en minutos y viaja protegido a Europa." 
+              : language === "pt"
+              ? "Solicite orcamento do seu seguro de viagem em minutos e viaje protegido para a Europa."
               : "Quote your travel insurance in minutes and travel protected to Europe."}
           </p>
           <Button 
