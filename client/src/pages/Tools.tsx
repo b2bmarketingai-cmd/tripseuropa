@@ -602,11 +602,32 @@ function VisaChecker() {
                 <SelectValue placeholder={t("tools.visa.selectDest")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="spain">{language === "es" ? "España (Schengen)" : language === "pt" ? "Espanha (Schengen)" : "Spain (Schengen)"}</SelectItem>
                 <SelectItem value="france">{language === "es" ? "Francia (Schengen)" : language === "pt" ? "Franca (Schengen)" : "France (Schengen)"}</SelectItem>
                 <SelectItem value="italy">{language === "es" ? "Italia (Schengen)" : language === "pt" ? "Italia (Schengen)" : "Italy (Schengen)"}</SelectItem>
+                <SelectItem value="spain">{language === "es" ? "España (Schengen)" : language === "pt" ? "Espanha (Schengen)" : "Spain (Schengen)"}</SelectItem>
                 <SelectItem value="germany">{language === "es" ? "Alemania (Schengen)" : language === "pt" ? "Alemanha (Schengen)" : "Germany (Schengen)"}</SelectItem>
-                <SelectItem value="london">{language === "es" ? "Reino Unido" : language === "pt" ? "Reino Unido" : "United Kingdom"}</SelectItem>
+                <SelectItem value="portugal">{language === "es" ? "Portugal (Schengen)" : language === "pt" ? "Portugal (Schengen)" : "Portugal (Schengen)"}</SelectItem>
+                <SelectItem value="greece">{language === "es" ? "Grecia (Schengen)" : language === "pt" ? "Grecia (Schengen)" : "Greece (Schengen)"}</SelectItem>
+                <SelectItem value="netherlands">{language === "es" ? "Paises Bajos (Schengen)" : language === "pt" ? "Paises Baixos (Schengen)" : "Netherlands (Schengen)"}</SelectItem>
+                <SelectItem value="switzerland">{language === "es" ? "Suiza (Schengen)" : language === "pt" ? "Suica (Schengen)" : "Switzerland (Schengen)"}</SelectItem>
+                <SelectItem value="croatia">{language === "es" ? "Croacia (Schengen)" : language === "pt" ? "Croacia (Schengen)" : "Croatia (Schengen)"}</SelectItem>
+                <SelectItem value="uk">{language === "es" ? "Reino Unido" : language === "pt" ? "Reino Unido" : "United Kingdom"}</SelectItem>
+                <SelectItem value="albania">{language === "es" ? "Albania" : language === "pt" ? "Albania" : "Albania"}</SelectItem>
+                <SelectItem value="austria">{language === "es" ? "Austria (Schengen)" : language === "pt" ? "Austria (Schengen)" : "Austria (Schengen)"}</SelectItem>
+                <SelectItem value="belgium">{language === "es" ? "Belgica (Schengen)" : language === "pt" ? "Belgica (Schengen)" : "Belgium (Schengen)"}</SelectItem>
+                <SelectItem value="czechia">{language === "es" ? "Republica Checa (Schengen)" : language === "pt" ? "Republica Tcheca (Schengen)" : "Czech Republic (Schengen)"}</SelectItem>
+                <SelectItem value="denmark">{language === "es" ? "Dinamarca (Schengen)" : language === "pt" ? "Dinamarca (Schengen)" : "Denmark (Schengen)"}</SelectItem>
+                <SelectItem value="finland">{language === "es" ? "Finlandia (Schengen)" : language === "pt" ? "Finlandia (Schengen)" : "Finland (Schengen)"}</SelectItem>
+                <SelectItem value="hungary">{language === "es" ? "Hungria (Schengen)" : language === "pt" ? "Hungria (Schengen)" : "Hungary (Schengen)"}</SelectItem>
+                <SelectItem value="iceland">{language === "es" ? "Islandia (Schengen)" : language === "pt" ? "Islandia (Schengen)" : "Iceland (Schengen)"}</SelectItem>
+                <SelectItem value="ireland">{language === "es" ? "Irlanda" : language === "pt" ? "Irlanda" : "Ireland"}</SelectItem>
+                <SelectItem value="norway">{language === "es" ? "Noruega (Schengen)" : language === "pt" ? "Noruega (Schengen)" : "Norway (Schengen)"}</SelectItem>
+                <SelectItem value="poland">{language === "es" ? "Polonia (Schengen)" : language === "pt" ? "Polonia (Schengen)" : "Poland (Schengen)"}</SelectItem>
+                <SelectItem value="romania">{language === "es" ? "Rumania" : language === "pt" ? "Romenia" : "Romania"}</SelectItem>
+                <SelectItem value="sweden">{language === "es" ? "Suecia (Schengen)" : language === "pt" ? "Suecia (Schengen)" : "Sweden (Schengen)"}</SelectItem>
+                <SelectItem value="baltics">{language === "es" ? "Estados Balticos (Schengen)" : language === "pt" ? "Estados Balticos (Schengen)" : "Baltic States (Schengen)"}</SelectItem>
+                <SelectItem value="cyprus">{language === "es" ? "Chipre" : language === "pt" ? "Chipre" : "Cyprus"}</SelectItem>
+                <SelectItem value="scotland">{language === "es" ? "Escocia" : language === "pt" ? "Escocia" : "Scotland"}</SelectItem>
               </SelectContent>
             </Select>
           </div>
