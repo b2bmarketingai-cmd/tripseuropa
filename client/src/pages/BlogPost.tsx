@@ -110,7 +110,7 @@ export default function BlogPost() {
         type="article"
       />
       <Header />
-      <main>
+      <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
             <Link href="/blog">
