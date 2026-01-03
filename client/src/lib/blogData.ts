@@ -4481,5 +4481,83 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Cual costa tiene las mejores playas para nadar?", answer: "La Costa Brava tiene las aguas mas cristalinas y calas perfectas para snorkel. La Costa Amalfitana tiene playas pequenas pero el agua es espectacular. La Riviera tiene playas de piedra en muchas zonas, pero Antibes y Saint-Tropez tienen arena." },
       { question: "Puedo hacer el viaje en temporada baja?", answer: "Primavera (abril-mayo) y otono (septiembre-octubre) son ideales: clima agradable, menos turistas, mejores precios. En invierno muchos hoteles y restaurantes costeros cierran, especialmente en pueblos pequenos. Evita julio-agosto si no te gustan las multitudes." }
     ]
+  },
+
+  {
+    id: "colores-de-europa",
+    slug: "colores-de-europa",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Colores de Europa: Tour por Francia, España e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
+    excerpt: { es: "Paris, Barcelona, Roma y mas. El circuito clasico que combina lo mejor de tres paises iconicos.", en: "Paris, Barcelona, Rome and more. The classic circuit combining the best of three iconic countries." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "29 Dic 2026",
+    readTime: 12,
+    author: "Trips Europa",
+    keywords: ["tour europa clasico", "francia espana italia", "circuito europa", "paris barcelona roma", "viaje tres paises"],
+    featured: true,
+    sections: [
+      {
+        title: "El Circuito Clasico Europeo: El Sueno de Todo Viajero",
+        content: "Francia, España e Italia: tres paises que representan la esencia de Europa. Este circuito clasico es el viaje sonado de millones de latinoamericanos, y no es para menos. Combina la elegancia parisina, la pasion espanola y el arte italiano en una experiencia inolvidable. En Tripseuropa.com hemos perfeccionado esta ruta durante anos, conocemos cada conexion, cada hotel, cada restaurante que hara de tu viaje una experiencia perfecta. Este es el recorrido que cambiara tu forma de ver el mundo.",
+        image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Paris: La Ciudad de la Luz",
+        content: "Tu aventura comienza en Paris, la ciudad mas romantica del mundo. La Torre Eiffel iluminada, el Louvre con la Mona Lisa, los Campos Eliseos, Montmartre con sus artistas callejeros y el Sacre-Coeur. Paris es arte, gastronomia, moda y cultura en cada esquina. Pasea por el Barrio Latino, cruza el Sena por sus puentes historicos, y termina cada dia con una copa de vino en un bistro tradicional. Los asesores de Trips Europa te ayudan a reservar entradas sin filas y restaurantes autenticos.",
+        list: ["Torre Eiffel: Subir al atardecer para ver Paris iluminarse", "Museo del Louvre: Mona Lisa, Venus de Milo, Victoria de Samotracia", "Montmartre y Sacre-Coeur: Vistas panoramicas y ambiente bohemio", "Campos Eliseos y Arco del Triunfo: La avenida mas famosa del mundo", "Versalles: Excursion de un dia al palacio de los reyes", "Crucero por el Sena: Ver los monumentos desde el agua"],
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Barcelona: Donde Gaudi Hizo Magia",
+        content: "De Paris a Barcelona, el cambio es radical pero igualmente fascinante. Barcelona es color, creatividad y vida mediterranea. La Sagrada Familia de Gaudi te dejara sin palabras, el Parque Guell parece sacado de un sueno, y Las Ramblas vibran con energia dia y noche. El Barrio Gotico guarda siglos de historia, mientras la Barceloneta invita a disfrutar del mar. La gastronomia catalana, desde tapas hasta mariscos, es un viaje en si misma. En Tripseuropa.com organizamos tours de Gaudi con guias expertos.",
+        list: ["Sagrada Familia: La obra maestra inacabada de Gaudi (reserva obligatoria)", "Parque Guell: Mosaicos, arquitectura organica y vistas de la ciudad", "Las Ramblas: Paseo peatonal con mercado de La Boqueria", "Barrio Gotico: Calles medievales, Catedral y Plaza Real", "Casa Batllo y Casa Mila: Otras joyas de Gaudi", "Barceloneta: Playa, chiringuitos y paella frente al mar"],
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Roma: La Ciudad Eterna",
+        content: "Roma es historia viva. Cada piedra cuenta una historia de dos mil anos. El Coliseo te transporta a la epoca de los gladiadores, el Vaticano alberga tesoros artisticos incomparables, y la Fontana di Trevi promete que volveras. Pasea por el Foro Romano, lanza una moneda en la Fontana, y pierdete por el Trastevere al atardecer. La gastronomia romana, desde la carbonara autentica hasta los supplì, es razon suficiente para visitar. Trips Europa organiza tours privados del Vaticano y el Coliseo sin las multitudes.",
+        list: ["Coliseo y Foro Romano: El corazon del Imperio Romano", "Vaticano: Capilla Sixtina, Basilica de San Pedro, Museos Vaticanos", "Fontana di Trevi: Lanza una moneda y pide un deseo", "Piazza Navona y Panteon: Barroco romano y arquitectura antigua", "Trastevere: El barrio mas autentico para cenar", "Escalinata de la Plaza de España: Icono cinematografico"],
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Extensiones Opcionales: Florencia, Venecia, Madrid",
+        content: "El circuito clasico puede extenderse para incluir otras joyas europeas. Desde Roma, Florencia esta a solo 1.5 horas en tren de alta velocidad, y Venecia a 3.5 horas. Desde Barcelona, Madrid es accesible en AVE (2.5 horas). Los asesores de Tripseuropa.com pueden personalizar tu itinerario para incluir estas ciudades sin sacrificar tiempo en los destinos principales.",
+        list: ["Florencia: Duomo, Uffizi, Ponte Vecchio - La cuna del Renacimiento (2-3 dias)", "Venecia: Gondolas, San Marcos, cristal de Murano - Ciudad unica en el mundo (2-3 dias)", "Madrid: Prado, Palacio Real, Gran Via - La capital espanola (2-3 dias)", "Costa Amalfitana: Extension desde Roma (3-4 dias)", "Cinque Terre: Pueblos coloridos en la costa italiana (2 dias)"]
+      },
+      {
+        title: "Itinerario Sugerido: 12-15 Dias",
+        content: "Este es el itinerario que recomendamos en Tripseuropa.com para aprovechar al maximo el circuito clasico sin prisas:",
+        list: ["Dias 1-4: Paris - Torre Eiffel, Louvre, Versalles, Montmartre, crucero Sena", "Dia 5: Traslado Paris-Barcelona (vuelo 2h o tren de alta velocidad 6.5h)", "Dias 6-8: Barcelona - Sagrada Familia, Gaudi tour, Gotico, Barceloneta", "Dia 9: Traslado Barcelona-Roma (vuelo 2h)", "Dias 10-12: Roma - Coliseo, Vaticano, Fontana di Trevi, Trastevere", "Dias 13-14: Extension Florencia o Venecia (opcional)", "Dia 15: Vuelo de regreso desde Roma o Milan"]
+      },
+      {
+        title: "Transporte Entre Ciudades",
+        content: "Conectar Paris, Barcelona y Roma es facil gracias a excelentes opciones de transporte. Te recomendamos combinar vuelos para las distancias largas y trenes de alta velocidad para las cortas.",
+        list: ["Paris-Barcelona: Vuelo (2h) o tren TGV (6.5h, paisajes espectaculares)", "Barcelona-Roma: Vuelo (2h) es la mejor opcion, no hay tren directo", "Dentro de cada ciudad: Metro es eficiente y economico en las tres", "Vuelos low cost: Vueling, easyJet, Ryanair conectan las tres ciudades", "Trenes: Eurostar, TGV, AVE, Frecciarossa ofrecen comodidad y puntualidad", "Transfers: Trips Europa organiza traslados aeropuerto-hotel incluidos"]
+      },
+      {
+        title: "Gastronomia del Circuito: Tres Cocinas de Clase Mundial",
+        content: "Este viaje es tambien una experiencia gastronomica. Cada pais tiene una tradicion culinaria que es Patrimonio de la Humanidad. Los asesores de Trips Europa pueden reservarte en restaurantes locales autenticos, evitando las trampas turisticas.",
+        list: ["Francia: Croissants, quesos, coq au vin, crepes, macarons, vinos de Borgona", "España: Tapas, paella valenciana, jamon iberico, cava catalan, churros con chocolate", "Italia: Pizza napolitana, pasta carbonara, gelato artesanal, tiramisú, vino Chianti", "Mercados: La Boqueria (Barcelona), Mercado Testaccio (Roma), Rue Mouffetard (Paris)", "Experiencias: Clases de cocina, tours gastronomicos, catas de vino"]
+      },
+      {
+        title: "Mejor Epoca y Presupuesto",
+        content: "Elegir la epoca correcta maximiza tu experiencia. El presupuesto varia segun temporada y nivel de alojamiento.",
+        list: ["Mejor epoca: Abril-junio y septiembre-octubre. Clima agradable, menos turistas.", "Evitar: Julio-agosto (calor extremo, precios maximos, multitudes).", "Presupuesto economico: USD 2,500-3,500 por persona (12 dias, hoteles 3 estrellas)", "Presupuesto medio: USD 4,000-5,500 por persona (hoteles 4 estrellas, algunas experiencias)", "Presupuesto premium: USD 7,000+ por persona (hoteles boutique, tours privados)", "Financiamiento: Trips Europa ofrece planes de pago flexibles hasta 12 cuotas"]
+      },
+      {
+        title: "Reserva Tu Circuito Europeo con Trips Europa",
+        content: "En Tripseuropa.com somos especialistas en el circuito clasico Paris-Barcelona-Roma. Llevamos anos perfeccionando esta ruta para viajeros latinoamericanos. Nuestros paquetes incluyen vuelos internacionales desde las principales ciudades de America Latina, hoteles seleccionados en ubicaciones centricas, traslados aeropuerto-hotel, seguro de viaje, y asistencia 24/7 en espanol. Ofrecemos tours opcionales con guias locales expertos y experiencias exclusivas. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje sonado por Francia, España e Italia. Europa te espera con los brazos abiertos.",
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Cuanto cuesta el circuito Paris-Barcelona-Roma?", answer: "Un circuito de 12 dias puede costar desde USD 2,800 por persona en temporada media con hoteles 3 estrellas. Paquetes con hoteles 4 estrellas parten de USD 4,200. Trips Europa ofrece financiamiento flexible y paquetes todo incluido que simplifican la planificacion." },
+      { question: "Cuantos dias necesito para este circuito?", answer: "Minimo 10-12 dias para disfrutar los tres destinos sin prisas. Lo ideal son 14-15 dias si quieres incluir Versalles, excursiones de dia, y tiempo libre para perderte por las calles. Con 7-8 dias seria muy apresurado." },
+      { question: "Es mejor volar o tomar el tren entre ciudades?", answer: "Recomendamos vuelo Paris-Barcelona (2h) o tren TGV si quieres ver paisajes (6.5h). Barcelona-Roma solo tiene sentido en avion (2h). Dentro de cada pais, los trenes de alta velocidad son excelentes y llegana al centro de las ciudades." },
+      { question: "Necesito hablar frances, espanol e italiano?", answer: "No es necesario. En zonas turisticas se habla ingles. Sin embargo, los locales aprecian si intentas algunas palabras en su idioma. Nuestros guias y asistencia son en espanol, asi que nunca estaras desorientado." },
+      { question: "Puedo agregar otros destinos como Florencia o Madrid?", answer: "Por supuesto. Florencia esta a 1.5h de Roma en tren, ideal para 2-3 dias extra. Madrid desde Barcelona son 2.5h en AVE. Venecia tambien es popular. Los asesores de Trips Europa personalizan tu ruta segun tus intereses." },
+      { question: "Es seguro viajar por estos paises?", answer: "Francia, España e Italia son destinos muy seguros para turistas. Como en cualquier ciudad grande, debes cuidar tus pertenencias en zonas concurridas y metro. Nuestros paquetes incluyen seguro de viaje completo y asistencia 24/7." }
+    ]
   }
 ];
