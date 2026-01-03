@@ -5714,5 +5714,107 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       { question: "Es muy cara Espana para viajeros latinoamericanos?", answer: "Es mas economica que Francia, Italia o Reino Unido. El sur (Andalucia) es mas barato que Barcelona o San Sebastian. Con EUR 100-150/dia puedes viajar comodamente." },
       { question: "Es seguro viajar sola/solo por Espana?", answer: "Muy seguro. Espana es uno de los paises mas seguros de Europa. Los unicos problemas son carteristas en zonas muy turisticas (Ramblas, Sol). Usa sentido comun y no tendras ningun problema." }
     ]
+  },
+  {
+    id: "turquia-capadocia",
+    slug: "turquia-capadocia",
+    image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1200&auto=format&fit=crop",
+    title: { es: "Turquia Magica: Estambul, Capadocia y la Ruta Otomana", en: "Magical Turkey: Istanbul, Cappadocia and the Ottoman Route" },
+    excerpt: { es: "Globos aerostaticos, mezquitas, bazares y paisajes lunares. Turquia es el puente entre Europa y Asia.", en: "Hot air balloons, mosques, bazaars and lunar landscapes. Turkey is the bridge between Europe and Asia." },
+    category: "destinos",
+    categoryLabel: { es: "Destinos", en: "Destinations" },
+    date: "27 Dic 2024",
+    readTime: 14,
+    author: "Trips Europa",
+    keywords: ["turquia viaje", "capadocia globos", "estambul turismo", "viaje turquia", "ruta otomana", "pamukkale"],
+    featured: true,
+    sections: [
+      {
+        title: "Turquia: Donde Europa y Asia Se Encuentran",
+        content: "Turquia es uno de los destinos mas fascinantes del mundo. Es el unico pais que pertenece a dos continentes, donde el Bosforo separa Europa de Asia en una linea de agua azul turquesa. Aqui convergen culturas milenarias: griegos, romanos, bizantinos, otomanos. Desde las cupulas de Santa Sofia hasta los paisajes surrealistas de Capadocia, desde los bazares vibrantes de Estambul hasta las terrazas blancas de Pamukkale, Turquia ofrece experiencias que no encontraras en ningun otro lugar. Para viajeros latinoamericanos, Turquia es sorprendentemente accesible: vuelos conectados via Europa, gente hospitalaria, y una relacion calidad-precio excepcional.",
+        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Estambul: La Ciudad de los Dos Continentes",
+        content: "Estambul merece al menos 3-4 dias. Es la unica ciudad del mundo que se extiende por dos continentes.",
+        list: ["Dia 1 - Sultanahmet: Santa Sofia (ahora mezquita, entrada gratuita), Mezquita Azul, Cisterna Basilica, Hipodromo. Cena en Sultanahmet.", "Dia 2 - Bazares y Palacio: Palacio Topkapi (reserva online), Gran Bazar (4000+ tiendas), Bazar de las Especias. Paseo por Eminonu.", "Dia 3 - Bosforo: Crucero por el Bosforo (ferry publico o tour privado), Ortakoy, Palacio Dolmabahce, barrio de Kadikoy (lado asiatico).", "Dia 4 - Modernidad: Torre Galata (vistas espectaculares), calle Istiklal, barrio de Beyoglu. Hammam tradicional (Cemberlitas o Ayasofya Hurrem).", "Alojamiento: Sultanahmet (historico, cerca de todo), Beyoglu/Galata (moderno, vida nocturna), Kadikoy (autentico, lado asiatico).", "Gastronomia: Kebab, baklava, simit (pan con sesamo), meze turco, te turco (cay), cafe turco, raki (anisado)."],
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Capadocia: Paisajes de Otro Planeta",
+        content: "Capadocia es el sueno hecho realidad de cualquier viajero. Formaciones rocosas surrealistas, ciudades subterraneas, y los famosos globos aerostaticos.",
+        list: ["Vuelo en globo: LA experiencia imprescindible. Amanecer sobre los valles con cientos de globos. EUR 150-250. Reserva con semanas de antelacion.", "Goreme: Pueblo central, Museo al Aire Libre (iglesias rupestres con frescos bizantinos), formaciones de chimeneas de hadas.", "Valles: Valle del Amor (formaciones falicas), Valle Rojo (atardecer espectacular), Valle de las Palomas, Valle de Ihlara (caminata 14 km).", "Ciudades subterraneas: Derinkuyu y Kaymakli. 8 niveles bajo tierra, albergaban 20,000 personas. Claustrofobicos, abstenerse.", "Uchisar: Castillo excavado en roca, las mejores vistas panoramicas de Capadocia.", "Hoteles cueva: Experiencia unica. Habitaciones excavadas en la roca. Desde EUR 80/noche hasta lujo extremo.", "Cuanto tiempo: 2-3 noches minimo. 3 noches ideales para explorar sin prisas y tener opcion de vuelo si un dia se cancela por viento."],
+        image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Pamukkale: Las Terrazas de Algodon",
+        content: "Pamukkale significa 'Castillo de Algodon' en turco. Las terrazas blancas de travertino con aguas termales son Patrimonio de la Humanidad.",
+        list: ["Terrazas de travertino: Formaciones blancas calcificadas con piscinas de agua termal turquesa. Caminas descalzo por el agua tibia.", "Hierapolis: Ciudad grecorromana en la cima. Teatro, necropolis, puertas de la ciudad. Entrada combinada con terrazas.", "Piscina de Cleopatra: Piscina termal con columnas romanas sumergidas. EUR 13 adicionales. Dicen que Cleopatra se bano aqui.", "Atardecer: El mejor momento para visitar. Las terrazas se tiñen de rosa y dorado.", "Donde dormir: Pueblo de Pamukkale (economico) o Denizli (mas opciones). 1-2 noches suficientes.", "Como llegar: Bus desde Estambul (10h), desde Capadocia (10h), o vuelo a Denizli + bus local.", "Tip: Llega a las 17:00 para ver el atardecer y luego la iluminacion nocturna."],
+        image: "https://images.unsplash.com/photo-1600608881557-57c665a9e91c?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Efeso: La Ciudad Romana Mejor Conservada",
+        content: "Efeso fue una de las ciudades mas importantes del mundo antiguo. Hoy es uno de los sitios arqueologicos mas impresionantes del Mediterraneo.",
+        list: ["Biblioteca de Celso: Icono de Efeso. Fachada restaurada de 2 pisos. Una de las bibliotecas mas grandes de la antiguedad.", "Gran Teatro: Capacidad para 25,000 espectadores. Donde predico San Pablo. Acustica perfecta.", "Casas de Terrazas: Mansiones romanas con mosaicos y frescos originales. Entrada adicional pero vale cada euro.", "Templo de Artemisa: Una de las 7 Maravillas del Mundo Antiguo. Solo queda una columna, pero la historia es fascinante.", "Casa de la Virgen Maria: Segun la tradicion, donde vivio la Virgen Maria sus ultimos anos. Lugar de peregrinacion.", "Como llegar: Desde Selcuk (3 km) o Kusadasi (puerto de cruceros). Excursion de un dia desde Estambul o Pamukkale.", "Tip: Llega temprano (8:00) o tarde (16:00) para evitar grupos de cruceros. Mucho sol, lleva agua y sombrero."],
+        image: "https://images.unsplash.com/photo-1568781269371-0edbc29a54e9?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Costa Turquesa: Playas y Ruinas",
+        content: "La costa sur de Turquia combina playas espectaculares con ruinas antiguas en un entorno mediterraneo.",
+        list: ["Antalya: Ciudad principal de la Riviera Turca. Casco antiguo (Kaleici), playas, puerto. Base perfecta para explorar.", "Kas: Pueblo bohemio con encanto. Buceo en ruinas sumergidas, kayak a Kekova (ciudad hundida), playas escondidas.", "Fethiye: Laguna de Oludeniz (la playa mas fotografiada de Turquia), parapente desde Babadag, Valle de las Mariposas.", "Olimpos y Cirali: Ruinas en la playa, llamas eternas de Chimera (fuego natural que sale de la roca), tortugas marinas.", "Side: Ruinas romanas junto al mar. Teatro, templo de Apolo, acueducto. Muy turistico pero impresionante.", "Mejor epoca: Mayo-junio o septiembre-octubre. Julio-agosto muy caliente (35-40C) y lleno de turistas.", "Transporte: Alquiler de coche recomendado. Autobuses conectan las ciudades principales."],
+        image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Itinerario Recomendado: 10-12 Dias",
+        content: "Aqui tienes nuestra ruta recomendada para aprovechar al maximo tu viaje a Turquia:",
+        list: ["Dias 1-4: Estambul. Llegada, Sultanahmet, bazares, Bosforo, hammam. Vuelo interno a Capadocia.", "Dias 5-7: Capadocia. Vuelo en globo (madrugada dia 5 o 6), valles, ciudades subterraneas, hoteles cueva. Bus nocturno a Pamukkale.", "Dias 8-9: Pamukkale. Terrazas, Hierapolis, Piscina de Cleopatra. Bus a Selcuk/Efeso.", "Dia 10: Efeso. Ruinas, Casas de Terrazas, Casa de la Virgen. Noche en Selcuk o Kusadasi.", "Dias 11-12: Costa Turquesa (opcional). Antalya o Fethiye si tienes tiempo. O vuelo de regreso desde Izmir.", "Alternativa 8 dias: Estambul (3) + Capadocia (3) + regreso Estambul (1). Lo esencial sin prisas.", "Vuelos internos: Turkish Airlines o Pegasus. Estambul-Kayseri (Capadocia) 1h15. Precios desde EUR 30-60."],
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Transporte: Como Moverse por Turquia",
+        content: "Turquia tiene buena infraestructura de transporte. Aqui las mejores opciones:",
+        list: ["Vuelos internos: Muy economicos. Turkish Airlines (calidad), Pegasus (low-cost). Estambul-Capadocia desde EUR 30.", "Autobuses: Red extensa y comoda. Kamil Koc, Metro, Pamukkale. Asientos amplios, wifi, te gratis. Estambul-Capadocia 10h (EUR 20-30).", "Dolmus: Minibuses locales. Baratos, frecuentes, paran en cualquier lugar. Perfectos para distancias cortas.", "Alquiler de coche: Recomendado para Costa Turquesa y zonas rurales. EUR 25-40/dia. Conducir es facil, trafico en Estambul caotico.", "Trenes: Red limitada pero mejorando. Tren de alta velocidad Ankara-Estambul. No conecta los destinos turisticos principales.", "Taxis: Usan taximetro. Uber funciona en Estambul. BiTaksi es la app local confiable.", "Ferry: Crucial en Estambul para cruzar el Bosforo. Barcos publicos (Sehir Hatlari) muy economicos."]
+      },
+      {
+        title: "Gastronomia Turca: Un Festin de Sabores",
+        content: "La cocina turca es una de las mejores del mundo. Aqui lo que debes probar:",
+        list: ["Kebabs: No solo 'doner'. Prueba Adana (picante), Iskender (con yogur y mantequilla), Shish kebab (brochetas).", "Meze: Tapas turcas. Hummus, baba ganoush, dolma (hojas de parra rellenas), cacik (yogur con pepino), acili ezme (picante).", "Pide: 'Pizza turca' en forma de bote. Rellena de queso, carne, huevo. Deliciosa.", "Lahmacun: 'Pizza armenia' finisima con carne picada. Se enrolla y come con la mano.", "Desayuno turco: Festin de quesos, aceitunas, tomates, pepinos, huevos, miel, mermeladas, pan, te. Abundante.", "Baklava: Postre de hojas finas con nueces y miel. El mejor en Karakoy Gulluoglu (Estambul) o Gaziantep.", "Bebidas: Cay (te negro, omnipresente), cafe turco (espeso, se lee la fortuna en los posos), ayran (yogur liquido salado), raki (anisado, con hielo y agua)."],
+        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Alojamiento: Donde Dormir en Turquia",
+        content: "Turquia ofrece opciones para todos los presupuestos, desde hostales hasta hoteles de lujo legendarios.",
+        list: ["Estambul: Sultanahmet (EUR 60-150, historico), Beyoglu/Galata (EUR 80-200, moderno), Kadikoy (EUR 50-100, autentico).", "Capadocia: Hoteles cueva son obligatorios. Goreme (EUR 80-200), Uchisar (EUR 100-300), Urgup (EUR 150-400 lujo).", "Pamukkale: Basico pero funcional. EUR 40-80. Algunos hoteles tienen piscinas termales propias.", "Costa Turquesa: Resorts todo incluido (EUR 80-200) o boutique hotels en Kas (EUR 60-150).", "Booking.com: Funciona bien en Turquia. Tambien Airbnb para apartamentos.", "Regatear: En hoteles pequenos y fuera de temporada, puedes negociar precio directamente.", "Ramadan: Durante el mes sagrado, algunos restaurantes cierran de dia. Hoteles funcionan normal para turistas."]
+      },
+      {
+        title: "Presupuesto: Cuanto Cuesta Viajar a Turquia",
+        content: "Turquia ofrece excelente relacion calidad-precio. La lira turca ha perdido valor, lo que beneficia a viajeros extranjeros.",
+        list: ["Economico (EUR 50-70/dia): Hostales, comida callejera y lokantasi (comedores locales), transporte publico, atracciones principales.", "Moderado (EUR 80-120/dia): Hotel 3 estrellas, restaurantes turisticos, vuelos internos, tours guiados.", "Confort (EUR 150-250/dia): Hotel cueva en Capadocia, vuelo en globo, restaurantes gourmet, guias privados.", "Vuelo en globo: EUR 150-250 (la experiencia mas cara pero imprescindible).", "Entradas: Palacio Topkapi EUR 25, Santa Sofia gratis (mezquita), Efeso EUR 15, terrazas Pamukkale EUR 10.", "10 dias economico: EUR 600-800 + vuelos internacionales.", "10 dias moderado: EUR 1,000-1,400 + vuelos internacionales.", "Vuelos desde Latinoamerica: EUR 700-1,200 via Europa (Madrid, Frankfurt, Amsterdam)."]
+      },
+      {
+        title: "Mejor Epoca Para Visitar Turquia",
+        content: "Turquia tiene clima mediterraneo en la costa y continental en el interior. Cada estacion tiene sus ventajas.",
+        list: ["Primavera (abril-mayo): Nuestra recomendacion. Clima perfecto (18-25C), tulipanes en Estambul, menos turistas.", "Otono (septiembre-octubre): Excelente. Temperaturas agradables, vendimia, colores en Capadocia.", "Verano (junio-agosto): Muy caliente en el interior (35-40C). Ideal para costa. Estambul lleno de turistas.", "Invierno (noviembre-marzo): Frio en Capadocia (nieve hermosa pero vuelos de globo cancelados frecuentemente). Estambul lluvioso pero magico.", "Capadocia en invierno: Paisajes nevados espectaculares, pero 30-40% de vuelos en globo se cancelan por clima.", "Ramadan: El mes sagrado islamico cambia de fecha cada ano. Restaurantes abren pero algunos servicios reducidos.", "Mejor combinacion: Abril-mayo o septiembre-octubre para ver todo sin extremos de temperatura."],
+        image: "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title: "Consejos Practicos Para Tu Viaje",
+        content: "Detalles importantes que haran tu viaje a Turquia mas facil y agradable.",
+        list: ["Visa: La mayoria de latinoamericanos necesitan e-Visa (online, EUR 50, se obtiene en minutos). Verifica tu pais en evisa.gov.tr.", "Moneda: Lira turca (TRY). Euros y dolares aceptados en zonas turisticas. Cajeros en todas partes. Tarjeta contactless comun.", "Idioma: Turco. En zonas turisticas hablan ingles. Google Translate ayuda mucho.", "Regateo: Obligatorio en el Gran Bazar. Empieza ofreciendo 40-50% del precio inicial. Es parte de la cultura.", "Propinas: 10% en restaurantes si no esta incluido. Redondear en taxis. Propina esperada en tours y hammams.", "Vestimenta: Para mezquitas: hombros y rodillas cubiertos, mujeres deben cubrirse el cabello (prestan panuelos en la entrada).", "Seguridad: Turquia es segura para turistas. Estambul tiene carteristas en zonas turisticas. Evita zonas fronterizas con Siria.", "Enchufes: Tipo C/F (europeo). Voltaje 230V. Mismo que Europa continental."]
+      },
+      {
+        title: "Planifica tu Viaje a Turquia con Trips Europa",
+        content: "En Tripseuropa.com somos expertos en viajes a Turquia. Reservamos tu vuelo en globo en Capadocia con las mejores companias (sabemos cuales vuelan mas alto y cuales dan las mejores fotos), conseguimos hoteles cueva con las vistas mas espectaculares, organizamos guias hispanohablantes en Estambul y Efeso, y disenamos itinerarios que combinan lo imprescindible con joyas escondidas. Turquia puede parecer complicada de organizar: nosotros simplificamos todo. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura turca.",
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
+      }
+    ],
+    faqs: [
+      { question: "Necesito visa para entrar a Turquia?", answer: "La mayoria de latinoamericanos (Colombia, Mexico, Peru, Ecuador, etc.) necesitan e-Visa, que se obtiene online en evisa.gov.tr en minutos. Cuesta aproximadamente EUR 50 y es valida por 90 dias. Argentinos y chilenos no necesitan visa para estancias cortas." },
+      { question: "El vuelo en globo en Capadocia vale la pena?", answer: "Absolutamente. Es UNA DE LAS experiencias mas magicas que puedes vivir. El precio (EUR 150-250) parece alto, pero el amanecer sobre los valles con cientos de globos de colores es inolvidable. Reserva con semanas de antelacion." },
+      { question: "Cuantos dias necesito para ver lo esencial de Turquia?", answer: "Minimo 8-10 dias para Estambul (3-4 dias) + Capadocia (3 dias). Idealmente 12-14 dias para incluir Pamukkale y Efeso. Si solo tienes una semana, elige entre Estambul+Capadocia o Estambul+costa." },
+      { question: "Es seguro viajar a Turquia?", answer: "Si, las zonas turisticas (Estambul, Capadocia, costa, ciudades del oeste) son muy seguras. Evita la frontera con Siria. Turquia recibe millones de turistas al ano sin problemas." },
+      { question: "Como me visto para visitar las mezquitas?", answer: "Hombros y rodillas cubiertos (hombres y mujeres). Las mujeres deben cubrirse el cabello con un panuelo (prestan en la entrada de las mezquitas principales). Debes quitarte los zapatos. Es gratis entrar a las mezquitas." },
+      { question: "Puedo pagar con euros o dolares en Turquia?", answer: "En zonas turisticas de Estambul y Capadocia, si. Pero obtendras mejor tipo de cambio pagando en liras turcas. Los cajeros automaticos estan en todas partes. Tarjeta contactless funciona en la mayoria de comercios." }
+    ]
   }
 ];
