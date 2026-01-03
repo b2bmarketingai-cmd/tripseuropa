@@ -16,6 +16,8 @@ import { useCreateLead } from "@/hooks/use-leads";
 
 import Gemini_Generated_Image_aeza91aeza91aeza from "@assets/Gemini_Generated_Image_aeza91aeza91aeza.png";
 
+import Gemini_Generated_Image_cksi0bcksi0bcksi from "@assets/Gemini_Generated_Image_cksi0bcksi0bcksi.png";
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
@@ -149,7 +151,7 @@ export default function BlogPost() {
 
           <div className="relative aspect-video rounded-lg overflow-hidden mb-8">
             <img 
-              src={post.image} 
+              src={Gemini_Generated_Image_cksi0bcksi0bcksi} 
               alt={title}
               className="w-full h-full object-cover"
               data-testid="img-post-hero"
