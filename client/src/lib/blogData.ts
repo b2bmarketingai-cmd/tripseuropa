@@ -2477,7 +2477,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "resorts-isla-margarita",
     title: { es: "Resorts en Isla de Margarita: Experiencias de Lujo en el Caribe", en: "Resorts in Margarita Island: Luxury Experiences in the Caribbean" },
     excerpt: { es: "Descubre los mejores resorts de Isla de Margarita. Desde all-inclusive hasta boutique hotels, opciones para unas vacaciones caribenas memorables.", en: "Discover the best resorts on Margarita Island. From all-inclusive to boutique hotels, options for memorable Caribbean vacations." },
-    image: "https://images.unsplash.com/photo-1566287935920-6074884b6e6f?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/resorts-isla-margarita.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-11-29",
