@@ -2387,7 +2387,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "los-roques-destino-paradisiaco",
     title: { es: "Los Roques: Razones Para Visitar Este Destino Paradisiaco", en: "Los Roques: Reasons to Visit This Paradise Destination" },
     excerpt: { es: "Descubre el archipiélago de Los Roques, un parque nacional caribeno con aguas cristalinas, cayos virgenes y una de las mejores experiencias de playa del mundo.", en: "Discover the Los Roques archipelago, a Caribbean national park with crystal clear waters, virgin cays and one of the best beach experiences in the world." },
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea985?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/los-roques-paradisiaco.png",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-01",
