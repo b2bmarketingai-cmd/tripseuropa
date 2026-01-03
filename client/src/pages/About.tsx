@@ -24,7 +24,7 @@ const TEAM = [
   {
     name: "Ana Gonzalez",
     role: { es: "Asesora Senior Europa", en: "Senior Europe Advisor", pt: "Consultora Senior Europa" },
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=70&w=400&auto=format&fit=crop",
+    image: "/assets/generated_images/team-ana-gonzalez.png",
     experience: "10+"
   },
   {
