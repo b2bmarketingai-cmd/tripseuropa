@@ -2432,7 +2432,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "distancia-latinoamerica-espana",
     title: { es: "Distancia Entre Latinoamerica y España: Tiempos de Vuelo Por Ciudad", en: "Distance Between Latin America and Spain: Flight Times by City" },
     excerpt: { es: "Informacion practica sobre la distancia y tiempos de vuelo desde principales ciudades latinoamericanas a España. Planifica tu viaje con datos reales.", en: "Practical information about the distance and flight times from major Latin American cities to Spain. Plan your trip with real data." },
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8801?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/generated_images/distancia-latinoamerica-espana.png",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-11-30",
