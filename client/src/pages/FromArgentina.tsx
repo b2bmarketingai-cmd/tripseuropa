@@ -185,7 +185,7 @@ export default function FromArgentina() {
                 {content.cta[language]}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=34611105448" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-argentina-whatsapp">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   {content.whatsapp[language]}

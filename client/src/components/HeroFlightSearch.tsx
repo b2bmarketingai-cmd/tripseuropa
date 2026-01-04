@@ -420,7 +420,7 @@ Can you help me with a quote?`;
       // Continue even if email fails
     }
 
-    const whatsappUrl = `https://wa.me/34611105448?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

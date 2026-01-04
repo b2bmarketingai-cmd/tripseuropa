@@ -177,7 +177,7 @@ export default function TravelStylePage() {
 *Viajeros:* ${formData.travelers || "No especificado"}
 *Fecha:* ${formData.travelDate || "No especificada"}
 *Mensaje:* ${formData.message || "Sin mensaje"}`;
-        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         toast({
           title: contentLang === "es" ? "Solicitud enviada" : contentLang === "pt" ? "Solicitacao enviada" : "Request sent",
@@ -487,7 +487,7 @@ export default function TravelStylePage() {
               
               <div className="md:col-span-2 space-y-4">
                 <a 
-                  href="https://wa.me/34611105448" 
+                  href="https://api.whatsapp.com/send?phone=34611105448" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white p-4 rounded-md transition-colors"

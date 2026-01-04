@@ -830,7 +830,7 @@ Requesting PDF guide: Top 10 Must-See Cities in Europe
 
 From: Tripseuropa.com/blog`;
 
-      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       toast({
         title: language === "es" ? "Suscripcion exitosa" : language === "pt" ? "Inscricao realizada" : "Subscription successful",

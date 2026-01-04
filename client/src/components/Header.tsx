@@ -442,7 +442,7 @@ export function Header() {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
-                    <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
+                    <a href="https://api.whatsapp.com/send?phone=34611105448" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full">
                       <SiWhatsapp className="w-5 h-5 text-green-600" />
                       <span>WhatsApp</span>
                     </a>
@@ -674,7 +674,7 @@ export function Header() {
                     <HelpCircle className="w-4 h-4" />
                     {labels.centroAyudaMobile[currentLang]}
                   </Link>
-                  <a href="https://wa.me/34611105448" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
+                  <a href="https://api.whatsapp.com/send?phone=34611105448" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary">
                     <SiWhatsapp className="w-4 h-4 text-green-500" />
                     WhatsApp
                   </a>

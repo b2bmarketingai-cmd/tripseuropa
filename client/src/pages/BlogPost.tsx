@@ -53,7 +53,7 @@ export default function BlogPost() {
 *Email:* ${formData.email}
 *Telefono:* ${formData.phone || "No proporcionado"}
 *Mensaje:* ${formData.message}`;
-        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         toast({
           title: "Mensaje enviado",

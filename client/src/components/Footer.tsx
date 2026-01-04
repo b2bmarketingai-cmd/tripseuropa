@@ -205,7 +205,7 @@ export function Footer() {
               <a href="https://instagram.com/tripseuropa" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="WhatsApp">
+              <a href="https://api.whatsapp.com/send?phone=34611105448" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="WhatsApp">
                 <SiWhatsapp className="w-4 h-4" />
               </a>
               <a href="https://youtube.com/@tripseuropa" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" aria-label="YouTube">

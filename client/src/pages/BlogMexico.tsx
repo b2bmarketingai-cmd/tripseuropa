@@ -520,7 +520,7 @@ export default function BlogMexico() {
                 Solicitar Cotizacion
               </Button>
             </Link>
-            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=34611105448" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
                 <Phone className="w-4 h-4 mr-2" />
                 WhatsApp

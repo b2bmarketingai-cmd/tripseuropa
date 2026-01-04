@@ -559,7 +559,7 @@ export default function VacacionesEuropa() {
 
 Desde: Tripseuropa.com`;
       
-      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       toast({ title: "Consulta enviada", description: "Te contactaremos pronto" });
       setContactForm({ name: "", email: "", phone: "", message: "" });
@@ -598,7 +598,7 @@ Desde: Tripseuropa.com`;
 
 *Email:* ${newsletterEmail}
 *Pagina:* Vacaciones Europa`;
-        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         toast({
           title: "Suscripcion exitosa",
@@ -1150,7 +1150,7 @@ Desde: Tripseuropa.com`;
                         className="flex-1"
                         onClick={() => {
                           const msg = `Hola! Me interesa el paquete "${currentPackage.title}" a ${currentPackage.country}. Quisiera mas informacion. Gracias!`;
-                          window.open(`https://wa.me/34611105448?text=${encodeURIComponent(msg)}`, "_blank");
+                          window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(msg)}`, "_blank");
                         }}
                         data-testid="button-whatsapp-package"
                       >

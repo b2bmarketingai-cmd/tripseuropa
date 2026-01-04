@@ -527,7 +527,7 @@ export default function BlogCaribe() {
                 {language === "es" ? "Contactar Asesor" : language === "pt" ? "Contatar Consultor" : "Contact Advisor"}
               </Button>
             </Link>
-            <a href="https://wa.me/34611105448" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=34611105448" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp

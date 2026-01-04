@@ -4,8 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Gift, Tag, Compass, CheckCircle, Loader2, User, Phone } from "lucide-react";
+import { Mail, Gift, Tag, Compass, CheckCircle, Loader2, User } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { PhoneInput } from "@/components/PhoneInput";
 
 export function NewsletterSignup() {
   const { language } = useI18n();
@@ -116,7 +117,7 @@ export function NewsletterSignup() {
 
 Por favor envienme las mejores ofertas y promociones de viajes a Europa.`;
       
-      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       setIsSubscribed(true);
       toast({
@@ -188,17 +189,12 @@ Por favor envienme las mejores ofertas y promociones de viajes a Europa.`;
                       data-testid="input-newsletter-name"
                     />
                   </div>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                    <Input
-                      type="tel"
-                      placeholder={c.phonePlaceholder}
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="h-11 pl-10"
-                      data-testid="input-newsletter-phone"
-                    />
-                  </div>
+                  <PhoneInput
+                    value={phone}
+                    onChange={(val) => setPhone(val)}
+                    placeholder={c.phonePlaceholder}
+                    data-testid="input-newsletter-phone"
+                  />
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input

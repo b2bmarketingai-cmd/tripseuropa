@@ -164,7 +164,7 @@ function SolvencyCalculator() {
       : language === "pt"
       ? `Ola! Acabei de calcular a solvencia economica para minha viagem a ${result.countryName}. Preciso de ${result.amount.toLocaleString()} EUR para ${days} dias. Gostaria de receber mais informacoes sobre como planejar minha viagem.`
       : `Hello! I just calculated the economic solvency for my trip to ${result.countryName}. I need ${result.amount.toLocaleString()} EUR for ${days} days. I would like to receive more information about planning my trip.`;
-    window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -362,7 +362,7 @@ function TripCalculator() {
       : language === "pt"
       ? `Ola! Estou interessado em uma viagem para ${result.destName}. Somos ${travelers} viajante(s) por ${days} dias. Orcamento estimado: $${result.total.toLocaleString()} USD. Gostaria de receber um orcamento personalizado.`
       : `Hello! I'm interested in a trip to ${result.destName}. We are ${travelers} traveler(s) for ${days} days. Estimated budget: $${result.total.toLocaleString()} USD. I would like to receive a personalized quote.`;
-    window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -835,7 +835,7 @@ function VisaChecker() {
                   : language === "pt"
                   ? `Ola! Preciso de ajuda com os requisitos de visto para viajar a Europa. Minha nacionalidade e ${nationality} e quero ir a ${destination}.`
                   : `Hello! I need help with visa requirements for traveling to Europe. My nationality is ${nationality} and I want to go to ${destination}.`;
-                window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, '_blank');
+                window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(message)}`, '_blank');
               }}
             >
               {language === "es" ? "Solicitar Asesoria por WhatsApp" : language === "pt" ? "Solicitar Assessoria pelo WhatsApp" : "Request Advice via WhatsApp"} <ArrowRight className="w-4 h-4" />

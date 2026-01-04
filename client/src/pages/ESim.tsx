@@ -298,7 +298,7 @@ export default function ESim() {
                         : language === "pt"
                         ? `Ola! Estou interessado em comprar o eSIM ${plan.name.es} (${typeof plan.data === "string" ? plan.data : plan.data.es}, ${plan.duration.es}) por $${plan.price} USD. Por favor, preciso de mais informacoes.`
                         : `Hello! I'm interested in buying the eSIM ${plan.name.en} (${typeof plan.data === "string" ? plan.data : plan.data.en}, ${plan.duration.en}) for $${plan.price} USD. Please, I need more information.`;
-                      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(message)}`, '_blank');
+                      window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(message)}`, '_blank');
                     }}
                   >
                     {language === "es" ? "Comprar Ahora" : language === "pt" ? "Comprar Agora" : "Buy Now"}

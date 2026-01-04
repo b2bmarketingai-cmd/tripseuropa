@@ -250,7 +250,7 @@ export default function Rewards() {
 
 *Nombre:* ${name}
 *Email:* ${email}`;
-      window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
       
       toast({
         title: language === "es" ? "Registro exitoso" : language === "pt" ? "Cadastro realizado" : "Registration successful",

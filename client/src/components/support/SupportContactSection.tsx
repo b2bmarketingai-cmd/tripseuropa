@@ -113,7 +113,7 @@ export function SupportContactSection({ destinationPlaceholder }: SupportContact
 *Telefono:* ${formData.phone || "No proporcionado"}
 *Destino:* ${formData.destination || "No especificado"}
 *Mensaje:* ${formData.message}`;
-        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         setSubmitted(true);
         toast({

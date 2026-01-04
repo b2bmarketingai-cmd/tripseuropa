@@ -151,7 +151,7 @@ export default function Home() {
               </div>
 
               <a 
-                href="https://wa.me/34611105448" 
+                href="https://api.whatsapp.com/send?phone=34611105448" 
                 className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
                 data-testid="link-whatsapp"
               >
@@ -189,7 +189,7 @@ export default function Home() {
 function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/34611105448"
+      href="https://api.whatsapp.com/send?phone=34611105448"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"

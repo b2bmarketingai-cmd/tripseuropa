@@ -38,17 +38,15 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
   const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
 
-  const selectOriginMsg = language === "es" ? "Selecciona tu pais de origen" : language === "pt" ? "Selecione seu pais de origem" : "Select your origin country";
-  
   const phoneRequiredMsg = language === "es" ? "El teléfono es obligatorio" : language === "pt" ? "O telefone é obrigatório" : "Phone is required";
+  const serviceRequiredMsg = language === "es" ? "Selecciona un servicio" : language === "pt" ? "Selecione um servico" : "Select a service";
   
   const contactSchema = z.object({
     name: z.string().min(2, t("form.validation.nameMin")),
     email: z.string().email(t("form.validation.emailInvalid")),
     phone: z.string().min(5, phoneRequiredMsg),
-    originCountry: z.string().min(1, selectOriginMsg),
-    serviceInterest: z.string().optional(),
-    message: z.string().min(10, t("form.validation.messageMin")),
+    serviceInterest: z.string().min(1, serviceRequiredMsg),
+    message: z.string().min(1).optional(),
     honeypot: z.string().max(0).optional(),
   });
 
@@ -60,26 +58,11 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
       name: "",
       email: "",
       phone: "",
-      originCountry: "",
       serviceInterest: "",
       message: "",
       honeypot: "",
     },
   });
-
-  const originCountries = [
-    { value: "colombia", label: "Colombia" },
-    { value: "mexico", label: "Mexico" },
-    { value: "argentina", label: "Argentina" },
-    { value: "brasil", label: "Brasil" },
-    { value: "peru", label: "Peru" },
-    { value: "chile", label: "Chile" },
-    { value: "ecuador", label: "Ecuador" },
-    { value: "panama", label: "Panama" },
-    { value: "costa-rica", label: "Costa Rica" },
-    { value: "venezuela", label: "Venezuela" },
-    { value: "otro", label: language === "es" ? "Otro pais" : language === "pt" ? "Outro pais" : "Other country" },
-  ];
 
   const onSubmit = (data: ContactFormData) => {
     if (data.honeypot && data.honeypot.length > 0) {
@@ -88,18 +71,15 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
     const { honeypot, ...leadData } = data;
     createLead(leadData as any, {
       onSuccess: () => {
-        // Send WhatsApp notification
-        const countryLabel = originCountries.find(c => c.value === data.originCountry)?.label || data.originCountry;
         const serviceLabel = serviceOptions.find(s => s.value === data.serviceInterest)?.label || data.serviceInterest;
         const whatsappMessage = `Nueva solicitud de contacto!
 
 *Nombre:* ${data.name}
 *Email:* ${data.email}
-*Telefono:* ${data.phone || "No proporcionado"}
-*Pais:* ${countryLabel}
-*Servicio:* ${serviceLabel || "No especificado"}
-*Mensaje:* ${data.message}`;
-        window.open(`https://wa.me/34611105448?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+*Telefono:* ${data.phone}
+*Servicio:* ${serviceLabel}
+*Mensaje:* ${data.message || "Sin mensaje"}`;
+        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
         setSubmitted(true);
         toast({
@@ -216,42 +196,10 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
             />
             <FormField
               control={form.control}
-              name="originCountry"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>
-                    {language === "es" ? "Pais de Origen" : language === "pt" ? "Pais de Origem" : "Origin Country"} *
-                  </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger 
-                        className={isFooter ? "bg-white/5 border-white/10 text-white" : ""}
-                        data-testid="select-contact-origin"
-                      >
-                        <SelectValue placeholder={language === "es" ? "Selecciona tu pais" : language === "pt" ? "Selecione seu pais" : "Select your country"} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {originCountries.map((country) => (
-                        <SelectItem key={country.value} value={country.value} data-testid={`option-origin-${country.value}`}>
-                          {country.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <div className={`grid ${isFooter ? "grid-cols-1" : "grid-cols-1"} gap-4`}>
-            <FormField
-              control={form.control}
               name="serviceInterest"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.service")}</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.service")} *</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger 
