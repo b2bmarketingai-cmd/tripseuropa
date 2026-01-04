@@ -6,10 +6,11 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { es, enUS, ptBR } from "date-fns/locale";
-import { Calendar as CalendarIcon, Plane, ArrowRight, ArrowLeft, Users, Minus, Plus, User, Phone } from "lucide-react";
+import { Calendar as CalendarIcon, Plane, ArrowRight, ArrowLeft, Users, Minus, Plus, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { ShareTrip } from "./ShareTrip";
+import { PhoneInput } from "./PhoneInput";
 
 const AIRPORTS = [
   // CO - Colombia
@@ -1038,17 +1039,11 @@ Can you help me with a quote?`;
 
                 <div>
                   <label className="text-xs text-muted-foreground mb-1 block">{c.phone}</label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary" />
-                    <Input
-                      type="tel"
-                      placeholder="+57 300 123 4567"
-                      value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                      className="pl-10 h-[46px] bg-gray-50 border-gray-200"
-                      data-testid="input-phone"
-                    />
-                  </div>
+                  <PhoneInput
+                    value={phoneNumber}
+                    onChange={setPhoneNumber}
+                    data-testid="input-phone"
+                  />
                 </div>
               </div>
 
