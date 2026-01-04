@@ -47,6 +47,7 @@ import { FloatingContactButtons } from "@/components/support";
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
+  const { toast } = useToast();
   const destination = getDestinationBySlug(slug || "");
   // Content supports es/en/pt, destination data uses es/en with pt fallback to es
   const contentLang = language as "es" | "en" | "pt";
@@ -63,7 +64,7 @@ export default function DestinationPage() {
 
   if (!destination) {
     return (
-      <div className="min-h-screen flex items-center justify-center pt-[100px]">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-display font-bold text-accent mb-4">
             {contentLang === "es" ? "Destino no encontrado" : contentLang === "pt" ? "Destino nao encontrado" : "Destination not found"}
@@ -261,7 +262,7 @@ export default function DestinationPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       <section 
-        className="relative min-h-[500px] flex items-center justify-center pt-[100px]"
+        className="relative min-h-[500px] flex items-center justify-center"
         data-testid="section-destination-hero"
       >
         <div className="absolute inset-0">

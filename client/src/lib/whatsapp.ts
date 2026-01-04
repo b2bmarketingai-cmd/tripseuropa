@@ -1,4 +1,13 @@
 export const WHATSAPP_NUMBER = "34611105448";
+export const WHATSAPP_BASE_URL = "https://api.whatsapp.com/send";
+
+export const getWhatsAppUrl = (message?: string) => {
+  const params = new URLSearchParams({ phone: WHATSAPP_NUMBER });
+  if (message) {
+    params.append("text", message);
+  }
+  return `${WHATSAPP_BASE_URL}?${params.toString()}`;
+};
 
 export const openWhatsAppQuote = (context: { es: string; en: string; pt: string }, language: string) => {
   const localizedContext = context[language as keyof typeof context] || context.es;
@@ -8,7 +17,7 @@ export const openWhatsAppQuote = (context: { es: string; en: string; pt: string 
     pt: `Ola! Estou interessado em ${localizedContext}. Gostaria de receber mais informacoes.`
   };
   const message = messages[language as keyof typeof messages] || messages.es;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(getWhatsAppUrl(message), "_blank");
 };
 
 export const openWhatsAppCustomQuote = (language: string) => {
@@ -18,10 +27,10 @@ export const openWhatsAppCustomQuote = (language: string) => {
     pt: "Ola! Gostaria de solicitar um orcamento personalizado para uma viagem a Europa. Minhas preferencias sao:"
   };
   const message = messages[language as keyof typeof messages] || messages.es;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(getWhatsAppUrl(message), "_blank");
 };
 
 export const openWhatsAppWithMessage = (messageKey: { es: string; en: string; pt: string }, language: string) => {
   const message = messageKey[language as keyof typeof messageKey] || messageKey.es;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(getWhatsAppUrl(message), "_blank");
 };

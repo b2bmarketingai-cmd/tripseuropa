@@ -78,7 +78,7 @@ export function UrgencyBanner() {
 
   return (
     <div 
-      className="bg-gradient-to-r from-accent via-accent/90 to-accent text-primary py-1.5 md:py-2 px-2 md:px-4 relative z-40"
+      className="bg-gradient-to-r from-accent via-accent/90 to-accent text-primary py-1.5 md:py-2 px-2 md:px-4 sticky top-0 z-[60]"
       data-testid="urgency-banner"
     >
       <div className="container mx-auto flex items-center justify-center gap-2 md:gap-3 text-xs md:text-base">
@@ -99,7 +99,7 @@ export function UrgencyBanner() {
               {String(timeLeft.minutes).padStart(2, '0')}m
             </span>
           </div>
-          <Link href="/packages">
+          <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola,%20quiero%20información%20sobre%20las%20ofertas" target="_blank" rel="noopener noreferrer">
             <Button 
               size="sm" 
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-xs h-7 px-2"
@@ -107,7 +107,7 @@ export function UrgencyBanner() {
             >
               {c.cta}
             </Button>
-          </Link>
+          </a>
         </div>
 
         {/* Desktop: Full view */}
@@ -140,7 +140,7 @@ export function UrgencyBanner() {
           </div>
         </div>
         
-        <Link href="/packages" className="hidden md:block">
+        <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola,%20quiero%20información%20sobre%20las%20ofertas" target="_blank" rel="noopener noreferrer" className="hidden md:block">
           <Button 
             size="sm" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
@@ -148,7 +148,7 @@ export function UrgencyBanner() {
           >
             {c.cta}
           </Button>
-        </Link>
+        </a>
         
         <button
           onClick={() => setIsVisible(false)}

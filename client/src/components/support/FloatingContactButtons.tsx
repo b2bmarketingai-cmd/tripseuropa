@@ -20,7 +20,7 @@ export function FloatingContactButtons() {
   return (
     <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50" data-testid="floating-contact-buttons">
       <a 
-        href="https://wa.me/34611105448" 
+        href="https://api.whatsapp.com/send?phone=34611105448&text=Hola,%20quiero%20información%20sobre%20viajes%20a%20Europa" 
         target="_blank" 
         rel="noopener noreferrer"
         className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"

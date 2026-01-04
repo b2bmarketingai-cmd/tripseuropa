@@ -122,7 +122,7 @@ export function HeroCarousel() {
 
   return (
     <section 
-      className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden pt-[100px]" 
+      className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden" 
       data-testid="section-hero-carousel"
     >
       {CAROUSEL_SLIDES.map((slide, index) => (
