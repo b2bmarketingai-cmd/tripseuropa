@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Search } from "lucide-react";
+import { useDetectedCountry } from "@/hooks/useDetectedCountry";
 
 interface Country {
   code: string;
@@ -244,8 +245,11 @@ export function PhoneInput({
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [hasUserSelected, setHasUserSelected] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  
+  const { data: detectedCountryCode } = useDetectedCountry();
 
   useEffect(() => {
     if (value) {
@@ -253,11 +257,23 @@ export function PhoneInput({
       if (matchedCountry) {
         setSelectedCountry(matchedCountry);
         setPhoneNumber(value.slice(matchedCountry.dialCode.length).trim());
+        setHasUserSelected(true);
       } else {
         setPhoneNumber(value);
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (detectedCountryCode && !hasUserSelected && !value) {
+      const detectedCountry = countries.find(
+        c => c.code.toUpperCase() === detectedCountryCode.toUpperCase()
+      );
+      if (detectedCountry) {
+        setSelectedCountry(detectedCountry);
+      }
+    }
+  }, [detectedCountryCode, hasUserSelected, value]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -279,6 +295,7 @@ export function PhoneInput({
 
   const handleCountrySelect = (country: Country) => {
     setSelectedCountry(country);
+    setHasUserSelected(true);
     setIsOpen(false);
     setSearchTerm("");
     const fullNumber = `${country.dialCode} ${phoneNumber}`.trim();
