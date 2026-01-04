@@ -139,12 +139,14 @@ export function Favorites() {
               style={{ scrollSnapAlign: "start" }}
               data-testid={`card-favorite-${fav.id}`}
             >
-              <div className="relative">
+              <div className="relative bg-gray-300">
                 <img
                   src={fav.image}
                   alt={fav.title[lang] || fav.title.es}
                   className="w-full h-[320px] object-cover"
                   loading="lazy"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">

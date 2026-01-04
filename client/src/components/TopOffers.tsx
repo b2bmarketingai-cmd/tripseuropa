@@ -175,12 +175,14 @@ export function TopOffers() {
               style={{ scrollSnapAlign: "start" }}
               data-testid={`card-offer-${offer.id}`}
             >
-              <div className="relative">
+              <div className="relative bg-gray-300">
                 <img
                   src={offer.image}
                   alt={offer.title[lang]}
                   className="w-full h-[320px] object-cover"
                   loading="lazy"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3">
                   <Badge className="bg-accent text-primary font-bold">

@@ -137,6 +137,8 @@ export function HeroCarousel() {
             alt={slide.title[lang]}
             className="w-full h-full object-cover"
             loading={index === 0 ? "eager" : "lazy"}
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>

@@ -149,11 +149,14 @@ export function TravelerStories() {
           </Button>
 
           <div className="grid md:grid-cols-2 gap-8 items-center px-8 md:px-0">
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-300">
               <img
                 src={story.image}
                 alt={story.destination[lang] || story.destination.es}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                crossOrigin="anonymous"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                 <p className="text-white text-sm">{story.location[lang] || story.location.es}</p>

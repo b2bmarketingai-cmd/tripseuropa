@@ -103,12 +103,14 @@ export function DestinationGrid() {
               href={`/destinations/${dest.id}`}
               data-testid={`link-destination-${dest.id}`}
             >
-              <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer">
+              <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer bg-gray-200">
                 <img
                   src={dest.image}
                   alt={dest.name[lang]}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 

@@ -78,22 +78,51 @@ export function UrgencyBanner() {
 
   return (
     <div 
-      className="bg-gradient-to-r from-accent via-accent/90 to-accent text-primary py-2 px-4 relative z-50"
+      className="bg-gradient-to-r from-accent via-accent/90 to-accent text-primary py-1.5 md:py-2 px-2 md:px-4 relative z-40"
       data-testid="urgency-banner"
     >
-      <div className="container mx-auto flex flex-wrap items-center justify-center gap-3 text-sm md:text-base">
-        <div className="flex items-center gap-2">
+      <div className="container mx-auto flex items-center justify-center gap-2 md:gap-3 text-xs md:text-base">
+        {/* Mobile: Simplified view */}
+        <div className="flex md:hidden items-center gap-2 flex-1 justify-center">
+          <Clock className="w-3 h-3 flex-shrink-0" />
+          <span className="font-medium">{c.remaining}:</span>
+          <div className="flex items-center gap-0.5 font-mono font-bold text-xs">
+            <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
+              {timeLeft.days}d
+            </span>
+            <span>:</span>
+            <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
+              {String(timeLeft.hours).padStart(2, '0')}h
+            </span>
+            <span>:</span>
+            <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
+              {String(timeLeft.minutes).padStart(2, '0')}m
+            </span>
+          </div>
+          <Link href="/packages">
+            <Button 
+              size="sm" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-xs h-7 px-2"
+              data-testid="button-urgency-cta-mobile"
+            >
+              {c.cta}
+            </Button>
+          </Link>
+        </div>
+
+        {/* Desktop: Full view */}
+        <div className="hidden md:flex items-center gap-2">
           <Zap className="w-4 h-4 animate-pulse" />
           <span className="font-bold uppercase tracking-wide">{c.flash}</span>
         </div>
         
         <span className="hidden md:inline text-primary/80">|</span>
         
-        <span className="text-center font-medium">{c.message}</span>
+        <span className="hidden md:inline text-center font-medium">{c.message}</span>
         
         <span className="hidden md:inline text-primary/80">|</span>
         
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           <Clock className="w-4 h-4" />
           <span className="font-medium">{c.remaining}:</span>
           <div className="flex items-center gap-1 font-mono font-bold">
@@ -111,7 +140,7 @@ export function UrgencyBanner() {
           </div>
         </div>
         
-        <Link href="/packages">
+        <Link href="/packages" className="hidden md:block">
           <Button 
             size="sm" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
@@ -123,11 +152,11 @@ export function UrgencyBanner() {
         
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-primary/20 rounded transition-colors"
+          className="absolute right-1 md:right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-primary/20 rounded transition-colors"
           aria-label="Close banner"
           data-testid="button-urgency-close"
         >
-          <X className="w-4 h-4" />
+          <X className="w-3 h-3 md:w-4 md:h-4" />
         </button>
       </div>
     </div>

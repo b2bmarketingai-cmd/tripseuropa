@@ -148,12 +148,14 @@ export function SpecialOffers() {
               style={{ scrollSnapAlign: "start" }}
               data-testid={`card-seasonal-offer-${offer.id}`}
             >
-              <div className="relative aspect-[4/3]">
+              <div className="relative aspect-[4/3] bg-gray-300">
                 <img
                   src={offer.image}
                   alt={offer.title[lang] || offer.title.es}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-4 text-white">
