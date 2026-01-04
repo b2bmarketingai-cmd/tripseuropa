@@ -335,7 +335,7 @@ export function PhoneInput({
           type="tel"
           value={phoneNumber}
           onChange={handlePhoneChange}
-          placeholder={placeholder || "611 105 448"}
+          placeholder={placeholder || ""}
           className="rounded-l-none flex-1"
           disabled={disabled}
           data-testid={testId || "input-phone-number"}
