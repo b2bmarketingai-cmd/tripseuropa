@@ -303,7 +303,7 @@ export function PhoneInput({
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newPhoneNumber = e.target.value;
+    const newPhoneNumber = e.target.value.replace(/[^0-9\s]/g, '');
     setPhoneNumber(newPhoneNumber);
     const fullNumber = `${selectedCountry.dialCode} ${newPhoneNumber}`.trim();
     onChange?.(fullNumber);
