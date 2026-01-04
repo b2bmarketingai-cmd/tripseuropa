@@ -475,7 +475,7 @@ export function Header() {
                     data-testid="button-lang-es"
                   >
                     <span className="text-lg">🇪🇸</span>
-                    <span>Espanol</span>
+                    <span>Español</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => setLanguage("en")} 
@@ -684,7 +684,6 @@ export function Header() {
           </div>
         )}
       </header>
-
       <Dialog open={accountModalOpen} onOpenChange={setAccountModalOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
