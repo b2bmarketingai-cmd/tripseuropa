@@ -168,39 +168,50 @@ export function TopOffers() {
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {OFFERS.map((offer, index) => (
-            <Card
-              key={offer.id}
-              className="flex-shrink-0 w-[260px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
-              style={{ scrollSnapAlign: "start" }}
-              data-testid={`card-offer-${offer.id}`}
-            >
-              <div className="relative bg-gray-300">
-                <img
-                  src={offer.image}
-                  alt={offer.title[lang]}
-                  className="w-full h-[320px] object-cover"
-                  loading="lazy"
-                  crossOrigin="anonymous"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-3 left-3">
-                  <Badge className="bg-accent text-primary font-bold">
-                    {index + 1}
-                  </Badge>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang]}</h3>
-                  <p className="text-white/70 text-sm">{content[lang].from}</p>
-                  <div className="flex items-baseline gap-1 flex-wrap">
-                    <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>
+          {OFFERS.map((offer, index) => {
+            const whatsappMessage = `Hola! Me interesa el paquete "${offer.title[lang]}" desde ${offer.price}${content[lang].currency}. Me gustaria mas informacion.`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
+            return (
+              <a
+                key={offer.id}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <Card
+                  className="w-[260px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
+                  data-testid={`card-offer-${offer.id}`}
+                >
+                  <div className="relative bg-gray-300">
+                    <img
+                      src={offer.image}
+                      alt={offer.title[lang]}
+                      className="w-full h-[320px] object-cover"
+                      loading="lazy"
+                      crossOrigin="anonymous"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <Badge className="bg-accent text-primary font-bold">
+                        {index + 1}
+                      </Badge>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang]}</h3>
+                      <p className="text-white/70 text-sm">{content[lang].from}</p>
+                      <div className="flex items-baseline gap-1 flex-wrap">
+                        <span className="text-xl font-bold text-accent">{offer.price}{content[lang].currency}</span>
+                      </div>
+                      <p className="text-white/60 text-xs mt-1">{content[lang].perPerson}</p>
+                    </div>
                   </div>
-                  <p className="text-white/60 text-xs mt-1">{content[lang].perPerson}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
+                </Card>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

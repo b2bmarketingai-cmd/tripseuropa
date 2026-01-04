@@ -132,32 +132,44 @@ export function ReserveSpot() {
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {PACKAGES.map((pkg) => (
-            <Card
-              key={pkg.id}
-              className="flex-shrink-0 w-[260px] overflow-hidden hover-elevate cursor-pointer"
-              style={{ scrollSnapAlign: "start" }}
-              data-testid={`card-reserve-${pkg.id}`}
-            >
-              <div className="relative">
-                <img
-                  src={pkg.image}
-                  alt={pkg.title[lang] || pkg.title.es}
-                  className="w-full h-[320px] object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-display font-bold text-lg mb-2 text-accent">{pkg.title[lang] || pkg.title.es}</h3>
-                  <p className="text-white/70 text-sm">{c.from}</p>
-                  <div className="flex items-baseline gap-1 flex-wrap">
-                    <span className="text-xl font-bold text-accent">{pkg.price}{c.currency}</span>
+          {PACKAGES.map((pkg) => {
+            const title = pkg.title[lang] || pkg.title.es;
+            const whatsappMessage = `Hola! Me interesa reservar el paquete "${title}" desde ${pkg.price}${c.currency}. Me gustaria mas informacion.`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
+            return (
+              <a
+                key={pkg.id}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <Card
+                  className="w-[260px] overflow-hidden hover-elevate cursor-pointer"
+                  data-testid={`card-reserve-${pkg.id}`}
+                >
+                  <div className="relative">
+                    <img
+                      src={pkg.image}
+                      alt={title}
+                      className="w-full h-[320px] object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="font-display font-bold text-lg mb-2 text-accent">{title}</h3>
+                      <p className="text-white/70 text-sm">{c.from}</p>
+                      <div className="flex items-baseline gap-1 flex-wrap">
+                        <span className="text-xl font-bold text-accent">{pkg.price}{c.currency}</span>
+                      </div>
+                      <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
+                    </div>
                   </div>
-                  <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
+                </Card>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

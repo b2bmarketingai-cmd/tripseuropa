@@ -141,33 +141,45 @@ export function SpecialOffers() {
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {OFFERS.map((offer) => (
-            <Card
-              key={offer.id}
-              className="flex-shrink-0 w-[280px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
-              style={{ scrollSnapAlign: "start" }}
-              data-testid={`card-seasonal-offer-${offer.id}`}
-            >
-              <div className="relative aspect-[4/3] bg-gray-300">
-                <img
-                  src={offer.image}
-                  alt={offer.title[lang] || offer.title.es}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  crossOrigin="anonymous"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-4 text-white">
-                <h3 className="font-display font-bold text-lg mb-2 text-accent">{offer.title[lang] || offer.title.es}</h3>
-                <p className="text-white/70 text-sm">{c.from}</p>
-                <div className="flex items-baseline gap-1 flex-wrap">
-                  <span className="text-xl font-bold text-accent">{offer.price}{c.currency}</span>
-                </div>
-                <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
-              </div>
-            </Card>
-          ))}
+          {OFFERS.map((offer) => {
+            const title = offer.title[lang] || offer.title.es;
+            const whatsappMessage = `Hola! Me interesa la oferta "${title}" desde ${offer.price}${c.currency}. Me gustaria mas informacion.`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
+            return (
+              <a
+                key={offer.id}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <Card
+                  className="w-[280px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
+                  data-testid={`card-seasonal-offer-${offer.id}`}
+                >
+                  <div className="relative aspect-[4/3] bg-gray-300">
+                    <img
+                      src={offer.image}
+                      alt={title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      crossOrigin="anonymous"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <div className="p-4 text-white">
+                    <h3 className="font-display font-bold text-lg mb-2 text-accent">{title}</h3>
+                    <p className="text-white/70 text-sm">{c.from}</p>
+                    <div className="flex items-baseline gap-1 flex-wrap">
+                      <span className="text-xl font-bold text-accent">{offer.price}{c.currency}</span>
+                    </div>
+                    <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
+                  </div>
+                </Card>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

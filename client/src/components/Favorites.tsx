@@ -132,34 +132,46 @@ export function Favorites() {
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {FAVORITES.map((fav) => (
-            <Card
-              key={fav.id}
-              className="flex-shrink-0 w-[260px] overflow-hidden hover-elevate cursor-pointer"
-              style={{ scrollSnapAlign: "start" }}
-              data-testid={`card-favorite-${fav.id}`}
-            >
-              <div className="relative bg-gray-300">
-                <img
-                  src={fav.image}
-                  alt={fav.title[lang] || fav.title.es}
-                  className="w-full h-[320px] object-cover"
-                  loading="lazy"
-                  crossOrigin="anonymous"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-display font-bold text-lg mb-2 text-accent">{fav.title[lang] || fav.title.es}</h3>
-                  <p className="text-white/70 text-sm">{c.from}</p>
-                  <div className="flex items-baseline gap-1 flex-wrap">
-                    <span className="text-xl font-bold text-accent">{fav.price}{c.currency}</span>
+          {FAVORITES.map((fav) => {
+            const title = fav.title[lang] || fav.title.es;
+            const whatsappMessage = `Hola! Me interesa el paquete "${title}" desde ${fav.price}${c.currency}. Me gustaria mas informacion.`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
+            return (
+              <a
+                key={fav.id}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <Card
+                  className="w-[260px] overflow-hidden hover-elevate cursor-pointer"
+                  data-testid={`card-favorite-${fav.id}`}
+                >
+                  <div className="relative bg-gray-300">
+                    <img
+                      src={fav.image}
+                      alt={title}
+                      className="w-full h-[320px] object-cover"
+                      loading="lazy"
+                      crossOrigin="anonymous"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="font-display font-bold text-lg mb-2 text-accent">{title}</h3>
+                      <p className="text-white/70 text-sm">{c.from}</p>
+                      <div className="flex items-baseline gap-1 flex-wrap">
+                        <span className="text-xl font-bold text-accent">{fav.price}{c.currency}</span>
+                      </div>
+                      <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
+                    </div>
                   </div>
-                  <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
+                </Card>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
