@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
 import { Send, Phone, Mail, CheckCircle } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
+import { PhoneInput } from "@/components/PhoneInput";
 import {
   Form,
   FormControl,
@@ -39,10 +40,12 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
 
   const selectOriginMsg = language === "es" ? "Selecciona tu pais de origen" : language === "pt" ? "Selecione seu pais de origem" : "Select your origin country";
   
+  const phoneRequiredMsg = language === "es" ? "El teléfono es obligatorio" : language === "pt" ? "O telefone é obrigatório" : "Phone is required";
+  
   const contactSchema = z.object({
     name: z.string().min(2, t("form.validation.nameMin")),
     email: z.string().email(t("form.validation.emailInvalid")),
-    phone: z.string().optional(),
+    phone: z.string().min(5, phoneRequiredMsg),
     originCountry: z.string().min(1, selectOriginMsg),
     serviceInterest: z.string().optional(),
     message: z.string().min(10, t("form.validation.messageMin")),
@@ -198,12 +201,12 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.phone")}</FormLabel>
+                  <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.phone")} *</FormLabel>
                   <FormControl>
-                    <Input 
-                      placeholder={t("form.phonePlaceholder")} 
-                      {...field} 
-                      className={isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}
+                    <PhoneInput
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder={t("form.phonePlaceholder")}
                       data-testid="input-contact-phone"
                     />
                   </FormControl>
