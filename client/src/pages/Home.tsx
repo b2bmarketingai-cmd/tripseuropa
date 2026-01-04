@@ -74,7 +74,7 @@ export default function Home() {
   const c = content[language as keyof typeof content] || content.es;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col w-full overflow-x-hidden">
       <HomePageSEO />
       <UrgencyBanner />
       <Header />
