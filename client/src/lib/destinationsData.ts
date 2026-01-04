@@ -185,9 +185,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1515859005217-8a1f08870f59?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1529154036614-a60975f5c36f?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte mas importantes del mundo y destino gastronomico por excelencia. Desde el romantico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises mas bellos del mundo.",
@@ -701,9 +701,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1559070101-e5a2a18da88e?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1601635671556-7018d4b0e1b0?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas mas hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
@@ -827,9 +827,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     heroImage: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1920&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584003564911-a7dee2f083e5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558551649-e44c8f992010?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Los Paises Bajos son mucho mas que Amsterdam. Descubre un pais de canales pintorescos, molinos de viento historicos, campos de tulipanes y una rica herencia artistica. Desde los museos de Van Gogh y Rembrandt hasta los quesos de Gouda y la arquitectura innovadora de Rotterdam, los Paises Bajos ofrecen una experiencia unica. Explora en bicicleta como los locales y disfruta de la tolerancia y creatividad holandesa.",
@@ -1056,8 +1056,8 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     galleryImages: [
       "https://images.unsplash.com/photo-1565711561500-49678a10a63f?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1592156328757-50c0453e46f5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558697698-0d54a56c6b89?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Croacia es la joya del Adriatico, un pais de costas impresionantes, ciudades medievales y parques naturales espectaculares. Desde las murallas de Dubrovnik (escenario de Game of Thrones) hasta las cascadas de Plitvice, pasando por las islas de Hvar y Split, Croacia ofrece una combinacion perfecta de historia, naturaleza y vida mediterranea. Descubre playas de aguas cristalinas, gastronomia de mar y hospitalidad balcanica.",

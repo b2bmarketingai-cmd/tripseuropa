@@ -38,7 +38,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "fall",
     category: "season",
     name: { es: "Viajes de Otono", en: "Fall Trips" },
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=1920&auto=format&fit=crop",
     description: {
       es: "Descubre Europa en su momento mas magico. El otono transforma el continente con colores dorados, festivales de la cosecha y temperaturas perfectas para explorar. Desde los vinedos de la Toscana hasta los castillos de Alemania, vive una experiencia unica.",
       en: "Discover Europe at its most magical moment. Fall transforms the continent with golden colors, harvest festivals, and perfect temperatures for exploration. From the vineyards of Tuscany to the castles of Germany, experience something unique."
@@ -48,9 +48,9 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Wine harvest festivals in France and Italy", "Autumn colors in the Alps", "Fewer tourists and better prices", "Seasonal gastronomy"]
     },
     packages: [
-      { id: "fall-1", name: { es: "Vendimia en Borgona", en: "Burgundy Wine Harvest" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800", highlights: { es: ["Degustacion de vinos", "Recorrido por vinedos", "Gastronomia gourmet"], en: ["Wine tasting", "Vineyard tours", "Gourmet gastronomy"] } },
-      { id: "fall-2", name: { es: "Otono en la Toscana", en: "Tuscan Autumn" }, destination: "Italy", duration: { es: "10 dias", en: "10 days" }, price: 3450, image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=80&w=800", highlights: { es: ["Colinas toscanas", "Trufa blanca", "Pueblos medievales"], en: ["Tuscan hills", "White truffle", "Medieval villages"] } },
-      { id: "fall-3", name: { es: "Castillos de Baviera", en: "Bavarian Castles" }, destination: "Germany", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800", highlights: { es: ["Neuschwanstein", "Oktoberfest", "Bosques dorados"], en: ["Neuschwanstein", "Oktoberfest", "Golden forests"] } }
+      { id: "fall-1", name: { es: "Vendimia en Borgona", en: "Burgundy Wine Harvest" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Degustacion de vinos", "Recorrido por vinedos", "Gastronomia gourmet"], en: ["Wine tasting", "Vineyard tours", "Gourmet gastronomy"] } },
+      { id: "fall-2", name: { es: "Otono en la Toscana", en: "Tuscan Autumn" }, destination: "Italy", duration: { es: "10 dias", en: "10 days" }, price: 3450, image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Colinas toscanas", "Trufa blanca", "Pueblos medievales"], en: ["Tuscan hills", "White truffle", "Medieval villages"] } },
+      { id: "fall-3", name: { es: "Castillos de Baviera", en: "Bavarian Castles" }, destination: "Germany", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1534313314376-a72289b6181e?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Neuschwanstein", "Oktoberfest", "Bosques dorados"], en: ["Neuschwanstein", "Oktoberfest", "Golden forests"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada y bienvenida", en: "Arrival and welcome" }, description: { es: "Llegada al destino, traslado al hotel y cena de bienvenida con vinos de la region.", en: "Arrival at destination, transfer to hotel, and welcome dinner with regional wines." } },

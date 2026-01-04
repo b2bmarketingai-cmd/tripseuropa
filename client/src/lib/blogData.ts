@@ -784,7 +784,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "malta-verano",
     slug: "malta-verano",
-    image: "/assets/Gemini_Generated_Image_jw4y04jw4y04jw4y_1767447444765.png",
+    image: "https://images.unsplash.com/photo-1575999502951-4ab25fb1f9df?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Malta en Verano: Playas Secretas y Cultura Milenaria", en: "Malta in Summer: Secret Beaches and Ancient Culture" },
     excerpt: { es: "Valletta, Blue Lagoon, Gozo. El destino secreto del Mediterraneo con historia fascinante.", en: "Valletta, Blue Lagoon, Gozo. The secret Mediterranean destination with fascinating history." },
     category: "destinos",
@@ -853,7 +853,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "museo-louvre-guia",
     slug: "museo-louvre-guia",
-    image: "/attached_assets/stock_images/louvre_museum_paris__78e7deeb.jpg",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Museo del Louvre: Guia para No Perderte Nada", en: "Louvre Museum: Guide to Not Miss Anything" },
     excerpt: { es: "Mona Lisa, Venus de Milo y 35,000 obras. Como recorrerlo en 3 horas sin agotarte.", en: "Mona Lisa, Venus de Milo and 35,000 works. How to tour it in 3 hours without exhaustion." },
     category: "destinos",
@@ -3688,7 +3688,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "visa-schengen-colombianos",
     slug: "visa-schengen-colombianos",
-    image: "/assets/generated_images/visa-schengen-colombianos.png",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa: Visa Schengen para Colombianos 2026", en: "Complete Guide: Schengen Visa for Colombians 2026" },
     excerpt: { es: "Requisitos actualizados, documentos necesarios, costo, tiempo de tramite y consejos para aprobar tu visa Schengen desde Colombia.", en: "Updated requirements, necessary documents, cost, processing time and tips to get your Schengen visa from Colombia approved." },
     category: "migracion",
