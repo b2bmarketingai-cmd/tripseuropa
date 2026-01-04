@@ -47,12 +47,10 @@ import { FloatingContactButtons } from "@/components/support";
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
+  const destination = getDestinationBySlug(slug || "");
   // Content supports es/en/pt, destination data uses es/en with pt fallback to es
   const contentLang = language as "es" | "en" | "pt";
-  const dataLang = (language === "pt" ? "es" : language) as "es" | "en";
-  const { toast } = useToast();
-  
-  const destination = getDestinationBySlug(slug || "");
+  const dataLang = (destination && destination.name[contentLang as keyof typeof destination.name] ? contentLang : "es") as "es" | "en";
   
   const [formData, setFormData] = useState({
     name: "",

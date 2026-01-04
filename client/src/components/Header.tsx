@@ -399,6 +399,9 @@ export function Header() {
                 alt="Trips Europa" 
                 className="w-auto object-contain max-w-[280px] md:max-w-[360px] lg:max-w-[420px]"
                 style={{ height: 'clamp(60px, 6vw + 48px, 90px)' }}
+                loading="eager"
+                width="420"
+                height="90"
               />
             </Link>
 

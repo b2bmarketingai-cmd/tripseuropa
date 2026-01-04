@@ -1,5 +1,5 @@
-export type MultiLangText = { es: string; en: string; pt: string };
-export type MultiLangArray = { es: string[]; en: string[]; pt: string[] };
+export type MultiLangText = { es: string; en: string; pt?: string };
+export type MultiLangArray = { es: string[]; en: string[]; pt?: string[] };
 
 export interface ItineraryDay {
   day: number;
