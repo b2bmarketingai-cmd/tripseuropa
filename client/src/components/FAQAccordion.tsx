@@ -13,9 +13,9 @@ const FAQ_ITEMS = [
       pt: "Quais sao os metodos de pagamento aceitos?"
     },
     answer: {
-      es: "Aceptamos tarjetas de credito y debito (Visa, Mastercard, American Express), transferencias bancarias, pagos en cuotas sin intereses con Scalapay, y criptomonedas a traves de Binance Pay. Tambien puedes pagar en efectivo en nuestras oficinas o a traves de puntos de pago autorizados como Efecty y Baloto en Colombia.",
-      en: "We accept credit and debit cards (Visa, Mastercard, American Express), bank transfers, interest-free installment payments with Scalapay, and cryptocurrencies through Binance Pay. You can also pay in cash at our offices or through authorized payment points like Efecty and Baloto in Colombia.",
-      pt: "Aceitamos cartoes de credito e debito (Visa, Mastercard, American Express), transferencias bancarias, pagamentos parcelados sem juros com Scalapay e criptomoedas atraves do Binance Pay. Voce tambem pode pagar em dinheiro em nossos escritorios ou atraves de pontos de pagamento autorizados."
+      es: "Aceptamos tarjetas de credito y debito (Visa, Mastercard, American Express), transferencias bancarias, pagos en cuotas sin intereses con Scalapay, y criptomonedas a traves de Binance Pay. Tambien puedes pagar en efectivo a traves de puntos de pago autorizados como Bancolombia, Efecty y Baloto en Colombia.",
+      en: "We accept credit and debit cards (Visa, Mastercard, American Express), bank transfers, interest-free installment payments with Scalapay, and cryptocurrencies through Binance Pay. You can also pay in cash through authorized payment points like Bancolombia, Efecty and Baloto in Colombia.",
+      pt: "Aceitamos cartoes de credito e debito (Visa, Mastercard, American Express), transferencias bancarias, pagamentos parcelados sem juros com Scalapay e criptomoedas atraves do Binance Pay. Voce tambem pode pagar em dinheiro atraves de pontos de pagamento autorizados como Bancolombia, Efecty e Baloto na Colombia."
     }
   },
   {
