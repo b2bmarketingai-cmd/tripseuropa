@@ -83,26 +83,26 @@ export function UrgencyBanner() {
     >
       <div className="container mx-auto flex items-center justify-center gap-2 md:gap-3 text-xs md:text-base">
         {/* Mobile: Simplified view */}
-        <div className="flex md:hidden items-center gap-2 flex-1 justify-center">
+        <div className="flex md:hidden items-center gap-1.5 flex-1 justify-center">
           <Clock className="w-3 h-3 flex-shrink-0" />
-          <span className="font-medium">{c.remaining}:</span>
-          <div className="flex items-center gap-0.5 font-mono font-bold text-xs">
+          <span className="font-medium text-xs">{c.remaining}:</span>
+          <div className="flex items-center gap-1 font-bold text-xs">
             <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
-              {timeLeft.days}d
+              {timeLeft.days} {c.days}
             </span>
-            <span>:</span>
+            <span className="text-primary/80">:</span>
             <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
-              {String(timeLeft.hours).padStart(2, '0')}h
+              {timeLeft.hours} {c.hours}
             </span>
-            <span>:</span>
+            <span className="text-primary/80">:</span>
             <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
-              {String(timeLeft.minutes).padStart(2, '0')}m
+              {timeLeft.minutes} {c.minutes}
             </span>
           </div>
           <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola,%20quiero%20información%20sobre%20las%20ofertas" target="_blank" rel="noopener noreferrer">
             <Button 
               size="sm" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-xs h-7 px-2"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-xs h-6 px-2"
               data-testid="button-urgency-cta-mobile"
             >
               {c.cta}
