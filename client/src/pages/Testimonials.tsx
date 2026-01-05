@@ -8,77 +8,84 @@ import { Button } from "@/components/ui/button";
 import { Star, Quote, MapPin } from "lucide-react";
 import { Link } from "wouter";
 
+import carolinaImg from "@assets/generated_images/colombian_woman_professional_headshot.png";
+import robertoImg from "@assets/generated_images/colombian_man_professional_headshot.png";
+import anaMariaImg from "@assets/generated_images/latina_woman_elegant_headshot.png";
+import miguelImg from "@assets/generated_images/distinguished_latino_man_headshot.png";
+import lauraImg from "@assets/generated_images/venezuelan_woman_professional_headshot.png";
+import pedroImg from "@assets/generated_images/colombian_businessman_headshot.png";
+
 const TESTIMONIALS = [
   {
     name: "Carolina Mendez",
-    location: { es: "Bogota, Colombia", en: "Bogota, Colombia" },
+    location: { es: "Bogotá, Colombia", en: "Bogota, Colombia" },
     trip: { es: "Luna de Miel en Italia", en: "Honeymoon in Italy" },
     text: { 
-      es: "Nuestra luna de miel fue absolutamente perfecta. Desde el momento en que los contactamos, Maria y su equipo se encargaron de cada detalle. Los hoteles eran increíbles, los tours privados nos permitieron evitar las multitudes, y las recomendaciones de restaurantes fueron exquisitas. Sin duda, superaron todas nuestras expectativas.",
+      es: "Nuestra luna de miel fue absolutamente perfecta. Desde el momento en que los contactamos, María y su equipo se encargaron de cada detalle. Los hoteles eran increíbles, los tours privados nos permitieron evitar las multitudes, y las recomendaciones de restaurantes fueron exquisitas. Sin duda, superaron todas nuestras expectativas.",
       en: "Our honeymoon was absolutely perfect. From the moment we contacted them, Maria and her team took care of every detail. The hotels were incredible, the private tours allowed us to avoid crowds, and the restaurant recommendations were exquisite. They definitely exceeded all our expectations."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=70&w=200&auto=format&fit=crop",
+    image: carolinaImg,
     date: "Noviembre 2024"
   },
   {
-    name: "Roberto Gonzalez",
-    location: { es: "Medellin, Colombia", en: "Medellin, Colombia" },
-    trip: { es: "Tour por 5 paises", en: "5 Country Tour" },
+    name: "Roberto González",
+    location: { es: "Medellín, Colombia", en: "Medellin, Colombia" },
+    trip: { es: "Tour por 5 países", en: "5 Country Tour" },
     text: { 
-      es: "Viaje con mi familia (4 personas) por Francia, Suiza, Italia, Austria y Alemania. La logistica fue impecable, todos los traslados puntuales, hoteles centricos y de excelente calidad. Lo mejor fue el soporte 24/7, siempre estuvieron disponibles cuando los necesitamos.",
+      es: "Viajé con mi familia (4 personas) por Francia, Suiza, Italia, Austria y Alemania. La logística fue impecable, todos los traslados puntuales, hoteles céntricos y de excelente calidad. Lo mejor fue el soporte 24/7, siempre estuvieron disponibles cuando los necesitamos.",
       en: "I traveled with my family (4 people) through France, Switzerland, Italy, Austria and Germany. The logistics were impeccable, all transfers on time, hotels centrally located and of excellent quality. The best part was the 24/7 support, they were always available when we needed them."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=70&w=200&auto=format&fit=crop",
+    image: robertoImg,
     date: "Octubre 2024"
   },
   {
-    name: "Ana Maria Torres",
+    name: "Ana María Torres",
     location: { es: "Cali, Colombia", en: "Cali, Colombia" },
-    trip: { es: "Escapada a Paris", en: "Paris Getaway" },
+    trip: { es: "Escapada a París", en: "Paris Getaway" },
     text: { 
-      es: "Siempre sone con conocer Paris y Trips Europa hizo ese sueño realidad. Me ayudaron con todo el proceso de visa (que parecia complicado) y planificaron un itinerario perfecto de 7 dias. Cada experiencia fue magica, desde subir a la Torre Eiffel hasta los paseos por Montmartre.",
+      es: "Siempre soñé con conocer París y Trips Europa hizo ese sueño realidad. Me ayudaron con todo el proceso de visa (que parecía complicado) y planificaron un itinerario perfecto de 7 días. Cada experiencia fue mágica, desde subir a la Torre Eiffel hasta los paseos por Montmartre.",
       en: "I always dreamed of visiting Paris and Trips Europa made that dream come true. They helped me with the entire visa process (which seemed complicated) and planned a perfect 7-day itinerary. Every experience was magical, from climbing the Eiffel Tower to walks through Montmartre."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=70&w=200&auto=format&fit=crop",
+    image: anaMariaImg,
     date: "Septiembre 2024"
   },
   {
-    name: "Miguel Hernandez",
+    name: "Miguel Hernández",
     location: { es: "Barranquilla, Colombia", en: "Barranquilla, Colombia" },
-    trip: { es: "Crucero Mediterraneo", en: "Mediterranean Cruise" },
+    trip: { es: "Crucero Mediterráneo", en: "Mediterranean Cruise" },
     text: { 
-      es: "El crucero por el Mediterraneo fue espectacular. La asesoria para elegir el mejor camarote, los excursiones en cada puerto, todo fue primera clase. Trips Europa negocio un upgrade que no esperabamos. Totalmente recomendados para viajes de lujo.",
+      es: "El crucero por el Mediterráneo fue espectacular. La asesoría para elegir el mejor camarote, las excursiones en cada puerto, todo fue primera clase. Trips Europa negoció un upgrade que no esperábamos. Totalmente recomendados para viajes de lujo.",
       en: "The Mediterranean cruise was spectacular. The advice for choosing the best cabin, the excursions at each port, everything was first class. Trips Europa negotiated an upgrade we didn't expect. Totally recommended for luxury travel."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=70&w=200&auto=format&fit=crop",
+    image: miguelImg,
     date: "Agosto 2024"
   },
   {
-    name: "Laura Sanchez",
+    name: "Laura Sánchez",
     location: { es: "Caracas, Venezuela", en: "Caracas, Venezuela" },
     trip: { es: "Tour de Castillos en Alemania", en: "Castle Tour in Germany" },
     text: { 
-      es: "Como venezolana, tenia muchas dudas sobre el proceso de visa y viaje. El equipo de Trips Europa me guio paso a paso, resolviendo todas mis preguntas con paciencia. El tour por los castillos de Baviera fue un cuento de hadas hecho realidad.",
+      es: "Como venezolana, tenía muchas dudas sobre el proceso de visa y viaje. El equipo de Trips Europa me guió paso a paso, resolviendo todas mis preguntas con paciencia. El tour por los castillos de Baviera fue un cuento de hadas hecho realidad.",
       en: "As a Venezuelan, I had many doubts about the visa and travel process. The Trips Europa team guided me step by step, answering all my questions with patience. The tour of Bavarian castles was a fairy tale come true."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=70&w=200&auto=format&fit=crop",
+    image: lauraImg,
     date: "Julio 2024"
   },
   {
-    name: "Pedro Ramirez",
+    name: "Pedro Ramírez",
     location: { es: "Bucaramanga, Colombia", en: "Bucaramanga, Colombia" },
     trip: { es: "Viaje de negocios + turismo", en: "Business + tourism trip" },
     text: { 
-      es: "Necesitaba combinar una conferencia en Londres con vacaciones familiares. Trips Europa organizo todo perfectamente: vuelos, hoteles ejecutivos para mis dias de trabajo y luego un hotel familiar para las vacaciones. Increible atencion al detalle.",
+      es: "Necesitaba combinar una conferencia en Londres con vacaciones familiares. Trips Europa organizó todo perfectamente: vuelos, hoteles ejecutivos para mis días de trabajo y luego un hotel familiar para las vacaciones. Increíble atención al detalle.",
       en: "I needed to combine a conference in London with family vacation. Trips Europa organized everything perfectly: flights, executive hotels for my work days and then a family hotel for the vacation. Incredible attention to detail."
     },
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=70&w=200&auto=format&fit=crop",
+    image: pedroImg,
     date: "Junio 2024"
   }
 ];
