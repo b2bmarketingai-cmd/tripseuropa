@@ -139,8 +139,7 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/travel-assistant" className="flex items-center gap-2 text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
-                  <Bot className="w-3 h-3 text-accent" />
+                <Link href="/travel-assistant" className="text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
                   {language === "es" ? "Sofia Agente de Viajes" : language === "pt" ? "Sofia Agente de Viagens" : "Sofia Travel Agent"}
                 </Link>
               </li>
