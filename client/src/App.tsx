@@ -143,6 +143,47 @@ function Router() {
       {/* Dynamic Country Landing Pages */}
       <Route path="/desde/:country" component={CountryLanding} />
       
+      {/* Country-Specific SEO Routes (hreflang targeting) */}
+      <Route path="/es-co" component={Home} />
+      <Route path="/es-co/" component={Home} />
+      <Route path="/es-co/destinos" component={Destinations} />
+      <Route path="/es-co/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-mx" component={Home} />
+      <Route path="/es-mx/" component={Home} />
+      <Route path="/es-mx/destinos" component={Destinations} />
+      <Route path="/es-mx/destinos/:slug" component={DestinationPage} />
+      <Route path="/pt-br" component={Home} />
+      <Route path="/pt-br/" component={Home} />
+      <Route path="/pt-br/destinos" component={Destinations} />
+      <Route path="/pt-br/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-ar" component={Home} />
+      <Route path="/es-ar/" component={Home} />
+      <Route path="/es-ar/destinos" component={Destinations} />
+      <Route path="/es-ar/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-pe" component={Home} />
+      <Route path="/es-pe/" component={Home} />
+      <Route path="/es-pe/destinos" component={Destinations} />
+      <Route path="/es-pe/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-pa" component={Home} />
+      <Route path="/es-pa/" component={Home} />
+      <Route path="/es-pa/destinos" component={Destinations} />
+      <Route path="/es-pa/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-cr" component={Home} />
+      <Route path="/es-cr/" component={Home} />
+      <Route path="/es-cr/destinos" component={Destinations} />
+      <Route path="/es-cr/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-do" component={Home} />
+      <Route path="/es-do/" component={Home} />
+      <Route path="/es-do/destinos" component={Destinations} />
+      <Route path="/es-do/destinos/:slug" component={DestinationPage} />
+      <Route path="/es/caribe" component={Home} />
+      <Route path="/es/caribe/" component={Home} />
+      <Route path="/es/caribe/destinos" component={Destinations} />
+      <Route path="/en" component={Home} />
+      <Route path="/en/" component={Home} />
+      <Route path="/en/destinations" component={Destinations} />
+      <Route path="/en/destinations/:slug" component={DestinationPage} />
+      
       {/* Route Pages (Origin-Destination) */}
       <Route path="/routes/:route" component={RouteTemplate} />
       

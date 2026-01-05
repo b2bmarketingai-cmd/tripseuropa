@@ -15,24 +15,62 @@ interface SEOHeadProps {
   alternateUrls?: { hreflang: string; href: string }[];
 }
 
-const BASE_URL = "https://tripseuropa.com";
+const BASE_URL = "https://tripseuropa.co";
+
+export const countryHreflangs = [
+  { code: 'BR', hreflang: 'pt-BR', urlPrefix: '/pt-br' },
+  { code: 'MX', hreflang: 'es-MX', urlPrefix: '/es-mx' },
+  { code: 'CO', hreflang: 'es-CO', urlPrefix: '/es-co' },
+  { code: 'AR', hreflang: 'es-AR', urlPrefix: '/es-ar' },
+  { code: 'PE', hreflang: 'es-PE', urlPrefix: '/es-pe' },
+  { code: 'PA', hreflang: 'es-PA', urlPrefix: '/es-pa' },
+  { code: 'CR', hreflang: 'es-CR', urlPrefix: '/es-cr' },
+  { code: 'DO', hreflang: 'es-DO', urlPrefix: '/es-do' },
+  { code: 'CB', hreflang: 'es', urlPrefix: '/es/caribe' },
+];
 
 export function generateHreflangUrls(path: string): { hreflang: string; href: string }[] {
-  const separator = path.includes("?") ? "&" : "?";
-  const basePath = path || "/";
-  return [
-    { hreflang: "x-default", href: `${BASE_URL}${basePath}` },
-    { hreflang: "es", href: `${BASE_URL}${basePath}` },
-    { hreflang: "en", href: `${BASE_URL}${basePath}${separator}lang=en` },
-    { hreflang: "pt", href: `${BASE_URL}${basePath}${separator}lang=pt` },
+  const basePath = path || "";
+  const enPath = path === "/" ? "" : (path === "/destinos" ? "/destinations" : basePath);
+  const urls: { hreflang: string; href: string }[] = [
+    { hreflang: "x-default", href: `${BASE_URL}${basePath || "/"}` },
+    { hreflang: "es", href: `${BASE_URL}${basePath || "/"}` },
+    { hreflang: "en", href: `${BASE_URL}/en${enPath}` },
   ];
+  
+  countryHreflangs.forEach(country => {
+    if (country.code === 'CB') {
+      urls.push({
+        hreflang: country.hreflang,
+        href: `${BASE_URL}${country.urlPrefix}${basePath === "/" ? "" : basePath}`
+      });
+    } else {
+      urls.push({
+        hreflang: country.hreflang,
+        href: `${BASE_URL}${country.urlPrefix}${basePath === "/" ? "" : basePath}`
+      });
+    }
+  });
+  
+  return urls;
 }
 
-export function generateCountryHreflangUrls(countryPath: string, locale: string): { hreflang: string; href: string }[] {
-  return [
-    { hreflang: "x-default", href: `${BASE_URL}${countryPath}` },
-    { hreflang: locale, href: `${BASE_URL}${countryPath}` },
+export function generateCountryHreflangUrls(path: string): { hreflang: string; href: string }[] {
+  const basePath = path || "/";
+  const urls: { hreflang: string; href: string }[] = [
+    { hreflang: "x-default", href: `${BASE_URL}${basePath}` },
   ];
+  
+  countryHreflangs.forEach(country => {
+    urls.push({
+      hreflang: country.hreflang,
+      href: `${BASE_URL}${country.urlPrefix}${basePath}`
+    });
+  });
+  
+  urls.push({ hreflang: "en", href: `${BASE_URL}/en${basePath}` });
+  
+  return urls;
 }
 
 export interface LocalizedSEO {
@@ -218,7 +256,7 @@ export function BlogPageSEO() {
 }
 
 export function ColombiaPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-colombia", "es-CO");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-colombia");
   return (
     <SEOHead
       title="Viajes a Europa desde Colombia - Paquetes con Visa Schengen"
@@ -232,7 +270,7 @@ export function ColombiaPageSEO() {
 }
 
 export function MexicoPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-mexico", "es-MX");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-mexico");
   return (
     <SEOHead
       title="Viajes a Europa desde México - Paquetes sin Visa hasta 12 MSI"
@@ -246,7 +284,7 @@ export function MexicoPageSEO() {
 }
 
 export function BrazilPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-brasil", "pt-BR");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-brasil");
   return (
     <SEOHead
       title="Viagens para Europa do Brasil - Pacotes sem Visto"
@@ -260,7 +298,7 @@ export function BrazilPageSEO() {
 }
 
 export function PanamaPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-panama", "es-PA");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-panama");
   return (
     <SEOHead
       title="Viajes a Europa desde Panamá - Hub Aéreo Copa Airlines"
@@ -274,7 +312,7 @@ export function PanamaPageSEO() {
 }
 
 export function ArgentinaPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-argentina", "es-AR");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-argentina");
   return (
     <SEOHead
       title="Viajes a Europa desde Argentina - Tours Ciudadanía y Turismo"
@@ -288,7 +326,7 @@ export function ArgentinaPageSEO() {
 }
 
 export function PeruPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-peru", "es-PE");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-peru");
   return (
     <SEOHead
       title="Viajes a Europa desde Perú - Paquetes Todo Incluido"
@@ -302,7 +340,7 @@ export function PeruPageSEO() {
 }
 
 export function CostaRicaPageSEO() {
-  const hreflangUrls = generateCountryHreflangUrls("/desde-costa-rica", "es-CR");
+  const hreflangUrls = generateCountryHreflangUrls("/desde-costa-rica");
   return (
     <SEOHead
       title="Viajes a Europa desde Costa Rica - Paquetes Todo Incluido"

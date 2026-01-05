@@ -246,7 +246,7 @@ export default function CountryLanding() {
     capitalCity: countryCode === "BR" ? "São Paulo" : "Bogotá",
   };
 
-  const hreflangUrls = generateCountryHreflangUrls(`/desde/${countryCode.toLowerCase()}`, language);
+  const hreflangUrls = generateCountryHreflangUrls(`/desde/${countryCode.toLowerCase()}`);
 
   return (
     <>

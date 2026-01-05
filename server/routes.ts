@@ -10,6 +10,7 @@ import { sendContactFormEmail, sendNewsletterNotificationEmail } from "./replit_
 import { translateText, translateBatch, auditSpanishContent, localizationConfigs } from "./translation";
 import { researchKeywords, generateContentBrief, analyzeCompetitor, countryConfigs } from "./perplexity";
 import { generateSEOContent, translateContent, generateSchemaMarkup } from "./content-generator";
+import { registerSitemapRoutes } from "./sitemaps";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -21,8 +22,11 @@ export async function registerRoutes(
   registerAuthRoutes(app);
   registerChatRoutes(app);
   registerImageRoutes(app);
+  
+  // 2. SEO Sitemaps
+  registerSitemapRoutes(app);
 
-  // 2. Application Routes
+  // 3. Application Routes
 
   // -- Flights (Mock) --
   app.post(api.flights.search.path, async (req, res) => {
