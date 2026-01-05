@@ -32,15 +32,15 @@ export default function Home() {
   const content = {
     es: {
       ctaBadge: "Planifica tu viaje",
-      ctaTitle: "Listo para vivir una experiencia europea inolvidable?",
-      ctaSubtitle: "Nuestro equipo de expertos esta aqui para ayudarte a disenar el viaje perfecto.",
-      callUs: "Llamanos",
+      ctaTitle: "¿Listo para vivir una experiencia europea inolvidable?",
+      ctaSubtitle: "Nuestro equipo de expertos está aquí para ayudarte a diseñar el viaje perfecto.",
+      callUs: "Llámanos",
       phone: "+34 611 105 448",
       email: "Email",
       emailAddress: "info@tripseuropa.com",
       office: "Oficina Central",
-      address: "Calle Gran Via 45, Madrid, España",
-      whatsapp: "Escribenos por WhatsApp",
+      address: "Calle Gran Vía 45, Madrid, España",
+      whatsapp: "Escríbenos por WhatsApp",
       formTitle: "Solicita tu Cotización",
     },
     en: {
@@ -58,16 +58,16 @@ export default function Home() {
     },
     pt: {
       ctaBadge: "Planeje sua viagem",
-      ctaTitle: "Pronto para viver uma experiencia europeia inesquecivel?",
-      ctaSubtitle: "Nossa equipe de especialistas esta aqui para ajuda-lo a projetar a viagem perfeita.",
-      callUs: "Ligue para nos",
+      ctaTitle: "Pronto para viver uma experiência europeia inesquecível?",
+      ctaSubtitle: "Nossa equipe de especialistas está aqui para ajudá-lo a projetar a viagem perfeita.",
+      callUs: "Ligue para nós",
       phone: "+34 611 105 448",
       email: "Email",
       emailAddress: "info@tripseuropa.com",
-      office: "Escritorio Central",
-      address: "Calle Gran Via 45, Madrid, Espanha",
+      office: "Escritório Central",
+      address: "Calle Gran Vía 45, Madrid, Espanha",
       whatsapp: "Escreva-nos pelo WhatsApp",
-      formTitle: "Solicite seu orcamento",
+      formTitle: "Solicite seu orçamento",
     },
   };
 

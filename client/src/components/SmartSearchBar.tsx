@@ -98,6 +98,14 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      setActiveDropdown(null);
+      handleSearch();
+    }
+  };
+
   const handleSearch = () => {
     const params = new URLSearchParams();
     if (filters.destination) params.set("destination", filters.destination);
@@ -162,6 +170,7 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
               if (!e.target.value) setFilters(f => ({ ...f, destination: "" }));
             }}
             onFocus={() => setActiveDropdown("destination")}
+            onKeyDown={handleKeyDown}
             placeholder={language === "es" ? "¿A dónde quieres ir?" : language === "pt" ? "Para onde você quer ir?" : "Where do you want to go?"}
             className="pl-10 pr-4 h-12 border-0 bg-gray-50 dark:bg-muted focus:ring-2 focus:ring-accent"
             data-testid="input-search-destination"

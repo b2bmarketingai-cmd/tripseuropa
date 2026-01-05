@@ -80,12 +80,12 @@ export function ContactForm({ variant = "page", title, subtitle, defaultDestinat
     createLead(leadData as any, {
       onSuccess: () => {
         const destinationLabel = destinationOptions.find(d => d.value === data.serviceInterest)?.label || data.serviceInterest;
-        const whatsappMessage = `Nueva solicitud de contacto!
+        const whatsappMessage = `¡Nueva solicitud de contacto!
 
 *Nombre:* ${data.name}
 *Email:* ${data.email}
-*Telefono:* ${data.phone}
-*Destino de Interes:* ${destinationLabel}
+*Teléfono:* ${data.phone}
+*Destino de Interés:* ${destinationLabel}
 *Mensaje:* ${data.message || "Sin mensaje"}`;
         window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         

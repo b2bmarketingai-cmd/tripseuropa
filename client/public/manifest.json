@@ -1,0 +1,28 @@
+{
+  "name": "Trips Europa - Viajes a Europa desde Latinoamérica",
+  "short_name": "Trips Europa",
+  "description": "Planifica tu viaje a Europa con tours personalizados desde Colombia, México, Brasil, Argentina, Perú, Panamá, Costa Rica, República Dominicana y el Caribe. Expertos en viajes europeos para latinoamericanos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c9a227",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["travel", "tourism", "lifestyle"],
+  "lang": "es",
+  "dir": "ltr"
+}

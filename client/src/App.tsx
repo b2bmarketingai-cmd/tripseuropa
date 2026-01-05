@@ -60,6 +60,7 @@ import TravelStylePage from "@/pages/TravelStylePage";
 import LastMinuteOffers from "@/pages/LastMinuteOffers";
 import ESim from "@/pages/ESim";
 import VisaRequirements from "@/pages/VisaRequirements";
+import Forum from "@/pages/Forum";
 import Flights from "@/pages/services/Flights";
 import Hotels from "@/pages/services/Hotels";
 import PackagesService from "@/pages/services/Packages";
@@ -127,6 +128,9 @@ function Router() {
       <Route path="/esim" component={ESim} />
       <Route path="/requisitos-visa" component={VisaRequirements} />
       <Route path="/visa-requirements" component={VisaRequirements} />
+      <Route path="/forum" component={Forum} />
+      <Route path="/foro" component={Forum} />
+      <Route path="/comunidad" component={Forum} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
