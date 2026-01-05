@@ -79,39 +79,24 @@ export default function Home() {
       <HomePageSEO />
       <UrgencyBanner />
       <Header />
-      
       <HeroCarousel />
-      
       <HeroFlightSearch />
-
       <TopOffers />
-
       <DestinationGrid />
-
       <ReserveSpot />
-
       <SpecialOffers />
-
       <Favorites />
-
       <WhyChooseUs />
-
-      <section className="py-12 bg-primary/5" data-testid="section-smart-search">
+      <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
         <div className="container mx-auto px-4 max-w-4xl">
           <SmartSearchBar variant="hero" />
         </div>
       </section>
-
       <BestPriceGuarantee />
-
       <NewsletterSignup />
-
       <TrustpilotReviews />
-
       <PromotionalVideoBanner />
-
       <TravelerStories />
-
       <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -173,13 +158,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <FAQAccordion />
-
       <Footer />
       <Chatbot />
       <FloatingContactButtons />
-      
       <TravelAgencySchema />
       <WebsiteSchema />
       <FAQSchema questions={[
