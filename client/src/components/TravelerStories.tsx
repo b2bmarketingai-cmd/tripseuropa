@@ -8,7 +8,7 @@ const STORIES = [
     id: 1,
     destination: { es: "Paris", en: "Paris", pt: "Paris" },
     location: { es: "Paris, Francia", en: "Paris, France", pt: "Paris, Franca" },
-    title: { es: "Paris, Un Sueno Hecho Realidad", en: "Paris, A Dream Come True", pt: "Paris, Um Sonho Realizado" },
+    title: { es: "París, Un Sueño Hecho Realidad", en: "Paris, A Dream Come True", pt: "Paris, Um Sonho Realizado" },
     story: {
       es: "En Paris no paramos en todo el viaje. Teniamos la agenda completa de actividades como visitar la Torre Eiffel, el Louvre y pasear por los Campos Eliseos. Una experiencia que recordaremos para siempre.",
       en: "In Paris we didn't stop the whole trip. We had a full schedule of activities like visiting the Eiffel Tower, the Louvre and walking along the Champs-Elysees. An experience we will remember forever.",
