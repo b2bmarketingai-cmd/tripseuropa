@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://tripseuropa.com/videos/guia-paris</loc>
+    <video:video>
+      <video:thumbnail_loc>https://tripseuropa.com/images/thumbnails/paris-guide.jpg</video:thumbnail_loc>
+      <video:title>Guia de Viaje a Paris - Todo lo que necesitas saber</video:title>
+      <video:description>Descubre Paris con nuestra guia completa: mejores atracciones, restaurantes, transporte y consejos practicos para tu viaje.</video:description>
+      <video:content_loc>https://tripseuropa.com/videos/paris-travel-guide.mp4</video:content_loc>
+      <video:duration>420</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/videos/guia-roma</loc>
+    <video:video>
+      <video:thumbnail_loc>https://tripseuropa.com/images/thumbnails/rome-guide.jpg</video:thumbnail_loc>
+      <video:title>Roma en 5 Dias - Itinerario Completo</video:title>
+      <video:description>Planifica tu viaje a Roma con nuestro itinerario de 5 dias. Coliseo, Vaticano, Trastevere y mucho mas.</video:description>
+      <video:content_loc>https://tripseuropa.com/videos/rome-5-days.mp4</video:content_loc>
+      <video:duration>380</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/videos/guia-barcelona</loc>
+    <video:video>
+      <video:thumbnail_loc>https://tripseuropa.com/images/thumbnails/barcelona-guide.jpg</video:thumbnail_loc>
+      <video:title>Barcelona - La Ciudad de Gaudi</video:title>
+      <video:description>Explora Barcelona: Sagrada Familia, Park Guell, La Rambla y las mejores tapas de la ciudad.</video:description>
+      <video:content_loc>https://tripseuropa.com/videos/barcelona-gaudi.mp4</video:content_loc>
+      <video:duration>360</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/videos/santorini-grecia</loc>
+    <video:video>
+      <video:thumbnail_loc>https://tripseuropa.com/images/thumbnails/santorini-guide.jpg</video:thumbnail_loc>
+      <video:title>Santorini - Paraiso Griego</video:title>
+      <video:description>Las mejores vistas, atardeceres y experiencias en la isla mas romantica de Grecia.</video:description>
+      <video:content_loc>https://tripseuropa.com/videos/santorini-greece.mp4</video:content_loc>
+      <video:duration>300</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tripseuropa.com/videos/consejos-visa-schengen</loc>
+    <video:video>
+      <video:thumbnail_loc>https://tripseuropa.com/images/thumbnails/visa-schengen.jpg</video:thumbnail_loc>
+      <video:title>Como Obtener la Visa Schengen - Guia Paso a Paso</video:title>
+      <video:description>Todo sobre la visa Schengen para latinoamericanos: requisitos, documentos, cita y consejos.</video:description>
+      <video:content_loc>https://tripseuropa.com/videos/visa-schengen-guide.mp4</video:content_loc>
+      <video:duration>480</video:duration>
+    </video:video>
+  </url>
+</urlset>
