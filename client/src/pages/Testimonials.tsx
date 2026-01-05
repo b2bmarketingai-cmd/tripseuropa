@@ -25,8 +25,7 @@ const TESTIMONIALS = [
       en: "Our honeymoon was absolutely perfect. From the moment we contacted them, Maria and her team took care of every detail. The hotels were incredible, the private tours allowed us to avoid crowds, and the restaurant recommendations were exquisite. They definitely exceeded all our expectations."
     },
     rating: 5,
-    image: carolinaImg,
-    date: "Noviembre 2024"
+    image: carolinaImg
   },
   {
     name: "Roberto González",
@@ -37,8 +36,7 @@ const TESTIMONIALS = [
       en: "I traveled with my family (4 people) through France, Switzerland, Italy, Austria and Germany. The logistics were impeccable, all transfers on time, hotels centrally located and of excellent quality. The best part was the 24/7 support, they were always available when we needed them."
     },
     rating: 5,
-    image: robertoImg,
-    date: "Octubre 2024"
+    image: robertoImg
   },
   {
     name: "Ana María Torres",
@@ -49,8 +47,7 @@ const TESTIMONIALS = [
       en: "I always dreamed of visiting Paris and Trips Europa made that dream come true. They helped me with the entire visa process (which seemed complicated) and planned a perfect 7-day itinerary. Every experience was magical, from climbing the Eiffel Tower to walks through Montmartre."
     },
     rating: 5,
-    image: anaMariaImg,
-    date: "Septiembre 2024"
+    image: anaMariaImg
   },
   {
     name: "Miguel Hernández",
@@ -61,8 +58,7 @@ const TESTIMONIALS = [
       en: "The Mediterranean cruise was spectacular. The advice for choosing the best cabin, the excursions at each port, everything was first class. Trips Europa negotiated an upgrade we didn't expect. Totally recommended for luxury travel."
     },
     rating: 5,
-    image: miguelImg,
-    date: "Agosto 2024"
+    image: miguelImg
   },
   {
     name: "Laura Sánchez",
@@ -73,8 +69,7 @@ const TESTIMONIALS = [
       en: "As a Venezuelan, I had many doubts about the visa and travel process. The Trips Europa team guided me step by step, answering all my questions with patience. The tour of Bavarian castles was a fairy tale come true."
     },
     rating: 5,
-    image: lauraImg,
-    date: "Julio 2024"
+    image: lauraImg
   },
   {
     name: "Pedro Ramírez",
@@ -85,8 +80,7 @@ const TESTIMONIALS = [
       en: "I needed to combine a conference in London with family vacation. Trips Europa organized everything perfectly: flights, executive hotels for my work days and then a family hotel for the vacation. Incredible attention to detail."
     },
     rating: 5,
-    image: pedroImg,
-    date: "Junio 2024"
+    image: pedroImg
   }
 ];
 
@@ -155,8 +149,6 @@ export default function Testimonials() {
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     "{testimonial.text[language]}"
                   </p>
-
-                  <p className="text-xs text-muted-foreground">{testimonial.date}</p>
                 </CardContent>
               </Card>
             ))}
