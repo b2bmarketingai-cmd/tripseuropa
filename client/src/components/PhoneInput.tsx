@@ -8,6 +8,29 @@ interface Country {
   code: string;
   name: string;
   dialCode: string;
+  phoneLength?: number;
+  phoneLengthAlt?: number;
+}
+
+const LATIN_AMERICAN_PHONE_RULES: Record<string, { length: number; altLength?: number; placeholder: string }> = {
+  CO: { length: 10, placeholder: "300 123 4567" },
+  MX: { length: 10, placeholder: "55 1234 5678" },
+  AR: { length: 10, altLength: 11, placeholder: "11 1234 5678" },
+  BR: { length: 10, altLength: 11, placeholder: "11 91234 5678" },
+  PE: { length: 9, placeholder: "912 345 678" },
+  CL: { length: 9, placeholder: "9 1234 5678" },
+  EC: { length: 9, altLength: 10, placeholder: "99 123 4567" },
+  VE: { length: 10, altLength: 11, placeholder: "412 123 4567" },
+  PA: { length: 8, placeholder: "6000 0000" },
+  CR: { length: 8, placeholder: "8000 0000" },
+  DO: { length: 10, placeholder: "809 123 4567" },
+  GT: { length: 8, placeholder: "5000 0000" },
+  HN: { length: 8, placeholder: "9000 0000" },
+  NI: { length: 8, placeholder: "8000 0000" },
+  SV: { length: 8, placeholder: "7000 0000" },
+  PY: { length: 9, altLength: 10, placeholder: "981 234 567" },
+  UY: { length: 8, altLength: 9, placeholder: "94 123 456" },
+  BO: { length: 8, placeholder: "7123 4567" },
 }
 
 function CountryFlag({ code, className = "" }: { code: string; className?: string }) {
@@ -227,18 +250,48 @@ const countries: Country[] = [
 interface PhoneInputProps {
   value?: string;
   onChange?: (value: string) => void;
+  onValidation?: (isValid: boolean, message?: string) => void;
   placeholder?: string;
   className?: string;
   disabled?: boolean;
+  showValidation?: boolean;
   "data-testid"?: string;
+}
+
+export function validatePhoneNumber(countryCode: string, phoneNumber: string): { isValid: boolean; message?: string } {
+  const digitsOnly = phoneNumber.replace(/\D/g, '');
+  const rules = LATIN_AMERICAN_PHONE_RULES[countryCode];
+  
+  if (!rules) {
+    return digitsOnly.length >= 5 ? { isValid: true } : { isValid: false, message: "Ingresa un número válido" };
+  }
+  
+  const { length, altLength } = rules;
+  const isValidLength = digitsOnly.length === length || (altLength && digitsOnly.length === altLength);
+  
+  if (!digitsOnly) {
+    return { isValid: false, message: "Ingresa tu número de teléfono" };
+  }
+  
+  if (!isValidLength) {
+    const expectedLength = altLength ? `${length} o ${altLength}` : `${length}`;
+    return { 
+      isValid: false, 
+      message: `El número debe tener ${expectedLength} dígitos para este país` 
+    };
+  }
+  
+  return { isValid: true };
 }
 
 export function PhoneInput({
   value = "",
   onChange,
-  placeholder = "(123) 456-7890",
+  onValidation,
+  placeholder,
   className = "",
   disabled = false,
+  showValidation = true,
   "data-testid": testId,
 }: PhoneInputProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -246,10 +299,17 @@ export function PhoneInput({
   const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [hasUserSelected, setHasUserSelected] = useState(false);
+  const [validationMessage, setValidationMessage] = useState<string | undefined>();
+  const [hasInteracted, setHasInteracted] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   
   const { data: detectedCountryCode } = useDetectedCountry();
+  
+  const getPlaceholder = () => {
+    const rules = LATIN_AMERICAN_PHONE_RULES[selectedCountry.code];
+    return rules?.placeholder || placeholder || "(123) 456-7890";
+  };
 
   useEffect(() => {
     if (value) {
@@ -305,8 +365,20 @@ export function PhoneInput({
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newPhoneNumber = e.target.value.replace(/[^0-9\s]/g, '');
     setPhoneNumber(newPhoneNumber);
+    setHasInteracted(true);
     const fullNumber = `${selectedCountry.dialCode} ${newPhoneNumber}`.trim();
     onChange?.(fullNumber);
+    
+    const validation = validatePhoneNumber(selectedCountry.code, newPhoneNumber);
+    setValidationMessage(validation.isValid ? undefined : validation.message);
+    onValidation?.(validation.isValid, validation.message);
+  };
+  
+  const handleBlur = () => {
+    setHasInteracted(true);
+    const validation = validatePhoneNumber(selectedCountry.code, phoneNumber);
+    setValidationMessage(validation.isValid ? undefined : validation.message);
+    onValidation?.(validation.isValid, validation.message);
   };
 
   const filteredCountries = countries.filter(
@@ -322,7 +394,7 @@ export function PhoneInput({
         <Button
           type="button"
           variant="outline"
-          className="flex items-center gap-1 px-2 rounded-r-none border-r-0 min-w-[90px] justify-between"
+          className={`flex items-center gap-1 px-2 rounded-r-none border-r-0 min-w-[90px] justify-between ${hasInteracted && validationMessage ? 'border-destructive' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           disabled={disabled}
           data-testid={testId ? `${testId}-country-selector` : "phone-country-selector"}
@@ -335,12 +407,18 @@ export function PhoneInput({
           type="tel"
           value={phoneNumber}
           onChange={handlePhoneChange}
-          placeholder={placeholder || ""}
-          className="rounded-l-none flex-1"
+          onBlur={handleBlur}
+          placeholder={getPlaceholder()}
+          className={`rounded-l-none flex-1 ${hasInteracted && validationMessage ? 'border-destructive focus-visible:ring-destructive' : ''}`}
           disabled={disabled}
           data-testid={testId || "input-phone-number"}
         />
       </div>
+      {showValidation && hasInteracted && validationMessage && (
+        <p className="text-sm text-destructive mt-1.5" data-testid="phone-validation-error">
+          {validationMessage}
+        </p>
+      )}
 
       {isOpen && (
         <div className="absolute z-50 mt-1 w-full bg-background border rounded-md shadow-lg max-h-72 overflow-hidden">

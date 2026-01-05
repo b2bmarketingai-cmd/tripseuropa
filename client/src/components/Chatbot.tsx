@@ -1,11 +1,38 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Plane, Hotel, Map, Heart, Users, Calendar } from "lucide-react";
+import { MessageCircle, X, Send, Plane, Hotel, Map, Heart, Users, Calendar, Phone, MessageSquare } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import sofiaAvatar from "@assets/generated_images/professional_european_travel_advisor_sofia.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useChatbot } from "@/hooks/use-chatbot";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
+
+const WHATSAPP_NUMBER = "34611105448";
+const PHONE_NUMBER = "+34 611 105 448";
+
+const FAQ_RESPONSES: Record<string, { es: string; en: string; pt: string }> = {
+  "visa": {
+    es: "Los ciudadanos de la mayoría de países latinoamericanos no necesitan visa para visitar el espacio Schengen (Europa) por hasta 90 días. Sin embargo, se requerirá ETIAS a partir de 2025. El costo será de 7 EUR y tendrá validez de 3 años.",
+    en: "Citizens from most Latin American countries don't need a visa to visit the Schengen area (Europe) for up to 90 days. However, ETIAS will be required starting 2025. The cost will be 7 EUR and valid for 3 years.",
+    pt: "Cidadãos da maioria dos países latino-americanos não precisam de visto para visitar o espaço Schengen (Europa) por até 90 dias. No entanto, o ETIAS será necessário a partir de 2025. O custo será de 7 EUR e terá validade de 3 anos."
+  },
+  "precio": {
+    es: "Nuestros paquetes comienzan desde $1,899 USD por persona. El precio incluye vuelos, hoteles, desayunos y traslados. Ofrecemos opciones de financiamiento hasta 12 meses sin intereses.",
+    en: "Our packages start from $1,899 USD per person. The price includes flights, hotels, breakfasts, and transfers. We offer financing options up to 12 months interest-free.",
+    pt: "Nossos pacotes começam a partir de $1,899 USD por pessoa. O preço inclui voos, hotéis, cafés da manhã e traslados. Oferecemos opções de financiamento até 12 meses sem juros."
+  },
+  "documentos": {
+    es: "Para viajar a Europa necesitas: pasaporte vigente (mínimo 6 meses), boleto de avión ida y vuelta, reserva de hotel, seguro de viaje y prueba de solvencia económica.",
+    en: "To travel to Europe you need: valid passport (minimum 6 months), round-trip flight ticket, hotel reservation, travel insurance, and proof of economic solvency.",
+    pt: "Para viajar à Europa você precisa: passaporte válido (mínimo 6 meses), passagem aérea de ida e volta, reserva de hotel, seguro de viagem e comprovante de solvência econômica."
+  },
+  "pago": {
+    es: "Aceptamos tarjetas de crédito (Visa, Mastercard, Amex), transferencias bancarias, PayPal y pagos en efectivo. Ofrecemos planes de pago hasta 12 MSI con bancos seleccionados.",
+    en: "We accept credit cards (Visa, Mastercard, Amex), bank transfers, PayPal, and cash payments. We offer payment plans up to 12 monthly payments interest-free with selected banks.",
+    pt: "Aceitamos cartões de crédito (Visa, Mastercard, Amex), transferências bancárias, PayPal e pagamentos em dinheiro. Oferecemos planos de pagamento até 12 vezes sem juros com bancos selecionados."
+  }
+};
 
 const QUICK_ACTIONS = [
   {
@@ -168,6 +195,34 @@ export function Chatbot() {
             </div>
           ))}
           <div ref={messagesEndRef} />
+        </div>
+
+        {/* Contact Actions */}
+        <div className="p-2 bg-accent/5 border-t border-gray-100 dark:border-card-border">
+          <div className="flex gap-2 justify-center">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="flex-1 gap-1.5 bg-green-500 hover:bg-green-600 border-green-500 text-white"
+              onClick={() => window.open(`https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(language === "es" ? "Hola, quiero información sobre viajes a Europa" : language === "pt" ? "Olá, quero informações sobre viagens à Europa" : "Hello, I want information about trips to Europe")}`, "_blank")}
+              data-testid="button-chatbot-whatsapp"
+            >
+              <SiWhatsapp className="w-4 h-4" />
+              <span className="text-xs">WhatsApp</span>
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="flex-1 gap-1.5"
+              onClick={() => window.open(`tel:${PHONE_NUMBER.replace(/\s/g, '')}`, "_self")}
+              data-testid="button-chatbot-call"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="text-xs">{language === "es" ? "Llamar" : language === "pt" ? "Ligar" : "Call"}</span>
+            </Button>
+          </div>
         </div>
 
         {/* Input */}

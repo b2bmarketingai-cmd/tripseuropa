@@ -1933,6 +1933,52 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     currency: "GBP",
     language: { es: "Ingles/Gaelico escoces", en: "English/Scottish Gaelic" },
     visaInfo: { es: "Mismos requisitos que Reino Unido", en: "Same requirements as UK" }
+  },
+  {
+    slug: "turkey",
+    name: { es: "Turquía", en: "Turkey", pt: "Turquia" },
+    heroImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1920&q=80",
+    description: {
+      es: "Turquía es el puente entre Europa y Asia, donde las mezquitas otomanas se elevan junto a ruinas griegas, los bazares bulliciosos contrastan con playas turquesas, y la hospitalidad es legendaria. Estambul fascina con Santa Sofía y el Bósforo, Capadocia sorprende con sus paisajes lunares y globos aerostáticos, y la costa turquesa ofrece paraísos mediterráneos. Descubre un país donde la historia milenaria se funde con la modernidad vibrante.",
+      en: "Turkey is the bridge between Europe and Asia, where Ottoman mosques rise alongside Greek ruins, bustling bazaars contrast with turquoise beaches, and hospitality is legendary. Istanbul fascinates with Hagia Sophia and the Bosphorus, Cappadocia amazes with lunar landscapes and hot air balloons, and the Turquoise Coast offers Mediterranean paradises. Discover a country where ancient history merges with vibrant modernity.",
+      pt: "A Turquia é a ponte entre Europa e Ásia, onde mesquitas otomanas se elevam ao lado de ruínas gregas, bazares movimentados contrastam com praias turquesas e a hospitalidade é lendária. Istambul fascina com Santa Sofia e o Bósforo, Capadócia surpreende com paisagens lunares e balões de ar quente, e a costa turquesa oferece paraísos mediterrâneos."
+    },
+    highlights: {
+      es: ["Estambul: Santa Sofía y Mezquita Azul", "Capadocia en globo aerostático", "Costa Turquesa y Antalya", "Pamukkale y piscinas termales", "Éfeso y ruinas antiguas", "Gran Bazar y especias"],
+      en: ["Istanbul: Hagia Sophia and Blue Mosque", "Cappadocia hot air balloon", "Turquoise Coast and Antalya", "Pamukkale thermal pools", "Ephesus ancient ruins", "Grand Bazaar and spices"],
+      pt: ["Istambul: Santa Sofia e Mesquita Azul", "Capadócia em balão de ar quente", "Costa Turquesa e Antalya", "Pamukkale e piscinas termais", "Éfeso e ruínas antigas", "Grande Bazar e especiarias"]
+    },
+    galleryImages: [
+      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
+      "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&q=80",
+      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?w=800&q=80"
+    ],
+    packages: [
+      { id: "turkey-essential", name: { es: "Turquía Esencial", en: "Essential Turkey", pt: "Turquia Essencial" }, duration: { es: "8 días / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" }, price: "1,799", taxes: "350", includes: { es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno turco diario", "Traslados", "Guía en español", "Entradas principales"], en: ["International flights", "4-star hotels", "Daily Turkish breakfast", "Transfers", "Spanish-speaking guide", "Main tickets"], pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã turco diário", "Traslados", "Guia em espanhol", "Entradas principais"] } },
+      { id: "turkey-cappadocia", name: { es: "Estambul y Capadocia", en: "Istanbul and Cappadocia", pt: "Istambul e Capadócia" }, duration: { es: "10 días / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" }, price: "2,299", taxes: "420", includes: { es: ["Vuelos internacionales y domésticos", "Hoteles cueva en Capadocia", "Vuelo en globo aerostático", "Media pensión", "Tour Bósforo", "Experiencia hamam"], en: ["International and domestic flights", "Cave hotels in Cappadocia", "Hot air balloon flight", "Half board", "Bosphorus tour", "Hamam experience"], pt: ["Voos internacionais e domésticos", "Hotéis caverna na Capadócia", "Voo de balão de ar quente", "Meia pensão", "Tour Bósforo", "Experiência hamam"] } },
+      { id: "turkey-complete", name: { es: "Gran Tour de Turquía", en: "Grand Tour of Turkey", pt: "Grande Tour da Turquia" }, duration: { es: "14 días / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" }, price: "2,999", taxes: "520", includes: { es: ["Todo incluido", "Hoteles 5 estrellas", "Pensión completa", "Vuelo en globo", "Crucero Bósforo", "Todas las entradas"], en: ["All inclusive", "5-star hotels", "Full board", "Balloon flight", "Bosphorus cruise", "All tickets"], pt: ["Tudo incluído", "Hotéis 5 estrelas", "Pensão completa", "Voo de balão", "Cruzeiro Bósforo", "Todas as entradas"] } }
+    ],
+    itinerary: [
+      { day: 1, title: { es: "Llegada a Estambul", en: "Arrival in Istanbul", pt: "Chegada a Istambul" }, description: { es: "Bienvenida en el aeropuerto y traslado al hotel en Sultanahmet.", en: "Airport welcome and transfer to hotel in Sultanahmet.", pt: "Boas-vindas no aeroporto e traslado ao hotel em Sultanahmet." }, activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Sultanahmet"], en: ["Airport pickup", "Hotel check-in", "Sultanahmet walk"], pt: ["Recepção no aeroporto", "Check-in hotel", "Passeio por Sultanahmet"] } },
+      { day: 2, title: { es: "Estambul Histórico", en: "Historic Istanbul", pt: "Istambul Histórica" }, description: { es: "Visita Santa Sofía, Mezquita Azul, Cisterna Basílica y el Hipódromo.", en: "Visit Hagia Sophia, Blue Mosque, Basilica Cistern, and Hippodrome.", pt: "Visite Santa Sofia, Mesquita Azul, Cisterna da Basílica e Hipódromo." }, activities: { es: ["Santa Sofía", "Mezquita Azul", "Cisterna Basílica", "Hipódromo"], en: ["Hagia Sophia", "Blue Mosque", "Basilica Cistern", "Hippodrome"], pt: ["Santa Sofia", "Mesquita Azul", "Cisterna da Basílica", "Hipódromo"] } },
+      { day: 3, title: { es: "Palacios y Bazares", en: "Palaces and Bazaars", pt: "Palácios e Bazares" }, description: { es: "Explora el Palacio Topkapi y el Gran Bazar.", en: "Explore Topkapi Palace and the Grand Bazaar.", pt: "Explore o Palácio Topkapi e o Grande Bazar." }, activities: { es: ["Palacio Topkapi", "Gran Bazar", "Bazar de Especias", "Almuerzo turco"], en: ["Topkapi Palace", "Grand Bazaar", "Spice Bazaar", "Turkish lunch"], pt: ["Palácio Topkapi", "Grande Bazar", "Bazar de Especiarias", "Almoço turco"] } },
+      { day: 4, title: { es: "Crucero por el Bósforo", en: "Bosphorus Cruise", pt: "Cruzeiro pelo Bósforo" }, description: { es: "Navegación por el estrecho que separa Europa y Asia.", en: "Sail through the strait separating Europe and Asia.", pt: "Navegação pelo estreito que separa Europa e Ásia." }, activities: { es: ["Crucero Bósforo", "Palacio Dolmabahçe", "Barrio Ortaköy", "Cena con vista"], en: ["Bosphorus cruise", "Dolmabahçe Palace", "Ortaköy district", "Dinner with view"], pt: ["Cruzeiro Bósforo", "Palácio Dolmabahçe", "Bairro Ortaköy", "Jantar com vista"] } },
+      { day: 5, title: { es: "Vuelo a Capadocia", en: "Flight to Cappadocia", pt: "Voo para Capadócia" }, description: { es: "Traslado aéreo a la mágica Capadocia.", en: "Flight to magical Cappadocia.", pt: "Voo para a mágica Capadócia." }, activities: { es: ["Vuelo doméstico", "Museo Göreme al aire libre", "Ciudades subterráneas", "Hotel cueva"], en: ["Domestic flight", "Göreme Open Air Museum", "Underground cities", "Cave hotel"], pt: ["Voo doméstico", "Museu Göreme ao ar livre", "Cidades subterrâneas", "Hotel caverna"] } },
+      { day: 6, title: { es: "Globo Aerostático", en: "Hot Air Balloon", pt: "Balão de Ar Quente" }, description: { es: "Amanecer mágico volando sobre las chimeneas de hadas.", en: "Magical sunrise flying over fairy chimneys.", pt: "Nascer do sol mágico voando sobre as chaminés de fadas." }, activities: { es: ["Vuelo en globo al amanecer", "Valles de Capadocia", "Taller de cerámica", "Cena turca tradicional"], en: ["Sunrise balloon flight", "Cappadocia valleys", "Pottery workshop", "Traditional Turkish dinner"], pt: ["Voo de balão ao nascer do sol", "Vales da Capadócia", "Oficina de cerâmica", "Jantar turco tradicional"] } },
+      { day: 7, title: { es: "Éfeso", en: "Ephesus", pt: "Éfeso" }, description: { es: "Vuelo a Izmir y visita a las ruinas de Éfeso.", en: "Flight to Izmir and visit to Ephesus ruins.", pt: "Voo para Izmir e visita às ruínas de Éfeso." }, activities: { es: ["Vuelo a Izmir", "Ruinas de Éfeso", "Casa de María", "Sirince"], en: ["Flight to Izmir", "Ephesus ruins", "House of Mary", "Sirince"], pt: ["Voo para Izmir", "Ruínas de Éfeso", "Casa de Maria", "Sirince"] } },
+      { day: 8, title: { es: "Pamukkale", en: "Pamukkale", pt: "Pamukkale" }, description: { es: "Las cascadas de travertino blanco y piscinas termales.", en: "White travertine cascades and thermal pools.", pt: "Cascatas de travertino branco e piscinas termais." }, activities: { es: ["Terrazas de travertino", "Hierápolis", "Baño termal", "Regreso a Estambul"], en: ["Travertine terraces", "Hierapolis", "Thermal bath", "Return to Istanbul"], pt: ["Terraços de travertino", "Hierápolis", "Banho termal", "Retorno a Istambul"] } }
+    ],
+    faqs: [
+      { question: { es: "¿Necesito visa para viajar a Turquía?", en: "Do I need a visa to travel to Turkey?", pt: "Preciso de visto para viajar à Turquia?" }, answer: { es: "La mayoría de latinoamericanos pueden obtener una e-Visa online por $50 USD. Colombianos, mexicanos, argentinos y otros pueden aplicar en www.evisa.gov.tr antes de viajar.", en: "Most Latin Americans can obtain an e-Visa online for $50 USD. Colombians, Mexicans, Argentines, and others can apply at www.evisa.gov.tr before traveling.", pt: "A maioria dos latino-americanos pode obter um e-Visa online por $50 USD. Colombianos, mexicanos, argentinos e outros podem aplicar em www.evisa.gov.tr antes de viajar." } },
+      { question: { es: "¿Cuál es la mejor época para visitar Turquía?", en: "When is the best time to visit Turkey?", pt: "Qual é a melhor época para visitar a Turquia?" }, answer: { es: "Primavera (abril-mayo) y otoño (septiembre-octubre) ofrecen clima ideal. Para vuelo en globo en Capadocia, abril-noviembre tiene las mejores condiciones.", en: "Spring (April-May) and autumn (September-October) offer ideal weather. For hot air balloon in Cappadocia, April-November has the best conditions.", pt: "Primavera (abril-maio) e outono (setembro-outubro) oferecem clima ideal. Para voo de balão na Capadócia, abril-novembro tem as melhores condições." } },
+      { question: { es: "¿Es seguro viajar a Turquía?", en: "Is it safe to travel to Turkey?", pt: "É seguro viajar para a Turquia?" }, answer: { es: "Sí, las zonas turísticas como Estambul, Capadocia y la costa turquesa son muy seguras y reciben millones de turistas anualmente.", en: "Yes, tourist areas like Istanbul, Cappadocia, and the Turquoise Coast are very safe and receive millions of tourists annually.", pt: "Sim, as áreas turísticas como Istambul, Capadócia e a costa turquesa são muito seguras e recebem milhões de turistas anualmente." } },
+      { question: { es: "¿Cuánto cuesta el vuelo en globo en Capadocia?", en: "How much does the Cappadocia balloon flight cost?", pt: "Quanto custa o voo de balão na Capadócia?" }, answer: { es: "Los vuelos en globo cuestan entre $180-300 USD por persona (1 hora). Incluido en nuestros paquetes premium. Es una experiencia inolvidable que vale cada centavo.", en: "Balloon flights cost between $180-300 USD per person (1 hour). Included in our premium packages. It's an unforgettable experience worth every penny.", pt: "Os voos de balão custam entre $180-300 USD por pessoa (1 hora). Incluído em nossos pacotes premium. É uma experiência inesquecível que vale cada centavo." } }
+    ],
+    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Noviembre", en: "April to June and September to November", pt: "Abril a Junho e Setembro a Novembro" },
+    currency: "TRY/USD",
+    language: { es: "Turco", en: "Turkish", pt: "Turco" },
+    visaInfo: { es: "e-Visa requerida online ($50 USD)", en: "e-Visa required online ($50 USD)", pt: "e-Visa necessário online ($50 USD)" }
   }
 ];
 
@@ -1950,7 +1996,8 @@ const SLUG_ALIASES: Record<string, string> = {
   "croacia": "croatia",
   "republica-checa": "czech-republic",
   "irlanda": "ireland",
-  "escocia": "scotland"
+  "escocia": "scotland",
+  "turquia": "turkey"
 };
 
 export function getDestinationBySlug(slug: string): DestinationData | undefined {
