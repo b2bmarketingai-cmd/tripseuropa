@@ -7,64 +7,8 @@
     <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/desde-mexico"/>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://tripseuropa.com/desde-mexico"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/"/>
-  </url>
-  
-  <url>
-    <loc>https://tripseuropa.com/paquetes</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://tripseuropa.com/destinos</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://tripseuropa.com/blog</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://tripseuropa.com/contacto</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://tripseuropa.com/blog/visa-schengen-mexico-2025</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://tripseuropa.com/destinos/espana</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://tripseuropa.com/destinos/francia</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://tripseuropa.com/destinos/italia</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>

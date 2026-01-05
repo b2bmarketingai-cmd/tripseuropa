@@ -4,6 +4,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /checkout/
 Disallow: /api/
+Disallow: /app/
 
 User-agent: Googlebot
 Allow: /
@@ -11,9 +12,14 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+# Main sitemap index with all language/region variants
 Sitemap: https://tripseuropa.com/sitemap.xml
+
+# Individual language/region sitemaps
 Sitemap: https://tripseuropa.com/sitemap-es.xml
+Sitemap: https://tripseuropa.com/sitemap-es-co.xml
 Sitemap: https://tripseuropa.com/sitemap-es-mx.xml
+Sitemap: https://tripseuropa.com/sitemap-es-ar.xml
 Sitemap: https://tripseuropa.com/sitemap-en.xml
 Sitemap: https://tripseuropa.com/sitemap-pt.xml
 Sitemap: https://tripseuropa.com/sitemap-pt-br.xml

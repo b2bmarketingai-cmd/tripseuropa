@@ -1,0 +1,68 @@
+II. AUDITORÍA SEO ON-PAGE (MULTILINGÜE)
+A. Implementación de hreflang - Errores Críticos
+El hreflang es la etiqueta HTML que indica a Google qué versión mostrar según idioma/región. El 45% de sitios multilingües lo implementan incorrectamente, causando:
+​
+
+Indexación de versión incorrecta
+
+Posicionamiento duplicado
+
+Pérdida de autoridad por contenido duplicado
+
+Errores comunes a evitar:
+
+Error	Ejemplo Incorrecto	Corrección
+Códigos ISO incorrectos	hreflang="es-es"	hreflang="es-ES"
+Falta de enlaces recíprocos	A→B pero B no→A	Cada página enlaza todas sus versiones
+Ausencia de x-default	No definido	hreflang="x-default"
+Demasiadas etiquetas	>100 por página	Máximo 100 etiquetas
+Estructura correcta recomendada para tripseuropa.co:
+
+xml
+<!-- En página: /es/viajes/europa -->
+<link rel="alternate" hreflang="es-ES" href="https://tripseuropa.co/es/viajes/europa" />
+<link rel="alternate" hreflang="es-MX" href="https://tripseuropa.co/es-mx/viajes/europa" />
+<link rel="alternate" hreflang="es-CO" href="https://tripseuropa.co/es-co/viajes/europa" />
+<link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.co/pt-br/viajes/europa" />
+<link rel="alternate" hreflang="en-US" href="https://tripseuropa.co/en/viajes/europa" />
+<link rel="alternate" hreflang="x-default" href="https://tripseuropa.co/viajes/europa" />
+Validación: Usar Screaming Frog o Search Console para verificar que no hay errores de hreflang
+​
+
+B. Estructura y Arquitectura de Sitio
+Recomendación: Usar subdirectorios sobre subdominios
+​
+
+text
+Estructura RECOMENDADA:
+tripseuropa.co/es/           (español general)
+tripseuropa.co/es-mx/        (español México)
+tripseuropa.co/es-co/        (español Colombia)
+tripseuropa.co/es-ar/        (español Argentina)
+tripseuropa.co/pt-br/        (portugués Brasil)
+tripseuropa.co/en/           (inglés)
+Ventajas: Concentra autoridad SEO en dominio raíz, indexación más rápida, gestión centralizada
+​
+
+C. Títulos y Meta Descripciones - Optimización por País
+Actualmente problemas comunes en sitios multilingües:
+
+✗ Incorrecto:
+
+Título genérico: "Viajes a Europa | Trips Europa"
+
+Meta descripción duplicada en todas las versiones
+
+✓ Correcto (localizado):
+
+País	Título	Meta Descripción
+México	"Viajes a Europa desde México - Trips Europa"	"Paquetes turísticos a Europa para mexicanos. Vuelos, hoteles y tours personalizados. Reserva ahora con las mejores ofertas."
+Brasil	"Viagens para Europa - Trips Europa Brasil"	"Pacotes turísticos para a Europa. Passagens aéreas, hotéis e passeios personalizados. Reserve online com as melhores ofertas."
+Colombia	"Viajes a Europa desde Colombia - Trips Europa"	"Paquetes turísticos a Europa para viajeros colombianos. Organiza tu viaje con expertos. Mejores precios garantizados."
+Principios:
+
+Incluir palabras clave geolocalizadas
+
+Máximo 60 caracteres para títulos, 160 para descripciones
+
+Incluir CTA ("Reserva ahora", "Cotiza tu viaje")
