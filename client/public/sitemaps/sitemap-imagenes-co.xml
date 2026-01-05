@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tripseuropa.co/destinos/paris</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/paris-eiffel-tower.jpg</image:loc>
+      <image:title>Torre Eiffel en Paris - Trips Europa</image:title>
+      <image:caption>Vista panoramica de la Torre Eiffel al atardecer</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/roma</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/roma-coliseo.jpg</image:loc>
+      <image:title>Coliseo Romano - Trips Europa</image:title>
+      <image:caption>El majestuoso Coliseo de Roma al amanecer</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/barcelona</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/barcelona-sagrada-familia.jpg</image:loc>
+      <image:title>Sagrada Familia Barcelona - Trips Europa</image:title>
+      <image:caption>La Sagrada Familia de Gaudi en Barcelona</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/santorini</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/santorini-greece.jpg</image:loc>
+      <image:title>Santorini Grecia - Trips Europa</image:title>
+      <image:caption>Casas blancas con cupulas azules en Santorini</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/amsterdam</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/amsterdam-canals.jpg</image:loc>
+      <image:title>Canales de Amsterdam - Trips Europa</image:title>
+      <image:caption>Los pintorescos canales de Amsterdam</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/londres</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/london-big-ben.jpg</image:loc>
+      <image:title>Big Ben Londres - Trips Europa</image:title>
+      <image:caption>El icono Big Ben y el Parlamento Britanico</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/praga</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/prague-charles-bridge.jpg</image:loc>
+      <image:title>Puente Carlos Praga - Trips Europa</image:title>
+      <image:caption>El historico Puente Carlos en Praga</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/estambul</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/istanbul-hagia-sophia.jpg</image:loc>
+      <image:title>Santa Sofia Estambul - Trips Europa</image:title>
+      <image:caption>La magnifica Santa Sofia en Estambul</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/venecia</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/venice-gondola.jpg</image:loc>
+      <image:title>Gondola Venecia - Trips Europa</image:title>
+      <image:caption>Gondola navegando por los canales de Venecia</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripseuropa.co/destinos/viena</loc>
+    <image:image>
+      <image:loc>https://tripseuropa.co/images/destinations/vienna-schonbrunn.jpg</image:loc>
+      <image:title>Palacio Schonbrunn Viena - Trips Europa</image:title>
+      <image:caption>El impresionante Palacio de Schonbrunn</image:caption>
+    </image:image>
+  </url>
+</urlset>
