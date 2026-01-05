@@ -44,6 +44,7 @@ export function Footer() {
     { name: { es: "Estados Bálticos", en: "Baltic States", pt: "Estados Bálticos" }, href: "/destinations/baltic-states" },
     { name: { es: "Chipre", en: "Cyprus", pt: "Chipre" }, href: "/destinations/cyprus" },
     { name: { es: "Escocia", en: "Scotland", pt: "Escócia" }, href: "/destinations/scotland" },
+    { name: { es: "Turquía", en: "Turkey", pt: "Turquia" }, href: "/destinations/turkey" },
   ];
 
   const services = [

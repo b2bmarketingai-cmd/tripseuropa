@@ -64,6 +64,12 @@ const DESTINATIONS = [
     name: { es: "Croacia", en: "Croatia", pt: "Croacia" },
     trips: 5,
   },
+  {
+    id: "turkey",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=800&auto=format&fit=crop",
+    name: { es: "Turquía", en: "Turkey", pt: "Turquia" },
+    trips: 7,
+  },
 ];
 
 export function DestinationGrid() {
