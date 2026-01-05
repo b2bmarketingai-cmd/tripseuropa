@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import { MapPin, Calendar, DollarSign, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { SiWhatsapp } from "react-icons/si";
 
 interface SearchFilters {
   destination: string;
+  destinationLabel: string;
   budget: string;
   duration: string;
   month: string;
@@ -108,11 +110,13 @@ const MONTH_OPTIONS = {
 export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compact" }) {
   const [filters, setFilters] = useState<SearchFilters>({
     destination: "",
+    destinationLabel: "",
     budget: "",
     duration: "",
     month: "",
   });
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [destSearch, setDestSearch] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
   const { language } = useI18n();
 
@@ -120,6 +124,10 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
   const budgetOptions = BUDGET_OPTIONS[language] || BUDGET_OPTIONS.es;
   const durationOptions = DURATION_OPTIONS[language] || DURATION_OPTIONS.es;
   const monthOptions = MONTH_OPTIONS[language] || MONTH_OPTIONS.es;
+  
+  const filteredDestinations = destinations.filter(d => 
+    d.label.toLowerCase().includes(destSearch.toLowerCase())
+  );
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -132,7 +140,7 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
   }, []);
 
   const handleSubmitToWhatsApp = () => {
-    const destLabel = destinations.find(d => d.value === filters.destination)?.label || "";
+    const destLabel = filters.destinationLabel || destinations.find(d => d.value === filters.destination)?.label || "";
     const budgetLabel = budgetOptions.find(b => b.value === filters.budget)?.label || "";
     const budgetRange = budgetOptions.find(b => b.value === filters.budget)?.range || "";
     const durationLabel = durationOptions.find(d => d.value === filters.duration)?.label || "";
@@ -167,7 +175,7 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
   };
 
   const isHero = variant === "hero";
-  const hasAnySelection = filters.destination || filters.budget || filters.duration || filters.month;
+  const hasAnySelection = filters.destination || filters.destinationLabel || filters.budget || filters.duration || filters.month;
 
   const ctaText = language === "es" ? "Solicitar Cotización" : language === "pt" ? "Solicitar Cotação" : "Request Quote";
 
@@ -192,42 +200,71 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
         <div className="relative">
           <label className="text-xs font-medium text-muted-foreground mb-1 block">
-            {language === "es" ? "Destino" : language === "pt" ? "Destino" : "Destination"}
+            {language === "es" ? "Destino de Interés" : language === "pt" ? "Destino de Interesse" : "Destination of Interest"}
           </label>
-          <button
-            type="button"
-            onClick={() => setActiveDropdown(activeDropdown === "destination" ? null : "destination")}
-            className={cn(
-              "flex items-center justify-between gap-2 px-3 h-11 rounded-lg border bg-background w-full text-left",
-              filters.destination ? "border-accent text-foreground" : "border-border text-muted-foreground"
-            )}
-            data-testid="button-filter-destination"
-          >
-            <div className="flex items-center gap-2 min-w-0">
-              <MapPin className="w-4 h-4 text-accent shrink-0" />
-              <span className="text-sm truncate">
-                {getSelectedLabel("destination") || (language === "es" ? "¿A dónde?" : language === "pt" ? "Para onde?" : "Where to?")}
-              </span>
-            </div>
-            <ChevronDown className="w-4 h-4 shrink-0" />
-          </button>
+          <div className="relative">
+            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-accent" />
+            <Input
+              type="text"
+              value={destSearch}
+              onChange={(e) => {
+                setDestSearch(e.target.value);
+                setFilters(f => ({ ...f, destination: "", destinationLabel: e.target.value }));
+                if (e.target.value) {
+                  setActiveDropdown("destination");
+                }
+              }}
+              onFocus={() => setActiveDropdown("destination")}
+              placeholder={language === "es" ? "Escribe o selecciona..." : language === "pt" ? "Digite ou selecione..." : "Type or select..."}
+              className="pl-9 pr-8 h-11 border bg-background"
+              data-testid="input-filter-destination"
+            />
+            <ChevronDown 
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground cursor-pointer"
+              onClick={() => setActiveDropdown(activeDropdown === "destination" ? null : "destination")}
+            />
+          </div>
           {activeDropdown === "destination" && (
             <div className="absolute z-50 w-full mt-1 bg-white dark:bg-card border rounded-lg shadow-xl max-h-56 overflow-y-auto">
-              {destinations.map((dest) => (
-                <button
-                  key={dest.value}
-                  type="button"
-                  onClick={() => {
-                    setFilters(f => ({ ...f, destination: dest.value }));
-                    setActiveDropdown(null);
-                  }}
-                  className="w-full px-3 py-2.5 text-left hover:bg-accent/10 flex items-center gap-2 text-sm"
-                  data-testid={`option-destination-${dest.value}`}
-                >
-                  <MapPin className="w-4 h-4 text-accent" />
-                  <span>{dest.label}</span>
-                </button>
-              ))}
+              {filteredDestinations.length > 0 ? (
+                filteredDestinations.map((dest) => (
+                  <button
+                    key={dest.value}
+                    type="button"
+                    onClick={() => {
+                      setFilters(f => ({ ...f, destination: dest.value, destinationLabel: dest.label }));
+                      setDestSearch(dest.label);
+                      setActiveDropdown(null);
+                    }}
+                    className="w-full px-3 py-2.5 text-left hover:bg-accent/10 flex items-center gap-2 text-sm"
+                    data-testid={`option-destination-${dest.value}`}
+                  >
+                    <MapPin className="w-4 h-4 text-accent" />
+                    <span>{dest.label}</span>
+                  </button>
+                ))
+              ) : destSearch ? (
+                <div className="px-3 py-2.5 text-sm text-muted-foreground">
+                  {language === "es" ? `Buscaremos "${destSearch}" para ti` : language === "pt" ? `Procuraremos "${destSearch}" para você` : `We'll search "${destSearch}" for you`}
+                </div>
+              ) : (
+                destinations.map((dest) => (
+                  <button
+                    key={dest.value}
+                    type="button"
+                    onClick={() => {
+                      setFilters(f => ({ ...f, destination: dest.value, destinationLabel: dest.label }));
+                      setDestSearch(dest.label);
+                      setActiveDropdown(null);
+                    }}
+                    className="w-full px-3 py-2.5 text-left hover:bg-accent/10 flex items-center gap-2 text-sm"
+                    data-testid={`option-destination-${dest.value}`}
+                  >
+                    <MapPin className="w-4 h-4 text-accent" />
+                    <span>{dest.label}</span>
+                  </button>
+                ))
+              )}
             </div>
           )}
         </div>
