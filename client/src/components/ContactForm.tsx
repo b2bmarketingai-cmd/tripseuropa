@@ -10,7 +10,7 @@ import { useI18n } from "@/lib/i18n";
 import { Send, Phone, Mail, CheckCircle, MapPin } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
 import { PhoneInput } from "@/components/PhoneInput";
-import { DESTINATIONS_DATA } from "@/lib/destinationsData";
+import { FORM_DESTINATIONS } from "@/lib/formDestinations";
 import {
   Form,
   FormControl,
@@ -34,10 +34,7 @@ export function ContactForm({ variant = "page", title, subtitle, defaultDestinat
   const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
   
-  const destinationOptions = DESTINATIONS_DATA.map(dest => ({
-    value: dest.slug,
-    label: language === "es" ? dest.name.es : language === "pt" ? (dest.name.pt || dest.name.en) : dest.name.en
-  }));
+  const destinationOptions = FORM_DESTINATIONS[language] || FORM_DESTINATIONS.es;
   
   const initialDestOption = defaultDestination 
     ? destinationOptions.find(d => d.value === defaultDestination || d.label.toLowerCase() === defaultDestination.toLowerCase())

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { SiWhatsapp } from "react-icons/si";
+import { FORM_DESTINATIONS } from "@/lib/formDestinations";
 
 interface SearchFilters {
   destination: string;
@@ -13,51 +14,6 @@ interface SearchFilters {
   duration: string;
   month: string;
 }
-
-const SIMPLE_DESTINATIONS = {
-  es: [
-    { value: "paris", label: "París, Francia" },
-    { value: "roma", label: "Roma, Italia" },
-    { value: "barcelona", label: "Barcelona, España" },
-    { value: "londres", label: "Londres, Reino Unido" },
-    { value: "amsterdam", label: "Ámsterdam, Países Bajos" },
-    { value: "berlin", label: "Berlín, Alemania" },
-    { value: "praga", label: "Praga, República Checa" },
-    { value: "viena", label: "Viena, Austria" },
-    { value: "estambul", label: "Estambul, Turquía" },
-    { value: "atenas", label: "Atenas, Grecia" },
-    { value: "lisboa", label: "Lisboa, Portugal" },
-    { value: "venecia", label: "Venecia, Italia" },
-  ],
-  en: [
-    { value: "paris", label: "Paris, France" },
-    { value: "roma", label: "Rome, Italy" },
-    { value: "barcelona", label: "Barcelona, Spain" },
-    { value: "londres", label: "London, United Kingdom" },
-    { value: "amsterdam", label: "Amsterdam, Netherlands" },
-    { value: "berlin", label: "Berlin, Germany" },
-    { value: "praga", label: "Prague, Czech Republic" },
-    { value: "viena", label: "Vienna, Austria" },
-    { value: "estambul", label: "Istanbul, Turkey" },
-    { value: "atenas", label: "Athens, Greece" },
-    { value: "lisboa", label: "Lisbon, Portugal" },
-    { value: "venecia", label: "Venice, Italy" },
-  ],
-  pt: [
-    { value: "paris", label: "Paris, França" },
-    { value: "roma", label: "Roma, Itália" },
-    { value: "barcelona", label: "Barcelona, Espanha" },
-    { value: "londres", label: "Londres, Reino Unido" },
-    { value: "amsterdam", label: "Amsterdã, Países Baixos" },
-    { value: "berlin", label: "Berlim, Alemanha" },
-    { value: "praga", label: "Praga, República Tcheca" },
-    { value: "viena", label: "Viena, Áustria" },
-    { value: "estambul", label: "Istambul, Turquia" },
-    { value: "atenas", label: "Atenas, Grécia" },
-    { value: "lisboa", label: "Lisboa, Portugal" },
-    { value: "venecia", label: "Veneza, Itália" },
-  ],
-};
 
 const BUDGET_OPTIONS = {
   es: [
@@ -120,7 +76,7 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
   const containerRef = useRef<HTMLDivElement>(null);
   const { language } = useI18n();
 
-  const destinations = SIMPLE_DESTINATIONS[language] || SIMPLE_DESTINATIONS.es;
+  const destinations = FORM_DESTINATIONS[language] || FORM_DESTINATIONS.es;
   const budgetOptions = BUDGET_OPTIONS[language] || BUDGET_OPTIONS.es;
   const durationOptions = DURATION_OPTIONS[language] || DURATION_OPTIONS.es;
   const monthOptions = MONTH_OPTIONS[language] || MONTH_OPTIONS.es;
