@@ -146,6 +146,24 @@ export const experimentMetrics = pgTable("experiment_metrics", {
   recordedAt: timestamp("recorded_at").defaultNow(),
 });
 
+export const sofiaConversations = pgTable("sofia_conversations", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow(),
+  userCountry: text("user_country"),
+  userName: text("user_name"),
+  userEmail: text("user_email"),
+  userPhone: text("user_phone"),
+  mainTopic: text("main_topic"),
+  durationMinutes: integer("duration_minutes"),
+  finalStatus: text("final_status").default("completed"),
+  recommendedPackage: text("recommended_package"),
+  transcription: text("transcription"),
+  satisfaction: integer("satisfaction"),
+  conversationId: integer("conversation_id"),
+  emailsSent: boolean("emails_sent").default(false),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const countryPages = pgTable("country_pages", {
   id: serial("id").primaryKey(),
   countryCode: text("country_code").notNull().unique(),
@@ -169,12 +187,15 @@ export const countryPages = pgTable("country_pages", {
 export const insertExperimentSchema = createInsertSchema(experiments);
 export const insertExperimentVariantSchema = createInsertSchema(experimentVariants);
 export const insertCountryPageSchema = createInsertSchema(countryPages);
+export const insertSofiaConversationSchema = createInsertSchema(sofiaConversations).omit({ id: true, createdAt: true });
 
 export type Experiment = typeof experiments.$inferSelect;
 export type ExperimentVariant = typeof experimentVariants.$inferSelect;
 export type ExperimentMetric = typeof experimentMetrics.$inferSelect;
 export type CountryPage = typeof countryPages.$inferSelect;
+export type SofiaConversation = typeof sofiaConversations.$inferSelect;
 
 export type InsertExperiment = z.infer<typeof insertExperimentSchema>;
 export type InsertExperimentVariant = z.infer<typeof insertExperimentVariantSchema>;
 export type InsertCountryPage = z.infer<typeof insertCountryPageSchema>;
+export type InsertSofiaConversation = z.infer<typeof insertSofiaConversationSchema>;
