@@ -9,33 +9,33 @@ import { useI18n } from "@/lib/i18n";
 const QUICK_ACTIONS = [
   {
     icon: Plane,
-    label: { es: "Vuelos a Europa", en: "Flights to Europe" },
-    message: { es: "Quiero información sobre vuelos a Europa desde Colombia", en: "I want information about flights to Europe from Colombia" }
-  },
-  {
-    icon: Hotel,
-    label: { es: "Hoteles de Lujo", en: "Luxury Hotels" },
-    message: { es: "Recomiéndame los mejores hoteles de lujo en París", en: "Recommend the best luxury hotels in Paris" }
+    label: { es: "Paquetes a Europa", en: "Europe Packages", pt: "Pacotes para Europa" },
+    message: { es: "Hola Sofia, quiero conocer los paquetes turísticos disponibles", en: "Hi Sofia, I want to know about available travel packages", pt: "Olá Sofia, quero conhecer os pacotes turísticos disponíveis" }
   },
   {
     icon: Map,
-    label: { es: "Destinos Populares", en: "Popular Destinations" },
-    message: { es: "¿Cuáles son los destinos más populares de Europa?", en: "What are the most popular destinations in Europe?" }
+    label: { es: "Destinos Populares", en: "Popular Destinations", pt: "Destinos Populares" },
+    message: { es: "¿Cuáles son los destinos más populares de Europa?", en: "What are the most popular destinations in Europe?", pt: "Quais são os destinos mais populares da Europa?" }
   },
   {
     icon: Heart,
-    label: { es: "Luna de Miel", en: "Honeymoon" },
-    message: { es: "Busco destinos románticos para luna de miel en Europa", en: "I'm looking for romantic honeymoon destinations in Europe" }
+    label: { es: "Luna de Miel", en: "Honeymoon", pt: "Lua de Mel" },
+    message: { es: "Busco destinos románticos para luna de miel", en: "I'm looking for romantic honeymoon destinations", pt: "Procuro destinos românticos para lua de mel" }
   },
   {
     icon: Users,
-    label: { es: "Viaje en Familia", en: "Family Trip" },
-    message: { es: "¿Qué destinos europeos recomiendas para viajar con niños?", en: "What European destinations do you recommend for traveling with children?" }
+    label: { es: "Viaje en Familia", en: "Family Trip", pt: "Viagem em Família" },
+    message: { es: "¿Qué destinos recomiendas para viajar con niños?", en: "What destinations do you recommend for traveling with children?", pt: "Quais destinos você recomenda para viajar com crianças?" }
   },
   {
     icon: Calendar,
-    label: { es: "Visa Schengen", en: "Schengen Visa" },
-    message: { es: "¿Qué necesito saber sobre la visa Schengen para colombianos?", en: "What do I need to know about the Schengen visa for Colombians?" }
+    label: { es: "Documentación", en: "Documentation", pt: "Documentação" },
+    message: { es: "¿Qué documentos necesito para viajar a Europa?", en: "What documents do I need to travel to Europe?", pt: "Quais documentos preciso para viajar à Europa?" }
+  },
+  {
+    icon: Hotel,
+    label: { es: "Cotización", en: "Quote", pt: "Cotação" },
+    message: { es: "Quiero una cotización personalizada para un viaje", en: "I want a personalized quote for a trip", pt: "Quero uma cotação personalizada para uma viagem" }
   }
 ];
 
@@ -98,9 +98,9 @@ export function Chatbot() {
             <Bot className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h3 className="text-white font-bold font-display">Europa - Asistente de Viaje</h3>
+            <h3 className="text-white font-bold font-display">Sofia</h3>
             <p className="text-accent text-xs">
-              {language === "es" ? "Tu concierge personal" : "Your personal concierge"}
+              {language === "es" ? "Tu Asesora de Viajes" : language === "pt" ? "Sua Consultora de Viagens" : "Your Travel Advisor"}
             </p>
           </div>
         </div>
@@ -114,12 +114,14 @@ export function Chatbot() {
                   <Bot className="w-8 h-8 text-accent" />
                 </div>
                 <p className="text-sm font-medium mb-1">
-                  {language === "es" ? "¡Hola! Soy Europa" : "Hi! I'm Europa"}
+                  {language === "es" ? "¡Hola! Soy Sofia" : language === "pt" ? "Olá! Sou a Sofia" : "Hi! I'm Sofia"}
                 </p>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
-                    ? "Tu asistente de viaje personalizado. ¿En qué puedo ayudarte hoy?" 
-                    : "Your personalized travel assistant. How can I help you today?"}
+                    ? "Tu asesora de viajes especializada en Europa. ¿En qué puedo ayudarte?" 
+                    : language === "pt"
+                    ? "Sua consultora de viagens especializada em Europa. Como posso ajudá-lo?"
+                    : "Your specialized European travel advisor. How can I help you?"}
                 </p>
               </div>
               
@@ -169,7 +171,7 @@ export function Chatbot() {
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={language === "es" ? "Escribe tu mensaje..." : "Type your message..."}
+              placeholder={language === "es" ? "Escribe tu mensaje..." : language === "pt" ? "Digite sua mensagem..." : "Type your message..."}
               className="flex-1 bg-gray-50 dark:bg-background border-gray-200 dark:border-input focus:border-accent focus:ring-accent/20"
               disabled={isStreaming}
               data-testid="input-chatbot-message"
@@ -187,6 +189,8 @@ export function Chatbot() {
           <p className="text-[10px] text-muted-foreground text-center mt-2">
             {language === "es" 
               ? "Potenciado por IA para recomendaciones personalizadas" 
+              : language === "pt"
+              ? "Potencializado por IA para recomendações personalizadas"
               : "AI-powered for personalized recommendations"}
           </p>
         </div>

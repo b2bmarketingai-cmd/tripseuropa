@@ -16,47 +16,47 @@ import { SEOHead } from "@/components/SEOHead";
 const QUICK_ACTIONS = [
   {
     icon: Plane,
-    label: { es: "Vuelos a Europa", en: "Flights to Europe", pt: "Voos para Europa" },
-    message: { es: "Quiero información sobre vuelos a Europa desde Colombia", en: "I want information about flights to Europe from Colombia", pt: "Quero informacoes sobre voos para Europa desde o Brasil" },
+    label: { es: "Paquetes a Europa", en: "Europe Packages", pt: "Pacotes para Europa" },
+    message: { es: "Hola Sofia, quiero conocer los paquetes turísticos disponibles para viajar a Europa", en: "Hi Sofia, I want to know about available travel packages to Europe", pt: "Olá Sofia, quero conhecer os pacotes turísticos disponíveis para viajar à Europa" },
     color: "bg-blue-500/10 text-blue-600 dark:text-blue-400"
-  },
-  {
-    icon: Hotel,
-    label: { es: "Hoteles de Lujo", en: "Luxury Hotels", pt: "Hoteis de Luxo" },
-    message: { es: "Recomiéndame los mejores hoteles de lujo en París", en: "Recommend the best luxury hotels in Paris", pt: "Recomende os melhores hoteis de luxo em Paris" },
-    color: "bg-purple-500/10 text-purple-600 dark:text-purple-400"
   },
   {
     icon: Map,
     label: { es: "Destinos Populares", en: "Popular Destinations", pt: "Destinos Populares" },
-    message: { es: "¿Cuáles son los destinos más populares de Europa para visitar?", en: "What are the most popular destinations in Europe to visit?", pt: "Quais são os destinos mais populares da Europa para visitar?" },
+    message: { es: "¿Cuáles son los destinos más populares de Europa? Me interesan París, Barcelona y Roma", en: "What are the most popular destinations in Europe? I'm interested in Paris, Barcelona and Rome", pt: "Quais são os destinos mais populares da Europa? Tenho interesse em Paris, Barcelona e Roma" },
     color: "bg-green-500/10 text-green-600 dark:text-green-400"
   },
   {
     icon: Heart,
     label: { es: "Luna de Miel", en: "Honeymoon", pt: "Lua de Mel" },
-    message: { es: "Busco destinos románticos para luna de miel en Europa", en: "I'm looking for romantic honeymoon destinations in Europe", pt: "Procuro destinos romanticos para lua de mel na Europa" },
+    message: { es: "Busco destinos románticos para luna de miel en Europa. ¿Qué me recomiendas?", en: "I'm looking for romantic honeymoon destinations in Europe. What do you recommend?", pt: "Procuro destinos românticos para lua de mel na Europa. O que você recomenda?" },
     color: "bg-pink-500/10 text-pink-600 dark:text-pink-400"
   },
   {
     icon: Users,
-    label: { es: "Viaje en Familia", en: "Family Trip", pt: "Viagem em Familia" },
-    message: { es: "¿Qué destinos europeos recomiendas para viajar con niños?", en: "What European destinations do you recommend for traveling with children?", pt: "Quais destinos europeus voce recomenda para viajar com criancas?" },
+    label: { es: "Viaje en Familia", en: "Family Trip", pt: "Viagem em Família" },
+    message: { es: "¿Qué destinos europeos recomiendas para viajar con niños? Somos una familia de 4", en: "What European destinations do you recommend for traveling with children? We are a family of 4", pt: "Quais destinos europeus você recomenda para viajar com crianças? Somos uma família de 4" },
     color: "bg-orange-500/10 text-orange-600 dark:text-orange-400"
   },
   {
     icon: Calendar,
-    label: { es: "Visa Schengen", en: "Schengen Visa", pt: "Visto Schengen" },
-    message: { es: "¿Qué necesito saber sobre la visa Schengen para colombianos?", en: "What do I need to know about the Schengen visa for Colombians?", pt: "O que preciso saber sobre o visto Schengen para brasileiros?" },
+    label: { es: "Documentación", en: "Documentation", pt: "Documentação" },
+    message: { es: "¿Qué documentos necesito para viajar a Europa? ¿Necesito visa Schengen?", en: "What documents do I need to travel to Europe? Do I need a Schengen visa?", pt: "Quais documentos preciso para viajar à Europa? Preciso de visto Schengen?" },
     color: "bg-teal-500/10 text-teal-600 dark:text-teal-400"
+  },
+  {
+    icon: Hotel,
+    label: { es: "Cotización", en: "Quote", pt: "Cotação" },
+    message: { es: "Quiero una cotización personalizada para un viaje a Europa de 10 días", en: "I want a personalized quote for a 10-day trip to Europe", pt: "Quero uma cotação personalizada para uma viagem à Europa de 10 dias" },
+    color: "bg-purple-500/10 text-purple-600 dark:text-purple-400"
   }
 ];
 
 const SUGGESTED_PROMPTS = [
-  { es: "¿Cuál es la mejor época para visitar Italia?", en: "What's the best time to visit Italy?", pt: "Qual e a melhor epoca para visitar a Italia?" },
-  { es: "Recomiéndame un itinerario de 10 días por España", en: "Recommend a 10-day itinerary for Spain", pt: "Recomende um roteiro de 10 dias pela Espanha" },
-  { es: "¿Qué ciudades europeas tienen la mejor gastronomía?", en: "Which European cities have the best gastronomy?", pt: "Quais cidades europeias tem a melhor gastronomia?" },
-  { es: "Quiero planear un viaje a los Alpes suizos", en: "I want to plan a trip to the Swiss Alps", pt: "Quero planejar uma viagem aos Alpes suicos" }
+  { es: "¿Cuál es la mejor época para visitar Italia?", en: "What's the best time to visit Italy?", pt: "Qual é a melhor época para visitar a Itália?" },
+  { es: "¿Cuánto cuesta un viaje de 10 días a Europa?", en: "How much does a 10-day trip to Europe cost?", pt: "Quanto custa uma viagem de 10 dias à Europa?" },
+  { es: "¿Qué incluyen los paquetes turísticos?", en: "What do the travel packages include?", pt: "O que os pacotes turísticos incluem?" },
+  { es: "Quiero hablar con un asesor de viajes", en: "I want to speak with a travel advisor", pt: "Quero falar com um consultor de viagens" }
 ];
 
 export default function TravelAssistant() {
@@ -93,12 +93,12 @@ export default function TravelAssistant() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEOHead 
-        title={language === "es" ? "Asistente de Viaje IA | Trips Europa" : language === "pt" ? "Assistente de Viagem IA | Trips Europa" : "AI Travel Assistant | Trips Europa"}
+        title={language === "es" ? "Sofia - Asesora de Viajes IA | Trips Europa" : language === "pt" ? "Sofia - Consultora de Viagens IA | Trips Europa" : "Sofia - AI Travel Advisor | Trips Europa"}
         description={language === "es" 
-          ? "Obtén recomendaciones personalizadas de viaje a Europa con nuestro asistente de inteligencia artificial."
+          ? "Chatea con Sofia, nuestra asesora de viajes con inteligencia artificial. Obtén recomendaciones personalizadas de paquetes turísticos a Europa."
           : language === "pt"
-          ? "Obtenha recomendações personalizadas de viagem para Europa com nosso assistente de inteligência artificial."
-          : "Get personalized European travel recommendations with our AI-powered assistant."}
+          ? "Converse com Sofia, nossa consultora de viagens com inteligência artificial. Obtenha recomendações personalizadas de pacotes turísticos para Europa."
+          : "Chat with Sofia, our AI-powered travel advisor. Get personalized recommendations for European travel packages."}
       />
       <Header />
       
@@ -118,10 +118,10 @@ export default function TravelAssistant() {
             </div>
             <div className="text-left">
               <h1 className="text-3xl md:text-4xl font-display font-bold text-accent" data-testid="text-assistant-title">
-                Europa
+                Sofia
               </h1>
               <p className="text-muted-foreground">
-                {language === "es" ? "Tu Asistente de Viaje con IA" : language === "pt" ? "Seu Assistente de Viagem com IA" : "Your AI Travel Assistant"}
+                {language === "es" ? "Tu Asesora de Viajes a Europa" : language === "pt" ? "Sua Consultora de Viagens para Europa" : "Your European Travel Advisor"}
               </p>
             </div>
           </div>
@@ -149,14 +149,14 @@ export default function TravelAssistant() {
                         <Bot className="w-10 h-10 text-accent" />
                       </div>
                       <h2 className="text-xl font-display font-bold mb-2">
-                        {language === "es" ? "¡Hola! Soy Europa" : language === "pt" ? "Olá! Sou Europa" : "Hi! I'm Europa"}
+                        {language === "es" ? "¡Hola! Soy Sofia" : language === "pt" ? "Olá! Sou a Sofia" : "Hi! I'm Sofia"}
                       </h2>
                       <p className="text-muted-foreground max-w-md mx-auto">
                         {language === "es" 
-                          ? "Tu asistente de viaje personalizado. Puedo ayudarte a planificar tu viaje perfecto a Europa, recomendarte destinos, hoteles y experiencias únicas." 
+                          ? "Tu asesora de viajes especializada en Europa. Puedo ayudarte a planificar tu viaje perfecto, recomendarte paquetes turísticos, destinos y experiencias únicas para viajeros latinoamericanos." 
                           : language === "pt"
-                          ? "Seu assistente de viagem personalizado. Posso ajudá-lo a planejar sua viagem perfeita para Europa, recomendar destinos, hotéis e experiências únicas."
-                          : "Your personalized travel assistant. I can help you plan your perfect trip to Europe, recommend destinations, hotels, and unique experiences."}
+                          ? "Sua consultora de viagens especializada em Europa. Posso ajudá-lo a planejar sua viagem perfeita, recomendar pacotes turísticos, destinos e experiências únicas para viajantes latino-americanos."
+                          : "Your specialized European travel advisor. I can help you plan your perfect trip, recommend travel packages, destinations, and unique experiences for Latin American travelers."}
                       </p>
                     </div>
                     
@@ -202,7 +202,7 @@ export default function TravelAssistant() {
                         {msg.role === "assistant" && (
                           <div className="flex items-center gap-2 mb-2 text-accent">
                             <Bot className="w-4 h-4" />
-                            <span className="text-xs font-medium">Europa</span>
+                            <span className="text-xs font-medium">Sofia</span>
                           </div>
                         )}
                         <div className="whitespace-pre-wrap">
@@ -281,14 +281,14 @@ export default function TravelAssistant() {
               <CardContent className="p-4 text-center">
                 <Sparkles className="w-8 h-8 text-accent mx-auto mb-2" />
                 <h3 className="font-medium mb-1">
-                  {language === "es" ? "Recomendaciones Personalizadas" : language === "pt" ? "Recomendações Personalizadas" : "Personalized Recommendations"}
+                  {language === "es" ? "Paquetes Personalizados" : language === "pt" ? "Pacotes Personalizados" : "Personalized Packages"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
-                    ? "Obtén sugerencias adaptadas a tus preferencias" 
+                    ? "Obtén cotizaciones adaptadas a tu presupuesto" 
                     : language === "pt"
-                    ? "Obtenha sugestões adaptadas às suas preferências"
-                    : "Get suggestions tailored to your preferences"}
+                    ? "Obtenha cotações adaptadas ao seu orçamento"
+                    : "Get quotes tailored to your budget"}
                 </p>
               </CardContent>
             </Card>
@@ -296,14 +296,14 @@ export default function TravelAssistant() {
               <CardContent className="p-4 text-center">
                 <Map className="w-8 h-8 text-accent mx-auto mb-2" />
                 <h3 className="font-medium mb-1">
-                  {language === "es" ? "Experto en Europa" : language === "pt" ? "Especialista em Europa" : "Europe Expert"}
+                  {language === "es" ? "Especialistas en Europa" : language === "pt" ? "Especialistas em Europa" : "Europe Specialists"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
-                    ? "Conocimiento profundo de destinos europeos" 
+                    ? "Experiencia en viajes desde Latinoamérica" 
                     : language === "pt"
-                    ? "Conhecimento profundo de destinos europeus"
-                    : "Deep knowledge of European destinations"}
+                    ? "Experiência em viagens desde a América Latina"
+                    : "Experience in trips from Latin America"}
                 </p>
               </CardContent>
             </Card>
@@ -311,14 +311,14 @@ export default function TravelAssistant() {
               <CardContent className="p-4 text-center">
                 <Heart className="w-8 h-8 text-accent mx-auto mb-2" />
                 <h3 className="font-medium mb-1">
-                  {language === "es" ? "Servicio Premium" : language === "pt" ? "Serviço Premium" : "Premium Service"}
+                  {language === "es" ? "Atención 24/7" : language === "pt" ? "Atendimento 24/7" : "24/7 Support"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
-                    ? "Nuestros asesores pueden completar tu reserva" 
+                    ? "Conecta con un asesor humano cuando lo necesites" 
                     : language === "pt"
-                    ? "Nossos consultores podem completar sua reserva"
-                    : "Our advisors can complete your booking"}
+                    ? "Conecte-se com um consultor humano quando precisar"
+                    : "Connect with a human advisor when you need"}
                 </p>
               </CardContent>
             </Card>
