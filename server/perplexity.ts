@@ -1,9 +1,17 @@
 import OpenAI from "openai";
 
-const perplexityClient = new OpenAI({
-  baseURL: "https://api.perplexity.ai",
-  apiKey: process.env.PERPLEXITY_API_KEY,
-});
+const PERPLEXITY_API_KEY = process.env.PERPLEXITY_API_KEY;
+
+function getPerplexityClient(): OpenAI | null {
+  if (!PERPLEXITY_API_KEY) {
+    console.warn("[Perplexity] API key not configured - using fallback data");
+    return null;
+  }
+  return new OpenAI({
+    baseURL: "https://api.perplexity.ai",
+    apiKey: PERPLEXITY_API_KEY,
+  });
+}
 
 export interface SEOKeywordResearch {
   country: string;
@@ -233,10 +241,28 @@ export async function researchKeywords(countryCode: string): Promise<SEOKeywordR
   }
 
   const baseKeywords = seoKeywordsByCountry[countryCode] || [];
+  const perplexityClient = getPerplexityClient();
+
+  if (!perplexityClient) {
+    return {
+      country: country.name,
+      keywords: baseKeywords.map(k => ({
+        keyword: k,
+        searchVolume: "1K-10K",
+        difficulty: "media",
+        intent: "transaccional",
+      })),
+      recommendations: [
+        `Crear contenido localizado para ${country.name}`,
+        `Optimizar meta descripciones con moneda ${country.currency}`,
+        `Incluir referencias culturales de ${country.name}`,
+      ],
+    };
+  }
 
   try {
     const response = await perplexityClient.chat.completions.create({
-      model: "sonar",
+      model: "llama-3.1-sonar-small-128k-online",
       messages: [
         {
           role: "system",
@@ -321,9 +347,47 @@ export async function generateContentBrief(
     throw new Error(`Country code ${countryCode} not found`);
   }
 
+  const perplexityClient = getPerplexityClient();
+
+  if (!perplexityClient) {
+    return {
+      title: `${topic} - Viajes a Europa desde ${country.name}`,
+      metaDescription: `Descubre ${topic} con los mejores paquetes de viaje a Europa desde ${country.name}. Precios en ${country.currency}.`,
+      h1: `${topic} para Viajeros de ${country.name}`,
+      headings: [
+        `Por qué elegir ${topic}`,
+        "Mejores destinos incluidos",
+        `Precios y paquetes en ${country.currency}`,
+        "Cómo reservar",
+      ],
+      keywords: seoKeywordsByCountry[countryCode] || [],
+      contentOutline: [
+        "Introducción al destino",
+        "Itinerario detallado",
+        "Precios y opciones",
+        "Consejos de viaje",
+        "FAQ",
+      ],
+      faq: [
+        {
+          question: `¿Cuánto cuesta viajar a Europa desde ${country.name}?`,
+          answer: `Los paquetes desde ${country.name} comienzan en ${country.currencySymbol}2,500 USD aproximadamente.`,
+        },
+        {
+          question: "¿Necesito visa para Europa?",
+          answer: "Depende de tu nacionalidad. Te asesoramos con todos los requisitos.",
+        },
+        {
+          question: "¿Qué incluyen los paquetes?",
+          answer: "Vuelos, hoteles, traslados y asistencia 24/7 en español.",
+        },
+      ],
+    };
+  }
+
   try {
     const response = await perplexityClient.chat.completions.create({
-      model: "sonar",
+      model: "llama-3.1-sonar-small-128k-online",
       messages: [
         {
           role: "system",
@@ -439,10 +503,20 @@ export async function analyzeCompetitor(
   keywords: string[];
 }> {
   const country = countryConfigs[countryCode];
+  const perplexityClient = getPerplexityClient();
+
+  if (!perplexityClient) {
+    return {
+      strengths: ["Presencia establecida en el mercado"],
+      weaknesses: ["Falta de localización regional"],
+      opportunities: ["Contenido más personalizado por país"],
+      keywords: seoKeywordsByCountry[countryCode] || [],
+    };
+  }
 
   try {
     const response = await perplexityClient.chat.completions.create({
-      model: "sonar",
+      model: "llama-3.1-sonar-small-128k-online",
       messages: [
         {
           role: "user",

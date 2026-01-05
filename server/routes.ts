@@ -8,6 +8,7 @@ import { registerChatRoutes } from "./replit_integrations/chat";
 import { registerImageRoutes } from "./replit_integrations/image";
 import { sendContactFormEmail, sendNewsletterNotificationEmail } from "./replit_integrations/email";
 import { translateText, translateBatch, auditSpanishContent, localizationConfigs } from "./translation";
+import { researchKeywords, generateContentBrief, analyzeCompetitor, countryConfigs } from "./perplexity";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -266,6 +267,75 @@ export async function registerRoutes(
     }
     
     res.json(config);
+  });
+
+  // -- SEO API Routes (Perplexity) --
+  
+  // Get all country configs
+  app.get("/api/seo/countries", (_req, res) => {
+    res.json(countryConfigs);
+  });
+  
+  // Get country config by code
+  app.get("/api/seo/countries/:code", (req, res) => {
+    const { code } = req.params;
+    const config = countryConfigs[code.toUpperCase()];
+    
+    if (!config) {
+      return res.status(404).json({ message: "Country not found" });
+    }
+    
+    res.json(config);
+  });
+  
+  // Research keywords for a country
+  app.get("/api/seo/keywords/:countryCode", async (req, res) => {
+    try {
+      const { countryCode } = req.params;
+      const result = await researchKeywords(countryCode.toUpperCase());
+      res.json(result);
+    } catch (error) {
+      console.error("Keyword research error:", error);
+      res.status(500).json({ message: "Keyword research failed" });
+    }
+  });
+  
+  // Generate content brief
+  app.post("/api/seo/content-brief", async (req, res) => {
+    try {
+      const { countryCode, topic } = req.body;
+      
+      if (!countryCode || !topic) {
+        return res.status(400).json({ 
+          message: "Missing required fields: countryCode, topic" 
+        });
+      }
+      
+      const result = await generateContentBrief(countryCode.toUpperCase(), topic);
+      res.json(result);
+    } catch (error) {
+      console.error("Content brief error:", error);
+      res.status(500).json({ message: "Content brief generation failed" });
+    }
+  });
+  
+  // Analyze competitor
+  app.post("/api/seo/competitor-analysis", async (req, res) => {
+    try {
+      const { url, countryCode } = req.body;
+      
+      if (!url || !countryCode) {
+        return res.status(400).json({ 
+          message: "Missing required fields: url, countryCode" 
+        });
+      }
+      
+      const result = await analyzeCompetitor(url, countryCode.toUpperCase());
+      res.json(result);
+    } catch (error) {
+      console.error("Competitor analysis error:", error);
+      res.status(500).json({ message: "Competitor analysis failed" });
+    }
   });
 
   // Seed Data (if empty)

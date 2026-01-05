@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
+import { ABTestingProvider } from "@/lib/abTesting";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -65,6 +66,7 @@ import PackagesService from "@/pages/services/Packages";
 import Tours from "@/pages/services/Tours";
 import Insurance from "@/pages/services/Insurance";
 import NotFound from "@/pages/not-found";
+import CountryLanding from "@/pages/CountryLanding";
 
 // Protected Route Wrapper
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
@@ -138,6 +140,9 @@ function Router() {
       <Route path="/desde-peru" component={FromPeru} />
       <Route path="/desde-costa-rica" component={FromCostaRica} />
       
+      {/* Dynamic Country Landing Pages */}
+      <Route path="/desde/:country" component={CountryLanding} />
+      
       {/* Route Pages (Origin-Destination) */}
       <Route path="/routes/:route" component={RouteTemplate} />
       
@@ -162,11 +167,13 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <TooltipProvider>
-          <ScrollToTop />
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <ABTestingProvider>
+          <TooltipProvider>
+            <ScrollToTop />
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </ABTestingProvider>
       </I18nProvider>
     </QueryClientProvider>
   );
