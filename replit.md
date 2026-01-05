@@ -76,3 +76,40 @@ The application uses a typed API contract pattern in `shared/routes.ts` where en
 - Lucide React and react-icons for iconography
 - react-day-picker for date selection
 - date-fns for date formatting with locale support
+
+## SEO & Sitemap Implementation
+
+### Multinational SEO Strategy
+The application implements comprehensive multinational SEO targeting Latin American travelers from 9 countries:
+- **Countries**: Colombia (CO), Mexico (MX), Brazil (BR), Argentina (AR), Peru (PE), Panama (PA), Costa Rica (CR), Dominican Republic (DO), Caribbean (CB)
+- **Languages**: Spanish (es), English (en), Portuguese (pt-BR)
+- **Total Sitemaps**: 27 specialized XML sitemaps
+- **Estimated URLs**: ~917 indexed pages
+
+### Sitemap Architecture (`server/sitemaps.ts`)
+- **Sitemap Index**: `/sitemaps/sitemap_index.xml` - Master index of all sitemaps
+- **Country Sitemaps**: Language-specific sitemaps for each country (e.g., `/sitemaps/sitemap-co-colombia-es.xml`)
+- **Destination Sitemaps**: European destinations in 3 languages
+- **Content Sitemaps**: Blog posts, images, videos, news
+- **Commercial Sitemaps**: Packages, offers, experiences
+- **Legal Sitemaps**: Privacy, terms, policies
+
+### Hreflang Implementation
+All sitemaps include proper hreflang tags for:
+- 9 country-specific Spanish variants (es-CO, es-MX, es-AR, etc.)
+- Brazilian Portuguese (pt-BR)
+- English (en)
+- x-default fallback
+
+### SEO API Endpoints
+- `GET /robots.txt` - Dynamically generated with all sitemap references
+- `GET /api/seo/countries` - Country configuration data
+- `GET /api/seo/sitemap-stats` - Sitemap statistics and metrics
+
+### Content Coverage
+- 27 European destination countries
+- 36 European cities
+- 15 blog posts (multilingual)
+- 12 travel packages
+- 10 travel experiences
+- 6 promotional offers
