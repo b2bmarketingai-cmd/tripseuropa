@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, Lock, Building2, Bot, Sparkles } from "lucide-react";
+import { Facebook, Instagram, MapPin, Mail, Phone, Youtube, Plane, Map, Wrench, BookOpen, MessageCircle, Shield, Lock, Building2, Bot, Sparkles, Users } from "lucide-react";
 import { SiWhatsapp, SiTiktok, SiVisa, SiMastercard, SiBinance, SiPaypal } from "react-icons/si";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ export function Footer() {
     { name: { es: "Paquetes", en: "Packages", pt: "Pacotes" }, href: "/packages", icon: Plane },
     { name: { es: "Herramientas", en: "Tools", pt: "Ferramentas" }, href: "/tools", icon: Wrench },
     { name: { es: "Blog", en: "Blog", pt: "Blog" }, href: "/blog", icon: BookOpen },
+    { name: { es: "Comunidad", en: "Community", pt: "Comunidade" }, href: "/forum", icon: Users },
     { name: { es: "Contacto", en: "Contact", pt: "Contato" }, href: "/contact", icon: MessageCircle },
     { name: { es: "Sofia Agente de Viajes", en: "Sofia Travel Agent", pt: "Sofia Agente de Viagens" }, href: "/travel-assistant", icon: Bot },
   ];

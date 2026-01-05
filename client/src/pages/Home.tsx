@@ -6,6 +6,7 @@ import { Chatbot } from "@/components/Chatbot";
 import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { HeroFlightSearch } from "@/components/HeroFlightSearch";
+import { SmartSearchBar } from "@/components/SmartSearchBar";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { TopOffers } from "@/components/TopOffers";
@@ -80,6 +81,12 @@ export default function Home() {
       <Header />
       
       <HeroCarousel />
+      
+      <section className="py-8 bg-primary/5" data-testid="section-smart-search">
+        <div className="container mx-auto px-4">
+          <SmartSearchBar variant="hero" />
+        </div>
+      </section>
       
       <HeroFlightSearch />
 
