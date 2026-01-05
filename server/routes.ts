@@ -7,6 +7,7 @@ import { setupAuth, registerAuthRoutes } from "./replit_integrations/auth";
 import { registerChatRoutes } from "./replit_integrations/chat";
 import { registerImageRoutes } from "./replit_integrations/image";
 import { sendContactFormEmail, sendNewsletterNotificationEmail } from "./replit_integrations/email";
+import { translateText, translateBatch, auditSpanishContent, localizationConfigs } from "./translation";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -190,6 +191,81 @@ export async function registerRoutes(
       console.error('Newsletter subscription error:', err);
       res.status(500).json({ message: "Error al procesar la suscripcion" });
     }
+  });
+
+  // -- Translation API Routes --
+  
+  // Single text translation
+  app.post("/api/translate", async (req, res) => {
+    try {
+      const { text, sourceLanguage, targetLanguage, context } = req.body;
+      
+      if (!text || !sourceLanguage || !targetLanguage) {
+        return res.status(400).json({ 
+          message: "Missing required fields: text, sourceLanguage, targetLanguage" 
+        });
+      }
+      
+      const translated = await translateText({
+        text,
+        sourceLanguage,
+        targetLanguage,
+        context
+      });
+      
+      res.json({ translated });
+    } catch (error) {
+      console.error("Translation error:", error);
+      res.status(500).json({ message: "Translation failed" });
+    }
+  });
+  
+  // Batch translation for multiple texts
+  app.post("/api/translate/batch", async (req, res) => {
+    try {
+      const { texts, sourceLanguage, targetLanguage } = req.body;
+      
+      if (!texts || !sourceLanguage || !targetLanguage) {
+        return res.status(400).json({ 
+          message: "Missing required fields: texts, sourceLanguage, targetLanguage" 
+        });
+      }
+      
+      const translated = await translateBatch(texts, sourceLanguage, targetLanguage);
+      res.json({ translated });
+    } catch (error) {
+      console.error("Batch translation error:", error);
+      res.status(500).json({ message: "Batch translation failed" });
+    }
+  });
+  
+  // Spanish content audit
+  app.post("/api/translate/audit", async (req, res) => {
+    try {
+      const { text } = req.body;
+      
+      if (!text) {
+        return res.status(400).json({ message: "Missing required field: text" });
+      }
+      
+      const result = await auditSpanishContent(text);
+      res.json(result);
+    } catch (error) {
+      console.error("Audit error:", error);
+      res.status(500).json({ message: "Audit failed" });
+    }
+  });
+  
+  // Get localization config for a locale
+  app.get("/api/localization/:locale", (req, res) => {
+    const { locale } = req.params;
+    const config = localizationConfigs[locale];
+    
+    if (!config) {
+      return res.status(404).json({ message: "Locale not found" });
+    }
+    
+    res.json(config);
   });
 
   // Seed Data (if empty)
