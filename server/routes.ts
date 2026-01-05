@@ -9,6 +9,7 @@ import { registerImageRoutes } from "./replit_integrations/image";
 import { sendContactFormEmail, sendNewsletterNotificationEmail } from "./replit_integrations/email";
 import { translateText, translateBatch, auditSpanishContent, localizationConfigs } from "./translation";
 import { researchKeywords, generateContentBrief, analyzeCompetitor, countryConfigs } from "./perplexity";
+import { generateSEOContent, translateContent, generateSchemaMarkup } from "./content-generator";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -335,6 +336,67 @@ export async function registerRoutes(
     } catch (error) {
       console.error("Competitor analysis error:", error);
       res.status(500).json({ message: "Competitor analysis failed" });
+    }
+  });
+
+  // Content Generation Routes
+  app.post("/api/content/generate", async (req, res) => {
+    try {
+      const { type, language, topic, country, keywords } = req.body;
+      
+      if (!type || !language || !topic) {
+        return res.status(400).json({ 
+          message: "Missing required fields: type, language, topic" 
+        });
+      }
+      
+      const result = await generateSEOContent({
+        type,
+        language,
+        topic,
+        country,
+        keywords,
+      });
+      res.json(result);
+    } catch (error) {
+      console.error("Content generation error:", error);
+      res.status(500).json({ message: "Content generation failed" });
+    }
+  });
+
+  app.post("/api/content/translate", async (req, res) => {
+    try {
+      const { content, sourceLanguage, targetLanguage } = req.body;
+      
+      if (!content || !sourceLanguage || !targetLanguage) {
+        return res.status(400).json({ 
+          message: "Missing required fields: content, sourceLanguage, targetLanguage" 
+        });
+      }
+      
+      const result = await translateContent(content, sourceLanguage, targetLanguage);
+      res.json({ translated: result });
+    } catch (error) {
+      console.error("Translation error:", error);
+      res.status(500).json({ message: "Translation failed" });
+    }
+  });
+
+  app.post("/api/content/schema", async (req, res) => {
+    try {
+      const { type, data, language } = req.body;
+      
+      if (!type || !language) {
+        return res.status(400).json({ 
+          message: "Missing required fields: type, language" 
+        });
+      }
+      
+      const result = await generateSchemaMarkup(type, data || {}, language);
+      res.json(result);
+    } catch (error) {
+      console.error("Schema generation error:", error);
+      res.status(500).json({ message: "Schema generation failed" });
     }
   });
 
