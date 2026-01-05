@@ -109,6 +109,7 @@ function Router() {
       <Route path="/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/travel-advisor" component={TravelAdvisor} />
       <Route path="/travel-assistant" component={TravelAssistant} />
+      <Route path="/asistente" component={TravelAssistant} />
       <Route path="/rewards" component={Rewards} />
       <Route path="/travel-style/:slug" component={TravelStylePage} />
       <Route path="/ofertas-ultima-hora" component={LastMinuteOffers} />
