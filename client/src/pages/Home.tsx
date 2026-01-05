@@ -41,7 +41,7 @@ export default function Home() {
       office: "Oficina Central",
       address: "Calle Gran Via 45, Madrid, España",
       whatsapp: "Escribenos por WhatsApp",
-      formTitle: "Solicita tu cotizacion",
+      formTitle: "Solicita tu Cotización",
     },
     en: {
       ctaBadge: "Plan your trip",
