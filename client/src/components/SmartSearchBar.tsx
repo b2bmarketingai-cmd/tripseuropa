@@ -81,9 +81,19 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
   const durationOptions = DURATION_OPTIONS[language] || DURATION_OPTIONS.es;
   const monthOptions = MONTH_OPTIONS[language] || MONTH_OPTIONS.es;
   
-  const filteredDestinations = destinations.filter(d => 
-    d.label.toLowerCase().includes(destSearch.toLowerCase())
-  );
+  const normalizeText = (text: string) => {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  };
+  
+  const filteredDestinations = destSearch.trim() 
+    ? destinations.filter(d => 
+        normalizeText(d.label).includes(normalizeText(destSearch)) ||
+        normalizeText(d.value).includes(normalizeText(destSearch))
+      )
+    : destinations;
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -199,27 +209,10 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
                     <span>{dest.label}</span>
                   </button>
                 ))
-              ) : destSearch ? (
-                <div className="px-3 py-2.5 text-sm text-muted-foreground">
-                  {language === "es" ? `Buscaremos "${destSearch}" para ti` : language === "pt" ? `Procuraremos "${destSearch}" para você` : `We'll search "${destSearch}" for you`}
-                </div>
               ) : (
-                destinations.map((dest) => (
-                  <button
-                    key={dest.value}
-                    type="button"
-                    onClick={() => {
-                      setFilters(f => ({ ...f, destination: dest.value, destinationLabel: dest.label }));
-                      setDestSearch(dest.label);
-                      setActiveDropdown(null);
-                    }}
-                    className="w-full px-3 py-2.5 text-left hover:bg-accent/10 flex items-center gap-2 text-sm"
-                    data-testid={`option-destination-${dest.value}`}
-                  >
-                    <MapPin className="w-4 h-4 text-accent" />
-                    <span>{dest.label}</span>
-                  </button>
-                ))
+                <div className="px-3 py-2.5 text-sm text-muted-foreground">
+                  {language === "es" ? `No encontramos "${destSearch}", pero lo buscaremos para ti` : language === "pt" ? `Não encontramos "${destSearch}", mas procuraremos para você` : `We didn't find "${destSearch}", but we'll search for you`}
+                </div>
               )}
             </div>
           )}
