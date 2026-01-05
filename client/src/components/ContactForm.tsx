@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
-import { Send, Phone, Mail, CheckCircle } from "lucide-react";
+import { Send, Phone, Mail, CheckCircle, MapPin } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
 import { PhoneInput } from "@/components/PhoneInput";
 import { DESTINATIONS_DATA } from "@/lib/destinationsData";
@@ -19,13 +19,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 interface ContactFormProps {
   variant?: "hero" | "footer" | "page";
@@ -35,6 +28,8 @@ interface ContactFormProps {
 
 export function ContactForm({ variant = "page", title, subtitle }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [destSearch, setDestSearch] = useState("");
+  const [showDestDropdown, setShowDestDropdown] = useState(false);
   const { toast } = useToast();
   const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
@@ -120,6 +115,10 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
     label: language === "es" ? dest.name.es : language === "pt" ? (dest.name.pt || dest.name.en) : dest.name.en
   }));
 
+  const filteredDestinations = destinationOptions.filter(dest =>
+    dest.label.toLowerCase().includes(destSearch.toLowerCase())
+  );
+
   return (
     <div className={`${isHero ? "glass-panel rounded-2xl p-6 md:p-8" : isFooter ? "" : "bg-white rounded-2xl shadow-xl p-8"}`} data-testid="contact-form-container">
       {(title || subtitle) && (
@@ -196,23 +195,49 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className={isFooter ? "text-white/70" : ""}>{t("contact.service")} *</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <div className="relative">
+                    <MapPin className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 z-10 ${isFooter ? "text-white/50" : "text-primary"}`} />
                     <FormControl>
-                      <SelectTrigger 
-                        className={isFooter ? "bg-white/5 border-white/10 text-white" : ""}
-                        data-testid="select-contact-service"
-                      >
-                        <SelectValue placeholder={t("contact.selectService")} />
-                      </SelectTrigger>
+                      <Input
+                        type="text"
+                        placeholder={t("contact.selectService")}
+                        value={destSearch}
+                        onChange={(e) => {
+                          setDestSearch(e.target.value);
+                          setShowDestDropdown(true);
+                          if (!e.target.value) {
+                            field.onChange("");
+                          }
+                        }}
+                        onFocus={() => setShowDestDropdown(true)}
+                        onBlur={() => {
+                          setTimeout(() => setShowDestDropdown(false), 200);
+                        }}
+                        className={`pl-10 ${isFooter ? "bg-white/5 border-white/10 text-white placeholder:text-white/30" : ""}`}
+                        data-testid="input-contact-destination"
+                      />
                     </FormControl>
-                    <SelectContent>
-                      {destinationOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value} data-testid={`option-destination-${option.value}`}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                    {showDestDropdown && filteredDestinations.length > 0 && (
+                      <div className="absolute z-[100] w-full mt-1 bg-white border border-gray-200 rounded-md shadow-xl max-h-48 overflow-y-auto">
+                        {filteredDestinations.map((dest) => (
+                          <button
+                            key={dest.value}
+                            type="button"
+                            onClick={() => {
+                              setDestSearch(dest.label);
+                              field.onChange(dest.value);
+                              setShowDestDropdown(false);
+                            }}
+                            className="w-full px-4 py-2.5 text-left hover:bg-accent/10 text-sm flex items-center gap-2 border-b border-gray-50 last:border-0"
+                            data-testid={`option-destination-${dest.value}`}
+                          >
+                            <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                            <span className="font-medium text-gray-900">{dest.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
