@@ -60,11 +60,41 @@ const SUGGESTED_PROMPTS = [
   { es: "Quiero hablar con un asesor de viajes", en: "I want to speak with a travel advisor", pt: "Quero falar com um consultor de viagens" }
 ];
 
+function detectMainTopic(message: string): string {
+  const lowerMsg = message.toLowerCase();
+  if (lowerMsg.includes("paquete") || lowerMsg.includes("package") || lowerMsg.includes("pacote")) return "Paquetes";
+  if (lowerMsg.includes("luna de miel") || lowerMsg.includes("honeymoon") || lowerMsg.includes("lua de mel")) return "Luna de Miel";
+  if (lowerMsg.includes("familia") || lowerMsg.includes("family") || lowerMsg.includes("niños") || lowerMsg.includes("children")) return "Viaje Familiar";
+  if (lowerMsg.includes("destino") || lowerMsg.includes("destination") || lowerMsg.includes("paris") || lowerMsg.includes("barcelona") || lowerMsg.includes("roma")) return "Destinos";
+  if (lowerMsg.includes("documento") || lowerMsg.includes("visa") || lowerMsg.includes("schengen")) return "Documentacion";
+  if (lowerMsg.includes("cotiz") || lowerMsg.includes("precio") || lowerMsg.includes("costo") || lowerMsg.includes("quote") || lowerMsg.includes("price")) return "Cotizacion";
+  if (lowerMsg.includes("hotel")) return "Hoteles";
+  if (lowerMsg.includes("vuelo") || lowerMsg.includes("flight") || lowerMsg.includes("voo")) return "Vuelos";
+  return "General";
+}
+
+function detectCountry(text: string): string | null {
+  const lowerText = text.toLowerCase();
+  if (lowerText.includes("colombia") || lowerText.includes("bogota") || lowerText.includes("medellin")) return "Colombia";
+  if (lowerText.includes("mexico") || lowerText.includes("méxico") || lowerText.includes("cdmx")) return "Mexico";
+  if (lowerText.includes("brasil") || lowerText.includes("brazil") || lowerText.includes("são paulo") || lowerText.includes("rio")) return "Brasil";
+  if (lowerText.includes("argentina") || lowerText.includes("buenos aires")) return "Argentina";
+  if (lowerText.includes("peru") || lowerText.includes("perú") || lowerText.includes("lima")) return "Peru";
+  if (lowerText.includes("panama") || lowerText.includes("panamá")) return "Panama";
+  if (lowerText.includes("costa rica") || lowerText.includes("san jose")) return "Costa Rica";
+  if (lowerText.includes("dominicana") || lowerText.includes("santo domingo")) return "Rep. Dominicana";
+  if (lowerText.includes("chile") || lowerText.includes("santiago")) return "Chile";
+  if (lowerText.includes("ecuador") || lowerText.includes("quito") || lowerText.includes("guayaquil")) return "Ecuador";
+  return null;
+}
+
 export default function TravelAssistant() {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { language } = useI18n();
+  const startTimeRef = useRef<number | null>(null);
+  const conversationSavedRef = useRef(false);
   
   const { messages, sendMessage, isStreaming } = useChatbot();
 
@@ -74,6 +104,73 @@ export default function TravelAssistant() {
 
   useEffect(() => {
     scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    if (messages.length > 0 && !startTimeRef.current) {
+      startTimeRef.current = Date.now();
+    }
+  }, [messages]);
+
+  const saveConversation = async () => {
+    if (messages.length === 0 || conversationSavedRef.current) return;
+    
+    conversationSavedRef.current = true;
+    const durationMinutes = startTimeRef.current 
+      ? Math.round((Date.now() - startTimeRef.current) / 60000) 
+      : 0;
+    
+    const firstUserMessage = messages.find(m => m.role === "user")?.content || "";
+    const transcription = messages.map(m => `${m.role === "user" ? "Usuario" : "Sofia"}: ${m.content}`).join("\n\n");
+    
+    const mainTopic = detectMainTopic(firstUserMessage);
+    const isEscalated = messages.some(m => 
+      m.content.toLowerCase().includes("hablar con") || 
+      m.content.toLowerCase().includes("agente humano") ||
+      m.content.toLowerCase().includes("asesor")
+    );
+
+    try {
+      await fetch("/api/sofia/conversations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          userCountry: detectCountry(transcription),
+          mainTopic,
+          durationMinutes,
+          finalStatus: isEscalated ? "escalado" : "completado",
+          transcription,
+        })
+      });
+    } catch (error) {
+      console.error("Error saving conversation:", error);
+    }
+  };
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (messages.length > 0 && !conversationSavedRef.current) {
+        conversationSavedRef.current = true;
+        const blob = new Blob([JSON.stringify({
+          timestamp: new Date().toISOString(),
+          userCountry: detectCountry(messages.map(m => m.content).join(" ")),
+          mainTopic: detectMainTopic(messages.find(m => m.role === "user")?.content || ""),
+          durationMinutes: startTimeRef.current ? Math.round((Date.now() - startTimeRef.current) / 60000) : 0,
+          finalStatus: "abandonado",
+          transcription: messages.map(m => `${m.role === "user" ? "Usuario" : "Sofia"}: ${m.content}`).join("\n\n"),
+        })], { type: "application/json" });
+        navigator.sendBeacon("/api/sofia/conversations", blob);
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      if (messages.length > 0 && !conversationSavedRef.current) {
+        saveConversation();
+      }
+    };
   }, [messages]);
 
   const handleSubmit = async (e: React.FormEvent) => {

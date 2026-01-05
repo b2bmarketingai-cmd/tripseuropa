@@ -1,6 +1,10 @@
 import type { Express, Request, Response } from "express";
 import OpenAI from "openai";
 import { chatStorage } from "./storage";
+import { db } from "../../db";
+import { sofiaConversations } from "@shared/schema";
+import { sendSofiaConversationEmail } from "../email";
+import { desc, eq } from "drizzle-orm";
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -179,6 +183,108 @@ export function registerChatRoutes(app: Express): void {
       } else {
         res.status(500).json({ error: "Failed to send message" });
       }
+    }
+  });
+
+  // Save Sofia conversation summary
+  app.post("/api/sofia/conversations", async (req: Request, res: Response) => {
+    try {
+      const body = req.body;
+      
+      const [conversation] = await db.insert(sofiaConversations).values({
+        timestamp: body.timestamp ? new Date(body.timestamp) : new Date(),
+        userCountry: body.userCountry || null,
+        userName: body.userName || null,
+        userEmail: body.userEmail || null,
+        userPhone: body.userPhone || null,
+        mainTopic: body.mainTopic || null,
+        durationMinutes: body.durationMinutes || 0,
+        finalStatus: body.finalStatus || "completed",
+        recommendedPackage: body.recommendedPackage || null,
+        transcription: body.transcription || "",
+        satisfaction: body.satisfaction || null,
+        conversationId: body.conversationId || null,
+        emailsSent: false,
+      }).returning();
+
+      // Send email notification
+      const emailSent = await sendSofiaConversationEmail({
+        timestamp: (body.timestamp ? new Date(body.timestamp) : new Date()).toLocaleString('es-CO', { timeZone: 'America/Bogota' }),
+        userCountry: body.userCountry || null,
+        userName: body.userName || null,
+        userEmail: body.userEmail || null,
+        userPhone: body.userPhone || null,
+        mainTopic: body.mainTopic || null,
+        durationMinutes: body.durationMinutes || 0,
+        finalStatus: body.finalStatus || "completed",
+        recommendedPackage: body.recommendedPackage || null,
+        transcription: body.transcription || "",
+        satisfaction: body.satisfaction || null,
+        conversationId: body.conversationId || null,
+      });
+
+      // Update emailsSent status
+      if (emailSent) {
+        await db.update(sofiaConversations)
+          .set({ emailsSent: true })
+          .where(eq(sofiaConversations.id, conversation.id));
+      }
+
+      res.status(201).json({
+        success: true,
+        conversationId: conversation.id,
+        emailsSent,
+        message: "Conversacion registrada exitosamente"
+      });
+    } catch (error) {
+      console.error("Error saving Sofia conversation:", error);
+      res.status(500).json({ error: "Failed to save conversation" });
+    }
+  });
+
+  // Get Sofia conversations (for admin dashboard)
+  app.get("/api/sofia/conversations", async (req: Request, res: Response) => {
+    try {
+      const conversations = await db.select().from(sofiaConversations).orderBy(desc(sofiaConversations.createdAt)).limit(100);
+      
+      // Calculate stats
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      
+      const todayConversations = conversations.filter(c => c.createdAt && new Date(c.createdAt) >= today);
+      const escalatedConversations = conversations.filter(c => c.finalStatus === "escalado");
+      const satisfactionScores = conversations.filter(c => c.satisfaction != null).map(c => c.satisfaction as number);
+      const avgSatisfaction = satisfactionScores.length > 0 
+        ? satisfactionScores.reduce((a, b) => a + b, 0) / satisfactionScores.length 
+        : 0;
+
+      res.json({
+        total: conversations.length,
+        hoy: todayConversations.length,
+        escaladas: escalatedConversations.length,
+        satisfaccion_promedio: avgSatisfaction,
+        conversaciones: conversations
+      });
+    } catch (error) {
+      console.error("Error fetching Sofia conversations:", error);
+      res.status(500).json({ error: "Failed to fetch conversations" });
+    }
+  });
+
+  // Get single Sofia conversation
+  app.get("/api/sofia/conversations/:id", async (req: Request, res: Response) => {
+    try {
+      const id = parseInt(req.params.id);
+      const [conversation] = await db.select().from(sofiaConversations).where(eq(sofiaConversations.id, id));
+      
+      if (!conversation) {
+        return res.status(404).json({ error: "Conversation not found" });
+      }
+      
+      res.json(conversation);
+    } catch (error) {
+      console.error("Error fetching Sofia conversation:", error);
+      res.status(500).json({ error: "Failed to fetch conversation" });
     }
   });
 }
