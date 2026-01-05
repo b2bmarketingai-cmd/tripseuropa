@@ -20,7 +20,9 @@ import {
   Users,
   TrendingUp,
   Filter,
-  ChevronRight
+  ChevronRight,
+  Sparkles,
+  Send
 } from "lucide-react";
 import { FloatingContactButtons } from "@/components/support";
 
@@ -34,6 +36,7 @@ interface ForumThread {
   likes: number;
   createdAt: string;
   tags: string[];
+  sofiaResponse?: string;
 }
 
 const FORUM_CATEGORIES = {
@@ -68,6 +71,7 @@ const SAMPLE_THREADS: ForumThread[] = [
     likes: 89,
     createdAt: "2025-01-03",
     tags: ["París", "Francia", "Primera vez"],
+    sofiaResponse: "Que maravilla María! París en 10 días es perfecto. Te recomiendo también visitar el Barrio Le Marais y hacer un paseo en barco por el Sena al atardecer. Si necesitas ayuda planificando tu próximo viaje, estoy aquí para ti!",
   },
   {
     id: "2",
@@ -79,6 +83,7 @@ const SAMPLE_THREADS: ForumThread[] = [
     likes: 156,
     createdAt: "2025-01-02",
     tags: ["Familia", "Niños", "Consejos"],
+    sofiaResponse: "Excelentes consejos Carlos! Agregaría que muchos museos en Europa tienen entrada gratuita para niños menores de 12 años. También recomiendo llevar snacks de casa y planificar actividades cortas. Puedo ayudarte a encontrar hoteles familiares con descuentos especiales!",
   },
   {
     id: "3",
@@ -90,6 +95,7 @@ const SAMPLE_THREADS: ForumThread[] = [
     likes: 67,
     createdAt: "2025-01-01",
     tags: ["Italia", "Presupuesto", "Planificación"],
+    sofiaResponse: "Hola Ana! Para 15 días en Italia te recomiendo un presupuesto de EUR 1,500-2,500 sin incluir vuelos. Esto cubre alojamiento, comidas y entradas. Tenemos paquetes especiales desde Colombia con todo incluido. Te puedo enviar una cotización personalizada!",
   },
   {
     id: "4",
@@ -101,6 +107,7 @@ const SAMPLE_THREADS: ForumThread[] = [
     likes: 45,
     createdAt: "2024-12-28",
     tags: ["España", "Camino de Santiago", "Grupo"],
+    sofiaResponse: "Que emocionante Pedro! El Camino de Santiago en abril es ideal por el clima. Ofrecemos paquetes grupales con albergues reservados, transporte de equipaje y guía. Abril tiene disponibilidad limitada, así que reserva pronto!",
   },
   {
     id: "5",
@@ -112,6 +119,7 @@ const SAMPLE_THREADS: ForumThread[] = [
     likes: 38,
     createdAt: "2024-12-27",
     tags: ["Turquía", "Clima", "Temporada"],
+    sofiaResponse: "Hola Laura! Turquía es espectacular tanto en primavera (abril-mayo) como en otoño (septiembre-octubre). La primavera tiene flores y menos turistas, mientras que el otoño tiene temperaturas perfectas. Tenemos un paquete nuevo a Estambul y Capadocia que te encantará!",
   },
 ];
 
@@ -290,6 +298,38 @@ export default function Forum() {
                               </Badge>
                             ))}
                           </div>
+                        </div>
+                      </div>
+                      
+                      {thread.sofiaResponse && (
+                        <div className="mt-4 pt-4 border-t border-border">
+                          <div className="flex gap-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#b8962e] flex items-center justify-center shrink-0">
+                              <Sparkles className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="font-semibold text-sm">Sofia</span>
+                                <Badge className="text-[10px] bg-[#d4af37]/20 text-[#d4af37] border-0">
+                                  {language === "es" ? "Agente de Viajes" : language === "pt" ? "Agente de Viagens" : "Travel Agent"}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-muted-foreground">{thread.sofiaResponse}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div className="mt-4 pt-4 border-t border-border">
+                        <div className="flex gap-2">
+                          <Input 
+                            placeholder={language === "es" ? "Escribe tu respuesta..." : language === "pt" ? "Escreva sua resposta..." : "Write your reply..."}
+                            className="flex-1"
+                            data-testid={`input-reply-${thread.id}`}
+                          />
+                          <Button size="icon" className="bg-accent text-primary shrink-0" data-testid={`button-send-reply-${thread.id}`}>
+                            <Send className="w-4 h-4" />
+                          </Button>
                         </div>
                       </div>
                     </CardContent>
