@@ -911,7 +911,7 @@ export function generateLegalSitemap(): string {
 }
 
 function generateRobotsTxt(): string {
-  return `# Robots.txt for tripseuropa.co
+  return `# Robots.txt for tripseuropa.com
 # Generated automatically - Multinational SEO Strategy
 
 User-agent: *

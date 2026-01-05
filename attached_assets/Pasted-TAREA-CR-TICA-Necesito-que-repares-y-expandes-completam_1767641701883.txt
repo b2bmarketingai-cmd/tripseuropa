@@ -1,0 +1,63 @@
+TAREA CRÍTICA: Necesito que repares y expandes completamente la estrategia de sitemaps para tripseuropa.com:
+
+1. **PROBLEMA ACTUAL**: 4 de 7 sitemaps en Google Search Console retornan error "No se ha podido obtener". Los archivos existen en public/ pero están vacíos o mal formados.
+
+2. **ACCIÓN 1 - REPARA los 7 sitemaps actuales**: Revisa cada archivo (sitemap-es.xml, sitemap-en.xml, sitemap-es-co.xml, sitemap-es-mx.xml, sitemap-es-ar.xml, sitemap-pt.xml, sitemap-pt-br.xml) en /public y asegúrate que tengan contenido válido con al menos 5-10 URLs cada uno. Si están vacíos, genera contenido dinámico basado en las páginas existentes.
+
+3. **ACCIÓN 2 - CREA la estructura completa de 27+ sitemaps** según esta estrategia:
+
+**General (1)**:
+- /sitemaps/sitemap-general.xml (páginas generales: home, about, contact, policies, etc)
+
+**Por País - Español (8)**:
+- /sitemaps/sitemap-co-colombia-es.xml
+- /sitemaps/sitemap-co-mexico-es.xml
+- /sitemaps/sitemap-co-argentina-es.xml
+- /sitemaps/sitemap-co-peru-es.xml
+- /sitemaps/sitemap-co-panama-es.xml
+- /sitemaps/sitemap-co-costarica-es.xml
+- /sitemaps/sitemap-co-dominicana-es.xml
+- /sitemaps/sitemap-co-caribe-es.xml
+
+**Por País - Inglés (3)**:
+- /sitemaps/sitemap-co-colombia-en.xml
+- /sitemaps/sitemap-co-mexico-en.xml
+- /sitemaps/sitemap-co-argentina-en.xml
+
+**Por País - Portugués (2)**:
+- /sitemaps/sitemap-co-brasil-pt.xml
+- /sitemaps/sitemap-co-brasil-en.xml
+
+**Destinos Europa (3)**:
+- /sitemaps/sitemap-destinos-europa-es.xml (España, Francia, Italia, Alemania, Portugal, etc.)
+- /sitemaps/sitemap-destinos-europa-en.xml (English version)
+- /sitemaps/sitemap-destinos-europa-pt.xml (Portuguese version)
+
+**Blog (3)**:
+- /sitemaps/sitemap-blog-es.xml
+- /sitemaps/sitemap-blog-en.xml
+- /sitemaps/sitemap-blog-pt.xml
+
+**Contenido Especial (7)**:
+- /sitemaps/sitemap-paquetes.xml (travel packages)
+- /sitemaps/sitemap-ofertas.xml (special offers)
+- /sitemaps/sitemap-experiencias.xml (travel experiences)
+- /sitemaps/sitemap-imagenes.xml (image sitemap for image SEO)
+- /sitemaps/sitemap-videos.xml (video sitemap)
+- /sitemaps/sitemap-noticias.xml (news sitemap)
+- /sitemaps/sitemap-legales.xml (legal pages)
+
+4. **ACCIÓN 3 - ACTUALIZA el sitemap.xml PRINCIPAL** para incluir TODOS estos 27+ sitemaps.
+
+5. **ACCIÓN 4 - Asegúrate que**:
+   - Cada sitemap tiene estructura XML válida
+   - URLs con lastmod dates
+   - Incluye changefreq y priority apropiados
+   - Para sitemaps de imágenes: incluir tags <image> con URL de imagen
+   - Para sitemaps de videos: incluir tags <video> con metadata
+   - Todos los URLs usan dominio https://tripseuropa.com (PRINCIPAL)
+   - Los URLs secundarios a tripseuropa.co se van a sitemaps separados
+
+6. **ACCIÓN 5 - Genera al menos 100+ URLs totales** en todos los sitemaps combinados (actualmente solo tienes 16).
+
+Esto es CRÍTICO para superar a competidores en posicionamiento SEO. ¿Empezamos?
