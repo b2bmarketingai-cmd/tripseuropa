@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://tripseuropa.com/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/
+Disallow: /api/
 
 User-agent: Googlebot
 Allow: /
@@ -9,5 +11,7 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Disallow: /admin/
-Disallow: /checkout/
+Sitemap: https://tripseuropa.com/sitemap.xml
+Sitemap: https://tripseuropa.com/sitemap-es.xml
+Sitemap: https://tripseuropa.com/sitemap-en.xml
+Sitemap: https://tripseuropa.com/sitemap-pt.xml

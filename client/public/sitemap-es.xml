@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tripseuropa.com/</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tripseuropa.com/?lang=pt"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/paquetes</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/destinos</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/blog</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/contacto</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/testimonios</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/herramientas</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/desde-colombia</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://tripseuropa.com/desde-colombia"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/desde-mexico</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://tripseuropa.com/desde-mexico"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/desde-venezuela</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://tripseuropa.com/desde-venezuela"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/desde-argentina</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://tripseuropa.com/desde-argentina"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/desde-peru</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://tripseuropa.com/desde-peru"/>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinos/espana</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinos/francia</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinos/italia</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinos/portugal</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinos/grecia</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

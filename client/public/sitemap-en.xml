@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tripseuropa.com/?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tripseuropa.com/?lang=pt"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/packages?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/destinations?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/blog?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/contact?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/testimonials?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinations/spain?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinations/france?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinations/italy?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinations/portugal?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tripseuropa.com/destinations/greece?lang=en</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
