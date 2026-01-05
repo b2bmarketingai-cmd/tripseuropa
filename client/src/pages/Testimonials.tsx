@@ -105,11 +105,16 @@ export default function Testimonials() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-testimonials-title">
             {language === "es" ? "Lo Que Dicen Nuestros Viajeros" : "What Our Travelers Say"}
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-testimonials-subtitle">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8" data-testid="text-testimonials-subtitle">
             {language === "es" 
-              ? "Mas de 5,000 viajeros felices nos respaldan. Lee sus experiencias" 
+              ? "Más de 5,000 viajeros felices nos respaldan. Lee sus experiencias" 
               : "More than 5,000 happy travelers support us. Read their experiences"}
           </p>
+          <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola!%20Quiero%20planificar%20mi%20viaje%20a%20Europa" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-hero-whatsapp">
+              {language === "es" ? "Cotizar mi viaje" : "Get a quote"}
+            </Button>
+          </a>
         </div>
       </section>
 
