@@ -10,6 +10,7 @@ import { useI18n } from "@/lib/i18n";
 import { Send, Phone, Mail, CheckCircle } from "lucide-react";
 import { useCreateLead } from "@/hooks/use-leads";
 import { PhoneInput } from "@/components/PhoneInput";
+import { DESTINATIONS_DATA } from "@/lib/destinationsData";
 import {
   Form,
   FormControl,
@@ -39,13 +40,13 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
   const { mutate: createLead, isPending } = useCreateLead();
 
   const phoneRequiredMsg = language === "es" ? "El teléfono es obligatorio" : language === "pt" ? "O telefone é obrigatório" : "Phone is required";
-  const serviceRequiredMsg = language === "es" ? "Selecciona un servicio" : language === "pt" ? "Selecione um servico" : "Select a service";
+  const destinationRequiredMsg = language === "es" ? "Selecciona un destino" : language === "pt" ? "Selecione um destino" : "Select a destination";
   
   const contactSchema = z.object({
     name: z.string().min(2, t("form.validation.nameMin")),
     email: z.string().email(t("form.validation.emailInvalid")),
     phone: z.string().min(5, phoneRequiredMsg),
-    serviceInterest: z.string().min(1, serviceRequiredMsg),
+    serviceInterest: z.string().min(1, destinationRequiredMsg),
     message: z.string().min(1).optional(),
     honeypot: z.string().max(0).optional(),
   });
@@ -71,13 +72,13 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
     const { honeypot, ...leadData } = data;
     createLead(leadData as any, {
       onSuccess: () => {
-        const serviceLabel = serviceOptions.find(s => s.value === data.serviceInterest)?.label || data.serviceInterest;
+        const destinationLabel = destinationOptions.find(d => d.value === data.serviceInterest)?.label || data.serviceInterest;
         const whatsappMessage = `Nueva solicitud de contacto!
 
 *Nombre:* ${data.name}
 *Email:* ${data.email}
 *Telefono:* ${data.phone}
-*Servicio:* ${serviceLabel}
+*Destino de Interes:* ${destinationLabel}
 *Mensaje:* ${data.message || "Sin mensaje"}`;
         window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
         
@@ -114,15 +115,10 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
   const isHero = variant === "hero";
   const isFooter = variant === "footer";
 
-  const serviceOptions = [
-    { value: "vuelos", label: t("contact.services.flights") },
-    { value: "paquetes", label: t("contact.services.packages") },
-    { value: "hoteles", label: t("contact.services.hotels") },
-    { value: "luna-miel", label: t("contact.services.honeymoon") },
-    { value: "grupos", label: t("contact.services.groups") },
-    { value: "corporativo", label: t("contact.services.corporate") },
-    { value: "otro", label: t("contact.services.other") },
-  ];
+  const destinationOptions = DESTINATIONS_DATA.map(dest => ({
+    value: dest.slug,
+    label: language === "es" ? dest.name.es : language === "pt" ? (dest.name.pt || dest.name.en) : dest.name.en
+  }));
 
   return (
     <div className={`${isHero ? "glass-panel rounded-2xl p-6 md:p-8" : isFooter ? "" : "bg-white rounded-2xl shadow-xl p-8"}`} data-testid="contact-form-container">
@@ -210,8 +206,8 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      {serviceOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value} data-testid={`option-service-${option.value}`}>
+                      {destinationOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value} data-testid={`option-destination-${option.value}`}>
                           {option.label}
                         </SelectItem>
                       ))}
