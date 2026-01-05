@@ -82,12 +82,6 @@ export default function Home() {
       
       <HeroCarousel />
       
-      <section className="py-8 bg-primary/5" data-testid="section-smart-search">
-        <div className="container mx-auto px-4">
-          <SmartSearchBar variant="hero" />
-        </div>
-      </section>
-      
       <HeroFlightSearch />
 
       <TopOffers />
@@ -101,6 +95,12 @@ export default function Home() {
       <Favorites />
 
       <WhyChooseUs />
+
+      <section className="py-12 bg-primary/5" data-testid="section-smart-search">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <SmartSearchBar variant="hero" />
+        </div>
+      </section>
 
       <BestPriceGuarantee />
 
