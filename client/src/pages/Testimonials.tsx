@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Quote, MapPin } from "lucide-react";
-import { Link } from "wouter";
 
 import carolinaImg from "@assets/generated_images/colombian_woman_professional_headshot.png";
 import robertoImg from "@assets/generated_images/colombian_man_professional_headshot.png";
@@ -189,11 +188,11 @@ export default function Testimonials() {
               ? "Unete a miles de viajeros satisfechos y vive tu propia experiencia europea" 
               : "Join thousands of satisfied travelers and live your own European experience"}
           </p>
-          <Link href="/contact">
+          <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola!%20Quiero%20planificar%20mi%20viaje%20a%20Europa" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-testimonials-contact">
               {language === "es" ? "Planificar mi viaje" : "Plan my trip"}
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
