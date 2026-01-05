@@ -398,7 +398,7 @@ export function SmartSearchBar({ variant = "hero" }: { variant?: "hero" | "compa
         type="button"
         onClick={handleSubmitToWhatsApp}
         disabled={!hasAnySelection}
-        className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-bold text-base gap-2"
+        className="w-full h-12 bg-[#22c55e] hover:bg-green-700 text-[#ffffff] font-bold text-base gap-2"
         data-testid="button-search-whatsapp"
       >
         <SiWhatsapp className="w-5 h-5" />
