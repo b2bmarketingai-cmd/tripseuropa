@@ -15,7 +15,7 @@ export function Footer() {
     { name: { es: "Blog", en: "Blog", pt: "Blog" }, href: "/blog", icon: BookOpen },
     { name: { es: "Comunidad", en: "Community", pt: "Comunidade" }, href: "/forum", icon: Users },
     { name: { es: "Contacto", en: "Contact", pt: "Contato" }, href: "/contact", icon: MessageCircle },
-    { name: { es: "Sofia Agente de Viajes", en: "Sofia Travel Agent", pt: "Sofia Agente de Viagens" }, href: "/travel-assistant", icon: Bot },
+    { name: { es: "Sofia Agente de Viajes", en: "Sofia Travel Agent", pt: "Sofia Agente de Viagens" }, href: "/travel-assistant", icon: Sparkles },
   ];
 
   const destinations = [
