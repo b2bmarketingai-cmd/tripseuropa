@@ -13,5 +13,7 @@ Allow: /
 
 Sitemap: https://tripseuropa.com/sitemap.xml
 Sitemap: https://tripseuropa.com/sitemap-es.xml
+Sitemap: https://tripseuropa.com/sitemap-es-mx.xml
 Sitemap: https://tripseuropa.com/sitemap-en.xml
 Sitemap: https://tripseuropa.com/sitemap-pt.xml
+Sitemap: https://tripseuropa.com/sitemap-pt-br.xml
