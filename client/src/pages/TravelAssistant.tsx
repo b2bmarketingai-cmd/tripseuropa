@@ -4,7 +4,7 @@ import sofiaAvatar from "@assets/generated_images/professional_european_travel_a
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { useChatbot } from "@/hooks/use-chatbot";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -128,11 +128,6 @@ export default function TravelAssistant() {
               </p>
             </div>
           </div>
-          
-          <Badge className="bg-accent/10 text-accent border-accent/30 gap-1">
-            <Sparkles className="w-3 h-3" />
-            {language === "es" ? "Potenciado por Inteligencia Artificial" : language === "pt" ? "Potencializado por Inteligência Artificial" : "Powered by Artificial Intelligence"}
-          </Badge>
         </div>
 
         <div className="max-w-4xl mx-auto">
