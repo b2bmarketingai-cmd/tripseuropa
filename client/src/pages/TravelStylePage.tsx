@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { useParams, Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Accordion,
   AccordionContent,
@@ -15,16 +11,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useI18n } from "@/lib/i18n";
-import { getTravelStyleBySlug, TravelStyleData } from "@/lib/travelStyleData";
+import { getTravelStyleBySlug } from "@/lib/travelStyleData";
 import { 
   Calendar, Clock, Check, ChevronRight, MapPin, 
-  Users, Mail, Phone, Send, Star, ArrowLeft,
-  MessageSquare, Loader2
+  Users, Phone, Star, ArrowLeft, MessageSquare
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import { useToast } from "@/hooks/use-toast";
-import { useCreateLead } from "@/hooks/use-leads";
 import { FloatingContactButtons } from "@/components/support";
+import { ContactForm } from "@/components/ContactForm";
 
 const CONTENT = {
   es: {
@@ -116,20 +110,8 @@ export default function TravelStylePage() {
   const contentLang = language as "es" | "en" | "pt";
   const dataLang = language === "pt" ? "es" : (language as "es" | "en");
   const content = CONTENT[contentLang];
-  const { toast } = useToast();
-
   const travelStyle = getTravelStyleBySlug(slug || "");
   
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    travelers: "",
-    travelDate: "",
-    message: ""
-  });
-  const { mutate: createLead, isPending: isSubmitting } = useCreateLead();
-
   if (!travelStyle) {
     return (
       <div className="min-h-screen bg-background">
@@ -146,58 +128,6 @@ export default function TravelStylePage() {
       </div>
     );
   }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email) {
-      toast({
-        title: contentLang === "es" ? "Campos requeridos" : contentLang === "pt" ? "Campos obrigatorios" : "Required fields",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    const messageContent = `Viajeros: ${formData.travelers || "No especificado"}, Fecha: ${formData.travelDate || "No especificada"}, ${formData.message || ""}`;
-    
-    createLead({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone || null,
-      originCountry: null,
-      serviceInterest: travelStyle?.name[dataLang] || null,
-      message: messageContent
-    }, {
-      onSuccess: () => {
-        const whatsappMessage = `Nueva solicitud - ${travelStyle?.name[dataLang] || "Estilo de viaje"}!
-
-*Nombre:* ${formData.name}
-*Email:* ${formData.email}
-*Telefono:* ${formData.phone || "No proporcionado"}
-*Viajeros:* ${formData.travelers || "No especificado"}
-*Fecha:* ${formData.travelDate || "No especificada"}
-*Mensaje:* ${formData.message || "Sin mensaje"}`;
-        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
-        
-        toast({
-          title: contentLang === "es" ? "Solicitud enviada" : contentLang === "pt" ? "Solicitacao enviada" : "Request sent",
-          description: contentLang === "es" 
-            ? "Un asesor te contactara pronto" 
-            : contentLang === "pt" 
-            ? "Um consultor entrara em contato em breve"
-            : "An advisor will contact you soon",
-        });
-        setFormData({ name: "", email: "", phone: "", travelers: "", travelDate: "", message: "" });
-      },
-      onError: () => {
-        toast({
-          title: "Error",
-          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : contentLang === "pt" ? "Erro ao enviar. Tente novamente." : "Error sending. Please try again.",
-          variant: "destructive"
-        });
-      }
-    });
-  };
 
   const categoryLabels = {
     season: { es: "Por Temporada", en: "By Season", pt: "Por Temporada" },
@@ -322,7 +252,6 @@ export default function TravelStylePage() {
                   <Button 
                     className="w-full bg-accent text-primary hover:bg-accent/90"
                     onClick={() => {
-                      setFormData(prev => ({ ...prev, message: `Interes en: ${pkg.name[dataLang]}` }));
                       document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     data-testid={`button-package-${idx}`}
@@ -398,91 +327,7 @@ export default function TravelStylePage() {
             
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-3">
-                <form onSubmit={handleSubmit} className="bg-card rounded-md p-6 shadow-lg">
-                  <div className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="name">{content.name}</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          required
-                          data-testid="input-name"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="email">{content.email}</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          required
-                          data-testid="input-email"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone">{content.phone}</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                          required
-                          data-testid="input-phone"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="travelers">{content.travelers}</Label>
-                        <Input
-                          id="travelers"
-                          type="number"
-                          min="1"
-                          value={formData.travelers}
-                          onChange={(e) => setFormData(prev => ({ ...prev, travelers: e.target.value }))}
-                          data-testid="input-travelers"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="travelDate">{content.travelDate}</Label>
-                      <Input
-                        id="travelDate"
-                        type="text"
-                        placeholder={contentLang === "es" ? "Ej: Marzo 2026" : contentLang === "pt" ? "Ex: Marco 2026" : "Ex: March 2026"}
-                        value={formData.travelDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, travelDate: e.target.value }))}
-                        data-testid="input-date"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="message">{content.message}</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                        rows={4}
-                        data-testid="input-message"
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-accent text-primary hover:bg-accent/90"
-                      disabled={isSubmitting}
-                      data-testid="button-submit"
-                    >
-                      {isSubmitting ? content.submitting : content.submit}
-                      <Send className="w-4 h-4 ml-2" />
-                    </Button>
-                  </div>
-                </form>
+                <ContactForm variant="page" defaultMessage={`Interesado en: ${travelStyle.name[dataLang]}`} />
               </div>
               
               <div className="md:col-span-2 space-y-4">

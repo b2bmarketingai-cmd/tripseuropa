@@ -24,15 +24,27 @@ interface ContactFormProps {
   variant?: "hero" | "footer" | "page";
   title?: string;
   subtitle?: string;
+  defaultDestination?: string;
+  defaultMessage?: string;
 }
 
-export function ContactForm({ variant = "page", title, subtitle }: ContactFormProps) {
+export function ContactForm({ variant = "page", title, subtitle, defaultDestination, defaultMessage }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [destSearch, setDestSearch] = useState("");
-  const [showDestDropdown, setShowDestDropdown] = useState(false);
   const { toast } = useToast();
   const { t, language } = useI18n();
   const { mutate: createLead, isPending } = useCreateLead();
+  
+  const destinationOptions = DESTINATIONS_DATA.map(dest => ({
+    value: dest.slug,
+    label: language === "es" ? dest.name.es : language === "pt" ? (dest.name.pt || dest.name.en) : dest.name.en
+  }));
+  
+  const initialDestOption = defaultDestination 
+    ? destinationOptions.find(d => d.value === defaultDestination || d.label.toLowerCase() === defaultDestination.toLowerCase())
+    : null;
+  
+  const [destSearch, setDestSearch] = useState(initialDestOption?.label || "");
+  const [showDestDropdown, setShowDestDropdown] = useState(false);
 
   const phoneRequiredMsg = language === "es" ? "El teléfono es obligatorio" : language === "pt" ? "O telefone é obrigatório" : "Phone is required";
   const destinationRequiredMsg = language === "es" ? "Selecciona un destino" : language === "pt" ? "Selecione um destino" : "Select a destination";
@@ -54,8 +66,8 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
       name: "",
       email: "",
       phone: "",
-      serviceInterest: "",
-      message: "",
+      serviceInterest: initialDestOption?.value || "",
+      message: defaultMessage || "",
       honeypot: "",
     },
   });
@@ -109,11 +121,6 @@ export function ContactForm({ variant = "page", title, subtitle }: ContactFormPr
 
   const isHero = variant === "hero";
   const isFooter = variant === "footer";
-
-  const destinationOptions = DESTINATIONS_DATA.map(dest => ({
-    value: dest.slug,
-    label: language === "es" ? dest.name.es : language === "pt" ? (dest.name.pt || dest.name.en) : dest.name.en
-  }));
 
   const filteredDestinations = destinationOptions.filter(dest =>
     dest.label.toLowerCase().includes(destSearch.toLowerCase())

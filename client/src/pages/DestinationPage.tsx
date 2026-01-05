@@ -1,5 +1,4 @@
 import { useParams, Link } from "wouter";
-import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { getDestinationBySlug } from "@/lib/destinationsData";
 import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
@@ -8,9 +7,6 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -18,8 +14,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useToast } from "@/hooks/use-toast";
-import { useCreateLead } from "@/hooks/use-leads";
 import {
   Calendar,
   MapPin,
@@ -27,41 +21,29 @@ import {
   Check,
   Star,
   Phone,
-  Mail,
-  User,
   MessageSquare,
   Globe,
   CreditCard,
   FileText,
   ChevronRight,
-  Send,
   Sun,
   Heart,
   Users,
   ArrowRight,
-  Loader2,
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { FloatingContactButtons } from "@/components/support";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
-  const { toast } = useToast();
   const destination = getDestinationBySlug(slug || "");
   // Content supports es/en/pt, destination data uses es/en with pt fallback to es
   const contentLang = language as "es" | "en" | "pt";
   const dataLang = (destination && destination.name[contentLang as keyof typeof destination.name] ? contentLang : "es") as "es" | "en";
   
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    packageInterest: ""
-  });
-  const { mutate: createLead, isPending: isSubmitting } = useCreateLead();
-
+  
   if (!destination) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -213,51 +195,7 @@ export default function DestinationPage() {
   const travelStylesByInterest = TRAVEL_STYLE_DATA.filter(ts => ts.category === "interest");
   const travelStylesByGroup = TRAVEL_STYLE_DATA.filter(ts => ts.category === "group");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email) {
-      toast({
-        title: contentLang === "es" ? "Campos requeridos" : contentLang === "pt" ? "Campos obrigatorios" : "Required fields",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    createLead({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone || null,
-      originCountry: null,
-      serviceInterest: formData.packageInterest || (destination?.name[dataLang] || null),
-      message: formData.message || null
-    }, {
-      onSuccess: () => {
-        const whatsappMessage = `Nueva solicitud - ${destination?.name[dataLang] || "Destino"}!
-
-*Nombre:* ${formData.name}
-*Email:* ${formData.email}
-*Telefono:* ${formData.phone || "No proporcionado"}
-*Paquete:* ${formData.packageInterest || "No especificado"}
-*Mensaje:* ${formData.message || "Sin mensaje"}`;
-        window.open(`https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`, "_blank");
-        
-        toast({
-          title: c.successTitle,
-          description: c.successMessage,
-        });
-        setFormData({ name: "", email: "", phone: "", message: "", packageInterest: "" });
-      },
-      onError: () => {
-        toast({
-          title: "Error",
-          description: contentLang === "es" ? "Error al enviar. Intenta de nuevo." : contentLang === "pt" ? "Erro ao enviar. Tente novamente." : "Error sending. Please try again.",
-          variant: "destructive"
-        });
-      }
-    });
-  };
-
+  
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
@@ -355,7 +293,6 @@ export default function DestinationPage() {
                   <Button 
                     className="w-full bg-accent text-primary hover:bg-accent/90"
                     onClick={() => {
-                      setFormData(prev => ({ ...prev, packageInterest: pkg.name[dataLang] }));
                       document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     data-testid={`button-select-package-${idx}`}
@@ -647,94 +584,7 @@ export default function DestinationPage() {
             
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-3">
-                <form onSubmit={handleSubmit} className="bg-card rounded-md p-6 shadow-lg">
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="name">{c.name}</Label>
-                      <div className="relative mt-1">
-                        <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          className="pl-10"
-                          required
-                          data-testid="input-contact-name"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="email">{c.email}</Label>
-                      <div className="relative mt-1">
-                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          className="pl-10"
-                          required
-                          data-testid="input-contact-email"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="phone">{c.phone}</Label>
-                      <div className="relative mt-1">
-                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                          className="pl-10"
-                          required
-                          data-testid="input-contact-phone"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="packageInterest">{c.packageInterest}</Label>
-                      <div className="relative mt-1">
-                        <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <Input
-                          id="packageInterest"
-                          value={formData.packageInterest}
-                          onChange={(e) => setFormData(prev => ({ ...prev, packageInterest: e.target.value }))}
-                          className="pl-10"
-                          placeholder={destination.packages[0]?.name[dataLang] || ""}
-                          data-testid="input-contact-package"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="message">{c.message}</Label>
-                      <div className="relative mt-1">
-                        <Textarea
-                          id="message"
-                          value={formData.message}
-                          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                          rows={4}
-                          data-testid="input-contact-message"
-                        />
-                      </div>
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-accent text-primary hover:bg-accent/90"
-                      disabled={isSubmitting}
-                      data-testid="button-submit-contact"
-                    >
-                      {isSubmitting ? c.submitting : c.submit}
-                      <Send className="w-4 h-4 ml-2" />
-                    </Button>
-                  </div>
-                </form>
+                <ContactForm variant="page" defaultDestination={slug} />
               </div>
               
               <div className="md:col-span-2 space-y-4">
