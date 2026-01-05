@@ -1,6 +1,7 @@
 import { Express, Request, Response } from 'express';
 
-const DOMAIN = 'https://tripseuropa.co';
+const DOMAIN = 'https://tripseuropa.com';
+const DOMAIN_SECONDARY = 'https://tripseuropa.co';
 
 interface CountryConfig {
   code: string;
