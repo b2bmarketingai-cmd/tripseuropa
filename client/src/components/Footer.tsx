@@ -279,22 +279,26 @@ export function Footer() {
           </div>
           
           <div className="border-t border-white/10 pt-6">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-              <div className="flex items-center gap-2" title="Confianza Online">
-                <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-white/70" />
-                </div>
-                <span className="text-sm text-white/60 font-medium tracking-wide">CONFIANZA ONLINE</span>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
+              <div className="flex items-center gap-3 bg-gradient-to-r from-[#d4af37]/20 to-transparent px-4 py-2 rounded-full">
+                <Sparkles className="w-5 h-5 text-[#d4af37]" />
+                <span className="text-sm text-white font-medium">
+                  {language === "es" ? "+15,000 viajeros felices" : language === "pt" ? "+15.000 viajantes felizes" : "+15,000 happy travelers"}
+                </span>
               </div>
               
-              <div className="text-center text-white/50 text-sm">
-                <p>{language === "es" ? "Trips Europa es Agencia de Viajes" : language === "pt" ? "Trips Europa é Agência de Viagens" : "Trips Europa is a Travel Agency"}</p>
+              <div className="flex items-center gap-3 bg-gradient-to-r from-[#d4af37]/20 to-transparent px-4 py-2 rounded-full">
+                <Shield className="w-5 h-5 text-[#d4af37]" />
+                <span className="text-sm text-white font-medium">
+                  {language === "es" ? "Pago 100% seguro" : language === "pt" ? "Pagamento 100% seguro" : "100% secure payment"}
+                </span>
               </div>
               
-              <div className="flex items-center gap-2" title="IATA Member">
-                <div className="px-4 py-2 border border-white/30 rounded flex items-center justify-center">
-                  <span className="text-xl font-bold text-white/80 tracking-wider" style={{ fontFamily: "serif" }}>IATA</span>
-                </div>
+              <div className="flex items-center gap-3 bg-gradient-to-r from-[#d4af37]/20 to-transparent px-4 py-2 rounded-full">
+                <Phone className="w-5 h-5 text-[#d4af37]" />
+                <span className="text-sm text-white font-medium">
+                  {language === "es" ? "Soporte 24/7" : language === "pt" ? "Suporte 24/7" : "24/7 Support"}
+                </span>
               </div>
             </div>
           </div>
