@@ -1326,9 +1326,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Albanian Riviera", "Berat city of a thousand windows", "Gjirokaster stone city", "Lake Ohrid", "Tirana the colorful capital"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1601556123240-462c758a2d5a?w=800&q=80",
-      "https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=800&q=80",
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
+      "/assets/stock_images/albania_landscape_co_eb3c4c05.jpg",
+      "/assets/stock_images/albania_landscape_co_be1c7b64.jpg",
+      "/assets/stock_images/albania_landscape_co_84b9beb3.jpg"
     ],
     packages: [
       { id: "albania-1", name: { es: "Descubre Albania", en: "Discover Albania" }, duration: { es: "8 dias", en: "8 days" }, price: "1,899", taxes: "350", includes: { es: ["Vuelos", "Hoteles 4*", "Tours guiados", "Desayunos"], en: ["Flights", "4* Hotels", "Guided tours", "Breakfasts"] } }
@@ -1868,9 +1868,10 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Ayia Napa beaches", "Paphos ruins", "Troodos Mountains", "Divided Nicosia", "Aphrodite's Rock"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1605217613332-4c9e8a02f3b6?w=800&q=80",
-      "https://images.unsplash.com/photo-1558459654-c430be5b0def?w=800&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+      "/assets/stock_images/cyprus_mediterranean_14204acf.jpg",
+      "/assets/stock_images/cyprus_mediterranean_7b5cff46.jpg",
+      "/assets/stock_images/cyprus_mediterranean_93c4233d.jpg",
+      "/assets/stock_images/cyprus_mediterranean_05be4876.jpg"
     ],
     packages: [
       { id: "cyprus-1", name: { es: "Chipre Esencial", en: "Essential Cyprus" }, duration: { es: "7 dias", en: "7 days" }, price: "1,899", taxes: "360", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos"], en: ["Flights", "4* Hotels", "Rental car", "Breakfasts"] } }
@@ -1906,9 +1907,10 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Medieval Edinburgh", "Scottish Highlands", "Loch Ness", "Legendary castles", "Whisky distilleries"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=800&q=80",
-      "https://images.unsplash.com/photo-1562008564-6c7a6f89b7ff?w=800&q=80",
-      "https://images.unsplash.com/photo-1591622180684-9f9e8e6a0e3a?w=800&q=80"
+      "/assets/stock_images/scotland_highlands_e_97dd3c1f.jpg",
+      "/assets/stock_images/scotland_highlands_e_c0cd07b8.jpg",
+      "/assets/stock_images/scotland_highlands_e_a0bd0d10.jpg",
+      "/assets/stock_images/scotland_highlands_e_f85fbef4.jpg"
     ],
     packages: [
       { id: "scotland-1", name: { es: "Escocia Magica", en: "Magical Scotland" }, duration: { es: "8 dias", en: "8 days" }, price: "2,399", taxes: "400", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayuno escoces"], en: ["Flights", "4* Hotels", "Private transport", "Scottish breakfast"] } }

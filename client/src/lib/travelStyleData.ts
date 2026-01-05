@@ -192,8 +192,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Christmas markets", "Festive lights", "Traditional cuisine", "Local traditions"]
     },
     packages: [
-      { id: "chr-1", name: { es: "Mercados de Alemania", en: "German Christmas Markets" }, destination: "Germany", duration: { es: "9 dias", en: "9 days" }, price: 2990, image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=80&w=800", highlights: { es: ["Nuremberg", "Colonia", "Dresde"], en: ["Nuremberg", "Cologne", "Dresden"] } },
-      { id: "chr-2", name: { es: "Navidad en Viena", en: "Vienna Christmas" }, destination: "Austria", duration: { es: "6 dias", en: "6 days" }, price: 2650, image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=800", highlights: { es: ["Opera", "Mercados", "Conciertos"], en: ["Opera", "Markets", "Concerts"] } }
+      { id: "chr-1", name: { es: "Mercados de Alemania", en: "German Christmas Markets" }, destination: "Germany", duration: { es: "9 dias", en: "9 days" }, price: 2990, image: "/assets/stock_images/christmas_market_ger_17f23500.jpg", highlights: { es: ["Nuremberg", "Colonia", "Dresde"], en: ["Nuremberg", "Cologne", "Dresden"] } },
+      { id: "chr-2", name: { es: "Navidad en Viena", en: "Vienna Christmas" }, destination: "Austria", duration: { es: "6 dias", en: "6 days" }, price: 2650, image: "/assets/stock_images/christmas_bar_europe_48a50965.jpg", highlights: { es: ["Opera", "Mercados", "Conciertos"], en: ["Opera", "Markets", "Concerts"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada navidena", en: "Christmas arrival" }, description: { es: "Llegada y paseo por los mercados navidenos iluminados.", en: "Arrival and stroll through illuminated Christmas markets." } }
