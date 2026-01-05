@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, Plane, Hotel, Map, Heart, Users, Calendar, Sparkles, ArrowLeft } from "lucide-react";
+import { Send, Plane, Hotel, Map, Heart, Users, Calendar, Sparkles, ArrowLeft } from "lucide-react";
+import sofiaAvatar from "@assets/generated_images/professional_european_travel_advisor_sofia.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -113,9 +114,11 @@ export default function TravelAssistant() {
           </Link>
           
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
-              <Bot className="w-8 h-8 text-primary" />
-            </div>
+            <img 
+              src={sofiaAvatar} 
+              alt="Sofia - Travel Advisor"
+              className="w-16 h-16 rounded-full object-cover border-2 border-accent"
+            />
             <div className="text-left">
               <h1 className="text-3xl md:text-4xl font-display font-bold text-accent" data-testid="text-assistant-title">
                 Sofia
@@ -145,9 +148,11 @@ export default function TravelAssistant() {
                   <div className="space-y-6">
                     {/* Welcome Message */}
                     <div className="text-center py-8">
-                      <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Bot className="w-10 h-10 text-accent" />
-                      </div>
+                      <img 
+                        src={sofiaAvatar} 
+                        alt="Sofia - Travel Advisor"
+                        className="w-20 h-20 rounded-full object-cover border-2 border-accent mx-auto mb-4"
+                      />
                       <h2 className="text-xl font-display font-bold mb-2">
                         {language === "es" ? "¡Hola! Soy Sofia" : language === "pt" ? "Olá! Sou a Sofia" : "Hi! I'm Sofia"}
                       </h2>
@@ -201,7 +206,7 @@ export default function TravelAssistant() {
                       >
                         {msg.role === "assistant" && (
                           <div className="flex items-center gap-2 mb-2 text-accent">
-                            <Bot className="w-4 h-4" />
+                            <img src={sofiaAvatar} alt="Sofia" className="w-5 h-5 rounded-full object-cover" />
                             <span className="text-xs font-medium">Sofia</span>
                           </div>
                         )}

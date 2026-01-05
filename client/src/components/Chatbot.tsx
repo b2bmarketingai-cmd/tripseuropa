@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Bot, Plane, Hotel, Map, Heart, Users, Calendar } from "lucide-react";
+import { MessageCircle, X, Send, Plane, Hotel, Map, Heart, Users, Calendar } from "lucide-react";
+import sofiaAvatar from "@assets/generated_images/professional_european_travel_advisor_sofia.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useChatbot } from "@/hooks/use-chatbot";
@@ -94,9 +95,11 @@ export function Chatbot() {
       >
         {/* Header */}
         <div className="bg-primary p-4 flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-            <Bot className="w-6 h-6 text-primary" />
-          </div>
+          <img 
+            src={sofiaAvatar} 
+            alt="Sofia" 
+            className="w-10 h-10 rounded-full object-cover border-2 border-accent"
+          />
           <div>
             <h3 className="text-white font-bold font-display">Sofia</h3>
             <p className="text-accent text-xs">
@@ -110,9 +113,11 @@ export function Chatbot() {
           {messages.length === 0 && (
             <div className="space-y-4">
               <div className="text-center text-muted-foreground mt-4">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Bot className="w-8 h-8 text-accent" />
-                </div>
+                <img 
+                  src={sofiaAvatar} 
+                  alt="Sofia" 
+                  className="w-16 h-16 rounded-full object-cover border-2 border-accent mx-auto mb-3"
+                />
                 <p className="text-sm font-medium mb-1">
                   {language === "es" ? "¡Hola! Soy Sofia" : language === "pt" ? "Olá! Sou a Sofia" : "Hi! I'm Sofia"}
                 </p>
