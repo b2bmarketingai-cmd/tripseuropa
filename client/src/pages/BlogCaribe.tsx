@@ -18,7 +18,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 
 const TOP_DESTINATIONS = [
   {
-    id: "espana",
+    id: "españa",
     name: "España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
@@ -55,7 +55,7 @@ const TOP_DESTINATIONS = [
     name: "Portugal",
     countryCode: "PT",
     image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
-    why: ["Precio accesible", "Playas hermosas", "Cultura unica", "Gastronomia"],
+    why: ["Precio accesible", "Playas hermosas", "Cultura única", "Gastronomia"],
     duration: "5-7 dias",
     priceRange: "$9,500 USD",
     bestTime: "Mayo - Octubre",
@@ -76,8 +76,8 @@ const TOP_DESTINATIONS = [
 
 const TRAVEL_ROUTES = [
   {
-    id: "europa-clasica",
-    name: "Europa Clasica",
+    id: "europa-clásica",
+    name: "Europa Clásica",
     duration: "10 dias",
     price: "$11,000 USD",
     route: "Caribe - Madrid - Barcelona - Paris",
@@ -90,11 +90,11 @@ const TRAVEL_ROUTES = [
     duration: "12 dias",
     price: "$12,000 USD",
     route: "Caribe - Estambul - Europa Occidental",
-    highlights: ["2 continentes", "Turkish Airlines", "Historia unica"],
+    highlights: ["2 continentes", "Turkish Airlines", "Historia única"],
     icon: Globe,
   },
   {
-    id: "portugal-espana",
+    id: "portugal-españa",
     name: "Portugal + España",
     duration: "8 dias",
     price: "$9,500 USD",
@@ -332,7 +332,7 @@ export default function BlogCaribe() {
                   <div className="mt-4 pt-3 border-t">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4" />
-                      <span>{language === "es" ? "Mejor epoca:" : language === "pt" ? "Melhor epoca:" : "Best time:"} {dest.bestTime}</span>
+                      <span>{language === "es" ? "Mejor época:" : language === "pt" ? "Melhor época:" : "Best time:"} {dest.bestTime}</span>
                     </div>
                   </div>
                 </CardContent>

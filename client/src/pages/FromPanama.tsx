@@ -25,7 +25,7 @@ const PACKAGES_PANAMA = [
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=70&w=800&auto=format&fit=crop",
   },
   {
-    id: "espana-portugal-pa",
+    id: "españa-portugal-pa",
     title: "España y Portugal desde Panama",
     destinations: ["Madrid", "Lisboa", "Porto", "Sevilla"],
     days: 12,
@@ -71,7 +71,7 @@ const TESTIMONIALS_PANAMA = [
   {
     name: "Maria Elena Castillo",
     city: "Panama City", 
-    trip: "Italia Clasica",
+    trip: "Italia Clásica",
     text: "Mi esposo y yo disfrutamos cada momento. El guia en espanol fue excelente.",
     rating: 5,
   },
@@ -351,7 +351,7 @@ export default function FromPanama() {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Trips Europa - Viajes desde Panama",
-          "description": "Agencia de viajes especializada en paquetes turisticos a Europa desde Panama. Vuelos, hoteles, tours y guias en espanol.",
+          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Panama. Vuelos, hoteles, tours y guias en espanol.",
           "url": "https://tripseuropa.com/desde-panama",
           "areaServed": {
             "@type": "Country",

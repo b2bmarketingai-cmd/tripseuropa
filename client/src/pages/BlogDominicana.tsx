@@ -18,7 +18,7 @@ import { FAQSchema, BreadcrumbSchema, BlogPostSchema } from "@/components/SEOSch
 
 const TOP_DESTINATIONS = [
   {
-    id: "espana",
+    id: "españa",
     name: "España",
     countryCode: "ES",
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
@@ -66,7 +66,7 @@ const TOP_DESTINATIONS = [
     name: "Estambul, Turquia",
     countryCode: "TR",
     image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop",
-    why: ["Precio accesible", "Cultura unica", "Gastronomia", "Historia"],
+    why: ["Precio accesible", "Cultura única", "Gastronomia", "Historia"],
     duration: "7-8 dias",
     priceRange: "$9,000 USD",
     bestTime: "Abril - Mayo, Septiembre - Octubre",
@@ -76,8 +76,8 @@ const TOP_DESTINATIONS = [
 
 const TRAVEL_ROUTES = [
   {
-    id: "espana-clasica",
-    name: "España Clasica",
+    id: "españa-clásica",
+    name: "España Clásica",
     duration: "8 dias",
     price: "$10,500 USD",
     route: "Santo Domingo - Madrid - Barcelona",
@@ -85,7 +85,7 @@ const TRAVEL_ROUTES = [
     icon: Compass,
   },
   {
-    id: "espana-italia",
+    id: "españa-italia",
     name: "España + Italia",
     duration: "10 dias",
     price: "$11,500 USD",
@@ -99,7 +99,7 @@ const TRAVEL_ROUTES = [
     duration: "12 dias",
     price: "$12,000 USD",
     route: "Santo Domingo - Estambul - Europa",
-    highlights: ["2 continentes", "Precio accesible", "Cultura unica"],
+    highlights: ["2 continentes", "Precio accesible", "Cultura única"],
     icon: Heart,
   },
 ];
@@ -334,7 +334,7 @@ export default function BlogDominicana() {
                   <div className="mt-4 pt-3 border-t">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4" />
-                      <span>{language === "es" ? "Mejor epoca:" : language === "pt" ? "Melhor epoca:" : "Best time:"} {dest.bestTime}</span>
+                      <span>{language === "es" ? "Mejor época:" : language === "pt" ? "Melhor época:" : "Best time:"} {dest.bestTime}</span>
                     </div>
                   </div>
                 </CardContent>

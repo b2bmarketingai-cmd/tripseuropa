@@ -29,8 +29,8 @@ const PACKAGES_COLOMBIA = [
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=70&w=800&auto=format&fit=crop",
   },
   {
-    id: "espana-clasica-col",
-    title: "España Clasica desde Medellin",
+    id: "españa-clásica-col",
+    title: "España Clásica desde Medellin",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     days: 12,
     price: 2100,
@@ -41,8 +41,8 @@ const PACKAGES_COLOMBIA = [
     image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=70&w=800&auto=format&fit=crop",
   },
   {
-    id: "italia-romantica-col",
-    title: "Italia Romantica desde Cali",
+    id: "italia-romántica-col",
+    title: "Italia Romántica desde Cali",
     destinations: ["Roma", "Florencia", "Venecia", "Milan"],
     days: 14,
     price: 2800,
@@ -71,7 +71,7 @@ const TESTIMONIALS_COLOMBIA = [
   {
     name: "Carolina Gutierrez",
     city: "Bogota",
-    trip: "Europa Clasica 15 dias",
+    trip: "Europa Clásica 15 dias",
     text: "Increible experiencia. Todo salio perfecto desde el vuelo hasta los hoteles. El guia en espanol fue excelente.",
     rating: 5,
   },
@@ -79,7 +79,7 @@ const TESTIMONIALS_COLOMBIA = [
     name: "Andres Mejia",
     city: "Medellin", 
     trip: "Luna de Miel Paris-Roma",
-    text: "Mi esposa y yo tuvimos el viaje de nuestros suenos. Los hoteles boutique fueron espectaculares.",
+    text: "Mi esposa y yo tuvimos el viaje de nuestros sueños. Los hoteles boutique fueron espectaculares.",
     rating: 5,
   },
   {
@@ -383,7 +383,7 @@ export default function FromColombia() {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Trips Europa - Viajes desde Colombia",
-          "description": "Agencia de viajes especializada en paquetes turisticos a Europa desde Colombia. Vuelos, hoteles, tours y asistencia visa Schengen.",
+          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Colombia. Vuelos, hoteles, tours y asistencia visa Schengen.",
           "url": "https://tripseuropa.com/desde-colombia",
           "areaServed": {
             "@type": "Country",

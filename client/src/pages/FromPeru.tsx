@@ -29,7 +29,7 @@ const PACKAGES_PERU = [
     featured: true,
   },
   {
-    id: "espana-peru",
+    id: "españa-peru",
     title: "España Completa desde Lima",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Valencia"],
     days: 14,
@@ -70,7 +70,7 @@ const TESTIMONIALS_PERU = [
   {
     name: "Carlos Quispe",
     city: "Lima",
-    trip: "Europa Clasica 14 dias",
+    trip: "Europa Clásica 14 dias",
     text: "Excelente organizacion. Todo salio como esperabamos. Los guias en espanol fueron muy profesionales y conocedores.",
     rating: 5,
   },
@@ -78,14 +78,14 @@ const TESTIMONIALS_PERU = [
     name: "Maria Elena Vargas",
     city: "Arequipa",
     trip: "Luna de Miel Italia",
-    text: "Nuestro viaje de luna de miel fue increible. Los hoteles romanticos y la atencion personalizada superaron nuestras expectativas.",
+    text: "Nuestro viaje de luna de miel fue increíble. Los hoteles romanticos y la atencion personalizada superaron nuestras expectativas.",
     rating: 5,
   },
   {
     name: "Fernando Mendoza",
     city: "Cusco",
     trip: "España + Portugal 12 dias",
-    text: "Como guia turistico en Peru, se lo que es un buen tour. Este fue de primera calidad. Los recomiendo totalmente.",
+    text: "Como guia turístico en Peru, se lo que es un buen tour. Este fue de primera calidad. Los recomiendo totalmente.",
     rating: 5,
   },
 ];
@@ -128,7 +128,7 @@ export default function FromPeru() {
     testimonials: { es: "Lo que dicen nuestros viajeros peruanos", en: "What our Peruvian travelers say" },
     faq: { es: "Preguntas Frecuentes - Viajes desde Peru", en: "FAQ - Travel from Peru" },
     combo: { es: "Combina Europa + Peru", en: "Combine Europe + Peru" },
-    comboText: { es: "Ofrecemos paquetes exclusivos que combinan lo mejor de Europa con experiencias unicas en Peru como Machu Picchu, Cusco y la gastronomia peruana.", en: "We offer exclusive packages combining the best of Europe with unique Peru experiences like Machu Picchu, Cusco and Peruvian gastronomy." },
+    comboText: { es: "Ofrecemos paquetes exclusivos que combinan lo mejor de Europa con experiencias únicas en Peru como Machu Picchu, Cusco y la gastronomía peruana.", en: "We offer exclusive packages combining the best of Europe with unique Peru experiences like Machu Picchu, Cusco and Peruvian gastronomy." },
   };
 
   const t = (key: keyof typeof content) => {

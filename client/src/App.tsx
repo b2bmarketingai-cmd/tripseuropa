@@ -90,6 +90,8 @@ function Router() {
       <Route path="/policies" component={Policies} />
       <Route path="/destinations" component={Destinations} />
       <Route path="/destinations/:slug" component={DestinationPage} />
+      <Route path="/destinos" component={Destinations} />
+      <Route path="/destinos/:slug" component={DestinationPage} />
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/post/:slug" component={BlogPost} />

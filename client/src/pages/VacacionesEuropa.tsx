@@ -146,7 +146,7 @@ const TRIP_CATEGORIES = [
   {
     id: "cultural",
     title: "Tesoros Culturales",
-    description: "Explora museos de clase mundial, arquitectura historica y el rico patrimonio artistico de Europa.",
+    description: "Explora museos de clase mundial, arquitectura histórica y el rico patrimonio artistico de Europa.",
     icon: Castle,
     destinations: ["Italia", "Francia", "España", "Grecia"],
   },
@@ -159,7 +159,7 @@ const TRIP_CATEGORIES = [
   },
   {
     id: "baltic",
-    title: "Viajes Magicos al Baltico",
+    title: "Viajes Mágicos al Baltico",
     description: "Experimenta los paisajes nordicos, ciudades medievales y la aurora boreal.",
     icon: Sparkles,
     destinations: ["Finlandia", "Estonia", "Letonia", "Lituania"],
@@ -173,7 +173,7 @@ const TRIP_CATEGORIES = [
   },
   {
     id: "romantic",
-    title: "Escapadas Romanticas",
+    title: "Escapadas Románticas",
     description: "Los destinos mas romanticos de Europa para parejas y lunas de miel.",
     icon: Heart,
     destinations: ["Paris", "Venecia", "Santorini", "Viena"],
@@ -206,7 +206,7 @@ const TOP_COUNTRIES = [
     id: "italy",
     name: "Italia",
     image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
-    description: "Arte, historia, gastronomia y paisajes que han inspirado al mundo por siglos.",
+    description: "Arte, historia, gastronomía y paisajes que han inspirado al mundo por siglos.",
     trips: 32,
   },
   {
@@ -227,7 +227,7 @@ const TOP_COUNTRIES = [
 
 const FAQS = [
   {
-    question: "Cual es la mejor epoca para visitar Europa?",
+    question: "Cual es la mejor época para visitar Europa?",
     answer: "Europa es hermosa todo el ano. La primavera (abril-junio) y el otono (septiembre-octubre) ofrecen clima agradable y menos multitudes. El verano es ideal para playas y festivales, mientras que el invierno es perfecto para mercados navidenos y esqui en los Alpes.",
   },
   {
@@ -261,19 +261,19 @@ const PACKAGE_DETAILS: Record<string, {
   "portugal-coastal": {
     duration: "10 dias / 9 noches",
     groupSize: "2-16 personas",
-    description: "Descubre la magia de Portugal en este viaje inolvidable. Desde las calles empedradas de Lisboa hasta los vinos del Douro, pasando por los palacios de Sintra y la vibrante ciudad de Porto. Portugal te espera con su hospitalidad unica, gastronomia exquisita y paisajes que enamoran.",
-    highlights: ["Torre de Belem y Monasterio de los Jeronimos", "Palacios de colores de Sintra", "Cata de vino de Oporto", "Librerias historicas de Coimbra", "Paseo en barco por el Douro"],
+    description: "Descubre la magia de Portugal en este viaje inolvidable. Desde las calles empedradas de Lisboa hasta los vinos del Douro, pasando por los palacios de Sintra y la vibrante ciudad de Porto. Portugal te espera con su hospitalidad única, gastronomía exquisita y paisajes que enamoran.",
+    highlights: ["Torre de Belem y Monasterio de los Jeronimos", "Palacios de colores de Sintra", "Cata de vino de Oporto", "Librerias históricas de Coimbra", "Paseo en barco por el Douro"],
     itinerary: [
       { day: "Dia 1-2", title: "Lisboa", description: "Llegada a Lisboa. Visita al barrio de Alfama, Belem, y paseo en tranvia 28. Cena de bienvenida con fado." },
       { day: "Dia 3", title: "Sintra", description: "Excursion a Sintra: Palacio da Pena, Quinta da Regaleira, y Cabo da Roca." },
-      { day: "Dia 4-5", title: "Coimbra", description: "Viaje a Coimbra. Universidad historica, libreria Joanina, y ambiente estudiantil." },
+      { day: "Dia 4-5", title: "Coimbra", description: "Viaje a Coimbra. Universidad histórica, libreria Joanina, y ambiente estudiantil." },
       { day: "Dia 6-8", title: "Porto", description: "Exploracion de Porto: Ribeira, Livraria Lello, bodegas de vino. Crucero por el Douro." },
       { day: "Dia 9-10", title: "Regreso", description: "Tiempo libre para compras. Traslado al aeropuerto." }
     ],
     includes: ["Vuelos internacionales ida y vuelta", "Hoteles 4 estrellas con desayuno", "Traslados privados", "Guia en espanol", "Entradas a monumentos", "Cata de vinos", "Cena de bienvenida"],
     price: "Desde EUR 2,190",
     faqs: [
-      { question: "Cual es la mejor epoca para visitar Portugal?", answer: "Primavera (abril-junio) y otono (septiembre-octubre) son ideales. Clima agradable y menos turistas que en verano." },
+      { question: "Cual es la mejor época para visitar Portugal?", answer: "Primavera (abril-junio) y otono (septiembre-octubre) son ideales. Clima agradable y menos turistas que en verano." },
       { question: "Se incluye seguro de viaje?", answer: "El seguro basico esta incluido. Recomendamos contratar seguro adicional con cobertura medica ampliada." },
       { question: "Puedo extender mi estadia?", answer: "Si, podemos agregar noches adicionales en cualquier ciudad. Contactanos para cotizar." }
     ]
@@ -281,12 +281,12 @@ const PACKAGE_DETAILS: Record<string, {
   "spain-complete": {
     duration: "14 dias / 13 noches",
     groupSize: "2-20 personas",
-    description: "Espana en su maxima expresion. Desde la elegancia de Madrid hasta la creatividad de Barcelona, pasando por el duende andaluz de Sevilla y la modernidad de Valencia. Arte, gastronomia, flamenco, playas y una cultura vibrante te esperan.",
-    highlights: ["Museo del Prado y Palacio Real", "Alhambra de Granada", "Sagrada Familia", "Ciudad de las Artes y las Ciencias", "Show de flamenco autentico"],
+    description: "España en su maxima expresion. Desde la elegancia de Madrid hasta la creatividad de Barcelona, pasando por el duende andaluz de Sevilla y la modernidad de Valencia. Arte, gastronomía, flamenco, playas y una cultura vibrante te esperan.",
+    highlights: ["Museo del Prado y Palacio Real", "Alhambra de Granada", "Sagrada Familia", "Ciudad de las Artes y las Ciencias", "Show de flamenco auténtico"],
     itinerary: [
-      { day: "Dia 1-3", title: "Madrid", description: "Capital de Espana. Prado, Reina Sofia, Retiro, tapas en La Latina. Excursion a Toledo." },
+      { day: "Dia 1-3", title: "Madrid", description: "Capital de España. Prado, Reina Sofia, Retiro, tapas en La Latina. Excursion a Toledo." },
       { day: "Dia 4-6", title: "Andalucia", description: "Sevilla (Alcazar, Catedral), Cordoba (Mezquita), Granada (Alhambra). Flamenco en tablao." },
-      { day: "Dia 7-9", title: "Valencia", description: "Ciudad de las Artes, playa de la Malvarrosa, paella autentica, barrio del Carmen." },
+      { day: "Dia 7-9", title: "Valencia", description: "Ciudad de las Artes, playa de la Malvarrosa, paella auténtica, barrio del Carmen." },
       { day: "Dia 10-13", title: "Barcelona", description: "Gaudi (Sagrada Familia, Park Guell), Las Ramblas, Barrio Gotico, Montjuic." },
       { day: "Dia 14", title: "Regreso", description: "Tiempo libre. Traslado al aeropuerto de Barcelona." }
     ],
@@ -301,7 +301,7 @@ const PACKAGE_DETAILS: Record<string, {
   "ireland-emerald": {
     duration: "9 dias / 8 noches",
     groupSize: "2-14 personas",
-    description: "La isla esmeralda te espera con sus paisajes de ensueno, castillos milenarios, pubs acogedores y la hospitalidad irlandesa. Desde Dublin cosmopolita hasta los acantilados de Moher, Irlanda te robara el corazon.",
+    description: "La isla esmeralda te espera con sus paisajes de ensueño, castillos milenarios, pubs acogedores y la hospitalidad irlandesa. Desde Dublin cosmopolita hasta los acantilados de Moher, Irlanda te robara el corazon.",
     highlights: ["Acantilados de Moher", "Ring of Kerry", "Destileria de whisky", "Castillo de Blarney", "Pubs tradicionales con musica en vivo"],
     itinerary: [
       { day: "Dia 1-2", title: "Dublin", description: "Temple Bar, Trinity College, Libro de Kells, Guinness Storehouse. Pub crawl." },
@@ -321,7 +321,7 @@ const PACKAGE_DETAILS: Record<string, {
   "italy-eternal": {
     duration: "12 dias / 11 noches",
     groupSize: "2-18 personas",
-    description: "Italia eterna: donde el arte, la historia y la gastronomia se fusionan en una experiencia inolvidable. Roma imperial, Florencia renacentista, Venecia romantica y Milan elegante. La dolce vita te espera.",
+    description: "Italia eterna: donde el arte, la historia y la gastronomía se fusionan en una experiencia inolvidable. Roma imperial, Florencia renacentista, Venecia romántica y Milan elegante. La dolce vita te espera.",
     highlights: ["Coliseo y Vaticano", "Galeria Uffizi", "Paseo en gondola", "Duomo de Milan", "Cata de vinos en Toscana"],
     itinerary: [
       { day: "Dia 1-3", title: "Roma", description: "Coliseo, Foro, Vaticano, Fontana di Trevi, Trastevere." },
@@ -344,7 +344,7 @@ const PACKAGE_DETAILS: Record<string, {
     description: "Lo mejor de Portugal con extension al paradisiaco Algarve. Combina cultura, historia y playas espectaculares en un solo viaje. Desde Lisboa y Porto hasta las calas escondidas del sur.",
     highlights: ["Playas de Lagos y Albufeira", "Grutas de Benagil", "Cuevas marinas en kayak", "Fortaleza de Sagres", "Atardeceres en el Atlantico"],
     itinerary: [
-      { day: "Dia 1-3", title: "Lisboa", description: "Capital portuguesa con sus barrios historicos y gastronomia." },
+      { day: "Dia 1-3", title: "Lisboa", description: "Capital portuguesa con sus barrios históricos y gastronomía." },
       { day: "Dia 4-5", title: "Porto", description: "Ciudad del vino, Ribeira, bodegas." },
       { day: "Dia 6-10", title: "Algarve", description: "Faro, Lagos, Albufeira, Benagil, Sagres. Playas y relajacion." },
       { day: "Dia 11", title: "Regreso", description: "Vuelo desde Faro." }
@@ -360,13 +360,13 @@ const PACKAGE_DETAILS: Record<string, {
   "portugal-douro": {
     duration: "8 dias / 7 noches",
     groupSize: "2-12 personas",
-    description: "Un viaje enfocado en el norte de Portugal y el magico Valle del Douro. Vinos, paisajes de terrazas y ciudades con siglos de historia. Ideal para amantes del vino y la naturaleza.",
-    highlights: ["Crucero por el Rio Douro", "Quintas vinicolas", "Braga religiosa", "Guimaraes medieval", "Porto autentico"],
+    description: "Un viaje enfocado en el norte de Portugal y el mágico Valle del Douro. Vinos, paisajes de terrazas y ciudades con siglos de historia. Ideal para amantes del vino y la naturaleza.",
+    highlights: ["Crucero por el Rio Douro", "Quintas vinicolas", "Braga religiosa", "Guimaraes medieval", "Porto auténtico"],
     itinerary: [
-      { day: "Dia 1-3", title: "Porto", description: "Exploracion profunda de Porto, bodegas, gastronomia." },
+      { day: "Dia 1-3", title: "Porto", description: "Exploracion profunda de Porto, bodegas, gastronomía." },
       { day: "Dia 4-5", title: "Valle del Douro", description: "Crucero, visita a quintas, catas de vino, paisajes." },
       { day: "Dia 6", title: "Braga", description: "Bom Jesus, catedral, tradicion religiosa." },
-      { day: "Dia 7", title: "Guimaraes", description: "Cuna de Portugal, castillo, centro historico." },
+      { day: "Dia 7", title: "Guimaraes", description: "Cuna de Portugal, castillo, centro histórico." },
       { day: "Dia 8", title: "Regreso", description: "Vuelo desde Porto." }
     ],
     includes: ["Vuelos", "Hoteles con encanto", "Crucero Douro", "Catas", "Guia", "Comidas en quintas"],
@@ -383,7 +383,7 @@ const PACKAGE_DETAILS: Record<string, {
     description: "El sur de Italia en todo su esplendor. La isla de Ischia, la espectacular Costa Amalfitana y las ruinas de Pompeya. Limoncello, casas coloridas y el azul del Mediterraneo.",
     highlights: ["Positano y Amalfi", "Ravello con vistas infinitas", "Ruinas de Pompeya", "Termas de Ischia", "Capri opcional"],
     itinerary: [
-      { day: "Dia 1-2", title: "Napoles", description: "Llegada, centro historico, pizza napoletana original." },
+      { day: "Dia 1-2", title: "Napoles", description: "Llegada, centro histórico, pizza napoletana original." },
       { day: "Dia 3-4", title: "Ischia", description: "Isla termal, jardines, playas, relajacion." },
       { day: "Dia 5-7", title: "Costa Amalfitana", description: "Positano, Amalfi, Ravello. Paseos, limoncellos, atardeceres." },
       { day: "Dia 8", title: "Pompeya", description: "Ruinas romanas con guia experto." },
@@ -400,8 +400,8 @@ const PACKAGE_DETAILS: Record<string, {
   "ireland-celtic": {
     duration: "10 dias / 9 noches",
     groupSize: "2-14 personas",
-    description: "Irlanda completa: la Republica de Irlanda e Irlanda del Norte en un viaje que combina historia celta, paisajes dramaticos y ciudades vibrantes. La Calzada del Gigante te espera.",
-    highlights: ["Calzada del Gigante", "Titanic Belfast", "Dark Hedges (Game of Thrones)", "Acantilados de Moher", "Dublin historico"],
+    description: "Irlanda completa: la Republica de Irlanda e Irlanda del Norte en un viaje que combina historia celta, paisajes dramáticos y ciudades vibrantes. La Calzada del Gigante te espera.",
+    highlights: ["Calzada del Gigante", "Titanic Belfast", "Dark Hedges (Game of Thrones)", "Acantilados de Moher", "Dublin histórico"],
     itinerary: [
       { day: "Dia 1-2", title: "Dublin", description: "Exploracion de la capital irlandesa." },
       { day: "Dia 3-4", title: "Belfast", description: "Museo Titanic, murales, Queen's Quarter." },
@@ -421,19 +421,19 @@ const PACKAGE_DETAILS: Record<string, {
   "italy-puglia": {
     duration: "11 dias / 10 noches",
     groupSize: "2-14 personas",
-    description: "El sur italiano menos explorado: Puglia con sus trulli unicos, playas cristalinas y gastronomia autentica, combinado con la belleza de la Costa Amalfitana.",
+    description: "El sur italiano menos explorado: Puglia con sus trulli únicos, playas cristalinas y gastronomía auténtica, combinado con la belleza de la Costa Amalfitana.",
     highlights: ["Trulli de Alberobello", "Matera (ciudad cueva)", "Lecce barroco", "Polignano a Mare", "Costa Amalfitana"],
     itinerary: [
       { day: "Dia 1-2", title: "Napoles/Amalfi", description: "Llegada, inicio en la Costa Amalfitana." },
       { day: "Dia 3-4", title: "Matera", description: "Sassi de Matera, ciudad cueva Patrimonio UNESCO." },
       { day: "Dia 5-7", title: "Puglia", description: "Alberobello, Ostuni, Lecce, Polignano a Mare." },
-      { day: "Dia 8-9", title: "Bari", description: "Capital pugliese, casco antiguo, gastronomia." },
+      { day: "Dia 8-9", title: "Bari", description: "Capital pugliese, casco antiguo, gastronomía." },
       { day: "Dia 10-11", title: "Regreso", description: "Tiempo libre, vuelo desde Bari." }
     ],
     includes: ["Vuelos", "Hoteles con encanto", "Coche alquiler o traslados", "Guia", "Experiencia gastronomica"],
     price: "Desde EUR 2,890",
     faqs: [
-      { question: "Que son los trulli?", answer: "Casas conicas tradicionales de piedra, unicas en el mundo, Patrimonio UNESCO." },
+      { question: "Que son los trulli?", answer: "Casas conicas tradicionales de piedra, únicas en el mundo, Patrimonio UNESCO." },
       { question: "Es recomendable alquilar coche?", answer: "Si, Puglia se disfruta mejor con coche. Podemos incluirlo o ofrecer traslados privados." },
       { question: "La comida es diferente al norte de Italia?", answer: "Si, cocina mediterranea con aceite de oliva, burrata, orecchiette, mariscos frescos." }
     ]
@@ -480,7 +480,7 @@ const PACKAGE_DETAILS: Record<string, {
   "baltics-guided": {
     duration: "10 dias / 9 noches",
     groupSize: "2-14 personas",
-    description: "Los paises balticos: joyas escondidas de Europa. Vilna, Riga y Tallin son ciudades medievales con historia fascinante, gastronomia sorprendente y precios accesibles.",
+    description: "Los paises balticos: joyas escondidas de Europa. Vilna, Riga y Tallin son ciudades medievales con historia fascinante, gastronomía sorprendente y precios accesibles.",
     highlights: ["Casco antiguo de Tallin", "Art Nouveau en Riga", "Colina de las Cruces", "Helsinki de bonus", "Ciudades UNESCO"],
     itinerary: [
       { day: "Dia 1-3", title: "Vilna, Lituania", description: "Capital barroca, Trakai, Colina de las Cruces." },
@@ -491,7 +491,7 @@ const PACKAGE_DETAILS: Record<string, {
     includes: ["Vuelos", "Hoteles centricos", "Buses entre ciudades", "Ferry a Helsinki", "Guia", "Entradas"],
     price: "Desde EUR 2,190",
     faqs: [
-      { question: "Se necesita visa para los balticos?", answer: "Son parte de Schengen. Mismas reglas que Espana o Francia." },
+      { question: "Se necesita visa para los balticos?", answer: "Son parte de Schengen. Mismas reglas que España o Francia." },
       { question: "Que moneda usan?", answer: "Los tres paises usan Euro. Muy conveniente." },
       { question: "Es seguro viajar alli?", answer: "Extremadamente seguro. Ciudades muy tranquilas y organizadas." }
     ]
@@ -503,7 +503,7 @@ const TESTIMONIALS = [
     name: "Maria Fernandez",
     location: "Bogota, Colombia",
     rating: 5,
-    comment: "Nuestro viaje a Italia fue magico. Todo estuvo perfectamente organizado, desde los vuelos hasta las visitas guiadas. Volveremos a viajar con Trips Europa.",
+    comment: "Nuestro viaje a Italia fue mágico. Todo estuvo perfectamente organizado, desde los vuelos hasta las visitas guiadas. Volveremos a viajar con Trips Europa.",
     date: "Noviembre 2024",
     trip: "Italia en 12 dias",
   },
@@ -625,7 +625,7 @@ Desde: Tripseuropa.com`;
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Vacaciones en Europa - Paquetes de Viaje Todo Incluido"
-        description="Descubre los mejores paquetes de vacaciones a Europa desde Latinoamerica. Portugal, España, Italia, Francia y mas. Tours guiados en espanol, hoteles seleccionados, experiencias unicas."
+        description="Descubre los mejores paquetes de vacaciones a Europa desde Latinoamerica. Portugal, España, Italia, Francia y mas. Tours guiados en espanol, hoteles seleccionados, experiencias únicas."
         keywords="vacaciones europa, paquetes europa, viaje europa todo incluido, tour europa espanol, europa desde latinoamerica"
         url="https://tripseuropa.com/vacaciones-europa"
       />
@@ -649,7 +649,7 @@ Desde: Tripseuropa.com`;
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <Badge className="bg-accent text-primary mb-4" data-testid="badge-hero">
             <Plane className="w-3 h-3 mr-1" />
-            Vacaciones de Ensueno
+            Vacaciones de Ensueño
           </Badge>
           <h1 className="font-playfair text-4xl md:text-6xl font-bold text-white mb-4" style={{ color: "#d4af37" }}>
             Vacaciones para Europa
@@ -688,18 +688,18 @@ Desde: Tripseuropa.com`;
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
               Europa es un mosaico de culturas, idiomas y paisajes que ha cautivado a viajeros durante siglos. 
-              Desde las romanticas calles de Paris hasta los canales de Venecia, desde las playas del Mediterraneo 
-              hasta los fiordos noruegos, cada rincon del viejo continente ofrece experiencias unicas e inolvidables.
+              Desde las románticas calles de Paris hasta los canales de Venecia, desde las playas del Mediterraneo 
+              hasta los fiordos noruegos, cada rincon del viejo continente ofrece experiencias únicas e inolvidables.
             </p>
             {showFullIntro && (
               <>
                 <p>
-                  La riqueza historica de Europa es incomparable. Camina por las mismas calles donde caminaron emperadores romanos, 
+                  La riqueza histórica de Europa es incomparable. Camina por las mismas calles donde caminaron emperadores romanos, 
                   admira catedrales goticas que tardaron siglos en construirse, y descubre castillos que cuentan historias de reyes y guerras. 
                   Ciudades como Roma, Atenas y Praga son museos vivientes donde el pasado y el presente se entrelazan armoniosamente.
                 </p>
                 <p>
-                  La gastronomia europea es otra razon para visitar. Desde la pasta fresca en Italia hasta los churros con chocolate 
+                  La gastronomía europea es otra razon para visitar. Desde la pasta fresca en Italia hasta los churros con chocolate 
                   en España, desde los croissants parisinos hasta las salchichas alemanas, cada pais tiene su propia tradicion culinaria 
                   que refleja su cultura e historia. Los vinos franceses, portugueses e italianos son reconocidos mundialmente.
                 </p>
@@ -807,7 +807,7 @@ Desde: Tripseuropa.com`;
             Categorias de Viaje
           </h2>
           <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
-            Encuentra el estilo de viaje perfecto para ti. Desde aventuras culturales hasta escapadas romanticas.
+            Encuentra el estilo de viaje perfecto para ti. Desde aventuras culturales hasta escapadas románticas.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -23,7 +23,7 @@ const CONTENT = {
   es: {
     heroTitle: "Viaja Mas, Gana Mas: Bienvenido a",
     heroBrand: "TripsEuropa GO",
-    heroSubtitle: "Convierte tus suenos en realidad con nuestro programa de recompensas creado para viajeros exigentes. Sin barreras, sin limites, solo oportunidades ilimitadas.",
+    heroSubtitle: "Convierte tus sueños en realidad con nuestro programa de recompensas creado para viajeros exigentes. Sin barreras, sin limites, solo oportunidades ilimitadas.",
     level1Title: "Nivel 1",
     level1Subtitle: "Inscripcion gratuita",
     level1Benefits: [

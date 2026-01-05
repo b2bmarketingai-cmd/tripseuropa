@@ -14,7 +14,7 @@ const TESTIMONIALS = [
     location: { es: "Bogota, Colombia", en: "Bogota, Colombia" },
     trip: { es: "Luna de Miel en Italia", en: "Honeymoon in Italy" },
     text: { 
-      es: "Nuestra luna de miel fue absolutamente perfecta. Desde el momento en que los contactamos, Maria y su equipo se encargaron de cada detalle. Los hoteles eran increibles, los tours privados nos permitieron evitar las multitudes, y las recomendaciones de restaurantes fueron exquisitas. Sin duda, superaron todas nuestras expectativas.",
+      es: "Nuestra luna de miel fue absolutamente perfecta. Desde el momento en que los contactamos, Maria y su equipo se encargaron de cada detalle. Los hoteles eran increíbles, los tours privados nos permitieron evitar las multitudes, y las recomendaciones de restaurantes fueron exquisitas. Sin duda, superaron todas nuestras expectativas.",
       en: "Our honeymoon was absolutely perfect. From the moment we contacted them, Maria and her team took care of every detail. The hotels were incredible, the private tours allowed us to avoid crowds, and the restaurant recommendations were exquisite. They definitely exceeded all our expectations."
     },
     rating: 5,
@@ -38,7 +38,7 @@ const TESTIMONIALS = [
     location: { es: "Cali, Colombia", en: "Cali, Colombia" },
     trip: { es: "Escapada a Paris", en: "Paris Getaway" },
     text: { 
-      es: "Siempre sone con conocer Paris y Trips Europa hizo ese sueno realidad. Me ayudaron con todo el proceso de visa (que parecia complicado) y planificaron un itinerario perfecto de 7 dias. Cada experiencia fue magica, desde subir a la Torre Eiffel hasta los paseos por Montmartre.",
+      es: "Siempre sone con conocer Paris y Trips Europa hizo ese sueño realidad. Me ayudaron con todo el proceso de visa (que parecia complicado) y planificaron un itinerario perfecto de 7 dias. Cada experiencia fue magica, desde subir a la Torre Eiffel hasta los paseos por Montmartre.",
       en: "I always dreamed of visiting Paris and Trips Europa made that dream come true. They helped me with the entire visa process (which seemed complicated) and planned a perfect 7-day itinerary. Every experience was magical, from climbing the Eiffel Tower to walks through Montmartre."
     },
     rating: 5,

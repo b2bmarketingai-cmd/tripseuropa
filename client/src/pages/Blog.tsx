@@ -46,7 +46,7 @@ const BLOG_POSTS = [
     date: "29 Dic 2024",
     readTime: 12,
     featured: true,
-    keywords: ["tour europa clasico", "francia espana italia", "circuito europa"],
+    keywords: ["tour europa clasico", "francia españa italia", "circuito europa"],
   },
   {
     id: "encanto-mediterraneo",

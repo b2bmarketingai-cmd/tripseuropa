@@ -53,7 +53,7 @@ const VALUES = [
   },
   { 
     title: { es: "Personalizacion", en: "Personalization", pt: "Personalizacao" },
-    desc: { es: "Cada viaje es unico, como cada viajero", en: "Each trip is unique, like each traveler", pt: "Cada viagem e unica, como cada viajante" }
+    desc: { es: "Cada viaje es único, como cada viajero", en: "Each trip is unique, like each traveler", pt: "Cada viagem e única, como cada viajante" }
   },
   { 
     title: { es: "Pasion", en: "Passion", pt: "Paixao" },
@@ -129,7 +129,7 @@ export default function About() {
                 </p>
                 <p>
                   {language === "es" 
-                    ? "Desde entonces, hemos ayudado a mas de 5,000 familias a cumplir su sueno de conocer Europa, con un enfoque especial en la atencion personalizada y el acompanamiento en cada paso del proceso, desde la visa hasta el regreso a casa."
+                    ? "Desde entonces, hemos ayudado a mas de 5,000 familias a cumplir su sueño de conocer Europa, con un enfoque especial en la atencion personalizada y el acompanamiento en cada paso del proceso, desde la visa hasta el regreso a casa."
                     : language === "pt"
                     ? "Desde entao, ajudamos mais de 5.000 familias a realizar seu sonho de conhecer a Europa, com foco especial no atendimento personalizado e acompanhamento em cada etapa do processo, do visto ate o retorno para casa."
                     : "Since then, we have helped more than 5,000 families fulfill their dream of visiting Europe, with a special focus on personalized attention and support at every step of the process, from visa to returning home."}
@@ -217,7 +217,7 @@ export default function About() {
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             {language === "es" 
-              ? "Dejanos ayudarte a planificar el viaje de tus suenos" 
+              ? "Dejanos ayudarte a planificar el viaje de tus sueños" 
               : language === "pt"
               ? "Deixe-nos ajuda-lo a planejar a viagem dos seus sonhos"
               : "Let us help you plan the trip of your dreams"}

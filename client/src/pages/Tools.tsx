@@ -305,8 +305,8 @@ function TripCalculator() {
   const destNames: Record<string, { es: string; en: string; pt: string }> = {
     paris: { es: "Paris, Francia", en: "Paris, France", pt: "Paris, Franca" },
     rome: { es: "Roma, Italia", en: "Rome, Italy", pt: "Roma, Italia" },
-    madrid: { es: "Madrid, Espana", en: "Madrid, Spain", pt: "Madrid, Espanha" },
-    barcelona: { es: "Barcelona, Espana", en: "Barcelona, Spain", pt: "Barcelona, Espanha" },
+    madrid: { es: "Madrid, España", en: "Madrid, Spain", pt: "Madrid, Espanha" },
+    barcelona: { es: "Barcelona, España", en: "Barcelona, Spain", pt: "Barcelona, Espanha" },
     lisbon: { es: "Lisboa, Portugal", en: "Lisbon, Portugal", pt: "Lisboa, Portugal" },
     athens: { es: "Atenas, Grecia", en: "Athens, Greece", pt: "Atenas, Grecia" },
     amsterdam: { es: "Amsterdam, Paises Bajos", en: "Amsterdam, Netherlands", pt: "Amsterdam, Paises Baixos" },

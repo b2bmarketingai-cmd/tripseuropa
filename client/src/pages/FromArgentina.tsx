@@ -14,8 +14,8 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_ARGENTINA = [
   {
-    id: "europa-clasica-ar",
-    title: "Europa Clasica desde Buenos Aires",
+    id: "europa-clásica-ar",
+    title: "Europa Clásica desde Buenos Aires",
     destinations: ["Madrid", "Paris", "Roma", "Barcelona"],
     days: 15,
     price: 2600,
@@ -39,7 +39,7 @@ const PACKAGES_ARGENTINA = [
     image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=70&w=800&auto=format&fit=crop",
   },
   {
-    id: "espana-raices-ar",
+    id: "españa-raices-ar",
     title: "España de las Raices desde Rosario",
     destinations: ["Madrid", "Galicia", "Asturias", "Pais Vasco"],
     days: 12,
@@ -82,7 +82,7 @@ const TESTIMONIALS_ARGENTINA = [
   {
     name: "Federico Alvarez",
     city: "Rosario",
-    trip: "Europa Clasica",
+    trip: "Europa Clásica",
     text: "Tercera vez que viajo con Trips Europa. Siempre impecables. Ya estoy planeando el proximo viaje.",
     rating: 5,
   },
@@ -368,7 +368,7 @@ export default function FromArgentina() {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Trips Europa - Viajes desde Argentina",
-          "description": "Agencia de viajes especializada en paquetes turisticos a Europa desde Argentina. Tours de raices italianas y espanolas. Vuelos, hoteles y guias en espanol.",
+          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Argentina. Tours de raices italianas y espanolas. Vuelos, hoteles y guias en espanol.",
           "url": "https://tripseuropa.com/desde-argentina",
           "areaServed": {
             "@type": "Country",

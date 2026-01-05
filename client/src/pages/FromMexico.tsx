@@ -14,8 +14,8 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const PACKAGES_MEXICO = [
   {
-    id: "clasica-espana-mx",
-    title: "Clasica Madrid + Barcelona desde CDMX",
+    id: "clásica-españa-mx",
+    title: "Clásica Madrid + Barcelona desde CDMX",
     destinations: ["Madrid", "Barcelona"],
     days: 8,
     price: 10500,
@@ -27,8 +27,8 @@ const PACKAGES_MEXICO = [
     featured: true,
   },
   {
-    id: "romantica-paris-roma-mx",
-    title: "Romantica Paris + Roma desde CDMX",
+    id: "romántica-paris-roma-mx",
+    title: "Romántica Paris + Roma desde CDMX",
     destinations: ["Paris", "Roma"],
     days: 10,
     price: 11500,
@@ -75,7 +75,7 @@ const TESTIMONIALS_MEXICO = [
   {
     name: "Patricia Hernandez",
     city: "Guadalajara", 
-    trip: "Italia Romantica",
+    trip: "Italia Romántica",
     text: "Mi esposo y yo quedamos encantados. Todo estuvo perfectamente organizado.",
     rating: 5,
   },
@@ -369,7 +369,7 @@ export default function FromMexico() {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Trips Europa - Viajes desde Mexico",
-          "description": "Agencia de viajes especializada en paquetes turisticos a Europa desde Mexico. Vuelos, hoteles, tours y guias en espanol.",
+          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Mexico. Vuelos, hoteles, tours y guias en espanol.",
           "url": "https://tripseuropa.com/desde-mexico",
           "areaServed": {
             "@type": "Country",

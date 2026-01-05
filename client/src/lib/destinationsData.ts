@@ -64,28 +64,28 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Francia es el destino turistico mas visitado del mundo, y no es dificil entender por que. Desde la romantica Paris con su iconica Torre Eiffel hasta los campos de lavanda de Provenza, pasando por la glamurosa Costa Azul y los castillos del Valle del Loira, Francia ofrece una experiencia unica que combina arte, cultura, gastronomia y paisajes de ensueno. Descubre la elegancia francesa, sus vinos de clase mundial y su patrimonio historico incomparable.",
-      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic Paris with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage."
+      es: "Francia es el destino turístico más visitado del mundo, y no es difícil entender por que. Desde la romántica París con su icónica Torre Eiffel hasta los campos de lavanda de Provenza, pasando por la glamurosa Costa Azul y los castillos del Valle del Loira, Francia ofrece una experiencia única que combina arte, cultura, gastronomía y paisajes de ensueño. Descubre la elegancia francesa, sus vinos de clase mundial y su patrimonio histórico incomparable.",
+      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic París with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage."
     },
     highlights: {
-      es: ["Torre Eiffel y Paris romantico", "Castillos del Valle del Loira", "Costa Azul y Niza", "Campos de lavanda de Provenza", "Gastronomia y vinos franceses", "Mont Saint-Michel"],
-      en: ["Eiffel Tower and romantic Paris", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"]
+      es: ["Torre Eiffel y París romántico", "Castillos del Valle del Loira", "Costa Azul y Niza", "Campos de lavanda de Provenza", "Gastronomía y vinos franceses", "Mont Saint-Michel"],
+      en: ["Eiffel Tower and romantic París", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"]
     },
     packages: [
       {
         id: "francia-clasico",
-        name: { es: "Francia Clasica", en: "Classic France" },
+        name: { es: "Francia Clásica", en: "Classic France" },
         duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
         price: "1,899",
         taxes: "380",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en espanol", "Entradas a monumentos principales"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Entradas a monumentos principales"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Main monument tickets"]
         }
       },
       {
         id: "francia-romantica",
-        name: { es: "Francia Romantica", en: "Romantic France" },
+        name: { es: "Francia Romántica", en: "Romantic France" },
         duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
         price: "2,499",
         taxes: "450",
@@ -109,14 +109,14 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Paris", en: "Arrival in Paris" },
+        title: { es: "Llegada a París", en: "Arrival in París" },
         description: { es: "Bienvenida en el aeropuerto y traslado al hotel. Tarde libre para pasear por los Campos Eliseos.", en: "Airport welcome and hotel transfer. Free afternoon to stroll along the Champs-Élysées." },
         activities: { es: ["Recogida en aeropuerto", "Check-in en hotel", "Paseo por Campos Eliseos"], en: ["Airport pickup", "Hotel check-in", "Champs-Élysées walk"] }
       },
       {
         day: 2,
         title: { es: "Paris: Torre Eiffel y Louvre", en: "Paris: Eiffel Tower and Louvre" },
-        description: { es: "Visita a la iconica Torre Eiffel y el mundialmente famoso Museo del Louvre.", en: "Visit the iconic Eiffel Tower and the world-famous Louvre Museum." },
+        description: { es: "Visita a la icónica Torre Eiffel y el mundialmente famoso Museo del Louvre.", en: "Visit the iconic Eiffel Tower and the world-famous Louvre Museum." },
         activities: { es: ["Subida a la Torre Eiffel", "Visita guiada al Louvre", "Almuerzo en Le Marais"], en: ["Eiffel Tower ascent", "Louvre guided tour", "Lunch in Le Marais"] }
       },
       {
@@ -135,7 +135,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         day: 5,
         title: { es: "Provenza", en: "Provence" },
         description: { es: "Traslado a la hermosa region de Provenza, tierra de lavanda y encanto.", en: "Transfer to the beautiful Provence region, land of lavender and charm." },
-        activities: { es: ["Viaje en tren TGV", "Llegada a Aviñon", "Tour del centro historico"], en: ["TGV train journey", "Arrival in Avignon", "Historic center tour"] }
+        activities: { es: ["Viaje en tren TGV", "Llegada a Aviñon", "Tour del centro histórico"], en: ["TGV train journey", "Arrival in Avignon", "Historic center tour"] }
       },
       {
         day: 6,
@@ -147,7 +147,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         day: 7,
         title: { es: "Dia libre en la Riviera", en: "Free day on the Riviera" },
         description: { es: "Dia libre para disfrutar de las playas o actividades opcionales.", en: "Free day to enjoy beaches or optional activities." },
-        activities: { es: ["Playa", "Compras", "Gastronomia local"], en: ["Beach", "Shopping", "Local gastronomy"] }
+        activities: { es: ["Playa", "Compras", "Gastronomía local"], en: ["Beach", "Shopping", "Local gastronomy"] }
       },
       {
         day: 8,
@@ -163,7 +163,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Francia?", en: "When is the best time to visit France?" },
-        answer: { es: "La primavera (abril-junio) y el otono (septiembre-octubre) ofrecen clima agradable y menos turistas. El verano es ideal para la Costa Azul pero Paris puede estar muy concurrido.", en: "Spring (April-June) and autumn (September-October) offer pleasant weather and fewer tourists. Summer is ideal for the French Riviera but Paris can be very crowded." }
+        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) ofrecen clima agradable y menos turistas. El verano es ideal para la Costa Azul pero París puede estar muy concurrido.", en: "Spring (April-June) and autumn (September-October) offer pleasant weather and fewer tourists. Summer is ideal for the French Riviera but París can be very crowded." }
       },
       {
         question: { es: "Que idioma se habla en Francia?", en: "What language is spoken in France?" },
@@ -190,7 +190,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte mas importantes del mundo y destino gastronomico por excelencia. Desde el romantico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises mas bellos del mundo.",
+      es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte más importantes del mundo y destino gastronomico por excelencia. Desde el romántico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises más bellos del mundo.",
       en: "Italy is the cradle of the Renaissance, home to some of the world's most important artworks, and a gastronomic destination par excellence. From romantic Venice to eternal Rome, through cultural Florence and the spectacular Amalfi Coast, Italy captivates with its millennial history, impressive architecture, and delicious cuisine. Experience la dolce vita in one of the most beautiful countries in the world."
     },
     highlights: {
@@ -205,18 +205,18 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "2,099",
         taxes: "420",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Trenes de alta velocidad", "Guia en espanol", "Entradas principales"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Trenes de alta velocidad", "Guia en español", "Entradas principales"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "High-speed trains", "Spanish-speaking guide", "Main entrance tickets"]
         }
       },
       {
         id: "italia-romantica",
-        name: { es: "Italia Romantica", en: "Romantic Italy" },
+        name: { es: "Italia Romántica", en: "Romantic Italy" },
         duration: { es: "11 dias / 10 noches", en: "11 days / 10 nights" },
         price: "2,699",
         taxes: "480",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Gondola en Venecia", "Tour de vinos en Toscana", "Cena romantica"],
+          es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Gondola en Venecia", "Tour de vinos en Toscana", "Cena romántica"],
           en: ["International flights", "Boutique hotels", "Half board", "Venice gondola", "Tuscany wine tour", "Romantic dinner"]
         }
       },
@@ -295,11 +295,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Italia?", en: "When is the best time to visit Italy?" },
-        answer: { es: "La primavera (abril-junio) y el otono (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded." }
+        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded." }
       },
       {
         question: { es: "Como me muevo entre ciudades en Italia?", en: "How do I get around between cities in Italy?" },
-        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rapida y comoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably." }
+        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rápida y cómoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably." }
       },
       {
         question: { es: "Es caro comer en Italia?", en: "Is eating in Italy expensive?" },
@@ -322,28 +322,28 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "España es un pais vibrante que combina historia, cultura, gastronomia y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
+      es: "España es un pais vibrante que combina historia, cultura, gastronomía y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
       en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations."
     },
     highlights: {
-      es: ["Sagrada Familia en Barcelona", "Alhambra de Granada", "Museo del Prado en Madrid", "Flamenco en Sevilla", "Playas de la Costa Brava", "San Sebastian y su gastronomia"],
+      es: ["Sagrada Familia en Barcelona", "Alhambra de Granada", "Museo del Prado en Madrid", "Flamenco en Sevilla", "Playas de la Costa Brava", "San Sebastian y su gastronomía"],
       en: ["Sagrada Familia in Barcelona", "Alhambra of Granada", "Prado Museum in Madrid", "Flamenco in Seville", "Costa Brava beaches", "San Sebastian gastronomy"]
     },
     packages: [
       {
         id: "espana-clasica",
-        name: { es: "España Clasica", en: "Classic Spain" },
+        name: { es: "España Clásica", en: "Classic Spain" },
         duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
         price: "1,799",
         taxes: "360",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "AVE entre ciudades", "Guia en espanol", "Espectaculo flamenco"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "AVE entre ciudades", "Guia en español", "Espectaculo flamenco"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "AVE between cities", "Spanish-speaking guide", "Flamenco show"]
         }
       },
       {
         id: "espana-andalucia",
-        name: { es: "Andalucia Magica", en: "Magical Andalusia" },
+        name: { es: "Andalucia Mágica", en: "Mágical Andalusia" },
         duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
         price: "1,599",
         taxes: "320",
@@ -359,7 +359,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "2,899",
         taxes: "480",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Trenes AVE", "Tours exclusivos", "Experiencias unicas"],
+          es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Trenes AVE", "Tours exclusivos", "Experiencias únicas"],
           en: ["International flights", "4-5 star hotels", "Half board", "AVE trains", "Exclusive tours", "Unique experiences"]
         }
       }
@@ -433,20 +433,20 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?" },
-        answer: { es: "Primavera y otono son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south." }
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south." }
       },
       {
-        question: { es: "Es facil comunicarse en espanol?", en: "Is it easy to communicate in Spanish?" },
-        answer: { es: "Si, el espanol es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home." }
+        question: { es: "Es facil comúnicarse en español?", en: "Is it easy to commúnicate in Spanish?" },
+        answer: { es: "Si, el español es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home." }
       },
       {
-        question: { es: "Como es la gastronomia espanola?", en: "What is Spanish gastronomy like?" },
+        question: { es: "Como es la gastronomía española?", en: "What is Spanish gastronomy like?" },
         answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties." }
       }
     ],
     bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
     currency: "EUR",
-    language: { es: "Espanol", en: "Spanish" },
+    language: { es: "Español", en: "Spanish" },
     visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
   },
   {
@@ -460,11 +460,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Alemania combina modernidad con tradicion de manera unica. Desde los castillos de cuento de hadas de Baviera hasta la vibrante vida cultural de Berlin, pasando por la romantica Ruta del Rin y los mercados navidenos mas famosos del mundo, Alemania ofrece experiencias diversas. Descubre la eficiencia alemana, su cerveza legendaria, y paisajes que van desde los Alpes hasta el Mar del Norte.",
+      es: "Alemania combina modernidad con tradicion de manera única. Desde los castillos de cuento de hadas de Baviera hasta la vibrante vida cultural de Berlin, pasando por la romántica Ruta del Rin y los mercados navidenos más famosos del mundo, Alemania ofrece experiencias diversas. Descubre la eficiencia alemana, su cerveza legendaria, y paisajes que van desde los Alpes hasta el Mar del Norte.",
       en: "Germany uniquely combines modernity with tradition. From Bavaria's fairy-tale castles to Berlin's vibrant cultural life, through the romantic Rhine Route and the world's most famous Christmas markets, Germany offers diverse experiences. Discover German efficiency, legendary beer, and landscapes ranging from the Alps to the North Sea."
     },
     highlights: {
-      es: ["Castillo de Neuschwanstein", "Puerta de Brandeburgo", "Selva Negra", "Ruta Romantica", "Mercados navidenos", "Cerveza y Oktoberfest"],
+      es: ["Castillo de Neuschwanstein", "Puerta de Brandeburgo", "Selva Negra", "Ruta Romántica", "Mercados navidenos", "Cerveza y Oktoberfest"],
       en: ["Neuschwanstein Castle", "Brandenburg Gate", "Black Forest", "Romantic Road", "Christmas markets", "Beer and Oktoberfest"]
     },
     packages: [
@@ -475,13 +475,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "1,899",
         taxes: "380",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Trenes ICE", "Guia en espanol", "Entradas principales"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Trenes ICE", "Guia en español", "Entradas principales"],
           en: ["International flights", "4-star hotels", "Buffet breakfast", "ICE trains", "Spanish-speaking guide", "Main entrance tickets"]
         }
       },
       {
         id: "alemania-baviera",
-        name: { es: "Baviera Magica", en: "Magical Bavaria" },
+        name: { es: "Baviera Mágica", en: "Mágical Bavaria" },
         duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
         price: "1,699",
         taxes: "340",
@@ -524,19 +524,19 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       {
         day: 4,
         title: { es: "Selva Negra", en: "Black Forest" },
-        description: { es: "Viaje a la magica region de la Selva Negra.", en: "Trip to the magical Black Forest region." },
+        description: { es: "Viaje a la mágica region de la Selva Negra.", en: "Trip to the mágical Black Forest region." },
         activities: { es: ["Cascadas Triberg", "Friburgo", "Pueblo tradicional"], en: ["Triberg Waterfalls", "Freiburg", "Traditional village"] }
       },
       {
         day: 5,
         title: { es: "Heidelberg", en: "Heidelberg" },
-        description: { es: "Descubre la romantica ciudad universitaria.", en: "Discover the romantic university city." },
+        description: { es: "Descubre la romántica ciudad universitaria.", en: "Discover the romantic university city." },
         activities: { es: ["Castillo Heidelberg", "Casco antiguo", "Puente viejo"], en: ["Heidelberg Castle", "Old town", "Old bridge"] }
       },
       {
         day: 6,
         title: { es: "Valle del Rin", en: "Rhine Valley" },
-        description: { es: "Crucero por el romantico Valle del Rin.", en: "Cruise through the romantic Rhine Valley." },
+        description: { es: "Crucero por el romántico Valle del Rin.", en: "Cruise through the romantic Rhine Valley." },
         activities: { es: ["Crucero fluvial", "Castillos del Rin", "Cata de vinos"], en: ["River cruise", "Rhine castles", "Wine tasting"] }
       },
       {
@@ -562,7 +562,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         answer: { es: "Mayo a septiembre para buen clima. Diciembre para mercados navidenos y septiembre-octubre para Oktoberfest.", en: "May to September for good weather. December for Christmas markets and September-October for Oktoberfest." }
       },
       {
-        question: { es: "Es dificil el idioma aleman?", en: "Is German a difficult language?" },
+        question: { es: "Es difícil el idioma aleman?", en: "Is German a difficult language?" },
         answer: { es: "El aleman puede ser desafiante, pero en zonas turisticas muchos hablan ingles. Aprende frases basicas.", en: "German can be challenging, but many speak English in tourist areas. Learn basic phrases." }
       },
       {
@@ -586,11 +586,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1569959220744-ff553533f492?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Portugal es un tesoro escondido de Europa, con una historia maritima fascinante, playas impresionantes y una gastronomia deliciosa. Desde los azulejos de Lisboa hasta los vinos de Oporto, pasando por los acantilados del Algarve y los palacios de Sintra, Portugal encanta con su autenticidad y hospitalidad. Descubre el pais de los navegantes, el fado melancolico y los pasteles de nata.",
+      es: "Portugal es un tesoro escondido de Europa, con una historia maritima fascinante, playas impresionantes y una gastronomía deliciosa. Desde los azulejos de Lisboa hasta los vinos de Oporto, pasando por los acantilados del Algarve y los palacios de Sintra, Portugal encanta con su autenticidad y hospitalidad. Descubre el pais de los navegantes, el fado melancolico y los pasteles de nata.",
       en: "Portugal is a hidden treasure of Europe, with fascinating maritime history, stunning beaches, and delicious gastronomy. From Lisbon's tiles to Porto's wines, through the Algarve cliffs and Sintra palaces, Portugal charms with its authenticity and hospitality. Discover the land of navigators, melancholic fado, and pastel de nata."
     },
     highlights: {
-      es: ["Torre de Belem en Lisboa", "Bodegas de Oporto", "Playas del Algarve", "Palacios de Sintra", "Fado tradicional", "Gastronomia portuguesa"],
+      es: ["Torre de Belem en Lisboa", "Bodegas de Oporto", "Playas del Algarve", "Palacios de Sintra", "Fado tradicional", "Gastronomía portuguesa"],
       en: ["Belem Tower in Lisbon", "Porto wine cellars", "Algarve beaches", "Sintra palaces", "Traditional fado", "Portuguese gastronomy"]
     },
     packages: [
@@ -601,7 +601,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "1,499",
         taxes: "300",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en espanol", "Espectaculo de fado"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Espectaculo de fado"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Fado show"]
         }
       },
@@ -644,7 +644,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       {
         day: 3,
         title: { es: "Sintra", en: "Sintra" },
-        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's magical palaces." },
+        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's mágical palaces." },
         activities: { es: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"], en: ["Pena Palace", "Quinta da Regaleira", "Cabo da Roca"] }
       },
       {
@@ -679,15 +679,15 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Es facil entender el portugues?", en: "Is Portuguese easy to understand?" },
-        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan espanol.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish." }
+        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan español.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish." }
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Portugal?", en: "When is the best time to visit Portugal?" },
-        answer: { es: "Primavera y otono son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded." }
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded." }
       },
       {
         question: { es: "Portugal es un destino economico?", en: "Is Portugal an affordable destination?" },
-        answer: { es: "Portugal es uno de los destinos mas economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money." }
+        answer: { es: "Portugal es uno de los destinos más economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money." }
       }
     ],
     bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
@@ -706,22 +706,22 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1601635671556-7018d4b0e1b0?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas mas hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
-      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and magical sunsets."
+      es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas más hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
+      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and mágical sunsets."
     },
     highlights: {
-      es: ["Acropolis de Atenas", "Santorini y sus atardeceres", "Playas de Mykonos", "Meteora", "Delfos y Olimpia", "Gastronomia griega"],
+      es: ["Acropolis de Atenas", "Santorini y sus atardeceres", "Playas de Mykonos", "Meteora", "Delfos y Olimpia", "Gastronomía griega"],
       en: ["Athens Acropolis", "Santorini sunsets", "Mykonos beaches", "Meteora", "Delphi and Olympia", "Greek gastronomy"]
     },
     packages: [
       {
         id: "grecia-clasica",
-        name: { es: "Grecia Clasica", en: "Classic Greece" },
+        name: { es: "Grecia Clásica", en: "Classic Greece" },
         duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
         price: "1,799",
         taxes: "360",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Ferry a islas", "Guia en espanol", "Entradas principales"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Ferry a islas", "Guia en español", "Entradas principales"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "Island ferry", "Spanish-speaking guide", "Main entrance tickets"]
         }
       },
@@ -732,7 +732,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "2,299",
         taxes: "420",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles con vistas", "Desayuno", "Ferries entre islas", "Tour en catamaran", "Cena romantica"],
+          es: ["Vuelos internacionales", "Hoteles con vistas", "Desayuno", "Ferries entre islas", "Tour en catamaran", "Cena romántica"],
           en: ["International flights", "Hotels with views", "Breakfast", "Inter-island ferries", "Catamaran tour", "Romantic dinner"]
         }
       },
@@ -743,7 +743,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "3,199",
         taxes: "520",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Crucero por islas", "Experiencias unicas"],
+          es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Crucero por islas", "Experiencias únicas"],
           en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Island cruise", "Unique experiences"]
         }
       }
@@ -795,7 +795,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         day: 8,
         title: { es: "Playas de Mykonos", en: "Mykonos Beaches" },
         description: { es: "Disfruta de las famosas playas de Mykonos.", en: "Enjoy Mykonos' famous beaches." },
-        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomia griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"] }
+        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomía griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"] }
       }
     ],
     faqs: [
@@ -805,15 +805,15 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar las islas griegas?", en: "When is the best time to visit the Greek islands?" },
-        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero mas turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices." }
+        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero más turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices." }
       },
       {
         question: { es: "Como me muevo entre las islas?", en: "How do I get around between islands?" },
-        answer: { es: "Los ferries son el medio principal. Hay opciones rapidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands." }
+        answer: { es: "Los ferries son el medio principal. Hay opciones rápidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands." }
       },
       {
         question: { es: "Es caro visitar Grecia?", en: "Is Greece expensive to visit?" },
-        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son mas caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland." }
+        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son más caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland." }
       }
     ],
     bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October" },
@@ -832,7 +832,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Los Paises Bajos son mucho mas que Amsterdam. Descubre un pais de canales pintorescos, molinos de viento historicos, campos de tulipanes y una rica herencia artistica. Desde los museos de Van Gogh y Rembrandt hasta los quesos de Gouda y la arquitectura innovadora de Rotterdam, los Paises Bajos ofrecen una experiencia unica. Explora en bicicleta como los locales y disfruta de la tolerancia y creatividad holandesa.",
+      es: "Los Paises Bajos son mucho más que Amsterdam. Descubre un pais de canales pintorescos, molinos de viento históricos, campos de tulipanes y una rica herencia artistica. Desde los museos de Van Gogh y Rembrandt hasta los quesos de Gouda y la arquitectura innovadora de Rotterdam, los Paises Bajos ofrecen una experiencia única. Explora en bicicleta como los locales y disfruta de la tolerancia y creatividad holandesa.",
       en: "The Netherlands is much more than Amsterdam. Discover a country of picturesque canals, historic windmills, tulip fields, and rich artistic heritage. From Van Gogh and Rembrandt museums to Gouda cheeses and Rotterdam's innovative architecture, the Netherlands offers a unique experience. Explore by bike like locals and enjoy Dutch tolerance and creativity."
     },
     highlights: {
@@ -883,7 +883,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         day: 2,
-        title: { es: "Amsterdam Clasico", en: "Classic Amsterdam" },
+        title: { es: "Amsterdam Clásico", en: "Classic Amsterdam" },
         description: { es: "Explora los iconos de Amsterdam.", en: "Explore Amsterdam's icons." },
         activities: { es: ["Museo Van Gogh", "Casa de Ana Frank", "Crucero por canales"], en: ["Van Gogh Museum", "Anne Frank House", "Canal cruise"] }
       },
@@ -940,7 +940,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Suiza es sinonimo de paisajes alpinos espectaculares, relojes de precision, chocolate exquisito y calidad de vida excepcional. Desde el majestuoso Matterhorn hasta los lagos cristalinos de Lucerna, pasando por las ciudades cosmopolitas de Zurich y Ginebra, Suiza ofrece experiencias de lujo en un entorno natural incomparable. Descubre los trenes panoramicos mas famosos del mundo y la perfeccion suiza en cada detalle.",
+      es: "Suiza es sinonimo de paisajes alpinos espectaculares, relojes de precision, chocolate exquisito y calidad de vida excepcional. Desde el majestuoso Matterhorn hasta los lagos cristalinos de Lucerna, pasando por las ciudades cosmopolitas de Zurich y Ginebra, Suiza ofrece experiencias de lujo en un entorno natural incomparable. Descubre los trenes panoramicos más famosos del mundo y la perfeccion suiza en cada detalle.",
       en: "Switzerland is synonymous with spectacular Alpine landscapes, precision watches, exquisite chocolate, and exceptional quality of life. From the majestic Matterhorn to the crystal-clear lakes of Lucerne, through the cosmopolitan cities of Zurich and Geneva, Switzerland offers luxury experiences in an unparalleled natural setting. Discover the world's most famous panoramic trains and Swiss perfection in every detail."
     },
     highlights: {
@@ -955,7 +955,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "2,599",
         taxes: "480",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Swiss Travel Pass", "Guia en espanol", "Jungfraujoch"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Swiss Travel Pass", "Guia en español", "Jungfraujoch"],
           en: ["International flights", "4-star hotels", "Buffet breakfast", "Swiss Travel Pass", "Spanish-speaking guide", "Jungfraujoch"]
         }
       },
@@ -1016,7 +1016,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       {
         day: 6,
         title: { es: "Glacier Express", en: "Glacier Express" },
-        description: { es: "El viaje en tren mas espectacular del mundo.", en: "The world's most spectacular train journey." },
+        description: { es: "El viaje en tren más espectacular del mundo.", en: "The world's most spectacular train journey." },
         activities: { es: ["Glacier Express", "Paisajes alpinos", "Almuerzo a bordo"], en: ["Glacier Express", "Alpine landscapes", "Lunch on board"] }
       },
       {
@@ -1033,7 +1033,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Suiza es muy cara?", en: "Is Switzerland very expensive?" },
-        answer: { es: "Suiza es uno de los paises mas caros del mundo, pero la calidad y experiencias justifican el precio.", en: "Switzerland is one of the world's most expensive countries, but quality and experiences justify the price." }
+        answer: { es: "Suiza es uno de los paises más caros del mundo, pero la calidad y experiencias justifican el precio.", en: "Switzerland is one of the world's most expensive countries, but quality and experiences justify the price." }
       },
       {
         question: { es: "Que moneda se usa en Suiza?", en: "What currency is used in Switzerland?" },
@@ -1041,7 +1041,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Suiza?", en: "When is the best time to visit Switzerland?" },
-        answer: { es: "Verano (junio-agosto) para senderismo, invierno (diciembre-marzo) para esqui. Primavera y otono son menos concurridos.", en: "Summer (June-August) for hiking, winter (December-March) for skiing. Spring and autumn are less crowded." }
+        answer: { es: "Verano (junio-agosto) para senderismo, invierno (diciembre-marzo) para esqui. Primavera y otoño son menos concurridos.", en: "Summer (June-August) for hiking, winter (December-March) for skiing. Spring and autumn are less crowded." }
       }
     ],
     bestTimeToVisit: { es: "Junio a Septiembre y Diciembre a Marzo", en: "June to September and December to March" },
@@ -1060,7 +1060,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "Croacia es la joya del Adriatico, un pais de costas impresionantes, ciudades medievales y parques naturales espectaculares. Desde las murallas de Dubrovnik (escenario de Game of Thrones) hasta las cascadas de Plitvice, pasando por las islas de Hvar y Split, Croacia ofrece una combinacion perfecta de historia, naturaleza y vida mediterranea. Descubre playas de aguas cristalinas, gastronomia de mar y hospitalidad balcanica.",
+      es: "Croacia es la joya del Adriatico, un pais de costas impresionantes, ciudades medievales y parques naturales espectaculares. Desde las murallas de Dubrovnik (escenario de Game of Thrones) hasta las cascadas de Plitvice, pasando por las islas de Hvar y Split, Croacia ofrece una combinacion perfecta de historia, naturaleza y vida mediterranea. Descubre playas de aguas cristalinas, gastronomía de mar y hospitalidad balcanica.",
       en: "Croatia is the jewel of the Adriatic, a country of stunning coastlines, medieval cities, and spectacular natural parks. From Dubrovnik's walls (Game of Thrones setting) to Plitvice's waterfalls, through the islands of Hvar and Split, Croatia offers a perfect combination of history, nature, and Mediterranean life. Discover crystal-clear beaches, seafood gastronomy, and Balkan hospitality."
     },
     highlights: {
@@ -1075,7 +1075,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "1,699",
         taxes: "340",
         includes: {
-          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en espanol", "Plitvice"],
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Plitvice"],
           en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Plitvice"]
         }
       },
@@ -1112,7 +1112,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       {
         day: 2,
         title: { es: "Lagos de Plitvice", en: "Plitvice Lakes" },
-        description: { es: "Excursion al parque nacional mas famoso de Croacia.", en: "Excursion to Croatia's most famous national park." },
+        description: { es: "Excursion al parque nacional más famoso de Croacia.", en: "Excursion to Croatia's most famous national park." },
         activities: { es: ["Lagos superiores", "Lagos inferiores", "Cascadas"], en: ["Upper lakes", "Lower lakes", "Waterfalls"] }
       },
       {
@@ -1163,11 +1163,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar Croacia?", en: "When is the best time to visit Croatia?" },
-        answer: { es: "Mayo a octubre. Julio y agosto son los meses mas calurosos y concurridos.", en: "May to October. July and August are the hottest and most crowded months." }
+        answer: { es: "Mayo a octubre. Julio y agosto son los meses más calurosos y concurridos.", en: "May to October. July and August are the hottest and most crowded months." }
       },
       {
         question: { es: "Vale la pena el tour de Game of Thrones?", en: "Is the Game of Thrones tour worth it?" },
-        answer: { es: "Absolutamente, especialmente en Dubrovnik donde se filmaron muchas escenas iconicas de la serie.", en: "Absolutely, especially in Dubrovnik where many iconic scenes from the series were filmed." }
+        answer: { es: "Absolutamente, especialmente en Dubrovnik donde se filmaron muchas escenas icónicas de la serie.", en: "Absolutely, especially in Dubrovnik where many iconic scenes from the series were filmed." }
       }
     ],
     bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October" },
@@ -1186,7 +1186,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=800&auto=format&fit=crop"
     ],
     description: {
-      es: "El Reino Unido combina tradicion monarquica con modernidad vibrante. Desde el iconica Londres con el Big Ben y el Palacio de Buckingham hasta los paisajes de las Tierras Altas escocesas, pasando por los castillos de Gales y la campiña inglesa, el Reino Unido ofrece experiencias diversas. Descubre la realeza, los pubs tradicionales, el te de la tarde y una escena cultural de clase mundial.",
+      es: "El Reino Unido combina tradicion monarquica con modernidad vibrante. Desde el icónica Londres con el Big Ben y el Palacio de Buckingham hasta los paisajes de las Tierras Altas escocesas, pasando por los castillos de Gales y la campiña inglesa, el Reino Unido ofrece experiencias diversas. Descubre la realeza, los pubs tradicionales, el te de la tarde y una escena cultural de clase mundial.",
       en: "The United Kingdom combines monarchical tradition with vibrant modernity. From iconic London with Big Ben and Buckingham Palace to the Scottish Highlands landscapes, through Welsh castles and the English countryside, the UK offers diverse experiences. Discover royalty, traditional pubs, afternoon tea, and a world-class cultural scene."
     },
     highlights: {
@@ -1201,13 +1201,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         price: "1,499",
         taxes: "300",
         includes: {
-          es: ["Vuelos internacionales", "Hotel 4 estrellas", "Desayuno ingles", "London Pass", "Guia en espanol", "Tour panoramico"],
+          es: ["Vuelos internacionales", "Hotel 4 estrellas", "Desayuno ingles", "London Pass", "Guia en español", "Tour panoramico"],
           en: ["International flights", "4-star hotel", "English breakfast", "London Pass", "Spanish-speaking guide", "Panoramic tour"]
         }
       },
       {
         id: "uk-clasico",
-        name: { es: "Reino Unido Clasico", en: "Classic UK" },
+        name: { es: "Reino Unido Clásico", en: "Classic UK" },
         duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
         price: "2,499",
         taxes: "450",
@@ -1237,8 +1237,8 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         day: 2,
-        title: { es: "Londres Clasico", en: "Classic London" },
-        description: { es: "Los iconos mas famosos de Londres.", en: "London's most famous icons." },
+        title: { es: "Londres Clásico", en: "Classic London" },
+        description: { es: "Los iconos más famosos de Londres.", en: "London's most famous icons." },
         activities: { es: ["Big Ben", "Abadia Westminster", "Cambio de guardia"], en: ["Big Ben", "Westminster Abbey", "Changing of the Guard"] }
       },
       {
@@ -1275,7 +1275,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
         day: 8,
         title: { es: "Whisky y Cultura", en: "Whisky and Culture" },
         description: { es: "Descubre el whisky escoces y la cultura local.", en: "Discover Scotch whisky and local culture." },
-        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomia escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"] }
+        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomía escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"] }
       },
       {
         day: 9,
@@ -1301,7 +1301,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       },
       {
         question: { es: "Cual es la mejor epoca para visitar?", en: "When is the best time to visit?" },
-        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is magical for Christmas markets." }
+        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is mágical for Christmas markets." }
       },
       {
         question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?" },
@@ -1318,7 +1318,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Albania", en: "Albania" },
     heroImage: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1920&q=80",
     description: {
-      es: "Albania, la joya escondida de los Balcanes, ofrece playas virgenes en la Riviera Albanesa, montanas majestuosas, ciudades patrimonio UNESCO como Berat y Gjirokaster, y una hospitalidad legendaria. Descubre ruinas antiguas, bunkers de la era comunista y una gastronomia mediterranea unica.",
+      es: "Albania, la joya escondida de los Balcanes, ofrece playas virgenes en la Riviera Albanesa, montanas majestuosas, ciudades patrimonio UNESCO como Berat y Gjirokaster, y una hospitalidad legendaria. Descubre ruinas antiguas, bunkers de la era comunista y una gastronomía mediterranea única.",
       en: "Albania, the hidden gem of the Balkans, offers pristine beaches on the Albanian Riviera, majestic mountains, UNESCO heritage cities like Berat and Gjirokaster, and legendary hospitality. Discover ancient ruins, communist-era bunkers, and unique Mediterranean cuisine."
     },
     highlights: {
@@ -1335,7 +1335,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     itinerary: [
       { day: 1, title: { es: "Llegada a Tirana", en: "Arrival in Tirana" }, description: { es: "Bienvenida y traslado al hotel en la vibrante capital albanesa.", en: "Welcome and transfer to hotel in the vibrant Albanian capital." }, activities: { es: ["Traslado aeropuerto", "Check-in hotel", "Paseo plaza Skanderbeg"], en: ["Airport transfer", "Hotel check-in", "Skanderbeg Square walk"] } },
-      { day: 2, title: { es: "Tirana", en: "Tirana" }, description: { es: "Explora la colorida capital con su mezcla unica de historia.", en: "Explore the colorful capital with its unique mix of history." }, activities: { es: ["Bunker Art", "Mezquita Et'hem Bey", "Piramide de Tirana"], en: ["Bunker Art", "Et'hem Bey Mosque", "Tirana Pyramid"] } },
+      { day: 2, title: { es: "Tirana", en: "Tirana" }, description: { es: "Explora la colorida capital con su mezcla única de historia.", en: "Explore the colorful capital with its unique mix of history." }, activities: { es: ["Bunker Art", "Mezquita Et'hem Bey", "Piramide de Tirana"], en: ["Bunker Art", "Et'hem Bey Mosque", "Tirana Pyramid"] } },
       { day: 3, title: { es: "Berat", en: "Berat" }, description: { es: "Visita la ciudad de las mil ventanas, patrimonio UNESCO.", en: "Visit the city of a thousand windows, UNESCO heritage." }, activities: { es: ["Castillo de Berat", "Barrio Mangalem", "Museo Onufri"], en: ["Berat Castle", "Mangalem Quarter", "Onufri Museum"] } },
       { day: 4, title: { es: "Gjirokaster", en: "Gjirokaster" }, description: { es: "Descubre la ciudad de piedra y su impresionante fortaleza.", en: "Discover the stone city and its impressive fortress." }, activities: { es: ["Fortaleza Gjirokaster", "Bazaar otomano", "Casa Zekate"], en: ["Gjirokaster Fortress", "Ottoman Bazaar", "Zekate House"] } },
       { day: 5, title: { es: "Riviera Albanesa", en: "Albanian Riviera" }, description: { es: "Playas paradisiacas en la costa del mar Jonico.", en: "Paradise beaches on the Ionian coast." }, activities: { es: ["Playa Ksamil", "Parque Nacional Butrint", "Atardecer en Himara"], en: ["Ksamil Beach", "Butrint National Park", "Sunset in Himara"] } },
@@ -1358,8 +1358,8 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Austria", en: "Austria" },
     heroImage: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1920&q=80",
     description: {
-      es: "Austria encanta con los palacios imperiales de Viena, los paisajes alpinos de Salzburgo, la musica clasica de Mozart y los mercados navidenos mas magicos de Europa. Vive la elegancia del Imperio Habsburgo entre valses, cafes historicos y los Alpes austriacos.",
-      en: "Austria enchants with Vienna's imperial palaces, Salzburg's Alpine landscapes, Mozart's classical music, and Europe's most magical Christmas markets. Experience the elegance of the Habsburg Empire among waltzes, historic cafes, and the Austrian Alps."
+      es: "Austria encanta con los palacios imperiales de Viena, los paisajes alpinos de Salzburgo, la musica clásica de Mozart y los mercados navidenos más magicos de Europa. Vive la elegancia del Imperio Habsburgo entre valses, cafes históricos y los Alpes austriacos.",
+      en: "Austria enchants with Vienna's imperial palaces, Salzburg's Alpine landscapes, Mozart's classical music, and Europe's most mágical Christmas markets. Experience the elegance of the Habsburg Empire among waltzes, historic cafes, and the Austrian Alps."
     },
     highlights: {
       es: ["Palacio Schonbrunn Viena", "Salzburgo ciudad de Mozart", "Hallstatt pueblo de cuento", "Innsbruck capital alpina", "Mercados navidenos"],
@@ -1376,17 +1376,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     itinerary: [
       { day: 1, title: { es: "Viena Llegada", en: "Vienna Arrival" }, description: { es: "Bienvenida a la capital imperial austriaca.", en: "Welcome to the Austrian imperial capital." }, activities: { es: ["Traslado hotel", "Paseo Ringstrasse", "Cena de bienvenida"], en: ["Hotel transfer", "Ringstrasse walk", "Welcome dinner"] } },
       { day: 2, title: { es: "Viena Imperial", en: "Imperial Vienna" }, description: { es: "Los grandes palacios y la historia de los Habsburgo.", en: "The grand palaces and Habsburg history." }, activities: { es: ["Palacio Schonbrunn", "Opera Estatal", "Cafe Sacher"], en: ["Schonbrunn Palace", "State Opera", "Cafe Sacher"] } },
-      { day: 3, title: { es: "Viena Cultural", en: "Cultural Vienna" }, description: { es: "Museos, arte y musica clasica.", en: "Museums, art, and classical music." }, activities: { es: ["Museo Historia Arte", "Palacio Belvedere", "Concierto Mozart"], en: ["Art History Museum", "Belvedere Palace", "Mozart Concert"] } },
+      { day: 3, title: { es: "Viena Cultural", en: "Cultural Vienna" }, description: { es: "Museos, arte y musica clásica.", en: "Museums, art, and classical music." }, activities: { es: ["Museo Historia Arte", "Palacio Belvedere", "Concierto Mozart"], en: ["Art History Museum", "Belvedere Palace", "Mozart Concert"] } },
       { day: 4, title: { es: "Salzburgo", en: "Salzburg" }, description: { es: "La ciudad de Mozart y paisajes alpinos.", en: "Mozart's city and Alpine landscapes." }, activities: { es: ["Tren panoramico", "Casco antiguo", "Casa natal Mozart"], en: ["Panoramic train", "Old Town", "Mozart's Birthplace"] } },
       { day: 5, title: { es: "Salzburgo y alrededores", en: "Salzburg surroundings" }, description: { es: "Fortaleza y lagos de los Alpes.", en: "Fortress and Alpine lakes." }, activities: { es: ["Fortaleza Hohensalzburg", "Lago Wolfgang", "Jardines Mirabell"], en: ["Hohensalzburg Fortress", "Lake Wolfgang", "Mirabell Gardens"] } },
-      { day: 6, title: { es: "Hallstatt", en: "Hallstatt" }, description: { es: "El pueblo mas fotografiado del mundo.", en: "The world's most photographed village." }, activities: { es: ["Pueblo Hallstatt", "Minas de sal", "Lago Hallstatt"], en: ["Hallstatt Village", "Salt mines", "Hallstatt Lake"] } },
+      { day: 6, title: { es: "Hallstatt", en: "Hallstatt" }, description: { es: "El pueblo más fotografiado del mundo.", en: "The world's most photographed village." }, activities: { es: ["Pueblo Hallstatt", "Minas de sal", "Lago Hallstatt"], en: ["Hallstatt Village", "Salt mines", "Hallstatt Lake"] } },
       { day: 7, title: { es: "Innsbruck", en: "Innsbruck" }, description: { es: "Capital de los Alpes austriacos.", en: "Capital of the Austrian Alps." }, activities: { es: ["Tejadillo de Oro", "Palacio Ambras", "Teleferico Alpes"], en: ["Golden Roof", "Ambras Castle", "Alps Cable Car"] } },
       { day: 8, title: { es: "Wachau", en: "Wachau" }, description: { es: "Valle del Danubio con vinedos y castillos.", en: "Danube Valley with vineyards and castles." }, activities: { es: ["Crucero Danubio", "Abadia Melk", "Cata de vinos"], en: ["Danube cruise", "Melk Abbey", "Wine tasting"] } },
       { day: 9, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso desde Viena.", en: "Return flight from Vienna." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
       { question: { es: "Cual es la mejor epoca para visitar Austria?", en: "When is the best time to visit Austria?" }, answer: { es: "Verano para senderismo, diciembre para mercados navidenos, invierno para esqui.", en: "Summer for hiking, December for Christmas markets, winter for skiing." } },
-      { question: { es: "Es caro viajar en Austria?", en: "Is Austria expensive to travel?" }, answer: { es: "Austria tiene precios moderados-altos. Viena y zonas turisticas son mas caras.", en: "Austria has moderate-high prices. Vienna and tourist areas are more expensive." } }
+      { question: { es: "Es caro viajar en Austria?", en: "Is Austria expensive to travel?" }, answer: { es: "Austria tiene precios moderados-altos. Viena y zonas turisticas son más caras.", en: "Austria has moderate-high prices. Vienna and tourist areas are more expensive." } }
     ],
     bestTimeToVisit: { es: "Mayo a Septiembre, Diciembre", en: "May to September, December" },
     currency: "EUR",
@@ -1398,7 +1398,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Belgica", en: "Belgium" },
     heroImage: "https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?w=1920&q=80",
     description: {
-      es: "Belgica sorprende con sus ciudades medievales perfectamente conservadas, el chocolate mas fino del mundo, cervezas artesanales unicas y arquitectura Art Nouveau. Desde la Grand Place de Bruselas hasta los canales romanticos de Brujas, cada rincon cuenta historia.",
+      es: "Belgica sorprende con sus ciudades medievales perfectamente conservadas, el chocolate más fino del mundo, cervezas artesanales únicas y arquitectura Art Nouveau. Desde la Grand Place de Bruselas hasta los canales románticos de Brujas, cada rincon cuenta historia.",
       en: "Belgium surprises with perfectly preserved medieval cities, the world's finest chocolate, unique craft beers, and Art Nouveau architecture. From Brussels' Grand Place to Bruges' romantic canals, every corner tells a story."
     },
     highlights: {
@@ -1423,7 +1423,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     faqs: [
       { question: { es: "Que idiomas se hablan en Belgica?", en: "What languages are spoken in Belgium?" }, answer: { es: "Frances en Valonia, neerlandes en Flandes, aleman en el este. Ingles es comun.", en: "French in Wallonia, Dutch in Flanders, German in the east. English is common." } },
-      { question: { es: "Vale la pena visitar Belgica?", en: "Is Belgium worth visiting?" }, answer: { es: "Absolutamente. Ciudades medievales, gastronomia unica y ubicacion perfecta para explorar Europa.", en: "Absolutely. Medieval cities, unique gastronomy, and perfect location to explore Europe." } }
+      { question: { es: "Vale la pena visitar Belgica?", en: "Is Belgium worth visiting?" }, answer: { es: "Absolutamente. Ciudades medievales, gastronomía única y ubicacion perfecta para explorar Europa.", en: "Absolutely. Medieval cities, unique gastronomy, and perfect location to explore Europe." } }
     ],
     bestTimeToVisit: { es: "Abril a Octubre", en: "April to October" },
     currency: "EUR",
@@ -1435,7 +1435,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Republica Checa", en: "Czech Republic" },
     heroImage: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1920&q=80",
     description: {
-      es: "La Republica Checa cautiva con Praga, la ciudad de las cien torres, castillos de cuento como Cesky Krumlov, balnearios historicos y la mejor cerveza del mundo. Descubre la bohemia romantica entre puentes goticos, relojes astronomicos y ciudades medievales perfectas.",
+      es: "La Republica Checa cautiva con Praga, la ciudad de las cien torres, castillos de cuento como Cesky Krumlov, balnearios históricos y la mejor cerveza del mundo. Descubre la bohemia romántica entre puentes goticos, relojes astronomicos y ciudades medievales perfectas.",
       en: "The Czech Republic captivates with Prague, the city of a hundred towers, fairytale castles like Cesky Krumlov, historic spas, and the world's best beer. Discover romantic Bohemia among Gothic bridges, astronomical clocks, and perfect medieval towns."
     },
     highlights: {
@@ -1448,20 +1448,20 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?w=800&q=80"
     ],
     packages: [
-      { id: "czech-republic-1", name: { es: "Bohemia Romantica", en: "Romantic Bohemia" }, duration: { es: "7 dias", en: "7 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
+      { id: "czech-republic-1", name: { es: "Bohemia Romántica", en: "Romantic Bohemia" }, duration: { es: "7 dias", en: "7 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Praga Llegada", en: "Prague Arrival" }, description: { es: "Bienvenida a la ciudad de las cien torres.", en: "Welcome to the city of a hundred towers." }, activities: { es: ["Traslado hotel", "Plaza Ciudad Vieja", "Cena tipica"], en: ["Hotel transfer", "Old Town Square", "Traditional dinner"] } },
       { day: 2, title: { es: "Praga Historica", en: "Historic Prague" }, description: { es: "El corazon gotico y barroco de la ciudad.", en: "The Gothic and Baroque heart of the city." }, activities: { es: ["Puente Carlos", "Reloj Astronomico", "Barrio Judio"], en: ["Charles Bridge", "Astronomical Clock", "Jewish Quarter"] } },
-      { day: 3, title: { es: "Castillo de Praga", en: "Prague Castle" }, description: { es: "El complejo de castillos mas grande del mundo.", en: "The world's largest castle complex." }, activities: { es: ["Castillo de Praga", "Catedral San Vito", "Callejon del Oro"], en: ["Prague Castle", "St. Vitus Cathedral", "Golden Lane"] } },
-      { day: 4, title: { es: "Cesky Krumlov", en: "Cesky Krumlov" }, description: { es: "Ciudad medieval perfecta, patrimonio UNESCO.", en: "Perfect medieval town, UNESCO heritage." }, activities: { es: ["Castillo Cesky Krumlov", "Centro historico", "Rafting rio Vltava"], en: ["Cesky Krumlov Castle", "Historic center", "Vltava River rafting"] } },
-      { day: 5, title: { es: "Karlovy Vary", en: "Karlovy Vary" }, description: { es: "El spa mas famoso de Europa Central.", en: "Central Europe's most famous spa." }, activities: { es: ["Columnata spa", "Aguas termales", "Cristaleria Moser"], en: ["Spa colonnade", "Thermal waters", "Moser glassworks"] } },
-      { day: 6, title: { es: "Kutna Hora", en: "Kutna Hora" }, description: { es: "Ciudad minera medieval con el osario de Sedlec.", en: "Medieval mining town with the Sedlec ossuary." }, activities: { es: ["Osario de Sedlec", "Catedral Santa Barbara", "Centro historico"], en: ["Sedlec Ossuary", "St. Barbara's Cathedral", "Historic center"] } },
+      { day: 3, title: { es: "Castillo de Praga", en: "Prague Castle" }, description: { es: "El complejo de castillos más grande del mundo.", en: "The world's largest castle complex." }, activities: { es: ["Castillo de Praga", "Catedral San Vito", "Callejon del Oro"], en: ["Prague Castle", "St. Vitus Cathedral", "Golden Lane"] } },
+      { day: 4, title: { es: "Cesky Krumlov", en: "Cesky Krumlov" }, description: { es: "Ciudad medieval perfecta, patrimonio UNESCO.", en: "Perfect medieval town, UNESCO heritage." }, activities: { es: ["Castillo Cesky Krumlov", "Centro histórico", "Rafting rio Vltava"], en: ["Cesky Krumlov Castle", "Historic center", "Vltava River rafting"] } },
+      { day: 5, title: { es: "Karlovy Vary", en: "Karlovy Vary" }, description: { es: "El spa más famoso de Europa Central.", en: "Central Europe's most famous spa." }, activities: { es: ["Columnata spa", "Aguas termales", "Cristaleria Moser"], en: ["Spa colonnade", "Thermal waters", "Moser glassworks"] } },
+      { day: 6, title: { es: "Kutna Hora", en: "Kutna Hora" }, description: { es: "Ciudad minera medieval con el osario de Sedlec.", en: "Medieval mining town with the Sedlec ossuary." }, activities: { es: ["Osario de Sedlec", "Catedral Santa Barbara", "Centro histórico"], en: ["Sedlec Ossuary", "St. Barbara's Cathedral", "Historic center"] } },
       { day: 7, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight." }, activities: { es: ["Compras cristal", "Traslado aeropuerto", "Vuelo regreso"], en: ["Crystal shopping", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
       { question: { es: "Cual es la moneda de Republica Checa?", en: "What is the currency of the Czech Republic?" }, answer: { es: "La Corona Checa (CZK). Muchos lugares aceptan euros pero el cambio puede ser desfavorable.", en: "The Czech Crown (CZK). Many places accept euros but the exchange rate may be unfavorable." } },
-      { question: { es: "Praga es cara?", en: "Is Prague expensive?" }, answer: { es: "Praga es mas economica que Europa Occidental. Comida y bebida son bastante accesibles.", en: "Prague is cheaper than Western Europe. Food and drinks are quite affordable." } }
+      { question: { es: "Praga es cara?", en: "Is Prague expensive?" }, answer: { es: "Praga es más economica que Europa Occidental. Comida y bebida son bastante accesibles.", en: "Prague is cheaper than Western Europe. Food and drinks are quite affordable." } }
     ],
     bestTimeToVisit: { es: "Abril a Octubre", en: "April to October" },
     currency: "CZK",
@@ -1473,7 +1473,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Dinamarca", en: "Denmark" },
     heroImage: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1920&q=80",
     description: {
-      es: "Dinamarca, cuna del hygge y la felicidad, ofrece Copenhague con sus canales coloridos, castillos de Hamlet, el diseno nordico mas vanguardista y los parques de Tivoli. Descubre vikingos, palacios reales y la vida danesa que inspira al mundo.",
+      es: "Dinamarca, cuna del hygge y la felicidad, ofrece Copenhague con sus canales coloridos, castillos de Hamlet, el diseno nordico más vanguardista y los parques de Tivoli. Descubre vikingos, palacios reales y la vida danesa que inspira al mundo.",
       en: "Denmark, home of hygge and happiness, offers Copenhagen with its colorful canals, Hamlet's castles, cutting-edge Nordic design, and Tivoli gardens. Discover Vikings, royal palaces, and the Danish lifestyle that inspires the world."
     },
     highlights: {
@@ -1489,15 +1489,15 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       { id: "denmark-1", name: { es: "Dinamarca Hygge", en: "Hygge Denmark" }, duration: { es: "6 dias", en: "6 days" }, price: "2,199", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Copenhagen Card"], en: ["Flights", "4* Hotels", "Breakfasts", "Copenhagen Card"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Copenhague", en: "Copenhagen" }, description: { es: "Llegada a la capital mas feliz del mundo.", en: "Arrival in the world's happiest capital." }, activities: { es: ["Traslado hotel", "Nyhavn", "Cena nordica"], en: ["Hotel transfer", "Nyhavn", "Nordic dinner"] } },
-      { day: 2, title: { es: "Copenhague Clasica", en: "Classic Copenhagen" }, description: { es: "Los iconos de la capital danesa.", en: "The icons of the Danish capital." }, activities: { es: ["Sirenita", "Palacio Amalienborg", "Jardines Tivoli"], en: ["Little Mermaid", "Amalienborg Palace", "Tivoli Gardens"] } },
-      { day: 3, title: { es: "Diseno y Gastronomia", en: "Design and Gastronomy" }, description: { es: "La vanguardia danesa en diseno y cocina.", en: "Danish cutting-edge design and cuisine." }, activities: { es: ["Museo Diseno", "Torvehallerne", "Christiania"], en: ["Design Museum", "Torvehallerne", "Christiania"] } },
+      { day: 1, title: { es: "Copenhague", en: "Copenhagen" }, description: { es: "Llegada a la capital más feliz del mundo.", en: "Arrival in the world's happiest capital." }, activities: { es: ["Traslado hotel", "Nyhavn", "Cena nordica"], en: ["Hotel transfer", "Nyhavn", "Nordic dinner"] } },
+      { day: 2, title: { es: "Copenhague Clásica", en: "Classic Copenhagen" }, description: { es: "Los iconos de la capital danesa.", en: "The icons of the Danish capital." }, activities: { es: ["Sirenita", "Palacio Amalienborg", "Jardines Tivoli"], en: ["Little Mermaid", "Amalienborg Palace", "Tivoli Gardens"] } },
+      { day: 3, title: { es: "Diseno y Gastronomía", en: "Design and Gastronomy" }, description: { es: "La vanguardia danesa en diseno y cocina.", en: "Danish cutting-edge design and cuisine." }, activities: { es: ["Museo Diseno", "Torvehallerne", "Christiania"], en: ["Design Museum", "Torvehallerne", "Christiania"] } },
       { day: 4, title: { es: "Castillo Kronborg", en: "Kronborg Castle" }, description: { es: "El castillo de Hamlet, patrimonio UNESCO.", en: "Hamlet's castle, UNESCO heritage." }, activities: { es: ["Tren a Helsingor", "Castillo Kronborg", "Cruce a Suecia opcional"], en: ["Train to Helsingor", "Kronborg Castle", "Optional Sweden crossing"] } },
-      { day: 5, title: { es: "Roskilde", en: "Roskilde" }, description: { es: "Vikingos y la catedral de los reyes daneses.", en: "Vikings and the cathedral of Danish kings." }, activities: { es: ["Museo Barcos Vikingos", "Catedral Roskilde", "Centro historico"], en: ["Viking Ship Museum", "Roskilde Cathedral", "Historic center"] } },
+      { day: 5, title: { es: "Roskilde", en: "Roskilde" }, description: { es: "Vikingos y la catedral de los reyes daneses.", en: "Vikings and the cathedral of Danish kings." }, activities: { es: ["Museo Barcos Vikingos", "Catedral Roskilde", "Centro histórico"], en: ["Viking Ship Museum", "Roskilde Cathedral", "Historic center"] } },
       { day: 6, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo por Copenhague y vuelo.", en: "Last walk through Copenhagen and flight." }, activities: { es: ["Stroget compras", "Traslado aeropuerto", "Vuelo regreso"], en: ["Stroget shopping", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
-      { question: { es: "Es Dinamarca muy cara?", en: "Is Denmark very expensive?" }, answer: { es: "Si, es uno de los paises mas caros de Europa. La Copenhagen Card ayuda a ahorrar en atracciones.", en: "Yes, it's one of Europe's most expensive countries. The Copenhagen Card helps save on attractions." } },
+      { question: { es: "Es Dinamarca muy cara?", en: "Is Denmark very expensive?" }, answer: { es: "Si, es uno de los paises más caros de Europa. La Copenhagen Card ayuda a ahorrar en atracciones.", en: "Yes, it's one of Europe's most expensive countries. The Copenhagen Card helps save on attractions." } },
       { question: { es: "Que es hygge?", en: "What is hygge?" }, answer: { es: "Un concepto danes de bienestar, comodidad y disfrutar los momentos simples de la vida.", en: "A Danish concept of wellbeing, comfort, and enjoying life's simple moments." } }
     ],
     bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
@@ -1510,7 +1510,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Finlandia", en: "Finland" },
     heroImage: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80",
     description: {
-      es: "Finlandia es la tierra de la aurora boreal, saunas autenticas, bosques infinitos y el hogar de Papa Noel en Laponia. Desde el diseno vanguardista de Helsinki hasta los lagos cristalinos y la magia del Artico, vive experiencias unicas en el norte de Europa.",
+      es: "Finlandia es la tierra de la aurora boreal, saunas autenticas, bosques infinitos y el hogar de Papa Noel en Laponia. Desde el diseno vanguardista de Helsinki hasta los lagos cristalinos y la magia del Artico, vive experiencias únicas en el norte de Europa.",
       en: "Finland is the land of the Northern Lights, authentic saunas, endless forests, and Santa Claus' home in Lapland. From Helsinki's cutting-edge design to crystal lakes and Arctic magic, experience unique adventures in Northern Europe."
     },
     highlights: {
@@ -1523,7 +1523,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80"
     ],
     packages: [
-      { id: "finland-1", name: { es: "Laponia Magica", en: "Magical Lapland" }, duration: { es: "7 dias", en: "7 days" }, price: "3,299", taxes: "520", includes: { es: ["Vuelos", "Hoteles/Iglus", "Actividades articas", "Aurora tour"], en: ["Flights", "Hotels/Igloos", "Arctic activities", "Aurora tour"] } }
+      { id: "finland-1", name: { es: "Laponia Mágica", en: "Mágical Lapland" }, duration: { es: "7 dias", en: "7 days" }, price: "3,299", taxes: "520", includes: { es: ["Vuelos", "Hoteles/Iglus", "Actividades articas", "Aurora tour"], en: ["Flights", "Hotels/Igloos", "Arctic activities", "Aurora tour"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Helsinki", en: "Helsinki" }, description: { es: "Llegada a la capital del diseno nordico.", en: "Arrival in the Nordic design capital." }, activities: { es: ["Traslado hotel", "Catedral Helsinki", "Mercado puerto"], en: ["Hotel transfer", "Helsinki Cathedral", "Market Square"] } },
@@ -1548,7 +1548,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Hungria", en: "Hungary" },
     heroImage: "https://images.unsplash.com/photo-1541343672885-9be56236302a?w=1920&q=80",
     description: {
-      es: "Hungria deslumbra con Budapest, la Perla del Danubio dividida por el rio entre Buda y Pest. Banos termales legendarios, el Parlamento mas espectacular de Europa, ruinas de bares unicos y la tradicion de los vinos de Tokaj te esperan.",
+      es: "Hungria deslumbra con Budapest, la Perla del Danubio dividida por el rio entre Buda y Pest. Banos termales legendarios, el Parlamento más espectacular de Europa, ruinas de bares unicos y la tradicion de los vinos de Tokaj te esperan.",
       en: "Hungary dazzles with Budapest, the Pearl of the Danube divided by the river between Buda and Pest. Legendary thermal baths, Europe's most spectacular Parliament, unique ruin bars, and the tradition of Tokaj wines await you."
     },
     highlights: {
@@ -1573,7 +1573,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     faqs: [
       { question: { es: "Hungria usa el euro?", en: "Does Hungary use the euro?" }, answer: { es: "No, la moneda es el Forinto Hungaro (HUF). Muchos lugares aceptan euros pero el cambio puede variar.", en: "No, the currency is the Hungarian Forint (HUF). Many places accept euros but exchange rates vary." } },
-      { question: { es: "Son seguros los ruin bars?", en: "Are ruin bars safe?" }, answer: { es: "Si, son bares tematicos en edificios abandonados rehabilitados. Szimpla Kert es el mas famoso.", en: "Yes, they're themed bars in refurbished abandoned buildings. Szimpla Kert is the most famous." } }
+      { question: { es: "Son seguros los ruin bars?", en: "Are ruin bars safe?" }, answer: { es: "Si, son bares tematicos en edificios abandonados rehabilitados. Szimpla Kert es el más famoso.", en: "Yes, they're themed bars in refurbished abandoned buildings. Szimpla Kert is the most famous." } }
     ],
     bestTimeToVisit: { es: "Marzo a Mayo, Septiembre a Noviembre", en: "March to May, September to November" },
     currency: "HUF",
@@ -1585,7 +1585,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Islandia", en: "Iceland" },
     heroImage: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1920&q=80",
     description: {
-      es: "Islandia es la tierra de hielo y fuego donde glaciares, volcanes, geiseres y cascadas crean paisajes de otro mundo. La Laguna Azul, la aurora boreal, ballenas y la unica carretera que rodea la isla ofrecen aventuras incomparables.",
+      es: "Islandia es la tierra de hielo y fuego donde glaciares, volcanes, geiseres y cascadas crean paisajes de otro mundo. La Laguna Azul, la aurora boreal, ballenas y la única carretera que rodea la isla ofrecen aventuras incomparables.",
       en: "Iceland is the land of fire and ice where glaciers, volcanoes, geysers, and waterfalls create otherworldly landscapes. The Blue Lagoon, Northern Lights, whales, and the only road circling the island offer unparalleled adventures."
     },
     highlights: {
@@ -1601,18 +1601,18 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       { id: "iceland-1", name: { es: "Islandia Esencial", en: "Essential Iceland" }, duration: { es: "8 dias", en: "8 days" }, price: "3,499", taxes: "550", includes: { es: ["Vuelos", "Hoteles/Cabanas", "4x4", "Actividades"], en: ["Flights", "Hotels/Cabins", "4x4", "Activities"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Reykjavik", en: "Reykjavik" }, description: { es: "Llegada a la capital mas septentrional.", en: "Arrival in the world's northernmost capital." }, activities: { es: ["Traslado hotel", "Centro Reykjavik", "Hallgrimskirkja"], en: ["Hotel transfer", "Reykjavik center", "Hallgrimskirkja"] } },
+      { day: 1, title: { es: "Reykjavik", en: "Reykjavik" }, description: { es: "Llegada a la capital más septentrional.", en: "Arrival in the world's northernmost capital." }, activities: { es: ["Traslado hotel", "Centro Reykjavik", "Hallgrimskirkja"], en: ["Hotel transfer", "Reykjavik center", "Hallgrimskirkja"] } },
       { day: 2, title: { es: "Circulo Dorado", en: "Golden Circle" }, description: { es: "Los iconos naturales de Islandia.", en: "Iceland's natural icons." }, activities: { es: ["Thingvellir", "Geysir", "Gullfoss"], en: ["Thingvellir", "Geysir", "Gullfoss"] } },
       { day: 3, title: { es: "Costa Sur", en: "South Coast" }, description: { es: "Cascadas y playas de arena negra.", en: "Waterfalls and black sand beaches." }, activities: { es: ["Seljalandsfoss", "Skogafoss", "Playa Reynisfjara"], en: ["Seljalandsfoss", "Skogafoss", "Reynisfjara Beach"] } },
       { day: 4, title: { es: "Laguna Glaciar", en: "Glacier Lagoon" }, description: { es: "Icebergs flotando en agua cristalina.", en: "Icebergs floating in crystal water." }, activities: { es: ["Jokulsarlon", "Diamond Beach", "Barca entre icebergs"], en: ["Jokulsarlon", "Diamond Beach", "Boat among icebergs"] } },
-      { day: 5, title: { es: "Glaciar Vatnajokull", en: "Vatnajokull Glacier" }, description: { es: "Caminata sobre el glaciar mas grande de Europa.", en: "Hike on Europe's largest glacier." }, activities: { es: ["Caminata glaciar", "Cueva de hielo", "Parque Nacional"], en: ["Glacier hike", "Ice cave", "National Park"] } },
+      { day: 5, title: { es: "Glaciar Vatnajokull", en: "Vatnajokull Glacier" }, description: { es: "Caminata sobre el glaciar más grande de Europa.", en: "Hike on Europe's largest glacier." }, activities: { es: ["Caminata glaciar", "Cueva de hielo", "Parque Nacional"], en: ["Glacier hike", "Ice cave", "National Park"] } },
       { day: 6, title: { es: "Peninsula Snaefellsnes", en: "Snaefellsnes Peninsula" }, description: { es: "Islandia en miniatura.", en: "Iceland in miniature." }, activities: { es: ["Kirkjufell", "Acantilados Arnarstapi", "Playa focas"], en: ["Kirkjufell", "Arnarstapi cliffs", "Seal beach"] } },
-      { day: 7, title: { es: "Laguna Azul", en: "Blue Lagoon" }, description: { es: "Relax en las aguas termales mas famosas.", en: "Relax in the most famous thermal waters." }, activities: { es: ["Laguna Azul", "Spa geotermico", "Cena despedida"], en: ["Blue Lagoon", "Geothermal spa", "Farewell dinner"] } },
+      { day: 7, title: { es: "Laguna Azul", en: "Blue Lagoon" }, description: { es: "Relax en las aguas termales más famosas.", en: "Relax in the most famous thermal waters." }, activities: { es: ["Laguna Azul", "Spa geotermico", "Cena despedida"], en: ["Blue Lagoon", "Geothermal spa", "Farewell dinner"] } },
       { day: 8, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso.", en: "Return flight." }, activities: { es: ["Desayuno", "Traslado aeropuerto", "Vuelo regreso"], en: ["Breakfast", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
       { question: { es: "Cuando es mejor visitar Islandia?", en: "When is best to visit Iceland?" }, answer: { es: "Verano (junio-agosto) para sol de medianoche y fauna. Invierno para auroras boreales.", en: "Summer (June-August) for midnight sun and wildlife. Winter for Northern Lights." } },
-      { question: { es: "Es muy cara Islandia?", en: "Is Iceland very expensive?" }, answer: { es: "Si, es uno de los paises mas caros del mundo. Planifica bien el presupuesto.", en: "Yes, it's one of the world's most expensive countries. Plan your budget carefully." } }
+      { question: { es: "Es muy cara Islandia?", en: "Is Iceland very expensive?" }, answer: { es: "Si, es uno de los paises más caros del mundo. Planifica bien el presupuesto.", en: "Yes, it's one of the world's most expensive countries. Plan your budget carefully." } }
     ],
     bestTimeToVisit: { es: "Junio a Agosto (verano), Septiembre a Marzo (auroras)", en: "June to August (summer), September to March (auroras)" },
     currency: "ISK",
@@ -1624,7 +1624,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Irlanda", en: "Ireland" },
     heroImage: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1920&q=80",
     description: {
-      es: "Irlanda, la Isla Esmeralda, cautiva con acantilados dramaticos, castillos antiguos, pubs con musica tradicional y la calidez de su gente. Desde los Cliffs of Moher hasta Dublin literaria, la magia celta te envuelve en cada rincon verde.",
+      es: "Irlanda, la Isla Esmeralda, cautiva con acantilados dramáticos, castillos antiguos, pubs con musica tradicional y la calidez de su gente. Desde los Cliffs of Moher hasta Dublin literaria, la magia celta te envuelve en cada rincon verde.",
       en: "Ireland, the Emerald Isle, captivates with dramatic cliffs, ancient castles, pubs with traditional music, and the warmth of its people. From the Cliffs of Moher to literary Dublin, Celtic magic envelops you in every green corner."
     },
     highlights: {
@@ -1643,8 +1643,8 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       { day: 1, title: { es: "Dublin", en: "Dublin" }, description: { es: "Llegada a la capital literaria.", en: "Arrival in the literary capital." }, activities: { es: ["Traslado hotel", "Temple Bar", "Pub tradicional"], en: ["Hotel transfer", "Temple Bar", "Traditional pub"] } },
       { day: 2, title: { es: "Dublin Historica", en: "Historic Dublin" }, description: { es: "La historia y cultura de la ciudad.", en: "The city's history and culture." }, activities: { es: ["Trinity College", "Libro de Kells", "Guinness Storehouse"], en: ["Trinity College", "Book of Kells", "Guinness Storehouse"] } },
       { day: 3, title: { es: "Galway", en: "Galway" }, description: { es: "La bohemia costa oeste irlandesa.", en: "The bohemian Irish west coast." }, activities: { es: ["Ruta a Galway", "Centro medieval", "Musica en vivo"], en: ["Route to Galway", "Medieval center", "Live music"] } },
-      { day: 4, title: { es: "Cliffs of Moher", en: "Cliffs of Moher" }, description: { es: "Los acantilados mas espectaculares de Europa.", en: "Europe's most spectacular cliffs." }, activities: { es: ["Cliffs of Moher", "The Burren", "Doolin"], en: ["Cliffs of Moher", "The Burren", "Doolin"] } },
-      { day: 5, title: { es: "Ring of Kerry", en: "Ring of Kerry" }, description: { es: "La ruta costera mas famosa de Irlanda.", en: "Ireland's most famous coastal route." }, activities: { es: ["Ring of Kerry", "Parque Killarney", "Lagos Killarney"], en: ["Ring of Kerry", "Killarney Park", "Killarney Lakes"] } },
+      { day: 4, title: { es: "Cliffs of Moher", en: "Cliffs of Moher" }, description: { es: "Los acantilados más espectaculares de Europa.", en: "Europe's most spectacular cliffs." }, activities: { es: ["Cliffs of Moher", "The Burren", "Doolin"], en: ["Cliffs of Moher", "The Burren", "Doolin"] } },
+      { day: 5, title: { es: "Ring of Kerry", en: "Ring of Kerry" }, description: { es: "La ruta costera más famosa de Irlanda.", en: "Ireland's most famous coastal route." }, activities: { es: ["Ring of Kerry", "Parque Killarney", "Lagos Killarney"], en: ["Ring of Kerry", "Killarney Park", "Killarney Lakes"] } },
       { day: 6, title: { es: "Cork y Blarney", en: "Cork and Blarney" }, description: { es: "La capital gastronomica y el castillo legendario.", en: "The gastronomic capital and the legendary castle." }, activities: { es: ["Castillo Blarney", "Piedra elocuencia", "English Market"], en: ["Blarney Castle", "Eloquence stone", "English Market"] } },
       { day: 7, title: { es: "Kilkenny", en: "Kilkenny" }, description: { es: "La ciudad medieval mejor conservada.", en: "The best-preserved medieval city." }, activities: { es: ["Castillo Kilkenny", "Cerveceria Smithwicks", "Centro medieval"], en: ["Kilkenny Castle", "Smithwicks Brewery", "Medieval center"] } },
       { day: 8, title: { es: "Wicklow", en: "Wicklow" }, description: { es: "El jardin de Irlanda.", en: "The garden of Ireland." }, activities: { es: ["Glendalough", "Powerscourt", "Montanas Wicklow"], en: ["Glendalough", "Powerscourt", "Wicklow Mountains"] } },
@@ -1664,7 +1664,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Noruega", en: "Norway" },
     heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
     description: {
-      es: "Noruega sorprende con los fiordos mas dramaticos del mundo, la aurora boreal, el sol de medianoche y ciudades vibrantes como Bergen y Oslo. Cruceros por fiordos, pueblos pesqueros coloridos y naturaleza virgen te esperan en este pais escandinavo.",
+      es: "Noruega sorprende con los fiordos más dramáticos del mundo, la aurora boreal, el sol de medianoche y ciudades vibrantes como Bergen y Oslo. Cruceros por fiordos, pueblos pesqueros coloridos y naturaleza virgen te esperan en este pais escandinavo.",
       en: "Norway surprises with the world's most dramatic fjords, the Northern Lights, the midnight sun, and vibrant cities like Bergen and Oslo. Fjord cruises, colorful fishing villages, and pristine nature await you in this Scandinavian country."
     },
     highlights: {
@@ -1682,16 +1682,16 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     itinerary: [
       { day: 1, title: { es: "Oslo", en: "Oslo" }, description: { es: "Llegada a la capital noruega.", en: "Arrival in the Norwegian capital." }, activities: { es: ["Traslado hotel", "Opera Oslo", "Paseo Aker Brygge"], en: ["Hotel transfer", "Oslo Opera", "Aker Brygge walk"] } },
       { day: 2, title: { es: "Oslo Cultura", en: "Oslo Culture" }, description: { es: "Museos y arte en la capital.", en: "Museums and art in the capital." }, activities: { es: ["Museo Munch", "Parque Vigeland", "Fortaleza Akershus"], en: ["Munch Museum", "Vigeland Park", "Akershus Fortress"] } },
-      { day: 3, title: { es: "Tren a Bergen", en: "Train to Bergen" }, description: { es: "El viaje en tren mas bello de Europa.", en: "Europe's most beautiful train journey." }, activities: { es: ["Tren Oslo-Bergen", "Paisajes montanas", "Llegada Bergen"], en: ["Oslo-Bergen train", "Mountain landscapes", "Bergen arrival"] } },
+      { day: 3, title: { es: "Tren a Bergen", en: "Train to Bergen" }, description: { es: "El viaje en tren más bello de Europa.", en: "Europe's most beautiful train journey." }, activities: { es: ["Tren Oslo-Bergen", "Paisajes montanas", "Llegada Bergen"], en: ["Oslo-Bergen train", "Mountain landscapes", "Bergen arrival"] } },
       { day: 4, title: { es: "Bergen", en: "Bergen" }, description: { es: "La puerta a los fiordos.", en: "The gateway to the fjords." }, activities: { es: ["Bryggen UNESCO", "Funicular Floyen", "Mercado pescado"], en: ["Bryggen UNESCO", "Floyen Funicular", "Fish market"] } },
       { day: 5, title: { es: "Crucero Fiordo", en: "Fjord Cruise" }, description: { es: "Navegando el Sognefjord, el rey de los fiordos.", en: "Sailing the Sognefjord, king of the fjords." }, activities: { es: ["Crucero Sognefjord", "Cascadas", "Pueblo Flam"], en: ["Sognefjord cruise", "Waterfalls", "Flam village"] } },
-      { day: 6, title: { es: "Tren de Flam", en: "Flam Railway" }, description: { es: "Uno de los viajes en tren mas espectaculares.", en: "One of the most spectacular train journeys." }, activities: { es: ["Tren Flam", "Cascada Kjosfossen", "Ruta a Geiranger"], en: ["Flam Railway", "Kjosfossen Waterfall", "Route to Geiranger"] } },
-      { day: 7, title: { es: "Geirangerfjord", en: "Geirangerfjord" }, description: { es: "El fiordo patrimonio UNESCO mas famoso.", en: "The most famous UNESCO heritage fjord." }, activities: { es: ["Crucero Geiranger", "Siete Hermanas cascada", "Mirador Flydalsjuvet"], en: ["Geiranger cruise", "Seven Sisters waterfall", "Flydalsjuvet viewpoint"] } },
-      { day: 8, title: { es: "Alesund", en: "Alesund" }, description: { es: "Ciudad Art Nouveau unica.", en: "Unique Art Nouveau city." }, activities: { es: ["Centro Alesund", "Mirador Aksla", "Acuario"], en: ["Alesund center", "Aksla viewpoint", "Aquarium"] } },
+      { day: 6, title: { es: "Tren de Flam", en: "Flam Railway" }, description: { es: "Uno de los viajes en tren más espectaculares.", en: "One of the most spectacular train journeys." }, activities: { es: ["Tren Flam", "Cascada Kjosfossen", "Ruta a Geiranger"], en: ["Flam Railway", "Kjosfossen Waterfall", "Route to Geiranger"] } },
+      { day: 7, title: { es: "Geirangerfjord", en: "Geirangerfjord" }, description: { es: "El fiordo patrimonio UNESCO más famoso.", en: "The most famous UNESCO heritage fjord." }, activities: { es: ["Crucero Geiranger", "Siete Hermanas cascada", "Mirador Flydalsjuvet"], en: ["Geiranger cruise", "Seven Sisters waterfall", "Flydalsjuvet viewpoint"] } },
+      { day: 8, title: { es: "Alesund", en: "Alesund" }, description: { es: "Ciudad Art Nouveau única.", en: "Unique Art Nouveau city." }, activities: { es: ["Centro Alesund", "Mirador Aksla", "Acuario"], en: ["Alesund center", "Aksla viewpoint", "Aquarium"] } },
       { day: 9, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso via Oslo.", en: "Return flight via Oslo." }, activities: { es: ["Vuelo interno", "Conexion internacional", "Vuelo regreso"], en: ["Domestic flight", "International connection", "Return flight"] } }
     ],
     faqs: [
-      { question: { es: "Noruega es muy cara?", en: "Is Norway very expensive?" }, answer: { es: "Si, es uno de los paises mas caros del mundo. Los tours organizados ayudan a optimizar costos.", en: "Yes, it's one of the world's most expensive countries. Organized tours help optimize costs." } },
+      { question: { es: "Noruega es muy cara?", en: "Is Norway very expensive?" }, answer: { es: "Si, es uno de los paises más caros del mundo. Los tours organizados ayudan a optimizar costos.", en: "Yes, it's one of the world's most expensive countries. Organized tours help optimize costs." } },
       { question: { es: "Cual es la mejor epoca para los fiordos?", en: "When is the best time for the fjords?" }, answer: { es: "Mayo a septiembre para clima templado. Junio-julio tienen sol de medianoche.", en: "May to September for mild weather. June-July has the midnight sun." } }
     ],
     bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
@@ -1723,15 +1723,15 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       { day: 1, title: { es: "Varsovia", en: "Warsaw" }, description: { es: "Llegada a la capital polaca.", en: "Arrival in the Polish capital." }, activities: { es: ["Traslado hotel", "Ciudad Vieja", "Cena polaca"], en: ["Hotel transfer", "Old Town", "Polish dinner"] } },
       { day: 2, title: { es: "Varsovia Historica", en: "Historic Warsaw" }, description: { es: "La ciudad que renacio de sus cenizas.", en: "The city that rose from its ashes." }, activities: { es: ["Palacio Cultura", "Museo Insurreccion", "Lazienki Park"], en: ["Palace of Culture", "Uprising Museum", "Lazienki Park"] } },
       { day: 3, title: { es: "Tren a Cracovia", en: "Train to Krakow" }, description: { es: "Hacia la joya medieval de Polonia.", en: "To Poland's medieval jewel." }, activities: { es: ["Tren a Cracovia", "Plaza Mayor", "Basilica Santa Maria"], en: ["Train to Krakow", "Main Square", "St. Mary's Basilica"] } },
-      { day: 4, title: { es: "Cracovia", en: "Krakow" }, description: { es: "El centro historico patrimonio UNESCO.", en: "The UNESCO heritage historic center." }, activities: { es: ["Castillo Wawel", "Barrio Kazimierz", "Tour gastronomico"], en: ["Wawel Castle", "Kazimierz Quarter", "Food tour"] } },
+      { day: 4, title: { es: "Cracovia", en: "Krakow" }, description: { es: "El centro histórico patrimonio UNESCO.", en: "The UNESCO heritage historic center." }, activities: { es: ["Castillo Wawel", "Barrio Kazimierz", "Tour gastronomico"], en: ["Wawel Castle", "Kazimierz Quarter", "Food tour"] } },
       { day: 5, title: { es: "Auschwitz", en: "Auschwitz" }, description: { es: "Visita al memorial del Holocausto.", en: "Visit to the Holocaust memorial." }, activities: { es: ["Auschwitz I", "Birkenau", "Reflexion y memoria"], en: ["Auschwitz I", "Birkenau", "Reflection and memory"] } },
-      { day: 6, title: { es: "Wieliczka", en: "Wieliczka" }, description: { es: "Las minas de sal mas famosas del mundo.", en: "The world's most famous salt mines." }, activities: { es: ["Minas Wieliczka", "Capilla subterranea", "Lagos salados"], en: ["Wieliczka Mines", "Underground chapel", "Salt lakes"] } },
+      { day: 6, title: { es: "Wieliczka", en: "Wieliczka" }, description: { es: "Las minas de sal más famosas del mundo.", en: "The world's most famous salt mines." }, activities: { es: ["Minas Wieliczka", "Capilla subterranea", "Lagos salados"], en: ["Wieliczka Mines", "Underground chapel", "Salt lakes"] } },
       { day: 7, title: { es: "Zakopane", en: "Zakopane" }, description: { es: "La capital de invierno en los Tatras.", en: "The winter capital in the Tatras." }, activities: { es: ["Montanas Tatra", "Cultura montanesa", "Queso oscypek"], en: ["Tatra Mountains", "Highlander culture", "Oscypek cheese"] } },
       { day: 8, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso desde Cracovia.", en: "Return flight from Krakow." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
       { question: { es: "Polonia es economica?", en: "Is Poland affordable?" }, answer: { es: "Si, Polonia ofrece excelente relacion calidad-precio comparado con Europa Occidental.", en: "Yes, Poland offers excellent value for money compared to Western Europe." } },
-      { question: { es: "Es dificil visitar Auschwitz?", en: "Is it difficult to visit Auschwitz?" }, answer: { es: "Emocionalmente si. Es una experiencia profunda e importante. Se recomienda prepararse mentalmente.", en: "Emotionally, yes. It's a profound and important experience. Mental preparation is recommended." } }
+      { question: { es: "Es difícil visitar Auschwitz?", en: "Is it difficult to visit Auschwitz?" }, answer: { es: "Emocionalmente si. Es una experiencia profunda e importante. Se recomienda prepararse mentalmente.", en: "Emotionally, yes. It's a profound and important experience. Mental preparation is recommended." } }
     ],
     bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
     currency: "PLN",
@@ -1760,7 +1760,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     itinerary: [
       { day: 1, title: { es: "Bucarest", en: "Bucharest" }, description: { es: "Llegada a la capital rumana.", en: "Arrival in the Romanian capital." }, activities: { es: ["Traslado hotel", "Palacio Parlamento", "Casco antiguo"], en: ["Hotel transfer", "Parliament Palace", "Old Town"] } },
-      { day: 2, title: { es: "Bucarest Historica", en: "Historic Bucharest" }, description: { es: "El pequeno Paris del Este.", en: "The Little Paris of the East." }, activities: { es: ["Ateneo Romano", "Museo Pueblo", "Lipscani"], en: ["Romanian Atheneum", "Village Museum", "Lipscani"] } },
+      { day: 2, title: { es: "Bucarest Historica", en: "Historic Bucharest" }, description: { es: "El pequeno París del Este.", en: "The Little París of the East." }, activities: { es: ["Ateneo Romano", "Museo Pueblo", "Lipscani"], en: ["Romanian Atheneum", "Village Museum", "Lipscani"] } },
       { day: 3, title: { es: "Sinaia", en: "Sinaia" }, description: { es: "La Perla de los Carpatos.", en: "The Pearl of the Carpathians." }, activities: { es: ["Castillo Peles", "Monasterio Sinaia", "Paisajes Carpatos"], en: ["Peles Castle", "Sinaia Monastery", "Carpathian landscapes"] } },
       { day: 4, title: { es: "Castillo de Bran", en: "Bran Castle" }, description: { es: "El legendario castillo de Dracula.", en: "The legendary Dracula castle." }, activities: { es: ["Castillo Bran", "Brasov", "Fortaleza Rasnov"], en: ["Bran Castle", "Brasov", "Rasnov Fortress"] } },
       { day: 5, title: { es: "Brasov", en: "Brasov" }, description: { es: "Ciudad medieval sajona en Transilvania.", en: "Saxon medieval city in Transylvania." }, activities: { es: ["Iglesia Negra", "Plaza Sfatului", "Tampa Montana"], en: ["Black Church", "Sfatului Square", "Tampa Mountain"] } },
@@ -1782,7 +1782,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Suecia", en: "Sweden" },
     heroImage: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=1920&q=80",
     description: {
-      es: "Suecia combina la sofisticacion de Estocolmo, extendida sobre 14 islas, con la naturaleza salvaje de Laponia. Diseno escandinavo, el hotel de hielo, auroras boreales y la herencia vikinga crean experiencias unicas en el reino nordico.",
+      es: "Suecia combina la sofisticacion de Estocolmo, extendida sobre 14 islas, con la naturaleza salvaje de Laponia. Diseno escandinavo, el hotel de hielo, auroras boreales y la herencia vikinga crean experiencias únicas en el reino nordico.",
       en: "Sweden combines Stockholm's sophistication, spread across 14 islands, with Lapland's wild nature. Scandinavian design, the ice hotel, Northern Lights, and Viking heritage create unique experiences in the Nordic kingdom."
     },
     highlights: {
@@ -1803,11 +1803,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       { day: 3, title: { es: "Museo Vasa", en: "Vasa Museum" }, description: { es: "El barco del siglo XVII mejor conservado.", en: "The best-preserved 17th-century ship." }, activities: { es: ["Museo Vasa", "Skansen", "Museo ABBA"], en: ["Vasa Museum", "Skansen", "ABBA Museum"] } },
       { day: 4, title: { es: "Archipielago", en: "Archipelago" }, description: { es: "Crucero por las 30,000 islas.", en: "Cruise through 30,000 islands." }, activities: { es: ["Crucero archipielago", "Isla Vaxholm", "Picnic sueco"], en: ["Archipelago cruise", "Vaxholm Island", "Swedish picnic"] } },
       { day: 5, title: { es: "Uppsala", en: "Uppsala" }, description: { es: "Ciudad universitaria con historia vikinga.", en: "University city with Viking history." }, activities: { es: ["Catedral Uppsala", "Universidad antigua", "Museo Gustavianum"], en: ["Uppsala Cathedral", "Ancient university", "Gustavianum Museum"] } },
-      { day: 6, title: { es: "Sigtuna", en: "Sigtuna" }, description: { es: "La ciudad mas antigua de Suecia.", en: "Sweden's oldest city." }, activities: { es: ["Ruinas vikingas", "Runas piedras", "Pueblito encantador"], en: ["Viking ruins", "Rune stones", "Charming village"] } },
+      { day: 6, title: { es: "Sigtuna", en: "Sigtuna" }, description: { es: "La ciudad más antigua de Suecia.", en: "Sweden's oldest city." }, activities: { es: ["Ruinas vikingas", "Runas piedras", "Pueblito encantador"], en: ["Viking ruins", "Rune stones", "Charming village"] } },
       { day: 7, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight." }, activities: { es: ["Compras diseno", "Traslado aeropuerto", "Vuelo regreso"], en: ["Design shopping", "Airport transfer", "Return flight"] } }
     ],
     faqs: [
-      { question: { es: "Es muy cara Suecia?", en: "Is Sweden very expensive?" }, answer: { es: "Si, es uno de los paises mas caros de Europa. El Stockholm Pass ayuda a ahorrar.", en: "Yes, it's one of Europe's most expensive countries. The Stockholm Pass helps save money." } },
+      { question: { es: "Es muy cara Suecia?", en: "Is Sweden very expensive?" }, answer: { es: "Si, es uno de los paises más caros de Europa. El Stockholm Pass ayuda a ahorrar.", en: "Yes, it's one of Europe's most expensive countries. The Stockholm Pass helps save money." } },
       { question: { es: "Que es fika?", en: "What is fika?" }, answer: { es: "Una tradicion sueca de tomar cafe con dulces y socializar. Es parte esencial de la cultura.", en: "A Swedish tradition of having coffee with sweets and socializing. It's an essential part of the culture." } }
     ],
     bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
@@ -1820,7 +1820,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Estados Balticos", en: "Baltic States" },
     heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80",
     description: {
-      es: "Los Estados Balticos - Estonia, Letonia y Lituania - sorprenden con ciudades medievales como Tallin, Riga y Vilna, todas patrimonio UNESCO. Castillos, bosques infinitos, la herencia hanseática y la cultura unica del Baltico esperan.",
+      es: "Los Estados Balticos - Estonia, Letonia y Lituania - sorprenden con ciudades medievales como Tallin, Riga y Vilna, todas patrimonio UNESCO. Castillos, bosques infinitos, la herencia hanseática y la cultura única del Baltico esperan.",
       en: "The Baltic States - Estonia, Latvia, and Lithuania - surprise with medieval cities like Tallinn, Riga, and Vilnius, all UNESCO heritage. Castles, endless forests, Hanseatic heritage, and unique Baltic culture await."
     },
     highlights: {
@@ -1860,7 +1860,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Chipre", en: "Cyprus" },
     heroImage: "https://images.unsplash.com/photo-1586768337645-81c3e6c6eb04?w=1920&q=80",
     description: {
-      es: "Chipre, la isla de Afrodita, combina playas mediterraneas cristalinas, ruinas grecorromanas, montanas Troodos con monasterios bizantinos y pueblos tradicionales. La tercera isla mas grande del Mediterraneo ofrece historia de 10,000 anos y hospitalidad chipriota.",
+      es: "Chipre, la isla de Afrodita, combina playas mediterraneas cristalinas, ruinas grecorromanas, montanas Troodos con monasterios bizantinos y pueblos tradicionales. La tercera isla más grande del Mediterraneo ofrece historia de 10,000 anos y hospitalidad chipriota.",
       en: "Cyprus, the island of Aphrodite, combines crystal Mediterranean beaches, Greco-Roman ruins, Troodos mountains with Byzantine monasteries, and traditional villages. The third-largest Mediterranean island offers 10,000 years of history and Cypriot hospitality."
     },
     highlights: {
@@ -1899,7 +1899,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     name: { es: "Escocia", en: "Scotland" },
     heroImage: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?w=1920&q=80",
     description: {
-      es: "Escocia cautiva con las Highlands salvajes, castillos legendarios, lochs misteriosos como el Ness, Edimburgo medieval y la tradicion del whisky. Gaitas, tartanes y paisajes dramaticos crean una experiencia unica en el norte de Gran Bretana.",
+      es: "Escocia cautiva con las Highlands salvajes, castillos legendarios, lochs misteriosos como el Ness, Edimburgo medieval y la tradicion del whisky. Gaitas, tartanes y paisajes dramáticos crean una experiencia única en el norte de Gran Bretana.",
       en: "Scotland captivates with wild Highlands, legendary castles, mysterious lochs like Ness, medieval Edinburgh, and whisky tradition. Bagpipes, tartans, and dramatic landscapes create a unique experience in northern Britain."
     },
     highlights: {
@@ -1913,14 +1913,14 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "/assets/stock_images/scotland_highlands_e_f85fbef4.jpg"
     ],
     packages: [
-      { id: "scotland-1", name: { es: "Escocia Magica", en: "Magical Scotland" }, duration: { es: "8 dias", en: "8 days" }, price: "2,399", taxes: "400", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayuno escoces"], en: ["Flights", "4* Hotels", "Private transport", "Scottish breakfast"] } }
+      { id: "scotland-1", name: { es: "Escocia Mágica", en: "Mágical Scotland" }, duration: { es: "8 dias", en: "8 days" }, price: "2,399", taxes: "400", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayuno escoces"], en: ["Flights", "4* Hotels", "Private transport", "Scottish breakfast"] } }
     ],
     itinerary: [
       { day: 1, title: { es: "Edimburgo", en: "Edinburgh" }, description: { es: "Llegada a la capital escocesa.", en: "Arrival in the Scottish capital." }, activities: { es: ["Traslado hotel", "Royal Mile", "Pub tradicional"], en: ["Hotel transfer", "Royal Mile", "Traditional pub"] } },
       { day: 2, title: { es: "Edimburgo Historica", en: "Historic Edinburgh" }, description: { es: "El castillo y la Ciudad Vieja.", en: "The castle and Old Town." }, activities: { es: ["Castillo Edimburgo", "Holyrood Palace", "Arthur's Seat"], en: ["Edinburgh Castle", "Holyrood Palace", "Arthur's Seat"] } },
       { day: 3, title: { es: "Stirling y Trossachs", en: "Stirling and Trossachs" }, description: { es: "Historia de William Wallace y naturaleza.", en: "William Wallace history and nature." }, activities: { es: ["Castillo Stirling", "Monumento Wallace", "Loch Lomond"], en: ["Stirling Castle", "Wallace Monument", "Loch Lomond"] } },
-      { day: 4, title: { es: "Highlands", en: "Highlands" }, description: { es: "Los paisajes mas dramaticos de Escocia.", en: "Scotland's most dramatic landscapes." }, activities: { es: ["Glencoe", "Fort William", "Ben Nevis"], en: ["Glencoe", "Fort William", "Ben Nevis"] } },
-      { day: 5, title: { es: "Lago Ness", en: "Loch Ness" }, description: { es: "El lago mas misterioso del mundo.", en: "The world's most mysterious lake." }, activities: { es: ["Castillo Urquhart", "Crucero Loch Ness", "Inverness"], en: ["Urquhart Castle", "Loch Ness cruise", "Inverness"] } },
+      { day: 4, title: { es: "Highlands", en: "Highlands" }, description: { es: "Los paisajes más dramáticos de Escocia.", en: "Scotland's most dramatic landscapes." }, activities: { es: ["Glencoe", "Fort William", "Ben Nevis"], en: ["Glencoe", "Fort William", "Ben Nevis"] } },
+      { day: 5, title: { es: "Lago Ness", en: "Loch Ness" }, description: { es: "El lago más misterioso del mundo.", en: "The world's most mysterious lake." }, activities: { es: ["Castillo Urquhart", "Crucero Loch Ness", "Inverness"], en: ["Urquhart Castle", "Loch Ness cruise", "Inverness"] } },
       { day: 6, title: { es: "Whisky Trail", en: "Whisky Trail" }, description: { es: "La ruta del whisky escoces.", en: "The Scottish whisky trail." }, activities: { es: ["Destileria Glenfiddich", "Speyside", "Cata whisky"], en: ["Glenfiddich Distillery", "Speyside", "Whisky tasting"] } },
       { day: 7, title: { es: "St Andrews", en: "St Andrews" }, description: { es: "La cuna del golf y universidad historica.", en: "The birthplace of golf and historic university." }, activities: { es: ["Old Course", "Ruinas catedral", "Universidad"], en: ["Old Course", "Cathedral ruins", "University"] } },
       { day: 8, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso desde Edimburgo.", en: "Return flight from Edinburgh." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"] } }
@@ -1936,6 +1936,25 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   }
 ];
 
+const SLUG_ALIASES: Record<string, string> = {
+  "espana": "spain",
+  "francia": "france",
+  "italia": "italy",
+  "alemania": "germany",
+  "portugal": "portugal",
+  "grecia": "greece",
+  "suiza": "switzerland",
+  "austria": "austria",
+  "holanda": "netherlands",
+  "belgica": "belgium",
+  "croacia": "croatia",
+  "republica-checa": "czech-republic",
+  "irlanda": "ireland",
+  "escocia": "scotland"
+};
+
 export function getDestinationBySlug(slug: string): DestinationData | undefined {
-  return DESTINATIONS_DATA.find(d => d.slug.toLowerCase() === slug.toLowerCase());
+  const normalizedSlug = slug.toLowerCase();
+  const resolvedSlug = SLUG_ALIASES[normalizedSlug] || normalizedSlug;
+  return DESTINATIONS_DATA.find(d => d.slug.toLowerCase() === resolvedSlug);
 }
