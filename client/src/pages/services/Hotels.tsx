@@ -13,28 +13,28 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 
 const HOTEL_FAQS: FAQItem[] = [
   {
-    question: { es: "Que categorias de hoteles ofrecen?", en: "What hotel categories do you offer?", pt: "Quais categorias de hoteis voces oferecem?" },
-    answer: { es: "Ofrecemos hoteles de 3, 4 y 5 estrellas, boutique hotels, apartamentos turisticos y alojamientos de lujo. Todos son seleccionados por su calidad, ubicacion y servicio.", en: "We offer 3, 4, and 5-star hotels, boutique hotels, tourist apartments, and luxury accommodations. All are selected for their quality, location, and service.", pt: "Oferecemos hoteis de 3, 4 e 5 estrelas, hoteis boutique, apartamentos turisticos e acomodacoes de luxo. Todos sao selecionados pela qualidade, localizacao e servico." }
+    question: { es: "Que categorias de hoteles ofrecen?", en: "What hotel categories do you offer?", pt: "Quais categorias de hotéis vocês oferecem?" },
+    answer: { es: "Ofrecemos hoteles de 3, 4 y 5 estrellas, boutique hotels, apartamentos turisticos y alojamientos de lujo. Todos son seleccionados por su calidad, ubicacion y servicio.", en: "We offer 3, 4, and 5-star hotels, boutique hotels, tourist apartments, and luxury accommodations. All are selected for their quality, location, and service.", pt: "Oferecemos hotéis de 3, 4 e 5 estrelas, hotéis boutique, apartamentos turísticos e acomodações de luxo. Todos são selecionados pela qualidade, localização e serviço." }
   },
   {
     question: { es: "Puedo cancelar mi reserva de hotel?", en: "Can I cancel my hotel reservation?", pt: "Posso cancelar minha reserva de hotel?" },
-    answer: { es: "La mayoria de nuestras reservas ofrecen cancelacion gratuita hasta 24-72 horas antes del check-in. Las politicas especificas varian segun el hotel y la tarifa seleccionada.", en: "Most of our reservations offer free cancellation up to 24-72 hours before check-in. Specific policies vary by hotel and selected rate.", pt: "A maioria das nossas reservas oferece cancelamento gratuito ate 24-72 horas antes do check-in. As politicas especificas variam conforme o hotel e a tarifa selecionada." }
+    answer: { es: "La mayoria de nuestras reservas ofrecen cancelacion gratuita hasta 24-72 horas antes del check-in. Las politicas especificas varian segun el hotel y la tarifa seleccionada.", en: "Most of our reservations offer free cancellation up to 24-72 hours before check-in. Specific policies vary by hotel and selected rate.", pt: "A maioria das nossas reservas oferece cancelamento gratuito até 24-72 horas antes do check-in. As políticas específicas variam conforme o hotel e a tarifa selecionada." }
   },
   {
-    question: { es: "El desayuno esta incluido?", en: "Is breakfast included?", pt: "O cafe da manha esta incluido?" },
-    answer: { es: "Depende del hotel y la tarifa. Indicamos claramente si el desayuno esta incluido. Muchos hoteles europeos ofrecen excelentes desayunos buffet.", en: "It depends on the hotel and rate. We clearly indicate if breakfast is included. Many European hotels offer excellent buffet breakfasts.", pt: "Depende do hotel e da tarifa. Indicamos claramente se o cafe da manha esta incluido. Muitos hoteis europeus oferecem excelentes cafes da manha em buffet." }
+    question: { es: "El desayuno esta incluido?", en: "Is breakfast included?", pt: "O café da manhã está incluído?" },
+    answer: { es: "Depende del hotel y la tarifa. Indicamos claramente si el desayuno esta incluido. Muchos hoteles europeos ofrecen excelentes desayunos buffet.", en: "It depends on the hotel and rate. We clearly indicate if breakfast is included. Many European hotels offer excellent buffet breakfasts.", pt: "Depende do hotel e da tarifa. Indicamos claramente se o café da manhã está incluído. Muitos hotéis europeus oferecem excelentes cafés da manhã em buffet." }
   },
   {
-    question: { es: "Cual es el horario de check-in y check-out?", en: "What are the check-in and check-out times?", pt: "Quais sao os horarios de check-in e check-out?" },
-    answer: { es: "Generalmente el check-in es a partir de las 14:00-15:00 y el check-out antes de las 11:00-12:00. Podemos solicitar early check-in o late check-out segun disponibilidad.", en: "Generally check-in is from 14:00-15:00 and check-out before 11:00-12:00. We can request early check-in or late check-out based on availability.", pt: "Geralmente o check-in e a partir das 14:00-15:00 e o check-out antes das 11:00-12:00. Podemos solicitar check-in antecipado ou check-out tardio conforme disponibilidade." }
+    question: { es: "Cual es el horario de check-in y check-out?", en: "What are the check-in and check-out times?", pt: "Quais são os horários de check-in e check-out?" },
+    answer: { es: "Generalmente el check-in es a partir de las 14:00-15:00 y el check-out antes de las 11:00-12:00. Podemos solicitar early check-in o late check-out segun disponibilidad.", en: "Generally check-in is from 14:00-15:00 and check-out before 11:00-12:00. We can request early check-in or late check-out based on availability.", pt: "Geralmente o check-in é a partir das 14:00-15:00 e o check-out antes das 11:00-12:00. Podemos solicitar check-in antecipado ou check-out tardio conforme disponibilidade." }
   },
   {
-    question: { es: "Ofrecen hoteles con ubicacion centrica?", en: "Do you offer centrally located hotels?", pt: "Voces oferecem hoteis com localizacao central?" },
-    answer: { es: "Si, priorizamos hoteles en ubicaciones centricas o bien conectadas con transporte publico. Esto te permite aprovechar mejor tu tiempo en cada destino.", en: "Yes, we prioritize hotels in central locations or well-connected with public transport. This allows you to make the most of your time at each destination.", pt: "Sim, priorizamos hoteis em localizacoes centrais ou bem conectadas com transporte publico. Isso permite aproveitar melhor seu tempo em cada destino." }
+    question: { es: "Ofrecen hoteles con ubicacion centrica?", en: "Do you offer centrally located hotels?", pt: "Vocês oferecem hotéis com localização central?" },
+    answer: { es: "Si, priorizamos hoteles en ubicaciones centricas o bien conectadas con transporte publico. Esto te permite aprovechar mejor tu tiempo en cada destino.", en: "Yes, we prioritize hotels in central locations or well-connected with public transport. This allows you to make the most of your time at each destination.", pt: "Sim, priorizamos hotéis em localizações centrais ou bem conectadas com transporte público. Isso permite aproveitar melhor seu tempo em cada destino." }
   },
   {
-    question: { es: "Puedo solicitar habitacion con vista especifica?", en: "Can I request a room with a specific view?", pt: "Posso solicitar quarto com vista especifica?" },
-    answer: { es: "Si, podemos solicitar preferencias como vista al mar, a la ciudad o habitaciones en pisos altos. No siempre estan garantizadas pero hacemos nuestro mejor esfuerzo.", en: "Yes, we can request preferences such as sea view, city view, or rooms on high floors. They're not always guaranteed but we do our best.", pt: "Sim, podemos solicitar preferencias como vista para o mar, para a cidade ou quartos em andares altos. Nem sempre sao garantidas, mas fazemos o nosso melhor." }
+    question: { es: "Puedo solicitar habitacion con vista especifica?", en: "Can I request a room with a specific view?", pt: "Posso solicitar quarto com vista específica?" },
+    answer: { es: "Si, podemos solicitar preferencias como vista al mar, a la ciudad o habitaciones en pisos altos. No siempre estan garantizadas pero hacemos nuestro mejor esfuerzo.", en: "Yes, we can request preferences such as sea view, city view, or rooms on high floors. They're not always guaranteed but we do our best.", pt: "Sim, podemos solicitar preferências como vista para o mar, para a cidade ou quartos em andares altos. Nem sempre são garantidas, mas fazemos o nosso melhor." }
   }
 ];
 
@@ -42,22 +42,22 @@ const HOTEL_CATEGORIES = [
   {
     stars: 5,
     name: { es: "Lujo Premium", en: "Premium Luxury", pt: "Luxo Premium" },
-    description: { es: "Hoteles de cadenas internacionales con servicios excepcionales", en: "International chain hotels with exceptional services", pt: "Hoteis de redes internacionais com servicos excepcionais" },
+    description: { es: "Hoteles de cadenas internacionales con servicios excepcionales", en: "International chain hotels with exceptional services", pt: "Hotéis de redes internacionais com serviços excepcionais" },
     amenities: { es: ["Spa", "Restaurante gourmet", "Concierge 24h", "Gimnasio"], en: ["Spa", "Gourmet restaurant", "24h Concierge", "Gym"], pt: ["Spa", "Restaurante gourmet", "Concierge 24h", "Academia"] },
     priceRange: { es: "desde €180/noche", en: "from €180/night", pt: "a partir de €180/noite" }
   },
   {
     stars: 4,
     name: { es: "Superior", en: "Superior", pt: "Superior" },
-    description: { es: "Excelente relacion calidad-precio con todas las comodidades", en: "Excellent value with all amenities", pt: "Excelente relacao qualidade-preco com todas as comodidades" },
-    amenities: { es: ["Desayuno buffet", "WiFi gratis", "Ubicacion centrica", "Room service"], en: ["Buffet breakfast", "Free WiFi", "Central location", "Room service"], pt: ["Cafe da manha buffet", "WiFi gratis", "Localizacao central", "Room service"] },
+    description: { es: "Excelente relacion calidad-precio con todas las comodidades", en: "Excellent value with all amenities", pt: "Excelente relação qualidade-preço com todas as comodidades" },
+    amenities: { es: ["Desayuno buffet", "WiFi gratis", "Ubicacion centrica", "Room service"], en: ["Buffet breakfast", "Free WiFi", "Central location", "Room service"], pt: ["Café da manhã buffet", "WiFi grátis", "Localização central", "Room service"] },
     priceRange: { es: "desde €90/noche", en: "from €90/night", pt: "a partir de €90/noite" }
   },
   {
     stars: 3,
     name: { es: "Confort", en: "Comfort", pt: "Conforto" },
-    description: { es: "Hoteles comodos y bien ubicados para viajeros practicos", en: "Comfortable and well-located hotels for practical travelers", pt: "Hoteis confortaveis e bem localizados para viajantes praticos" },
-    amenities: { es: ["WiFi gratis", "Recepcion 24h", "Desayuno opcional", "Limpieza diaria"], en: ["Free WiFi", "24h reception", "Optional breakfast", "Daily cleaning"], pt: ["WiFi gratis", "Recepcao 24h", "Cafe da manha opcional", "Limpeza diaria"] },
+    description: { es: "Hoteles comodos y bien ubicados para viajeros practicos", en: "Comfortable and well-located hotels for practical travelers", pt: "Hotéis confortáveis e bem localizados para viajantes práticos" },
+    amenities: { es: ["WiFi gratis", "Recepcion 24h", "Desayuno opcional", "Limpieza diaria"], en: ["Free WiFi", "24h reception", "Optional breakfast", "Daily cleaning"], pt: ["WiFi grátis", "Recepção 24h", "Café da manhã opcional", "Limpeza diária"] },
     priceRange: { es: "desde €50/noche", en: "from €50/night", pt: "a partir de €50/noite" }
   },
 ];

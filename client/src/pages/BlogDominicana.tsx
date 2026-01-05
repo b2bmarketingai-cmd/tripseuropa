@@ -186,15 +186,15 @@ export default function BlogDominicana() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
 
   const content = {
-    badge: { es: "Guia Completa 2025-2026", pt: "Guia Completo 2025-2026", en: "Complete Guide 2025-2026" },
-    h1: { es: "Viajes a Europa desde Republica Dominicana", pt: "Viagens a Europa desde Republica Dominicana", en: "Travel to Europe from Dominican Republic" },
-    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos, visa y consejos para viajeros dominicanos", pt: "Tudo o que voce precisa saber: rotas, precos, destinos, visto e dicas para viajantes dominicanos", en: "Everything you need to know: routes, prices, destinations, visa and tips for Dominican travelers" },
+    badge: { es: "Guía Completa 2025-2026", pt: "Guia Completo 2025-2026", en: "Complete Guide 2025-2026" },
+    h1: { es: "Viajes a Europa desde República Dominicana", pt: "Viagens à Europa a partir da República Dominicana", en: "Travel to Europe from Dominican Republic" },
+    subtitle: { es: "Todo lo que necesitas saber: rutas, precios, destinos, visa y consejos para viajeros dominicanos", pt: "Tudo o que você precisa saber: rotas, preços, destinos, visto e dicas para viajantes dominicanos", en: "Everything you need to know: routes, prices, destinations, visa and tips for Dominican travelers" },
     destinations: { es: "Destinos Preferidos por Dominicanos", pt: "Destinos Preferidos pelos Dominicanos", en: "Preferred Destinations by Dominicans" },
-    routes: { es: "Rutas Principales desde RD", pt: "Rotas Principais desde RD", en: "Main Routes from DR" },
+    routes: { es: "Rutas Principales desde RD", pt: "Rotas Principais a partir de RD", en: "Main Routes from DR" },
     departures: { es: "Ciudades de Salida", pt: "Cidades de Partida", en: "Departure Cities" },
-    prices: { es: "Comparativa de Precios", pt: "Comparativo de Precos", en: "Price Comparison" },
+    prices: { es: "Comparativa de Precios", pt: "Comparativo de Preços", en: "Price Comparison" },
     faq: { es: "Preguntas Frecuentes", pt: "Perguntas Frequentes", en: "Frequently Asked Questions" },
-    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orcamento Agora", en: "Quote Your Trip Now" },
+    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orçamento Agora", en: "Quote Your Trip Now" },
   };
 
   const toggleFaq = (id: string) => {
@@ -211,11 +211,11 @@ export default function BlogDominicana() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEOHead
-        title={language === "es" ? "Guia de Viajes a Europa desde Republica Dominicana - Rutas, Precios y Visa" : language === "pt" ? "Guia de Viagens a Europa desde Republica Dominicana - Rotas, Precos e Visto" : "Guide to Travel Europe from Dominican Republic - Routes, Prices and Visa"}
+        title={language === "es" ? "Guía de Viajes a Europa desde República Dominicana - Rutas, Precios y Visa" : language === "pt" ? "Guia de Viagens à Europa a partir da República Dominicana - Rotas, Preços e Visto" : "Guide to Travel Europe from Dominican Republic - Routes, Prices and Visa"}
         description={language === "es" 
-          ? "Guia completa para dominicanos que quieren viajar a Europa: destinos favoritos, vuelos desde Santo Domingo, precios 2025, tramite de visa Schengen, y consejos practicos."
+          ? "Guía completa para dominicanos que quieren viajar a Europa: destinos favoritos, vuelos desde Santo Domingo, precios 2025, trámite de visa Schengen, y consejos prácticos."
           : language === "pt"
-          ? "Guia completo para dominicanos que querem viajar a Europa: destinos favoritos, voos desde Santo Domingo, precos 2025, tramite de visto Schengen e dicas praticas."
+          ? "Guia completo para dominicanos que querem viajar à Europa: destinos favoritos, voos a partir de Santo Domingo, preços 2025, trâmite de visto Schengen e dicas práticas."
           : "Complete guide for Dominicans wanting to travel to Europe: favorite destinations, flights from Santo Domingo, 2025 prices, Schengen visa process, and practical tips."}
         keywords="viajes europa republica dominicana, europa desde santo domingo, visa schengen dominicanos, paquetes europa rd"
         url="https://tripseuropa.com/blog/dominicana"
@@ -232,11 +232,11 @@ export default function BlogDominicana() {
         ]}
       />
       <BlogPostSchema
-        title={language === "es" ? "Guia Completa: Viajes a Europa desde Republica Dominicana 2025-2026" : language === "pt" ? "Guia Completo: Viagens a Europa desde Republica Dominicana 2025-2026" : "Complete Guide: Travel to Europe from Dominican Republic 2025-2026"}
+        title={language === "es" ? "Guía Completa: Viajes a Europa desde República Dominicana 2025-2026" : language === "pt" ? "Guia Completo: Viagens à Europa a partir da República Dominicana 2025-2026" : "Complete Guide: Travel to Europe from Dominican Republic 2025-2026"}
         description={language === "es" 
-          ? "Todo lo que necesitas saber para viajar a Europa desde RD: destinos, rutas, precios, visa y consejos practicos."
+          ? "Todo lo que necesitas saber para viajar a Europa desde RD: destinos, rutas, precios, visa y consejos prácticos."
           : language === "pt"
-          ? "Tudo o que voce precisa saber para viajar a Europa desde RD: destinos, rotas, precos, visto e dicas praticas."
+          ? "Tudo o que você precisa saber para viajar à Europa a partir de RD: destinos, rotas, preços, visto e dicas práticas."
           : "Everything you need to know to travel to Europe from DR: destinations, routes, prices, visa and practical tips."}
         image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
         datePublished="2025-01-01"
@@ -285,7 +285,7 @@ export default function BlogDominicana() {
                 {language === "es" ? "Importante: Los dominicanos necesitan visa Schengen" : language === "pt" ? "Importante: Dominicanos precisam de visto Schengen" : "Important: Dominicans need Schengen visa"}
               </p>
               <p className="text-amber-700 text-sm">
-                {language === "es" ? "Ofrecemos asesoria completa para el tramite de visa. Proceso de 15-30 dias." : language === "pt" ? "Oferecemos assessoria completa para o tramite de visto. Processo de 15-30 dias." : "We offer complete visa processing assistance. 15-30 day process."}
+                {language === "es" ? "Ofrecemos asesoría completa para el trámite de visa. Proceso de 15-30 días." : language === "pt" ? "Oferecemos assessoria completa para o trâmite de visto. Processo de 15-30 dias." : "We offer complete visa processing assistance. 15-30 day process."}
               </p>
             </div>
           </div>
@@ -418,7 +418,7 @@ export default function BlogDominicana() {
                       <span>{city.population} habitantes</span>
                     </div>
                     <div className="pt-3 border-t">
-                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : language === "pt" ? "Rotas disponiveis:" : "Available routes:"}</p>
+                      <p className="text-sm font-medium mb-2">{language === "es" ? "Rutas disponibles:" : language === "pt" ? "Rotas disponíveis:" : "Available routes:"}</p>
                       <div className="flex flex-wrap gap-1">
                         {city.routes.map((route, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">{route}</Badge>
@@ -445,9 +445,9 @@ export default function BlogDominicana() {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-primary text-white">
-                        <th className="p-4 text-left">{language === "es" ? "Duracion" : language === "pt" ? "Duracao" : "Duration"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Economico" : language === "pt" ? "Economico" : "Budget"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Estandar" : language === "pt" ? "Padrao" : "Standard"}</th>
+                        <th className="p-4 text-left">{language === "es" ? "Duración" : language === "pt" ? "Duração" : "Duration"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Económico" : language === "pt" ? "Econômico" : "Budget"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Estándar" : language === "pt" ? "Padrão" : "Standard"}</th>
                         <th className="p-4 text-center">{language === "es" ? "Premium" : language === "pt" ? "Premium" : "Premium"}</th>
                       </tr>
                     </thead>

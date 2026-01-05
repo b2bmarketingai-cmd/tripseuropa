@@ -306,7 +306,7 @@ export default function Destinations() {
       <section className="py-16 bg-primary" data-testid="section-destinations-cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            {language === "es" ? "No encuentras tu destino ideal?" : language === "pt" ? "Nao encontra seu destino ideal?" : "Can't find your ideal destination?"}
+            {language === "es" ? "¿No encuentras tu destino ideal?" : language === "pt" ? "Não encontra seu destino ideal?" : "Can't find your ideal destination?"}
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             {language === "es" 

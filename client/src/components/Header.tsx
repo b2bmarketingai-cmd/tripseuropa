@@ -47,10 +47,10 @@ const DESTINATIONS_MENU = {
   ],
   pt: [
     { name: "Europa", href: "/destinations", items: [
-      "Albania", "Alemanha", "Austria", "Belgica", "Chipre", "Croacia", "Dinamarca", 
-      "Escocia", "Espanha", "Estados Balticos", "Finlandia", "Franca", "Grecia", 
-      "Hungria", "Irlanda", "Islandia", "Italia", "Noruega", "Paises Baixos", 
-      "Polonia", "Portugal", "Reino Unido", "Republica Tcheca", "Romenia", "Suecia", "Suica"
+      "Albânia", "Alemanha", "Áustria", "Bélgica", "Chipre", "Croácia", "Dinamarca", 
+      "Escócia", "Espanha", "Estados Bálticos", "Finlândia", "França", "Grécia", 
+      "Hungria", "Irlanda", "Islândia", "Itália", "Noruega", "Países Baixos", 
+      "Polônia", "Portugal", "Reino Unido", "República Tcheca", "Romênia", "Suécia", "Suíça"
     ] },
   ]
 };
@@ -135,9 +135,9 @@ const TRAVEL_STYLE_CATEGORIES = {
       title: "Por Temporada",
       items: [
         { name: "Outono", href: "/travel-style/fall" },
-        { name: "Verao", href: "/travel-style/summer" },
+        { name: "Verão", href: "/travel-style/summer" },
         { name: "Primavera", href: "/travel-style/spring" },
-        { name: "Pascoa", href: "/travel-style/easter" },
+        { name: "Páscoa", href: "/travel-style/easter" },
         { name: "Inverno", href: "/travel-style/winter" },
         { name: "Natal", href: "/travel-style/christmas" }
       ]
@@ -145,7 +145,7 @@ const TRAVEL_STYLE_CATEGORIES = {
     byInterest: {
       title: "Por Interesse",
       items: [
-        { name: "Multi-Pais", href: "/travel-style/multi-country" },
+        { name: "Multi-País", href: "/travel-style/multi-country" },
         { name: "Praia", href: "/travel-style/beach" },
         { name: "Aventura", href: "/travel-style/adventure" },
         { name: "Safari", href: "/travel-style/safari" },
@@ -160,7 +160,7 @@ const TRAVEL_STYLE_CATEGORIES = {
       title: "Por Grupo",
       items: [
         { name: "Viajantes Solo", href: "/travel-style/solo" },
-        { name: "Familia", href: "/travel-style/family" },
+        { name: "Família", href: "/travel-style/family" },
         { name: "Casais", href: "/travel-style/couples" },
         { name: "Seniors", href: "/travel-style/senior" },
         { name: "Amigos e Tours Privados", href: "/travel-style/friends-private" }
@@ -243,20 +243,20 @@ export function Header() {
     centroAyuda: { es: "Centro de Ayuda y FAQs", en: "Help Center & FAQs", pt: "Central de Ajuda e FAQs" },
     centroAyudaMobile: { es: "Centro de Ayuda", en: "Help Center", pt: "Central de Ajuda" },
     miCuenta: { es: "Mi cuenta", en: "My Account", pt: "Minha conta" },
-    iniciarSesion: { es: "Inicia sesion o crea una cuenta", en: "Login or create an account", pt: "Entre ou crie uma conta" },
+    iniciarSesion: { es: "Inicia sesión o crea una cuenta", en: "Login or create an account", pt: "Entre ou crie uma conta" },
     viajero: { es: "Viajero", en: "Traveler", pt: "Viajante" },
     agenteViajes: { es: "Agente de viajes", en: "Travel Agent", pt: "Agente de viagens" },
-    contrasena: { es: "Contrasena", en: "Password", pt: "Senha" },
-    entrar: { es: "Iniciar sesion", en: "Login", pt: "Entrar" },
-    olvidaste: { es: "Olvidaste tu contrasena?", en: "Forgot password?", pt: "Esqueceu a senha?" },
-    noTienesCuenta: { es: "No tienes cuenta?", en: "Don't have an account?", pt: "Nao tem conta?" },
+    contrasena: { es: "Contraseña", en: "Password", pt: "Senha" },
+    entrar: { es: "Iniciar sesión", en: "Login", pt: "Entrar" },
+    olvidaste: { es: "¿Olvidaste tu contraseña?", en: "Forgot password?", pt: "Esqueceu a senha?" },
+    noTienesCuenta: { es: "¿No tienes cuenta?", en: "Don't have an account?", pt: "Não tem conta?" },
     crearCuenta: { es: "Crear una cuenta", en: "Create account", pt: "Criar conta" },
-    eresAgente: { es: "Eres agente de viajes?", en: "Are you a travel agent?", pt: "E agente de viagens?" },
+    eresAgente: { es: "¿Eres agente de viajes?", en: "Are you a travel agent?", pt: "É agente de viagens?" },
     registrarse: { es: "Registrarse", en: "Register", pt: "Registrar-se" },
     tripBySeason: { es: "Viaje Por Temporada", en: "Trip By Season", pt: "Viagem por Temporada" },
-    tripByInterest: { es: "Viaje Por Interes", en: "Trip By Interest", pt: "Viagem por Interesse" },
+    tripByInterest: { es: "Viaje Por Interés", en: "Trip By Interest", pt: "Viagem por Interesse" },
     tripByGroup: { es: "Viaje Por Grupo", en: "Trip By Group", pt: "Viagem por Grupo" },
-    agenteDesc: { es: "Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos.", en: "Offer your clients unforgettable travel packages at competitive prices.", pt: "Ofereca aos seus clientes pacotes de viagem inesqueciveis a precos competitivos." },
+    agenteDesc: { es: "Ofrece a tus clientes paquetes de viaje inolvidables a precios competitivos.", en: "Offer your clients unforgettable travel packages at competitive prices.", pt: "Ofereça aos seus clientes pacotes de viagem inesquecíveis a preços competitivos." },
   };
 
   return (
@@ -300,8 +300,11 @@ export function Header() {
                       "Italy": "italy", "Netherlands": "netherlands", "Norway": "norway", "Poland": "poland",
                       "Romania": "romania", "Scotland": "scotland", "Spain": "spain",
                       "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom",
-                      "Alemanha": "germany", "Espanha": "spain", "Franca": "france", "Paises Baixos": "netherlands",
-                      "Republica Tcheca": "czech-republic", "Romenia": "romania", "Suica": "switzerland"
+                      "Alemanha": "germany", "Espanha": "spain", "França": "france", "Países Baixos": "netherlands",
+                      "República Tcheca": "czech-republic", "Romênia": "romania", "Suíça": "switzerland",
+                      "Albânia": "albania", "Áustria": "austria", "Bélgica": "belgium", "Croácia": "croatia",
+                      "Escócia": "scotland", "Estados Bálticos": "baltic-states", "Finlândia": "finland",
+                      "Grécia": "greece", "Islândia": "iceland", "Itália": "italy", "Polônia": "poland", "Suécia": "sweden"
                     };
                     return (
                       <DropdownMenuItem key={idx} asChild className="cursor-pointer">
@@ -580,8 +583,11 @@ export function Header() {
                       "Italy": "italy", "Netherlands": "netherlands", "Norway": "norway", "Poland": "poland",
                       "Romania": "romania", "Scotland": "scotland", "Spain": "spain",
                       "Sweden": "sweden", "Switzerland": "switzerland", "United Kingdom": "united-kingdom",
-                      "Alemanha": "germany", "Espanha": "spain", "Franca": "france", "Paises Baixos": "netherlands",
-                      "Republica Tcheca": "czech-republic", "Romenia": "romania", "Suica": "switzerland"
+                      "Alemanha": "germany", "Espanha": "spain", "França": "france", "Países Baixos": "netherlands",
+                      "República Tcheca": "czech-republic", "Romênia": "romania", "Suíça": "switzerland",
+                      "Albânia": "albania", "Áustria": "austria", "Bélgica": "belgium", "Croácia": "croatia",
+                      "Escócia": "scotland", "Estados Bálticos": "baltic-states", "Finlândia": "finland",
+                      "Grécia": "greece", "Islândia": "iceland", "Itália": "italy", "Polônia": "poland", "Suécia": "sweden"
                     };
                     return (
                       <Link 

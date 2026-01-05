@@ -147,53 +147,53 @@ const POPULAR_ROUTES = [
   {
     id: "portugal-espanha",
     name: "Portugal + Espanha",
-    description: "Roteiro perfeito para brasileiros: idioma familiar e cultura iberica.",
+    description: "Roteiro perfeito para brasileiros: idioma familiar e cultura ibérica.",
     destinations: ["Lisboa", "Porto", "Madrid", "Barcelona"],
-    highlights: ["Idioma portugues", "Vinho do Porto", "Museus de Madrid", "Praias mediterraneas"],
+    highlights: ["Idioma português", "Vinho do Porto", "Museus de Madrid", "Praias mediterrâneas"],
     image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "romantica",
-    name: "Europa Romantica",
+    name: "Europa Romântica",
     description: "Perfeita para lua de mel: Paris, Roma e Veneza.",
-    destinations: ["Paris", "Roma", "Veneza", "Florenca"],
-    highlights: ["Cidade do amor", "Gondolas em Veneza", "Cenas romanticas", "Arte e cultura"],
+    destinations: ["Paris", "Roma", "Veneza", "Florença"],
+    highlights: ["Cidade do amor", "Gôndolas em Veneza", "Cenas românticas", "Arte e cultura"],
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "grecia",
-    name: "Grecia Paradisiaca",
-    description: "Ilhas gregas: Santorini, Mykonos e a historica Atenas.",
+    name: "Grécia Paradisíaca",
+    description: "Ilhas gregas: Santorini, Mykonos e a histórica Atenas.",
     destinations: ["Atenas", "Santorini", "Mykonos", "Creta"],
-    highlights: ["Acropole de Atenas", "Por do sol em Santorini", "Praias paradisiacas", "Gastronomia grega"],
+    highlights: ["Acrópole de Atenas", "Pôr do sol em Santorini", "Praias paradisíacas", "Gastronomia grega"],
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
 const FAQS = [
   {
-    category: "Documentacao e Vistos",
+    category: "Documentação e Vistos",
     questions: [
       {
         q: "Brasileiros precisam de visto para viajar a Europa?",
-        a: "Nao. Cidadaos brasileiros estao isentos de visto Schengen para estadias turisticas de ate 90 dias. Voce so precisa de passaporte valido com pelo menos 6 meses de validade."
+        a: "Não. Cidadãos brasileiros estão isentos de visto Schengen para estadias turísticas de até 90 dias. Você só precisa de passaporte válido com pelo menos 6 meses de validade."
       },
       {
         q: "Quais documentos preciso para viajar?",
-        a: "Passaporte brasileiro valido (6+ meses), passagem aerea ida e volta, reservas de hotel, seguro viagem internacional com cobertura minima de 30.000 EUR e comprovante de meios financeiros."
+        a: "Passaporte brasileiro válido (6+ meses), passagem aérea ida e volta, reservas de hotel, seguro viagem internacional com cobertura mínima de 30.000 EUR e comprovante de meios financeiros."
       },
     ]
   },
   {
-    category: "Voos e Conexoes",
+    category: "Voos e Conexões",
     questions: [
       {
         q: "Ha voos diretos do Brasil para a Europa?",
-        a: "Sim, de Sao Paulo ha voos diretos para Lisboa (TAP - 2 voos diarios, 9-10 horas) e Madrid (LATAM/Iberia). Do Rio de Janeiro tambem ha opcoes para Lisboa."
+        a: "Sim, de São Paulo há voos diretos para Lisboa (TAP - 2 voos diários, 9-10 horas) e Madrid (LATAM/Iberia). Do Rio de Janeiro também há opções para Lisboa."
       },
       {
         q: "Qual a melhor aerolinea para brasileiros?",
-        a: "TAP Portugal e a mais popular por ter voos diretos para Lisboa e conexoes para toda Europa. LATAM, Air France e Iberia tambem oferecem excelentes opcoes."
+        a: "TAP Portugal é a mais popular por ter voos diretos para Lisboa e conexões para toda Europa. LATAM, Air France e Iberia também oferecem excelentes opções."
       },
     ]
   },
@@ -202,11 +202,11 @@ const FAQS = [
     questions: [
       {
         q: "Qual o melhor destino para primeira viagem?",
-        a: "Portugal e ideal pelo idioma portugues e voos diretos TAP. O roteiro Lisboa + Porto e perfeito para conhecer Europa sem barreira do idioma."
+        a: "Portugal é ideal pelo idioma português e voos diretos TAP. O roteiro Lisboa + Porto é perfeito para conhecer Europa sem barreira do idioma."
       },
       {
         q: "Posso combinar varios paises em uma viagem?",
-        a: "Absolutamente. Os trens europeus e voos de baixo custo facilitam visitar multiplos paises. As rotas mais populares combinam Portugal, Espanha, Franca e Italia."
+        a: "Absolutamente. Os trens europeus e voos de baixo custo facilitam visitar múltiplos países. As rotas mais populares combinam Portugal, Espanha, França e Itália."
       },
     ]
   },
@@ -468,22 +468,22 @@ export default function BlogBrasil() {
             <Card className="text-center p-6">
               <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Sem Visto Schengen</h3>
-              <p className="text-sm text-muted-foreground">Brasileiros isentos de visto para estadias de ate 90 dias na Europa.</p>
+              <p className="text-sm text-muted-foreground">Brasileiros isentos de visto para estadias de até 90 dias na Europa.</p>
             </Card>
             <Card className="text-center p-6">
               <Plane className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Voos Diretos TAP</h3>
-              <p className="text-sm text-muted-foreground">Conexoes diretas de Sao Paulo e Rio para Lisboa, hub para toda Europa.</p>
+              <p className="text-sm text-muted-foreground">Conexões diretas de São Paulo e Rio para Lisboa, hub para toda Europa.</p>
             </Card>
             <Card className="text-center p-6">
               <Globe className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Vantagem Cultural</h3>
-              <p className="text-sm text-muted-foreground">Portugal oferece idioma portugues e cultura familiar para brasileiros.</p>
+              <p className="text-sm text-muted-foreground">Portugal oferece idioma português e cultura familiar para brasileiros.</p>
             </Card>
             <Card className="text-center p-6">
               <Heart className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">Experiencia Unica</h3>
-              <p className="text-sm text-muted-foreground">Arte, historia, gastronomia e paisagens que mudarao sua vida.</p>
+              <h3 className="font-bold text-lg mb-2">Experiência Única</h3>
+              <p className="text-sm text-muted-foreground">Arte, história, gastronomia e paisagens que mudarão sua vida.</p>
             </Card>
           </div>
         </div>
@@ -511,7 +511,7 @@ export default function BlogBrasil() {
             Comece Sua Aventura Europeia
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
-            Entre em contato hoje e receba um orcamento personalizado para sua viagem dos sonhos a Europa desde Brasil.
+            Entre em contato hoje e receba um orçamento personalizado para sua viagem dos sonhos à Europa a partir do Brasil.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

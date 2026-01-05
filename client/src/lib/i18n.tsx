@@ -1020,11 +1020,11 @@ const translations: Record<Language, Record<string, string>> = {
     "search.fillAllFields": "Por favor, preencha todos os campos para buscar.",
     
     // Quick links
-    "search.route.bogotaParis": "Sao Paulo - Paris",
-    "search.route.bogotaMadrid": "Sao Paulo - Madrid",
-    "search.route.bogotaRoma": "Sao Paulo - Roma",
+    "search.route.bogotaParis": "São Paulo - Paris",
+    "search.route.bogotaMadrid": "São Paulo - Madrid",
+    "search.route.bogotaRoma": "São Paulo - Roma",
     "search.route.medellinBarcelona": "Rio - Barcelona",
-    "search.city.bogota": "Sao Paulo",
+    "search.city.bogota": "São Paulo",
     "search.city.medellin": "Rio de Janeiro",
     "search.city.paris": "Paris",
     "search.city.madrid": "Madrid",

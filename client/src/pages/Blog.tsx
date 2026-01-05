@@ -782,7 +782,7 @@ export default function Blog() {
     e.preventDefault();
     if (!newsletterForm.name || !newsletterForm.email || !newsletterForm.email.includes("@")) {
       toast({
-        title: language === "es" ? "Nombre y email son requeridos" : language === "pt" ? "Nome e e-mail sao obrigatorios" : "Name and email are required",
+        title: language === "es" ? "Nombre y email son requeridos" : language === "pt" ? "Nome e e-mail são obrigatórios" : "Name and email are required",
         variant: "destructive"
       });
       return;

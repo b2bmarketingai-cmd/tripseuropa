@@ -18,32 +18,32 @@ export function Footer() {
   ];
 
   const destinations = [
-    { name: { es: "Francia", en: "France", pt: "Franca" }, href: "/destinations/france" },
-    { name: { es: "Italia", en: "Italy", pt: "Italia" }, href: "/destinations/italy" },
+    { name: { es: "Francia", en: "France", pt: "França" }, href: "/destinations/france" },
+    { name: { es: "Italia", en: "Italy", pt: "Itália" }, href: "/destinations/italy" },
     { name: { es: "España", en: "Spain", pt: "Espanha" }, href: "/destinations/spain" },
     { name: { es: "Alemania", en: "Germany", pt: "Alemanha" }, href: "/destinations/germany" },
     { name: { es: "Portugal", en: "Portugal", pt: "Portugal" }, href: "/destinations/portugal" },
-    { name: { es: "Grecia", en: "Greece", pt: "Grecia" }, href: "/destinations/greece" },
-    { name: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" }, href: "/destinations/netherlands" },
-    { name: { es: "Suiza", en: "Switzerland", pt: "Suica" }, href: "/destinations/switzerland" },
-    { name: { es: "Croacia", en: "Croatia", pt: "Croacia" }, href: "/destinations/croatia" },
+    { name: { es: "Grecia", en: "Greece", pt: "Grécia" }, href: "/destinations/greece" },
+    { name: { es: "Países Bajos", en: "Netherlands", pt: "Países Baixos" }, href: "/destinations/netherlands" },
+    { name: { es: "Suiza", en: "Switzerland", pt: "Suíça" }, href: "/destinations/switzerland" },
+    { name: { es: "Croacia", en: "Croatia", pt: "Croácia" }, href: "/destinations/croatia" },
     { name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" }, href: "/destinations/united-kingdom" },
-    { name: { es: "Albania", en: "Albania", pt: "Albania" }, href: "/destinations/albania" },
-    { name: { es: "Austria", en: "Austria", pt: "Austria" }, href: "/destinations/austria" },
-    { name: { es: "Belgica", en: "Belgium", pt: "Belgica" }, href: "/destinations/belgium" },
-    { name: { es: "Republica Checa", en: "Czech Republic", pt: "Republica Tcheca" }, href: "/destinations/czech-republic" },
+    { name: { es: "Albania", en: "Albania", pt: "Albânia" }, href: "/destinations/albania" },
+    { name: { es: "Austria", en: "Austria", pt: "Áustria" }, href: "/destinations/austria" },
+    { name: { es: "Bélgica", en: "Belgium", pt: "Bélgica" }, href: "/destinations/belgium" },
+    { name: { es: "República Checa", en: "Czech Republic", pt: "República Tcheca" }, href: "/destinations/czech-republic" },
     { name: { es: "Dinamarca", en: "Denmark", pt: "Dinamarca" }, href: "/destinations/denmark" },
-    { name: { es: "Finlandia", en: "Finland", pt: "Finlandia" }, href: "/destinations/finland" },
-    { name: { es: "Hungria", en: "Hungary", pt: "Hungria" }, href: "/destinations/hungary" },
-    { name: { es: "Islandia", en: "Iceland", pt: "Islandia" }, href: "/destinations/iceland" },
+    { name: { es: "Finlandia", en: "Finland", pt: "Finlândia" }, href: "/destinations/finland" },
+    { name: { es: "Hungría", en: "Hungary", pt: "Hungria" }, href: "/destinations/hungary" },
+    { name: { es: "Islandia", en: "Iceland", pt: "Islândia" }, href: "/destinations/iceland" },
     { name: { es: "Irlanda", en: "Ireland", pt: "Irlanda" }, href: "/destinations/ireland" },
     { name: { es: "Noruega", en: "Norway", pt: "Noruega" }, href: "/destinations/norway" },
-    { name: { es: "Polonia", en: "Poland", pt: "Polonia" }, href: "/destinations/poland" },
-    { name: { es: "Rumania", en: "Romania", pt: "Romenia" }, href: "/destinations/romania" },
-    { name: { es: "Suecia", en: "Sweden", pt: "Suecia" }, href: "/destinations/sweden" },
-    { name: { es: "Estados Balticos", en: "Baltic States", pt: "Estados Balticos" }, href: "/destinations/baltic-states" },
+    { name: { es: "Polonia", en: "Poland", pt: "Polônia" }, href: "/destinations/poland" },
+    { name: { es: "Rumania", en: "Romania", pt: "Romênia" }, href: "/destinations/romania" },
+    { name: { es: "Suecia", en: "Sweden", pt: "Suécia" }, href: "/destinations/sweden" },
+    { name: { es: "Estados Bálticos", en: "Baltic States", pt: "Estados Bálticos" }, href: "/destinations/baltic-states" },
     { name: { es: "Chipre", en: "Cyprus", pt: "Chipre" }, href: "/destinations/cyprus" },
-    { name: { es: "Escocia", en: "Scotland", pt: "Escocia" }, href: "/destinations/scotland" },
+    { name: { es: "Escocia", en: "Scotland", pt: "Escócia" }, href: "/destinations/scotland" },
   ];
 
   const services = [
@@ -63,12 +63,12 @@ export function Footer() {
   ];
 
   const countries = [
-    { name: { es: "Colombia", en: "Colombia", pt: "Colombia" }, href: "/blog/colombia", code: "CO" },
-    { name: { es: "Mexico", en: "Mexico", pt: "Mexico" }, href: "/blog/mexico", code: "MX" },
+    { name: { es: "Colombia", en: "Colombia", pt: "Colômbia" }, href: "/blog/colombia", code: "CO" },
+    { name: { es: "México", en: "Mexico", pt: "México" }, href: "/blog/mexico", code: "MX" },
     { name: { es: "Brasil", en: "Brazil", pt: "Brasil" }, href: "/blog/brasil", code: "BR" },
     { name: { es: "Argentina", en: "Argentina", pt: "Argentina" }, href: "/blog/argentina", code: "AR" },
-    { name: { es: "Peru", en: "Peru", pt: "Peru" }, href: "/blog/peru", code: "PE" },
-    { name: { es: "Panama", en: "Panama", pt: "Panama" }, href: "/blog/panama", code: "PA" },
+    { name: { es: "Perú", en: "Peru", pt: "Peru" }, href: "/blog/peru", code: "PE" },
+    { name: { es: "Panamá", en: "Panama", pt: "Panamá" }, href: "/blog/panama", code: "PA" },
     { name: { es: "Costa Rica", en: "Costa Rica", pt: "Costa Rica" }, href: "/blog/costa-rica", code: "CR" },
     { name: { es: "Rep. Dominicana", en: "Dominican Rep.", pt: "Rep. Dominicana" }, href: "/blog/dominicana", code: "DO" },
     { name: { es: "Caribe", en: "Caribbean", pt: "Caribe" }, href: "/blog/caribe", code: "CB" },
@@ -147,7 +147,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60">
-              {language === "es" ? "Viaja desde" : language === "pt" ? "Viaje de" : "Travel from"}
+              {language === "es" ? "Viaja desde" : language === "pt" ? "Viaje a partir de" : "Travel from"}
             </h4>
             <ul className="space-y-2">
               {countries.map((country, index) => (
@@ -173,7 +173,7 @@ export function Footer() {
                 {language === "es" 
                   ? "EE.UU., Canada, China, India, Sudafrica, Australia, ETIAS y mas"
                   : language === "pt"
-                  ? "EUA, Canada, China, India, Africa do Sul, Australia, ETIAS e mais"
+                  ? "EUA, Canadá, China, Índia, África do Sul, Austrália, ETIAS e mais"
                   : "USA, Canada, China, India, South Africa, Australia, ETIAS and more"}
               </p>
             </div>
@@ -287,7 +287,7 @@ export function Footer() {
               </div>
               
               <div className="text-center text-white/50 text-sm">
-                <p>{language === "es" ? "Trips Europa es Agencia de Viajes" : language === "pt" ? "Trips Europa e Agencia de Viagens" : "Trips Europa is a Travel Agency"}</p>
+                <p>{language === "es" ? "Trips Europa es Agencia de Viajes" : language === "pt" ? "Trips Europa é Agência de Viagens" : "Trips Europa is a Travel Agency"}</p>
               </div>
               
               <div className="flex items-center gap-2" title="IATA Member">

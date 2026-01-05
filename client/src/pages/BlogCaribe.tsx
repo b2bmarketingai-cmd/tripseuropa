@@ -200,15 +200,15 @@ export default function BlogCaribe() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
 
   const content = {
-    badge: { es: "Guia Regional 2025-2026", pt: "Guia Regional 2025-2026", en: "Regional Guide 2025-2026" },
-    h1: { es: "Viajes a Europa desde el Caribe", pt: "Viagens a Europa desde o Caribe", en: "Travel to Europe from the Caribbean" },
-    subtitle: { es: "Jamaica, Trinidad & Tobago, Bahamas, Barbados y mas: rutas, precios y consejos para viajeros caribenos", pt: "Jamaica, Trinidad & Tobago, Bahamas, Barbados e mais: rotas, precos e dicas para viajantes caribenhos", en: "Jamaica, Trinidad & Tobago, Bahamas, Barbados and more: routes, prices and tips for Caribbean travelers" },
+    badge: { es: "Guía Regional 2025-2026", pt: "Guia Regional 2025-2026", en: "Regional Guide 2025-2026" },
+    h1: { es: "Viajes a Europa desde el Caribe", pt: "Viagens à Europa a partir do Caribe", en: "Travel to Europe from the Caribbean" },
+    subtitle: { es: "Jamaica, Trinidad & Tobago, Bahamas, Barbados y más: rutas, precios y consejos para viajeros caribeños", pt: "Jamaica, Trinidad & Tobago, Bahamas, Barbados e mais: rotas, preços e dicas para viajantes caribenhos", en: "Jamaica, Trinidad & Tobago, Bahamas, Barbados and more: routes, prices and tips for Caribbean travelers" },
     destinations: { es: "Destinos Preferidos", pt: "Destinos Preferidos", en: "Preferred Destinations" },
     routes: { es: "Rutas Principales", pt: "Rotas Principais", en: "Main Routes" },
-    countries: { es: "Paises del Caribe", pt: "Paises do Caribe", en: "Caribbean Countries" },
-    prices: { es: "Comparativa de Precios", pt: "Comparativo de Precos", en: "Price Comparison" },
+    countries: { es: "Países del Caribe", pt: "Países do Caribe", en: "Caribbean Countries" },
+    prices: { es: "Comparativa de Precios", pt: "Comparativo de Preços", en: "Price Comparison" },
     faq: { es: "Preguntas Frecuentes", pt: "Perguntas Frequentes", en: "Frequently Asked Questions" },
-    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orcamento Agora", en: "Quote Your Trip Now" },
+    cta: { es: "Cotiza Tu Viaje Ahora", pt: "Solicite Seu Orçamento Agora", en: "Quote Your Trip Now" },
   };
 
   const toggleFaq = (id: string) => {
@@ -225,11 +225,11 @@ export default function BlogCaribe() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEOHead
-        title={language === "es" ? "Guia de Viajes a Europa desde el Caribe - Jamaica, Trinidad, Bahamas" : language === "pt" ? "Guia de Viagens a Europa desde o Caribe - Jamaica, Trinidad, Bahamas" : "Guide to Travel Europe from Caribbean - Jamaica, Trinidad, Bahamas"}
+        title={language === "es" ? "Guía de Viajes a Europa desde el Caribe - Jamaica, Trinidad, Bahamas" : language === "pt" ? "Guia de Viagens à Europa a partir do Caribe - Jamaica, Trinidad, Bahamas" : "Guide to Travel Europe from Caribbean - Jamaica, Trinidad, Bahamas"}
         description={language === "es" 
-          ? "Guia completa para caribenos que quieren viajar a Europa: destinos favoritos, vuelos desde Jamaica, Trinidad, Bahamas, precios 2025 y consejos practicos."
+          ? "Guía completa para caribeños que quieren viajar a Europa: destinos favoritos, vuelos desde Jamaica, Trinidad, Bahamas, precios 2025 y consejos prácticos."
           : language === "pt" 
-          ? "Guia completo para caribenhos que querem viajar a Europa: destinos favoritos, voos de Jamaica, Trinidad, Bahamas, precos 2025 e dicas praticas."
+          ? "Guia completo para caribenhos que querem viajar à Europa: destinos favoritos, voos de Jamaica, Trinidad, Bahamas, preços 2025 e dicas práticas."
           : "Complete guide for Caribbean residents wanting to travel to Europe: favorite destinations, flights from Jamaica, Trinidad, Bahamas, 2025 prices and practical tips."}
         keywords="viajes europa caribe, europa desde jamaica, europa desde trinidad, vuelos caribbean europa"
         url="https://tripseuropa.com/blog/caribe"
@@ -246,11 +246,11 @@ export default function BlogCaribe() {
         ]}
       />
       <BlogPostSchema
-        title={language === "es" ? "Guia Regional: Viajes a Europa desde el Caribe 2025-2026" : language === "pt" ? "Guia Regional: Viagens a Europa desde o Caribe 2025-2026" : "Regional Guide: Travel to Europe from Caribbean 2025-2026"}
+        title={language === "es" ? "Guía Regional: Viajes a Europa desde el Caribe 2025-2026" : language === "pt" ? "Guia Regional: Viagens à Europa a partir do Caribe 2025-2026" : "Regional Guide: Travel to Europe from Caribbean 2025-2026"}
         description={language === "es" 
-          ? "Todo lo que necesitas saber para viajar a Europa desde el Caribe: destinos, rutas, precios y consejos practicos."
+          ? "Todo lo que necesitas saber para viajar a Europa desde el Caribe: destinos, rutas, precios y consejos prácticos."
           : language === "pt"
-          ? "Tudo o que voce precisa saber para viajar a Europa desde o Caribe: destinos, rotas, precos e dicas praticas."
+          ? "Tudo o que você precisa saber para viajar à Europa a partir do Caribe: destinos, rotas, preços e dicas práticas."
           : "Everything you need to know to travel to Europe from the Caribbean: destinations, routes, prices and practical tips."}
         image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200"
         datePublished="2025-01-01"
@@ -438,9 +438,9 @@ export default function BlogCaribe() {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-primary text-white">
-                        <th className="p-4 text-left">{language === "es" ? "Duracion" : language === "pt" ? "Duracao" : "Duration"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Economico" : language === "pt" ? "Economico" : "Budget"}</th>
-                        <th className="p-4 text-center">{language === "es" ? "Estandar" : language === "pt" ? "Padrao" : "Standard"}</th>
+                        <th className="p-4 text-left">{language === "es" ? "Duración" : language === "pt" ? "Duração" : "Duration"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Económico" : language === "pt" ? "Econômico" : "Budget"}</th>
+                        <th className="p-4 text-center">{language === "es" ? "Estándar" : language === "pt" ? "Padrão" : "Standard"}</th>
                         <th className="p-4 text-center">{language === "es" ? "Premium" : language === "pt" ? "Premium" : "Premium"}</th>
                       </tr>
                     </thead>

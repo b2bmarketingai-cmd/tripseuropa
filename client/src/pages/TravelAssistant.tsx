@@ -29,7 +29,7 @@ const QUICK_ACTIONS = [
   {
     icon: Map,
     label: { es: "Destinos Populares", en: "Popular Destinations", pt: "Destinos Populares" },
-    message: { es: "¿Cuáles son los destinos más populares de Europa para visitar?", en: "What are the most popular destinations in Europe to visit?", pt: "Quais sao os destinos mais populares da Europa para visitar?" },
+    message: { es: "¿Cuáles son los destinos más populares de Europa para visitar?", en: "What are the most popular destinations in Europe to visit?", pt: "Quais são os destinos mais populares da Europa para visitar?" },
     color: "bg-green-500/10 text-green-600 dark:text-green-400"
   },
   {
@@ -97,7 +97,7 @@ export default function TravelAssistant() {
         description={language === "es" 
           ? "Obtén recomendaciones personalizadas de viaje a Europa con nuestro asistente de inteligencia artificial."
           : language === "pt"
-          ? "Obtenha recomendacoes personalizadas de viagem para Europa com nosso assistente de inteligencia artificial."
+          ? "Obtenha recomendações personalizadas de viagem para Europa com nosso assistente de inteligência artificial."
           : "Get personalized European travel recommendations with our AI-powered assistant."}
       />
       <Header />
@@ -108,7 +108,7 @@ export default function TravelAssistant() {
           <Link href="/">
             <Button variant="ghost" size="sm" className="mb-4 gap-2">
               <ArrowLeft className="w-4 h-4" />
-              {language === "es" ? "Volver al inicio" : language === "pt" ? "Voltar ao inicio" : "Back to home"}
+              {language === "es" ? "Volver al inicio" : language === "pt" ? "Voltar ao início" : "Back to home"}
             </Button>
           </Link>
           
@@ -128,7 +128,7 @@ export default function TravelAssistant() {
           
           <Badge className="bg-accent/10 text-accent border-accent/30 gap-1">
             <Sparkles className="w-3 h-3" />
-            {language === "es" ? "Potenciado por Inteligencia Artificial" : language === "pt" ? "Potencializado por Inteligencia Artificial" : "Powered by Artificial Intelligence"}
+            {language === "es" ? "Potenciado por Inteligencia Artificial" : language === "pt" ? "Potencializado por Inteligência Artificial" : "Powered by Artificial Intelligence"}
           </Badge>
         </div>
 
@@ -149,13 +149,13 @@ export default function TravelAssistant() {
                         <Bot className="w-10 h-10 text-accent" />
                       </div>
                       <h2 className="text-xl font-display font-bold mb-2">
-                        {language === "es" ? "¡Hola! Soy Europa" : language === "pt" ? "Ola! Sou Europa" : "Hi! I'm Europa"}
+                        {language === "es" ? "¡Hola! Soy Europa" : language === "pt" ? "Olá! Sou Europa" : "Hi! I'm Europa"}
                       </h2>
                       <p className="text-muted-foreground max-w-md mx-auto">
                         {language === "es" 
                           ? "Tu asistente de viaje personalizado. Puedo ayudarte a planificar tu viaje perfecto a Europa, recomendarte destinos, hoteles y experiencias únicas." 
                           : language === "pt"
-                          ? "Seu assistente de viagem personalizado. Posso ajuda-lo a planejar sua viagem perfeita para Europa, recomendar destinos, hoteis e experiencias unicas."
+                          ? "Seu assistente de viagem personalizado. Posso ajudá-lo a planejar sua viagem perfeita para Europa, recomendar destinos, hotéis e experiências únicas."
                           : "Your personalized travel assistant. I can help you plan your perfect trip to Europe, recommend destinations, hotels, and unique experiences."}
                       </p>
                     </div>
@@ -163,7 +163,7 @@ export default function TravelAssistant() {
                     {/* Quick Actions */}
                     <div>
                       <p className="text-sm text-muted-foreground text-center mb-4">
-                        {language === "es" ? "Comienza con una de estas opciones:" : language === "pt" ? "Comece com uma destas opcoes:" : "Start with one of these options:"}
+                        {language === "es" ? "Comienza con una de estas opciones:" : language === "pt" ? "Comece com uma destas opções:" : "Start with one of these options:"}
                       </p>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {QUICK_ACTIONS.map((action, idx) => (
@@ -255,7 +255,7 @@ export default function TravelAssistant() {
           {messages.length > 0 && (
             <div className="mb-8">
               <p className="text-sm text-muted-foreground mb-3">
-                {language === "es" ? "Sugerencias:" : language === "pt" ? "Sugestoes:" : "Suggestions:"}
+                {language === "es" ? "Sugerencias:" : language === "pt" ? "Sugestões:" : "Suggestions:"}
               </p>
               <div className="flex flex-wrap gap-2">
                 {SUGGESTED_PROMPTS.map((prompt, idx) => (
@@ -281,13 +281,13 @@ export default function TravelAssistant() {
               <CardContent className="p-4 text-center">
                 <Sparkles className="w-8 h-8 text-accent mx-auto mb-2" />
                 <h3 className="font-medium mb-1">
-                  {language === "es" ? "Recomendaciones Personalizadas" : language === "pt" ? "Recomendacoes Personalizadas" : "Personalized Recommendations"}
+                  {language === "es" ? "Recomendaciones Personalizadas" : language === "pt" ? "Recomendações Personalizadas" : "Personalized Recommendations"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
                     ? "Obtén sugerencias adaptadas a tus preferencias" 
                     : language === "pt"
-                    ? "Obtenha sugestoes adaptadas as suas preferencias"
+                    ? "Obtenha sugestões adaptadas às suas preferências"
                     : "Get suggestions tailored to your preferences"}
                 </p>
               </CardContent>
@@ -311,7 +311,7 @@ export default function TravelAssistant() {
               <CardContent className="p-4 text-center">
                 <Heart className="w-8 h-8 text-accent mx-auto mb-2" />
                 <h3 className="font-medium mb-1">
-                  {language === "es" ? "Servicio Premium" : language === "pt" ? "Servico Premium" : "Premium Service"}
+                  {language === "es" ? "Servicio Premium" : language === "pt" ? "Serviço Premium" : "Premium Service"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {language === "es" 
