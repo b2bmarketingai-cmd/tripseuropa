@@ -114,3 +114,67 @@ export interface FlightOffer {
   price: number;
   stops: number;
 }
+
+export const experiments = pgTable("experiments", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  description: text("description"),
+  type: text("type").notNull(),
+  status: text("status").default("draft"),
+  startDate: timestamp("start_date"),
+  endDate: timestamp("end_date"),
+  winningVariant: text("winning_variant"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const experimentVariants = pgTable("experiment_variants", {
+  id: serial("id").primaryKey(),
+  experimentId: integer("experiment_id").notNull(),
+  name: text("name").notNull(),
+  config: jsonb("config").notNull(),
+  weight: integer("weight").default(50),
+  isControl: boolean("is_control").default(false),
+});
+
+export const experimentMetrics = pgTable("experiment_metrics", {
+  id: serial("id").primaryKey(),
+  experimentId: integer("experiment_id").notNull(),
+  variantId: integer("variant_id").notNull(),
+  impressions: integer("impressions").default(0),
+  conversions: integer("conversions").default(0),
+  conversionRate: decimal("conversion_rate", { precision: 5, scale: 4 }),
+  recordedAt: timestamp("recorded_at").defaultNow(),
+});
+
+export const countryPages = pgTable("country_pages", {
+  id: serial("id").primaryKey(),
+  countryCode: text("country_code").notNull().unique(),
+  countryName: text("country_name").notNull(),
+  language: text("language").notNull(),
+  currency: text("currency").notNull(),
+  currencySymbol: text("currency_symbol").notNull(),
+  metaTitle: text("meta_title"),
+  metaDescription: text("meta_description"),
+  heroTitle: text("hero_title"),
+  heroSubtitle: text("hero_subtitle"),
+  ctaText: text("cta_text"),
+  urgencyText: text("urgency_text"),
+  socialProof: text("social_proof"),
+  featuredPackages: jsonb("featured_packages"),
+  seoKeywords: text("seo_keywords").array(),
+  isActive: boolean("is_active").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertExperimentSchema = createInsertSchema(experiments);
+export const insertExperimentVariantSchema = createInsertSchema(experimentVariants);
+export const insertCountryPageSchema = createInsertSchema(countryPages);
+
+export type Experiment = typeof experiments.$inferSelect;
+export type ExperimentVariant = typeof experimentVariants.$inferSelect;
+export type ExperimentMetric = typeof experimentMetrics.$inferSelect;
+export type CountryPage = typeof countryPages.$inferSelect;
+
+export type InsertExperiment = z.infer<typeof insertExperimentSchema>;
+export type InsertExperimentVariant = z.infer<typeof insertExperimentVariantSchema>;
+export type InsertCountryPage = z.infer<typeof insertCountryPageSchema>;
