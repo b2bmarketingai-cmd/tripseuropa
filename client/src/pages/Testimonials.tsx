@@ -112,7 +112,7 @@ export default function Testimonials() {
           </p>
           <a href="https://api.whatsapp.com/send?phone=34611105448&text=Hola!%20Quiero%20planificar%20mi%20viaje%20a%20Europa" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-accent text-primary hover:bg-accent/90" data-testid="button-hero-whatsapp">
-              {language === "es" ? "Cotizar mi viaje" : "Get a quote"}
+              {language === "es" ? "Solicita tu Cotización" : "Get a quote"}
             </Button>
           </a>
         </div>
