@@ -137,7 +137,8 @@ export function HeroCarousel() {
             alt={slide.title[lang]}
             className="w-full h-full object-cover"
             loading={index === 0 ? "eager" : "lazy"}
-            fetchPriority={index === 0 ? "high" : "low"}
+            // @ts-ignore - fetchpriority is a valid HTML attribute
+            fetchpriority={index === 0 ? "high" : "low"}
             decoding={index === 0 ? "sync" : "async"}
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
