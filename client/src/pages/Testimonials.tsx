@@ -7,12 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Quote, MapPin } from "lucide-react";
 
-import carolinaImg from "@assets/generated_images/colombian_woman_professional_headshot.png";
-import robertoImg from "@assets/generated_images/colombian_man_professional_headshot.png";
-import anaMariaImg from "@assets/generated_images/latina_woman_elegant_headshot.png";
-import miguelImg from "@assets/generated_images/distinguished_latino_man_headshot.png";
-import lauraImg from "@assets/generated_images/venezuelan_woman_professional_headshot.png";
-import pedroImg from "@assets/generated_images/colombian_businessman_headshot.png";
+import carolinaImg from "@assets/testimonial-carolina-128.png";
+import robertoImg from "@assets/testimonial-roberto-128.png";
+import anaMariaImg from "@assets/testimonial-ana-128.png";
+import miguelImg from "@assets/testimonial-miguel-128.png";
+import lauraImg from "@assets/testimonial-laura-128.png";
+import pedroImg from "@assets/testimonial-pedro-128.png";
 
 const TESTIMONIALS = [
   {
