@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Plane, Hotel, Map, Heart, Users, Calendar, Phone, MessageSquare } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import sofiaAvatar from "@assets/sofia-avatar-128.png";
+import sofiaAvatar from "@assets/sofia-avatar-128.webp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useChatbot } from "@/hooks/use-chatbot";

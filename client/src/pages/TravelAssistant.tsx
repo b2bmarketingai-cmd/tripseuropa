@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, Plane, Hotel, Map, Heart, Users, Calendar, Sparkles, ArrowLeft } from "lucide-react";
-import sofiaAvatar from "@assets/sofia-avatar-128.png";
+import sofiaAvatar from "@assets/sofia-avatar-128.webp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";

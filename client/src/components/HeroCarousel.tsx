@@ -7,7 +7,7 @@ import { Link } from "wouter";
 const CAROUSEL_SLIDES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
     title: { es: "Gran Tour de Europa", en: "Grand Tour of Europe", pt: "Grande Tour pela Europa" },
     subtitle: { es: "Paris, Roma, Madrid y mas", en: "Paris, Rome, Madrid and more", pt: "Paris, Roma, Madrid e mais" },
     price: "2,899",
@@ -17,7 +17,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
     title: { es: "Europa Clasica", en: "Classic Europe", pt: "Europa Classica" },
     subtitle: { es: "Lo mejor de Europa en un viaje", en: "The best of Europe in one trip", pt: "O melhor da Europa em uma viagem" },
     price: "2,299",
@@ -27,7 +27,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017",
     title: { es: "España, Portugal y Marruecos", en: "Spain, Portugal and Morocco", pt: "Espanha, Portugal e Marrocos" },
     subtitle: { es: "Desde Barcelona Especial", en: "From Barcelona Special", pt: "Desde Barcelona Especial" },
     price: "1,899",
@@ -37,7 +37,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
     title: { es: "Turquia y Grecia", en: "Turkey and Greece", pt: "Turquia e Grecia" },
     subtitle: { es: "Estambul, Atenas y Santorini", en: "Istanbul, Athens and Santorini", pt: "Istambul, Atenas e Santorini" },
     price: "1,699",
@@ -47,7 +47,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
     title: { es: "Viviendo Europa", en: "Living Europe", pt: "Vivendo a Europa" },
     subtitle: { es: "Una experiencia inolvidable", en: "An unforgettable experience", pt: "Uma experiencia inesquecivel" },
     price: "1,599",
@@ -57,11 +57,24 @@ const CAROUSEL_SLIDES = [
   },
 ];
 
+function getResponsiveImageUrl(base: string, isMobile: boolean): string {
+  const width = isMobile ? 600 : 1200;
+  return `${base}?q=40&w=${width}&auto=format&fit=crop`;
+}
+
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
@@ -125,28 +138,21 @@ export function HeroCarousel() {
       className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden" 
       data-testid="section-hero-carousel"
     >
-      {CAROUSEL_SLIDES.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-        >
-          <img
-            src={slide.image}
-            alt={slide.title[lang]}
-            className="w-full h-full object-cover"
-            loading={index === 0 ? "eager" : "lazy"}
-            // @ts-ignore - fetchpriority is a valid HTML attribute
-            fetchpriority={index === 0 ? "high" : "low"}
-            decoding={index === 0 ? "sync" : "async"}
-            crossOrigin="anonymous"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
-        </div>
-      ))}
+      <div className="absolute inset-0">
+        <img
+          src={getResponsiveImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, isMobile)}
+          alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
+          className="w-full h-full object-cover"
+          loading="eager"
+          // @ts-ignore
+          fetchpriority="high"
+          decoding="sync"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
+      </div>
 
       <div className="container relative z-20 px-4 py-16 md:py-24">
         <div className="max-w-2xl text-white">
@@ -209,6 +215,15 @@ export function HeroCarousel() {
           </div>
         </div>
       </div>
+
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/50 transition-colors z-30"
+        aria-label="Previous slide"
+        data-testid="button-carousel-prev"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
 
       <button
         onClick={nextSlide}

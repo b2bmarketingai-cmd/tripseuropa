@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { Eye, EyeOff, Loader2, ArrowLeft } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { SEOHead } from "@/components/SEOHead";
-import logoPath from "@assets/logo-optimized.png";
+import logoPath from "@assets/logo-optimized.webp";
 
 export default function TravelAdvisor() {
   const { language } = useI18n();

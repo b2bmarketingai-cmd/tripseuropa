@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/logo-optimized.png";
+import logoUrl from "@assets/logo-optimized.webp";
 import { SiWhatsapp } from "react-icons/si";
 import {
   DropdownMenu,
