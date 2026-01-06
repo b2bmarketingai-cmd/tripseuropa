@@ -113,3 +113,19 @@ All sitemaps include proper hreflang tags for:
 - 12 travel packages
 - 10 travel experiences
 - 6 promotional offers
+
+## Branding Assets (PERMANENTE - NO MODIFICAR)
+
+### Favicon - Avion Dorado
+**IMPORTANTE: NO QUITAR NI CAMBIAR ESTOS ARCHIVOS**
+- **Archivo original**: `attached_assets/logo_favicon_tripseuropa_1767719517121.png`
+- **Ubicacion**: `client/public/`
+- **Archivos generados**:
+  - `favicon.ico` - Icono ICO para compatibilidad maxima
+  - `favicon.png` - 512x512 version alta resolucion
+  - `favicon-32.png` - 32x32 para pestanas navegador
+  - `favicon-16.png` - 16x16 para pestanas pequenas
+  - `apple-touch-icon.png` - 180x180 para iOS
+- **Configurado en**: `client/index.html` (lineas 14-19)
+- **Manifest**: `client/public/manifest.json`
+- **Dominios**: Aplica para tripseuropa.com y tripseuropa.co
