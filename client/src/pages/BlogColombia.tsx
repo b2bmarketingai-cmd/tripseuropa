@@ -21,7 +21,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Idioma espanol (ventaja cultural)", "Vuelo directo desde Bogota", "Museos Prado y Reina Sofia", "Vida nocturna vibrante", "Hub para otros destinos europeos"],
     nearby: ["Barcelona", "Valencia", "Sevilla", "Toledo"],
   },
@@ -29,7 +29,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Vuelo directo desde Bogota", "Torre Eiffel iconica", "Museo del Louvre", "Gastronomia mundial", "Ciudad del amor"],
     nearby: ["Versalles", "Normandia", "Provence", "Mont Saint-Michel"],
   },
@@ -37,7 +37,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Patrimonio historico unico", "Coliseo y Vaticano", "Gastronomia italiana autentica", "Destino romantico ideal"],
     nearby: ["Florencia", "Venecia", "Milan", "Napoles", "Pompeya"],
   },
@@ -45,7 +45,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida moderna vibrante"],
     nearby: ["Costa Brava", "Montserrat", "Girona"],
   },
@@ -53,7 +53,7 @@ const TOP_DESTINATIONS = [
     id: "lisboa",
     name: "Lisboa, Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Destino accesible", "Cultura autentica portuguesa", "Gastronomia exquisita", "Clima agradable"],
     nearby: ["Cascais", "Sintra", "Oporto", "Algarve"],
   },
@@ -61,7 +61,7 @@ const TOP_DESTINATIONS = [
     id: "amsterdam",
     name: "Amsterdam, Paises Bajos",
     countryCode: "NL",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=600&auto=format&fit=crop",
     why: ["Canales pintorescos", "Museo Van Gogh", "Cultura liberal", "Bicicletas y tulipanes"],
     nearby: ["Bruselas", "Brujas", "Rotterdam"],
   },
@@ -69,7 +69,7 @@ const TOP_DESTINATIONS = [
     id: "londres",
     name: "Londres, Reino Unido",
     countryCode: "GB",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=600&auto=format&fit=crop",
     why: ["Historia y monumentos", "Big Ben y Buckingham Palace", "Compras de clase mundial", "Cultura britanica"],
     nearby: ["Oxford", "Stonehenge", "Bath", "Escocia"],
   },
@@ -77,7 +77,7 @@ const TOP_DESTINATIONS = [
     id: "atenas",
     name: "Atenas, Grecia",
     countryCode: "GR",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=600&auto=format&fit=crop",
     why: ["Acropolis historica", "Islas griegas paradisiacas", "Gastronomia mediterranea", "Historia antigua"],
     nearby: ["Santorini", "Mikonos", "Creta", "Rodas"],
   },
@@ -143,7 +143,7 @@ const POPULAR_ROUTES = [
     description: "El recorrido mas popular entre colombianos: España, Italia y Francia en un solo viaje.",
     destinations: ["Madrid", "Roma", "Paris"],
     highlights: ["Museos de fama mundial", "Gastronomia europea", "Monumentos iconicos", "Historia milenaria"],
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "romantica",
@@ -151,7 +151,7 @@ const POPULAR_ROUTES = [
     description: "Perfecta para parejas y lunas de miel: las ciudades mas romanticas del continente.",
     destinations: ["Paris", "Roma", "Venecia", "Florencia"],
     highlights: ["Ciudades del amor", "Cenas romanticas", "Paseos en gondola", "Arte renacentista"],
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "espana",
@@ -159,7 +159,7 @@ const POPULAR_ROUTES = [
     description: "Descubre toda España: desde Madrid hasta Barcelona, pasando por Andalucia.",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     highlights: ["Idioma espanol", "Flamenco y tapas", "Arquitectura morisca", "Playas mediterraneas"],
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "italia",
@@ -167,7 +167,7 @@ const POPULAR_ROUTES = [
     description: "Recorre Italia desde Milan hasta Roma, pasando por Toscana y Venecia.",
     destinations: ["Roma", "Florencia", "Venecia", "Milan"],
     highlights: ["Arte renacentista", "Pizza y pasta autenticas", "Canales venecianos", "Moda italiana"],
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -274,7 +274,7 @@ export default function BlogColombia() {
         description="Todo lo que necesitas saber para viajar a Europa desde Colombia"
         datePublished="2025-01-01"
         author="Trips Europa"
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200"
         url="/blog/colombia"
       />
       
@@ -283,7 +283,7 @@ export default function BlogColombia() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden" data-testid="section-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1920&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">

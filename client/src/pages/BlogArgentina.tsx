@@ -20,7 +20,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Idioma espanol", "Fuerte conexion cultural", "Museos Prado y Reina Sofia", "Hub para otros destinos"],
     nearby: ["Barcelona", "Sevilla", "Valencia", "Toledo"],
   },
@@ -28,7 +28,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Playas mediterraneas", "Arquitectura de Gaudi", "Sagrada Familia", "Vida nocturna vibrante"],
     nearby: ["Costa Brava", "Montserrat", "Girona"],
   },
@@ -36,7 +36,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Herencia italiana argentina", "Coliseo y Vaticano", "Gastronomia autentica", "Arte renacentista"],
     nearby: ["Florencia", "Venecia", "Milan", "Napoles"],
   },
@@ -44,7 +44,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Ciudad del amor", "Torre Eiffel", "Museo del Louvre", "Gastronomia mundial"],
     nearby: ["Versalles", "Normandia", "Provence"],
   },
@@ -52,7 +52,7 @@ const TOP_DESTINATIONS = [
     id: "estambul",
     name: "Estambul, Turquia",
     countryCode: "TR",
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=600&auto=format&fit=crop",
     why: ["Destino emergente", "Cultura unica", "Mezquitas impresionantes", "Bazares historicos"],
     nearby: ["Capadocia", "Efeso", "Pamukkale"],
   },
@@ -60,7 +60,7 @@ const TOP_DESTINATIONS = [
     id: "lisboa",
     name: "Lisboa, Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Destino accesible", "Gastronomia portuguesa", "Tranvias historicos", "Fado y cultura"],
     nearby: ["Cascais", "Sintra", "Oporto"],
   },
@@ -68,7 +68,7 @@ const TOP_DESTINATIONS = [
     id: "florencia",
     name: "Florencia, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=60&w=600&auto=format&fit=crop",
     why: ["Cuna del Renacimiento", "Galeria Uffizi", "Duomo impresionante", "Toscana cercana"],
     nearby: ["Pisa", "Siena", "San Gimignano"],
   },
@@ -76,7 +76,7 @@ const TOP_DESTINATIONS = [
     id: "venecia",
     name: "Venecia, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=600&auto=format&fit=crop",
     why: ["Canales romanticos", "Gondolas", "Plaza San Marcos", "Islas de Murano y Burano"],
     nearby: ["Verona", "Padua", "Trieste"],
   },
@@ -122,7 +122,7 @@ const POPULAR_ROUTES = [
     description: "El recorrido favorito de los argentinos: Madrid, Barcelona y Paris.",
     destinations: ["Madrid", "Barcelona", "Paris"],
     highlights: ["Idioma espanol en España", "Cultura mediterranea", "Ciudad del amor", "Gastronomia variada"],
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "italiana",
@@ -130,7 +130,7 @@ const POPULAR_ROUTES = [
     description: "Para argentinos con raices italianas: Roma, Florencia y Venecia.",
     destinations: ["Roma", "Florencia", "Venecia", "Milan"],
     highlights: ["Conexion con raices", "Arte renacentista", "Gondolas y canales", "Moda italiana"],
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "romantica",
@@ -138,7 +138,7 @@ const POPULAR_ROUTES = [
     description: "Perfecta para lunas de miel: Paris, Roma y Venecia.",
     destinations: ["Paris", "Roma", "Venecia"],
     highlights: ["Ciudades del amor", "Cenas romanticas", "Paseos en gondola", "Torre Eiffel"],
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "economica",
@@ -146,7 +146,7 @@ const POPULAR_ROUTES = [
     description: "La mejor relacion calidad-precio: Lisboa, Madrid y Barcelona.",
     destinations: ["Lisboa", "Madrid", "Barcelona"],
     highlights: ["Destinos accesibles", "Idioma similar", "Playas mediterraneas", "Cultura iberica"],
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -252,7 +252,7 @@ export default function BlogArgentina() {
         description="Todo lo que necesitas saber para viajar a Europa desde Argentina"
         datePublished="2025-01-01"
         author="Trips Europa"
-        image="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200"
         url="/blog/argentina"
       />
       
@@ -261,7 +261,7 @@ export default function BlogArgentina() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1920&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">

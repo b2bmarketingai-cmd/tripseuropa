@@ -40,17 +40,17 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Barcelona: La Joya del Mediterraneo",
         content: "Barcelona es, sin duda, una de las ciudades mas vibrantes y visitadas de España. Conocida por su arquitectura unica, especialmente las obras de Antoni Gaudi como la Sagrada Familia y el Parque Guell, esta ciudad ofrece una mezcla perfecta de historia, cultura y modernidad. Pasear por Las Ramblas, disfrutar de las playas de la Barceloneta y explorar el Barrio Gotico son experiencias imperdibles.",
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Madrid: La Capital con Corazon",
         content: "Madrid, la capital de España, es una ciudad llena de vida y cultura. Desde el impresionante Palacio Real hasta el famoso Museo del Prado, hay algo para todos. La Gran Via, con sus tiendas y teatros, es el corazon palpitante de la ciudad. No te pierdas el Parque del Retiro para un paseo relajante.",
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sevilla: Tradicion y Flamenco",
         content: "Sevilla captura la esencia de Andalucia con su arquitectura morisca, el flamenco apasionado y las tapas deliciosas. La Catedral de Sevilla, la Giralda y el Real Alcazar son testimonios de su rica historia. El barrio de Triana es perfecto para experimentar el autentico flamenco.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Valencia: Ciudad de las Artes y las Ciencias",
@@ -84,7 +84,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "playas-alicante",
     slug: "playas-alicante",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     title: { es: "10 Mejores Playas de Alicante para Relajarte en 2026", en: "10 Best Beaches in Alicante to Relax in 2026" },
     excerpt: { es: "Descubre las playas mas hermosas de Alicante, desde calas escondidas hasta extensas playas de arena dorada perfectas para familias.", en: "Discover the most beautiful beaches in Alicante, from hidden coves to extensive golden sand beaches perfect for families." },
     category: "destinos",
@@ -98,7 +98,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Playa del Postiguet",
         content: "Ubicada en el corazon de Alicante, la Playa del Postiguet es la mas emblematica de la ciudad. Con 900 metros de arena dorada y aguas tranquilas, es perfecta para familias. El paseo maritimo ofrece restaurantes, heladerias y vistas al Castillo de Santa Barbara.",
-        image: "https://images.unsplash.com/photo-1564221710-8f8c82e456a7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1564221710-8f8c82e456a7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Playa de San Juan",
@@ -126,7 +126,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "hoteles-lujo-paris",
     slug: "hoteles-lujo-paris",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "10 Hoteles de Lujo Imperdibles en Paris 2026", en: "10 Must-Stay Luxury Hotels in Paris 2026" },
     excerpt: { es: "Ritz, Four Seasons, Le Bristol y mas. Los hoteles mas exclusivos de Paris con vista a la Torre Eiffel, servicio impecable y experiencias inolvidables para viajeros exigentes.", en: "Ritz, Four Seasons, Le Bristol and more. The most exclusive hotels in Paris with Eiffel Tower views, impeccable service and unforgettable experiences for discerning travelers." },
     category: "lujo",
@@ -140,7 +140,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Paris: La Capital del Lujo Mundial",
         content: "Paris no es solo la Ciudad de la Luz, es tambien la capital mundial del lujo. Sus hoteles de cinco estrellas representan el maximo exponente de la hospitalidad francesa, combinando historia centenaria con servicios modernos de clase mundial. Desde palacios del siglo XIX hasta propiedades boutique contemporaneas, hospedarse en un hotel de lujo en Paris es una experiencia que trasciende el simple alojamiento.",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "1. Ritz Paris - Place Vendome",
@@ -150,7 +150,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "2. Four Seasons Hotel George V",
         content: "A pasos de los Champs-Elysees, el Four Seasons George V es reconocido por sus espectaculares arreglos florales y tres restaurantes con estrellas Michelin. Sus suites ofrecen vistas a la Torre Eiffel y los techos de Paris. El servicio personalizado del Four Seasons establece el estandar de la hospitalidad de lujo.",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "3. Le Bristol Paris",
@@ -160,7 +160,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "4. Hotel Plaza Athenee",
         content: "Situado en la elegante Avenue Montaigne, el Plaza Athenee es iconico por sus balcones con geranios rojos. Es el hotel preferido de las estrellas de Hollywood y la alta costura. El restaurante Alain Ducasse au Plaza Athenee redefine la gastronomia francesa contemporanea. Las vistas a la Torre Eiffel desde las suites son espectaculares.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "5. Shangri-La Hotel Paris",
@@ -170,7 +170,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "6. Le Meurice",
         content: "Conocido como el hotel de los reyes, Le Meurice fue el primer hotel de lujo de Paris. Frente a los Jardines de las Tullerias, combina opulencia del siglo XVIII con arte contemporaneo. El restaurante Le Meurice Alain Ducasse ofrece una experiencia gastronomica sublime bajo frescos historicos. Salvador Dali residio aqui durante 30 anos.",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "7. Mandarin Oriental Paris",
@@ -180,7 +180,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "8. Park Hyatt Paris-Vendome",
         content: "Este hotel boutique de lujo destaca por su diseno contemporaneo minimalista, obra del arquitecto Ed Tuttle. Las suites duplex con terrazas privadas ofrecen experiencias unicas. El restaurante Pur' ofrece cocina francesa moderna, y el bar subterraneo es uno de los mas exclusivos de Paris.",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "9. Hotel de Crillon - A Rosewood Hotel",
@@ -190,7 +190,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "10. The Peninsula Paris",
         content: "El mas reciente de los palace hotels de Paris, The Peninsula ocupa un edificio Haussmanniano restaurado frente al Arco del Triunfo. Cada habitacion tiene tecnologia de punta, incluyendo tablets para controlar iluminacion y servicios. El restaurante en la azotea L'Oiseau Blanc ofrece vistas panoramicas de 360 grados con un avion de epoca como decoracion.",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos para Reservar Hoteles de Lujo en Paris",
@@ -210,7 +210,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "esim-europa-guia",
     slug: "esim-europa-guia",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=60&w=1200&auto=format&fit=crop",
     title: { es: "eSIM en Europa: Internet Ilimitado sin Roaming", en: "eSIM in Europe: Unlimited Internet without Roaming" },
     excerpt: { es: "Mejores opciones de eSIM, como activarla, precios y por que es mejor que el roaming tradicional.", en: "Best eSIM options, how to activate it, prices and why it's better than traditional roaming." },
     category: "consejos",
@@ -224,7 +224,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es una eSIM y Por Que la Necesitas",
         content: "Una eSIM (embedded SIM) es una tarjeta SIM digital integrada en tu telefono que permite conectarte a redes moviles sin necesidad de insertar una tarjeta fisica. Para viajeros latinoamericanos que visitan Europa, la eSIM representa la revolucion en conectividad: olvida los costos exorbitantes de roaming internacional y las colas en tiendas de telefonia para comprar chips locales.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Ventajas de la eSIM vs Roaming Tradicional",
@@ -274,7 +274,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "escocia-highlands",
     slug: "escocia-highlands",
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Escocia: Highlands, Castillos y Whisky en 7 Dias", en: "Scotland: Highlands, Castles and Whisky in 7 Days" },
     excerpt: { es: "Edimburgo, Loch Ness, Isle of Skye. Ruta por las tierras altas escocesas.", en: "Edinburgh, Loch Ness, Isle of Skye. Route through the Scottish Highlands." },
     category: "destinos",
@@ -288,7 +288,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Escocia: Tierra de Leyendas y Paisajes Dramaticos",
         content: "Escocia es uno de los destinos mas magicos de Europa. Desde los callejones medievales de Edimburgo hasta los paisajes salvajes de las Highlands, pasando por castillos de cuento y destilerias centenarias, este pais tiene todo para cautivar al viajero latinoamericano. La hospitalidad escocesa, combinada con tradiciones milenarias como el clan, el tartán y la gaita, crean una experiencia cultural unica.",
-        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eace?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eace?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1-2: Edimburgo, la Capital Magica",
@@ -303,7 +303,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Dia 4: Loch Lomond y Entrada a las Highlands",
         content: "Deja atras las tierras bajas y adentrate en las Highlands escocesas. Loch Lomond, el lago mas grande de Gran Bretaña, marca la puerta de entrada a paisajes cada vez mas salvajes y dramaticos. El Parque Nacional Trossachs ofrece senderos, cascadas y la posibilidad de avistar ciervos rojos.",
-        image: "https://images.unsplash.com/photo-1551918120-9739cb430c6d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551918120-9739cb430c6d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 5: Glencoe y Fort William",
@@ -348,7 +348,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "budapest-baños-termales",
     slug: "budapest-baños-termales",
-    image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Budapest: Banos Termales, Ruin Bars y el Danubio", en: "Budapest: Thermal Baths, Ruin Bars and the Danube" },
     excerpt: { es: "Szechenyi, Gellert, Parlamento y la vida nocturna en bares de ruinas. Budapest completo.", en: "Szechenyi, Gellert, Parliament and nightlife in ruin bars. Complete Budapest." },
     category: "destinos",
@@ -362,7 +362,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Budapest: La Perla del Danubio",
         content: "Budapest es una de las ciudades mas espectaculares de Europa y un destino imprescindible para viajeros latinoamericanos. La capital hungara combina la majestuosidad imperial del antiguo Imperio Austrohungaro con una vibrante escena cultural contemporanea. Dividida por el rio Danubio en dos partes - Buda (la colina historica) y Pest (la planicie dinamica) - la ciudad ofrece arquitectura impresionante, banos termales milenarios, gastronomia unica y una vida nocturna legendaria.",
-        image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Los Banos Termales: Tradicion de 2000 Anos",
@@ -377,7 +377,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Parlamento Hungaro: Joya Arquitectonica",
         content: "El Parlamento de Budapest es el tercer edificio legislativo mas grande del mundo y el icono absoluto de la ciudad. Su arquitectura neogotica con 691 habitaciones es impresionante tanto de dia como iluminado de noche. Una visita guiada te permite ver la Sagrada Corona de Hungria y los fastuosos interiores.",
-        image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=60&w=1200&auto=format&fit=crop",
         list: ["Reserva tu entrada online con anticipacion (se agotan rapido)", "Tours en espanol disponibles en horarios limitados", "La vista desde el lado de Buda al atardecer es espectacular", "El edificio tiene 40 kilos de oro en su decoracion interior"]
       },
       {
@@ -423,7 +423,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "noruega-fiordos",
     slug: "noruega-fiordos",
-    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Fiordos de Noruega: Geiranger, Trolltunga y Mas", en: "Norwegian Fjords: Geiranger, Trolltunga and More" },
     excerpt: { es: "Los paisajes mas espectaculares de Europa. Como recorrer los fiordos noruegos en 7 dias.", en: "Europe's most spectacular landscapes. How to tour the Norwegian fjords in 7 days." },
     category: "destinos",
@@ -437,7 +437,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Noruega: El Pais de los Fiordos",
         content: "Noruega ofrece algunos de los paisajes naturales mas impresionantes del planeta. Los fiordos - valles glaciares inundados por el mar - crean escenarios de dramatica belleza con paredes de roca vertical, cascadas que caen cientos de metros y aguas color esmeralda. Para viajeros latinoamericanos, Noruega representa la naturaleza europea en su maxima expresion, un contraste total con nuestros paisajes tropicales que te dejara sin aliento.",
-        image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1-2: Bergen, la Puerta de los Fiordos",
@@ -447,7 +447,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Dia 3: Flam y el Tren mas Espectacular del Mundo",
         content: "El Flamsbana (Tren de Flam) es considerado uno de los viajes en tren mas bellos del mundo. En solo 20 km desciende 866 metros atravesando 20 tuneles, pasando junto a cascadas impresionantes y paisajes de cuento. El pueblo de Flam, al final del Aurlandsfjord, es pequeno pero encantador.",
-        image: "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=60&w=1200&auto=format&fit=crop",
         list: ["Flamsbana: Reserva con anticipacion, especialmente en verano", "Cascada Kjosfossen: El tren hace parada para admirarla", "Crucero por el Aurlandsfjord: Combinable con el tren", "Stegastein: Mirador espectacular sobre el fiordo", "Undredal: Pueblo de 100 habitantes famoso por su queso de cabra"]
       },
       {
@@ -498,7 +498,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "tapas-madrid-guia",
     slug: "tapas-madrid-guia",
-    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Mejores Bares de Tapas en Madrid: Ruta Gastronomica", en: "Best Tapas Bars in Madrid: Gastronomic Route" },
     excerpt: { es: "La Latina, Malasana, Chueca. Los barrios con las mejores tapas y como hacer un 'tapeo'.", en: "La Latina, Malasana, Chueca. The neighborhoods with the best tapas and how to do a 'tapeo'." },
     category: "gastronomia",
@@ -512,7 +512,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Arte del Tapeo Madrileno",
         content: "Las tapas son mucho mas que comida: son una forma de vida espanola. En Madrid, 'ir de tapas' o 'tapear' significa recorrer varios bares, tomando una cana (cerveza pequena) o un vino en cada uno, acompanado de pequenas porciones de comida. Es una experiencia social, gastronomica y cultural que todo viajero latinoamericano debe vivir. La tradicion dice que nunca te quedas en un solo bar - el tapeo es un paseo culinario por la ciudad.",
-        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Hacer un Tapeo Como un Madrileno",
@@ -572,7 +572,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "brujas-belgica",
     slug: "brujas-belgica",
-    image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Brujas: La Ciudad Medieval de Chocolate y Canales", en: "Bruges: The Medieval City of Chocolate and Canals" },
     excerpt: { es: "Canales, chocolate, cervezas trapenses y arquitectura medieval. Brujas en un dia.", en: "Canals, chocolate, Trappist beers and medieval architecture. Bruges in one day." },
     category: "destinos",
@@ -586,7 +586,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Brujas: Un Cuento de Hadas Medieval",
         content: "Brujas (Brugge en flamenco) es una de las ciudades medievales mejor preservadas de Europa. Con sus canales serpenteantes, puentes de piedra, casas con fachadas escalonadas y torres goticas, parece sacada de un libro de cuentos. Es conocida como la 'Venecia del Norte' y fue declarada Patrimonio de la Humanidad por la UNESCO. Para viajeros latinoamericanos, Brujas ofrece una experiencia romantica e inolvidable que se puede disfrutar perfectamente en un dia.",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Markt: El Corazon de Brujas",
@@ -641,7 +641,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "dublin-pubs-guinness",
     slug: "dublin-pubs-guinness",
-    image: "https://images.unsplash.com/photo-1549918864-48ac978761a4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1549918864-48ac978761a4?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Dublin: Pubs, Guinness y Encanto Irlandes", en: "Dublin: Pubs, Guinness and Irish Charm" },
     excerpt: { es: "Temple Bar, Guinness Storehouse, Trinity College. La capital irlandesa en 3 dias.", en: "Temple Bar, Guinness Storehouse, Trinity College. The Irish capital in 3 days." },
     category: "destinos",
@@ -655,7 +655,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Dublin: Donde la Historia se Bebe en Pubs",
         content: "Dublin es una ciudad donde la literatura, la musica y la cerveza se entrelazan en cada esquina. Capital de Irlanda, esta ciudad compacta y caminable tiene una energia contagiosa, alimentada por la hospitalidad irlandesa y una cultura de pub unica en el mundo. Para viajeros latinoamericanos, Dublin ofrece una conexion especial: ambas culturas valoran la familia, la conversacion y la buena fiesta. Tres dias son perfectos para capturar su esencia.",
-        image: "https://images.unsplash.com/photo-1565791380713-1756b9a05343?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1565791380713-1756b9a05343?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1: Trinity College y el Centro Historico",
@@ -710,7 +710,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "viena-musica-clasica",
     slug: "viena-musica-clasica",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Viena Musical: Opera, Mozart y Conciertos", en: "Musical Vienna: Opera, Mozart and Concerts" },
     excerpt: { es: "Opera de Viena, conciertos en palacios, casa de Mozart. Guia para amantes de la musica clasica.", en: "Vienna Opera, palace concerts, Mozart's house. Guide for classical music lovers." },
     category: "lujo",
@@ -724,7 +724,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viena: La Capital Mundial de la Musica Clasica",
         content: "Viena no es solo una ciudad con tradicion musical: es LA ciudad de la musica clasica. Aqui vivieron, compusieron y murieron Mozart, Beethoven, Schubert, Brahms, Strauss y Mahler. Las calles resuenan con siglos de historia musical, desde los palacios imperiales hasta las salas de conciertos mas prestigiosas del mundo. Para viajeros latinoamericanos amantes de la musica, Viena es una peregrinacion obligatoria que combina arte, historia y experiencias sonoras inolvidables.",
-        image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "La Opera Estatal de Viena (Wiener Staatsoper)",
@@ -784,7 +784,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "malta-verano",
     slug: "malta-verano",
-    image: "https://images.unsplash.com/photo-1575999502951-4ab25fb1f9df?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1575999502951-4ab25fb1f9df?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Malta en Verano: Playas Secretas y Cultura Milenaria", en: "Malta in Summer: Secret Beaches and Ancient Culture" },
     excerpt: { es: "Valletta, Blue Lagoon, Gozo. El destino secreto del Mediterraneo con historia fascinante.", en: "Valletta, Blue Lagoon, Gozo. The secret Mediterranean destination with fascinating history." },
     category: "destinos",
@@ -798,7 +798,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Malta: El Secreto Mejor Guardado del Mediterraneo",
         content: "Malta es un archipielago diminuto con una historia gigante. Situada entre Sicilia y el norte de Africa, esta nacion insular ha sido codiciada por fenicios, romanos, arabes, caballeros cruzados, Napoleon y el Imperio Britanico. El resultado es una mezcla cultural fascinante: templos mas antiguos que las piramides, ciudades fortificadas, aguas cristalinas y una gastronomia que fusiona lo mejor del Mediterraneo. Para viajeros latinoamericanos, Malta ofrece sol garantizado, precios razonables y una experiencia unica.",
-        image: "https://images.unsplash.com/photo-1575999502951-4ab25fb1f9df?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1575999502951-4ab25fb1f9df?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Valletta: La Capital mas Pequena de Europa",
@@ -853,7 +853,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "museo-louvre-guia",
     slug: "museo-louvre-guia",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Museo del Louvre: Guia para No Perderte Nada", en: "Louvre Museum: Guide to Not Miss Anything" },
     excerpt: { es: "Mona Lisa, Venus de Milo y 35,000 obras. Como recorrerlo en 3 horas sin agotarte.", en: "Mona Lisa, Venus de Milo and 35,000 works. How to tour it in 3 hours without exhaustion." },
     category: "destinos",
@@ -867,7 +867,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Louvre: El Museo Mas Grande del Mundo",
         content: "El Museo del Louvre es el museo de arte mas visitado del planeta, con casi 10 millones de visitantes anuales. Alberga mas de 35,000 obras en 72,735 metros cuadrados de galerias. Verlo todo es imposible - necesitarias semanas. Por eso, esta guia te ayudara a concentrarte en las obras imprescindibles y recorrer el museo de manera estrategica, disfrutando sin agotarte. Para viajeros latinoamericanos, el Louvre es una parada obligatoria que combina arte, historia y la magia de Paris.",
-        image: "https://images.unsplash.com/photo-1565799557186-1a0a73c37d8b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1565799557186-1a0a73c37d8b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Antes de Ir: Preparacion Esencial",
@@ -922,7 +922,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "barcelona-gaudi",
     slug: "barcelona-gaudi",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Ruta Gaudi en Barcelona: Sagrada Familia, Park Guell y Mas", en: "Gaudi Route in Barcelona: Sagrada Familia, Park Guell and More" },
     excerpt: { es: "Todas las obras del arquitecto mas famoso de Espana. Entradas, horarios y consejos de visita.", en: "All the works of Spain's most famous architect. Tickets, schedules and visiting tips." },
     category: "destinos",
@@ -936,7 +936,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Antoni Gaudi: El Genio de Barcelona",
         content: "Antoni Gaudi (1852-1926) es el arquitecto mas celebre de Espana y uno de los mas originales del mundo. Su estilo unico, inspirado en formas naturales, colores vibrantes y una espiritualidad profunda, transformo Barcelona en un museo al aire libre. Siete de sus obras son Patrimonio de la Humanidad. Para viajeros latinoamericanos, la ruta Gaudi es una experiencia imprescindible que combina arte, arquitectura y la vibrante energia de Barcelona.",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "La Sagrada Familia: La Obra Maestra Inacabada",
@@ -991,7 +991,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "eurail-pass-guia",
     slug: "eurail-pass-guia",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Eurail Pass: Vale la Pena? Guia Completa 2026", en: "Eurail Pass: Is It Worth It? Complete Guide 2026" },
     excerpt: { es: "Tipos de pases, precios, como reservar asientos y en que casos conviene comprarlo.", en: "Types of passes, prices, how to reserve seats and when it's worth buying." },
     category: "dinero",
@@ -1005,7 +1005,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Eurail Pass: Tu Llave para Recorrer Europa en Tren",
         content: "El Eurail Pass es un pase de tren que permite viajes ilimitados (o por dias) en las redes ferroviarias de mas de 30 paises europeos. Para viajeros latinoamericanos que suenan con recorrer Europa, es una opcion tentadora que promete flexibilidad y aventura. Pero, vale la pena? En esta guia analizamos cuando conviene, como funciona y como aprovecharlo al maximo.",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Eurail Pass",
@@ -1065,7 +1065,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "hoteles-baratos-europa",
     slug: "hoteles-baratos-europa",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Hoteles Baratos en Europa: Trucos para Ahorrar", en: "Cheap Hotels in Europe: Tricks to Save" },
     excerpt: { es: "Como encontrar alojamiento economico sin sacrificar calidad. Booking hacks y alternativas.", en: "How to find budget accommodation without sacrificing quality. Booking hacks and alternatives." },
     category: "dinero",
@@ -1079,7 +1079,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Alojamiento en Europa: El Mayor Gasto de tu Viaje",
         content: "El alojamiento suele representar el 30-50% del presupuesto de un viaje a Europa. En ciudades como Paris, Londres o Amsterdam, una habitacion basica puede costar 150-250 EUR por noche. Pero con estrategia y conocimiento, puedes encontrar opciones excelentes por mucho menos. Esta guia te ensenara los trucos que usan los viajeros experimentados para ahorrar sin sacrificar comodidad ni seguridad.",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Booking.com: Trucos para Encontrar Mejores Precios",
@@ -1139,7 +1139,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "cambio-moneda-europa",
     slug: "cambio-moneda-europa",
-    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Cambio de Moneda en Europa: Euros, Tarjetas y ATMs", en: "Currency Exchange in Europe: Euros, Cards and ATMs" },
     excerpt: { es: "Donde cambiar dinero, que tarjetas usar y como evitar comisiones bancarias en Europa.", en: "Where to exchange money, which cards to use and how to avoid bank fees in Europe." },
     category: "dinero",
@@ -1153,7 +1153,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Dinero en Europa: Lo que Todo Viajero Debe Saber",
         content: "Manejar el dinero correctamente en Europa puede ahorrarte cientos de dolares en comisiones y malas tasas de cambio. Para viajeros latinoamericanos, entender el sistema europeo - dominado por el euro pero con algunas monedas locales - es esencial para un viaje sin sorpresas desagradables. Esta guia te ensenara a manejar tu dinero como un experto.",
-        image: "https://images.unsplash.com/photo-1554768804-50c1e2b50a6e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554768804-50c1e2b50a6e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "El Euro y Otras Monedas Europeas",
@@ -1213,7 +1213,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "mejor-epoca-europa",
     slug: "mejor-epoca-europa",
-    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Mejor Epoca para Viajar a Europa por Destino", en: "Best Time to Travel to Europe by Destination" },
     excerpt: { es: "Cuando visitar cada pais segun el clima, precios y temporadas. Evita multitudes y ahorra dinero.", en: "When to visit each country based on weather, prices and seasons. Avoid crowds and save money." },
     category: "consejos",
@@ -1227,7 +1227,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Momento Perfecto para tu Viaje a Europa",
         content: "Elegir cuando viajar a Europa puede marcar la diferencia entre un viaje inolvidable y uno frustrante. El clima, los precios, las multitudes y los eventos especiales varian drasticamente segun la epoca del ano y el destino. En Tripseuropa.com te ayudamos a planificar tu viaje en el momento ideal, considerando tus preferencias, presupuesto y los destinos que quieres visitar.",
-        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Las Temporadas en Europa: Vision General",
@@ -1306,7 +1306,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ibiza: Mas Alla de la Fiesta",
         content: "Aunque Ibiza es mundialmente famosa por su vida nocturna, la isla ofrece mucho mas. Sus calas de aguas turquesas, la ciudad antigua de Dalt Vila (Patrimonio de la Humanidad), los mercadillos hippies y la gastronomia local hacen de Ibiza un destino completo.",
-        image: "https://images.unsplash.com/photo-1593352216923-39540b0e7e6e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1593352216923-39540b0e7e6e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dalt Vila: El Corazon Historico",
@@ -1334,7 +1334,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "emigrar-espana-guia",
     slug: "emigrar-espana-guia",
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Emigrar a España: Guia Completa para Latinoamericanos", en: "Emigrate to Spain: Complete Guide for Latin Americans" },
     excerpt: { es: "Todo lo que necesitas saber para emigrar a España desde Latinoamerica: visados, trabajo, vivienda, sanidad y proceso de regularizacion.", en: "Everything you need to know to emigrate to Spain from Latin America: visas, work, housing, healthcare and regularization process." },
     category: "planificacion",
@@ -1348,7 +1348,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Emigrar a España",
         content: "España se ha convertido en uno de los destinos preferidos para latinoamericanos por el idioma compartido, la cultura cercana, el sistema de salud publico, la calidad de vida y las oportunidades de obtener la ciudadania en solo 2 anos (para ciudadanos iberoamericanos). Ademas, ofrece acceso a toda la Union Europea.",
-        image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visados para España",
@@ -1382,7 +1382,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trabajar-pueblos-espana",
     slug: "trabajar-pueblos-espana",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Trabajar en Pueblos de España: Oportunidades Rurales", en: "Working in Spanish Villages: Rural Opportunities" },
     excerpt: { es: "Descubre las oportunidades laborales en los pueblos espanoles, desde agricultura hasta teletrabajo, con menor costo de vida y mejor calidad de vida.", en: "Discover job opportunities in Spanish villages, from agriculture to remote work, with lower cost of living and better quality of life." },
     category: "planificacion",
@@ -1396,7 +1396,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La España Vaciada Busca Nuevos Habitantes",
         content: "Muchos pueblos espanoles ofrecen incentivos para atraer nuevos residentes: viviendas a precios muy bajos o gratuitas, ayudas para emprendedores, trabajo garantizado en sectores como agricultura, ganaderia o cuidado de mayores. Es una oportunidad unica para quienes buscan tranquilidad y naturaleza.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sectores con Demanda en Zonas Rurales",
@@ -1424,7 +1424,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "carta-invitacion-espana",
     slug: "carta-invitacion-espana",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Carta de Invitacion para España: Guia Completa", en: "Invitation Letter for Spain: Complete Guide" },
     excerpt: { es: "Todo sobre la carta de invitacion para viajar a España: requisitos, costos, tramite y alternativas de alojamiento.", en: "Everything about the invitation letter to travel to Spain: requirements, costs, procedures and accommodation alternatives." },
     category: "planificacion",
@@ -1438,7 +1438,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es la Carta de Invitacion",
         content: "La carta de invitacion es un documento oficial que un residente en España tramita para invitar a un extranjero a hospedarse en su domicilio. Es uno de los documentos que pueden solicitar en control migratorio, aunque no es obligatorio si presentas reserva de hotel.",
-        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando se Necesita",
@@ -1468,7 +1468,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "madrid-con-poco-dinero",
     slug: "madrid-con-poco-dinero",
-    image: "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Madrid con Poco Dinero: Guia de Viaje Economico", en: "Madrid on a Budget: Budget Travel Guide" },
     excerpt: { es: "Descubre como disfrutar de Madrid sin gastar mucho: museos gratis, tapas economicas, transporte asequible y alojamiento barato.", en: "Discover how to enjoy Madrid without spending much: free museums, cheap tapas, affordable transport and budget accommodation." },
     category: "dinero",
@@ -1482,7 +1482,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Museos Gratis en Madrid",
         content: "Madrid ofrece acceso gratuito a algunos de los mejores museos del mundo en horarios especificos. El Museo del Prado es gratis de lunes a sabado de 18:00 a 20:00 y domingos de 17:00 a 19:00. El Reina Sofia es gratis lunes, miercoles a sabado de 19:00 a 21:00.",
-        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=60&w=1200&auto=format&fit=crop",
         list: ["Museo del Prado: Gratis tardes y domingos", "Reina Sofia: Gratis varias tardes", "Museo Thyssen: Gratis lunes tarde", "Museo de America: Gratis domingos", "Templo de Debod: Siempre gratis"]
       },
       {
@@ -1511,7 +1511,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trabajos-sin-estudios-espana",
     slug: "trabajos-sin-estudios-espana",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Trabajos en España sin Estudios: Opciones Reales", en: "Jobs in Spain Without Studies: Real Options" },
     excerpt: { es: "Descubre oportunidades laborales en España que no requieren titulo universitario: hosteleria, construccion, cuidados y mas.", en: "Discover job opportunities in Spain that don't require a university degree: hospitality, construction, care work and more." },
     category: "planificacion",
@@ -1525,7 +1525,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Oportunidades Laborales Accesibles",
         content: "España ofrece multiples oportunidades laborales para personas sin titulo universitario. La clave esta en la experiencia, las habilidades practicas y la disposicion para aprender. Muchos sectores tienen alta demanda de trabajadores y ofrecen formacion en el puesto.",
-        image: "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Hosteleria y Turismo",
@@ -1558,7 +1558,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trabajar-dinamarca",
     slug: "trabajar-dinamarca",
-    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Trabajar en Dinamarca: Guia para Latinoamericanos", en: "Working in Denmark: Guide for Latin Americans" },
     excerpt: { es: "Todo sobre trabajar en Dinamarca: visados, salarios, costo de vida, cultura laboral y como encontrar empleo en uno de los paises mas felices del mundo.", en: "Everything about working in Denmark: visas, salaries, cost of living, work culture and how to find a job in one of the happiest countries in the world." },
     category: "planificacion",
@@ -1572,7 +1572,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Trabajar en Dinamarca",
         content: "Dinamarca consistentemente se clasifica entre los paises mas felices del mundo. Ofrece excelente equilibrio trabajo-vida, altos salarios, sanidad gratuita y educacion de calidad. Aunque el costo de vida es alto, los beneficios sociales lo compensan.",
-        image: "https://images.unsplash.com/photo-1586282391129-76a6df230234?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1586282391129-76a6df230234?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visa de Trabajo",
@@ -1605,7 +1605,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "paises-baratos-viajar",
     slug: "paises-baratos-viajar",
-    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Paises Mas Baratos para Viajar desde Latinoamerica", en: "Cheapest Countries to Travel from Latin America" },
     excerpt: { es: "Descubre destinos economicos donde tu dinero rinde mas: desde Europa del Este hasta Asia, estos paises ofrecen experiencias increibles a bajo costo.", en: "Discover budget destinations where your money goes further: from Eastern Europe to Asia, these countries offer incredible experiences at low cost." },
     category: "dinero",
@@ -1619,7 +1619,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Europa del Este: Precios de Otra Era",
         content: "Paises como Bulgaria, Rumania, Albania y Macedonia del Norte ofrecen la experiencia europea a una fraccion del costo occidental. Un almuerzo completo puede costar 5-8 euros, y el alojamiento es significativamente mas barato que en Europa Occidental.",
-        image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=60&w=1200&auto=format&fit=crop",
         list: ["Albania: Riviera albanesa espectacular y barata", "Bulgaria: Sofia y la costa del Mar Negro", "Rumania: Castillos y los Carpatos", "Macedonia del Norte: Lago Ohrid, patrimonio UNESCO"]
       },
       {
@@ -1647,7 +1647,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vivir-espana-vs-eeuu",
     slug: "vivir-espana-vs-eeuu",
-    image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Vivir en España vs Estados Unidos: Comparativa Real", en: "Living in Spain vs USA: Real Comparison" },
     excerpt: { es: "Analisis detallado comparando calidad de vida, costos, sanidad, trabajo y cultura entre España y Estados Unidos desde la perspectiva latinoamericana.", en: "Detailed analysis comparing quality of life, costs, healthcare, work and culture between Spain and the USA from a Latin American perspective." },
     category: "planificacion",
@@ -1661,7 +1661,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Calidad de Vida General",
         content: "España consistentemente se clasifica alto en indices de calidad de vida. Los espanoles priorizan el tiempo libre, las relaciones sociales y disfrutar de la vida sobre la acumulacion de riqueza. Estados Unidos ofrece mas oportunidades economicas pero a costa de menos tiempo libre y mayor estres laboral.",
-        image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sistema de Salud",
@@ -1711,7 +1711,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Requisitos de Entrada",
         content: "Los ciudadanos de la mayoria de paises latinoamericanos pueden entrar a España (y el espacio Schengen) sin visa para estancias turisticas de hasta 90 dias. Necesitas: pasaporte con al menos 3 meses de vigencia, boleto de regreso, seguro de viaje, comprobante de alojamiento y solvencia economica (113 euros por dia).",
-        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentacion Necesaria",
@@ -1789,7 +1789,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "ciudadania-europea-facil",
     slug: "ciudadania-europea-facil",
-    image: "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?q=60&w=1200&auto=format&fit=crop",
     title: { es: "4 Paises Mas Faciles para Obtener Ciudadania Europea", en: "4 Easiest Countries to Get European Citizenship" },
     excerpt: { es: "Descubre los paises de la UE donde es mas facil obtener la ciudadania: España, Portugal, Belgica y Paises Bajos, con tiempos y requisitos.", en: "Discover the EU countries where it's easiest to obtain citizenship: Spain, Portugal, Belgium and Netherlands, with timelines and requirements." },
     category: "planificacion",
@@ -1803,7 +1803,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ventajas de la Ciudadania Europea",
         content: "Un pasaporte de la UE te permite vivir, trabajar y estudiar en cualquiera de los 27 paises miembros sin restricciones. Acceso a sistemas de salud y educacion de primer nivel, proteccion consular en todo el mundo, y viajes sin visa a mas de 170 paises.",
-        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "España: El Camino Mas Rapido",
@@ -1835,7 +1835,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "turismo-cultural-importancia",
     slug: "turismo-cultural-importancia",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Turismo Cultural: Que es y Por Que es Importante", en: "Cultural Tourism: What It Is and Why It's Important" },
     excerpt: { es: "Descubre que es el turismo cultural, sus beneficios para viajeros y comunidades locales, y como contribuye a la preservacion del patrimonio.", en: "Discover what cultural tourism is, its benefits for travelers and local communities, and how it contributes to heritage preservation." },
     category: "consejos",
@@ -1849,7 +1849,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el Turismo Cultural",
         content: "El turismo cultural va mas alla del entretenimiento: busca promover el conocimiento y la apreciacion de las diferentes expresiones culturales de cada destino. Incluye visitar sitios historicos, museos, festivales, eventos culturales y participar en actividades que te sumerjan en la cultura local.",
-        image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Beneficios para los Viajeros",
@@ -1877,7 +1877,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "visa-estudiante-alemania",
     slug: "visa-estudiante-alemania",
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Visa de Estudiante en Alemania: Guia Completa", en: "Student Visa in Germany: Complete Guide" },
     excerpt: { es: "Todo sobre la visa de estudiante para Alemania: requisitos, proceso de solicitud, alojamiento y vida universitaria.", en: "Everything about the student visa for Germany: requirements, application process, accommodation and university life." },
     category: "planificacion",
@@ -1891,7 +1891,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Estudiar en Alemania",
         content: "Alemania ofrece educacion universitaria de alta calidad, muchas veces gratuita incluso para extranjeros. Las universidades alemanas son reconocidas mundialmente, especialmente en ingenieria, ciencias y tecnologia. Ademas, el mercado laboral aleman ofrece excelentes oportunidades tras graduarse.",
-        image: "https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Pasos para Obtener la Visa",
@@ -1924,7 +1924,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trabajar-espana-opciones",
     slug: "trabajar-espana-opciones",
-    image: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Trabajar en España: Mejores Opciones para Extranjeros", en: "Working in Spain: Best Options for Foreigners" },
     excerpt: { es: "Descubre los sectores con mayor demanda laboral en España y las mejores oportunidades para trabajadores extranjeros.", en: "Discover the sectors with highest labor demand in Spain and the best opportunities for foreign workers." },
     category: "planificacion",
@@ -1938,7 +1938,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Mercado Laboral Espanol",
         content: "España ofrece diversas oportunidades laborales para extranjeros. Aunque el desempleo es mas alto que en otros paises europeos, hay sectores con gran demanda de trabajadores. El conocimiento del espanol es una ventaja significativa para latinoamericanos.",
-        image: "https://images.unsplash.com/photo-1555529771-835f59fc5efe?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555529771-835f59fc5efe?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sector Turistico",
@@ -1971,7 +1971,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "viaje-londres-guia",
     slug: "viaje-londres-guia",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Viaje a Londres: Guia Completa para Tu Primera Visita", en: "Trip to London: Complete Guide for Your First Visit" },
     excerpt: { es: "Todo lo que necesitas saber para tu primer viaje a Londres: barrios, atracciones, transporte, comida y consejos practicos.", en: "Everything you need to know for your first trip to London: neighborhoods, attractions, transport, food and practical tips." },
     category: "destinos",
@@ -1985,7 +1985,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Como Llegar a Londres",
         content: "Londres es muy accesible con seis aeropuertos. Heathrow es el principal para vuelos internacionales. El metro (Tube) conecta la mayoria de aeropuertos con el centro. El Heathrow Express llega a Paddington en 15 minutos. Gatwick Express conecta con Victoria Station.",
-        image: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Barrios para Explorar",
@@ -1995,7 +1995,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Imperdibles en Westminster",
         content: "Westminster es el corazon politico e historico de Londres. El Palacio de Westminster (Parlamento) y el Big Ben son iconicos. La Abadia de Westminster ha visto coronaciones durante mil anos. El Palacio de Buckingham ofrece el cambio de guardia. St. James's Park es perfecto para un paseo.",
-        image: "https://images.unsplash.com/photo-1529180184525-78f99adb8e98?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529180184525-78f99adb8e98?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Borough Market: Paraiso Gastronomico",
@@ -2023,7 +2023,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "seguro-viaje-beneficios",
     slug: "seguro-viaje-beneficios",
-    image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=60&w=1200&auto=format&fit=crop",
     title: { es: "10 Beneficios del Seguro Internacional de Viaje", en: "10 Benefits of International Travel Insurance" },
     excerpt: { es: "Descubre por que el seguro de viaje es indispensable: cobertura medica, repatriacion, equipaje y mucho mas para viajar tranquilo.", en: "Discover why travel insurance is essential: medical coverage, repatriation, luggage and much more to travel with peace of mind." },
     category: "consejos",
@@ -2037,7 +2037,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que es Esencial el Seguro de Viaje",
         content: "Un seguro internacional de viaje es una herramienta indispensable para protegerte ante cualquier imprevisto. No es solo un requisito para entrar al espacio Schengen, sino una inversion en tu tranquilidad y seguridad durante el viaje.",
-        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Los 10 Beneficios Principales",
@@ -2070,7 +2070,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "comparacion-vuelos-tenerife",
     title: { es: "Comparacion de Vuelos a Tenerife: Guia Completa Para Latinoamericanos", en: "Flight Comparison to Tenerife: Complete Guide for Latin Americans" },
     excerpt: { es: "Descubre las mejores opciones de vuelos desde Latinoamerica a Tenerife. Analizamos rutas, escalas y consejos para encontrar la mejor conexion a las Islas Canarias.", en: "Discover the best flight options from Latin America to Tenerife. We analyze routes, layovers and tips to find the best connection to the Canary Islands." },
-    image: "https://images.unsplash.com/photo-1574182245530-967d9b3831af?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1574182245530-967d9b3831af?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "02 Ene 2026",
@@ -2082,7 +2082,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Elegir Tenerife Como Destino",
         content: "Tenerife es la joya de las Islas Canarias y uno de los destinos mas atractivos de España para viajeros latinoamericanos. Con clima primaveral todo el ano, playas espectaculares, el impresionante Teide (el pico mas alto de España) y una vibrante cultura, esta isla ofrece una experiencia unica que combina naturaleza, aventura y relajacion.",
-        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Rutas Desde Latinoamerica",
@@ -2092,7 +2092,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Consejos Para Encontrar Mejores Conexiones",
         content: "Para optimizar tu viaje a Tenerife, considera reservar con anticipacion de 2-3 meses, ser flexible con las fechas de viaje, y buscar vuelos que lleguen a Madrid por la manana para conectar el mismo dia. Los martes y miercoles suelen tener menor demanda y mejores opciones.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Esperar en Tenerife",
@@ -2111,7 +2111,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "mejores-boletos-aereos",
     title: { es: "Como Conseguir Los Mejores Boletos Aereos: Guia Definitiva", en: "How to Get the Best Flight Tickets: Definitive Guide" },
     excerpt: { es: "Aprende las estrategias y trucos de expertos para encontrar boletos aereos al mejor precio. Desde el timing perfecto hasta herramientas de busqueda avanzadas.", en: "Learn expert strategies and tricks to find flight tickets at the best price. From perfect timing to advanced search tools." },
-    image: "https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2025-01-02",
@@ -2123,7 +2123,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Momento Perfecto Para Reservar",
         content: "Uno de los factores mas importantes para conseguir buenos precios es el timing. Estudios muestran que reservar entre 6-8 semanas antes para vuelos domesticos y 2-3 meses antes para vuelos internacionales suele ofrecer los mejores precios. Sin embargo, esto varia segun la temporada y el destino.",
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias y Horarios Estrategicos",
@@ -2133,7 +2133,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Herramientas de Busqueda Efectivas",
         content: "Utiliza multiples plataformas de busqueda para comparar. Los metabuscadores te permiten ver opciones de varias aerolineas simultaneamente. Tambien activa alertas de precios para recibir notificaciones cuando los boletos bajen a tu rango deseado.",
-        image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Programas de Fidelidad",
@@ -2168,7 +2168,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ventajas de Una Agencia Especializada",
         content: "Contratar una agencia de viajes especializada en destinos europeos ofrece ventajas invaluables: conocimiento experto del destino, acceso a ofertas exclusivas, asistencia 24/7 durante tu viaje, y la tranquilidad de tener todo organizado profesionalmente.",
-        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Buscar en Una Agencia de Viajes",
@@ -2178,7 +2178,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Experiencia Trips Europa",
         content: "En Trips Europa nos especializamos en crear experiencias de viaje memorables para latinoamericanos que desean explorar Europa. Entendemos las necesidades especificas de nuestros viajeros, desde requisitos de documentacion hasta preferencias culturales y gastronomicas.",
-        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Servicios Personalizados",
@@ -2209,7 +2209,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Principales Aeropuertos de Entrada",
         content: "Republica Dominicana cuenta con varios aeropuertos internacionales. El Aeropuerto de Punta Cana (PUJ) es el mas popular para turismo de playa. El Aeropuerto Las Americas (SDQ) en Santo Domingo es ideal para explorar la capital y la historia colonial. Puerto Plata (POP) sirve a la costa norte.",
-        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Rutas Desde Principales Ciudades",
@@ -2219,7 +2219,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Mejor Epoca Para Viajar",
         content: "La temporada alta va de diciembre a abril con clima seco y temperaturas perfectas. La temporada de huracanes (junio-noviembre) tiene precios mas bajos pero mayor riesgo de lluvias. Mayo y noviembre son meses de transicion con buen equilibrio entre clima y precios.",
-        image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos de Reserva",
@@ -2238,7 +2238,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-turquia-desde-latinoamerica",
     title: { es: "Vuelos a Turquia Desde Latinoamerica: Guia Completa de Conexiones", en: "Flights to Turkey from Latin America: Complete Connection Guide" },
     excerpt: { es: "Todo lo que necesitas saber para planificar tu viaje a Turquia. Rutas, escalas, tiempos de vuelo y consejos para una experiencia de viaje optima.", en: "Everything you need to know to plan your trip to Turkey. Routes, layovers, flight times and tips for an optimal travel experience." },
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-30",
@@ -2250,7 +2250,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Turquia Es Un Destino Imperdible",
         content: "Turquia ofrece una fusion unica entre Oriente y Occidente. Desde la majestuosa Estambul con sus mezquitas y bazares, hasta las formaciones lunares de Capadocia, las ruinas antiguas de Efeso, y las paradisiacas costas del Mediterraneo. Es un destino que cautiva a todo tipo de viajero.",
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Rutas de Vuelo",
@@ -2260,7 +2260,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Aeropuerto de Estambul (IST)",
         content: "El nuevo Aeropuerto de Estambul es uno de los mas modernos y grandes del mundo. Cuenta con excelentes conexiones al centro de la ciudad, areas de descanso, y servicios de primera clase. Las conexiones dentro del aeropuerto son eficientes incluso con tiempos de escala cortos.",
-        image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos de Entrada",
@@ -2295,12 +2295,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Madrid: El Corazon de España",
         content: "La capital espanola combina historia, arte de primer nivel y una vida nocturna vibrante. El Museo del Prado, el Palacio Real, el Parque del Retiro y los barrios tradicionales como La Latina y Malasana ofrecen experiencias para todos los gustos. La conexion cultural con Latinoamerica es palpable en cada rincon.",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Barcelona: Modernismo y Mediterraneo",
         content: "La capital catalana seduce con la arquitectura de Gaudi, playas urbanas, y una escena gastronomica de vanguardia. La Sagrada Familia, el Parque Guell, Las Ramblas y el barrio Gotico son imperdibles. La combinacion de mar, montana y cultura la hacen irresistible.",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sevilla: El Alma de Andalucia",
@@ -2324,7 +2324,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "que-visitar-madrid-lugares-imprescindibles",
     title: { es: "Que Visitar en Madrid: Los 7 Lugares Imprescindibles", en: "What to Visit in Madrid: The 7 Must-See Places" },
     excerpt: { es: "Guia esencial de los lugares que no puedes perderte en la capital espanola. Arte, historia, parques y experiencias que definen la esencia de Madrid.", en: "Essential guide to the places you can't miss in the Spanish capital. Art, history, parks and experiences that define the essence of Madrid." },
-    image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-28",
@@ -2336,7 +2336,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "1. Museo del Prado",
         content: "Una de las pinacotecas mas importantes del mundo. Alberga obras maestras de Velazquez, Goya, El Greco, y artistas flamingos e italianos. La coleccion de Las Meninas de Velazquez y las pinturas negras de Goya son imperdibles. Dedica minimo medio dia para explorarlo.",
-        image: "https://images.unsplash.com/photo-1566287935920-6074884b6e6e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566287935920-6074884b6e6e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "2. Palacio Real y Catedral de la Almudena",
@@ -2345,7 +2345,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "3. Parque del Retiro",
         content: "El pulmon verde de Madrid y antiguo jardin real. El Estanque Grande con sus barcas, el Palacio de Cristal, y la Rosaleda son sus joyas. Perfecto para pasear, hacer picnic o simplemente observar la vida madrilena. No te pierdas el Bosque del Recuerdo.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "4. Puerta del Sol y Plaza Mayor",
@@ -2388,7 +2388,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Preparacion Antes del Vuelo",
         content: "Un vuelo de mas de 12 horas requiere preparacion. Dias antes, ajusta gradualmente tu horario de sueno hacia el huso horario de destino. Hidrátate bien y evita alcohol 24 horas antes. Lleva ropa comoda y en capas para adaptarte a los cambios de temperatura de la cabina.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Kit de Supervivencia Para el Vuelo",
@@ -2398,7 +2398,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Durante el Vuelo",
         content: "Muevete regularmente para evitar problemas circulatorios. Camina por el pasillo cada 2-3 horas y haz ejercicios de estiramiento en tu asiento. Bebe mucha agua y evita el alcohol y la cafeina en exceso. Intenta dormir siguiendo el horario de tu destino.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540339832862-474599807836?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Aprovechando las Escalas",
@@ -2421,7 +2421,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "laser-airlines-proxima-aventura",
     title: { es: "Laser Airlines: Tu Opcion Para Conectar Con el Caribe", en: "Laser Airlines: Your Option to Connect With the Caribbean" },
     excerpt: { es: "Conoce los servicios y destinos de Laser Airlines, una aerolinea que conecta el Caribe y America del Sur con opciones accesibles y buen servicio.", en: "Learn about Laser Airlines services and destinations, an airline connecting the Caribbean and South America with accessible options and good service." },
-    image: "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-26",
@@ -2433,7 +2433,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Historia y Trayectoria",
         content: "Laser Airlines es una aerolinea con base en Venezuela que ha expandido sus operaciones para conectar varios puntos del Caribe y America del Sur. Con flota moderna y enfoque en servicio al cliente, se ha posicionado como una alternativa solida para viajeros de la region.",
-        image: "https://images.unsplash.com/photo-1544016768-982d1554f0b9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544016768-982d1554f0b9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Red de Destinos",
@@ -2443,7 +2443,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Servicios a Bordo",
         content: "Laser Airlines ofrece diferentes clases de servicio con opciones de equipaje, comidas a bordo y seleccion de asientos. Su programa de viajero frecuente permite acumular beneficios para pasajeros regulares.",
-        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Volar con Laser",
@@ -2461,7 +2461,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "vuelos-cucuta-conexiones",
     title: { es: "Vuelos a Cucuta: Conexiones y Consejos de Viaje", en: "Flights to Cucuta: Connections and Travel Tips" },
     excerpt: { es: "Guia practica para planificar vuelos a Cucuta, ciudad fronteriza clave entre Colombia y Venezuela, con consejos de conexion y logistica de viaje.", en: "Practical guide to planning flights to Cucuta, a key border city between Colombia and Venezuela, with connection and travel logistics tips." },
-    image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-25",
@@ -2473,7 +2473,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Aeropuerto Internacional Camilo Daza",
         content: "El aeropuerto de Cucuta (CUC) es la puerta de entrada a esta importante ciudad del nororiente colombiano. Ubicado a 10 minutos del centro, recibe vuelos domesticos principalmente y algunas rutas internacionales.",
-        image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Conexiones Aereas",
@@ -2483,7 +2483,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Importancia Estrategica",
         content: "Cucuta es una ciudad clave por su ubicacion fronteriza. Para quienes necesitan cruzar entre Colombia y Venezuela, representa un punto logistico importante. La ciudad tiene infraestructura turistica basica y es punto de partida para explorar el norte de Santander.",
-        image: "https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos de Viaje",
@@ -2513,12 +2513,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Paris: La Ciudad del Amor",
         content: "Paris no necesita presentacion cuando se trata de romance. Paseos por el Sena al atardecer, cenas intimas en bistros con velas, y la Torre Eiffel iluminada crean el escenario perfecto para recien casados. El barrio de Montmartre ofrece encanto bohemio mientras los Campos Eliseos deslumbran con glamour.",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Santorini, Grecia",
         content: "La joya del Egeo con sus casitas blancas y cupulas azules sobre acantilados volcanicos. Los atardeceres de Oia son legendarios. Combina relax en infinity pools con vistas al mar, cenas romanticas con cocina griega, y excursiones en barco a islas vecinas.",
-        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Costa Amalfitana, Italia",
@@ -2527,7 +2527,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Venecia, Italia",
         content: "La ciudad flotante es sinonimo de romance. Paseos en gondola por canales serenos, plazas historicas, y la belleza decadente de palacios reflejados en el agua. San Marco al atardecer y perderse en callejuelas es pura magia.",
-        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Planificar",
@@ -2547,7 +2547,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "turismo-religioso-europa",
     title: { es: "Turismo Religioso en Europa: Santuarios y Rutas de Fe", en: "Religious Tourism in Europe: Sanctuaries and Faith Routes" },
     excerpt: { es: "Explora los destinos de peregrinacion y turismo religioso mas importantes de Europa. Desde el Vaticano hasta Santiago de Compostela, vive experiencias espirituales.", en: "Explore the most important pilgrimage and religious tourism destinations in Europe. From the Vatican to Santiago de Compostela, live spiritual experiences." },
-    image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=60&w=1200&auto=format&fit=crop",
     category: "experiencias",
     categoryLabel: { es: "Experiencias", en: "Experiences" },
     date: "2024-12-23",
@@ -2559,12 +2559,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ciudad del Vaticano",
         content: "El corazon del catolicismo mundial. La Basilica de San Pedro, la Capilla Sixtina con los frescos de Miguel Angel, y la posibilidad de asistir a audiencias papales hacen del Vaticano un destino imperdible para cualquier peregrino. Los Museos Vaticanos albergan tesoros artisticos de valor incalculable.",
-        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Santiago de Compostela, España",
         content: "Meta final del legendario Camino de Santiago. Miles de peregrinos llegan cada ano a la catedral donde se venera al Apostol Santiago. El casco historico es Patrimonio de la Humanidad. Aunque no hagas el camino completo, puedes caminar los ultimos kilometros para vivir la experiencia.",
-        image: "https://images.unsplash.com/photo-1551375703-93c1a30f5a45?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551375703-93c1a30f5a45?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Lourdes, Francia",
@@ -2573,7 +2573,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Fatima, Portugal",
         content: "El santuario portugues donde la Virgen Maria se aparecio a tres pastorcitos en 1917. El 13 de mayo y octubre se celebran las principales festividades con cientos de miles de peregrinos. La Basilica de la Santisima Trinidad es una de las mas grandes del mundo.",
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Otros Destinos de Fe",
@@ -2593,7 +2593,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "turismo-italia-cultura-historia",
     title: { es: "Turismo en Italia: Experimenta Su Rica Cultura e Historia", en: "Tourism in Italy: Experience Its Rich Culture and History" },
     excerpt: { es: "Italia es un museo al aire libre. Descubre como sumergirte en milenios de historia, arte incomparable, y una cultura que ha influenciado al mundo entero.", en: "Italy is an open-air museum. Discover how to immerse yourself in millennia of history, incomparable art, and a culture that has influenced the entire world." },
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-22",
@@ -2605,12 +2605,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Roma: La Ciudad Eterna",
         content: "Ningun viaje a Italia esta completo sin Roma. El Coliseo, el Foro Romano, el Panteon, y la Fontana di Trevi son iconos mundiales. Cada callejuela revela siglos de historia. El Vaticano ofrece arte y espiritualidad, mientras Trastevere invita a disfrutar la dolce vita romana.",
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Florencia: Cuna del Renacimiento",
         content: "La capital toscana es una obra de arte en si misma. La Galleria degli Uffizi alberga obras de Botticelli, Leonardo y Rafael. El Duomo con su cupula de Brunelleschi domina el horizonte. El Ponte Vecchio y los palacios Pitti y Vecchio completan la experiencia renacentista.",
-        image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b6?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Venecia: La Serenissima",
@@ -2624,7 +2624,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Gastronomia Como Experiencia Cultural",
         content: "La comida italiana es patrimonio de la humanidad. Cada region tiene sus especialidades: pasta fresca, pizzas napolitanas, risottos milaneses, gelato artesanal. Participa en clases de cocina, visita mercados locales, y descubre que comer en Italia es un acto cultural en si mismo.",
-        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -2639,7 +2639,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "hoteles-madrid-guia-zonas",
     title: { es: "Hoteles en Madrid: Guia de Zonas y Tipos de Alojamiento", en: "Hotels in Madrid: Guide to Areas and Types of Accommodation" },
     excerpt: { es: "Encuentra el alojamiento perfecto en Madrid segun tus preferencias y presupuesto. Analizamos las mejores zonas para hospedarse y tipos de hoteles disponibles.", en: "Find the perfect accommodation in Madrid according to your preferences and budget. We analyze the best areas to stay and types of hotels available." },
-    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-21",
@@ -2651,7 +2651,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Centro Historico: Sol, Opera y La Latina",
         content: "La zona mas central y con mayor oferta turistica. Estas cerca de todo: Palacio Real, Puerta del Sol, Plaza Mayor. Ideal para quienes quieren caminar a las atracciones principales. Variedad de precios desde hostales hasta hoteles boutique. Vida nocturna activa que puede ser ruidoso para algunos.",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Salamanca: Elegancia y Shopping",
@@ -2660,7 +2660,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Chueca y Malasana: Bohemio y Alternativo",
         content: "Barrios con personalidad propia. Chueca es el corazon LGBTQ+ de Madrid con terrazas y ambiente vibrante. Malasana atrae a jovenes y creativos con tiendas vintage y cafes con encanto. Buenos precios y excelente vida nocturna y gastronomica.",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Chamberi y Arguelles: Residencial Autentico",
@@ -2686,7 +2686,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "consulado-espana-tramites",
     title: { es: "Consulado de España: Guia de Tramites Para Latinoamericanos", en: "Spanish Consulate: Procedures Guide for Latin Americans" },
     excerpt: { es: "Todo sobre los servicios consulares espanoles en Latinoamerica. Visas, documentacion, citas y tramites esenciales para tu viaje o migracion a España.", en: "Everything about Spanish consular services in Latin America. Visas, documentation, appointments and essential procedures for your trip or migration to Spain." },
-    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-20",
@@ -2698,7 +2698,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ubicacion de Consulados en Latinoamerica",
         content: "España tiene representacion consular en las principales ciudades latinoamericanas. Ademas de las embajadas en capitales, hay consulados en ciudades importantes. Verifica cual corresponde a tu jurisdiccion segun tu lugar de residencia.",
-        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a65?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a65?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Servicios Consulares",
@@ -2708,7 +2708,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Como Solicitar Cita Consular",
         content: "La mayoria de consulados requieren cita previa obligatoria. El proceso generalmente es online a traves del sistema de citas del Ministerio de Asuntos Exteriores. Prepara todos los documentos requeridos antes de la cita. Las citas pueden tener espera de semanas o meses segun la demanda.",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentos Frecuentemente Requeridos",
@@ -2743,7 +2743,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Elegir Alemania Para Estudiar",
         content: "Alemania ofrece educacion universitaria de clase mundial, muchas veces sin costo de matricula en universidades publicas. Con una economia fuerte, oportunidades de trabajo post-estudio, y ubicacion central en Europa, es un destino ideal para estudiantes internacionales ambiciosos.",
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos Academicos",
@@ -2753,7 +2753,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Costo de Vida y Financiamiento",
         content: "Aunque muchas universidades publicas no cobran matricula, necesitas demostrar fondos suficientes para manutención. El DAAD ofrece becas para latinoamericanos. Tambien hay programas de becas de gobiernos locales y fundaciones.",
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Proceso de Visa de Estudiante",
@@ -2776,7 +2776,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "etias-sistema-autorizacion-viaje",
     title: { es: "ETIAS: Todo Sobre el Nuevo Sistema de Autorizacion de Viaje a Europa", en: "ETIAS: Everything About the New Travel Authorization System to Europe" },
     excerpt: { es: "Conoce el sistema ETIAS que sera obligatorio para viajar a Europa. Que es, cuando entra en vigor, como solicitarlo y que significa para viajeros latinoamericanos.", en: "Learn about the ETIAS system that will be mandatory to travel to Europe. What it is, when it takes effect, how to apply and what it means for Latin American travelers." },
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-18",
@@ -2788,7 +2788,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es ETIAS",
         content: "ETIAS (European Travel Information and Authorisation System) es un sistema electronico de autorizacion de viaje similar al ESTA estadounidense. Sera obligatorio para ciudadanos de paises que actualmente no necesitan visa para entrar al espacio Schengen, incluyendo la mayoria de latinoamericanos.",
-        image: "https://images.unsplash.com/photo-1551527916-7a00f08ced70?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551527916-7a00f08ced70?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Quien Necesita ETIAS",
@@ -2798,7 +2798,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Como Funciona el Proceso",
         content: "La solicitud sera completamente online. Deberas proporcionar datos personales, informacion del pasaporte, historial de viajes previos, y responder preguntas de seguridad. La autorizacion sera procesada en minutos en la mayoria de casos, aunque algunos requeriran revision adicional.",
-        image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Validez y Costo",
@@ -2821,7 +2821,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "requisitos-entrar-espana",
     title: { es: "Requisitos Para Entrar a España Desde Latinoamerica", en: "Requirements to Enter Spain from Latin America" },
     excerpt: { es: "Guia actualizada de todos los requisitos de entrada a España para ciudadanos latinoamericanos. Documentacion, seguro, dinero y controles migratorios.", en: "Updated guide to all entry requirements to Spain for Latin American citizens. Documentation, insurance, money and immigration controls." },
-    image: "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-17",
@@ -2833,7 +2833,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentacion Basica Requerida",
         content: "Para entrar a España como turista, los ciudadanos de Colombia, Mexico, Argentina, Chile, Brasil, Peru, Costa Rica, Panama y otros paises latinoamericanos necesitan pasaporte vigente con al menos 3 meses de validez posterior a la fecha de salida prevista. Exencion de visa permite estancia de hasta 90 dias en cualquier periodo de 180 dias.",
-        image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Seguro de Viaje Obligatorio",
@@ -2843,7 +2843,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Justificacion Economica",
         content: "Debes poder demostrar medios economicos suficientes para tu estancia. Esto puede incluir efectivo, tarjetas de credito, extractos bancarios recientes, o carta de invitacion (si te hospedaras con familiares/amigos). Los montos referenciales varian y es recomendable verificar los requisitos actuales.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Reservas y Boleto de Regreso",
@@ -2866,7 +2866,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "nie-espana-como-conseguirlo",
     title: { es: "Que es el NIE en España y Como Conseguirlo", en: "What is NIE in Spain and How to Get It" },
     excerpt: { es: "El Numero de Identidad de Extranjero es esencial para vivir en España. Aprende que es, cuando lo necesitas, y el proceso paso a paso para obtenerlo.", en: "The Foreigner Identity Number is essential to live in Spain. Learn what it is, when you need it, and the step-by-step process to obtain it." },
-    image: "https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-16",
@@ -2878,7 +2878,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el NIE",
         content: "El NIE (Numero de Identidad de Extranjero) es un numero de identificacion fiscal asignado a extranjeros en España. Es necesario para casi cualquier tramite oficial: abrir cuenta bancaria, firmar contratos, comprar propiedad, trabajar legalmente, y pagar impuestos.",
-        image: "https://images.unsplash.com/photo-1523287562758-66c7fc58967f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523287562758-66c7fc58967f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando Necesitas un NIE",
@@ -2888,7 +2888,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Tipos de NIE",
         content: "Hay dos formas principales de obtener NIE: NIE blanco (solo el numero, para tramites puntuales sin residencia) y NIE verde o TIE (Tarjeta de Identidad de Extranjero, para residentes). El proceso y requisitos difieren segun el tipo.",
-        image: "https://images.unsplash.com/photo-1544016768-982d1554f0b8?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544016768-982d1554f0b8?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Proceso de Solicitud",
@@ -2923,7 +2923,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es la Ley de Nietos",
         content: "La Ley de Memoria Democratica (popularmente conocida como Ley de Nietos) permite a descendientes de espanoles que perdieron o renunciaron a su nacionalidad por razones politicas (exilio, Guerra Civil, dictadura) solicitar la nacionalidad espanola. Es una oportunidad historica para muchos latinoamericanos.",
-        image: "https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Quien Puede Solicitar",
@@ -2933,7 +2933,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentacion Requerida",
         content: "El proceso requiere documentar la linea de descendencia. Necesitaras: certificados de nacimiento de toda la linea (tu, tus padres, abuelos), certificados de matrimonio, documentos que prueben la nacionalidad espanola del ascendiente, y en algunos casos, documentos que prueben el exilio.",
-        image: "https://images.unsplash.com/photo-1568057373406-2e9ef5ea2bbb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1568057373406-2e9ef5ea2bbb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "El Proceso de Solicitud",
@@ -2968,7 +2968,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Pasaporte Vencido y Tramites de Nacionalidad",
         content: "La pregunta es frecuente: Puedo tramitar la nacionalidad espanola si mi pasaporte esta vencido? La respuesta depende del tramite especifico. Para la solicitud inicial de nacionalidad, un pasaporte vencido generalmente puede usarse como documento de identidad, aunque se recomienda tenerlo vigente.",
-        image: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Situaciones Donde el Pasaporte Vencido es Aceptado",
@@ -2978,7 +2978,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Cuando Necesitas Pasaporte Vigente",
         content: "Necesitaras pasaporte vigente para: viajar internacionalmente, completar el proceso de juramento de nacionalidad espanola (aunque hay excepciones), tramites que requieren identificacion oficial vigente.",
-        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Opciones Si Tu Pasaporte Esta Vencido",
@@ -3001,7 +3001,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "pasaporte-europeo-requisitos",
     title: { es: "Pasaporte Europeo: Requisitos y Procesos Para Obtenerlo", en: "European Passport: Requirements and Processes to Obtain It" },
     excerpt: { es: "Guia completa sobre como obtener un pasaporte europeo. Vias de acceso a la ciudadania europea y los beneficios que conlleva.", en: "Complete guide on how to obtain a European passport. Paths to European citizenship and the benefits it entails." },
-    image: "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-13",
@@ -3013,7 +3013,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Beneficios del Pasaporte Europeo",
         content: "Un pasaporte de cualquier pais de la Union Europea otorga libertad de movimiento sin precedentes. Puedes vivir, trabajar y estudiar en cualquier pais de la UE sin necesidad de visa. Acceso a sistemas de salud y educacion europeos. Y entrada sin visa a la gran mayoria de paises del mundo.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vias Para Obtener Ciudadania Europea",
@@ -3023,7 +3023,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Paises Con Programas de Descendencia",
         content: "Varios paises europeos facilitan la ciudadania por descendencia. Italia permite recuperar ciudadania por linea paterna sin limite generacional. España tiene la Ley de Nietos. Portugal ofrece opciones para descendientes de sefardies. Irlanda permite ciudadania si tienes abuelo irlandes.",
-        image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "El Proceso General",
@@ -3046,7 +3046,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "embajada-latinoamerica-espana",
     title: { es: "Embajadas de Latinoamerica en España: Servicios y Contacto", en: "Latin American Embassies in Spain: Services and Contact" },
     excerpt: { es: "Informacion util sobre las embajadas latinoamericanas en España. Servicios consulares, direcciones y como pueden ayudarte durante tu estancia.", en: "Useful information about Latin American embassies in Spain. Consular services, addresses and how they can help you during your stay." },
-    image: "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-12",
@@ -3058,7 +3058,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Servicios Que Ofrecen Las Embajadas",
         content: "Las embajadas y consulados latinoamericanos en España ofrecen servicios esenciales para sus ciudadanos: renovacion de pasaportes, legalizacion de documentos, asistencia en emergencias, registro consular, y apoyo en situaciones legales. Son tu conexion oficial con tu pais de origen.",
-        image: "https://images.unsplash.com/photo-1551527916-7a00f08ced71?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551527916-7a00f08ced71?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Embajadas en Madrid",
@@ -3068,7 +3068,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Consulados en Otras Ciudades",
         content: "Ademas de Madrid, varias ciudades espanolas tienen consulados latinoamericanos. Barcelona, Sevilla, Valencia y Bilbao suelen tener representacion de los paises con mayor comunidad de emigrantes. Verifica en la web de tu embajada cual consulado te corresponde.",
-        image: "https://images.unsplash.com/photo-1556740758-90de374c12ae?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556740758-90de374c12ae?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Solicitar Servicios",
@@ -3091,7 +3091,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "carta-autorizacion-menores-viaje",
     title: { es: "Carta de Autorizacion Para Viaje de Menores: Guia Completa", en: "Authorization Letter for Minor Travel: Complete Guide" },
     excerpt: { es: "Todo lo que necesitas saber sobre permisos de viaje para ninos. Cuando es necesario, como redactarla, y requisitos legales para viajes internacionales.", en: "Everything you need to know about travel permits for children. When it's necessary, how to write it, and legal requirements for international travel." },
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=60&w=1200&auto=format&fit=crop",
     category: "migracion",
     categoryLabel: { es: "Migracion", en: "Migration" },
     date: "2024-12-11",
@@ -3103,7 +3103,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Cuando Se Necesita Autorizacion",
         content: "La carta de autorizacion es requerida cuando un menor viaja sin uno o ambos padres. Esto incluye: viajes con solo un padre, viajes con abuelos u otros familiares, viajes con grupos escolares o deportivos, y menores viajando solos (cuando la aerolinea lo permite por edad).",
-        image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Contenido de la Carta de Autorizacion",
@@ -3113,7 +3113,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Requisitos Por Pais de Origen",
         content: "Cada pais tiene sus propias reglas. En general, la carta debe ser notarizada en tu pais de origen. Algunos paises requieren apostilla para validez internacional. Verifica los requisitos especificos de tu pais y del pais de destino.",
-        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5fg?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5fg?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Menores Viajando Solos",
@@ -3148,7 +3148,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Estudiar en España",
         content: "España ofrece educacion universitaria de alta calidad en tu mismo idioma. Universidades reconocidas mundialmente, costos mas accesibles que otros paises europeos, y una cultura familiar para latinoamericanos hacen de España un destino ideal para estudiar.",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Estudios Disponibles",
@@ -3158,7 +3158,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Proceso de Admision",
         content: "Para pregrado, necesitas homologar tu titulo de secundaria. Para posgrado, el proceso varia por universidad. Generalmente incluye: solicitud online, documentos academicos, carta de motivacion, y en algunos casos, entrevista o examen de admision.",
-        image: "https://images.unsplash.com/photo-1548013146-72479768badh?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1548013146-72479768badh?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Visa de Estudiante",
@@ -3197,7 +3197,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Quien Necesita Visa Para España",
         content: "Ciudadanos de la mayoria de paises latinoamericanos (Colombia, Mexico, Argentina, Chile, Brasil, Peru, etc.) NO necesitan visa para estancias turisticas de hasta 90 dias. Sin embargo, para estancias mas largas o propositos especificos (trabajo, estudio, residencia), SI se requiere visado.",
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b6?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Visados Espanoles",
@@ -3207,7 +3207,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Proceso de Solicitud",
         content: "Todas las visas se solicitan en el Consulado de España de tu pais de residencia. El proceso general incluye: cita previa online, formulario de solicitud completo, documentacion especifica segun tipo de visa, pago de tasas, y entrevista consular.",
-        image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543429258-0f2a0d4c13b7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentacion Comun Para Visas",
@@ -3232,7 +3232,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "jet-lag-como-superarlo",
     title: { es: "Jet Lag: Como Superar el Desfase Horario en Viajes a Europa", en: "Jet Lag: How to Overcome Time Zone Changes on European Trips" },
     excerpt: { es: "Guia practica para combatir el jet lag en vuelos transatlanticos. Consejos antes, durante y despues del viaje para adaptarte rapidamente.", en: "Practical guide to combat jet lag on transatlantic flights. Tips before, during and after the trip to adapt quickly." },
-    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=60&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-08",
@@ -3244,7 +3244,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el Jet Lag",
         content: "El jet lag ocurre cuando tu reloj biologico interno no coincide con el horario local de tu destino. Viajar hacia el este (como de Latinoamerica a Europa) suele ser mas dificil porque 'pierdes' horas. Los sintomas incluyen fatiga, insomnio, dificultad de concentracion, y malestar digestivo.",
-        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Preparacion Antes del Viaje",
@@ -3254,7 +3254,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Durante el Vuelo",
         content: "El vuelo es clave para tu adaptacion. Ajusta tu reloj al horario de destino al abordar. Duerme segun el horario de llegada (si llegas de manana, intenta dormir en el avion). Hidrátate mucho y evita alcohol y cafeina en exceso. Muevete periodicamente por el avion.",
-        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a66?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1577415124269-fc1140815a66?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Al Llegar a Europa",
@@ -3277,7 +3277,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "turismo-madrid-guia-completa",
     title: { es: "Turismo en Madrid: Guia Completa Para Viajeros Latinoamericanos", en: "Tourism in Madrid: Complete Guide for Latin American Travelers" },
     excerpt: { es: "Todo lo que necesitas saber para disfrutar Madrid al maximo. Desde el transporte hasta la gastronomia, una guia pensada para latinoamericanos.", en: "Everything you need to know to enjoy Madrid to the fullest. From transportation to gastronomy, a guide designed for Latin Americans." },
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=60&w=1200&auto=format&fit=crop",
     category: "destinos",
     categoryLabel: { es: "Destinos", en: "Destinations" },
     date: "2024-12-07",
@@ -3289,7 +3289,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Llegada y Transporte",
         content: "El Aeropuerto Madrid-Barajas conecta con el centro via metro (Linea 8), autobus (Express Aeropuerto 24h), taxi y apps de transporte. El metro de Madrid es extenso, eficiente y facil de usar. Compra una tarjeta de transporte recargable para ahorrar. La ciudad es muy caminable en el centro.",
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e048?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e048?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Barrios Imprescindibles",
@@ -3299,7 +3299,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Gastronomia Madrilena",
         content: "Madrid es paraiso gastronomico. Los imprescindibles incluyen: cocido madrileno (plato tradicional de garbanzos), bocadillo de calamares, tortilla espanola, tapas variadas. El Mercado de San Miguel ofrece gourmet, mientras los bares tradicionales de La Latina dan la experiencia autentica.",
-        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cultura y Museos",
@@ -3338,7 +3338,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que es Obligatorio Para Europa",
         content: "Para entrar al espacio Schengen, el seguro de viaje es requisito oficial. Debe cumplir con los requisitos minimos de cobertura medica y repatriacion establecidos por la normativa Schengen. Sin este seguro, tecnicamente pueden negarte la entrada aunque tengas todos los demas documentos en orden.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Coberturas Esenciales",
@@ -3348,7 +3348,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Coberturas Adicionales Utiles",
         content: "Dependiendo de tu viaje, considera: cobertura COVID-19 y pandemias, deportes de aventura si planeas actividades de riesgo, demoras de vuelos y conexiones perdidas, robo de documentos, asistencia legal en el extranjero.",
-        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb6?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Comparar Seguros",
@@ -3371,7 +3371,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "equipaje-mano-avion-permitido",
     title: { es: "Equipaje de Mano: Que Puedes Llevar en el Avion", en: "Carry-On Luggage: What You Can Take on the Plane" },
     excerpt: { es: "Guia completa sobre regulaciones de equipaje de mano. Dimensiones, articulos permitidos y prohibidos, y consejos para empacar inteligentemente.", en: "Complete guide on carry-on luggage regulations. Dimensions, allowed and prohibited items, and tips for smart packing." },
-    image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?q=60&w=1200&auto=format&fit=crop",
     category: "planificacion",
     categoryLabel: { es: "Planificacion", en: "Planning" },
     date: "2024-12-05",
@@ -3383,7 +3383,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Dimensiones y Peso Permitidos",
         content: "Las medidas estandar de equipaje de mano son aproximadamente 55x40x20cm y 7-10kg, aunque varia por aerolinea. Las low cost suelen ser mas restrictivas. Siempre verifica las reglas especificas de tu aerolinea antes de empacar.",
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Regla de Liquidos 3-1-1",
@@ -3393,7 +3393,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Articulos Prohibidos en Cabina",
         content: "Nunca intentes llevar en cabina: objetos cortantes (tijeras grandes, navajas, cuchillos), herramientas, articulos deportivos contundentes, liquidos de mas de 100ml, encendedores de antorcha, fuegos artificiales. Estos deben ir en equipaje facturado o no pueden viajar.",
-        image: "https://images.unsplash.com/photo-1501619757722-90657a39a56e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1501619757722-90657a39a56e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Articulos Siempre en Equipaje de Mano",
@@ -3428,7 +3428,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Flexibilidad es Clave",
         content: "La flexibilidad en fechas y destinos es el secreto mejor guardado para vuelos baratos. Viajar entre semana (martes, miercoles) suele ser mas economico. Evitar temporadas altas y fechas cercanas a feriados marca una gran diferencia en precios.",
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7201?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7201?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Herramientas de Busqueda",
@@ -3438,7 +3438,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Aerolineas Low Cost en Europa",
         content: "Una vez en Europa, las low cost son tu mejor amigo para moverte entre paises. Ryanair, EasyJet, Vueling, Transavia ofrecen precios muy competitivos en rutas europeas. Atencion: lee las politicas de equipaje y cargos adicionales para evitar sorpresas.",
-        image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Trucos Adicionales",
@@ -3473,7 +3473,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Principales Rutas a Madrid",
         content: "Madrid-Barajas es el principal hub europeo para conexiones con Latinoamerica. Vuelos directos operan desde Ciudad de Mexico, Bogota, Lima, Buenos Aires, Sao Paulo, Santiago, Panama, entre otros. Iberia, LATAM, Avianca y Aeromexico son las principales operadoras.",
-        image: "https://images.unsplash.com/photo-1578950435899-d1c1bf932ab2?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1578950435899-d1c1bf932ab2?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejor Epoca Para Volar Economico",
@@ -3483,7 +3483,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Comparar Aerolineas",
         content: "Cada aerolinea tiene sus ventajas. Iberia ofrece el mayor numero de frecuencias y conexiones. LATAM tiene buenas opciones desde Sudamerica. Avianca conecta muy bien desde Colombia y Centroamerica. Air Europa es alternativa competitiva. Compara siempre incluyendo equipaje y servicios.",
-        image: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Aeropuertos Alternativos",
@@ -3508,7 +3508,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "ecoturismo-viajes-sostenibles",
     title: { es: "Ecoturismo: Viajes Sostenibles y Responsables Con el Medio Ambiente", en: "Ecotourism: Sustainable and Environmentally Responsible Travel" },
     excerpt: { es: "Descubre como viajar de manera sostenible. Destinos ecoturisticos, practicas responsables y como minimizar tu huella de carbono mientras exploras el mundo.", en: "Discover how to travel sustainably. Ecotourism destinations, responsible practices and how to minimize your carbon footprint while exploring the world." },
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=60&w=1200&auto=format&fit=crop",
     category: "experiencias",
     categoryLabel: { es: "Experiencias", en: "Experiences" },
     date: "2024-12-02",
@@ -3520,7 +3520,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es el Ecoturismo",
         content: "El ecoturismo va mas alla de visitar lugares naturales. Implica viajar de manera responsable, minimizando el impacto ambiental, apoyando economias locales, y contribuyendo a la conservacion de ecosistemas y culturas. Es una forma de viajar que beneficia al viajero, a las comunidades y al planeta.",
-        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Practicas de Viaje Sostenible",
@@ -3530,7 +3530,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Destinos Ecoturisticos en Europa",
         content: "Europa ofrece increibles opciones de ecoturismo. Los fiordos noruegos, los Alpes suizos, la Toscana rural, los parques nacionales de Escocia, y las islas griegas menos turisticas ofrecen experiencias naturales autenticas con opciones de alojamiento sostenible.",
-        image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Turismo de Naturaleza en España",
@@ -3565,7 +3565,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Un Paraiso Protegido",
         content: "El Parque Nacional Archipielago Los Roques es uno de los tesoros naturales del Caribe. Con mas de 50 cayos, islas y bancos de arena, aguas turquesas que parecen irreales, y ecosistemas marinos pristinos, es un destino para quienes buscan playas autenticas y naturaleza intacta.",
-        image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Razones Para Visitarlo",
@@ -3575,7 +3575,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Actividades Principales",
         content: "Ademas de relajarte en playas paradisiacas, puedes practicar snorkeling en arrecifes de coral, buceo certificado, pesca deportiva, kitesurf (los vientos son ideales), paseos en lancha entre cayos, y avistamiento de aves en las areas protegidas.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Llegar y Donde Quedarse",
@@ -3610,7 +3610,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Entendiendo la Distancia",
         content: "El Oceano Atlantico separa Latinoamerica de España, pero la distancia varia significativamente segun tu punto de partida. Desde Mexico estas mas cerca que desde Argentina. Esta diferencia impacta el tiempo de vuelo, la fatiga, y las conexiones disponibles.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tiempos de Vuelo Aproximados a Madrid",
@@ -3620,7 +3620,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Ciudades Con Vuelos Directos",
         content: "Las principales ciudades con conexion directa a Madrid y/o Barcelona incluyen: Ciudad de Mexico, Bogota, Lima, Buenos Aires, Sao Paulo, Santiago, Montevideo, La Habana, Santo Domingo, Panama, San Jose (Costa Rica), y Caracas. Otras ciudades requieren conexion.",
-        image: "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Conexiones Frecuentes",
@@ -3655,7 +3655,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Isla de Margarita: Perla del Caribe",
         content: "Isla de Margarita es el destino de playa mas famoso de Venezuela. Con mas de 50 playas, clima tropical todo el ano, zona franca para compras, y una combinacion de resorts de lujo y pueblos pesqueros autenticos, ofrece una experiencia caribena completa.",
-        image: "https://images.unsplash.com/photo-1551727028-da30e7f87f1g?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551727028-da30e7f87f1g?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tipos de Alojamiento Disponibles",
@@ -3665,7 +3665,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Zonas Principales Para Hospedarse",
         content: "Playa El Agua es la zona mas popular con resorts y vida nocturna. Pampatar ofrece historia colonial y buenas compras. Porlamar es el centro comercial. Juan Griego tiene los atardeceres mas famosos. Y Juangriego es ideal para ambiente tranquilo.",
-        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Esperar de los Resorts",
@@ -3688,7 +3688,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "visa-schengen-colombianos",
     slug: "visa-schengen-colombianos",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa: Visa Schengen para Colombianos 2026", en: "Complete Guide: Schengen Visa for Colombians 2026" },
     excerpt: { es: "Requisitos actualizados, documentos necesarios, costo, tiempo de tramite y consejos para aprobar tu visa Schengen desde Colombia.", en: "Updated requirements, necessary documents, cost, processing time and tips to get your Schengen visa from Colombia approved." },
     category: "migracion",
@@ -3702,7 +3702,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Que es la Visa Schengen",
         content: "La visa Schengen es un documento que permite a ciudadanos de paises no pertenecientes al espacio Schengen viajar libremente por 26 paises europeos. Para colombianos, esta visa es el requisito principal para visitar paises como España, Francia, Italia, Alemania y muchos otros destinos europeos populares.",
-        image: "https://images.unsplash.com/photo-1569254184391-fefaab4c4c22?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1569254184391-fefaab4c4c22?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos Para Colombianos 2026",
@@ -3743,7 +3743,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     slug: "kennel-para-gatos-viaje",
     title: { es: "Kennel Para Gatos: Guia Para Viajar Con Tu Felino", en: "Cat Kennel: Guide to Traveling With Your Feline" },
     excerpt: { es: "Todo sobre transportines y kennels para viajar con gatos. Requisitos de aerolineas, como elegir el kennel adecuado, y preparar a tu gato para el viaje.", en: "Everything about carriers and kennels for traveling with cats. Airline requirements, how to choose the right kennel, and preparing your cat for travel." },
-    image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=60&w=1200&auto=format&fit=crop",
     category: "mascotas",
     categoryLabel: { es: "Mascotas", en: "Pets" },
     date: "2024-11-28",
@@ -3755,7 +3755,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Importancia del Kennel Adecuado",
         content: "Elegir el kennel correcto es crucial para la seguridad y comodidad de tu gato durante el viaje. Las aerolineas tienen requisitos especificos de tamano y tipo de transportin. Un kennel inadecuado puede resultar en que no te permitan viajar con tu mascota.",
-        image: "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos Generales de Aerolineas",
@@ -3765,7 +3765,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Cabina vs Bodega",
         content: "Gatos pequenos (generalmente hasta 8kg con kennel) pueden viajar en cabina en transportines blandos bajo el asiento. Gatos mas grandes viajan en bodega en kennels rigidos. Cada aerolinea tiene sus propias politicas y dimensiones permitidas. Siempre verifica antes de reservar.",
-        image: "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Preparacion del Gato",
@@ -3800,30 +3800,30 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentos Esenciales Para Tu Viaje",
         content: "Antes de tu viaje a España, es fundamental tener toda la documentacion en orden. Estos son los documentos que necesitas preparar con anticipacion para garantizar un viaje sin contratiempos.",
-        image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb88?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb88?q=60&w=1200&auto=format&fit=crop",
         list: ["Pasaporte vigente: Debe contar con al menos seis meses de validez desde la fecha de ingreso a España", "Boleto de ida y vuelta: Demuestra tu intencion de regresar a Colombia y tu planificacion de viaje temporal", "Formulario de entrada (si aplica): Algunos periodos requieren declaracion de salud o formularios especificos"]
       },
       {
         title: "Comprobacion de Solvencia Economica",
         content: "España exige demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Las autoridades migratorias pueden solicitar evidencia de tus medios economicos al momento de ingresar.",
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a63?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a63?q=60&w=1200&auto=format&fit=crop",
         list: ["Efectivo en euros o dolares", "Tarjetas de credito o debito internacionales con cupo disponible", "Extractos bancarios recientes que demuestren fondos suficientes", "Carta de invitacion si aplica, que puede reducir requisitos economicos"]
       },
       {
         title: "Reserva de Alojamiento",
         content: "Debes presentar un comprobante de hospedaje que demuestre donde te quedaras durante tu estancia en España. Esto es fundamental para pasar los controles migratorios.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=60&w=1200&auto=format&fit=crop",
         list: ["Reserva de hotel, hostal o apartamento confirmada", "Carta de invitacion oficial si te alojas con familiares o amigos en España", "Direccion completa del alojamiento para declarar en migracion"]
       },
       {
         title: "Seguro de Viaje Obligatorio",
         content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia. El seguro debe cumplir con los requisitos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion. Este documento puede ser solicitado al ingresar a España.",
-        image: "https://images.unsplash.com/photo-1501619757722-90657a39a56f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1501619757722-90657a39a56f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estancia Permitida Sin Visa",
         content: "Los ciudadanos colombianos pueden ingresar a España y al espacio Schengen sin visa para estancias turisticas de hasta 90 dias dentro de cualquier periodo de 180 dias. Es importante respetar este limite y no exceder el tiempo permitido para evitar problemas migratorios futuros.",
-        image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86dc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86dc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Pasar Migracion Sin Problemas",
@@ -3842,7 +3842,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "requisitos-viajar-espana-peru",
     slug: "requisitos-viajar-espana-desde-peru",
-    image: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Requisitos Para Viajar A España Desde Peru", en: "Requirements To Travel To Spain From Peru" },
     excerpt: { es: "Viajar a España desde Peru es una experiencia emocionante. Conoce todos los requisitos esenciales para pasar los controles migratorios con tranquilidad y disfrutar tu aventura europea.", en: "Traveling to Spain from Peru is an exciting experience. Learn all the essential requirements to pass migration controls smoothly and enjoy your European adventure." },
     category: "migracion",
@@ -3856,30 +3856,30 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentos Esenciales Para Viajeros Peruanos",
         content: "Antes de tu viaje a España, asegurate de tener toda la documentacion en orden. Estos son los documentos imprescindibles que necesitas preparar con anticipacion.",
-        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f4?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f4?q=60&w=1200&auto=format&fit=crop",
         list: ["Pasaporte vigente con al menos seis meses de validez desde la fecha de ingreso", "Boleto aereo de ida y vuelta que demuestre tu intencion de regresar a Peru", "Documentacion adicional que pueda ser requerida segun temporada"]
       },
       {
         title: "Comprobacion de Solvencia Economica",
         content: "Las autoridades espanolas exigen demostrar que puedes cubrir tu estadia durante el tiempo que permanezcas en el pais. Es importante tener evidencia clara de tus recursos economicos.",
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ae?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ae?q=60&w=1200&auto=format&fit=crop",
         list: ["Efectivo en moneda aceptada (euros preferiblemente)", "Tarjetas de credito o debito internacionales", "Extractos bancarios recientes como respaldo", "Carta de invitacion puede complementar la solvencia"]
       },
       {
         title: "Comprobante de Alojamiento",
         content: "Debes presentar un comprobante de hospedaje valido. Esto asegura que tienes un lugar seguro donde quedarte durante tu viaje y es revisado en migracion.",
-        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeag?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeag?q=60&w=1200&auto=format&fit=crop",
         list: ["Reserva confirmada de hotel, hostal o apartamento", "Carta de invitacion oficial si te hospedas con familia o amigos", "Direccion completa del alojamiento"]
       },
       {
         title: "Seguro de Viaje Para el Espacio Schengen",
         content: "Es obligatorio contar con un seguro de viaje valido que cubra toda tu estadia en España. El seguro debe cumplir con los requisitos minimos del espacio Schengen, incluyendo cobertura para emergencias medicas, hospitalizacion y repatriacion.",
-        image: "https://images.unsplash.com/photo-1512100356356-de1b84283e19?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512100356356-de1b84283e19?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Duracion de Estancia Permitida",
         content: "Los ciudadanos peruanos pueden ingresar a España sin visa para estancias turisticas de hasta 90 dias en cualquier periodo de 180 dias. Respeta este limite para evitar inconvenientes en futuros viajes.",
-        image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -3906,30 +3906,30 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Documentacion Para Viajeros Argentinos",
         content: "Los viajeros argentinos tienen acceso privilegiado a España gracias a los lazos historicos entre ambos paises. Aun asi, es fundamental cumplir con los requisitos basicos de entrada.",
-        image: "https://images.unsplash.com/photo-1582719508461-905c673771fe?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1582719508461-905c673771fe?q=60&w=1200&auto=format&fit=crop",
         list: ["Pasaporte argentino vigente con minimo seis meses de validez", "Boleto de ida y vuelta confirmado", "DNI argentino como documento adicional (no obligatorio pero util)"]
       },
       {
         title: "Demostracion de Medios Economicos",
         content: "España exige demostrar capacidad economica para cubrir tu estadia. Los argentinos deben preparar documentacion que evidencie sus recursos financieros.",
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5958?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5958?q=60&w=1200&auto=format&fit=crop",
         list: ["Efectivo, tarjetas de credito o debito internacionales", "Extractos bancarios recientes", "Carta de responsabilidad economica si aplica"]
       },
       {
         title: "Alojamiento Confirmado",
         content: "Debes presentar comprobante de donde te hospedaras durante tu estancia en España. Esto es verificado en el control migratorio.",
-        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eacd?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1527269534026-c86f4009eacd?q=60&w=1200&auto=format&fit=crop",
         list: ["Reserva de hotel o alojamiento turistico", "Carta de invitacion si te quedas con familiares", "Contrato de alquiler temporal si aplica"]
       },
       {
         title: "Seguro de Viaje Schengen",
         content: "El seguro de viaje es obligatorio para ingresar al espacio Schengen. Debe cubrir emergencias medicas, hospitalizacion y repatriacion durante toda tu estadia. Asegurate de contratar uno que cumpla los requisitos minimos establecidos.",
-        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Ventajas Para Argentinos Con Ciudadania Italiana o Espanola",
         content: "Muchos argentinos tienen doble ciudadania europea gracias a sus ancestros. Si tienes pasaporte italiano o espanol, puedes ingresar como ciudadano de la UE sin los requisitos adicionales de turista. Esto te permite estancias ilimitadas y derecho a trabajar.",
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7202?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7202?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -3956,31 +3956,31 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Hoteles En España: Variedad Y Calidad Garantizada",
         content: "España cuenta con una oferta hotelera excepcional que se adapta a todos los presupuestos y gustos. Desde hoteles de lujo de clase mundial en destinos como Madrid, Barcelona e Ibiza, hasta encantadores hoteles boutique en ciudades historicas como Sevilla y Granada. Para viajeros con presupuesto ajustado, existen opciones economicas como hostales y pensiones que ofrecen excelente relacion calidad-precio.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3f?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3f?q=60&w=1200&auto=format&fit=crop",
         list: ["Hoteles de lujo en Madrid, Barcelona e Ibiza", "Hoteles boutique en ciudades historicas", "Hostales y pensiones economicas", "Paradores de Turismo en edificios historicos", "Apartamentos turisticos para estancias largas"]
       },
       {
         title: "Alquiler de Vehiculos: Libertad Para Explorar",
         content: "El alquiler de coches es una de las mejores formas de conocer España a tu propio ritmo. Encontraras oficinas de alquiler en todos los aeropuertos principales y estaciones de tren. Companias reconocidas como Europcar, Hertz y Sixt ofrecen flotas modernas ideales para recorrer la Costa del Sol, la Costa Brava o la ruta de los pueblos blancos en Andalucia.",
-        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=60&w=1200&auto=format&fit=crop",
         list: ["Disponible en aeropuertos y estaciones de tren", "Companias reconocidas: Europcar, Hertz, Sixt", "Ideal para rutas como Costa del Sol y Costa Brava", "Consulta requisitos si tu licencia no es europea"]
       },
       {
         title: "Transporte Publico: Rapido Y Eficiente",
         content: "El transporte urbano en España es eficiente, puntual y accesible. Las grandes ciudades cuentan con sistemas de metro modernos, redes de autobuses urbanos con tarifas integradas, y trenes de cercanias que conectan areas metropolitanas. Madrid y Barcelona tienen algunos de los mejores sistemas de transporte publico de Europa.",
-        image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=60&w=1200&auto=format&fit=crop",
         list: ["Metro moderno en Madrid y Barcelona", "Autobuses urbanos con tarifas integradas", "Trenes de cercanias (Renfe Cercanias)", "Tranvias en ciudades como Valencia y Sevilla", "Aplicaciones moviles para planificar rutas"]
       },
       {
         title: "Seguridad Para Turistas",
         content: "España es considerado uno de los paises mas seguros de Europa para turistas. Sin embargo, conviene tomar precauciones basicas especialmente en areas muy turisticas. Las grandes ciudades cuentan con policia turistica dedicada y el numero de emergencias 112 esta disponible en todo el pais las 24 horas.",
-        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=60&w=1200&auto=format&fit=crop",
         list: ["Cuidado con carteristas en zonas muy concurridas", "Policia turistica disponible en grandes ciudades", "Numero de emergencias: 112 (disponible 24/7)", "Zonas turisticas bien vigiladas", "España tiene bajo indice de criminalidad violenta"]
       },
       {
         title: "Transporte Entre Ciudades: Opciones Para Todos",
         content: "Moverse entre ciudades en España es facil y comodo gracias a una red de transporte moderna y eficiente. Los trenes de Alta Velocidad (AVE) conectan las principales ciudades en tiempos record. Tambien hay opciones de autobuses interurbanos y vuelos domesticos economicos.",
-        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=60&w=1200&auto=format&fit=crop",
         list: ["Trenes AVE: Madrid-Barcelona en menos de 3 horas", "Autobuses interurbanos con companias como Alsa", "Vuelos internos con Iberia, Vueling o Air Europa", "BlaBlaCar para viajes compartidos economicos"]
       }
     ],
@@ -4008,23 +4008,23 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Conexion Directa Y Estrategica",
         content: "Avianca ofrece vuelos desde Caracas hacia Madrid, operando con escalas eficientes en ciudades clave como Bogota. Esta modalidad permite a los pasajeros disfrutar de una red amplia de conexiones internacionales y de un servicio disenado para facilitar el transito entre Latinoamerica y Europa. Los horarios estan pensados para maximizar la comodidad y reducir los tiempos de espera.",
-        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cda?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cda?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Experiencia De Viaje Con Valor Agregado",
         content: "Volar con Avianca significa mas que llegar a destino. La aerolinea pone a disposicion multiples opciones de clase, entretenimiento a bordo variado y un programa de viajero frecuente que premia la lealtad. La flota moderna asegura mayor seguridad y confort, reforzando la confianza de quienes eligen esta ruta.",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca86?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca86?q=60&w=1200&auto=format&fit=crop",
         list: ["Diferentes clases de servicio disponibles", "Entretenimiento a bordo completo", "Programa de viajero frecuente LifeMiles", "Flota moderna y segura", "Servicio de atencion en espanol"]
       },
       {
         title: "Madrid Como Puerta A Europa",
         content: "Madrid se posiciona como el punto de entrada ideal a Europa, y Avianca abre esta puerta para los viajeros venezolanos. Desde la capital espanola, es posible acceder facilmente a trenes de alta velocidad, aerolineas de bajo costo y conexiones a ciudades como Paris, Roma, Londres o Berlin. Esto convierte a Madrid en el hub perfecto para negocios, estudios o turismo.",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920217?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920217?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Oportunidad Para El Viajero Venezolano",
         content: "La ruta Caracas-Madrid de Avianca representa una solucion efectiva ante la demanda de vuelos entre Venezuela y Europa. Con politicas de equipaje flexibles y promociones frecuentes, esta opcion se presenta como una alternativa confiable. Los pasajeros encuentran no solo transporte aereo, sino una experiencia de viaje integral.",
-        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bd?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4051,23 +4051,23 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Conexion Aerea Entre Caracas Y Madrid",
         content: "Madrid se posiciona como la principal puerta de entrada a Europa para los viajeros venezolanos. Varias aerolineas operan vuelos regulares entre Caracas y la capital espanola, garantizando frecuencias semanales y diferentes opciones de servicio. Esta oferta permite elegir la mejor combinacion segun necesidades individuales.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e318?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e318?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Principales Aerolineas En Esta Ruta",
         content: "Iberia, Air Europa, Plus Ultra y Conviasa son las principales aerolineas que conectan Venezuela con España. Cada una ofrece caracteristicas diferentes que se adaptan a distintos perfiles de viajero.",
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef2?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef2?q=60&w=1200&auto=format&fit=crop",
         list: ["Iberia: Extensa red de conexiones europeas y servicio premium", "Air Europa: Vuelos directos con buena frecuencia", "Plus Ultra: Tarifas competitivas y atencion personalizada", "Conviasa: Aerolinea venezolana con conexion directa"]
       },
       {
         title: "Madrid Como Hub Europeo",
         content: "El aeropuerto Adolfo Suarez Madrid-Barajas es uno de los mas importantes de Europa y un centro estrategico para viajeros desde Venezuela. Desde alli es posible conectar facilmente con otras ciudades espanolas como Barcelona, Valencia o Sevilla, y con capitales europeas como Paris, Roma o Berlin.",
-        image: "https://images.unsplash.com/photo-1540339832862-474599807837?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540339832862-474599807837?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Una Ruta Llena De Oportunidades",
         content: "Mas alla del vuelo, la ruta Caracas-Madrid representa una oportunidad para reencontrarse con familiares, emprender proyectos, estudiar o descubrir nuevas experiencias culturales. Gracias a la oferta de aerolineas, los venezolanos cuentan con opciones accesibles y seguras para cruzar el Atlantico. Madrid no es solo un destino, sino el comienzo de nuevos caminos.",
-        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235g?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1459257831348-f0cdd359235g?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4094,24 +4094,24 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Vuelos Internacionales Desde Venezuela",
         content: "Venezuela se mantiene conectada con el mundo a traves de diversas aerolineas que ofrecen vuelos internacionales. Desde conexiones regionales en America hasta rutas hacia Europa, los viajeros venezolanos cuentan con alternativas confiables que hacen posible cruzar fronteras y vivir nuevas experiencias.",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6d?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6d?q=60&w=1200&auto=format&fit=crop",
         list: ["Iberia: Vuelos directos a Madrid", "Air Europa: Conexiones frecuentes a España", "Turkish Airlines: Ruta hacia Europa via Estambul", "Copa Airlines: Conexiones por Ciudad de Panama", "Plus Ultra: Atencion personalizada hacia Madrid", "Conviasa: Aerolinea venezolana con rutas europeas"]
       },
       {
         title: "La Ruta Venezuela-España: Puente Cultural",
         content: "Entre todas las rutas internacionales, los vuelos hacia España destacan como los mas solicitados por viajeros venezolanos. Con operaciones de aerolineas como Iberia, Air Europa y Plus Ultra desde Caracas a Madrid, y de Conviasa hacia Madrid y Tenerife, existen varias alternativas para viajar a España. Madrid funciona como hub para conectar facilmente con el resto de Europa.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Aerolineas Que Generan Confianza",
         content: "Cada aerolinea aporta un valor unico a los viajeros. La variedad de opciones permite que cada viajero encuentre la alternativa que mejor se ajuste a sus planes, presupuesto y preferencias de servicio.",
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77effed?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77effed?q=60&w=1200&auto=format&fit=crop",
         list: ["Iberia y Air Europa: Extensa red de conexiones europeas", "Plus Ultra: Tarifas accesibles y trato personalizado", "Conviasa: Refuerza conexion historica Venezuela-España", "Turkish Airlines: Puerta a Medio Oriente y Asia"]
       },
       {
         title: "Trips Europa: Tu Aliado En La Planificacion",
         content: "En Trips Europa nos encargamos de asesorarte para que tu experiencia sea unica. Te acompanamos en la eleccion de la aerolinea, la ruta mas conveniente y te ayudamos a planificar tu viaje completo. Viajar desde Venezuela al mundo nunca habia sido tan accesible, y España se mantiene como uno de los destinos favoritos para reencontrarse, estudiar, trabajar o explorar.",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099946?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4138,18 +4138,18 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viajar Sin Posponer Tus Planes",
         content: "Uno de los principales obstaculos al momento de viajar suele ser el costo del pasaje. Muchas personas terminan postergando sus planes porque no logran reunir el monto completo de inmediato. Las modalidades de pago flexibles se han convertido en una solucion practica para hacer que el viaje sea alcanzable en el presente, sin comprometer la estabilidad financiera.",
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e049?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e049?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuotas Flex: Mayor Accesibilidad",
         content: "Algunas agencias y aerolineas ofrecen la posibilidad de pagar boletos aereos en cuotas, una modalidad que permite dividir el costo del pasaje en pagos mas comodos. Esta alternativa democratiza la experiencia de viajar, brindando a los pasajeros la oportunidad de planificar con tiempo y distribuir el gasto. Esta opcion marca una diferencia para quienes suenan con destinos internacionales.",
-        image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a6?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a6?q=60&w=1200&auto=format&fit=crop",
         list: ["Division del costo total en pagos manejables", "Permite planificar con anticipacion", "Hace accesibles destinos que parecian lejanos", "Ideal para viajes familiares o grupos"]
       },
       {
         title: "Una Puerta Abierta A Mas Destinos",
         content: "Con facilidades de pago, los viajeros tienen la posibilidad de mirar mas alla y considerar opciones que antes parecian lejanas. Madrid, ciudades europeas o cualquier destino internacional esta mas cerca de quienes se animan a aprovechar estas modalidades. La experiencia de viajar deja de ser un sueno aplazado y se convierte en una meta alcanzable.",
-        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc141?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc141?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Aprovechar Las Cuotas",
@@ -4167,7 +4167,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "presupuesto-viaje-europa-2026",
     slug: "presupuesto-viaje-europa-2026",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Cuanto Cuesta Viajar a Europa en 2026? Presupuesto Real", en: "How Much Does It Cost to Travel to Europe in 2026? Real Budget" },
     excerpt: { es: "Desglose completo: vuelos, hoteles, comida, transporte y actividades. Presupuesto para 7, 14 y 21 dias desde Latinoamerica.", en: "Complete breakdown: flights, hotels, food, transport and activities. Budget for 7, 14 and 21 days from Latin America." },
     category: "dinero",
@@ -4181,18 +4181,18 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Presupuesto General Para Europa en 2026",
         content: "Viajar a Europa desde Latinoamerica es una experiencia increible que requiere planificacion financiera. Los costos varian significativamente segun el pais de origen, la temporada, el estilo de viaje y los destinos elegidos. En 2026, los precios se han estabilizado despues de la pandemia, aunque la inflacion ha impactado algunos rubros. Este articulo te ofrece un desglose real y actualizado para que planifiques tu aventura europea.",
-        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vuelos Desde Latinoamerica",
         content: "El vuelo es generalmente el gasto mas significativo. Los precios varian segun el pais de origen y la temporada. Comprar con anticipacion (3-6 meses) puede ahorrarte hasta 30% del costo.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop",
         list: ["Colombia a Europa: USD 800-1,500 (ida y vuelta)", "Mexico a Europa: USD 700-1,400 (ida y vuelta)", "Argentina a Europa: USD 900-1,600 (ida y vuelta)", "Brasil a Europa: USD 750-1,400 (ida y vuelta)", "Peru a Europa: USD 850-1,500 (ida y vuelta)", "Temporada alta (junio-agosto, diciembre): precios 20-40% mas altos"]
       },
       {
         title: "Alojamiento Por Tipo",
         content: "Europa ofrece opciones para todos los presupuestos. Los precios varian enormemente entre ciudades. Paris, Londres y Zurich son las mas caras, mientras que Lisboa, Praga y Budapest ofrecen excelente relacion calidad-precio.",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=60&w=1200&auto=format&fit=crop",
         list: ["Hostales y dormitorios compartidos: EUR 20-40 por noche", "Hoteles economicos (2-3 estrellas): EUR 50-100 por noche", "Hoteles de gama media (3-4 estrellas): EUR 100-180 por noche", "Hoteles de lujo (4-5 estrellas): EUR 200-500+ por noche", "Apartamentos Airbnb: EUR 60-150 por noche (ideal para familias)", "Tip: reservar con 2-3 meses de anticipacion garantiza mejores precios"]
       },
       {
@@ -4203,7 +4203,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Transporte Dentro de Europa",
         content: "Moverse por Europa es facil gracias a su excelente red de transporte. Los trenes de alta velocidad conectan las principales ciudades, y las aerolineas de bajo costo ofrecen vuelos economicos entre paises.",
-        image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=60&w=1200&auto=format&fit=crop",
         list: ["Eurail Pass (5 dias en 1 mes): EUR 250-400 aproximadamente", "Vuelos low-cost entre ciudades: EUR 30-100 por trayecto", "Autobuses FlixBus: EUR 15-40 por trayecto largo", "Metro y transporte urbano: EUR 2-5 por viaje", "Tarjetas de transporte diarias: EUR 7-15 segun la ciudad", "Alquiler de auto: EUR 40-80 diarios mas gasolina y peajes"]
       },
       {
@@ -4258,24 +4258,24 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Elegir un Circuito por los Balcanes",
         content: "Los Balcanes son una de las regiones mas fascinantes y menos exploradas de Europa. Esta peninsula al sureste del continente ofrece una combinacion unica de historia milenaria, paisajes dramaticos, costas pristinas y una mezcla cultural extraordinaria. Un circuito por los Balcanes te permite descubrir multiples paises con fronteras cercanas, cada uno con su propia identidad, gastronomia y tradiciones. Es la alternativa perfecta para viajeros que buscan algo diferente a los destinos turisticos tradicionales.",
-        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Croacia: Perla del Adriatico",
         content: "Croacia es el destino estrella de los Balcanes y frecuentemente el punto de inicio del circuito. Dubrovnik, conocida como la 'Perla del Adriatico', es famosa por sus murallas medievales perfectamente conservadas y por ser escenario de Game of Thrones. Split ofrece el impresionante Palacio de Diocleciano. Plitvice, con sus lagos de aguas turquesas y cascadas, es Patrimonio de la Humanidad y uno de los paisajes naturales mas bellos de Europa.",
-        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1555990538-1e5b84f5a463?q=60&w=1200&auto=format&fit=crop",
         list: ["Dubrovnik: murallas medievales y casco historico impresionante", "Split: Palacio de Diocleciano, 1700 anos de historia", "Lagos de Plitvice: 16 lagos conectados por cascadas", "Isla de Hvar: lavanda, playas y vida nocturna", "Zagreb: capital con arquitectura austrohungara"]
       },
       {
         title: "Montenegro: Montanas y Fiordos",
         content: "Montenegro es pequeno pero impactante. La Bahia de Kotor, a menudo llamada el fiordo del sur de Europa, es espectacular con montanas que se elevan directamente desde el agua. La ciudad medieval de Kotor es Patrimonio de la Humanidad. Budva ofrece playas hermosas y un casco antiguo encantador. La carretera costera entre Croacia y Montenegro es una de las mas escenicas del mundo.",
-        image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?q=60&w=1200&auto=format&fit=crop",
         list: ["Bahia de Kotor: el fiordo mas meridional de Europa", "Kotor: ciudad medieval amurallada", "Budva: playas y vida nocturna balcanica", "Sveti Stefan: isla hotel iconica", "Parque Nacional Durmitor: montanas y canones"]
       },
       {
         title: "Albania: El Secreto Mejor Guardado",
         content: "Albania es quizas el destino mas sorprendente del circuito. Despues de decadas de aislamiento, el pais ha abierto sus puertas revelando playas virgenes en la Riviera Albanesa, ciudades otomanas como Berat y Gjirokaster (ambas Patrimonio de la Humanidad), y una hospitalidad extraordinaria. Tirana, la capital, es vibrante y colorida, con arquitectura comunista transformada en arte urbano.",
-        image: "https://images.unsplash.com/photo-1589491106922-a8c2ac305552?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1589491106922-a8c2ac305552?q=60&w=1200&auto=format&fit=crop",
         list: ["Riviera Albanesa: playas pristinas sin masificacion", "Berat: la ciudad de las mil ventanas", "Gjirokaster: ciudad otomana de piedra", "Tirana: capital vibrante y colorida", "Lago Ohrid: compartido con Macedonia del Norte"]
       },
       {
@@ -4286,7 +4286,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Bosnia y Herzegovina: Historia y Resiliencia",
         content: "Bosnia y Herzegovina es un pais de contrastes y profunda historia. Sarajevo, donde comenzo la Primera Guerra Mundial, mezcla mezquitas otomanas, iglesias catolicas y sinagogas en un area pequena. Mostar, con su iconico Puente Viejo (reconstruido tras la guerra), es simbolo de reconciliacion. Los rios Neretva y Una ofrecen paisajes naturales espectaculares para rafting y aventura.",
-        image: "https://images.unsplash.com/photo-1577890432592-9e3cd9f55f5b?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1577890432592-9e3cd9f55f5b?q=60&w=1200&auto=format&fit=crop",
         list: ["Sarajevo: la Jerusalen de Europa, ciudad multicultural", "Mostar: el Puente Viejo y casco historico otomano", "Cataratas de Kravice: cascadas espectaculares", "Blagaj: tekija sufi junto al rio subterraneo", "Trebinje: ciudad del vino y la piedra"]
       },
       {
@@ -4297,7 +4297,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Bulgaria: Tesoros por Descubrir",
         content: "Bulgaria sorprende con su diversidad: desde playas en el Mar Negro hasta montanas de esqui, pasando por monasterios bizantinos y ciudades romanas. Sofia, la capital, mezcla ruinas romanas con iglesias ortodoxas y arquitectura comunista. El Monasterio de Rila, Patrimonio de la Humanidad, es una joya del arte bizantino. Plovdiv, una de las ciudades habitadas mas antiguas del mundo, fue Capital Europea de la Cultura.",
-        image: "https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?q=60&w=1200&auto=format&fit=crop",
         list: ["Sofia: capital con ruinas romanas y catedrales ortodoxas", "Monasterio de Rila: joya bizantina en las montanas", "Plovdiv: ciudad habitada hace 8000 anos", "Costa del Mar Negro: Varna y Burgas", "Valle de las Rosas: donde se produce el aceite de rosa bulgaro"]
       },
       {
@@ -4328,7 +4328,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "paris-5-dias-guia",
     slug: "paris-5-dias-guia",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Paris en 5 Dias: Itinerario Perfecto para Latinoamericanos", en: "Paris in 5 Days: Perfect Itinerary for Latin Americans" },
     excerpt: { es: "Torre Eiffel, Louvre, Versalles, Montmartre y mas. El itinerario dia a dia para aprovechar Paris al maximo.", en: "Eiffel Tower, Louvre, Versailles, Montmartre and more. The day by day itinerary to make the most of Paris." },
     category: "destinos",
@@ -4342,37 +4342,37 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Por Que Paris es el Destino Sonado de Todo Viajero",
         content: "Paris, la Ciudad de la Luz, es mucho mas que un destino turistico: es una experiencia que transforma. Desde sus iconicos monumentos hasta sus encantadores cafes, cada rincon de Paris cuenta una historia. Para los viajeros latinoamericanos, Paris representa el sueno europeo hecho realidad, una combinacion perfecta de arte, historia, gastronomia y romance que no encontraras en ningun otro lugar del mundo. En Tripseuropa.com hemos disenado este itinerario de 5 dias para que aproveches cada momento en esta ciudad magica.",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1: La Torre Eiffel y el Corazon de Paris",
         content: "Tu aventura parisina comienza con el simbolo mas reconocible del mundo. La Torre Eiffel, construida para la Exposicion Universal de 1889, ofrece vistas panoramicas incomparables de la ciudad. Te recomendamos llegar temprano (antes de las 9 AM) para evitar las multitudes. Despues, pasea por el Campo de Marte y cruza el Puente de Alma hacia los Campos Eliseos. Termina el dia con un crucero por el rio Sena al atardecer, cuando Paris se ilumina magicamente. Consulta los paquetes de Trips Europa que incluyen entradas prioritarias a la Torre Eiffel.",
         list: ["Torre Eiffel: Subir al segundo o tercer piso (reserva con anticipacion)", "Campo de Marte: Picnic con vista a la torre", "Trocadero: Las mejores fotos de la Torre Eiffel", "Puente de Alejandro III: El puente mas elegante de Paris", "Crucero por el Sena: Ver Paris iluminado desde el agua"],
-        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 2: El Museo del Louvre y el Paris Clasico",
         content: "El segundo dia esta dedicado al museo mas visitado del mundo. El Louvre alberga mas de 380,000 obras de arte, incluyendo la enigmatica Mona Lisa y la majestuosa Venus de Milo. Para aprovecharlo al maximo, te sugerimos un recorrido de 3-4 horas concentrandote en las obras imprescindibles. Despues, camina por el Jardin de las Tullerias hacia la Place de la Concorde y sube por los Campos Eliseos hasta el Arco del Triunfo. Los expertos de Tripseuropa.com pueden organizar visitas guiadas en espanol para una experiencia mas enriquecedora.",
         list: ["Museo del Louvre: Mona Lisa, Venus de Milo, Victoria de Samotracia", "Jardin de las Tullerias: Paseo relajante entre esculturas", "Place de la Concorde: La plaza mas grande de Paris", "Campos Eliseos: La avenida mas famosa del mundo", "Arco del Triunfo: Subir para vistas de 360 grados"],
-        image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 3: Versalles - El Palacio de los Reyes",
         content: "Dedica un dia completo al majestuoso Palacio de Versalles, residencia de los reyes franceses desde Luis XIV. Ubicado a solo 40 minutos en tren desde Paris, Versalles te dejara sin palabras con su opulencia. La Galeria de los Espejos, los Apartamentos Reales y los impresionantes jardines son experiencias que no olvidaras. Te recomendamos llegar a las 9 AM cuando abren las puertas y dedicar al menos 5 horas para explorar el palacio y sus jardines. Los paquetes de Trips Europa incluyen transporte y entradas sin filas.",
         list: ["Galeria de los Espejos: 357 espejos y candelabros de cristal", "Apartamentos del Rey y la Reina: Lujo del siglo XVIII", "Jardines de Versalles: 800 hectareas de jardines geometricos", "Gran Trianon y Petit Trianon: Residencias privadas de los reyes", "Aldea de la Reina: El refugio campestre de Maria Antonieta"],
-        image: "https://images.unsplash.com/photo-1551410224-699683e15636?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551410224-699683e15636?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 4: Montmartre, Sacre-Coeur y el Paris Bohemio",
         content: "El cuarto dia descubriras el Paris mas artistico y bohemio. Montmartre, el barrio de los artistas, conserva el encanto de la Belle Epoque. Sube las escaleras hasta la Basilica del Sacre-Coeur para disfrutar de vistas espectaculares de Paris. Pasea por la Place du Tertre donde artistas locales pintan retratos y paisajes. Por la tarde, visita el Moulin Rouge (aunque sea solo para fotografiarlo) y explora las calles empedradas donde vivieron Picasso, Van Gogh y Toulouse-Lautrec. Termina el dia en un cabaret parisino - Trips Europa puede reservar tu entrada.",
         list: ["Basilica del Sacre-Coeur: Iglesia de cupulas blancas con vistas panoramicas", "Place du Tertre: Plaza de artistas callejeros", "Moulin Rouge: El cabaret mas famoso del mundo", "Muro de los Te Amo: Romantico mural en 250 idiomas", "Cafe des 2 Moulins: Donde se filmo Amelie"],
-        image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 5: Museo de Orsay, Saint-Germain y Notre-Dame",
         content: "Tu ultimo dia en Paris combina arte impresionista con historia medieval. Comienza en el Museo de Orsay, hogar de la mayor coleccion de arte impresionista del mundo. Obras de Monet, Renoir, Van Gogh y Degas te esperan en esta antigua estacion de tren convertida en museo. Despues, cruza el Sena hacia el Barrio Latino y Saint-Germain-des-Pres. Visita la Catedral de Notre-Dame (actualmente en restauracion pero impresionante desde el exterior) y pasea por la Ile de la Cite. Termina tu viaje con una cena en un bistro tradicional frances.",
         list: ["Museo de Orsay: Obras maestras impresionistas", "Barrio Latino: Ambiente universitario y librerias historicas", "Catedral de Notre-Dame: Gotico frances en restauracion", "Ile de la Cite: La isla donde nacio Paris", "Saint-Germain-des-Pres: Cafes literarios historicos"],
-        image: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Hospedarse en Paris: Mejores Zonas",
@@ -4392,7 +4392,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Reserva Tu Viaje a Paris con Trips Europa",
         content: "En Tripseuropa.com nos especializamos en crear experiencias inolvidables para viajeros latinoamericanos en Europa. Nuestros paquetes a Paris incluyen vuelos, hoteles seleccionados, traslados, entradas a atracciones principales y asistencia en espanol las 24 horas. Dejanos planificar tu viaje sonado a la Ciudad de la Luz mientras tu solo te preocupas por disfrutar. Contamos con financiamiento flexible y salidas desde las principales ciudades de Latinoamerica. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje personalizado.",
-        image: "https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1431274172761-fca41d930114?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4408,7 +4408,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "encanto-mediterraneo",
     slug: "encanto-mediterraneo",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Encanto Mediterraneo: Italia, Francia y España Costera", en: "Mediterranean Charm: Coastal Italy, France and Spain" },
     excerpt: { es: "Costa Amalfitana, Riviera Francesa, Costa Brava. Las costas mas hermosas del Mediterraneo en un viaje.", en: "Amalfi Coast, French Riviera, Costa Brava. The most beautiful Mediterranean coasts in one trip." },
     category: "destinos",
@@ -4422,25 +4422,25 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Mediterraneo: Un Mar de Suenos Para Latinoamericanos",
         content: "El Mar Mediterraneo ha sido cuna de civilizaciones, escenario de historias de amor y destino de viajeros durante milenios. Para los latinoamericanos, las costas mediterraneas representan la esencia del viaje europeo: pueblos pintorescos colgados de acantilados, aguas turquesas, gastronomia excepcional y un estilo de vida que invita a disfrutar cada momento. En Tripseuropa.com hemos disenado rutas que combinan las tres joyas costeras del Mediterraneo occidental: Italia, Francia y España. Un viaje que transformara tu vision de la vida y te dejara recuerdos imborrables.",
-        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Costa Amalfitana: La Joya del Sur de Italia",
         content: "La Costa Amalfitana es, sin duda, una de las costas mas espectaculares del mundo. Declarada Patrimonio de la Humanidad por la UNESCO, esta franja de 50 kilometros al sur de Napoles ofrece un paisaje de ensueno: pueblos de colores pasteles aferrados a acantilados verticales, limoneros perfumados y el azul intenso del Tirreno. Positano, con sus casas rosadas cayendo hacia el mar, es la postal perfecta. Amalfi, la historica republica maritima, conserva su catedral arabe-normanda. Ravello, en las alturas, ofrece jardines con las mejores vistas de la costa. Los expertos de Trips Europa conocen cada rincon de esta costa y pueden organizar tu experiencia perfecta.",
         list: ["Positano: El pueblo mas fotografiado de Italia, boutiques y playas", "Amalfi: Catedral del siglo IX, fabrica de papel artesanal, historia maritima", "Ravello: Villa Rufolo y Villa Cimbrone, jardines con vistas panoramicas", "Praiano: Pueblo autentico sin multitudes, atardeceres espectaculares", "Furore: El fiordo oculto de la costa", "Limoncello: Licor de limon tipico de la region"],
-        image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "La Riviera Francesa: Glamour y Belleza Natural",
         content: "La Cote d'Azur, como la llaman los franceses, es sinonimo de elegancia, sol y jet set. Desde Niza hasta Monaco, la Riviera Francesa ofrece una combinacion unica de playas, cultura y sofisticacion. Niza, con su famoso Paseo de los Ingleses y casco antiguo provenzal, es la puerta de entrada ideal. Cannes evoca el glamour del festival de cine. Saint-Tropez mantiene su encanto pesquero mientras atrae a celebridades. Monaco, el principado de los Grimaldi, deslumbra con su casino, yates y Formula 1. En Tripseuropa.com te ayudamos a vivir la Riviera como un local, evitando las trampas turisticas.",
         list: ["Niza: Paseo de los Ingleses, Vieux Nice, Museo Matisse", "Cannes: La Croisette, islas Lerins, mercado Forville", "Monaco: Casino de Monte Carlo, Palacio Principesco, Puerto Hercules", "Saint-Tropez: Puerto pesquero, playas Pampelonne, Place des Lices", "Eze: Pueblo medieval en las alturas con jardin exotico", "Antibes: Murallas, Museo Picasso, Port Vauban"],
-        image: "https://images.unsplash.com/photo-1491166617655-0723a0999cfc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1491166617655-0723a0999cfc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Costa Brava: El Mediterraneo Español Mas Autentico",
         content: "La Costa Brava, en Cataluna, ofrece quiza las aguas mas cristalinas del Mediterraneo espanol. Su nombre, que significa Costa Salvaje, describe perfectamente los acantilados, calas escondidas y pinos que llegan hasta el mar. Cadaques, el pueblo blanco que enamoro a Dali, conserva su encanto de pueblo pesquero. Tossa de Mar, con su vila vella amurallada, parece sacada de un cuento. El legado de Salvador Dali impregna toda la region: su casa-museo en Port Lligat, el Teatro-Museo en Figueres y el Castillo de Pubol. En Tripseuropa.com combinamos playa, cultura y gastronomia catalana en experiencias inolvidables.",
         list: ["Cadaques: Pueblo blanco de Dali, Casa-Museo Port Lligat", "Tossa de Mar: Murallas medievales sobre el mar", "Lloret de Mar: Playas amplias y vida nocturna", "Calella de Palafrugell: Calas de postal y chiringuitos", "Begur: Casas indianas y calas secretas como Aiguablava", "Cap de Creus: Parque natural con paisajes lunares"],
-        image: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Itinerario Sugerido: 14 Dias por Tres Costas",
@@ -4470,7 +4470,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Reserva Tu Viaje Mediterraneo con Trips Europa",
         content: "En Tripseuropa.com somos especialistas en crear viajes mediterraneos a medida para latinoamericanos. Conocemos cada pueblo, cada cala secreta, cada restaurante autentico. Nuestros paquetes incluyen vuelos internacionales, hoteles seleccionados, traslados entre costas, excursiones con guias locales y asistencia 24/7 en espanol. Ofrecemos financiamiento flexible y salidas desde las principales ciudades de Latinoamerica. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje sonado por las costas del Mediterraneo. El mar te espera.",
-        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4486,7 +4486,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "colores-de-europa",
     slug: "colores-de-europa",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Colores de Europa: Tour por Francia, España e Italia", en: "Colors of Europe: Tour through France, Spain and Italy" },
     excerpt: { es: "Paris, Barcelona, Roma y mas. El circuito clasico que combina lo mejor de tres paises iconicos.", en: "Paris, Barcelona, Rome and more. The classic circuit combining the best of three iconic countries." },
     category: "destinos",
@@ -4500,25 +4500,25 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Circuito Clasico Europeo: El Sueno de Todo Viajero",
         content: "Francia, España e Italia: tres paises que representan la esencia de Europa. Este circuito clasico es el viaje sonado de millones de latinoamericanos, y no es para menos. Combina la elegancia parisina, la pasion espanola y el arte italiano en una experiencia inolvidable. En Tripseuropa.com hemos perfeccionado esta ruta durante anos, conocemos cada conexion, cada hotel, cada restaurante que hara de tu viaje una experiencia perfecta. Este es el recorrido que cambiara tu forma de ver el mundo.",
-        image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Paris: La Ciudad de la Luz",
         content: "Tu aventura comienza en Paris, la ciudad mas romantica del mundo. La Torre Eiffel iluminada, el Louvre con la Mona Lisa, los Campos Eliseos, Montmartre con sus artistas callejeros y el Sacre-Coeur. Paris es arte, gastronomia, moda y cultura en cada esquina. Pasea por el Barrio Latino, cruza el Sena por sus puentes historicos, y termina cada dia con una copa de vino en un bistro tradicional. Los asesores de Trips Europa te ayudan a reservar entradas sin filas y restaurantes autenticos.",
         list: ["Torre Eiffel: Subir al atardecer para ver Paris iluminarse", "Museo del Louvre: Mona Lisa, Venus de Milo, Victoria de Samotracia", "Montmartre y Sacre-Coeur: Vistas panoramicas y ambiente bohemio", "Campos Eliseos y Arco del Triunfo: La avenida mas famosa del mundo", "Versalles: Excursion de un dia al palacio de los reyes", "Crucero por el Sena: Ver los monumentos desde el agua"],
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Barcelona: Donde Gaudi Hizo Magia",
         content: "De Paris a Barcelona, el cambio es radical pero igualmente fascinante. Barcelona es color, creatividad y vida mediterranea. La Sagrada Familia de Gaudi te dejara sin palabras, el Parque Guell parece sacado de un sueno, y Las Ramblas vibran con energia dia y noche. El Barrio Gotico guarda siglos de historia, mientras la Barceloneta invita a disfrutar del mar. La gastronomia catalana, desde tapas hasta mariscos, es un viaje en si misma. En Tripseuropa.com organizamos tours de Gaudi con guias expertos.",
         list: ["Sagrada Familia: La obra maestra inacabada de Gaudi (reserva obligatoria)", "Parque Guell: Mosaicos, arquitectura organica y vistas de la ciudad", "Las Ramblas: Paseo peatonal con mercado de La Boqueria", "Barrio Gotico: Calles medievales, Catedral y Plaza Real", "Casa Batllo y Casa Mila: Otras joyas de Gaudi", "Barceloneta: Playa, chiringuitos y paella frente al mar"],
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Roma: La Ciudad Eterna",
         content: "Roma es historia viva. Cada piedra cuenta una historia de dos mil anos. El Coliseo te transporta a la epoca de los gladiadores, el Vaticano alberga tesoros artisticos incomparables, y la Fontana di Trevi promete que volveras. Pasea por el Foro Romano, lanza una moneda en la Fontana, y pierdete por el Trastevere al atardecer. La gastronomia romana, desde la carbonara autentica hasta los supplì, es razon suficiente para visitar. Trips Europa organiza tours privados del Vaticano y el Coliseo sin las multitudes.",
         list: ["Coliseo y Foro Romano: El corazon del Imperio Romano", "Vaticano: Capilla Sixtina, Basilica de San Pedro, Museos Vaticanos", "Fontana di Trevi: Lanza una moneda y pide un deseo", "Piazza Navona y Panteon: Barroco romano y arquitectura antigua", "Trastevere: El barrio mas autentico para cenar", "Escalinata de la Plaza de España: Icono cinematografico"],
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Extensiones Opcionales: Florencia, Venecia, Madrid",
@@ -4548,7 +4548,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Reserva Tu Circuito Europeo con Trips Europa",
         content: "En Tripseuropa.com somos especialistas en el circuito clasico Paris-Barcelona-Roma. Llevamos anos perfeccionando esta ruta para viajeros latinoamericanos. Nuestros paquetes incluyen vuelos internacionales desde las principales ciudades de America Latina, hoteles seleccionados en ubicaciones centricas, traslados aeropuerto-hotel, seguro de viaje, y asistencia 24/7 en espanol. Ofrecemos tours opcionales con guias locales expertos y experiencias exclusivas. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje sonado por Francia, España e Italia. Europa te espera con los brazos abiertos.",
-        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4564,7 +4564,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "documentos-viajar-europa",
     slug: "documentos-viajar-europa",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Documentos para Viajar a Europa: Checklist Completo 2026", en: "Documents for Traveling to Europe: Complete Checklist 2026" },
     excerpt: { es: "Pasaporte, visa, seguro, reservas de hotel. Todo lo que necesitas para pasar inmigracion sin problemas.", en: "Passport, visa, insurance, hotel reservations. Everything you need to pass immigration smoothly." },
     category: "consejos",
@@ -4578,7 +4578,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Importancia de Preparar Bien Tu Documentacion",
         content: "Nada arruina mas un viaje sonado que problemas en inmigracion. Cada ano, miles de viajeros latinoamericanos enfrentan inconvenientes en aeropuertos europeos por documentacion incompleta o incorrecta. La buena noticia es que con la preparacion adecuada, pasar inmigracion en Europa es un tramite sencillo. En Tripseuropa.com hemos ayudado a miles de viajeros a preparar su documentacion correctamente. Esta guia reune todo lo que necesitas saber para entrar a Europa sin contratiempos en 2026.",
-        image: "https://images.unsplash.com/photo-1569235186275-626cb53b83ce?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1569235186275-626cb53b83ce?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "El Pasaporte: Tu Documento Mas Importante",
@@ -4628,7 +4628,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viaja Tranquilo con Trips Europa",
         content: "En Tripseuropa.com nos encargamos de que tu documentacion este en orden. Nuestros paquetes de viaje incluyen asesoria completa sobre requisitos de entrada, seguro de viaje que cumple todos los requisitos Schengen, reservas de hotel con confirmaciones impresas, itinerarios detallados, y asistencia 24/7 en espanol si tienes cualquier inconveniente. Llevamos anos ayudando a latinoamericanos a cumplir su sueno de conocer Europa sin estres. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con toda la documentacion incluida.",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4644,7 +4644,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "cinque-terre-guia",
     slug: "cinque-terre-guia",
-    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Cinque Terre: Las 5 Aldeas Coloridas de Italia", en: "Cinque Terre: Italy's 5 Colorful Villages" },
     excerpt: { es: "Riomaggiore, Manarola, Corniglia, Vernazza y Monterosso. Como visitarlas en un dia.", en: "Riomaggiore, Manarola, Corniglia, Vernazza and Monterosso. How to visit them in one day." },
     category: "destinos",
@@ -4658,19 +4658,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Cinque Terre: Un Sueno de Colores Sobre el Mar",
         content: "Cinque Terre, las Cinco Tierras, es uno de los destinos mas fotografiados de Italia y del mundo entero. Cinco pequenas aldeas de pescadores aferradas a acantilados verticales sobre el Mar de Liguria, con casas de colores pastel que parecen pintadas por un artista. Riomaggiore, Manarola, Corniglia, Vernazza y Monterosso al Mare forman este Patrimonio de la Humanidad UNESCO que atrae millones de visitantes cada ano. En Tripseuropa.com hemos recorrido estos senderos decenas de veces y te contamos todo lo que necesitas saber para disfrutar Cinque Terre al maximo.",
-        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Riomaggiore: La Puerta de Entrada",
         content: "Riomaggiore es el pueblo mas oriental de Cinque Terre y suele ser el punto de partida para muchos visitantes. Sus casas de colores rosa, amarillo y terracota se apilan en una garganta estrecha que desciende hasta un pequeno puerto. La calle principal, Via Colombo, esta llena de restaurantes, tiendas de artesania y gelaterias. Desde aqui comenzaba la famosa Via dell'Amore hacia Manarola, aunque actualmente esta cerrada por reparaciones. Los asesores de Trips Europa te recomiendan llegar temprano para disfrutar las calles sin multitudes.",
         list: ["Que ver: Puerto pesquero, Iglesia de San Giovanni Battista, castillo medieval", "Mejor foto: Desde el mirador sobre el puerto al atardecer", "Gastronomia: Focaccia ligure, anchoas fritas, vino local Sciacchetra", "Tip: Sube hasta el castillo para las mejores vistas panoramicas", "Tiempo recomendado: 1-2 horas para recorrer con calma"],
-        image: "https://images.unsplash.com/photo-1538599955786-6d7296a26e01?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1538599955786-6d7296a26e01?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Manarola: La Postal Perfecta",
         content: "Manarola es, probablemente, el pueblo mas fotografiado de Cinque Terre. Sus casas de colores vibrantes formando una piramide sobre la roca negra del acantilado crean una imagen que parece irreal. Es el segundo pueblo mas pequeno de los cinco, pero quiza el mas pintoresco. Aqui se produce el Sciacchetra, el vino dulce tipico de la region. El sendero hacia Corniglia ofrece vistas espectaculares de la costa. En Tripseuropa.com incluimos Manarola en todos nuestros tours de la Liguria.",
         list: ["Que ver: El puerto diminuto, vinedos en terrazas, torre campanario", "Mejor foto: Desde el sendero de Punta Bonfiglio al atardecer", "Gastronomia: Sciacchetra (vino dulce), pesto genoves fresco", "Tip: Visita la marina para ver los barcos de colores", "Pesebre gigante: En Navidad se ilumina el pesebre mas grande del mundo en la colina"],
-        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Corniglia: El Pueblo en las Alturas",
@@ -4681,7 +4681,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Vernazza: La Joya de la Corona",
         content: "Vernazza es considerado por muchos el pueblo mas hermoso de Cinque Terre. Tiene el unico puerto natural de los cinco pueblos, dominado por la torre del Castillo Doria del siglo XI. La plaza principal, Piazza Marconi, esta junto al mar y es perfecta para tomar un aperitivo mientras ves los barcos pesqueros. Sus calles medievales estan llenas de encanto. Es el pueblo con mejor equilibrio entre belleza, servicios y autenticidad. En Tripseuropa.com recomendamos dedicar mas tiempo a Vernazza.",
         list: ["Que ver: Castillo Doria, Iglesia de Santa Margherita, puerto natural", "Mejor foto: Desde el sendero hacia Monterosso con vista del pueblo completo", "Gastronomia: Trofie al pesto, focaccia rellena, gelato artesanal", "Tip: Sube al castillo (entrada EUR 2) para vistas de 360 grados", "Tiempo recomendado: 2-3 horas minimo, ideal para almorzar aqui"],
-        image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Monterosso al Mare: Sol y Playa",
@@ -4711,7 +4711,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Visita Cinque Terre con Trips Europa",
         content: "En Tripseuropa.com organizamos excursiones a Cinque Terre como parte de nuestros circuitos por Italia. Conocemos cada sendero, cada restaurante escondido, cada mirador secreto. Nuestros paquetes incluyen transporte desde tu hotel en Florencia, Pisa o Milan, la Cinque Terre Card, guia en espanol que conoce la zona, y recomendaciones gastronomicas. Tambien ofrecemos circuitos que combinan Cinque Terre con la Toscana, Portofino y la Costa Amalfitana. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia en las aldeas mas coloridas de Italia.",
-        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4727,7 +4727,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "compras-europa",
     slug: "compras-europa",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Shopping en Europa: Tax Free, Outlets y Mejores Zonas", en: "Shopping in Europe: Tax Free, Outlets and Best Areas" },
     excerpt: { es: "Como aprovechar el Tax Free, los mejores outlets y zonas de compras por ciudad.", en: "How to take advantage of Tax Free, the best outlets and shopping areas by city." },
     category: "consejos",
@@ -4741,7 +4741,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Europa: El Paraiso de las Compras Para Latinoamericanos",
         content: "Para muchos viajeros latinoamericanos, las compras son parte esencial del viaje a Europa. Marcas de lujo a precios mas accesibles, outlets con descuentos increibles, y el famoso Tax Free que te devuelve parte del IVA. Europa ofrece oportunidades de shopping que no encontraras en ningun otro lugar. En Tripseuropa.com conocemos las mejores zonas de compras, los secretos del Tax Free, y los outlets que valen la pena. Esta guia te ayudara a maximizar tu presupuesto de compras y regresar con maletas llenas de tesoros europeos.",
-        image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tax Free: Como Funciona y Como Aprovecharlo",
@@ -4757,7 +4757,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Paris: La Capital Mundial de la Moda",
         content: "Paris es el destino sonado para los amantes del shopping. Desde las boutiques de alta costura hasta los grandes almacenes iconicos, la Ciudad de la Luz ofrece experiencias de compras unicas.",
         list: ["Champs-Elysees: La avenida mas famosa. Louis Vuitton, Cartier, Sephora flagship. Precios altos pero experiencia unica.", "Le Marais: Barrio trendy con boutiques independientes, vintage y disenadores emergentes. Ideal para moda unica.", "Galerias Lafayette: El gran almacen mas iconico. Cupula art nouveau espectacular. Terraza con vistas a la Opera.", "Printemps: Otro gran almacen historico. Moda, belleza, hogar. Menos turistas que Lafayette.", "Rue Saint-Honore: Lujo absoluto. Hermes, Chanel, Dior, Fendi. Para ver o comprar segun tu presupuesto.", "Mercado de las pulgas Saint-Ouen: El mas grande de Europa. Antiguedades, vintage, muebles. Negociacion obligatoria.", "Tip: Las rebajas oficiales (soldes) son en enero y julio. Descuentos hasta 70% en toda la ciudad."],
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Milan e Italia: Moda Italiana de Primera Mano",
@@ -4792,7 +4792,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica Tu Viaje de Compras con Trips Europa",
         content: "En Tripseuropa.com entendemos que el shopping es parte importante de tu viaje. Nuestros asesores conocen las mejores zonas de compras, outlets, y secretos del Tax Free. Podemos incluir en tu itinerario visitas a La Vallee Village desde Paris, The Mall desde Florencia, o tours de shopping guiados por el Quadrilatero de Milan. Te ayudamos a maximizar tu franquicia, coordinar horarios de tiendas con tus visitas turisticas, y asegurarnos de que regreses con los mejores tesoros europeos. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con experiencias de shopping incluidas.",
-        image: "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1445205170230-053b83016050?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4808,7 +4808,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "portugal-10-dias",
     slug: "portugal-10-dias",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Portugal en 10 Dias: Lisboa, Porto, Algarve y Sintra", en: "Portugal in 10 Days: Lisbon, Porto, Algarve and Sintra" },
     excerpt: { es: "El pais mas accesible de Europa. Itinerario completo, precios y consejos.", en: "Europe's most accessible country. Complete itinerary, prices and tips." },
     category: "destinos",
@@ -4822,37 +4822,37 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Portugal: El Secreto Mejor Guardado de Europa",
         content: "Portugal es, sin duda, el pais mas accesible de Europa para viajeros latinoamericanos. Precios razonables, idioma hermano del espanol, gastronomia exquisita, paisajes de pelicula y una hospitalidad que te hara sentir como en casa. En 10 dias puedes recorrer lo mejor de este pequeno gigante: Lisboa la vibrante, Porto la romantica, el Algarve paradisiaco y Sintra la magica. En Tripseuropa.com hemos disenado el itinerario perfecto para que no te pierdas nada. Esta guia completa te llevara de la mano por cada rincon de Portugal.",
-        image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 1-3: Lisboa, La Capital de las Siete Colinas",
         content: "Lisboa merece al menos 3 dias completos. Es una ciudad que se recorre a pie, en tranvia y con mucha calma. Cada barrio tiene su personalidad unica.",
         list: ["Dia 1 - Baixa y Alfama: Praca do Comercio, Arco da Rua Augusta, Catedral Se, Castillo de San Jorge, callejuelas de Alfama, miradores de Santa Luzia y Portas do Sol.", "Dia 2 - Belem y Bairro Alto: Torre de Belem, Monasterio de los Jeronimos, Pasteis de Belem (los originales), MAAT, Bairro Alto al atardecer, cena con fado en vivo.", "Dia 3 - Sintra (excursion): Palacio da Pena, Castillo de los Moros, Quinta da Regaleira, centro historico. Regreso por Cascais opcional.", "Imperdibles: Tranvia 28 (mejor temprano), Elevador de Santa Justa, Time Out Market para comer.", "Donde dormir: Chiado o Baixa son las mejores zonas. Hoteles desde EUR 80/noche.", "Presupuesto diario: EUR 80-120 incluyendo hotel, comidas y transporte."],
-        image: "https://images.unsplash.com/photo-1536663815808-535e2280d2c2?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1536663815808-535e2280d2c2?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Sintra: El Pueblo de Cuento de Hadas",
         content: "A solo 40 minutos de Lisboa, Sintra es Patrimonio de la Humanidad y parece sacado de un cuento de hadas. Palacios romanticos, jardines misteriosos y bosques encantados. Merece al menos un dia completo desde Lisboa.",
         list: ["Palacio da Pena: El icono de Sintra. Colores vibrantes, arquitectura romantica, vistas espectaculares. EUR 14 entrada. Llega a las 9am para evitar multitudes.", "Quinta da Regaleira: Jardines misterios, torres, tuneles y el famoso Pozo Iniciativo. Ambiente mistico. EUR 10 entrada.", "Castillo de los Moros: Murallas medievales con vistas panoramicas a Sintra y el oceano. EUR 8 entrada.", "Palacio Nacional de Sintra: En el centro del pueblo. Chimeneas conicas iconicas. Interior impresionante.", "Centro historico: Calles empedradas, tiendas de artesanias, travesseiros (dulces tipicos).", "Como llegar: Tren desde Lisboa Rossio (EUR 4.50 ida y vuelta, 40 min). Luego bus 434 a los palacios."],
-        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 4-6: Porto, La Ciudad del Vino y el Romanticismo",
         content: "Porto es quiza la ciudad mas romantica de Portugal. Casas de azulejos, el rio Duero, las bodegas de vino y una gastronomia excepcional. Merece 3 dias completos.",
         list: ["Dia 4 - Centro historico: Ribeira (Patrimonio UNESCO), Puente Dom Luis I, Catedral Se, Estacion Sao Bento (azulejos espectaculares), Torre dos Clerigos.", "Dia 5 - Vila Nova de Gaia: Cruzar el puente, visitar bodegas (Graham's, Sandeman, Taylor's), cata de vino de Porto, crucero de los 6 puentes al atardecer.", "Dia 6 - Mas Porto: Libreria Lello (inspiro Harry Potter), Mercado do Bolhao, Foz do Douro, playa y faro, Serralves.", "Imperdibles: Francesinha (sandwich tipico), vino de Porto, tripas a moda do Porto.", "Donde dormir: Ribeira o Centro tienen los mejores hoteles. Desde EUR 70/noche.", "Transporte desde Lisboa: Tren alta velocidad (2h45, EUR 25-35) o vuelo low cost (1h, desde EUR 30)."],
-        image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Valle del Duero: Excursion desde Porto",
         content: "El Valle del Duero es una de las regiones vinicolas mas antiguas y bellas del mundo. Patrimonio de la Humanidad, sus terrazas de vinedos sobre el rio son un espectaculo visual. Excursion imprescindible desde Porto.",
         list: ["Paisaje: Terrazas de vinedos cayendo hacia el rio Duero. Quintas historicas. Uno de los paisajes mas fotografiados de Europa.", "Quintas para visitar: Quinta do Crasto, Quinta da Pacheca, Quinta do Bomfim. Catas y almuerzos maridados.", "Crucero por el Duero: Desde Porto o Peso da Regua. 1 a 8 horas dependiendo del recorrido. Paisajes unicos.", "Tren historico: Linea del Duero, una de las mas bonitas de Europa. Desde Porto hasta Pocinho.", "Pinhao: Pueblo pintoresco con estacion de tren decorada con azulejos. Punto central del valle.", "Tour organizado: Recomendamos tour de un dia desde Porto. Trips Europa organiza visitas con transporte, bodegas y almuerzo. Contactanos."],
-        image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 7-9: Algarve, El Paraiso del Sur",
         content: "El Algarve es el sur de Portugal: playas de acantilados dorados, aguas turquesas, pueblos blancos y el mejor clima del pais. 3 dias te permiten conocer los highlights.",
         list: ["Dia 7 - Lagos: Centro historico, Ponta da Piedade (formaciones rocosas espectaculares), Praia Dona Ana, cuevas en kayak o bote.", "Dia 8 - Benagil y alrededores: Cueva de Benagil (la mas famosa de Portugal), Praia da Marinha, Carvoeiro, tour en bote por la costa.", "Dia 9 - Faro y Tavira: Casco antiguo de Faro, Ria Formosa (parque natural), Tavira (pueblo con encanto), Ilha de Tavira (playa paradisiaca).", "Mejores playas: Praia da Marinha, Praia de Benagil, Praia Dona Ana, Praia de Falesia.", "Donde dormir: Lagos o Albufeira como base. Hoteles desde EUR 60/noche. Villas con piscina muy accesibles.", "Como llegar: Vuelo Lisboa-Faro (45 min, EUR 40-80) o carro alquilado (3h, la mejor opcion para el Algarve)."],
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 10: Regreso a Lisboa y Ultimas Compras",
@@ -4877,7 +4877,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viaja a Portugal con Trips Europa",
         content: "En Tripseuropa.com somos especialistas en Portugal. Conocemos cada rincon, cada restaurante escondido, cada mirador secreto. Nuestros paquetes de 10 dias incluyen vuelos desde tu ciudad, hoteles 4 estrellas en ubicaciones centrales, desayunos diarios, traslados, excursion al Valle del Duero, carro de alquiler en Algarve, y asistencia 24/7 en espanol. Tambien organizamos viajes a medida para lunas de miel, familias, grupos de amigos o viajes en solitario. Portugal es el destino perfecto para tu primer viaje a Europa. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura portuguesa.",
-        image: "https://images.unsplash.com/photo-1558369981-f9ca78462e61?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558369981-f9ca78462e61?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4893,7 +4893,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "primera-vez-europa",
     slug: "primera-vez-europa",
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Primera Vez en Europa: 10 Errores que Debes Evitar", en: "First Time in Europe: 10 Mistakes to Avoid" },
     excerpt: { es: "No cometas estos errores clasicos de viajeros primerizos. Ahorra tiempo, dinero y frustraciones.", en: "Don't make these classic first-time traveler mistakes. Save time, money and frustrations." },
     category: "consejos",
@@ -4907,7 +4907,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Tu Primer Viaje a Europa: Evita Estos Errores Clasicos",
         content: "Viajar a Europa por primera vez es emocionante, pero tambien puede ser abrumador. Despues de 10 anos ayudando a viajeros latinoamericanos en Tripseuropa.com, hemos visto los mismos errores repetirse una y otra vez. Errores que cuestan dinero, tiempo y arruinan experiencias que deberian ser magicas. Esta guia te ayudara a evitar los 10 errores mas comunes que cometen los viajeros primerizos y convertir tu primer viaje a Europa en una experiencia perfecta.",
-        image: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Error 1: Querer Ver Demasiado en Poco Tiempo",
@@ -4938,7 +4938,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Error 6: Reservar Todo en el Ultimo Momento",
         content: "Europa es el destino turistico mas visitado del mundo. Las atracciones populares se agotan semanas antes. Llegar sin reservas a lugares como el Vaticano, la Torre Eiffel o la Sagrada Familia significa colas de horas o no poder entrar.",
         list: ["Atracciones que DEBES reservar: Museos Vaticanos, Galeria Uffizi, Sagrada Familia, Torre Eiffel, Coliseo, Anne Frank House.", "Cuando reservar: Minimo 2-4 semanas antes. En temporada alta, 1-2 meses antes.", "Donde reservar: Siempre en sitios oficiales. Evita revendedores que cobran comisiones altas.", "Trenes: Reserva con antelacion para mejores precios. Un Paris-Barcelona puede costar EUR 30 o EUR 150 segun cuando compres.", "Hoteles: En temporada alta, reserva con 2-3 meses de antelacion para tener opciones.", "Trips Europa: Nosotros gestionamos todas las reservas con meses de antelacion. Sin filas, sin sorpresas."],
-        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Error 7: Comer en Zonas Turisticas",
@@ -4963,7 +4963,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Viaja Sin Errores con Trips Europa",
         content: "En Tripseuropa.com hemos aprendido de miles de viajeros lo que funciona y lo que no. Nuestros paquetes estan disenados para que tu unica preocupacion sea disfrutar. Gestionamos reservas, transporte, seguros, y te damos consejos personalizados para cada destino. Nuestros asesores han cometido todos estos errores (para que tu no tengas que hacerlo) y conocen Europa como la palma de su mano. Tu primer viaje a Europa merece ser perfecto. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje sin sorpresas.",
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -4979,7 +4979,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "venecia-sin-turistas",
     slug: "venecia-sin-turistas",
-    image: "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Venecia sin Turistas: Trucos para Evitar Multitudes", en: "Venice Without Tourists: Tips to Avoid Crowds" },
     excerpt: { es: "Mejores horarios, barrios menos visitados, islas secretas y como disfrutar Venecia autentica.", en: "Best times, less visited neighborhoods, secret islands and how to enjoy authentic Venice." },
     category: "destinos",
@@ -4993,7 +4993,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Venecia: La Ciudad Mas Bella y Mas Saturada del Mundo",
         content: "Venecia recibe 30 millones de visitantes al ano en una ciudad de solo 50,000 residentes. La Plaza San Marcos puede sentirse como un centro comercial en Navidad. Pero existe otra Venecia: callejones silenciosos, plazas escondidas, islas donde el tiempo se detuvo. En Tripseuropa.com hemos recorrido cada rincon de la Serenisima y te revelamos los secretos para disfrutar Venecia como la vivian los venecianos hace siglos. Esta guia te ayudara a evitar las multitudes y descubrir la Venecia autentica.",
-        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Los Mejores Horarios Para Evitar Multitudes",
@@ -5004,7 +5004,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Barrios Menos Visitados: Donde Van los Venecianos",
         content: "El 90% de los turistas se concentra en el 10% de Venecia: San Marcos, Rialto y el trayecto entre ambos. Los otros cinco barrios (sestieri) permanecen autenticos y tranquilos.",
         list: ["Cannaregio: El barrio mas grande y residencial. El Gueto Judio (el primero del mundo), fondamenta della Misericordia (bares locales), iglesias vacias. Aqui viven los venecianos.", "Dorsoduro: Artistico y universitario. Galeria dell'Accademia, Peggy Guggenheim, Punta della Dogana. Las Zattere al atardecer son magicas.", "Castello: El barrio mas extenso. Via Garibaldi (calle comercial local), Arsenale, jardines de la Bienal. Casi sin turistas excepto cerca de San Marcos.", "Santa Croce y San Polo: Detras de Rialto. Mercado de pescado Rialto (mananas), Campo San Giacomo, Frari. Vida local autentica.", "Giudecca: Isla separada de la Venecia principal. Sin turistas, vistas espectaculares de San Marcos, restaurantes economicos, ambiente de barrio."],
-        image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Las Islas Secretas de la Laguna",
@@ -5015,7 +5015,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Trucos Para la Plaza San Marcos Sin Agobios",
         content: "San Marcos es imprescindible, pero puede ser agotador. Estos trucos te ayudaran a disfrutarla sin las multitudes.",
         list: ["Visita al amanecer: La plaza abre 24 horas. Llegando a las 6-7am tendras la basilica como fondo de fotos sin nadie.", "Reserva entrada a la Basilica: Entrada gratuita pero con colas de 1-2 horas. Reserva online (EUR 3) para acceso prioritario.", "Torre del Campanile: Sube temprano (abre 9am). Mejores vistas de Venecia y solo hay una fila.", "Palacio Ducal: Reserva tour 'Itinerarios Secretos' para ver areas cerradas al publico y evitar salas abarrotadas.", "Cafe Florian: El cafe mas antiguo de Italia (1720). Caro pero historico. Mejor ir a las 8am cuando abre y evitar las horas pico.", "Piazzetta: El lateral de la plaza hacia el agua. Menos gente, vistas a San Giorgio Maggiore, columnas historicas."],
-        image: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Rialto: El Corazon Comercial Sin Empujones",
@@ -5045,7 +5045,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Descubre Venecia Autentica con Trips Europa",
         content: "En Tripseuropa.com conocemos la Venecia que los turistas no ven. Nuestros paquetes incluyen hoteles en barrios autenticos (no en San Marcos), visitas a islas secretas de la laguna, reservas prioritarias en atracciones principales, y recomendaciones de bacari donde comen los venecianos. Organizamos tours privados en barca por canales escondidos y cenas en trattorias familiares. Venecia merece ser disfrutada con calma, no sufrida entre multitudes. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia en la Venecia secreta.",
-        image: "https://images.unsplash.com/photo-1529154166925-574a0236a4f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529154166925-574a0236a4f4?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5061,7 +5061,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "suiza-7-dias",
     slug: "suiza-7-dias",
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Suiza en 7 Dias: Alpes, Lagos y Chocolate", en: "Switzerland in 7 Days: Alps, Lakes and Chocolate" },
     excerpt: { es: "Zurich, Lucerna, Interlaken, Zermatt. El itinerario perfecto por los Alpes suizos.", en: "Zurich, Lucerne, Interlaken, Zermatt. The perfect itinerary through the Swiss Alps." },
     category: "destinos",
@@ -5075,7 +5075,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Suiza: El Pais Donde los Paisajes Parecen Pinturas",
         content: "Suiza es el sueno de todo viajero: montanas nevadas que tocan el cielo, lagos de aguas cristalinas, pueblos de cuento, trenes panoramicos, queso fundido y el mejor chocolate del mundo. En Tripseuropa.com hemos disenado el itinerario perfecto para descubrir lo mejor de Suiza en 7 dias: desde la cosmopolita Zurich hasta el icono alpino del Matterhorn en Zermatt. Esta guia te llevara por ciudades medievales, valles de ensueño y cumbres que quitan el aliento.",
-        image: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1-2: Zurich, La Puerta de Entrada a Suiza",
@@ -5086,7 +5086,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 3: Lucerna, La Joya del Lago",
         content: "A solo 45 minutos en tren desde Zurich, Lucerna es quizas la ciudad mas pintoresca de Suiza. Rodeada de montanas y a orillas de un lago turquesa, parece sacada de un cuento.",
         list: ["Kapellbrucke: El puente de madera cubierto mas antiguo de Europa (1333). Simbolo de Lucerna.", "Altstadt: Plazas con fuentes, casas pintadas con frescos, callejuelas sin coches.", "Lago de los Cuatro Cantones: Paseo en barco de vapor historico. Vistas 360 grados de los Alpes.", "Leon de Lucerna: Escultura tallada en roca que conmemora a los guardias suizos. Mark Twain la llamo 'la pieza de roca mas triste del mundo'.", "Monte Pilatus: Excursion de medio dia. Sube en teleferico, baja en el tren cremallera mas empinado del mundo.", "Monte Rigi: Alternativa a Pilatus. Menos turistas, vistas espectaculares, senderos de senderismo.", "Museo Suizo del Transporte: Ideal si viajas con ninos. Trenes, aviones, barcos, planetario.", "Gastronomia: Prueba la fondue de queso en un restaurante tradicional. Reserva con antelacion."],
-        image: "https://images.unsplash.com/photo-1527095655658-14dc70a27c95?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527095655658-14dc70a27c95?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 4-5: Interlaken y el Corazon de los Alpes",
@@ -5097,7 +5097,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 6-7: Zermatt y el Matterhorn",
         content: "El Matterhorn (Cervino) es la montana mas fotografiada del mundo. Zermatt, el pueblo a sus pies, es un paraiso libre de coches donde solo circulan vehiculos electricos y caballos.",
         list: ["Matterhorn: La piramide perfecta de 4,478 metros. Visible desde todo el pueblo en dias claros. Mejor luz al amanecer.", "Gornergrat: Tren cremallera hasta 3,089m. Vistas del Matterhorn y mas de 20 picos de 4,000m. Imprescindible.", "Matterhorn Glacier Paradise: El teleferico mas alto de los Alpes (3,883m). Glaciar, cuevas de hielo, terraza panoramica.", "Sunnegga: Mas economico que Gornergrat. Lago Stellisee refleja el Matterhorn. Foto iconica.", "Pueblo de Zermatt: Calles peatonales, chalets de madera, tiendas de lujo, restaurantes gourmet.", "Senderismo: Mas de 400 km de senderos senalizados. El Five Lakes Walk es espectacular.", "Gastronomia: Raclette tradicional, fondue, Zermatter Rosti. Prueba el vino del Canton Valais.", "Como llegar: Tren panoramico Glacier Express o conexion desde Visp. Coches prohibidos en Zermatt."],
-        image: "https://images.unsplash.com/photo-1531210483974-4f8205c8a759?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1531210483974-4f8205c8a759?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "El Swiss Travel Pass: Tu Mejor Inversion",
@@ -5132,7 +5132,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Descubre Suiza con Trips Europa",
         content: "En Tripseuropa.com organizamos tu viaje perfecto a Suiza: hoteles con vistas a los Alpes, Swiss Travel Pass incluido, excursiones a las mejores montanas, reservas en trenes panoramicos, y toda la logistica resuelta. Conocemos cada rincon de Suiza y te ayudamos a optimizar tu tiempo y presupuesto. Desde viajes romanticos hasta aventuras familiares, disenamos itinerarios a tu medida. Suiza merece ser vivida sin prisas ni preocupaciones. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura en los Alpes suizos.",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5148,7 +5148,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "grecia-islas-2-semanas",
     slug: "grecia-islas-2-semanas",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Islas Griegas en 2 Semanas: Santorini, Mykonos y Mas", en: "Greek Islands in 2 Weeks: Santorini, Mykonos and More" },
     excerpt: { es: "El island hopping perfecto. Que islas visitar, como moverse y donde alojarse.", en: "The perfect island hopping. Which islands to visit, how to get around and where to stay." },
     category: "destinos",
@@ -5162,7 +5162,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Islas Griegas: El Sueno Mediterraneo",
         content: "Grecia tiene mas de 6,000 islas, de las cuales unas 200 estan habitadas. Cada una tiene su propia personalidad: desde la iconica Santorini con sus atardeceres legendarios hasta islas secretas donde el tiempo parece haberse detenido. En Tripseuropa.com hemos navegado por todas las rutas y te traemos el itinerario perfecto para dos semanas de island hopping inolvidable. Aguas turquesa, pueblos blancos, historia antigua, y la mejor gastronomia mediterranea te esperan.",
-        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1-2: Atenas, La Puerta a las Islas",
@@ -5173,7 +5173,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 3-5: Santorini, La Isla de los Suenos",
         content: "Santorini es probablemente la isla mas fotografiada del mundo. Creada por una erupcion volcanica, sus acantilados con pueblos blancos y cupulas azules son iconicos.",
         list: ["Oia: El pueblo mas famoso. Casas cueva, boutique hotels, el mejor atardecer del Mediterraneo. Llega 2 horas antes para buen sitio.", "Fira: La capital. Mas animada que Oia. Tiendas, restaurantes, vida nocturna. Camino a Oia (10 km) espectacular.", "Caldera: El crater volcanico sumergido. Tours en barco incluyen visita al volcan activo y aguas termales.", "Playas: Red Beach (arena roja volcanica), Perissa (arena negra), Kamari. Diferentes a cualquier otra.", "Akrotiri: 'La Pompeya griega'. Ciudad minoica enterrada por la erupcion hace 3,600 anos.", "Vinos: Santorini produce vinos unicos. Visita bodegas como Santo Wines o Venetsanos para cata con vistas.", "Donde dormir: Oia (romantico, caro), Fira (practico, opciones variadas), Imerovigli (tranquilo, vistas). EUR 150-400/noche.", "Tip: Reserva hotel con vista a la caldera. Vale cada euro extra."],
-        image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 6-8: Mykonos, Fiesta y Glamour",
@@ -5184,7 +5184,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 9-10: Naxos, La Isla Autentica",
         content: "Naxos es la isla mas grande de las Cicladas y quizas la mas autentica. Menos turistica que Santorini o Mykonos, ofrece playas espectaculares, pueblos de montana y ruinas antiguas.",
         list: ["Portara: La puerta del templo de Apolo sin terminar. Simbolo de Naxos. Atardecer magico.", "Chora: Casco antiguo veneciano, castillo, callejuelas con tiendas artesanales y tabernas.", "Playas: Agios Prokopios, Agia Anna, Plaka (kilometros de arena, aguas cristalinas, chiringuitos).", "Interior montanoso: Pueblos como Halki (destilerias de kitron), Apiranthos (marmol), Filoti.", "Monte Zas: La montana mas alta de las Cicladas (1,004m). Senderismo con vistas increibles.", "Gastronomia: Queso naxiano, patatas famosas, kitron (licor de citricos local).", "Donde dormir: Chora o Agios Prokopios. Precios mas razonables que Santorini/Mykonos. EUR 80-180/noche.", "Tip: Alquila coche o quad para explorar el interior. Naxos es grande."],
-        image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 11-12: Paros, El Equilibrio Perfecto",
@@ -5195,7 +5195,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 13-14: Milos o Creta (Elige Tu Final)",
         content: "Para cerrar tu viaje, elige entre Milos (la isla de las playas imposibles) o Creta (historia y naturaleza en grande). Ambas son espectaculares.",
         list: ["MILOS - Playas unicas: Sarakiniko (paisaje lunar blanco), Kleftiko (solo en barco), Tsigrado (cueva secreta).", "MILOS - Pueblos: Plaka (capital con vistas), Klima (casas de pescadores coloridas sobre el agua).", "MILOS - Catacumbas: Las mas grandes de Grecia despues de Roma. Historia cristiana primitiva.", "CRETA - Knossos: Palacio minoico, laberinto del Minotauro. La civilizacion mas antigua de Europa.", "CRETA - Chania: Puerto veneciano espectacular. La ciudad mas bonita de Creta.", "CRETA - Elafonisi: Playa de arena rosa. Una de las mejores de Grecia.", "CRETA - Gastronomia: Dakos, kalitsounia, raki. La cocina cretense es patrimonio inmaterial.", "Regreso: Ferry de noche a Atenas (Milos 5h, Creta 9h) o vuelo directo desde Heraklion/Chania."],
-        image: "https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Moverse: Ferries y Vuelos",
@@ -5220,7 +5220,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Navega las Islas Griegas con Trips Europa",
         content: "En Tripseuropa.com organizamos tu island hopping perfecto: reservamos todos los ferries coordinados, hoteles con las mejores vistas, transfers desde puertos, y excursiones exclusivas. Conocemos cada isla y te ayudamos a elegir las que mejor se adaptan a tus gustos. Desde lunas de miel romanticas hasta aventuras con amigos, disenamos itinerarios a medida. Las islas griegas merecen ser navegadas sin estres. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura en el Egeo.",
-        image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5236,7 +5236,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vinos-toscana",
     slug: "vinos-toscana",
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Ruta del Vino en la Toscana: Chianti y Brunello", en: "Wine Route in Tuscany: Chianti and Brunello" },
     excerpt: { es: "Bodegas, catas, paisajes y gastronomia. La guia definitiva para los amantes del vino italiano.", en: "Wineries, tastings, landscapes and gastronomy. The ultimate guide for Italian wine lovers." },
     category: "destinos",
@@ -5250,7 +5250,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Toscana: El Paraiso del Vino Italiano",
         content: "La Toscana no es solo una region vinicola, es un estilo de vida. Colinas ondulantes cubiertas de vinedos, cipreses que marcan caminos centenarios, pueblos medievales posados sobre cumbres, y bodegas donde familias producen vino desde hace generaciones. En Tripseuropa.com hemos recorrido cada rincon de esta tierra bendecida y te traemos la guia definitiva para vivir el enoturismo toscano. Desde el legendario Chianti hasta el sublime Brunello di Montalcino, prepara tus sentidos para una experiencia inolvidable.",
-        image: "https://images.unsplash.com/photo-1523528283115-9bf9b1699245?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523528283115-9bf9b1699245?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Los Grandes Vinos de la Toscana",
@@ -5261,7 +5261,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Region del Chianti: El Corazon del Vino Toscano",
         content: "El Chianti Classico se produce entre Florencia y Siena, en una de las regiones vinicolas mas bellas del mundo. Cada colina tiene una bodega.",
         list: ["Greve in Chianti: Capital del Chianti. Plaza medieval con mercado de vinos, Enoteca Falorni (300+ vinos para catar).", "Castellina in Chianti: Pueblo amurallado con vistas espectaculares. Bodegas como Rocca delle Macie y Castello di Fonterutoli.", "Radda in Chianti: El mas alto y escondido. Ambiente medieval intacto. Bodegas familiares autenticas.", "Panzano in Chianti: Pequeno pero famoso por Dario Cecchini (el carnicero mas famoso de Italia).", "Badia a Passignano: Abadia benedictina del siglo XI. Bodega Antinori produce aqui vinos excepcionales. Visita imprescindible.", "La Strada del Vino: Ruta senalizada que conecta bodegas, pueblos y agroturismos. Ideal para conducir sin prisa."],
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Montalcino: La Catedral del Brunello",
@@ -5272,7 +5272,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Montepulciano: El Vino de los Nobles",
         content: "No confundir con la uva Montepulciano (de otra region). Aqui el Vino Nobile se hace con Sangiovese y el pueblo es simplemente espectacular.",
         list: ["Piazza Grande: Una de las plazas renacentistas mas bellas de Italia. Catedral, palacio, cafes con vistas.", "Cantinas historicas: Bodegas excavadas bajo el pueblo desde el siglo XIV. Contucci, De' Ricci, Gattavecchi ofrecen visitas.", "Tempio di San Biagio: Iglesia renacentista aislada entre vinedos. Antonio da Sangallo el Viejo. Perfeccion arquitectonica.", "Cantine aperte: Muchas bodegas tienen tienda abierta sin cita. Prueba y compra directamente del productor.", "Pecorino di Pienza: El queso perfecto para acompanar Vino Nobile. Pienza esta a 15 minutos.", "Notte del Vino Nobile: Festival en julio con catas, musica, comida. El pueblo entero celebra."],
-        image: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Bolgheri: Donde Nacieron los Super Tuscans",
@@ -5293,7 +5293,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Donde Alojarse: Agroturismos y Hoteles",
         content: "La mejor forma de vivir la Toscana vinicola es quedarse en el campo, rodeado de vinedos.",
         list: ["Agroturismos: Fincas que ofrecen alojamiento. Desayuno con productos propios, vinos incluidos. EUR 80-200/noche.", "Relais de lujo: Antiguas villas y castillos convertidos en hoteles boutique. Castello Banfi, Borgo San Felice. EUR 300-800/noche.", "B&B en pueblos: Opcion mas economica. Ambiente autentico, propietarios locales. EUR 60-120/noche.", "Florencia como base: Si no quieres cambiar de hotel, el Chianti esta a 30-45 minutos. Menos romantico pero practico.", "Siena como base: Mejor ubicada para Chianti, Montalcino y Montepulciano. Ciudad medieval espectacular.", "Reserva con antelacion: En temporada alta (mayo-octubre), los mejores agroturismos se llenan rapido."],
-        image: "https://images.unsplash.com/photo-1534445967719-8ae7b972b1a5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534445967719-8ae7b972b1a5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Moverse: Coche, Tour o Chofer",
@@ -5304,7 +5304,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Itinerario Sugerido: 5 Dias de Vino",
         content: "Un recorrido completo por las mejores zonas vinicolas de la Toscana:",
         list: ["Dia 1 - Llegada y Florencia: Aterriza, recoge coche, noche en Florencia o Chianti.", "Dia 2 - Chianti Classico: Greve, Castellina, Radda. 2-3 bodegas. Cena en Panzano (Dario Cecchini).", "Dia 3 - San Gimignano y Vernaccia: Torres medievales, Vernaccia blanca, almuerzo con vistas. Noche en Montepulciano.", "Dia 4 - Montepulciano y Montalcino: Vino Nobile por la manana, Brunello por la tarde. Valle de Orcia al atardecer.", "Dia 5 - Bolgheri o regreso: Super Tuscans en la costa o regreso tranquilo a Florencia con paradas.", "Tip: No intentes ver todo. Menos bodegas, mas calma. La Toscana se disfruta lento."],
-        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejor Epoca Para la Ruta del Vino",
@@ -5314,7 +5314,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Descubre la Toscana del Vino con Trips Europa",
         content: "En Tripseuropa.com organizamos tu ruta vinicola perfecta: reservamos las mejores bodegas (incluidas las exclusivas), te conseguimos conductor privado para que todos puedan catar, seleccionamos agroturismos con encanto, y disenamos itinerarios personalizados segun tus gustos. Conocemos a los productores, las joyas escondidas, y los restaurantes donde comen los locales. La Toscana del vino merece ser vivida sin prisas ni preocupaciones. Contacta a nuestros asesores por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia enoturistica en Italia.",
-        image: "https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5329,7 +5329,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "praga-presupuesto",
     slug: "praga-presupuesto",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Praga con Poco Presupuesto: Guia para Ahorrar", en: "Prague on a Budget: Money-Saving Guide" },
     excerpt: { es: "Praga es una de las capitales mas economicas de Europa. Alojamiento, comida y actividades baratas.", en: "Prague is one of Europe's most affordable capitals. Cheap accommodation, food and activities." },
     category: "consejos",
@@ -5343,19 +5343,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Praga: La Joya Economica de Europa Central",
         content: "Praga es una de las capitales mas hermosas y accesibles de Europa. Mientras ciudades como Paris, Londres o Amsterdam pueden vaciar tu cartera rapidamente, la capital checa ofrece arquitectura gotica impresionante, historia fascinante y vida nocturna vibrante a precios que parecen de hace una decada. Con planificacion inteligente, puedes disfrutar de Praga gastando entre EUR 40-60 diarios, incluyendo alojamiento, comida y actividades. Esta guia te mostrara exactamente como hacerlo sin sacrificar la experiencia.",
-        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Alojamiento Economico: Donde Dormir Barato",
         content: "El alojamiento es donde puedes ahorrar mas en Praga. Los precios son significativamente mas bajos que en Europa Occidental.",
         list: ["Hostales: EUR 10-20/noche en dormitorio, EUR 30-50 habitacion privada. Czech Inn, Mosaic House, Sir Toby's son excelentes.", "Apartamentos Airbnb: EUR 35-60/noche para 2 personas. Cocina incluida para ahorrar en comidas. Busca en Zizkov o Vinohrady.", "Hoteles economicos: EUR 40-70/noche para habitacion doble. Menos centricos pero limpios y funcionales.", "Hoteles boutique: EUR 70-100/noche. Lujo accesible comparado con otras capitales. Design hotels checos son geniales.", "Barrios recomendados: Zizkov (autentico, barato), Vinohrady (hipster, buen precio), Karlin (moderno, en auge). Evita el centro historico para dormir.", "Temporada baja: Noviembre-marzo (excepto Navidad) precios caen 30-50%. Hace frio pero la ciudad es magica."],
-        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Comida Barata: Donde Comer Como un Local",
         content: "La comida checa es abundante, sabrosa y economica. Evita los restaurantes turisticos de la Plaza de la Ciudad Vieja y come donde comen los checos.",
         list: ["Kantyny (cantinas): Buffets de autoservicio. Plato principal desde EUR 3-5. Lokals, Sisters, Kantyna son populares.", "Hospodas (tabernas): Pubs tradicionales con comida casera. Menu del dia EUR 5-8. Ambiente autentico.", "Svickova: El plato nacional. Ternera en crema con arandanos y knedliky (dumplings). EUR 6-9 en sitios locales.", "Trdelnik: El chimney cake que veras en todas partes NO es tradicional checo (es hungaro). Pero esta rico y cuesta EUR 3-4.", "Mercados: Naplavka (sabados, junto al rio), Manifesto Market (contenedores hipster), Farmarske trziste (productos locales).", "Supermercados: Billa, Albert, Lidl. Compra quesos, embutidos, pan y cena picnic. EUR 5-10 para dos personas.", "Cerveza: Pilsner Urquell, Kozel, Staropramen. En pub local EUR 1.5-2.5 por medio litro. En zona turistica EUR 4-5."],
-        image: "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Transporte: Moverse Gastando Poco",
@@ -5366,13 +5366,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Atracciones Gratis: Lo Mejor Sin Pagar",
         content: "Muchas de las mejores experiencias de Praga son completamente gratuitas.",
         list: ["Puente de Carlos: Iconico. Mejor al amanecer (sin turistas) o al atardecer (luz magica). Gratis siempre.", "Plaza de la Ciudad Vieja: Reloj Astronomico (cada hora en punto), arquitectura gotica y barroca. Gratis.", "Barrio Judio (Josefov): Pasear por sus calles es gratis. Los museos y sinagogas cuestan entrada.", "Petrin Hill: Colina con vistas panoramicas. Subida a pie gratis. El funicular cuesta un billete de transporte normal.", "Letna Park: Parque con metronomico gigante y las mejores vistas de la ciudad. Terraza de cerveza barata.", "Vysehrad: Fortaleza medieval, cementerio de artistas famosos, vistas al Moldava. Gratis.", "Cambio de guardia: En el Castillo de Praga, cada hora. Ceremonia completa al mediodia. Gratis."],
-        image: "https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Atracciones con Entrada: Cuales Valen la Pena",
         content: "Algunas atracciones requieren entrada. Aqui te decimos cuales justifican el gasto.",
         list: ["Castillo de Praga: Circuito B (Catedral, Palacio, Basilica, Callejon Dorado) EUR 10. Imprescindible.", "Torre del Reloj Astronomico: EUR 5 por subir. Vistas de la plaza. Alternativa gratis: terraza de cualquier cafeteria cercana.", "Biblioteca Clementinum: La mas bella de Europa. Tour guiado EUR 12. Para amantes de libros y arquitectura.", "Museo Nacional: Recien renovado, impresionante edificio. EUR 8. Colecciones de historia natural y cultural.", "Free walking tours: Propina voluntaria (EUR 5-10 recomendado). Sandeman's y otros ofrecen tours de 2-3 horas.", "Prague Card: EUR 62 por 2 dias. Solo vale si visitas muchos museos. Calcula antes de comprar."],
-        image: "https://images.unsplash.com/photo-1458150945447-7fb764c11a92?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1458150945447-7fb764c11a92?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "La Cerveza Mas Barata de Europa",
@@ -5383,7 +5383,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Vida Nocturna Economica",
         content: "Praga tiene una vida nocturna legendaria a precios accesibles. Desde clubs de techno hasta jazz intimo.",
         list: ["Clubs: Cross Club (industrial/techno, entrada gratis o EUR 5), Roxy, Lucerna Music Bar. Covers EUR 3-10.", "Cocktails: EUR 5-8 en buenos bares. En ciudades como Londres o Paris pagas EUR 15-20.", "Jazz: Jazz Dock (junto al rio), U Maleho Glena. Entrada EUR 5-10. Nivel altisimo.", "Bares de vinilo: Vinyl Bar, Bukowski's. Para hipsters y amantes de la musica.", "Zona de fiesta: Dlouha Street es el epicentro. Muchas opciones en pocos metros.", "Seguridad: Praga es muy segura de noche. Unico peligro: vendedores callejeros de drogas falsas (ignoralos)."],
-        image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Excursiones de un Dia Economicas",
@@ -5394,7 +5394,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Trucos Extra Para Ahorrar",
         content: "Consejos adicionales de viajeros experimentados para estirar tu presupuesto al maximo.",
         list: ["Coronas checas: Paga siempre en CZK (coronas), nunca en euros. El cambio en comercios es terrible.", "Cambio de moneda: Evita casas de cambio en zonas turisticas (comisiones abusivas). Usa cajeros automaticos o cambia en bancos.", "Propinas: 10% es suficiente y apreciado. No obligatorio como en USA.", "Agua: El agua del grifo es potable y excelente. Lleva botella reutilizable.", "SIM local: EUR 5-10 por tarjeta con datos ilimitados. Evita roaming.", "Temporada baja: Enero-febrero precios minimos. Hace frio pero hay menos turistas y todo es mas barato.", "Mercados navidenos: Diciembre es magico pero mas caro y lleno. Considera principios de diciembre."],
-        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto Diario Realista",
@@ -5409,7 +5409,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Viaje a Praga con Trips Europa",
         content: "En Tripseuropa.com te ayudamos a organizar tu escapada a Praga y Europa Central con el mejor valor. Conocemos los hostales con mejor relacion calidad-precio, los restaurantes locales autenticos, y podemos combinarte Praga con Viena, Budapest o Berlin en circuitos optimizados. Tambien organizamos traslados, excursiones a Cesky Krumlov y reservamos entradas sin colas. Viaja inteligente, gasta menos, disfruta mas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje economico a Praga.",
-        image: "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5424,7 +5424,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "londres-4-dias",
     slug: "londres-4-dias",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Londres en 4 Dias: Big Ben, Tower Bridge y Harry Potter", en: "London in 4 Days: Big Ben, Tower Bridge and Harry Potter" },
     excerpt: { es: "Itinerario completo incluyendo los estudios de Harry Potter. Imprescindibles y secretos locales.", en: "Complete itinerary including Harry Potter studios. Must-sees and local secrets." },
     category: "guias",
@@ -5438,31 +5438,31 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Londres: Una Ciudad que Enamora",
         content: "Londres es una de las ciudades mas fascinantes del mundo. Historia milenaria, cultura vibrante, parques magnificos, pubs acogedores y una energia inconfundible. En 4 dias puedes ver los iconos imprescindibles, visitar los estudios de Harry Potter, y descubrir rincones que solo conocen los locales. Esta guia te muestra exactamente como aprovechar cada minuto, con itinerarios dia por dia, consejos practicos y secretos que convertiran tu viaje en una experiencia inolvidable.",
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1: Westminster y los Iconos Clasicos",
         content: "Tu primer dia debe empezar con los monumentos que definen Londres. Comienza temprano para evitar multitudes.",
         list: ["Big Ben y Parlamento: Llegad a las 8:00 AM. Fotos sin turistas. El Parlamento es Patrimonio de la Humanidad. Tour interior disponible (reserva online).", "Abadia de Westminster: Donde se coronan los reyes desde 1066. Tumba de Newton, Darwin, reyes y poetas. Entrada GBP 27, audio-guia incluida.", "Changing of the Guard: Palacio de Buckingham a las 11:00 AM (lunes, miercoles, viernes, y diario en verano). Llegad a las 10:15 para buen sitio.", "St. James's Park: Paseo entre el Palacio y Whitehall. Ardillas, pelicanos, vistas del London Eye. Perfecto para descansar.", "Trafalgar Square: Los leones de Nelson, la National Gallery (gratis y espectacular), ambiente londinense puro.", "Covent Garden: Artistas callejeros, tiendas, mercado historico. Cena en alguno de los restaurantes del mercado."],
-        image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 2: La Torre de Londres y el Este",
         content: "El lado este de Londres combina historia medieval con modernidad vanguardista. Un contraste fascinante.",
         list: ["Tower of London: Fortaleza de 1000 anos. Las Joyas de la Corona, los cuervos, los Beefeaters. Abre 9:00 AM, llegad pronto. GBP 34, reserva online para evitar colas.", "Tower Bridge: Cruzalo a pie (gratis). Para la pasarela de cristal elevada, GBP 12. Fotos iconicas desde ambas orillas.", "Borough Market: Mercado gastronomico. Brunch epico: scotch eggs, fish & chips, pasteles. Ambiente local autentico.", "The Shard: El rascacielos mas alto de Europa Occidental. Vistas desde la plataforma (GBP 32) o coctel en el bar (gratis subir, pagas consumicion).", "South Bank: Paseo junto al Tamesis. Tate Modern (gratis), Shakespeare's Globe, artistas callejeros. Londres contemporaneo.", "Pub en Southwark: Termina en un pub historico como The George Inn (de 1677) o Anchor Bankside."],
-        image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 3: Los Estudios de Harry Potter",
         content: "El sueno de todo Potterhead. Los Warner Bros Studios donde se filmaron las 8 peliculas merecen un dia completo.",
         list: ["Reserva obligatoria: Las entradas se agotan semanas o meses antes. GBP 53 adultos, GBP 42 ninos. Compra en la web oficial NUNCA en reventa.", "Como llegar: Tren desde Euston a Watford Junction (20 min, GBP 8-15). Bus lanzadera desde la estacion (gratis con entrada).", "Duracion: 3-4 horas minimo. Hay fans que pasan 6 horas. No hay limite de tiempo.", "Que veras: El Gran Comedor, Diagon Alley, el Hogwarts Express, la oficina de Dumbledore, el Bosque Prohibido, la maqueta gigante de Hogwarts.", "Cerveza de Mantequilla: Si, puedes probarla. Dulce, cremosa, sin alcohol. Imprescindible.", "Tienda: La tienda mas grande de merchandising de Harry Potter del mundo. Varitas, bufandas, ranas de chocolate. Prepara la cartera.", "Por la tarde: Regresa a Londres y visita King's Cross (Platform 9 3/4) y la tienda Harry Potter de la estacion."],
-        image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 4: Museos, Parques y Notting Hill",
         content: "Tu ultimo dia combina cultura gratuita, naturaleza urbana y uno de los barrios mas fotografiados de Londres.",
         list: ["British Museum: El museo mas visitado del Reino Unido. Piedra Rosetta, momias egipcias, esculturas del Partenon. GRATIS. Abre 10:00 AM.", "Hyde Park: El pulmon verde de Londres. Paseo, barcas en el Serpentine, Speakers' Corner. Si tienes tiempo, visita los Kensington Gardens.", "Notting Hill: Casas de colores pastel, librerias, cafes instagrameables. Pasea por Portobello Road (mercado los sabados).", "Kensington: Barrio elegante. Si te interesa, entrada al Palacio de Kensington (GBP 21) o Natural History Museum (gratis).", "Harrods: Aunque no compres nada, pasear por los grandes almacenes mas famosos del mundo es una experiencia.", "Despedida: Cena de despedida en un gastropub del West End o un curry en Brick Lane."],
-        image: "https://images.unsplash.com/photo-1534695215921-52f8a19e7909?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534695215921-52f8a19e7909?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Secretos Locales: Lo que No Sale en las Guias",
@@ -5478,13 +5478,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Donde Comer: Fish & Chips, Curries y Mas",
         content: "Londres ha evolucionado de capital de mala comida a paraiso gastronomico multicultural.",
         list: ["Fish & Chips: Poppies (Spitalfields), The Golden Hind (Marylebone), Rock & Sole Plaice (Covent Garden). GBP 12-18.", "Curry: Brick Lane es la calle curry. Dishoom es el restaurante indio mas famoso de Londres (cola pero vale la pena).", "Gastropubs: Comida de pub elevada. The Harwood Arms, The Anchor & Hope, The Marksman. GBP 15-25 plato.", "Mercados: Borough Market (comida global), Camden Market (street food), Maltby Street (brunch dominguero).", "Afternoon Tea: Tradicion britanica. The Ritz (lujo, GBP 75+), Sketch (artistico), o cualquier hotel elegante.", "Economico: Pret A Manger, Leon, Wasabi. Comida rapida de calidad. GBP 6-10. Hay en todas partes.", "Propina: 10-12.5% en restaurantes. A veces incluida en la cuenta. En pubs no se deja propina."],
-        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Alojamiento: Donde Dormir en Londres",
         content: "Londres es caro para dormir. Pero con estrategia puedes encontrar opciones razonables.",
         list: ["Zonas recomendadas: South Kensington (museos), Shoreditch (hipster), King's Cross (transporte), Southwark (moderno).", "Hoteles economicos: Premier Inn, Travelodge, Ibis. GBP 80-120/noche. Basicos pero limpios y bien ubicados.", "Boutique accesibles: CitizenM, Hub by Premier Inn, Z Hotels. GBP 100-150. Disenoo moderno, habitaciones pequenas.", "Apartamentos: Airbnb o Plum Guide. Desde GBP 100/noche. Cocina para ahorrar en comidas.", "Lujo: The Savoy, Claridge's, The Ned. GBP 400+. Para ocasiones especiales.", "Evita: Hoteles en Piccadilly Circus o Leicester Square. Caros, ruidosos, mala relacion calidad-precio.", "Reserva con antelacion: Precios suben mucho cerca de la fecha. 2-3 meses antes es ideal."],
-        image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto: Cuanto Cuesta Londres",
@@ -5495,7 +5495,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Mejor Epoca Para Visitar Londres",
         content: "Londres tiene encanto todo el ano, pero cada temporada ofrece experiencias diferentes.",
         list: ["Primavera (abril-mayo): Parques en flor, clima agradable (12-18C), dias mas largos. Nuestra recomendacion.", "Verano (junio-agosto): Dias larguisimos (luz hasta 21:30), festivales, terrazas. Pero mas turistas y precios altos.", "Otono (septiembre-octubre): Colores en los parques, menos turistas, precios moderados. Septiembre es excelente.", "Invierno (noviembre-febrero): Navidad magica (luces, mercados), pero frio (2-8C), dias cortos, puede llover mucho.", "Evita: Semana Santa, agosto (todo lleno), fin de ano (carisimo).", "Lluvia: Siempre puede llover. Lleva paraguas pequeno y capas. No dejes que te arruine el dia."],
-        image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos Para Tu Viaje",
@@ -5505,7 +5505,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Viaje a Londres con Trips Europa",
         content: "En Tripseuropa.com somos expertos en viajes a Londres. Reservamos tus entradas a los Estudios Harry Potter con meses de antelacion (cuando tu no puedes por la diferencia horaria), conseguimos hoteles con buena relacion calidad-precio, organizamos traslados desde cualquier aeropuerto, y disenamos itinerarios personalizados. Si quieres combinar Londres con Paris, Escocia o Irlanda, creamos el circuito perfecto. No pierdas tiempo ni dinero: viaja tranquilo con expertos que conocen cada rincon de la ciudad. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura londinense.",
-        image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5520,7 +5520,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "trenes-europa-guia",
     slug: "trenes-europa-guia",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Guia de Trenes en Europa: Eurail, TGV, AVE y Mas", en: "Train Guide in Europe: Eurail, TGV, AVE and More" },
     excerpt: { es: "Como moverse en tren por Europa. Pases, reservas, precios y trucos para viajar comodo.", en: "How to get around Europe by train. Passes, reservations, prices and tips for comfortable travel." },
     category: "consejos",
@@ -5534,19 +5534,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Tren: La Mejor Forma de Viajar por Europa",
         content: "Europa tiene la red ferroviaria mas desarrollada del mundo. Trenes de alta velocidad conectan las principales ciudades, trenes regionales atraviesan paisajes espectaculares, y trenes nocturnos te llevan de un pais a otro mientras duermes. Viajar en tren es comodo (asientos amplios, wifi, enchufes), ecologico, puntual, y te deja en el centro de las ciudades. Para viajeros latinoamericanos, el tren europeo es una revelacion: olvida los aeropuertos, los controles de seguridad y los traslados. Sube, sientate, y disfruta del paisaje.",
-        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Trenes de Alta Velocidad: Los Mejores de Europa",
         content: "Los trenes de alta velocidad (250-320 km/h) conectan las grandes ciudades europeas. Aqui estan los principales:",
         list: ["TGV (Francia): El pionero. Paris-Lyon en 2h, Paris-Marsella en 3h, Paris-Burdeos en 2h. Reserva obligatoria.", "Eurostar: Conecta Londres con Paris (2h15), Bruselas (2h) y Amsterdam (3h45). Atraviesa el tunel del Canal de la Mancha.", "Thalys: Conecta Paris, Bruselas, Amsterdam y Colonia. Trenes rojos muy comodos.", "AVE (Espana): Excelente red. Madrid-Barcelona en 2h30, Madrid-Sevilla en 2h20. De los mejores del mundo.", "Frecciarossa (Italia): Roma-Milan en 3h, Roma-Florencia en 1h30. Trenes rojos elegantes.", "ICE (Alemania): Frankfurt-Berlin en 4h, Munich-Berlin en 4h. Espaciosos y puntuales.", "Shinkansen europeos: Los nuevos Italo en Italia y OUIGO en Francia/Espana son low-cost y excelentes."],
-        image: "https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Eurail Pass: Como Funciona",
         content: "El Eurail Pass es un pase de tren ilimitado para viajeros no europeos. Permite viajar por multiples paises con un solo billete.",
         list: ["Quien puede comprarlo: Solo residentes de paises no europeos (perfecto para latinoamericanos).", "Tipos de pase: Global Pass (33 paises), One Country Pass (un solo pais), Select Pass (2-4 paises que eliges).", "Duracion: Desde 4 dias en un mes hasta 3 meses continuos. Cuantos mas dias, mas barato por dia.", "Precios 2026: Global Pass 4 dias/1 mes desde EUR 211; 15 dias continuos desde EUR 433; 3 meses desde EUR 796.", "Primera o Segunda clase: Primera clase 50% mas cara pero asientos mas amplios, menos gente, a veces comida incluida.", "Jovenes (12-27 anos): 25% descuento. Ninos (4-11): 50% descuento. Menores de 4: gratis.", "Seniors (60+): 10% descuento en algunos pases."],
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Eurail vs Billetes Individuales: Que Conviene Mas",
@@ -5557,7 +5557,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Reservas: Cuando Son Necesarias",
         content: "Algunos trenes europeos requieren reserva obligatoria ademas del billete o pase Eurail. Esto confunde a muchos viajeros.",
         list: ["Reserva obligatoria: TGV (Francia), Eurostar, Thalys, AVE (Espana), Frecciarossa (Italia), trenes nocturnos.", "Reserva opcional: ICE (Alemania), trenes regionales en casi todos los paises, SBB (Suiza).", "Coste de reserva con Eurail: EUR 10-15 trenes nacionales, EUR 25-35 trenes internacionales, EUR 40+ trenes nocturnos (cama).", "Donde reservar: En la app Eurail Rail Planner, en estaciones de tren, o en las webs de cada operador (SNCF, Renfe, Trenitalia).", "Cuando reservar: Cuanto antes, mejor. Las plazas para pasajeros Eurail son limitadas y se agotan.", "Truco: En Alemania y Suiza casi nunca necesitas reservar. Sube al tren y sientate. Mas flexibilidad.", "Problema comun: Viajeros con Eurail no reservan y no pueden subir a trenes populares. Planifica con antelacion."],
-        image: "https://images.unsplash.com/photo-1596237563267-84ffd99c80e1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1596237563267-84ffd99c80e1?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Trenes Low Cost: Viajar Barato Sin Eurail",
@@ -5568,13 +5568,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Trenes Nocturnos: Ahorrar Hotel Viajando",
         content: "Los trenes nocturnos estan volviendo a Europa. Duermes en el tren, llegas a otra ciudad, y ahorras una noche de hotel.",
         list: ["Nightjet (Austria/OBB): El lider. Viena-Roma, Munich-Venecia, Zurich-Berlin, y muchas mas rutas. Cabinas privadas o literas.", "Caledonian Sleeper: Londres-Escocia (Edimburgo, Glasgow, Highlands). Muy romantico.", "European Sleeper: Nueva ruta Bruselas-Berlin-Praga. Sostenible y comoda.", "Santa Claus Express: Helsinki-Rovaniemi (Laponia). Perfecto para ver auroras boreales.", "Opciones de alojamiento: Asiento reclinable (EUR 30-50), litera 4-6 personas (EUR 50-80), cabina privada (EUR 100-200).", "Que incluye: Segun cabina: sabanas, desayuno, ducha compartida o privada, wifi.", "Reserva con antelacion: Las cabinas privadas se agotan rapidamente. 2-3 meses antes en temporada alta."],
-        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Rutas Escenicas: Los Trenes Mas Bonitos de Europa",
         content: "Algunos trenes europeos son atracciones turisticas en si mismos. El viaje es el destino.",
         list: ["Glacier Express (Suiza): Zermatt-St. Moritz. 8 horas atravesando los Alpes. 291 puentes, 91 tuneles. El tren mas lento del mundo (a proposito).", "Bernina Express (Suiza): Chur-Tirano. Cruza los Alpes hasta Italia. Patrimonio UNESCO. Viaductos espectaculares.", "Flam Railway (Noruega): 20 km de fiordos dramaticos. Una de las lineas mas empinadas del mundo.", "West Highland Line (Escocia): Glasgow-Mallaig. Pasas por el viaducto de Harry Potter (Glenfinnan).", "Cinque Terre Express (Italia): Recorre los 5 pueblos de colores sobre el mar. Frecuente y barato.", "Circumetnea (Sicilia): Da la vuelta al Etna. Tren historico, paisajes volcanicos.", "Tip: Reserva asiento junto a la ventana. Lleva camara con bateria cargada. Estos trenes valen cada euro."],
-        image: "https://images.unsplash.com/photo-1527254747608-0b5b0c14c6c7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527254747608-0b5b0c14c6c7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Apps y Webs Esenciales Para Viajar en Tren",
@@ -5585,13 +5585,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos Practicos Para Viajar en Tren",
         content: "Trucos que haran tu experiencia ferroviaria mas comoda y eficiente.",
         list: ["Llega 15-20 min antes: Los trenes europeos salen a la hora exacta. No hay anuncios repetitivos.", "Valida tu billete: En Italia y algunos paises, debes validar el billete en maquinas amarillas antes de subir. Si no, multa.", "Equipaje: No hay limite de peso ni tamano (dentro de lo razonable). Hay espacio para maletas grandes.", "Wifi: Disponible en la mayoria de trenes de alta velocidad. Calidad variable.", "Enchufes: Casi todos los trenes modernos tienen enchufes en cada asiento. Lleva adaptador europeo.", "Comida: Puedes llevar tu propia comida y bebida. Los vagones restaurante son caros.", "Primera clase: A veces solo EUR 10-20 mas. Vale la pena en trayectos largos.", "Asiento: Pasillo para ir al bano facilmente. Ventana para disfrutar paisajes. En direccion de marcha para evitar mareos."],
-        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Rutas Populares y Tiempos de Viaje",
         content: "Aqui tienes las conexiones mas usadas por viajeros latinoamericanos en Europa:",
         list: ["Paris - Amsterdam: 3h15 (Thalys). Desde EUR 35 con antelacion.", "Paris - Londres: 2h15 (Eurostar). Desde EUR 50. Control de pasaportes incluido.", "Madrid - Barcelona: 2h30 (AVE). Desde EUR 25 con antelacion. Hasta EUR 150 ultimo minuto.", "Roma - Florencia: 1h30 (Frecciarossa). Desde EUR 20. Frecuencia cada 30 minutos.", "Munich - Viena: 4h (OBB). Paisajes alpinos espectaculares.", "Zurich - Milan: 3h15 (EC). Atraviesa los Alpes por el tunel del Gotthard.", "Berlin - Praga: 4h15 (EC). Sin reserva obligatoria con Eurail.", "Barcelona - Niza: 4h30 (TGV). Costa mediterranea todo el camino."],
-        image: "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Errores Comunes y Como Evitarlos",
@@ -5601,7 +5601,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Ruta en Tren con Trips Europa",
         content: "En Tripseuropa.com somos expertos en viajes en tren por Europa. Te ayudamos a decidir si el Eurail Pass te conviene, reservamos tus trenes de alta velocidad (en espanol, sin errores), disenamos itinerarios que optimizan tiempos y conexiones, y te conseguimos los mejores trenes escenicas. Sabemos que rutas tienen las mejores vistas, cuales trenes tienen las mejores cabinas nocturnas, y como evitar los errores de principiante. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura ferroviaria por Europa.",
-        image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5616,7 +5616,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "itinerario-espana-15-dias",
     slug: "itinerario-espana-15-dias",
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Espana en 15 Dias: El Itinerario Perfecto", en: "Spain in 15 Days: The Perfect Itinerary" },
     excerpt: { es: "El itinerario perfecto para recorrer Espana. Rutas, transporte, alojamiento y consejos.", en: "The perfect itinerary for touring Spain. Routes, transport, accommodation and tips." },
     category: "guias",
@@ -5630,13 +5630,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Espana: Un Pais de Contrastes Increibles",
         content: "Espana es uno de los destinos mas completos del mundo. En 15 dias puedes experimentar playas mediterraneas, ciudades cosmopolitas, pueblos blancos de ensueno, arquitectura morisca, gastronomia de clase mundial, y una cultura vibrante que mezcla tradicion con modernidad. Desde la elegancia de Madrid hasta el genio de Gaudi en Barcelona, pasando por el flamenco de Andalucia y las fiestas de San Sebastian, Espana ofrece experiencias para todos los gustos. Este itinerario esta disenado para viajeros latinoamericanos que quieren ver lo esencial sin prisas, con tiempo para disfrutar cada destino.",
-        image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 1-3: Madrid, La Capital con Corazon",
         content: "Comienza tu viaje en Madrid, el corazon de Espana. Tres dias te permiten explorar la capital sin prisas.",
         list: ["Dia 1: Llegada y Barrio de los Austrias. Puerta del Sol, Plaza Mayor, Palacio Real (exterior o interior si reservas). Tapeo en La Latina.", "Dia 2: Triangulo del Arte. Museo del Prado (imprescindible), Parque del Retiro, barrio de Salamanca. Cena en Chueca o Malasana.", "Dia 3: Reina Sofia (Guernica de Picasso), Mercado de San Miguel, Gran Via. Opcional: excursion a Toledo (1 hora en tren).", "Alojamiento: Zona Sol/Gran Via para estar centrico. EUR 80-150/noche hotel 3-4 estrellas.", "Gastronomia: Bocadillo de calamares, cocido madrileno, churros con chocolate en San Gines.", "Transporte: Metro excelente. Tarjeta turistica de 3 dias EUR 18.40. Caminar es la mejor opcion en el centro."],
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 4-5: Toledo y Segovia (Excursiones desde Madrid)",
@@ -5647,31 +5647,31 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dias 6-8: Barcelona, La Ciudad de Gaudi",
         content: "AVE de Madrid a Barcelona en 2h30. Tres dias para explorar la ciudad mas cosmopolita de Espana.",
         list: ["Dia 6: Llegada y Barrio Gotico. Catedral, Las Ramblas, Mercado de la Boqueria, Playa de la Barceloneta. Tapas en el Born.", "Dia 7: Gaudi completo. Sagrada Familia (reserva obligatoria), Park Guell (reserva recomendada), Casa Batllo o Casa Mila.", "Dia 8: Montjuic (teleferico, Fundacion Miro, vistas), Barrio de Gracia, cena de despedida en el Raval.", "Alojamiento: Eixample o Gotico. EUR 100-180/noche. Evita apartamentos turisticos ilegales.", "Gastronomia: Pan con tomate, jamon iberico, patatas bravas, crema catalana, cava.", "Tip: Compra entradas a Sagrada Familia con 2-3 semanas de antelacion. Se agotan."],
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 9-11: Andalucia - Sevilla, Cordoba y Granada",
         content: "Vuelo Barcelona-Sevilla (1h30) o tren Barcelona-Sevilla (5h30). Tres ciudades andaluzas imprescindibles.",
         list: ["Dia 9 - Sevilla: Alcazar (reserva online), Catedral y Giralda, Barrio de Santa Cruz. Espectaculo flamenco por la noche.", "Dia 10 - Cordoba: Excursion de medio dia (45 min en AVE). Mezquita-Catedral, Juderia, Patios. Regreso a Sevilla.", "Dia 11 - Granada: AVE Sevilla-Granada (2h40). Alhambra (reserva con MESES de antelacion), Albaicin al atardecer, tapas gratis.", "Alojamiento: 2 noches Sevilla, 1 noche Granada. EUR 70-130/noche.", "Alhambra: Las entradas se agotan. Reserva en la web oficial 2-3 meses antes. Es IMPRESCINDIBLE.", "Flamenco: Tablao en Sevilla o cueva en Granada. EUR 30-50 con bebida. Experiencia autentica."],
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 12-13: Costa del Sol y Pueblos Blancos",
         content: "Desde Granada, explora la costa mediterranea andaluza y los pueblos blancos mas bonitos.",
         list: ["Dia 12: Granada a Malaga (1h30 en coche). Museo Picasso, Alcazaba, playa. Noche en Malaga.", "Dia 13: Ruta pueblos blancos. Mijas, Ronda (imprescindible), Marbella. Noche en Marbella o Malaga.", "Ronda: Puente Nuevo espectacular, plaza de toros historica, vistas al Tajo. Almuerzo con vistas.", "Alternativa: Si prefieres playa, quédate en la Costa del Sol. Nerja, Frigiliana, Marbella.", "Alquiler coche: EUR 30-50/dia. Necesario para pueblos blancos. Devuelve en Malaga aeropuerto.", "Gastronomia: Pescaito frito, espetos de sardinas, gazpacho, salmorejo, vino de Malaga."],
-        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dias 14-15: Valencia o San Sebastian (Elige Tu Favorito)",
         content: "Tienes dos opciones para cerrar tu viaje, segun tus preferencias:",
         list: ["Opcion A - Valencia (2 dias): Vuelo Malaga-Valencia (1h). Ciudad de las Artes y las Ciencias, playa, paella autentica, Barrio del Carmen.", "Opcion B - San Sebastian (2 dias): Vuelo Malaga-Bilbao (1h30) + bus a San Sebastian (1h15). Playa de la Concha, pintxos, Monte Igueldo.", "Valencia: Ideal si quieres playa, arquitectura futurista, y la paella original.", "San Sebastian: Ideal si eres foodie. La ciudad con mas estrellas Michelin per capita del mundo.", "Ultimo dia: Regreso a Madrid o vuelo directo desde Valencia/Bilbao a tu pais.", "Tip: San Sebastian en verano esta muy lleno. Valencia es mejor opcion en julio-agosto."],
-        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Transporte: Como Moverse por Espana",
         content: "Espana tiene excelente infraestructura de transporte. Aqui te explicamos las mejores opciones.",
         list: ["AVE (tren alta velocidad): Madrid-Barcelona 2h30, Madrid-Sevilla 2h20, Madrid-Malaga 2h30. Rapido, comodo, puntual.", "Vuelos internos: Iberia, Vueling, Ryanair. Utiles para distancias largas (Barcelona-Sevilla, Malaga-Bilbao).", "Alquiler de coche: Imprescindible para pueblos blancos y Costa del Sol. EUR 30-50/dia. Reserva con antelacion.", "Autobuses ALSA: Mas baratos que trenes, cubren rutas que el tren no llega. Comodos para distancias medias.", "Blablacar: Compartir coche. Popular en Espana, economico, conoces gente local.", "Renfe app: Compra billetes AVE con antelacion. Precio sube mucho cerca de la fecha. Ofertas Promo desde EUR 25."],
-        image: "https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Alojamiento: Donde Dormir en Espana",
@@ -5682,7 +5682,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia: Que Comer en Cada Region",
         content: "Espana es un paraiso gastronomico. Cada region tiene sus especialidades.",
         list: ["Madrid: Cocido madrileno, bocadillo de calamares, churros con chocolate, oreja a la plancha.", "Cataluna: Pa amb tomaquet, escalivada, calcots (en temporada), crema catalana, cava.", "Andalucia: Gazpacho, salmorejo, pescaito frito, jamon iberico, rabo de toro, flamenquin.", "Pais Vasco: Pintxos (tapas vascas), txuleton, bacalao al pil-pil, marmitako, txakoli.", "Valencia: Paella valenciana (pollo y conejo, NO mariscos), horchata, fideua.", "Galicia: Pulpo a feira, empanada, percebes, queimada, tarta de Santiago.", "Vino: Rioja (tintos), Ribera del Duero (tintos), Rias Baixas (blancos), Jerez (sherry), Cava (espumoso)."],
-        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto: Cuanto Cuesta Viajar por Espana",
@@ -5693,7 +5693,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Mejor Epoca Para Visitar Espana",
         content: "Espana tiene buen clima casi todo el ano, pero cada temporada tiene sus caracteristicas.",
         list: ["Primavera (abril-mayo): Nuestra recomendacion. Clima perfecto, Semana Santa, patios de Cordoba, menos turistas que verano.", "Verano (junio-agosto): Calor intenso en el sur (40C+). Ideal para norte (San Sebastian, Galicia) y playas.", "Otono (septiembre-octubre): Excelente. Vendimia en La Rioja, clima agradable, precios moderados.", "Invierno (noviembre-marzo): Ciudades culturales perfectas. Esqui en Sierra Nevada o Pirineos. Navidad magica.", "Semana Santa: Procesiones espectaculares en Sevilla, Malaga, Granada. Reserva con MESES de antelacion.", "Fiestas: San Fermin (julio, Pamplona), Feria de Abril (Sevilla), La Tomatina (agosto, Bunol), Las Fallas (marzo, Valencia)."],
-        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos Para Tu Viaje",
@@ -5703,7 +5703,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Viaje a Espana con Trips Europa",
         content: "En Tripseuropa.com somos expertos en viajes por Espana. Reservamos tus entradas a la Alhambra y Sagrada Familia con meses de antelacion (sabemos cuando se abren las reservas), organizamos traslados y alquiler de coches, conseguimos hoteles con encanto, y disenamos itinerarios personalizados segun tus intereses. Conocemos cada rincon de Espana y te ayudamos a evitar las trampas turisticas. Viaja tranquilo, con todo organizado, y disfruta al maximo. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura espanola.",
-        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5718,7 +5718,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "turquia-capadocia",
     slug: "turquia-capadocia",
-    image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Turquia Magica: Estambul, Capadocia y la Ruta Otomana", en: "Magical Turkey: Istanbul, Cappadocia and the Ottoman Route" },
     excerpt: { es: "Globos aerostaticos, mezquitas, bazares y paisajes lunares. Turquia es el puente entre Europa y Asia.", en: "Hot air balloons, mosques, bazaars and lunar landscapes. Turkey is the bridge between Europe and Asia." },
     category: "destinos",
@@ -5732,43 +5732,43 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Turquia: Donde Europa y Asia Se Encuentran",
         content: "Turquia es uno de los destinos mas fascinantes del mundo. Es el unico pais que pertenece a dos continentes, donde el Bosforo separa Europa de Asia en una linea de agua azul turquesa. Aqui convergen culturas milenarias: griegos, romanos, bizantinos, otomanos. Desde las cupulas de Santa Sofia hasta los paisajes surrealistas de Capadocia, desde los bazares vibrantes de Estambul hasta las terrazas blancas de Pamukkale, Turquia ofrece experiencias que no encontraras en ningun otro lugar. Para viajeros latinoamericanos, Turquia es sorprendentemente accesible: vuelos conectados via Europa, gente hospitalaria, y una relacion calidad-precio excepcional.",
-        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estambul: La Ciudad de los Dos Continentes",
         content: "Estambul merece al menos 3-4 dias. Es la unica ciudad del mundo que se extiende por dos continentes.",
         list: ["Dia 1 - Sultanahmet: Santa Sofia (ahora mezquita, entrada gratuita), Mezquita Azul, Cisterna Basilica, Hipodromo. Cena en Sultanahmet.", "Dia 2 - Bazares y Palacio: Palacio Topkapi (reserva online), Gran Bazar (4000+ tiendas), Bazar de las Especias. Paseo por Eminonu.", "Dia 3 - Bosforo: Crucero por el Bosforo (ferry publico o tour privado), Ortakoy, Palacio Dolmabahce, barrio de Kadikoy (lado asiatico).", "Dia 4 - Modernidad: Torre Galata (vistas espectaculares), calle Istiklal, barrio de Beyoglu. Hammam tradicional (Cemberlitas o Ayasofya Hurrem).", "Alojamiento: Sultanahmet (historico, cerca de todo), Beyoglu/Galata (moderno, vida nocturna), Kadikoy (autentico, lado asiatico).", "Gastronomia: Kebab, baklava, simit (pan con sesamo), meze turco, te turco (cay), cafe turco, raki (anisado)."],
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Capadocia: Paisajes de Otro Planeta",
         content: "Capadocia es el sueno hecho realidad de cualquier viajero. Formaciones rocosas surrealistas, ciudades subterraneas, y los famosos globos aerostaticos.",
         list: ["Vuelo en globo: LA experiencia imprescindible. Amanecer sobre los valles con cientos de globos. EUR 150-250. Reserva con semanas de antelacion.", "Goreme: Pueblo central, Museo al Aire Libre (iglesias rupestres con frescos bizantinos), formaciones de chimeneas de hadas.", "Valles: Valle del Amor (formaciones falicas), Valle Rojo (atardecer espectacular), Valle de las Palomas, Valle de Ihlara (caminata 14 km).", "Ciudades subterraneas: Derinkuyu y Kaymakli. 8 niveles bajo tierra, albergaban 20,000 personas. Claustrofobicos, abstenerse.", "Uchisar: Castillo excavado en roca, las mejores vistas panoramicas de Capadocia.", "Hoteles cueva: Experiencia unica. Habitaciones excavadas en la roca. Desde EUR 80/noche hasta lujo extremo.", "Cuanto tiempo: 2-3 noches minimo. 3 noches ideales para explorar sin prisas y tener opcion de vuelo si un dia se cancela por viento."],
-        image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Pamukkale: Las Terrazas de Algodon",
         content: "Pamukkale significa 'Castillo de Algodon' en turco. Las terrazas blancas de travertino con aguas termales son Patrimonio de la Humanidad.",
         list: ["Terrazas de travertino: Formaciones blancas calcificadas con piscinas de agua termal turquesa. Caminas descalzo por el agua tibia.", "Hierapolis: Ciudad grecorromana en la cima. Teatro, necropolis, puertas de la ciudad. Entrada combinada con terrazas.", "Piscina de Cleopatra: Piscina termal con columnas romanas sumergidas. EUR 13 adicionales. Dicen que Cleopatra se bano aqui.", "Atardecer: El mejor momento para visitar. Las terrazas se tiñen de rosa y dorado.", "Donde dormir: Pueblo de Pamukkale (economico) o Denizli (mas opciones). 1-2 noches suficientes.", "Como llegar: Bus desde Estambul (10h), desde Capadocia (10h), o vuelo a Denizli + bus local.", "Tip: Llega a las 17:00 para ver el atardecer y luego la iluminacion nocturna."],
-        image: "https://images.unsplash.com/photo-1600608881557-57c665a9e91c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1600608881557-57c665a9e91c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Efeso: La Ciudad Romana Mejor Conservada",
         content: "Efeso fue una de las ciudades mas importantes del mundo antiguo. Hoy es uno de los sitios arqueologicos mas impresionantes del Mediterraneo.",
         list: ["Biblioteca de Celso: Icono de Efeso. Fachada restaurada de 2 pisos. Una de las bibliotecas mas grandes de la antiguedad.", "Gran Teatro: Capacidad para 25,000 espectadores. Donde predico San Pablo. Acustica perfecta.", "Casas de Terrazas: Mansiones romanas con mosaicos y frescos originales. Entrada adicional pero vale cada euro.", "Templo de Artemisa: Una de las 7 Maravillas del Mundo Antiguo. Solo queda una columna, pero la historia es fascinante.", "Casa de la Virgen Maria: Segun la tradicion, donde vivio la Virgen Maria sus ultimos anos. Lugar de peregrinacion.", "Como llegar: Desde Selcuk (3 km) o Kusadasi (puerto de cruceros). Excursion de un dia desde Estambul o Pamukkale.", "Tip: Llega temprano (8:00) o tarde (16:00) para evitar grupos de cruceros. Mucho sol, lleva agua y sombrero."],
-        image: "https://images.unsplash.com/photo-1568781269371-0edbc29a54e9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1568781269371-0edbc29a54e9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Costa Turquesa: Playas y Ruinas",
         content: "La costa sur de Turquia combina playas espectaculares con ruinas antiguas en un entorno mediterraneo.",
         list: ["Antalya: Ciudad principal de la Riviera Turca. Casco antiguo (Kaleici), playas, puerto. Base perfecta para explorar.", "Kas: Pueblo bohemio con encanto. Buceo en ruinas sumergidas, kayak a Kekova (ciudad hundida), playas escondidas.", "Fethiye: Laguna de Oludeniz (la playa mas fotografiada de Turquia), parapente desde Babadag, Valle de las Mariposas.", "Olimpos y Cirali: Ruinas en la playa, llamas eternas de Chimera (fuego natural que sale de la roca), tortugas marinas.", "Side: Ruinas romanas junto al mar. Teatro, templo de Apolo, acueducto. Muy turistico pero impresionante.", "Mejor epoca: Mayo-junio o septiembre-octubre. Julio-agosto muy caliente (35-40C) y lleno de turistas.", "Transporte: Alquiler de coche recomendado. Autobuses conectan las ciudades principales."],
-        image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Itinerario Recomendado: 10-12 Dias",
         content: "Aqui tienes nuestra ruta recomendada para aprovechar al maximo tu viaje a Turquia:",
         list: ["Dias 1-4: Estambul. Llegada, Sultanahmet, bazares, Bosforo, hammam. Vuelo interno a Capadocia.", "Dias 5-7: Capadocia. Vuelo en globo (madrugada dia 5 o 6), valles, ciudades subterraneas, hoteles cueva. Bus nocturno a Pamukkale.", "Dias 8-9: Pamukkale. Terrazas, Hierapolis, Piscina de Cleopatra. Bus a Selcuk/Efeso.", "Dia 10: Efeso. Ruinas, Casas de Terrazas, Casa de la Virgen. Noche en Selcuk o Kusadasi.", "Dias 11-12: Costa Turquesa (opcional). Antalya o Fethiye si tienes tiempo. O vuelo de regreso desde Izmir.", "Alternativa 8 dias: Estambul (3) + Capadocia (3) + regreso Estambul (1). Lo esencial sin prisas.", "Vuelos internos: Turkish Airlines o Pegasus. Estambul-Kayseri (Capadocia) 1h15. Precios desde EUR 30-60."],
-        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Transporte: Como Moverse por Turquia",
@@ -5779,7 +5779,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia Turca: Un Festin de Sabores",
         content: "La cocina turca es una de las mejores del mundo. Aqui lo que debes probar:",
         list: ["Kebabs: No solo 'doner'. Prueba Adana (picante), Iskender (con yogur y mantequilla), Shish kebab (brochetas).", "Meze: Tapas turcas. Hummus, baba ganoush, dolma (hojas de parra rellenas), cacik (yogur con pepino), acili ezme (picante).", "Pide: 'Pizza turca' en forma de bote. Rellena de queso, carne, huevo. Deliciosa.", "Lahmacun: 'Pizza armenia' finisima con carne picada. Se enrolla y come con la mano.", "Desayuno turco: Festin de quesos, aceitunas, tomates, pepinos, huevos, miel, mermeladas, pan, te. Abundante.", "Baklava: Postre de hojas finas con nueces y miel. El mejor en Karakoy Gulluoglu (Estambul) o Gaziantep.", "Bebidas: Cay (te negro, omnipresente), cafe turco (espeso, se lee la fortuna en los posos), ayran (yogur liquido salado), raki (anisado, con hielo y agua)."],
-        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Alojamiento: Donde Dormir en Turquia",
@@ -5795,7 +5795,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Mejor Epoca Para Visitar Turquia",
         content: "Turquia tiene clima mediterraneo en la costa y continental en el interior. Cada estacion tiene sus ventajas.",
         list: ["Primavera (abril-mayo): Nuestra recomendacion. Clima perfecto (18-25C), tulipanes en Estambul, menos turistas.", "Otono (septiembre-octubre): Excelente. Temperaturas agradables, vendimia, colores en Capadocia.", "Verano (junio-agosto): Muy caliente en el interior (35-40C). Ideal para costa. Estambul lleno de turistas.", "Invierno (noviembre-marzo): Frio en Capadocia (nieve hermosa pero vuelos de globo cancelados frecuentemente). Estambul lluvioso pero magico.", "Capadocia en invierno: Paisajes nevados espectaculares, pero 30-40% de vuelos en globo se cancelan por clima.", "Ramadan: El mes sagrado islamico cambia de fecha cada ano. Restaurantes abren pero algunos servicios reducidos.", "Mejor combinacion: Abril-mayo o septiembre-octubre para ver todo sin extremos de temperatura."],
-        image: "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos Para Tu Viaje",
@@ -5805,7 +5805,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Viaje a Turquia con Trips Europa",
         content: "En Tripseuropa.com somos expertos en viajes a Turquia. Reservamos tu vuelo en globo en Capadocia con las mejores companias (sabemos cuales vuelan mas alto y cuales dan las mejores fotos), conseguimos hoteles cueva con las vistas mas espectaculares, organizamos guias hispanohablantes en Estambul y Efeso, y disenamos itinerarios que combinan lo imprescindible con joyas escondidas. Turquia puede parecer complicada de organizar: nosotros simplificamos todo. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura turca.",
-        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5820,7 +5820,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "restaurantes-michelin-paris",
     slug: "restaurantes-michelin-paris",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Restaurantes Michelin en Paris: Guia para Latinoamericanos", en: "Michelin Restaurants in Paris: Guide for Latin Americans" },
     excerpt: { es: "Desde 2 hasta 3 estrellas. Reservas, dress code, precios y que esperar en una cena Michelin.", en: "From 2 to 3 stars. Reservations, dress code, prices and what to expect at a Michelin dinner." },
     category: "gastronomia",
@@ -5834,7 +5834,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "La Experiencia Michelin: Mas Que Una Comida",
         content: "Cenar en un restaurante con estrellas Michelin es una experiencia que trasciende la gastronomia. Es arte, es teatro, es un viaje sensorial. Paris, la capital mundial de la alta cocina, alberga mas de 120 restaurantes con estrellas Michelin, desde bistronomicos accesibles hasta templos de la gastronomia con tres estrellas. Para viajeros latinoamericanos, una cena Michelin en Paris puede ser el punto culminante de un viaje a Europa. En esta guia te explicamos todo: como funcionan las estrellas, como reservar, que vestir, cuanto cuesta, y que esperar cuando te sientas a la mesa.",
-        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Significan las Estrellas Michelin",
@@ -5845,7 +5845,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Restaurantes 3 Estrellas en Paris (2024-2026)",
         content: "Paris tiene actualmente 9 restaurantes con 3 estrellas Michelin. Aqui los mas accesibles para viajeros:",
         list: ["Le Cinq (Four Seasons): Chef Christian Le Squer. Cocina francesa clasica elevada. Menu desde EUR 420. Ambiente palaciego.", "Epicure (Hotel Bristol): Chef Eric Frechon. Jardin interior, cocina francesa refinada. Menu desde EUR 395.", "Alain Ducasse au Plaza Athenee: Naturalidad y sostenibilidad. Menu desde EUR 450. Enfoque en pescados y verduras.", "L'Ambroisie: Chef Bernard Pacaud. Place des Vosges. Cocina clasica atemporal. Menu alrededor de EUR 400. Muy tradicional.", "Le Pre Catelan: En el Bois de Boulogne. Chef Frederic Anton. Menu desde EUR 350. Entorno natural romantico.", "Arpege: Chef Alain Passard. Pionero en alta cocina vegetal. Menu desde EUR 490. Experiencia unica.", "Guy Savoy: Frente al Sena. Menu desde EUR 450. Alcachofa con trufa negra legendaria.", "Reservas: Necesitas reservar 2-3 meses antes para cualquiera de estos restaurantes."],
-        image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Restaurantes 2 Estrellas: Excelencia Mas Accesible",
@@ -5856,7 +5856,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "1 Estrella y Bib Gourmand: Lujo Accesible",
         content: "Para tu primera experiencia Michelin, los restaurantes de 1 estrella son perfectos. Menos presion, misma calidad.",
         list: ["Septime: Bistro contemporaneo de Bertrand Grebaut. Menu EUR 95 almuerzo, EUR 150 cena. Muy cotizado.", "Frenchie: Gregory Marchand. Cocina francesa moderna. Menu desde EUR 130. Ambiente relajado.", "Clover Grill: Jean-Francois Piege. Carnes a la parrilla gourmet. Menu desde EUR 85.", "L'Oustau de Baumaniere: Cocina provenzal refinada. Menu desde EUR 110.", "Ze Kitchen Galerie: William Ledeuil. Fusion francesa-asiatica. Menu desde EUR 75 almuerzo.", "Bib Gourmand recomendados: Bouillon Chartier Grands Boulevards, Le Petit Cler, Abri. Menus EUR 30-45.", "Estrategia: Almuerza en 1 estrella (menus mas baratos) y cena en 2-3 estrellas para maximizar experiencias."],
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Hacer Reservaciones",
@@ -5867,13 +5867,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dress Code: Que Vestir",
         content: "El codigo de vestimenta varia segun el restaurante, pero en general Paris es mas formal que otras ciudades.",
         list: ["3 estrellas: Formal. Hombres: traje o blazer con camisa, corbata opcional pero recomendada. Mujeres: vestido elegante o conjunto.", "2 estrellas: Smart casual a formal. Hombres: blazer sin corbata aceptable. Mujeres: vestido o pantalon elegante.", "1 estrella: Smart casual. Jeans oscuros pueden ser aceptables si son de buena calidad y con blazer.", "Bib Gourmand: Casual. Ropa limpia y presentable es suficiente.", "Lo que NUNCA usar: Shorts, chanclas, camisetas deportivas, gorras, ropa muy casual.", "Zapatos: Importante. Zapatos cerrados, limpios. Las zapatillas deportivas estan cada vez mas aceptadas si son elegantes.", "Colores: Paris tiende al negro, azul marino, colores neutros. No te equivocaras con tonos oscuros elegantes.", "Duda: Si no estas seguro, llama al restaurante y pregunta. Mejor pasarse de elegante que quedarse corto."],
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuanto Cuesta Cenar en un Michelin",
         content: "Los precios varian enormemente. Aqui un desglose realista para presupuestar tu experiencia.",
         list: ["Menu degustacion 1 estrella: EUR 70-150 por persona (sin bebidas).", "Menu degustacion 2 estrellas: EUR 150-300 por persona (sin bebidas).", "Menu degustacion 3 estrellas: EUR 350-600 por persona (sin bebidas).", "Maridaje de vinos: Anade EUR 100-250 dependiendo del nivel.", "Copa de champagne: EUR 20-50. Agua mineral: EUR 8-15. Cafe: EUR 8-15.", "Propina: Incluida en el precio (servicio compris). Extra opcional si el servicio fue excepcional (EUR 10-20).", "Cena completa 3 estrellas para dos: EUR 900-1,500 incluyendo vinos.", "Estrategia ahorro: Menu de almuerzo (50-70% mas barato), evitar maridaje caro, pedir agua de grifo (carafe d'eau, gratis)."],
-        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Esperar Durante la Experiencia",
@@ -5889,7 +5889,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Alternativas: Michelin Fuera de Paris",
         content: "Si Paris es muy caro o quieres explorar, hay opciones excelentes en otras ciudades.",
         list: ["Lyon: Capital gastronomica de Francia. Paul Bocuse (3 estrellas), Mere Brazier. Precios 20-30% menos que Paris.", "San Sebastian: Mas estrellas Michelin per capita del mundo. Arzak, Akelarre, Martin Berasategui. Menu desde EUR 200.", "Copenhague: Noma (3 estrellas), Geranium (3 estrellas). Cocina nordica revolucionaria. EUR 400-600.", "Barcelona: ABaC, Lasarte, Disfrutar (todos 3 estrellas). Menu desde EUR 200. Mas accesible que Paris.", "Italia: Osteria Francescana (Modena), Le Calandre (Padua). Cocina italiana de altura. EUR 250-400.", "Londres: The Ledbury, Core, Restaurant Gordon Ramsay. Precios similares a Paris.", "Estrategia: Combina Paris con otra ciudad gastronomica para comparar estilos y precios."],
-        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Para Primera Vez",
@@ -5899,7 +5899,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Experiencia Michelin con Trips Europa",
         content: "En Tripseuropa.com te ayudamos a vivir experiencias gastronomicas inolvidables. Reservamos en restaurantes con estrellas Michelin (sabemos cuales aceptan reservas y cuando), organizamos cenas especiales para aniversarios y cumpleanos, y disenamos itinerarios gastronomicos que combinan alta cocina con la cultura de cada ciudad. Conocemos personalmente muchos de estos restaurantes y podemos recomendarte segun tus gustos y presupuesto. No dejes tu experiencia Michelin al azar: contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura culinaria.",
-        image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -5914,7 +5914,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "amsterdam-tulipanes",
     slug: "amsterdam-tulipanes",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Amsterdam y los Tulipanes: Mejor Epoca para Visitar", en: "Amsterdam and the Tulips: Best Time to Visit" },
     excerpt: { es: "Keukenhof, campos de tulipanes, canales y museos. Todo lo que necesitas para tu viaje.", en: "Keukenhof, tulip fields, canals and museums. Everything you need for your trip." },
     category: "destinos",
@@ -5928,19 +5928,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Amsterdam en Primavera: Cuando los Tulipanes Florecen",
         content: "Amsterdam es magica todo el ano, pero en primavera se transforma en un espectaculo de colores. De mediados de marzo a mediados de mayo, millones de tulipanes florecen en los campos holandeses, convirtiendo el paisaje en un mar de rojos, amarillos, rosas y morados. Para viajeros latinoamericanos, esta es una experiencia unica: ver los famosos tulipanes holandeses en su maximo esplendor, pasear por los canales de la ciudad, y disfrutar de una de las culturas mas abiertas y acogedoras de Europa. En esta guia te contamos todo lo que necesitas saber para planificar tu viaje perfecto.",
-        image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Keukenhof: El Jardin de Flores Mas Grande del Mundo",
         content: "Keukenhof es el punto culminante de cualquier viaje a ver tulipanes. Es el parque de flores de primavera mas grande del mundo.",
         list: ["Ubicacion: Lisse, a 40 minutos de Amsterdam. Facil acceso en bus desde el aeropuerto Schiphol o desde la ciudad.", "Temporada 2026: Abre de mediados de marzo a mediados de mayo (aproximadamente 20 marzo - 11 mayo). Solo 8 semanas al ano.", "Que veras: 7 millones de bulbos plantados a mano, 800 variedades de tulipanes, pabellones tematicos, jardines inspiradores.", "Entrada: EUR 20.50 adultos (online), EUR 9.50 ninos (4-17). Compra online obligatoria con hora especifica.", "Cuanto tiempo: Minimo 3-4 horas para recorrerlo bien. Medio dia si quieres disfrutar sin prisas.", "Mejor hora: Abre a las 8:00. Llega temprano para evitar multitudes. Tardes tambien menos llenas que mediodias.", "Comida: Hay cafeterias dentro, pero precios altos. Puedes llevar picnic (areas designadas).", "Tip: Reserva entradas 2-3 semanas antes en temporada alta (Semana Santa, primeras semanas de abril)."],
-        image: "https://images.unsplash.com/photo-1588007375246-93733ae14c36?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1588007375246-93733ae14c36?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Campos de Tulipanes: Alternativas a Keukenhof",
         content: "Si quieres ver tulipanes sin las multitudes de Keukenhof, o complementar tu visita, hay varias opciones:",
         list: ["Tulip Experience Amsterdam: Granja familiar en Venhuizen. Menos turistas, puedes cortar tus propios tulipanes. EUR 15.", "Tulip Festival Amsterdam: Durante abril, tulipanes florecen en parques y jardines por toda la ciudad. Gratis.", "Campos abiertos en bicicleta: Alquila bicicleta y recorre la ruta entre Lisse, Noordwijk y Hillegom. Campos infinitos, gratis.", "Fam Flower Farm: Cerca de Lisse. Visitas guiadas, aprende sobre el cultivo. EUR 12.50. Menos comercial que Keukenhof.", "Hortus Bulborum: Jardin botanico con 4,000 variedades historicas de bulbos. Para expertos en flores. EUR 8.", "Mercado flotante de flores: En Amsterdam (Bloemenmarkt). Puedes comprar bulbos para llevar a casa (verifica regulaciones de tu pais).", "Tip: Los campos privados NO permiten entrar sin permiso. Respeta las flores, no las pises para fotos."],
-        image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejor Epoca: Cuando Florecen los Tulipanes",
@@ -5951,7 +5951,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Amsterdam: Que Ver Mas Alla de los Tulipanes",
         content: "Amsterdam es una ciudad fascinante que merece explorarse. Aqui los imprescindibles:",
         list: ["Canales: Patrimonio UNESCO. Paseo en barco (EUR 15-20, 1 hora). Prinsengracht, Herengracht, Keizersgracht son los principales.", "Museo Van Gogh: La coleccion mas grande del mundo del pintor. Reserva obligatoria online. EUR 22.", "Rijksmuseum: Arte holandes, incluyendo La Ronda de Noche de Rembrandt. EUR 22.50. Medio dia minimo.", "Casa de Ana Frank: Conmovedor. Reserva online con SEMANAS de antelacion. EUR 16. Se agotan rapido.", "Barrio Jordaan: El mas bonito. Tiendas vintage, cafes, mercados. Perfecto para pasear.", "Heineken Experience: Tour interactivo en la antigua fabrica. EUR 23. Incluye dos cervezas.", "Vondelpark: El Central Park de Amsterdam. Ideal para picnic y descansar.", "Barrio Rojo: Puedes caminar de dia o noche. Respeta (no fotos a las trabajadoras). Es parte de la historia de la ciudad."],
-        image: "https://images.unsplash.com/photo-1459679749680-18eb1eb37418?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1459679749680-18eb1eb37418?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Transporte: Como Llegar y Moverse",
@@ -5962,7 +5962,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Alojamiento: Donde Dormir en Amsterdam",
         content: "Amsterdam es cara, especialmente en temporada de tulipanes. Aqui opciones para todos los presupuestos:",
         list: ["Centro (Dam, Rokin): Lo mas centrico y caro. EUR 150-300/noche. Cerca de todo pero turistico.", "Jordaan: El barrio mas bonito. EUR 120-250/noche. Canales, cafes, ambiente local.", "De Pijp: Bohemio, multicultural. Albert Cuyp Market. EUR 100-180/noche. Buen equilibrio precio-ubicacion.", "Museumplein: Cerca de Van Gogh y Rijksmuseum. EUR 120-220/noche. Elegante.", "Oosterdok: Moderno, cerca de estacion central. EUR 100-180/noche. Practico para transporte.", "Hostales: ClinkNOORD (moderno, EUR 30-60), Flying Pig (ambiente joven, EUR 35-70).", "Barcos-hotel: Experiencia unica durmiendo en un barco en los canales. Desde EUR 80.", "Reserva con antelacion: En abril-mayo los hoteles se llenan y precios suben 30-50%. Reserva 2-3 meses antes."],
-        image: "https://images.unsplash.com/photo-1576924542622-772281b13aa8?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1576924542622-772281b13aa8?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Gastronomia Holandesa: Que Comer",
@@ -5973,7 +5973,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Itinerario Sugerido: 3-4 Dias en Primavera",
         content: "Aqui te proponemos como organizar tu viaje para ver tulipanes y disfrutar Amsterdam:",
         list: ["Dia 1: Llegada, paseo por canales, Jordaan, cena en De Pijp. Paseo nocturno por el centro iluminado.", "Dia 2: Keukenhof (mananera). Tarde: Vondelpark, Museumplein desde afuera. Noche: Barrio Rojo (opcional).", "Dia 3: Museo Van Gogh (manana), Rijksmuseum (tarde). Crucero por canales al atardecer.", "Dia 4: Excursion en bicicleta a campos de tulipanes cerca de Lisse. O visita a Zaanse Schans (molinos tradicionales).", "Alternativa 2 dias: Dia 1 Amsterdam ciudad. Dia 2 Keukenhof + regreso.", "Con ninos: Anade NEMO (museo de ciencia), Artis Zoo, o Madame Tussauds.", "Casa de Ana Frank: Si es prioritaria, reserva entradas primero (se agotan 6 semanas antes) y ajusta el itinerario."],
-        image: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto: Cuanto Cuesta el Viaje",
@@ -5984,7 +5984,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Excursiones desde Amsterdam",
         content: "Si tienes mas dias, estas excursiones de un dia valen la pena:",
         list: ["Zaanse Schans: Molinos de viento tradicionales, fabricas de queso y zuecos. 20 minutos en tren. Gratis (cobran entradas a molinos).", "Giethoorn: 'La Venecia del Norte'. Pueblo sin calles, solo canales. 2 horas en coche o tour organizado.", "Rotterdam: Arquitectura moderna, Markthal, casas cubo. 40 minutos en tren. Contraste total con Amsterdam.", "La Haya: Sede del gobierno, Mauritshuis (La Joven de la Perla), Scheveningen (playa). 50 minutos en tren.", "Utrecht: Ciudad universitaria medieval, canales con terrazas bajo el nivel de la calle. 30 minutos en tren.", "Delft: Ceramica azul tradicional, centro historico encantador. 1 hora en tren.", "Haarlem: 'Mini Amsterdam' sin las multitudes. Gran mercado, Frans Hals Museum. 20 minutos en tren."],
-        image: "https://images.unsplash.com/photo-1490122417551-6ee9691429d0?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1490122417551-6ee9691429d0?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos Para Tu Viaje",
@@ -5994,7 +5994,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Planifica tu Viaje a Amsterdam con Trips Europa",
         content: "En Tripseuropa.com somos expertos en viajes a los Paises Bajos. Reservamos tus entradas a Keukenhof y Casa de Ana Frank con antelacion (cuando tu no puedes por la diferencia horaria), organizamos tours en bicicleta por los campos de tulipanes, conseguimos hoteles con encanto en los mejores barrios, y disenamos itinerarios que combinan flores, arte y cultura. Si quieres extender tu viaje a Belgica, Alemania o Paris, creamos circuitos perfectos. No dejes tu primavera holandesa al azar: contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura entre tulipanes.",
-        image: "https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1431274172761-fca41d930114?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6009,7 +6009,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "flamenco-sevilla",
     slug: "flamenco-sevilla",
-    image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Flamenco en Sevilla: Donde Ver Shows Autenticos", en: "Flamenco in Seville: Where to See Authentic Shows" },
     excerpt: { es: "Tablaos, penas flamencas y festivales. Guia para vivir el flamenco como los locales.", en: "Tablaos, flamenco clubs and festivals. Guide to experience flamenco like the locals." },
     category: "cultura",
@@ -6023,7 +6023,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "El Flamenco: Patrimonio de la Humanidad",
         content: "El flamenco es mucho mas que un espectaculo: es el alma de Andalucia, una expresion artistica que combina cante (canto), baile y toque (guitarra) en una experiencia emocional unica. Declarado Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2010, el flamenco nacio de la fusion de culturas gitana, arabe, judia y andaluza en el sur de Espana. Sevilla es una de las cunas de este arte, y experimentarlo aqui es vivirlo en su forma mas pura. Para viajeros latinoamericanos, el flamenco conecta con nuestras propias raices hispanicas y ofrece una experiencia cultural profunda e inolvidable.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Entender el Flamenco: Los Palos y Sus Emociones",
@@ -6034,13 +6034,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Tablaos: La Experiencia Clasica del Flamenco",
         content: "Los tablaos son locales dedicados exclusivamente al flamenco, con espectaculos profesionales de alta calidad:",
         list: ["Casa del Flamenco: En el Barrio de Santa Cruz. Espacio intimo en palacio del siglo XV. EUR 22-26. Sin amplificacion, muy autentico.", "Museo del Baile Flamenco: Fundado por Cristina Hoyos. Combina museo + espectaculo. EUR 26. Ideal para entender la historia.", "Casa de la Memoria: 90 asientos, acustica perfecta. Sin cena, puro flamenco. EUR 20-22. Reserva obligatoria.", "Tablao El Arenal: Mas comercial pero artistas de primer nivel. Con cena opcional. EUR 42-85. Grupos grandes.", "Los Gallos: En activo desde 1966. Leyendas han actuado aqui. EUR 35. Ambiente tradicional.", "La Casa del Flamenco: Ubicacion perfecta junto a la Catedral. Palacio historico. EUR 24. Muy recomendado.", "Tip: Reserva siempre con antelacion, especialmente fines de semana y temporada alta."],
-        image: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Penas Flamencas: El Flamenco de los Locales",
         content: "Las penas son clubes privados donde los aficionados se reunen a disfrutar del flamenco. Experiencia mas autentica y menos turistica:",
         list: ["Pena Torres Macarena: En el barrio de la Macarena. Ambiente familiar, artistas locales. Entrada libre o muy economica.", "Pena Flamenca Triana: En el corazon del barrio mas flamenco. Solo abre ciertos dias. Consulta horarios.", "Pena Cultural Flamenca Nino Miguel: Shows los viernes. Ambiente intimo y cercano.", "Como funcionan: Suelen ser de acceso libre o con cuota minima (EUR 5-10). No hay reservas, llegas y te sientas.", "Que esperar: Ambiente informal, publico local, a veces los artistas surgen espontaneamente del publico.", "Desventaja: Horarios irregulares, no garantizado que haya espectaculo. Pregunta en tu hotel.", "Ventaja: Precios minimos, experiencia genuina, sin turistas. El flamenco 'de verdad'."],
-        image: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Triana: El Barrio del Flamenco",
@@ -6051,7 +6051,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Festivales de Flamenco en Sevilla",
         content: "Si tu visita coincide con estos eventos, tendras experiencias excepcionales:",
         list: ["Bienal de Flamenco (septiembre, anos pares): El festival mas importante del mundo. 2 semanas de espectaculos en teatros, plazas, tablaos. Artistas de talla mundial.", "Noche Blanca del Flamenco (junio): Una noche de espectaculos gratuitos por toda la ciudad. Ambiente magico.", "Festival de Cante de las Minas (agosto, La Union): A 4 horas de Sevilla, pero vale la pena si amas el cante jondo.", "Feria de Abril (abril): Aunque no es exclusivamente flamenco, veras sevillanas bailadas en todas las casetas. Vestidos de flamenca, ambiente unico.", "Semana Santa: Saetas (cante flamenco religioso) cantadas a las procesiones desde balcones. Emocionante.", "Potaje Gitano (junio, Utrera): Festival en pueblo cercano. Ambiente autentico, entrada gratuita.", "Consejo: Para la Bienal, reserva entradas y hotel con meses de antelacion. Se agotan rapidamente."],
-        image: "https://images.unsplash.com/photo-1566219417547-a1dc67b82a2a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566219417547-a1dc67b82a2a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Flamenco Gratuito en Sevilla",
@@ -6072,13 +6072,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Clases de Flamenco Para Principiantes",
         content: "Si quieres probar el baile flamenco, Sevilla ofrece clases para todos los niveles:",
         list: ["Museo del Baile Flamenco: Clases de 1 hora para principiantes. EUR 25-30. Divertido e instructivo.", "Taller Flamenco: Escuela seria con opciones para turistas. Desde EUR 20/hora.", "Fundacion Cristina Heeren: Cursos mas largos, pero ofrecen talleres cortos para visitantes.", "Clases privadas: Muchos bailaores ofrecen clases particulares. EUR 40-60/hora.", "Que aprenderas: Postura, braceo basico, zapateado simple, expresion corporal.", "Que llevar: Ropa comoda pero ajustada. Zapatos de tacon bajo o zapatillas (te prestan zapatos de flamenco).", "Tip: Reserva con antelacion. Las clases para turistas se llenan, especialmente en temporada alta."],
-        image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Flamenco Fuera de Sevilla",
         content: "Si tu itinerario incluye otras ciudades andaluzas, aqui donde encontrar flamenco autentico:",
         list: ["Granada: Sacromonte, cuevas con espectaculos flamencos. Zambra, estilo unico gitano. EUR 20-35.", "Jerez de la Frontera: Cuna de grandes artistas. Pena La Buleria, Centro Andaluz de Flamenco. Festivales en febrero.", "Cadiz: Origen de las alegrias. Tablaos en el casco historico. Carnaval tiene influencia flamenca.", "Cordoba: Tablaos intimos, menos turistico que Sevilla. Conecta con ruta del Califato.", "Madrid: Corral de la Moreria, Casa Patas. Muy turistico pero artistas de primer nivel.", "Barcelona: Tablao de Carmen, Palacio del Flamenco. Flamenco de calidad, aunque no es tierra flamenca.", "Consejo: Un itinerario Sevilla-Jerez-Granada cubre las mejores experiencias flamencas de Espana."],
-        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Itinerario Flamenco: 2-3 Dias en Sevilla",
@@ -6088,7 +6088,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Vive el Flamenco Autentico con Trips Europa",
         content: "En Tripseuropa.com te llevamos mas alla de lo turistico. Reservamos entradas en los mejores tablaos con asientos preferenciales, organizamos visitas a penas flamencas con locales que nos conocen, y te llevamos a eventos y festivales que los turistas normales no encuentran. Disenamos itinerarios que combinan flamenco con la gastronomia, historia y cultura de Andalucia. Si quieres vivir el flamenco como un sevillano, no como un turista, contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu experiencia flamenca.",
-        image: "https://images.unsplash.com/photo-1540859922-33c8e7d8f18e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1540859922-33c8e7d8f18e?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6103,7 +6103,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "moneda-europa-cambio",
     slug: "moneda-europa-cambio",
-    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Cambio de Moneda en Europa: Euros, Tarjetas y ATMs", en: "Currency Exchange in Europe: Euros, Cards and ATMs" },
     excerpt: { es: "Donde cambiar dinero, que tarjetas usar y como evitar comisiones bancarias en Europa.", en: "Where to exchange money, which cards to use and how to avoid bank fees in Europe." },
     category: "consejos",
@@ -6118,7 +6118,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Entendiendo el Euro y Otras Monedas Europeas",
         content: "El euro (EUR) es la moneda oficial de 20 paises de la Union Europea, lo que facilita viajar por gran parte de Europa sin cambiar divisas constantemente. Sin embargo, no todos los paises europeos usan el euro, y es importante conocer las diferencias antes de tu viaje.",
         list: ["Zona Euro: Espana, Francia, Italia, Alemania, Portugal, Grecia, Austria, Belgica, Holanda, Irlanda, y otros 10 paises.", "Reino Unido: Libra esterlina (GBP). Actualmente 1 EUR = 0.85-0.87 GBP aproximadamente.", "Suiza: Franco suizo (CHF). Moneda muy fuerte, el pais es caro. 1 EUR = 0.93-0.97 CHF.", "Paises nordicos: Noruega (NOK), Suecia (SEK), Dinamarca (DKK). Corona en diferentes valores.", "Europa del Este: Chequia (CZK), Polonia (PLN), Hungria (HUF), Rumania (RON). Economicos para latinoamericanos.", "Turquia: Lira turca (TRY). Muy favorable para viajeros debido a la inflacion.", "Tip: En paises fuera del euro, muchos comercios turisticos aceptan euros, pero a tasas desfavorables. Mejor pagar en moneda local."],
-        image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde NO Cambiar Dinero: Errores Costosos",
@@ -6129,7 +6129,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Tarjetas de Debito Internacionales Sin Comision",
         content: "La mejor forma de acceder a euros es con tarjetas de debito que no cobran comisiones por cambio de divisa:",
         list: ["Wise (antes TransferWise): La reina de las tarjetas de viaje. Tasa de cambio real del mercado. Sin comision hasta ciertos limites. App excelente.", "Revolut: Similar a Wise. Plan gratuito con limite mensual sin comision (EUR 1,000/mes). Planes de pago sin limites.", "N26: Banco aleman 100% digital. Cuenta en euros. Sin comision por pagos en euros. 1.7% por otras monedas.", "Global66: Popular en Latinoamerica. Buenas tasas, facil de usar. Retiros ATM con comision baja.", "Cuenta en dolares: Si tienes cuenta en USD, la conversion USD-EUR suele ser mejor que peso-EUR.", "Como funcionan: Cargas dinero desde tu cuenta bancaria, la app convierte al tipo de cambio real, y pagas/retiras sin sorpresas.", "Recomendacion: Abre Wise o Revolut al menos 2 semanas antes de viajar. Tarda en llegar la tarjeta fisica."],
-        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tarjetas de Credito: Cuales Usar en Europa",
@@ -6140,7 +6140,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Cajeros Automaticos (ATMs): Como Usarlos Correctamente",
         content: "Los ATMs son la forma mas practica de obtener efectivo en Europa. Pero hay que usarlos bien:",
         list: ["ATMs de bancos oficiales: Busca cajeros de bancos reales (Santander, BBVA, BNP Paribas, Deutsche Bank, ING). Sin comision propia o muy baja.", "ATMs privados a evitar: Euronet, Travelex, Moneybox, Cardpoint. Cobran EUR 4-7 por retiro + mala tasa de cambio.", "Conversion dinamica (DCC): El cajero preguntara si quieres pagar en tu moneda local. SIEMPRE di NO. Elige pagar en euros.", "Cantidad a retirar: Retira cantidades mayores (EUR 200-300) para minimizar comisiones fijas por transaccion.", "Horario: Usa ATMs dentro de bancos en horario laboral. Si hay problema, puedes pedir ayuda.", "Limite diario: Tu banco puede tener limite de retiro diario. Averigua antes de viajar.", "Recibo: Siempre pide recibo. Util para verificar la tasa de cambio aplicada."],
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuanto Efectivo Llevar a Europa",
@@ -6151,7 +6151,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Cambiar Efectivo: Las Mejores Opciones",
         content: "Si necesitas cambiar efectivo (dolares o pesos a euros), estas son las mejores opciones:",
         list: ["Wise/Revolut: Carga dinero desde tu cuenta bancaria y retira euros de ATMs europeos. Mejor tasa garantizada.", "Bancos locales: En Europa, algunos bancos cambian efectivo con comisiones razonables (1-2%). No todos lo hacen.", "Casas de cambio legitimas: En ciudades grandes hay opciones decentes alejadas de zonas turisticas. Compara varias.", "Cambiar dolares, no pesos: Si tienes dolares, la conversion USD-EUR es mejor y mas facil que peso-EUR.", "Cuanto cambiar: Solo lo necesario. El efectivo no genera intereses y te expones a perdida/robo.", "Guardar recibos: Algunos paises exigen justificar origen de grandes cantidades de efectivo.", "Tip: Si vienes de pais sin euro, cambia una pequena cantidad antes de viajar solo para las primeras horas."],
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Comisiones Bancarias: Como Evitarlas",
@@ -6167,7 +6167,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Paises Fuera del Euro: Consejos Especificos",
         content: "Si tu itinerario incluye paises con otras monedas, ten en cuenta:",
         list: ["Reino Unido (GBP): Libra fuerte. Muchos comercios no aceptan efectivo. Usa tarjeta siempre.", "Suiza (CHF): Muy caro. Los ATMs suizos suelen no cobrar comision. Evita cambio en aeropuertos.", "Chequia (CZK): Cuidado con casas de cambio en Praga, famosas por estafas. Usa ATMs de bancos.", "Hungria (HUF): Forints confusos (grandes numeros). 1 EUR = ~400 HUF. ATMs de bancos recomendados.", "Polonia (PLN): Similar a Chequia. Paga con tarjeta cuando puedas. 1 EUR = ~4.3 PLN.", "Turquia (TRY): Lira muy debil. No cambies mucho de golpe, el valor cambia. Negocios turisticos prefieren euros/dolares.", "Croacia: Adopto el euro en 2023. Ya no necesitas kunas."],
-        image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Apps y Herramientas Utiles",
@@ -6178,12 +6178,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Seguridad Financiera Durante el Viaje",
         content: "Protege tu dinero y tarjetas durante el viaje:",
         list: ["Multiples fuentes: Lleva al menos 2 tarjetas de diferentes bancos/redes. Si una falla o se bloquea, tienes respaldo.", "Copias de seguridad: Fotografias de tarjetas (frente y dorso), numeros de emergencia de bancos guardados en nube.", "Cartera anti-RFID: Protege tarjetas contactless de lectura no autorizada.", "ATMs seguros: Usa cajeros dentro de bancos o centros comerciales. Evita ATMs en calles oscuras o poco transitadas.", "Verificar el teclado: Antes de ingresar PIN, verifica que el teclado no tenga dispositivos raros (skimming).", "Bloqueo inmediato: Si pierdes tarjeta, bloquea inmediatamente desde la app. Wise/Revolut permiten bloquear/desbloquear con un click.", "Fondo de emergencia: Ten acceso a dinero extra (transferencia familiar, tarjeta de credito con limite) por si acaso."],
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Planifica tus Finanzas de Viaje con Trips Europa",
         content: "En Tripseuropa.com te asesoramos sobre todos los aspectos de tu viaje, incluyendo como manejar tu dinero. Te recomendamos las mejores opciones financieras segun tu pais de origen, te ayudamos a presupuestar correctamente tu itinerario, y te damos tips locales que solo los expertos conocen. Nuestros paquetes incluyen estimaciones de gastos realistas para que no tengas sorpresas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje y recibir asesoria financiera de viaje personalizada.",
-        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6198,7 +6198,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "pasaporte-europa-requisitos",
     slug: "pasaporte-europa-requisitos",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Requisitos del Pasaporte para Viajar a Europa 2026", en: "Passport Requirements for Traveling to Europe 2026" },
     excerpt: { es: "Vigencia minima, paginas en blanco, renovacion y casos especiales para pasaportes latinoamericanos.", en: "Minimum validity, blank pages, renewal and special cases for Latin American passports." },
     category: "consejos",
@@ -6213,7 +6213,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Requisitos Basicos del Pasaporte para Europa",
         content: "Para viajar a los paises del Espacio Schengen (la mayoria de Europa occidental), tu pasaporte debe cumplir requisitos especificos. No basta con que sea valido: hay reglas adicionales que muchos viajeros desconocen y que pueden arruinar tu viaje si no las cumples.",
         list: ["Vigencia minima: Tu pasaporte debe ser valido por al menos 3 meses DESPUES de tu fecha de salida prevista de Europa.", "Antiguedad maxima: El pasaporte no debe haber sido emitido hace mas de 10 anos.", "Paginas en blanco: Necesitas al menos 2 paginas completamente en blanco para sellos de entrada/salida.", "Estado del pasaporte: Debe estar en buen estado, sin paginas rotas, manchas de agua, o danos que dificulten la lectura.", "Tipo de pasaporte: Pasaporte ordinario o de turismo. Pasaportes de emergencia tienen restricciones.", "Fotografia: Debe ser claramente reconocible y no estar danada o despegada."],
-        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vigencia Minima: La Regla de los 3+3 Meses",
@@ -6224,7 +6224,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Paginas en Blanco: Cuantas Necesitas",
         content: "Aunque Europa no es tan estricta como algunos paises asiaticos o africanos, necesitas espacio para sellos:",
         list: ["Minimo requerido: 2 paginas completamente en blanco (consecutivas o no).", "Sello de entrada Schengen: Ocupa aproximadamente 1/4 de pagina.", "Sello de salida: Otro 1/4 de pagina aproximadamente.", "Multiples entradas: Si entras y sales del Espacio Schengen varias veces (ej: escala en Londres), necesitas mas espacio.", "Reino Unido: No es Schengen. Requiere sellos adicionales de entrada/salida.", "Paginas de visas: Si tienes visas antiguas, esas paginas ya NO cuentan como en blanco.", "Recomendacion: Ten al menos 4 paginas en blanco para un viaje de 2-3 semanas por Europa."],
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Pasaportes Latinoamericanos: Requisitos por Pais",
@@ -6235,13 +6235,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "ETIAS: El Nuevo Requisito para 2026",
         content: "A partir de 2025, los viajeros latinoamericanos exentos de visa necesitan autorizacion ETIAS:",
         list: ["Que es ETIAS: Sistema Europeo de Informacion y Autorizacion de Viajes. Similar al ESTA de Estados Unidos.", "Quien lo necesita: Todos los ciudadanos exentos de visa (Mexico, Colombia, Argentina, Chile, Peru, Brasil, etc.).", "Como solicitarlo: Online en el sitio oficial de ETIAS. Proceso de 10-15 minutos.", "Costo: EUR 7 para adultos. Menores de 18 y mayores de 70 gratis.", "Validez: 3 anos o hasta que expire tu pasaporte (lo que ocurra primero).", "Tiempo de aprobacion: La mayoria se aprueban en minutos. Algunos casos pueden tardar hasta 30 dias.", "Cuando solicitarlo: Al menos 72 horas antes de viajar, idealmente 2 semanas antes.", "Importante: ETIAS no es visa. Solo es autorizacion de viaje. No garantiza entrada, el oficial de migracion decide."],
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Renovacion del Pasaporte: Tiempos y Consejos",
         content: "Si tu pasaporte no cumple los requisitos, debes renovarlo. Aqui consejos por pais:",
         list: ["Mexico (SRE): Cita online en gob.mx/pasaportes. Tiempo: 1-3 semanas segun demanda. Costo: ~USD 100.", "Colombia (Cancilleria): Cita online. Entrega en 1-2 semanas. Costo: ~USD 80.", "Argentina (RENAPER): Turno online. Puede demorar varias semanas en temporada alta. Costo: ~USD 80.", "Chile (Registro Civil): Solicitud online o presencial. 10-15 dias habiles. Costo: ~USD 100.", "Peru (Migraciones): Cita online obligatoria. 7-10 dias. Costo: ~USD 80.", "Pasaporte de emergencia: Algunos paises ofrecen pasaportes express (24-72 horas) por costo adicional.", "Consejo general: Inicia el tramite 3-4 meses antes de tu viaje. Los tiempos pueden extenderse inesperadamente.", "Temporada alta: Antes de vacaciones de verano (junio-julio) hay mas demanda. Anticipa."],
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Casos Especiales: Doble Nacionalidad y Menores",
@@ -6252,7 +6252,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Control de Migracion: Que Esperar al Llegar",
         content: "Al llegar a Europa, pasaras por control migratorio. Esto es lo que sucede:",
         list: ["Primer punto de entrada: El control se realiza en el primer pais Schengen al que llegas.", "Documentos a mostrar: Pasaporte, ETIAS (impreso o en telefono), tarjeta de embarque.", "Preguntas comunes: Motivo del viaje, duracion, donde te alojaras, fondos disponibles.", "Comprobantes recomendados: Reserva de hotel, vuelo de regreso, seguro de viaje, extracto bancario reciente.", "Actitud: Tranquilo, respetuoso, respuestas claras y concisas. No te pongas nervioso.", "Sello de entrada: Te sellaran el pasaporte con fecha. Este sello es tu 'reloj' de los 90 dias.", "Si hay problemas: Mantén la calma. Pide hablar con supervisor si sientes trato injusto.", "Control automatico: Algunos aeropuertos tienen puertas automaticas para pasaportes biometricos."],
-        image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "La Regla de los 90/180 Dias",
@@ -6263,7 +6263,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Seguro de Viaje: Requisito No Siempre Obligatorio",
         content: "Aunque tecnicamente no es obligatorio para latinoamericanos exentos de visa, es altamente recomendado:",
         list: ["Requisito formal: Solo obligatorio para quienes necesitan visa Schengen (Ecuador, Venezuela, Bolivia, etc.).", "Cobertura minima: EUR 30,000 en gastos medicos. Repatriacion incluida.", "Recomendacion real: Aunque no te lo pidan, lleva seguro. Una hospitalizacion puede costar EUR 5,000-50,000.", "Comprobante: Lleva copia impresa o en telefono. Algunos oficiales lo piden aunque no sea obligatorio.", "Que cubre: Gastos medicos, cancelacion de vuelo, perdida de equipaje, repatriacion.", "Costo aproximado: EUR 30-100 para viaje de 2-3 semanas segun cobertura.", "Donde comprar: World Nomads, Allianz, IATI, Chapka. Compara coberturas.", "COVID y pandemias: Verifica que tu seguro cubra enfermedades infecciosas."],
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Documentos Adicionales Recomendados",
@@ -6274,12 +6274,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Errores Comunes y Como Evitarlos",
         content: "Estos son los errores mas frecuentes que vemos en viajeros latinoamericanos:",
         list: ["Calcular mal la vigencia: Cuentan desde la entrada, no desde la salida. Error costoso.", "No revisar paginas en blanco: Llegan al aeropuerto y no tienen espacio para sellos.", "Pasaporte danado: Agua, dobleces, paginas rotas. Pueden rechazarte.", "Olvidar ETIAS: Nuevo requisito que muchos desconocen.", "No llevar comprobantes: Hotel, vuelo de regreso, fondos. Te los pueden pedir.", "Exceder los 90 dias: Calculan mal y se pasan. Consecuencias serias.", "Viajar sin seguro: No obligatorio pero un accidente puede costar miles de euros.", "No avisar al banco: Tarjetas bloqueadas por actividad sospechosa en el extranjero."],
-        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Viaja Tranquilo con Trips Europa",
         content: "En Tripseuropa.com te ayudamos a tener todos tus documentos en regla antes de viajar. Revisamos que tu pasaporte cumpla todos los requisitos, te guiamos en el proceso de ETIAS, te asesoramos sobre seguros de viaje, y te preparamos con todos los comprobantes necesarios para una entrada sin problemas. Nuestros paquetes incluyen asistencia documental completa para que solo te preocupes de disfrutar tu viaje. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con tranquilidad total.",
-        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6294,7 +6294,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "wifi-europa-datos",
     slug: "wifi-europa-datos",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=60&w=1200&auto=format&fit=crop",
     title: { es: "WiFi y Datos Moviles en Europa: eSIM vs Roaming", en: "WiFi and Mobile Data in Europe: eSIM vs Roaming" },
     excerpt: { es: "Las mejores opciones para tener internet en Europa. eSIM, chips locales y como evitar cargos sorpresa.", en: "The best options for internet in Europe. eSIM, local chips and how to avoid surprise charges." },
     category: "consejos",
@@ -6309,13 +6309,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Internet en Europa: Por Que Es Esencial",
         content: "Estar conectado durante tu viaje a Europa no es un lujo, es una necesidad practica. Desde Google Maps para navegacion hasta reservas de ultimo minuto, traductores en tiempo real, y mantener contacto con familia, el internet es parte fundamental de un viaje moderno. La buena noticia es que hay muchas opciones, desde gratuitas hasta premium, para mantenerte conectado sin gastar una fortuna.",
         list: ["Navegacion: Google Maps, Citymapper para transporte publico. Imprescindible en ciudades desconocidas.", "Reservas: Confirmar hoteles, comprar entradas a museos, reservar restaurantes.", "Comunicacion: WhatsApp, llamadas, compartir fotos con familia.", "Traduccion: Google Translate, DeepL. Utiles para leer menus, senales, hablar con locales.", "Emergencias: Contactar embajada, seguro de viaje, numeros de emergencia.", "Trabajo remoto: Si necesitas trabajar mientras viajas, conexion confiable es critica.", "Entretenimiento: Spotify, Netflix en el avion o tren, podcasts."],
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "eSIM: La Mejor Opcion para Viajeros en 2026",
         content: "La eSIM (SIM electronica) ha revolucionado la conectividad para viajeros. Es la opcion que mas recomendamos:",
         list: ["Que es: SIM virtual que se instala en tu telefono sin necesidad de chip fisico.", "Compatibilidad: iPhone XS en adelante, Samsung Galaxy S20+, Google Pixel 3+, y muchos mas. Verifica antes.", "Ventajas: Compra online antes de viajar, activacion instantanea, conservas tu numero local, multiples planes.", "Como funciona: Recibes codigo QR por email, escaneas con tu telefono, se activa automaticamente.", "Cuando activar: Puedes comprar antes y activar al aterrizar, o activar antes de salir.", "Cobertura: La mayoria cubren toda la Union Europea + Reino Unido + Suiza. Verifica paises incluidos.", "Datos vs llamadas: La mayoria son solo datos. Usaras WhatsApp/Telegram para llamar. Algunos incluyen numero europeo."],
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Proveedores de eSIM para Europa",
@@ -6326,13 +6326,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Como Configurar tu eSIM Paso a Paso",
         content: "La configuracion es sencilla, pero sigue estos pasos para evitar problemas:",
         list: ["1. Verifica compatibilidad: En tu telefono ve a Ajustes > General > Acerca de. Busca 'eSIM' o 'IMEI digital'.", "2. Compra tu plan: Elige proveedor y plan. Recibes email con codigo QR (puede tardar minutos).", "3. Conecta a WiFi: Necesitas internet para descargar el perfil eSIM.", "4. Escanea QR: Ajustes > Datos moviles > Anadir plan movil > Escanear codigo QR.", "5. Etiqueta la linea: Ponle nombre como 'Europa' o 'Viaje' para distinguirla de tu linea local.", "6. Configura datos: Elige la eSIM como linea para datos moviles.", "7. Activa roaming de datos: Aunque suene contradictorio, debes activar 'roaming' para que la eSIM funcione.", "8. Prueba: Enviate un mensaje de WhatsApp o abre una pagina web para confirmar."],
-        image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Chips Fisicos Locales: Alternativa Tradicional",
         content: "Si tu telefono no soporta eSIM o prefieres la opcion tradicional, los chips fisicos siguen siendo viables:",
         list: ["Donde comprar: Tiendas de operadores en aeropuertos, centros comerciales, tiendas de electronica.", "Operadores principales: Vodafone, Orange, Movistar (Espana), EE (UK), O2, T-Mobile.", "Precios tipicos: EUR 10-30 por 5-10GB de datos + llamadas. Varian mucho por pais.", "Documentacion: Algunos paises exigen pasaporte para comprar SIM (Italia, Alemania). Llevalo contigo.", "Tiempo: Comprar y activar puede tomar 30-60 minutos. La eSIM es instantanea.", "Roaming UE: Un chip de cualquier pais UE funciona en toda la Union Europea sin cargos extra.", "Desventaja: Tienes que guardar tu SIM local en lugar seguro. Riesgo de perderla."],
-        image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Roaming de tu Operador Local: Cuidado con los Costos",
@@ -6343,7 +6343,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "WiFi Gratuito en Europa: Donde Encontrarlo",
         content: "Europa tiene buena cobertura de WiFi gratuito, pero no dependas exclusivamente de el:",
         list: ["Aeropuertos: Casi todos ofrecen WiFi gratis (30-60 minutos tipico). Algunos ilimitado.", "Hoteles: La mayoria incluye WiFi gratis. Verifica antes de reservar. Hostales tambien.", "Cafeterias: Starbucks, Costa Coffee, cafes locales. Compra algo y pide la clave.", "McDonald's y fast food: WiFi gratuito en la mayoria de locales.", "Museos y atracciones: Muchos ofrecen WiFi gratis. El Louvre, British Museum, etc.", "Transporte: Trenes de alta velocidad (Eurostar, TGV) ofrecen WiFi. Calidad variable.", "Plazas publicas: Algunas ciudades tienen WiFi publico (Madrid, Barcelona, Paris). Lento pero funcional.", "Limitaciones: A menudo requiere registro con email. Velocidad variable. No confies para cosas urgentes."],
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dispositivos WiFi Portatil (MiFi)",
@@ -6359,7 +6359,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos para Ahorrar Datos",
         content: "Maximiza tus gigas con estos trucos practicos:",
         list: ["Descarga mapas offline: Google Maps permite descargar areas. Hazlo con WiFi del hotel.", "Modo bajo consumo: En apps como Instagram, activa 'menos datos'. Carga fotos en baja resolucion.", "Spotify offline: Descarga playlists con WiFi. Escucha sin gastar datos.", "Netflix downloads: Descarga peliculas/series antes de salir para verlas en aviones/trenes.", "Actualizaciones en WiFi: Configura tu telefono para actualizar apps solo en WiFi.", "Fotos sincronizacion: Desactiva subida automatica a iCloud/Google Photos. Hazlo manualmente en WiFi.", "Videos en WhatsApp: Activa 'bajo uso de datos' en configuracion de WhatsApp.", "Navegadores ligeros: Opera Mini comprime paginas. Ahorra hasta 90% de datos."],
-        image: "https://images.unsplash.com/photo-1533228100845-08145b01de14?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533228100845-08145b01de14?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Seguridad en WiFi Publico",
@@ -6370,12 +6370,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Comparativa: eSIM vs Chip Fisico vs Roaming vs WiFi",
         content: "Resume de opciones para ayudarte a decidir:",
         list: ["eSIM: Mejor relacion calidad-precio. Activacion instantanea. Requiere telefono compatible. Recomendada.", "Chip fisico: Buena opcion si no tienes eSIM. Mas tiempo para configurar. Debes guardar tu SIM original.", "Roaming operador local: Evitar. Muy caro. Solo emergencias o si tienes paquete muy especial.", "WiFi gratuito: Complemento, no solucion principal. Insuficiente para navegacion y mapas en movimiento.", "Dispositivo MiFi: Ideal para grupos/familias. Costo adicional y otro dispositivo que cargar.", "Recomendacion final: eSIM como principal + WiFi hotel como complemento. Backup: app de mapas offline."],
-        image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Conectate Sin Problemas con Trips Europa",
         content: "En Tripseuropa.com incluimos asesoria de conectividad en todos nuestros paquetes. Te recomendamos la mejor opcion de eSIM segun tu telefono y destinos, te enviamos instrucciones paso a paso antes del viaje, y estamos disponibles por WhatsApp si tienes problemas de configuracion. Nuestros clientes viajan tranquilos sabiendo que tendran internet desde el momento que aterrizan. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con conectividad garantizada.",
-        image: "https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6390,7 +6390,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "croissants-paris",
     slug: "croissants-paris",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Mejores Croissants de Paris: Top 10 Boulangeries", en: "Best Croissants in Paris: Top 10 Boulangeries" },
     excerpt: { es: "Donde encontrar los croissants mas deliciosos de Paris segun los parisinos.", en: "Where to find the most delicious croissants in Paris according to Parisians." },
     category: "gastronomia",
@@ -6405,19 +6405,19 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "El Croissant Perfecto: Una Obsesion Parisina",
         content: "En Paris, el croissant no es solo un desayuno, es un arte que los panaderos perfeccionan durante anos. Un croissant perfecto debe tener capas visibles y definidas, un exterior dorado y crujiente, un interior suave y ligeramente humedo, aroma a mantequilla de alta calidad, y una forma de media luna simetrica. Los parisinos son exigentes: saben distinguir un croissant industrial de uno artesanal con un solo mordisco.",
         list: ["Textura exterior: Debe crujir al morderlo, pero sin ser duro. Escamas que se desprenden.", "Interior: Capas suaves, esponjosas, ligeramente humedo. Nunca seco ni denso.", "Color: Dorado uniforme, no palido ni quemado.", "Aroma: Mantequilla fresca, tostado sutil, sin olor a levadura fuerte.", "Forma: Media luna simetrica, extremos curvados hacia el centro.", "Mantequilla: Al menos 82% de grasa. Las mejores boulangeries usan mantequilla AOC de Isigny o Charentes.", "Frescura: Idealmente horneado hace menos de 2 horas. Un croissant de la manana es mejor que uno de la tarde."],
-        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "1. Cedric Grolet - Opera",
         content: "El rey de la pasteleria parisina. Cedric Grolet es considerado uno de los mejores pasteleros del mundo, y sus croissants reflejan su perfeccionismo obsesivo.",
         list: ["Ubicacion: 35 Avenue de l'Opera, 75002 Paris. Metro: Pyramides u Opera.", "Precio: EUR 3.50 el croissant clasico. Pain au chocolat EUR 4.00.", "Especialidades: El croissant clasico es impecable. Tambien famoso por sus frutas de mazapan realistas.", "Horario: Abre 8:00 AM. Llega temprano porque hay cola siempre.", "Tip: Pide tambien el pain aux raisins. El mejor de Paris segun muchos.", "Ambiente: Tienda moderna y elegante. Ideal para fotos de Instagram.", "Atencion: Puede haber espera de 20-30 minutos en fin de semana. Vale la pena."],
-        image: "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "2. Du Pain et des Idees - Canal Saint-Martin",
         content: "Esta boulangerie historica es famosa por preservar tecnicas tradicionales en un horno de 1889. Sus croissants son legendarios entre los parisinos mas exigentes.",
         list: ["Ubicacion: 34 Rue Yves Toudic, 75010 Paris. Metro: Republique o Jacques Bonsergent.", "Precio: EUR 2.20 el croissant. Escargot pistache EUR 3.50.", "Especialidades: El escargot (caracol) con pistache y chocolate es icono de Paris. Croissant excepcional.", "Horario: Martes a Viernes 6:45 AM - 8:00 PM. Cerrado Sabado y Domingo.", "Tip: Combinalo con un paseo por el Canal Saint-Martin. Zona muy parisina.", "Historia: El local conserva la decoracion original de 1875. Patrimonio historico.", "Advertencia: Cerrado fines de semana. Planifica tu visita entre semana."],
-        image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "3. Blé Sucré - Bastille",
@@ -6428,7 +6428,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "4. Maison Landemaine - Multiple Ubicaciones",
         content: "Una cadena artesanal de boulangeries que mantiene calidad excepcional en todas sus ubicaciones. Perfecta si buscas consistencia y conveniencia.",
         list: ["Ubicaciones: Multiples en Paris. Las mejores en Marais, Oberkampf, y Nation.", "Precio: EUR 1.80 el croissant. Pain au chocolat EUR 2.10.", "Especialidades: Croissant aux amandes (almendras) espectacular. Pan de campana excelente.", "Horario: Generalmente 7:00 AM - 8:00 PM todos los dias.", "Tip: La ubicacion de 56 Rue de Clichy (9eme) gano medalla de oro en 2022.", "Filosofia: Ingredientes organicos, masa madre, fermentacion lenta.", "Ventaja: Siempre encontraras una ubicacion cerca. Calidad consistente."],
-        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "5. Poilane - Saint-Germain-des-Pres",
@@ -6444,7 +6444,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "7. Liberté - Multiple Ubicaciones",
         content: "Panaderia moderna con enfoque artesanal que ha conquistado a los jovenes parisinos. Sus croissants son dorados, crujientes y perfectamente laminados.",
         list: ["Ubicaciones: 39 Rue des Vinaigriers (10eme), 13 Rue d'Enghien (10eme), y mas.", "Precio: EUR 2.20 el croissant. Pain au chocolat EUR 2.50.", "Especialidades: Croissant aux amandes relleno de crema. Focaccia excepcional.", "Horario: Generalmente 7:30 AM - 7:30 PM. Varia por ubicacion.", "Tip: La ubicacion de Vinaigriers tiene terraza. Perfecto para desayunar tranquilo.", "Filosofia: Pan de levadura madre, fermentacion de 24-48 horas.", "Ambiente: Moderno, minimalista. Popular entre hipsters parisinos."],
-        image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "8. Stohrer - Les Halles",
@@ -6460,13 +6460,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "10. Bo&Mie - Multiple Ubicaciones",
         content: "Cadena artesanal que combina tradicion francesa con toques creativos. Perfecta para quienes buscan variedad y calidad accesible.",
         list: ["Ubicaciones: Multiples en Paris, incluyendo Gare de Lyon, Opera, y Saint-Lazare.", "Precio: EUR 1.90 el croissant. Pain au chocolat EUR 2.20.", "Especialidades: Croissant clasico solido. Sandwiches creativos para almorzar.", "Horario: Varia por ubicacion. Las de estaciones abren muy temprano.", "Tip: Perfecta para comprar croissant antes de tomar el tren. Ubicaciones en estaciones principales.", "Ventaja: Calidad consistente, precios accesibles, ubicaciones convenientes.", "Filosofia: Pan horneado durante todo el dia. Siempre fresco."],
-        image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos para Disfrutar tu Croissant como un Parisino",
         content: "Para vivir la experiencia autentica del croissant parisino, sigue estos consejos locales:",
         list: ["Madruga: Los mejores croissants salen del horno entre 7:00 y 9:00 AM. Los de la tarde son de segunda hornada.", "Come caminando: Los parisinos a menudo comen su croissant caminando hacia el trabajo. Es parte de la experiencia.", "Sin plato ni servilleta: Un verdadero parisino sostiene el croissant con una bolsa de papel, no necesita plato.", "Cafe obligatorio: Acompana con un 'café creme' o 'noisette'. Nunca con te.", "No lo tuestes: Un croissant fresco no necesita tostarse. Si esta frio, no es fresco.", "Precio justo: Desconfia de croissants a menos de EUR 1.20. Probablemente son industriales.", "Boulangerie vs Patisserie: Las boulangeries (panaderias) suelen tener mejores croissants que las patisseries (pastelerias)."],
-        image: "https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Variantes del Croissant que Debes Probar",
@@ -6476,7 +6476,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Descubre la Gastronomia Parisina con Trips Europa",
         content: "En Tripseuropa.com disenamos tours gastronomicos personalizados por Paris. Te llevamos a las mejores boulangeries, te ensenamos a distinguir un croissant artesanal de uno industrial, y te abrimos las puertas de establecimientos que los turistas nunca encuentran. Nuestros guias locales conocen los secretos de la pasteleria parisina y te garantizan una experiencia culinaria inolvidable. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje gastronomico a Paris.",
-        image: "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6491,7 +6491,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "berlin-muro-historia",
     slug: "berlin-muro-historia",
-    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Berlin: Historia del Muro y la Alemania Dividida", en: "Berlin: History of the Wall and Divided Germany" },
     excerpt: { es: "Checkpoint Charlie, East Side Gallery, Memorial del Muro. Un recorrido por la historia reciente.", en: "Checkpoint Charlie, East Side Gallery, Wall Memorial. A journey through recent history." },
     category: "destinos",
@@ -6506,31 +6506,31 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Berlin: Una Ciudad Dividida por la Historia",
         content: "Berlin es unica entre las capitales europeas. Durante 28 anos (1961-1989), un muro de hormigon partio la ciudad en dos, separando familias, amigos y vecinos. Hoy, los vestigios de esa division se han convertido en algunos de los memoriales mas poderosos del mundo. Recorrer Berlin es caminar sobre la historia del siglo XX, desde el ascenso del nazismo hasta la Guerra Fria y la reunificacion. Es un viaje emotivo, educativo e inolvidable.",
         list: ["El Muro: Construido en agosto de 1961, cayo el 9 de noviembre de 1989.", "155 km de longitud: Rodeaba completamente Berlin Occidental.", "Victimas: Al menos 140 personas murieron intentando cruzar.", "Reunificacion: Alemania se reunifico oficialmente el 3 de octubre de 1990.", "Berlin hoy: Capital moderna que honra su pasado sin olvidarlo.", "Turismo historico: Millones visitan cada ano los sitios del Muro.", "Importancia: Simbolo de la division ideologica del mundo durante la Guerra Fria."],
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "East Side Gallery: El Muro Convertido en Arte",
         content: "La East Side Gallery es el fragmento mas largo del Muro que permanece en pie: 1.3 km de hormigon convertido en la galeria de arte al aire libre mas grande del mundo. Tras la caida del Muro, artistas de todo el mundo fueron invitados a pintar murales, creando una celebracion de libertad y esperanza.",
         list: ["Ubicacion: Muhlenstrasse, entre Ostbahnhof y Warschauer Strasse. Metro/S-Bahn: Warschauer Strasse u Ostbahnhof.", "Murales iconicos: 'El Beso' (Brezhnev y Honecker), 'Trabant atravesando el Muro', 'Heads' de Thierry Noir.", "Artistas: 118 artistas de 21 paises pintaron los murales en 1990.", "Entrada: Gratuita. Abierta 24 horas.", "Mejor hora: Temprano en la manana o atardecer para evitar multitudes y buena luz.", "Estado: Algunos murales han sido restaurados; otros muestran grafitis anadidos.", "Tip: Camina toda la extension. Cada mural cuenta una historia diferente."],
-        image: "https://images.unsplash.com/photo-1566404791232-af9fe436f97c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1566404791232-af9fe436f97c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Checkpoint Charlie: El Cruce Mas Famoso",
         content: "Checkpoint Charlie fue el paso fronterizo mas conocido entre Berlin Este y Oeste, usado exclusivamente por diplomaticos, militares aliados y extranjeros. Fue escenario de fugas dramaticas, intercambios de espias, y momentos de tension que podrian haber desencadenado la Tercera Guerra Mundial.",
         list: ["Ubicacion: Friedrichstrasse 43-45, Kreuzberg. Metro: Kochstrasse (U6) o Stadtmitte.", "Caseta original: La actual es replica. La original esta en el Museo de los Aliados.", "Museo del Muro: Haus am Checkpoint Charlie. EUR 17.50 adultos. Historias de fugas.", "Fotos con soldados: Actores vestidos de soldados cobran por fotos. Es turistico, no autentico.", "Historia: Aqui se enfrentaron tanques sovieticos y americanos en 1961.", "BlackBox Checkpoint Charlie: Exposicion gratuita al aire libre sobre la Guerra Fria.", "Tip: El museo es interesante pero puede estar muy lleno. Llega temprano."],
-        image: "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Memorial del Muro de Berlin (Gedenkstatte Berliner Mauer)",
         content: "Este es el memorial oficial y el lugar mas importante para entender la historia del Muro. Ubicado en Bernauer Strasse, preserva un tramo original del Muro con su 'franja de la muerte' completa: torres de vigilancia, alambradas, barreras antivehiculos.",
         list: ["Ubicacion: Bernauer Strasse 111. Metro: Nordbahnhof (S-Bahn) o Bernauer Strasse (U8).", "Entrada: Gratuita al memorial al aire libre. Centro de visitantes gratuito.", "Torre de observacion: Sube para ver la 'franja de la muerte' desde arriba.", "Centro de documentacion: Exposicion completa sobre la historia del Muro. Gratuito.", "Capilla de la Reconciliacion: Construida donde habia una iglesia demolida por el Muro.", "Extension: 1.4 km de memorial al aire libre. Planea 1-2 horas.", "Importancia: Aqui se ven las fotos de las victimas y sus historias. Muy emotivo."],
-        image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Topografia del Terror",
         content: "Ubicado en el antiguo cuartel general de la Gestapo y las SS, este museo documenta el terrorismo de Estado nazi. Aunque no es especificamente sobre el Muro, es fundamental para entender la historia alemana del siglo XX.",
         list: ["Ubicacion: Niederkirchnerstrasse 8. Metro: Potsdamer Platz o Kochstrasse.", "Entrada: Gratuita. Abierto 10:00-20:00.", "Tramo del Muro: Junto al museo hay 200 metros de Muro original preservado.", "Exposicion: Fotografias, documentos, historias de victimas y perpetradores.", "Audio guia: Disponible en espanol. EUR 3.", "Tiempo: Planea 1.5-2 horas. Contenido denso e intenso.", "Contexto: Explica como la division de Alemania fue consecuencia del nazismo."],
-        image: "https://images.unsplash.com/photo-1563369915-5895f3d9a5e3?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1563369915-5895f3d9a5e3?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Potsdamer Platz: De Tierra de Nadie a Centro Moderno",
@@ -6541,7 +6541,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Puerta de Brandenburgo",
         content: "El monumento mas iconico de Berlin estuvo cerrado durante la division. Ubicada justo en la frontera, era visible pero inaccesible para ambos lados. Hoy es simbolo de la reunificacion y lugar de celebraciones nacionales.",
         list: ["Ubicacion: Pariser Platz. Metro: Brandenburger Tor (S1, S2, U55).", "Historia: Construida en 1791. Sobrevivio la guerra pero quedo en tierra de nadie.", "9 de noviembre de 1989: Miles cruzaron por aqui tras la caida del Muro.", "Cuadriga: La estatua de la victoria fue robada por Napoleon y recuperada.", "Foto perfecta: Desde Pariser Platz mirando hacia el Tiergarten.", "Iluminacion nocturna: Espectacular al atardecer y de noche.", "Tip: Llega temprano para fotos sin multitudes. Muy visitada durante el dia."],
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Museo de la DDR",
@@ -6552,7 +6552,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Memorial a los Judios Asesinados de Europa",
         content: "Aunque no es especificamente sobre el Muro, este impresionante memorial cerca de la Puerta de Brandenburgo es imprescindible. 2,711 bloques de hormigon de diferentes alturas crean un laberinto sombrio y reflexivo.",
         list: ["Ubicacion: Cora-Berliner-Strasse 1. Metro: Brandenburger Tor.", "Entrada: Gratuita al memorial al aire libre. Centro de informacion gratuito.", "Arquitecto: Peter Eisenman. Inaugurado en 2005.", "Centro de informacion: Bajo tierra. Historias de victimas individuales.", "Comportamiento: Es un lugar de memoria. Respeto, silencio, no fotos frivolas.", "Tiempo: 30 minutos a 1 hora, dependiendo de si visitas el centro.", "Contexto: Importante para entender por que Alemania fue dividida despues de la guerra."],
-        image: "https://images.unsplash.com/photo-1551953867-8b793bb4024a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551953867-8b793bb4024a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Recorrido Sugerido: Un Dia en el Berlin del Muro",
@@ -6563,7 +6563,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos Practicos para el Recorrido",
         content: "Para aprovechar al maximo tu visita a los sitios del Muro de Berlin:",
         list: ["Transporte: Compra un pase de dia de transporte publico (EUR 8.80). Todos los sitios son accesibles en metro/S-Bahn.", "Audio guias: Muchos sitios ofrecen audio guias en espanol. Vale la pena.", "Tours guiados: Tours a pie de 3-4 horas desde EUR 15. Contexto historico invaluable.", "Clima: Berlin es frio en invierno. Memorial y East Side Gallery son al aire libre.", "Zapatos comodos: Mucho caminar. Los sitios estan dispersos.", "Respeto: Son lugares de memoria. Comportamiento respetuoso.", "Fotos: Permitidas en casi todos los lugares. Evita selfies frivolas en memoriales."],
-        image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mas Alla del Muro: Berlin Moderno",
@@ -6573,7 +6573,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Vive la Historia de Berlin con Trips Europa",
         content: "En Tripseuropa.com disenamos itinerarios que combinan historia y experiencia. Te llevamos a los sitios del Muro con guias expertos que hacen que la historia cobre vida, te mostramos el Berlin moderno y alternativo, y te conectamos con la cultura local mas alla de lo turistico. Nuestros paquetes a Berlin incluyen alojamiento, transporte, visitas guiadas y recomendaciones exclusivas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje historico a Berlin.",
-        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6588,7 +6588,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "roma-3-dias",
     slug: "roma-3-dias",
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Roma en 3 Dias: Coliseo, Vaticano y Trastevere", en: "Rome in 3 Days: Colosseum, Vatican and Trastevere" },
     excerpt: { es: "Itinerario optimizado para ver lo mejor de Roma. Evita filas, mejores horarios y tips locales.", en: "Optimized itinerary to see the best of Rome. Skip lines, best times and local tips." },
     category: "destinos",
@@ -6603,13 +6603,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Roma en 3 Dias: El Itinerario Perfecto",
         content: "Roma es una ciudad que necesita tiempo. Cada esquina esconde 2,000 anos de historia, cada plaza tiene una fuente barroca, cada callejon lleva a un descubrimiento. Pero si solo tienes 3 dias, este itinerario optimizado te permitira ver lo esencial sin agotarte, evitando filas y aprovechando los mejores horarios. Hemos disenado este recorrido basandonos en anos de experiencia llevando viajeros latinos por la Ciudad Eterna.",
         list: ["Dia 1: Roma Antigua - Coliseo, Foro Romano, Palatino, Piazza Venezia.", "Dia 2: Vaticano y Centro Historico - San Pedro, Museos Vaticanos, Piazza Navona, Pantheon.", "Dia 3: Roma Autentica - Trastevere, Campo de Fiori, Fontana di Trevi, Escalinatas de Espana.", "Distancias: Todo es caminable o a pocos minutos en metro/bus.", "Ritmo: Este itinerario equilibra visitas con tiempo para cafe y gelato.", "Flexibilidad: Cada dia puede ajustarse segun tus intereses.", "Reservas: Obligatorias para Coliseo y Museos Vaticanos. Te explicamos como."],
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1 Manana: Coliseo y Foro Romano",
         content: "Comienza tu aventura romana en el corazon del Imperio. El Coliseo es el monumento mas iconico de Roma y el anfiteatro mas grande jamas construido. Inaugurado en el ano 80 d.C., podia albergar 50,000 espectadores. Llegando temprano evitas las multitudes y el calor del mediodia.",
         list: ["Horario ideal: 8:30 AM, primera entrada. Menos gente, luz perfecta para fotos.", "Entradas: EUR 18 incluye Coliseo, Foro Romano y Palatino. Valido 24 horas.", "Reserva obligatoria: Compra online con al menos 3-4 dias de anticipacion en coopculture.it.", "Arena: Con entrada especial (EUR 24) puedes bajar a la arena. Reserva aparte.", "Duracion: 1-1.5 horas en el Coliseo, 2 horas en el Foro.", "Audio guia: EUR 6 extra. Disponible en espanol. Altamente recomendada.", "Tip: Entra al Foro por la entrada del Palatino (menos fila) y baja hacia el Coliseo."],
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 1 Tarde: Palatino y Piazza Venezia",
@@ -6620,31 +6620,31 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Dia 2 Manana: Museos Vaticanos y Capilla Sixtina",
         content: "El segundo dia dedicalo al Vaticano. Los Museos Vaticanos albergan una de las colecciones de arte mas importantes del mundo, culminando en la Capilla Sixtina de Miguel Angel. La clave es llegar temprano para evitar las masas que colapsan los pasillos al mediodia.",
         list: ["Horario ideal: 8:00 AM, primera entrada. Reserva obligatoria online.", "Entradas: EUR 17 + EUR 4 reserva online. Gratis ultimo domingo del mes (pero abarrotado).", "Reserva: museivaticani.va. Reserva 2-3 semanas antes en temporada alta.", "Duracion: 2.5-3 horas minimo. Los pasillos son de 7 km.", "Ruta: Galeria de los Candelabros, Galeria de los Tapices, Galeria de los Mapas, Estancias de Rafael, Capilla Sixtina.", "Capilla Sixtina: Silencio obligatorio. No fotos (aunque todos sacan). El Juicio Final es sobrecogedor.", "Tip: Hay una salida directa desde la Sixtina a San Pedro. Usala para evitar volver a los museos."],
-        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 2 Mediodia: Basilica de San Pedro",
         content: "La basilica mas grande del cristianismo es impresionante por dentro y por fuera. La entrada es gratuita, pero las filas de seguridad pueden ser largas. Si saliste por la puerta de la Sixtina, ya estas dentro.",
         list: ["Entrada: Gratuita. Control de seguridad obligatorio.", "Codigo de vestimenta: Hombros y rodillas cubiertos. Estricto.", "La Pieta: Obra maestra de Miguel Angel. Esta a la derecha al entrar.", "Cupula: Subida EUR 10 (ascensor + escaleras) o EUR 8 (solo escaleras, 551 escalones).", "Vistas: Desde la cupula, vistas de la Plaza de San Pedro y toda Roma.", "Duracion: 1-1.5 horas basilica, 45 min cupula.", "Cripta: Tumbas de Papas, incluyendo Juan Pablo II. Gratuita."],
-        image: "https://images.unsplash.com/photo-1526676317768-d9b14f15615a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1526676317768-d9b14f15615a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 2 Tarde: Piazza Navona y Pantheon",
         content: "Despues del Vaticano, cruza el Tiber hacia el centro historico. Piazza Navona es una de las plazas mas hermosas de Roma, con tres fuentes barrocas. A pocos minutos esta el Pantheon, templo romano con la cupula de hormigon mas grande del mundo antiguo.",
         list: ["Almuerzo: Cerca de Piazza Navona hay opciones. Evita las terrazas de la plaza (carisimas).", "Piazza Navona: Fuente de los Cuatro Rios de Bernini. Artistas callejeros, ambiente animado.", "Pantheon: Entrada EUR 5 (antes era gratis). Construido en 126 d.C., cupula intacta.", "Oculus: El agujero en el techo del Pantheon. Cuando llueve, entra agua.", "Gelato: Giolitti (desde 1900) a 2 cuadras del Pantheon. Clasico romano.", "Caffe: Sant'Eustachio il Caffe, el espresso mas famoso de Roma. Cerca del Pantheon.", "Cena: Trastevere. Cruza el rio para cena en el barrio mas encantador de Roma."],
-        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 3 Manana: Trastevere",
         content: "El tercer dia es para la Roma menos turistica pero mas autentica. Trastevere, al otro lado del rio Tiber, es el barrio mas encantador de Roma: callejones empedrados, fachadas de colores, ropa tendida entre balcones, trattorias familiares.",
         list: ["Desayuno: Cornetto y cappuccino en un bar de Trastevere. Autentica experiencia romana.", "Santa Maria in Trastevere: Una de las iglesias mas antiguas de Roma. Mosaicos bizantinos espectaculares.", "Mercado: Porta Portese (solo domingos) es el mercado de pulgas mas grande de Roma.", "Paseo: Pierdete por las callejuelas sin mapa. Esa es la magia de Trastevere.", "Vistas: Sube al Gianicolo para las mejores vistas panoramicas de Roma.", "Almuerzo: Da Enzo al 29 o Tonnarello. Carbonara y cacio e pepe autenticos.", "Tip: Trastevere cobra vida por la noche. Vuelve para aperitivo y cena."],
-        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Dia 3 Tarde: Campo de Fiori y Fontana di Trevi",
         content: "Cruza de vuelta al centro para visitar Campo de Fiori, la plaza del mercado por las mananas y de la vida nocturna por las noches. Luego, camina hacia la Fontana di Trevi, la fuente mas famosa del mundo.",
         list: ["Campo de Fiori: Mercado de frutas, verduras, flores. Por la tarde se transforma en zona de bares.", "Estatua de Giordano Bruno: Filosofo quemado aqui en 1600. Centro de la plaza.", "Fontana di Trevi: Llega antes de las 9 AM o despues de las 10 PM para verla sin multitudes.", "Tradicion: Tira una moneda con la mano derecha sobre el hombro izquierdo para volver a Roma.", "Recaudacion: EUR 3,000 diarios en monedas. Se donan a caridad.", "Escalinatas de Espana (Piazza di Spagna): A 10 minutos caminando. Prohibido sentarse.", "Via Condotti: Calle de tiendas de lujo desde Piazza di Spagna. Escaparates impresionantes."],
-        image: "https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1525874684015-58379d421a52?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos para Evitar Filas en Roma",
@@ -6655,7 +6655,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Donde Comer en Roma: Recomendaciones Locales",
         content: "La gastronomia romana es sencilla pero perfecta. Estos son los platos que debes probar y donde encontrarlos:",
         list: ["Carbonara: Da Enzo al 29 (Trastevere), Roscioli (Centro). EUR 12-15. Huevo, guanciale, pecorino.", "Cacio e Pepe: Felice a Testaccio. EUR 12. Solo queso pecorino y pimienta negra.", "Supplí: Bolas de arroz fritas con ragu y mozzarella. EUR 2-3. En cualquier pizzeria al taglio.", "Pizza al Taglio: Bonci (Prati) o Antico Forno Roscioli. Pizza al peso. EUR 3-5.", "Gelato: Giolitti (clasico), Fatamorgana (creativo), Fior di Luna (Trastevere). EUR 3-5.", "Aperitivo: En Roma incluye buffet. Freni e Frizioni (Trastevere) es legendario.", "Evita: Restaurantes con fotos en el menu, meseros que te jalan, menus en 8 idiomas."],
-        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Transporte en Roma",
@@ -6666,12 +6666,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Cuando Visitar Roma",
         content: "El clima y las multitudes varian drasticamente segun la temporada:",
         list: ["Primavera (marzo-mayo): Ideal. Clima templado (15-22 C), flores, Semana Santa es especial pero llena.", "Verano (junio-agosto): Calor intenso (30-35 C). Agosto muchos romanos se van, pero turismo maximo.", "Otono (septiembre-noviembre): Excelente. Menos turistas, clima agradable, colores otoñales.", "Invierno (diciembre-febrero): Frio pero soportable (5-12 C). Menos filas, precios bajos, Navidad es magica.", "Eventos: Evita Roma durante grandes conferencias o partidos de futbol importantes.", "Fiestas: 25 abril, 1 mayo, 2 junio muchos sitios cierran.", "Ideal 2026: Segunda quincena de abril o primera de octubre. Clima perfecto, multitudes manejables."],
-        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Descubre Roma con Trips Europa",
         content: "En Tripseuropa.com disenamos experiencias romanas a medida. Te conseguimos entradas sin filas al Coliseo y Vaticano, te reservamos en las trattorias donde comen los romanos, te llevamos a los miradores secretos y te conectamos con guias que hacen que las piedras antiguas cobren vida. Nuestros paquetes a Roma incluyen alojamiento en barrios autenticos, traslados, visitas guiadas en espanol, y recomendaciones exclusivas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje a la Ciudad Eterna.",
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6686,7 +6686,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "seguro-viaje-europa",
     slug: "seguro-viaje-europa",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Seguro de Viaje para Europa: Cual Elegir y Por Que es Obligatorio", en: "Travel Insurance for Europe: Which to Choose and Why It's Mandatory" },
     excerpt: { es: "Requisitos Schengen, coberturas necesarias, mejores companias y como reclamar si lo necesitas.", en: "Schengen requirements, necessary coverage, best companies and how to claim if you need it." },
     category: "consejos",
@@ -6701,7 +6701,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Por Que el Seguro de Viaje es Obligatorio para Europa",
         content: "Si planeas viajar al espacio Schengen (26 paises europeos), el seguro de viaje no es opcional: es un requisito legal para obtener la visa. Pero mas alla de la obligacion, un seguro te protege de gastos catastróficos. Una noche de hospital en Alemania puede costar EUR 1,500. Una evacuacion medica puede superar los EUR 50,000. El seguro no es un gasto, es una inversion en tranquilidad.",
         list: ["Requisito Schengen: Cobertura minima de EUR 30,000 en gastos medicos.", "Cobertura geografica: Debe cubrir todos los paises Schengen.", "Duracion: Debe cubrir toda la estancia mas algunos dias extra.", "Repatriacion: Obligatorio incluir repatriacion sanitaria y funeraria.", "Validez: Poliza vigente desde el dia de entrada hasta el dia de salida.", "Documento requerido: Deberas presentar la poliza al solicitar la visa.", "Sin seguro = sin visa: Es un requisito innegociable para el visado Schengen."],
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Coberturas Esenciales que Debe Tener tu Seguro",
@@ -6712,7 +6712,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Coberturas Adicionales Recomendadas",
         content: "Segun tu tipo de viaje, considera anadir estas coberturas extra:",
         list: ["Deportes de aventura: Esqui, paracaidismo, buceo requieren cobertura especial.", "Enfermedades preexistentes: Algunas polizas las excluyen. Verifica si tienes condiciones cronicas.", "COVID-19: Post-pandemia, muchas polizas cubren gastos por COVID, pero no todas.", "Cancelacion por cualquier motivo: La mas completa. Permite cancelar sin justificar.", "Asistencia legal: Util si tienes problemas con la ley en el extranjero.", "Robo de documentos: Ayuda con tramites de pasaporte y documentos perdidos.", "Asistencia 24/7 en espanol: Fundamental cuando necesitas ayuda urgente."],
-        image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Companias de Seguro para Viajeros Latinos",
@@ -6723,7 +6723,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Comparativa de Precios por Duracion de Viaje",
         content: "Los precios varian segun duracion, edad, y coberturas. Estos son rangos aproximados para viajeros de 30-50 anos en 2026:",
         list: ["7 dias: EUR 25-50 (basico) / EUR 50-80 (premium).", "15 dias: EUR 40-80 (basico) / EUR 80-130 (premium).", "30 dias: EUR 70-120 (basico) / EUR 120-200 (premium).", "90 dias: EUR 150-250 (basico) / EUR 250-400 (premium).", "Mayores de 65: Precios 50-100% mas altos. Algunas companias no aseguran a mayores de 75.", "Familias: Muchas polizas ofrecen descuentos para grupos familiares.", "Consejo: No elijas solo por precio. Revisa coberturas, exclusiones y reputacion."],
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Comprar tu Seguro de Viaje",
@@ -6734,7 +6734,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Que Hacer si Necesitas Usar el Seguro",
         content: "Esperamos que nunca lo necesites, pero si ocurre una emergencia, sigue estos pasos:",
         list: ["Contacto inmediato: Llama a la linea de emergencia 24/7 ANTES de ir al hospital si es posible.", "Autorización previa: Muchas aseguradoras requieren autorizar la atencion antes de recibirla.", "Guarda todo: Facturas, recetas, informes medicos, recibos. Todo sera necesario para el reembolso.", "Policia: En caso de robo, haz denuncia policial. Sin denuncia, no hay reembolso.", "Plazos: Las reclamaciones tienen plazos (generalmente 30-90 dias). No demores.", "Formularios: Completa los formularios de reclamacion con detalle y precision.", "Paciencia: El reembolso puede tardar 2-8 semanas dependiendo de la compania."],
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Exclusiones Comunes que Debes Conocer",
@@ -6745,7 +6745,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Seguro de Tarjeta de Credito: Es Suficiente?",
         content: "Muchas tarjetas de credito premium incluyen seguro de viaje, pero cuidado con las limitaciones:",
         list: ["Cobertura limitada: Generalmente EUR 10,000-20,000 en gastos medicos. Insuficiente para Schengen.", "Requisito de compra: Solo aplica si pagas el viaje con esa tarjeta.", "Exclusiones amplias: Suelen excluir deportes, enfermedades preexistentes, y mas.", "Sin repatriacion: Muchas no incluyen repatriacion sanitaria, que es obligatoria para Schengen.", "Proceso lento: Reclamos pueden tardar meses vs. semanas con aseguradoras especializadas.", "Complemento: Puede servir como seguro secundario, pero no reemplaza un seguro de viaje real.", "Verifica: Lee los terminos de tu tarjeta antes de confiar en ella."],
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos para Elegir el Mejor Seguro",
@@ -6756,12 +6756,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Documentos que Debes Llevar Durante el Viaje",
         content: "Ten siempre accesibles estos documentos relacionados con tu seguro:",
         list: ["Poliza impresa: En ingles o idioma del pais. La mostraran en inmigracion.", "Poliza digital: En el telefono o email accesible sin internet.", "Tarjeta de asistencia: Algunas companias dan tarjeta con numeros de emergencia.", "Numeros de emergencia: Guardados en el telefono y escritos en papel.", "App de la aseguradora: Descargada y con sesion iniciada.", "Datos de contacto: De la aseguradora, tu agente de viajes, embajada.", "Historial medico: Si tienes condiciones cronicas, lleva resumen en ingles."],
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tu Seguro con Trips Europa",
         content: "En Tripseuropa.com te asesoramos para elegir el seguro perfecto segun tu viaje, edad, y necesidades. Trabajamos con las mejores aseguradoras y podemos incluir el seguro en tu paquete de viaje completo. No viajes a Europa sin proteccion: un accidente o enfermedad puede arruinar tus vacaciones y tus finanzas. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con seguro incluido.",
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6776,7 +6776,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "ruta-del-amor",
     slug: "ruta-del-amor",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Ruta del Amor: Paris y Madrid para Parejas", en: "Route of Love: Paris and Madrid for Couples" },
     excerpt: { es: "La ciudad del amor y la capital espanola. Dos destinos romanticos perfectos para una escapada en pareja.", en: "The city of love and the Spanish capital. Two perfect romantic destinations for a couple's getaway." },
     category: "lujo",
@@ -6791,25 +6791,25 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Por Que Paris y Madrid Son Perfectas para Parejas",
         content: "Paris es la ciudad del amor por excelencia: la Torre Eiffel iluminada, paseos por el Sena, cafes romanticos en Montmartre. Madrid ofrece un romanticismo diferente: tapas compartidas, atardeceres en el Retiro, flamenco apasionado y una energia nocturna inigualable. Juntas, estas dos capitales crean el viaje romantico perfecto: la elegancia francesa y la pasion espanola. Un combinado Paris-Madrid de 7-10 dias es ideal para una luna de miel, aniversario, o simplemente reconectar con tu pareja.",
         list: ["Paris: La ciudad del amor, romanticismo clasico, elegancia francesa.", "Madrid: Pasion espanola, noches vibrantes, gastronomia para compartir.", "Conexion facil: Vuelo directo Paris-Madrid 2 horas, tren alta velocidad pronto disponible.", "Contraste perfecto: De la sofisticacion parisina a la alegria madrilena.", "Ideal para: Luna de miel, aniversarios, pedidas de mano, o simplemente romance.", "Temporada: Primavera (abril-mayo) y otono (septiembre-octubre) son perfectos.", "Presupuesto: EUR 200-400/dia en pareja para una experiencia romantica de calidad."],
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Paris Romantico: Dia 1-3",
         content: "Tus primeros dias en la ciudad del amor. Aqui un itinerario romantico optimizado:",
         list: ["Dia 1 Manana: Llegada, check-in hotel boutique en Le Marais o Saint-Germain. Paseo por Ile de la Cite.", "Dia 1 Tarde: Catedral de Notre-Dame (exterior), Shakespeare and Company, cafe en la orilla del Sena.", "Dia 1 Noche: Crucero por el Sena al atardecer (EUR 15-20/persona). Cena en un bistro romantico.", "Dia 2 Manana: Montmartre, Sacre-Coeur, desayuno en Place du Tertre. Eviten artistas que cobran por retratos.", "Dia 2 Tarde: Museo de Orsay (impresionistas), paseo por Tuileries hasta Place de la Concorde.", "Dia 2 Noche: Torre Eiffel al atardecer, champagne en el segundo piso (EUR 25-50). Cena en Champ de Mars.", "Dia 3: Versalles (excursion de medio dia, EUR 20), tarde libre para compras o museo Rodin."],
-        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Experiencias Romanticas Imperdibles en Paris",
         content: "Paris ofrece experiencias unicas para parejas. Estas son las mas romanticas:",
         list: ["Candados del amor: Aunque los del Pont des Arts fueron retirados, hay nuevos spots en el Pont de l'Archeveche.", "Picnic en los jardines: Compren queso, baguette, vino en un marche y disfruten en Luxembourg o Tuileries.", "Moulin Rouge: Espectaculo legendario. EUR 100-200/persona con champagne. Reservar con anticipacion.", "Cafe de Flore / Les Deux Magots: Los cafes literarios mas famosos. EUR 8-12 por un cafe con historia.", "Paseo nocturno: Paris iluminado es magico. Caminen del Louvre a la Torre Eiffel por la noche.", "Macarons en Laduree: La casa original en Champs-Elysees. EUR 2-3 por macaron, caja para llevar EUR 20-40.", "Misa en Notre-Dame: Cuando reabra, la experiencia espiritual es unica (gratis)."],
-        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Hospedarse en Paris para Parejas",
         content: "El hotel correcto transforma la experiencia. Estas son nuestras recomendaciones por zona y presupuesto:",
         list: ["Le Marais: Barrio gay-friendly, boutiques, ambiente joven. Hotel Caron de Beaumarchais EUR 180-250.", "Saint-Germain: Literario, elegante, cafes clasicos. Hotel d'Aubusson EUR 300-450.", "Montmartre: Bohemio, artistico, vistas a la ciudad. Hotel Particulier EUR 350-500.", "Ile Saint-Louis: Exclusivo, tranquilo, central. Hotel Saint-Louis en l'Isle EUR 200-300.", "Opera: Central, teatros, grandes almacenes. Hotel Edouard 7* EUR 250-400.", "Airbnb: Apartamento con vista a la Torre Eiffel desde EUR 150-250/noche.", "Consejo: Pide habitacion con vista, balcon, o detalle romantico al reservar."],
-        image: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "De Paris a Madrid: Opciones de Transporte",
@@ -6820,13 +6820,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Madrid Romantico: Dia 4-6",
         content: "Madrid ofrece un romanticismo diferente: pasional, espontaneo, nocturno. Tu itinerario:",
         list: ["Dia 4 Manana: Llegada, check-in en barrio de las Letras o Salamanca. Desayuno en San Gines (churros con chocolate).", "Dia 4 Tarde: Museo del Prado (EUR 15, gratis 18:00-20:00). Paseo por Retiro, alquilen bote en el estanque (EUR 6).", "Dia 4 Noche: Tapas en La Latina (El Tigre, Casa Lucio). Tertulia en azotea con vistas.", "Dia 5 Manana: Palacio Real (EUR 14), Catedral de la Almudena (gratis), Mercado de San Miguel (tapas).", "Dia 5 Tarde: Gran Via, compras, Callao. Descanso en hotel.", "Dia 5 Noche: Show de flamenco en Corral de la Moreria (EUR 50-80 con bebida). Cena tardia en Malasana.", "Dia 6: Excursion Toledo o Segovia (EUR 30-50 tour), o dia libre para shopping y spa."],
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Experiencias Romanticas Imperdibles en Madrid",
         content: "Madrid tiene su propio encanto romantico. No te pierdas estas experiencias:",
         list: ["Atardecer en el Templo de Debod: Templo egipcio con las mejores vistas del atardecer madrileno. Gratis.", "Flamenco intimo: Tablao en Lavapiés o Las Tablas. Mas autentico y economico que Corral de la Moreria.", "Rooftop bars: Circulo de Bellas Artes (EUR 5 entrada), Dear Hotel, Gymage. Vistas y cocktails.", "Paseo nocturno por el Retiro: El parque abre hasta medianoche en verano. Romantico bajo las estrellas.", "Chocolateria San Gines: Abierta 24 horas. Churros con chocolate a las 3am despues de una noche de fiesta.", "Rastro dominical: Si estan el domingo, el mercadillo mas grande de Espana. Romantico buscar tesoros juntos.", "Cena en Botin: Restaurante mas antiguo del mundo (1725). Cochinillo asado. EUR 40-60/persona. Reservar."],
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Hospedarse en Madrid para Parejas",
@@ -6837,7 +6837,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia Romantica: Donde Comer en Pareja",
         content: "Compartir comida es uno de los actos mas romanticos. Estos son los mejores lugares para parejas:",
         list: ["Paris - Le Comptoir du Pantheon: Bistro clasico, terraza, EUR 30-40/persona. Perfecto para cena romantica.", "Paris - Pink Mamma: Italiano trendy, decoracion increible, EUR 25-35/persona. Reservar obligatorio.", "Paris - Laperouse: Historico, cabinets prives (saloncitos privados), EUR 80-100/persona. Experiencia unica.", "Madrid - Casa Lucio: Huevos rotos legendarios, ambiente castizo, EUR 35-50/persona.", "Madrid - StreetXO: Fusion asiatica de David Munoz, informal, EUR 30-40/persona.", "Madrid - Coque: 2 estrellas Michelin, experiencia completa, EUR 150-200/persona. Para ocasiones especiales.", "Consejo: Reserven con anticipacion, pidan mesa apartada o con vista."],
-        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto para Escapada Romantica Paris-Madrid",
@@ -6848,12 +6848,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos para una Escapada Romantica Perfecta",
         content: "Pequenos detalles que hacen la diferencia en un viaje en pareja:",
         list: ["Desconecten: Limiten el uso del telefono. Vivan el momento juntos, no para Instagram.", "Sorpresas: Planeen una sorpresa secreta cada uno. Una cena especial, un regalo, una experiencia.", "Tiempo libre: No planeen cada minuto. Dejen espacio para perderse y descubrir juntos.", "Fotos: Contraten fotografo profesional 1 hora (EUR 150-250) para fotos de pareja increibles.", "Madruguen: Algunos lugares (Torre Eiffel, Retiro) son mas romanticos al amanecer sin multitudes.", "Noches: Ambas ciudades son magicas de noche. No se acuesten temprano.", "Comunicacion: Viajan para reconectar. Hablen, compartan, disfruten la compania."],
-        image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tu Escapada Romantica con Trips Europa",
         content: "En Tripseuropa.com disenamos escapadas romanticas a medida para parejas latinoamericanas. Te conseguimos los hoteles boutique mas romanticos, reservamos los restaurantes perfectos, organizamos sorpresas especiales, y nos encargamos de todos los detalles para que solo te preocupes por disfrutar con tu pareja. Nuestros paquetes romanticos Paris-Madrid incluyen vuelos, hoteles con encanto, transfers privados, experiencias exclusivas, y asistencia 24/7 en espanol. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje romantico perfecto.",
-        image: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6868,7 +6868,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "vuelos-baratos-europa",
     slug: "vuelos-baratos-europa",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Como Conseguir Vuelos Baratos a Europa desde Colombia", en: "How to Get Cheap Flights to Europe from Colombia" },
     excerpt: { es: "Mejores epocas, aerolineas, buscadores y trucos para ahorrar hasta 40% en tus vuelos.", en: "Best times, airlines, search engines and tricks to save up to 40% on your flights." },
     category: "dinero",
@@ -6883,13 +6883,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Por Que los Vuelos a Europa Son Caros (y Como Bajarlos)",
         content: "Un vuelo Colombia-Europa puede costar entre USD 800 y USD 2,500 dependiendo de la temporada, aerolinea, y anticipacion de compra. La diferencia es enorme, y con las estrategias correctas puedes ahorrar 30-40% facilmente. Este articulo te ensena exactamente como conseguir los mejores precios para tu viaje a Europa en 2026.",
         list: ["Factores que afectan el precio: Temporada, anticipacion, dia de la semana, aerolinea, escalas.", "Ahorro potencial: USD 300-800 por persona aplicando las estrategias de este articulo.", "Temporada baja: Enero-marzo (excepto Semana Santa), noviembre. Vuelos hasta 40% mas baratos.", "Temporada alta: Junio-agosto, Navidad, Semana Santa. Vuelos mas caros y limitados.", "Anticipacion ideal: 2-4 meses antes para temporada baja, 4-6 meses para temporada alta.", "Error comun: Comprar en el ultimo minuto. En vuelos internacionales, NO hay ofertas de ultimo momento.", "Realidad: Los vuelos suben de precio a medida que se acerca la fecha."],
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Epocas para Comprar Vuelos a Europa",
         content: "El timing es crucial. Aqui la estrategia optima para 2026:",
         list: ["Enero-febrero 2026: Precios mas bajos del ano. Vuelos desde USD 700 ida y vuelta.", "Marzo (antes de Semana Santa): Buenos precios, clima mejorando en Europa.", "Abril-mayo: Temporada media. Vuelos USD 900-1,200. Buen equilibrio precio/clima.", "Junio-agosto: Temporada alta. Vuelos USD 1,200-1,800. Reserva 4-6 meses antes.", "Septiembre-octubre: Excelente. Precios bajan, clima perfecto en Europa. USD 800-1,100.", "Noviembre (antes del 15): Temporada baja. Ofertas frecuentes. USD 700-900.", "Diciembre: Caro por Navidad. Vuelos USD 1,300-2,000. Si viajas en diciembre, reserva en agosto."],
-        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejores Buscadores de Vuelos: Comparativa 2026",
@@ -6900,7 +6900,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Mejores Aerolineas Colombia-Europa 2026",
         content: "Estas son las aerolineas que operan vuelos directos o con escalas cortas desde Colombia a Europa:",
         list: ["Avianca: Vuelos directos Bogota-Madrid y Bogota-Barcelona. USD 800-1,500. Mejor opcion para vuelos directos.", "Iberia: Vuelos directos Madrid-Bogota. Conexiones a toda Europa. USD 750-1,400. Buen servicio.", "Air France: Via Paris. Excelente conexion a Francia y norte de Europa. USD 850-1,500.", "KLM: Via Amsterdam. Ideal para Paises Bajos, Belgica, norte de Europa. USD 850-1,500.", "Lufthansa: Via Frankfurt. Conexiones a Alemania, Europa Central. USD 900-1,600.", "Air Europa: Buenas tarifas via Madrid. A veces USD 100-200 mas barato que Avianca/Iberia.", "Turkish Airlines: Via Estambul. Tarifas competitivas, servicio excelente. USD 800-1,400.", "Copa Airlines: Via Panama. Conexiones a varias ciudades europeas. Buenas ofertas ocasionales."],
-        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vuelos con Escalas: Cuando Vale la Pena",
@@ -6911,7 +6911,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Trucos Avanzados para Ahorrar en Vuelos",
         content: "Estrategias que usan los viajeros expertos para conseguir las mejores tarifas:",
         list: ["Modo incognito: Busca vuelos en modo privado. Algunas webs suben precios si detectan busquedas repetidas.", "Martes y miercoles: Estadisticamente, los vuelos son mas baratos estos dias (para volar y para comprar).", "Alertas de precio: Configura alertas en Kayak o Google Flights para tu ruta. Te avisan de ofertas.", "Vuelos multi-ciudad: A veces Bogota-Paris + Roma-Bogota es mas barato que Bogota-Paris ida y vuelta.", "Error fares: Sigue cuentas de Twitter/Instagram de ofertas de vuelos. Ocasionalmente hay errores de precio increibles.", "Millas y puntos: Si viajas frecuentemente, acumula millas. Un vuelo gratis Europa puede costar 50,000-80,000 millas.", "VPN: Cambia tu ubicacion virtual a otro pais. A veces los precios varian segun donde compras."],
-        image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vuelos Baratos desde Otras Ciudades de Colombia",
@@ -6922,7 +6922,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Low-Cost Dentro de Europa: Multiplica tu Ahorro",
         content: "Una vez en Europa, las aerolineas low-cost te permiten moverte por centavos:",
         list: ["Ryanair: La mas barata. Vuelos desde EUR 15. Estricta con equipaje. Solo equipaje de mano incluido.", "EasyJet: Ligeramente mas cara pero mejor servicio. Vuelos desde EUR 25.", "Vueling: Espanola, vuelos desde EUR 30. Buen equilibrio precio/servicio.", "Wizz Air: Europa del Este principalmente. Muy barata. Vuelos desde EUR 15.", "Transavia: Francia y Paises Bajos. Vuelos desde EUR 25.", "Norwegian: Escandinavia y Reino Unido. Vuelos desde EUR 30.", "Consejo: Reserva equipaje de bodega con anticipacion. En el aeropuerto cuesta 3-4 veces mas.", "Truco: Lleva solo equipaje de mano (10kg) si viajas ligero. Ahorra EUR 30-50 por vuelo."],
-        image: "https://images.unsplash.com/photo-1583997052103-b4a1cb974ce5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583997052103-b4a1cb974ce5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Cuando NO Intentar Ahorrar en Vuelos",
@@ -6933,7 +6933,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Ejemplo Practico: Busqueda de Vuelo Paso a Paso",
         content: "Vamos a buscar un vuelo Bogota-Barcelona para octubre 2026:",
         list: ["Paso 1: Google Flights. Busca Bogota-Barcelona. Selecciona 'cualquier fecha' o usa el calendario de precios.", "Paso 2: Identifica los dias mas baratos (generalmente martes, miercoles).", "Paso 3: Verifica en Skyscanner para la misma fecha. Compara precios.", "Paso 4: Si hay diferencia, prueba Momondo tambien.", "Paso 5: Configura alerta de precio en Kayak si no estas listo para comprar hoy.", "Paso 6: Decide si escala vale la pena. Compara directo vs. via Madrid.", "Paso 7: Compra en la web de la aerolinea para mejor servicio posventa.", "Resultado tipico: Vuelo que costaba USD 1,200 lo encuentras en USD 850-950 con esta estrategia."],
-        image: "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Incluye el Precio del Vuelo (y Que No)",
@@ -6943,7 +6943,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Tus Vuelos Baratos con Trips Europa",
         content: "En Tripseuropa.com te ayudamos a encontrar los mejores vuelos para tu viaje a Europa. Tenemos acceso a tarifas negociadas con aerolineas, conocemos las rutas optimas, y te asesoramos sobre cuando y como comprar para maximizar tu ahorro. Nuestros paquetes de viaje incluyen vuelos, hoteles, tours, y te ahorramos horas de busqueda. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje con los mejores vuelos disponibles.",
-        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -6958,7 +6958,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "madrid-vs-barcelona",
     slug: "madrid-vs-barcelona",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Madrid vs Barcelona: Cual Elegir para tu Primer Viaje?", en: "Madrid vs Barcelona: Which One to Choose for Your First Trip?" },
     excerpt: { es: "Comparativa completa: clima, costo, atracciones, gastronomia y ambiente. Te ayudamos a decidir.", en: "Complete comparison: weather, cost, attractions, gastronomy and atmosphere. We help you decide." },
     category: "destinos",
@@ -6973,13 +6973,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Madrid vs Barcelona: La Gran Pregunta",
         content: "Es la pregunta mas frecuente que recibimos de viajeros latinoamericanos: Si solo puedo visitar una ciudad en Espana, cual elijo? La respuesta honesta es que ambas son extraordinarias, pero muy diferentes. Madrid es la capital castiza, tradicional, con ritmo nocturno legendario. Barcelona es mediterranea, modernista, con playa y arquitectura unica. Este articulo te ayuda a decidir cual se ajusta mejor a tus gustos, tiempo, y presupuesto.",
         list: ["Madrid: Capital de Espana, 3.3 millones de habitantes, centro geografico del pais.", "Barcelona: Capital de Cataluna, 1.6 millones, costa mediterranea.", "Distancia: 620 km. Tren AVE 2.5 horas, vuelo 1 hora, coche 6 horas.", "Idioma: Madrid espanol castellano. Barcelona espanol y catalan (bilingue).", "Aeropuerto: Ambas tienen aeropuertos internacionales con vuelos directos desde Latinoamerica.", "Recomendacion: Si tienes 10+ dias, visita ambas. Si solo tienes 5-7 dias, elige una.", "Spoiler: No hay respuesta incorrecta. Ambas ciudades son fantasticas."],
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Clima: Cuando Visitar Cada Ciudad",
         content: "El clima es muy diferente entre las dos ciudades. Esto puede influir en tu decision:",
         list: ["Madrid verano (junio-agosto): Muy caluroso, 35-40 C. Seco. Puede ser agotador.", "Madrid invierno (diciembre-febrero): Frio, 5-10 C. Ocasionalmente nieva. Noches bajo 0 C.", "Madrid primavera/otono: Ideal. 15-25 C. Cielos despejados, clima perfecto para caminar.", "Barcelona verano: Calido pero soportable, 25-30 C. Humedo. Puedes ir a la playa.", "Barcelona invierno: Templado, 10-15 C. Rara vez bajo 5 C. Mas agradable que Madrid.", "Barcelona primavera/otono: Excelente, 18-25 C. Menos turistas que verano.", "Mejor epoca Madrid: Abril-mayo, septiembre-octubre.", "Mejor epoca Barcelona: Mayo-junio, septiembre-octubre."],
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Costo: Cual es Mas Economica?",
@@ -6990,7 +6990,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Atracciones: Que Ver en Cada Ciudad",
         content: "Ambas ciudades tienen atracciones de clase mundial, pero muy diferentes en estilo:",
         list: ["Madrid - Museo del Prado: Una de las mejores pinacotecas del mundo. Velazquez, Goya, El Greco.", "Madrid - Palacio Real: El palacio real mas grande de Europa Occidental.", "Madrid - Parque del Retiro: 125 hectareas de jardines, estanque, Palacio de Cristal.", "Madrid - Gran Via: La arteria principal, teatros, tiendas, vida nocturna.", "Madrid - Plaza Mayor: Iconica plaza del siglo XVII, cafes, terrazas.", "Barcelona - Sagrada Familia: La obra maestra inacabada de Gaudi. Imprescindible.", "Barcelona - Park Guell: Jardin surrealista de Gaudi con vistas a la ciudad.", "Barcelona - La Rambla: El paseo peatonal mas famoso, del centro al mar.", "Barcelona - Barrio Gotico: Laberinto medieval con plazas escondidas.", "Barcelona - Playa de la Barceloneta: Playa urbana a minutos del centro."],
-        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Gastronomia: Donde Comer Mejor?",
@@ -7001,7 +7001,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Vida Nocturna: Cual Tiene Mejor Ambiente?",
         content: "Espana es famosa por su vida nocturna, pero las dos ciudades tienen estilos muy diferentes:",
         list: ["Madrid: La ciudad que nunca duerme. Literalmente. Bares abren hasta las 6am.", "Madrid zonas: Malasana (hipster), Chueca (LGBTQ+), La Latina (tradicional), Huertas (turistas).", "Madrid horarios: Cena 21:00-23:00. Copas 00:00-03:00. Discotecas 02:00-06:00.", "Madrid precio: Copa EUR 8-12. Entrada discoteca EUR 15-20 con consumicion.", "Barcelona: Mas tranquila que Madrid, pero con opciones excelentes.", "Barcelona zonas: Raval (alternativo), Born (bohemio), Barceloneta (playero), Poble Sec (local).", "Barcelona horarios: Cena 20:00-22:00. Copas 23:00-02:00. Discotecas 01:00-05:00.", "Barcelona precio: Copa EUR 10-15. Entrada discoteca EUR 15-25.", "Veredicto: Madrid gana en vida nocturna. Si quieres fiesta, Madrid es imbatible."],
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Arte y Cultura: Museos y Arquitectura",
@@ -7012,7 +7012,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Playa vs Parques: Espacios Verdes y Ocio",
         content: "Una diferencia fundamental: Barcelona tiene playa, Madrid no:",
         list: ["Barcelona - Playa: 4.5km de playas urbanas. Barceloneta, Nova Icaria, Bogatell.", "Barcelona - Playa servicios: Chiringuitos, deportes, paseo maritimo. Agua limpia.", "Barcelona - Montjuic: Colina con jardines, vistas, museos, castillo. Cable car.", "Barcelona - Parc de la Ciutadella: El 'Central Park' de Barcelona. Lago, zoo.", "Madrid - Retiro: 125 hectareas. Estanque con botes, Palacio de Cristal, rosaleda.", "Madrid - Casa de Campo: El parque urbano mas grande de Europa (1,722 hectareas).", "Madrid - Madrid Rio: Parque lineal junto al Manzanares. Perfecto para correr/bicicleta.", "Madrid - Sierra cercana: Excursiones a la sierra para naturaleza (Guadarrama, 1 hora).", "Veredicto: Si la playa es importante, Barcelona. Si prefieres parques urbanos, Madrid empata."],
-        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Excursiones de un Dia Desde Cada Ciudad",
@@ -7028,12 +7028,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Nuestra Recomendacion: Cual Elegir?",
         content: "Despues de anos llevando viajeros latinos a Espana, estas son nuestras recomendaciones:",
         list: ["Elige MADRID si: Te gusta la vida nocturna, el arte clasico, la gastronomia tradicional, el ambiente castizo.", "Elige MADRID si: Viajas en verano y no quieres multitudes de playa.", "Elige MADRID si: Quieres excursiones a Toledo, Segovia, El Escorial.", "Elige BARCELONA si: Te fascina la arquitectura, Gaudi, el modernismo.", "Elige BARCELONA si: Quieres combinar ciudad y playa.", "Elige BARCELONA si: Prefieres ambiente mediterraneo, mas relajado.", "Primer viaje a Espana: Recomendamos Madrid. Es la 'Espana esencial'.", "Si puedes: 4 dias Madrid + 3 dias Barcelona es el itinerario perfecto.", "En Tripseuropa.com disenamos viajes combinados Madrid-Barcelona personalizados."],
-        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Planifica tu Viaje con Trips Europa",
         content: "En Tripseuropa.com te ayudamos a decidir y planificar tu viaje perfecto a Espana. Te armamos itinerarios personalizados, conseguimos hoteles centricos, reservamos entradas sin filas a Prado y Sagrada Familia, y te damos recomendaciones locales para comer y salir. Nuestros paquetes Madrid-Barcelona incluyen vuelos internos, traslados, y asistencia 24/7 en espanol. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje a Espana.",
-        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -7048,7 +7048,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "italia-vespa",
     slug: "italia-vespa",
-    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Italia en Vespa: Recorre la Toscana Como un Local", en: "Italy by Vespa: Explore Tuscany Like a Local" },
     excerpt: { es: "Florencia, Siena, Chianti y pueblos medievales. La forma mas autentica de vivir la Toscana italiana.", en: "Florence, Siena, Chianti and medieval towns. The most authentic way to experience Italian Tuscany." },
     category: "lujo",
@@ -7063,13 +7063,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "La Toscana en Vespa: Una Experiencia Unica",
         content: "Imagina recorrer colinas doradas cubiertas de vinedos, pasar por pueblos medievales donde el tiempo parece detenido, y detenerte en una trattoria familiar para almorzar pasta fresca con vista a los cipreses. Esto es la Toscana en Vespa: la forma mas romantica, autentica e inolvidable de explorar esta region italiana. No es solo transporte, es una experiencia que transforma tu viaje.",
         list: ["Por que Vespa: La Vespa es un icono italiano. Recorrer la Toscana en Vespa es vivir Italia.", "Libertad total: Puedes detenerte donde quieras, explorar caminos secundarios, descubrir tesoros escondidos.", "Paisajes unicos: Las colinas toscanas, vinedos de Chianti, campos de girasoles, cipreses alineados.", "Experiencia local: Los italianos te saludan, te sonrien, te tratan como uno mas.", "Para quien: Parejas romanticas, aventureros, fotografos, amantes del vino y la gastronomia.", "Duracion ideal: 2-3 dias para recorrer lo esencial. 5-7 dias para explorar profundamente.", "Mejor epoca: Mayo-junio (primavera florecida) o septiembre-octubre (vendimia, colores dorados)."],
-        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Requisitos y Preparacion para Conducir Vespa",
         content: "Antes de subirte a una Vespa en Italia, hay algunas cosas que debes saber:",
         list: ["Licencia de conducir: Tu licencia latinoamericana es valida en Italia por turismo (hasta 90 dias).", "Permiso internacional: Recomendado aunque no siempre requerido. Tramitalo en tu pais antes de viajar.", "Edad minima: 18 anos para alquilar Vespa. Algunas empresas piden 21+.", "Experiencia previa: Recomendable haber manejado moto antes. Si eres principiante, practica en zona tranquila.", "Casco obligatorio: Siempre incluido en el alquiler. Es obligatorio por ley.", "Seguro: Basico incluido. Recomendamos seguro adicional (EUR 10-20/dia) que cubre danos propios.", "Documentos: Pasaporte, licencia, tarjeta de credito (deposito de garantia EUR 200-500).", "Equipaje: Mochila pequena. Algunas Vespas tienen baul trasero para una maleta pequena."],
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Alquilar Vespa en la Toscana",
@@ -7080,13 +7080,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Ruta Clasica: Florencia - Chianti - Siena (2-3 Dias)",
         content: "La ruta mas popular y perfecta para primera vez en la Toscana:",
         list: ["Dia 1 - Florencia a Greve in Chianti: 40km. Salida temprano, llegada a Greve para almuerzo.", "Greve in Chianti: Plaza principal con cafes, tienda de vinos, mercado. Ambiente relajado.", "Por la tarde: Visita bodega en Chianti Classico. Cata de vinos EUR 15-25. Reservar con anticipacion.", "Noche: Dormir en agroturismo en Chianti. EUR 80-150/noche. Experiencia rural autentica.", "Dia 2 - Chianti a Siena: 50km por carreteras secundarias. Vistas espectaculares.", "Parada en Radda in Chianti: Pueblo medieval amurallado. Cafe, fotos, paseo.", "Parada en Castellina in Chianti: Fortaleza medieval, vistas panoramicas.", "Llegada a Siena: Piazza del Campo, Duomo, callejuelas medievales. Cena tradicional.", "Dia 3 - Siena a Florencia: Regreso via San Gimignano (las torres medievales) o directo 70km."],
-        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Ruta Romantica: Val d'Orcia y Pueblos Medievales (3-4 Dias)",
         content: "Para quienes quieren profundizar y ver los paisajes mas fotografiados de Italia:",
         list: ["Val d'Orcia: Patrimonio UNESCO. Los paisajes que ves en las postales de Italia.", "Dia 1: Siena - Montalcino. 40km. Pueblo del Brunello, el vino mas prestigioso de Italia.", "Montalcino: Fortaleza con vista, cata de Brunello (EUR 20-40). Dormir aqui.", "Dia 2: Montalcino - Pienza. 20km. 'La ciudad ideal' del Renacimiento. Pecorino famoso.", "Pienza: Queso pecorino, miel, vistas al Val d'Orcia. Almuerzo con vista.", "Por la tarde: Bagno Vignoni. Pueblo con plaza termal. Aguas calientes en el centro.", "Dia 3: Pienza - Montepulciano. 15km. Vino Nobile, arquitectura renacentista.", "Montepulciano: Bodegas en sotanos medievales. Cata en cuevas centenarias.", "Dia 4: Regreso a Siena o Florencia via carreteras panoramicas."],
-        image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Pueblos Imperdibles en Tu Ruta",
@@ -7097,7 +7097,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia Toscana en la Ruta",
         content: "La mitad de la experiencia es la comida. Que comer y donde:",
         list: ["Ribollita: Sopa densa de pan y verduras. Reconfortante. Plato campesino tradicional.", "Pappardelle al cinghiale: Pasta ancha con ragu de jabali. Sabor intenso.", "Bistecca alla fiorentina: El T-bone toscano. 1kg minimo. Solo en restaurantes de confianza.", "Pici: Pasta gruesa artesanal, tipica de Siena. Con ajo y tomate (aglione).", "Pecorino: Queso de oveja. Fresco, semi-curado, o curado. Con miel y nueces.", "Cantucci con Vin Santo: Galletas de almendra mojadas en vino dulce. Postre clasico.", "Donde comer: Evita restaurantes en plazas principales. Busca trattorias en calles secundarias.", "Presupuesto: Almuerzo EUR 15-25, cena EUR 30-50. Menu del dia (pranzo) es mas economico."],
-        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vinos de la Toscana: Catas Imperdibles",
@@ -7108,7 +7108,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos de Seguridad en Vespa",
         content: "Para que tu aventura sea segura y sin problemas:",
         list: ["Carreteras: Las carreteras toscanas son estrechas y con curvas. Conduce con precaucion.", "Velocidad: Limite 50km/h en pueblos, 90km/h en carreteras. Respeta los limites.", "Curvas ciegas: Reduce velocidad en curvas. Los coches locales conducen rapido.", "Grava: Algunas carreteras secundarias tienen grava. Reduce velocidad, no frenes bruscamente.", "Sol y calor: Usa protector solar, hidratate. El sol toscano es fuerte.", "Lluvia: Si llueve, detente y espera. Las carreteras se vuelven muy resbaladizas.", "Gasolina: Las estaciones cierran 13:00-15:30 para almuerzo. Llena el tanque temprano.", "Emergencias: 112 es el numero de emergencias en Italia. Tu seguro incluye asistencia."],
-        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Dormir: Agriturismos y Hoteles",
@@ -7119,12 +7119,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Presupuesto: Cuanto Cuesta la Aventura",
         content: "Estimacion de costos para un viaje de 3 dias en Vespa por la Toscana:",
         list: ["Alquiler Vespa: EUR 70-100/dia x 3 dias = EUR 210-300.", "Gasolina: EUR 20-30 total (las Vespas son muy eficientes).", "Alojamiento agroturismo: EUR 100-150/noche x 2 noches = EUR 200-300.", "Comidas: EUR 50-80/dia x 3 dias = EUR 150-240.", "Catas de vino: EUR 25-50/persona x 2 catas = EUR 50-100.", "Entradas: Duomo Siena EUR 15, museos EUR 10-15.", "Total por persona: EUR 700-1,100 para 3 dias (compartiendo Vespa y habitacion en pareja).", "Tip: Reserva tour guiado de 1 dia (EUR 150-200) si prefieres no conducir."],
-        image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Tu Aventura Toscana con Trips Europa",
         content: "En Tripseuropa.com organizamos experiencias en Vespa por la Toscana a la medida. Te reservamos la Vespa, seleccionamos los mejores agriturismos, agendamos catas en bodegas exclusivas, y te damos un itinerario detallado dia a dia con GPS y mapas. Tambien ofrecemos tours guiados en grupo pequeno si prefieres no conducir. La Toscana es uno de los destinos mas romanticos del mundo, y en Vespa es simplemente magica. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para disenar tu aventura italiana.",
-        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -7139,7 +7139,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "mercados-navidenos",
     slug: "mercados-navidenos",
-    image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Mercados Navidenos en Europa: Viena, Praga, Estrasburgo", en: "Christmas Markets in Europe: Vienna, Prague, Strasbourg" },
     excerpt: { es: "Vin chaud, artesanias, luces y magia invernal. Los mejores mercados navidenos europeos para visitar.", en: "Mulled wine, crafts, lights and winter magic. The best European Christmas markets to visit." },
     category: "cultura",
@@ -7154,43 +7154,43 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "La Magia de los Mercados Navidenos Europeos",
         content: "Los mercados navidenos europeos son una tradicion de siglos que transforma las ciudades en escenarios de cuento de hadas. Casetas de madera iluminadas, aroma a canela y vino caliente, artesanias unicas, y un ambiente festivo incomparable. Para viajeros latinoamericanos, es una experiencia completamente diferente a la Navidad tropical: nieve, frio, luces, y esa atmosfera acogedora que los europeos llaman 'hygge'. Este articulo te guia por los mejores mercados para visitar en 2026.",
         list: ["Tradicion: Los mercados navidenos nacieron en Alemania en el siglo XIV. Hoy hay miles en Europa.", "Temporada: Generalmente del ultimo viernes de noviembre al 23-26 de diciembre.", "Que encontrar: Artesanias, adornos navidenos, comida tipica, bebidas calientes, dulces.", "Atmosfera: Luces, musica, villancicos, a veces nieve. Magia pura para adultos y ninos.", "Para quien: Parejas romanticas, familias, amantes de la fotografia, coleccionistas de adornos.", "Clima: Frio (0-10 C). Abrigate bien. Guantes, gorro, bufanda son esenciales.", "Presupuesto: Entrada gratis. Espera gastar EUR 30-50/dia en comida, bebidas y recuerdos."],
-        image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Viena, Austria: El Mercado Mas Elegante",
         content: "Viena es la capital de los mercados navidenos. La ciudad imperial se viste de gala con multiples mercados, cada uno con su propio encanto:",
         list: ["Rathausplatz: El mas grande y famoso. Frente al Ayuntamiento. 150 casetas, pista de hielo.", "Fechas 2026: 15 noviembre - 26 diciembre.", "Imperdible: Ponche de frutas (Punsch), no solo Gluhwein. Prueba diferentes variantes.", "Schonbrunn: En el palacio. Ambiente mas exclusivo, menos masificado. Luces espectaculares.", "Spittelberg: Barrio bohemio. Artesanias de calidad, artistas locales, ambiente alternativo.", "Maria-Theresien-Platz: Entre los museos. Pequeno pero elegante. Casetas de diseno.", "Freyung: Mercado de artesanias de alta calidad. Productos austriacos autenticos.", "Tip: Viena tiene 20+ mercados. Visita al menos 3-4 para comparar.", "Alojamiento: Reserva con meses de anticipacion. Viena en Navidad es muy popular."],
-        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Praga, Republica Checa: Magia Medieval",
         content: "Praga ofrece una experiencia navidena de cuento de hadas con precios mas accesibles que Europa Occidental:",
         list: ["Plaza de la Ciudad Vieja: El mercado principal. Bajo el Reloj Astronomico. Arbol gigante iluminado.", "Fechas 2026: 30 noviembre - 6 enero (mas largo que otros mercados).", "Bebida tipica: Svarak (vino caliente checo) y Medovina (hidromiel caliente). EUR 3-4.", "Comida: Trdlo (pastel en forma de chimenea), jamon asado, salchichas checas.", "Plaza Wenceslao: Segundo mercado grande. Mas comercial pero animado.", "Namesti Miru: Mercado local, menos turistico. Productos checos autenticos.", "Precios: 30-40% mas baratos que Viena o Alemania. Excelente relacion calidad-precio.", "Tip: Praga esta hermosa de noche. Camina por el Puente de Carlos iluminado.", "Combinacion ideal: Praga + Viena o Praga + Dresde (Alemania)."],
-        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estrasburgo, Francia: La Capital de la Navidad",
         content: "Estrasburgo se autoproclama 'Capital de la Navidad' desde 1570. Tiene el mercado navideno mas antiguo de Francia:",
         list: ["Marche de Noel: 10 mercados diferentes en toda la ciudad. Cada plaza tiene su tema.", "Fechas 2026: 22 noviembre - 24 diciembre.", "Christkindelsmärik: El mercado original desde 1570. Plaza Broglie. El mas tradicional.", "Grand Sapin: El arbol de Navidad mas alto de Europa (30m) en Place Kleber.", "Petite France: Barrio de canales iluminados. El escenario mas fotografiado.", "Bebida: Vin chaud (vino caliente) con canela y especias. EUR 4-5.", "Comida: Bredele (galletas alsacianas), pain d'epices (pan de especias), foie gras.", "Decoracion: Estrasburgo decora TODA la ciudad. Cada calle, cada ventana. Espectacular.", "Tip: Visita de noche para la iluminacion completa. Paseo en barco por los canales."],
-        image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Nuremberg, Alemania: El Mas Famoso del Mundo",
         content: "El Christkindlesmarkt de Nuremberg es posiblemente el mercado navideno mas famoso del planeta:",
         list: ["Historia: Desde 1628. Uno de los mercados mas antiguos y prestigiosos.", "Fechas 2026: 29 noviembre - 24 diciembre.", "Ubicacion: Hauptmarkt (plaza principal). 180 casetas de madera roja y blanca.", "Christkind: Una joven vestida de angel inaugura el mercado. Tradicion unica.", "Lebkuchen: Las famosas galletas de jengibre de Nuremberg. El souvenir perfecto.", "Nurnberger Bratwurst: Salchichas pequenas a la parrilla. 3 en un pan. Imperdibles.", "Gluhwein: Vino caliente en tazas coleccionables. EUR 4-5 (devuelven EUR 3 por la taza).", "Tip: Martes y miercoles menos lleno. Fines de semana muy masificado.", "Mercado de los ninos: Separate market for families with kids. Rides and activities."],
-        image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Colonia, Alemania: Bajo las Torres de la Catedral",
         content: "Colonia tiene siete mercados navidenos, pero el del Domplatz (junto a la catedral) es espectacular:",
         list: ["Am Dom: Bajo las torres goticas de la catedral. El escenario mas impresionante.", "Fechas 2026: 25 noviembre - 23 diciembre.", "Ambiente: Mezcla de tradicion y modernidad. Muy animado, mucha musica en vivo.", "Alter Markt: Mercado historico con casetas tradicionales y arbol gigante.", "Hafen-Weihnachtsmarkt: Mercado del puerto. Ambiente diferente, casetas en contenedores.", "Mercado de los gnomos: Heinzelmannchens (gnomos locales). Ideal para ninos.", "Bebida: Kolsch (cerveza local) fria incluso en invierno. Los locales la toman asi.", "Tip: Colonia tiene cerveza propia. Prueba Fruh o Gaffel en las casetas.", "Acceso: Tren desde Paris (4h), Amsterdam (3h), Frankfurt (1h). Excelente conexion."],
-        image: "https://images.unsplash.com/photo-1577613901382-3be88f14db42?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1577613901382-3be88f14db42?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Budapest, Hungria: Elegancia a Buen Precio",
         content: "Budapest ofrece mercados navidenos hermosos con precios de Europa del Este:",
         list: ["Vorosmarty ter: El mercado principal. Plaza central. Casetas de madera tradicionales.", "Fechas 2026: 15 noviembre - 1 enero.", "Bebida: Foralt bor (vino caliente hungaro) con miel y especias. EUR 2-3.", "Comida: Langos (pan frito con queso), kurtoskalacs (pastel chimenea), gulash.", "Basilica de San Esteban: Mercado frente a la basilica. Pista de hielo incluida.", "Precios: 40-50% mas barato que Europa Occidental. Excelente valor.", "Tip: Budapest de noche es espectacular. Paseo por el Danubio iluminado.", "Combinacion: Budapest + Viena (2.5h en tren). Dos ciudades, dos ambientes.", "Banos termales: Unico en Europa. Bano en aguas termales en invierno. Experiencia increible."],
-        image: "https://images.unsplash.com/photo-1520986606214-8b456906c813?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520986606214-8b456906c813?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Que Comprar en los Mercados Navidenos",
@@ -7201,7 +7201,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Que Comer y Beber en los Mercados",
         content: "La gastronomia es parte esencial de la experiencia navidena:",
         list: ["Gluhwein: Vino caliente con especias. El clasico. EUR 3-5. Tazas coleccionables.", "Punsch: Version austriaca con ron o brandy. Mas fuerte que el Gluhwein.", "Feuerzangenbowle: Vino con cono de azucar flameado. Espectacular.", "Bratwurst: Salchicha alemana a la parrilla. En pan con mostaza. EUR 4-6.", "Raclette: Queso fundido sobre pan o patatas. Tipico de Suiza y Alsacia. EUR 8-12.", "Kartoffelpuffer: Tortitas de patata fritas. Con salsa de manzana. EUR 4-6.", "Stollen: Pan dulce navideno con frutas y mazapan. Alemania. EUR 5-15.", "Churros: Si, tambien hay churros en algunos mercados. EUR 4-6.", "Tip: Prueba especialidades locales de cada ciudad. Cada mercado tiene lo suyo."],
-        image: "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos para tu Visita",
@@ -7212,12 +7212,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Itinerario Sugerido: 10 Dias Navidad en Europa",
         content: "Un recorrido perfecto combinando los mejores mercados:",
         list: ["Dias 1-2: Viena. Mercados de Rathausplatz, Schonbrunn, Spittelberg.", "Dia 3: Tren Viena-Budapest (2.5h). Tarde en mercados de Budapest.", "Dias 4-5: Budapest. Mercados, banos termales, paseo nocturno por el Danubio.", "Dia 6: Vuelo Budapest-Praga. Tarde en Plaza de la Ciudad Vieja.", "Dias 7-8: Praga. Mercados, Puente de Carlos, cerveza checa, cena de ganso.", "Dia 9: Tren Praga-Nuremberg (3h). Tarde en Christkindlesmarkt.", "Dia 10: Nuremberg. Manana mercado, vuelo de regreso por la tarde.", "Alternativa: Reemplaza Praga-Nuremberg por Estrasburgo si prefieres Francia.", "Costo estimado: EUR 2,000-3,000/persona (vuelos, hoteles, comidas, transportes)."],
-        image: "https://images.unsplash.com/photo-1510255914770-fae8c8a65808?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1510255914770-fae8c8a65808?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vive la Navidad Europea con Trips Europa",
         content: "En Tripseuropa.com organizamos viajes navidenos inolvidables a Europa. Te armamos itinerarios personalizados combinando los mejores mercados, te reservamos hoteles con anticipacion (crucial en esta epoca), coordinamos trenes y vuelos, y te damos un kit de supervivencia invernal. La Navidad europea es una experiencia que todo latinoamericano deberia vivir al menos una vez: la nieve, las luces, el Gluhwein, y esa magia que solo existe en esta epoca del ano. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu viaje navideno.",
-        image: "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -7232,7 +7232,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "ciudades-imperiales",
     slug: "ciudades-imperiales",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Ciudades Imperiales: Viena, Praga, Budapest y Estambul", en: "Imperial Cities: Vienna, Prague, Budapest and Istanbul" },
     excerpt: { es: "El legado de los grandes imperios europeos. Palacios, catedrales, puentes y cultura en un circuito inolvidable.", en: "The legacy of great European empires. Palaces, cathedrals, bridges and culture in an unforgettable circuit." },
     category: "destinos",
@@ -7247,37 +7247,37 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "El Circuito de las Ciudades Imperiales",
         content: "Cuatro ciudades, cuatro imperios, cuatro historias que definieron Europa. Viena fue el corazon del Imperio Austro-Hungaro, Praga la joya de Bohemia, Budapest la perla del Danubio, y Estambul el centro del Imperio Otomano. Juntas forman el circuito mas espectacular de Europa Central y Oriental: palacios barrocos, puentes historicos, catedrales imponentes, y una cultura gastronomica unica. Este articulo te guia por el mejor itinerario para descubrir el legado de los grandes imperios europeos.",
         list: ["Viena: Capital del Imperio Austro-Hungaro. Musica clasica, cafes, palacios imperiales.", "Praga: Ciudad de las 100 torres. Capital del Reino de Bohemia. Arquitectura gotica y barroca.", "Budapest: La perla del Danubio. Fusion de Buda y Pest. Banos termales, parlamento, puentes.", "Estambul: Puente entre Europa y Asia. Capital del Imperio Otomano y Bizantino.", "Conexion: Las cuatro ciudades estan bien conectadas por tren, avion, o crucero fluvial.", "Duracion ideal: 12-16 dias para el circuito completo. Minimo 3 dias por ciudad.", "Mejor epoca: Primavera (abril-junio) u otono (septiembre-octubre). Clima agradable, menos turistas."],
-        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Viena: La Elegancia Imperial",
         content: "Viena respira elegancia en cada esquina. Fue la capital del poder Habsburgo durante 600 anos, y ese legado se siente en sus palacios, museos, y cafes historicos:",
         list: ["Palacio de Schonbrunn: Residencia de verano de los Habsburgo. 1,441 habitaciones. Jardines espectaculares.", "Hofburg: Palacio imperial en el centro. Museo Sisi, Apartamentos Imperiales, Escuela Espanola de Equitacion.", "Opera de Viena: Una de las mejores operas del mundo. Tours guiados o espectaculo. EUR 15-200.", "Catedral de San Esteban: Simbolo de Viena. Subida a la torre sur para vistas panoramicas.", "Ringstrasse: El bulevar circular con los edificios mas importantes. Parlamento, Ayuntamiento, museos.", "Cafes historicos: Cafe Central, Cafe Sacher. El Sachertorte es obligatorio.", "Museos: Kunsthistorisches (arte), Belvedere (Klimt), Albertina (graficos).", "Presupuesto: EUR 150-200/dia. Ciudad cara pero vale cada centimo."],
-        image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Praga: La Ciudad de las 100 Torres",
         content: "Praga es como un cuento de hadas hecho ciudad. Su centro historico, Patrimonio UNESCO, es uno de los mejor conservados de Europa:",
         list: ["Puente de Carlos: El puente gotico mas famoso del mundo. 30 estatuas barrocas. Amaneceres magicos.", "Castillo de Praga: El castillo habitado mas grande del mundo. Catedral de San Vito impresionante.", "Plaza de la Ciudad Vieja: Reloj Astronomico, Iglesia de Tyn, cafes con terraza.", "Barrio Judio (Josefov): Sinagogas, cementerio antiguo, historia judia de Praga.", "Mala Strana: El barrio pequeno. Casas barrocas, jardines, la iglesia de San Nicolas.", "Cerveza checa: La mejor cerveza del mundo (dicen los checos). Pilsner, Budvar. EUR 2-3/jarra.", "Gastronomia: Svickova (carne con salsa cremosa), trdelnik (pastel chimenea), goulash.", "Presupuesto: EUR 100-130/dia. Mas economica que Viena, excelente relacion calidad-precio."],
-        image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1541849546-216549ae216d?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Budapest: La Perla del Danubio",
         content: "Budapest es en realidad dos ciudades: Buda (la colina historica) y Pest (la parte llana y moderna), unidas por puentes iconicos sobre el Danubio:",
         list: ["Parlamento Hungaro: El edificio mas iconico. Tours guiados. Iluminacion nocturna espectacular.", "Bastion de los Pescadores: Vista panoramica de Pest. Arquitectura neoromanica. Gratis de noche.", "Iglesia de Matias: Junto al Bastion. Tejas coloridas, interior gotico. Conciertos de organo.", "Puente de las Cadenas: El primer puente de Budapest. Simbolo de la ciudad.", "Banos termales: Szechenyi (el mas grande), Gellert (el mas elegante), Rudas (vistas al Danubio).", "Ruinpubs: Bares en edificios abandonados. Szimpla Kert es el original. Cultura nocturna unica.", "Gastronomia: Goulash, langos, porkolt, chimney cake. Tokaji (vino dulce famoso).", "Presupuesto: EUR 80-120/dia. La mas economica de las cuatro ciudades."],
-        image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Estambul: Donde Europa Encuentra Asia",
         content: "Estambul es unica: la unica ciudad del mundo en dos continentes. Capital de tres imperios (Romano, Bizantino, Otomano), su historia es incomparable:",
         list: ["Santa Sofia (Hagia Sophia): Basilica bizantina convertida en mezquita. Arquitectura sobrecogedora.", "Mezquita Azul: Seis minaretes, 20,000 azulejos azules. Todavia funciona como mezquita.", "Palacio Topkapi: Residencia de los sultanes otomanos. Harem, tesoros, vistas al Bosforo.", "Gran Bazar: Uno de los mercados cubiertos mas grandes del mundo. 4,000 tiendas. Regatear es obligatorio.", "Crucero por el Bosforo: Ver Estambul desde el agua. Palacios, fortalezas, pueblos pesqueros.", "Cisterna Basilica: Cisterna subterranea bizantina. 336 columnas. Atmosfera misteriosa.", "Gastronomia: Kebabs, mezes, baklava, te turco. La comida callejera es excelente.", "Presupuesto: EUR 70-100/dia. Muy economica comparada con Europa Occidental."],
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Itinerario Clasico: 14 Dias por las Ciudades Imperiales",
         content: "El recorrido perfecto combinando las cuatro capitales imperiales:",
         list: ["Dias 1-3: Viena. Schonbrunn, Hofburg, Opera, cafes historicos, Ringstrasse.", "Dia 4: Tren Viena-Budapest (2.5h). Tarde en Pest, paseo nocturno por el Danubio.", "Dias 5-7: Budapest. Parlamento, Bastion, banos termales, ruinpubs, crucero Danubio.", "Dia 8: Tren Budapest-Praga (6.5h) o vuelo (1h). Tarde paseo por Ciudad Vieja.", "Dias 9-11: Praga. Castillo, Puente Carlos, barrio judio, cerveza, concierto clasico.", "Dia 12: Vuelo Praga-Estambul (2.5h). Tarde en Sultanahmet.", "Dias 13-14: Estambul. Santa Sofia, Mezquita Azul, Topkapi, Gran Bazar, crucero Bosforo.", "Alternativa rapida: 10 dias saltando Estambul. Viena-Budapest-Praga.", "Vuelo de regreso: Desde Estambul a Latinoamerica (via Madrid, Frankfurt, o directo con Turkish)."],
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Moverse Entre las Ciudades",
@@ -7288,7 +7288,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia Imperial: Que Comer en Cada Ciudad",
         content: "Cada ciudad tiene su propia tradicion culinaria heredada de los imperios:",
         list: ["Viena - Wiener Schnitzel: Escalope de ternera empanado. El clasico. EUR 15-25.", "Viena - Sachertorte: Tarta de chocolate con mermelada de albaricoque. Cafe Sacher.", "Viena - Tafelspitz: Carne hervida con pure de manzana y rabano.", "Praga - Svickova: Carne con salsa de crema y arandanos. El plato nacional.", "Praga - Knedliky: Dumplings de pan o patata. Acompanan todo.", "Budapest - Goulash: Guiso de carne con paprika. El plato hungaro por excelencia.", "Budapest - Langos: Pan frito con ajo, queso, crema. Comida callejera adictiva.", "Estambul - Kebabs: Infinitas variedades. Doner, iskender, adana, kofte.", "Estambul - Mezes: Aperitivos variados. Hummus, baba ganoush, dolmas."],
-        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Musica y Cultura en las Capitales Imperiales",
@@ -7299,7 +7299,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Consejos Practicos para el Circuito",
         content: "Informacion esencial para planificar tu viaje por las ciudades imperiales:",
         list: ["Visa: Colombianos no necesitan visa para zona Schengen (Viena, Praga, Budapest) hasta 90 dias.", "Visa Turquia: E-visa online obligatoria para colombianos. USD 50. Tramite en 5 minutos.", "Moneda Viena: Euro (EUR). Tarjetas aceptadas en todos lados.", "Moneda Praga: Corona checa (CZK). EUR 1 = 25 CZK aprox. Cambiar en bancos, no en aeropuerto.", "Moneda Budapest: Florín hungaro (HUF). EUR 1 = 390 HUF aprox. Cambiar en bancos.", "Moneda Estambul: Lira turca (TRY). EUR 1 = 35 TRY aprox. Muy fluctuante.", "Idioma: Aleman en Viena, checo en Praga, hungaro en Budapest, turco en Estambul. Ingles funciona.", "Seguridad: Las cuatro ciudades son muy seguras. Precauciones normales de turista."],
-        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto Total para el Circuito de 14 Dias",
@@ -7309,7 +7309,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Vive las Ciudades Imperiales con Trips Europa",
         content: "En Tripseuropa.com disenamos circuitos personalizados por las ciudades imperiales. Te organizamos vuelos, trenes, hoteles centricos, y experiencias unicas como conciertos en Viena, cruceros por el Danubio, banos termales en Budapest, y cruceros por el Bosforo. Nuestros paquetes incluyen asistencia 24/7 en espanol, traslados, y guias locales. El circuito de ciudades imperiales es uno de los viajes mas completos y satisfactorios de Europa: cuatro culturas, cuatro historias, y recuerdos para toda la vida. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura imperial.",
-        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -7324,7 +7324,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "costa-amalfitana-guia",
     slug: "costa-amalfitana-guia",
-    image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Costa Amalfitana: Positano, Amalfi y Ravello", en: "Amalfi Coast: Positano, Amalfi and Ravello" },
     excerpt: { es: "Limoncello, casas coloridas y vistas al mar. Como recorrer la costa mas bella de Italia.", en: "Limoncello, colorful houses and sea views. How to tour the most beautiful coast in Italy." },
     category: "destinos",
@@ -7339,25 +7339,25 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "La Costa Amalfitana: El Paraiso Italiano",
         content: "Casas de colores pastel colgadas de acantilados vertiginosos, limoneros perfumando el aire, aguas turquesas del Tirreno, y pueblos que parecen sacados de un sueno. La Costa Amalfitana, Patrimonio de la Humanidad UNESCO, es la joya del sur de Italia y uno de los destinos mas romanticos y fotografiados del mundo. Desde Positano hasta Ravello, esta franja de apenas 50 kilometros concentra belleza, historia, gastronomia, y la esencia del dolce vita italiano.",
         list: ["Ubicacion: Costa sur de la peninsula de Sorrento, region de Campania, sur de Italia.", "Extension: 50 km de costa entre Positano y Vietri sul Mare.", "Pueblos principales: Positano, Amalfi, Ravello, Praiano, Furore, Atrani, Maiori.", "Patrimonio UNESCO: Desde 1997 por su paisaje cultural unico.", "Mejor epoca: Mayo-junio y septiembre-octubre. Julio-agosto muy lleno y caluroso.", "Como llegar: Napoles es el aeropuerto mas cercano. Luego bus, ferry, o coche.", "Duracion recomendada: 3-5 dias minimo para disfrutar sin prisas."],
-        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Positano: El Pueblo Vertical",
         content: "Positano es la postal perfecta de la Costa Amalfitana. Sus casas rosadas, blancas y amarillas descienden en cascada por el acantilado hasta la playa. Es el pueblo mas famoso, mas fotografiado, y tambien el mas caro:",
         list: ["Spiaggia Grande: Playa principal. Sombrillas coloridas, chiringuitos, vista de las casas. EUR 20-30/sombrilla.", "Chiesa di Santa Maria Assunta: Cupula de mayolica que brilla bajo el sol. Icono de Positano.", "Escaleras infinitas: Todo es escaleras. Prepara tus piernas. Lleva calzado comodo.", "Boutiques de moda: Positano es famoso por su moda playera. Vestidos, sandalias hechas a mano.", "Nocchiero: Paseo en barco al atardecer. Vista de Positano desde el mar. Inolvidable.", "Restaurantes: Da Vincenzo (pasta con mariscos), Chez Black (terraza en la playa), Le Sirenuse (lujo).", "Presupuesto: El pueblo mas caro. Cena promedio EUR 50-80. Hotel EUR 200-500/noche.", "Tip: Visita temprano o al atardecer. Mediodia muy lleno de turistas de crucero."],
-        image: "https://images.unsplash.com/photo-1533656623540-13c8f6f6bfe5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1533656623540-13c8f6f6bfe5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Amalfi: La Capital Historica",
         content: "Amalfi fue una poderosa republica maritima que rivalizaba con Venecia, Genova y Pisa. Hoy es el corazon de la costa, con su catedral imponente y su ambiente mas accesible que Positano:",
         list: ["Duomo di Amalfi: Catedral arabe-normanda del siglo IX. Escalinata monumental. Claustro del Paraiso.", "Piazza del Duomo: Centro neuralgio. Cafes, heladerias, ambiente relajado.", "Valle de los Molinos: Ruta de senderismo entre ruinas de molinos de papel. Amalfi fue famoso por su papel.", "Museo del Papel: La historia del papel artesanal de Amalfi. Talleres demostrativos.", "Playa de Amalfi: Pequena pero encantadora. Menos llena que Positano.", "Pasticceria Pansa: Desde 1830. Sfogliatella, delizia al limone, dulces tipicos.", "Limoncello: Amalfi es la tierra del limon. Visita fabricas artesanales. Degustaciones gratuitas.", "Presupuesto: Mas accesible que Positano. Cena EUR 30-50. Hotel EUR 120-300/noche."],
-        image: "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Ravello: El Balcon del Mediterraneo",
         content: "Ravello esta en las alturas, a 350 metros sobre el mar, lejos del bullicio costero. Es el refugio de artistas, musicos, y viajeros que buscan paz y belleza sublime:",
         list: ["Villa Rufolo: Jardines colgantes con vistas infinitas al mar. Wagner se inspiro aqui para Parsifal.", "Villa Cimbrone: Los jardines mas bellos de Italia. La Terraza del Infinito te deja sin aliento.", "Duomo di Ravello: Catedral del siglo XI. Pulpito con mosaicos. Museo con tesoros medievales.", "Festival de Ravello: Julio-agosto. Conciertos de musica clasica al aire libre con fondo del mar.", "Ceramica de Vietri: Ravello y Vietri son famosos por ceramica colorida. Recuerdos unicos.", "Restaurantes: Vittoria (vista panoramica), Cumpa Cosimo (cocina casera), Rossellinis (estrella Michelin).", "Ambiente: Mas tranquilo, menos turistas de un dia. Ideal para parejas y lunas de miel.", "Acceso: Bus desde Amalfi (25 min). Taxi EUR 30. No te pierdas el recorrido en carretera."],
-        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Otros Pueblos Imperdibles de la Costa",
@@ -7368,7 +7368,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Como Llegar a la Costa Amalfitana",
         content: "Llegar requiere planificacion porque no hay aeropuerto directo y las carreteras son estrechas:",
         list: ["Aeropuerto Napoles (NAP): El mas cercano. 60 km de Positano. Vuelos desde toda Europa.", "Napoles a Sorrento: Tren Circumvesuviana. 1 hora, EUR 4. Frecuente pero sin aire acondicionado.", "Sorrento a Costa Amalfitana: Bus SITA. 1.5 horas a Positano. EUR 2.50. Vistas espectaculares.", "Ferry: Napoles/Sorrento a Positano/Amalfi. 40-80 min. EUR 15-25. La forma mas escenica.", "Coche: No recomendado para visitar. Carreteras muy estrechas, parking imposible y caro.", "Traslado privado: Napoles-Positano desde EUR 100-150 por coche. Comodo si viajas en grupo.", "Desde Roma: Tren Roma-Napoles (1.5h, EUR 25-50). Luego bus/ferry a la costa.", "Consejo: Si vienes de Roma, considera parar en Pompeya en el camino."],
-        image: "https://images.unsplash.com/photo-1515859005217-8a1f08870f59?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1515859005217-8a1f08870f59?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Moverse por la Costa Amalfitana",
@@ -7379,13 +7379,13 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Gastronomia de la Costa Amalfitana",
         content: "La cocina amalfitana es simple, fresca, y dominada por limones, mariscos, y productos locales:",
         list: ["Limones de Amalfi: Limones gigantes, dulces, perfumados. Todo lleva limon aqui.", "Limoncello: Licor de cascara de limon. Tomalo helado despues de comer. Compra botellas artesanales.", "Scialatielli ai frutti di mare: Pasta fresca local con mariscos. El plato tipico.", "Delizia al limone: Postre de esponja con crema de limon. Perfeccion dulce.", "Sfogliatella: Pasta hojaldrada rellena de ricotta. De Napoles pero presente en toda la costa.", "Pescado fresco: Lubina, dorada, calamares, pulpo. Siempre del dia. A la parrilla o al forno.", "Mozzarella di bufala: De las granjas cercanas. Caprese con tomates de Sorrento.", "Vino: Vinos locales de las vinas de la costa. Greco di Tufo, Falanghina.", "Gelato: Limon, fior di latte, nocciola. Heladerias artesanales en cada pueblo."],
-        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Experiencias Unicas en la Costa",
         content: "Mas alla de pasear por los pueblos, la costa ofrece experiencias memorables:",
         list: ["Sentiero degli Dei: Senderismo celestial. 8 km entre Bomerano y Positano. Vistas increibles.", "Capri en ferry: Isla cercana. 30-40 min desde Positano. Gruta Azul, compras de lujo, glamour.", "Pompeya/Herculano: Excursion de dia completo. Ruinas romanas a 1 hora. Imprescindible.", "Degustacion de limoncello: Visita a fabricas artesanales. Prueba variedades. Compra para llevar.", "Clase de cocina: Aprende pasta fresca, recetas locales. EUR 80-150. Muchas incluyen cena.", "Paseo en barco al atardecer: Ver la costa dorada por el sol. Incluye prosecco. EUR 50-100.", "Buceo/Snorkel: Aguas cristalinas. Centros en Positano y Amalfi. Descubre fondos marinos.", "Kayak: Explora calas escondidas a tu ritmo. Alquiler EUR 20-40/hora."],
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Donde Alojarse en la Costa Amalfitana",
@@ -7396,12 +7396,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Itinerario Perfecto: 5 Dias en la Costa Amalfitana",
         content: "Un recorrido equilibrado para ver lo mejor sin prisas:",
         list: ["Dia 1: Llegada a Napoles. Traslado a Positano. Tarde explorando el pueblo. Cena con vista al mar.", "Dia 2: Positano manana (playa, tiendas). Ferry a Amalfi por la tarde. Duomo, limoncellos.", "Dia 3: Amalfi manana. Bus a Ravello. Villa Rufolo, Villa Cimbrone, almuerzo panoramico.", "Dia 4: Excursion a Capri en ferry. Gruta Azul, Marina Piccola, compras. Regreso al atardecer.", "Dia 5: Sendero degli Dei (senderismo) o excursion a Pompeya. Cena de despedida.", "Alternativa 3 dias: Dia 1 Positano, Dia 2 Amalfi+Ravello, Dia 3 Capri o Pompeya.", "Tip: No intentes ver todo. La costa es para disfrutar lento, como los italianos.", "Epoca: Mayo-junio ideal. Septiembre perfecto. Julio-agosto calor extremo y multitudes."],
-        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Vive la Costa Amalfitana con Trips Europa",
         content: "En Tripseuropa.com disenamos tu viaje perfecto a la Costa Amalfitana. Te organizamos traslados privados desde Napoles (evita el estres del transporte publico), hoteles con las mejores vistas, reservas en restaurantes exclusivos, excursiones a Capri y Pompeya, y experiencias como clases de cocina y paseos en barco privado. Conocemos los secretos de la costa: los mejores miradores, las horas sin turistas, los restaurantes donde comen los locales. La Costa Amalfitana es un destino de ensueno que merece ser disfrutado sin preocupaciones. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu escapada mediterranea.",
-        image: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [
@@ -7416,7 +7416,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "aurora-boreal-europa",
     slug: "aurora-boreal-europa",
-    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Donde Ver la Aurora Boreal en Europa", en: "Where to See the Northern Lights in Europe" },
     excerpt: { es: "Noruega, Islandia, Finlandia y Suecia. Mejor epoca, lugares y consejos para ver auroras.", en: "Norway, Iceland, Finland and Sweden. Best time, places and tips for seeing auroras." },
     category: "destinos",
@@ -7431,37 +7431,37 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "La Aurora Boreal: El Espectaculo Natural Mas Impresionante",
         content: "Luces verdes, purpuras, rojas y azules danzando en el cielo nocturno. La aurora boreal es uno de los fenomenos naturales mas magicos del planeta, y Europa ofrece algunos de los mejores lugares del mundo para presenciarla. Desde los fiordos de Noruega hasta los lagos congelados de Finlandia, este articulo te guia para cumplir el sueno de ver las luces del norte.",
         list: ["Que es: Particulas solares que chocan con la atmosfera terrestre, creando luces coloridas.", "Donde se ve: Latitudes altas, por encima del Circulo Polar Artico (66 grados norte).", "Colores: Verde (mas comun), purpura, rojo, azul, blanco. Depende de los gases atmosfericos.", "Mejor epoca: Septiembre a marzo. Noches largas y oscuras son esenciales.", "Paises en Europa: Noruega, Islandia, Finlandia, Suecia, norte de Escocia.", "Duracion: Las auroras pueden durar minutos o horas. A veces aparecen y desaparecen.", "No garantizado: Es un fenomeno natural. Depende de actividad solar, clima, y suerte."],
-        image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Noruega: El Destino Clasico para Auroras",
         content: "Noruega ofrece la combinacion perfecta de auroras boreales y paisajes espectaculares. Los fiordos, montanas nevadas, y pueblos pesqueros crean el escenario perfecto:",
         list: ["Tromso: La 'capital de la aurora'. Ciudad con aeropuerto, hoteles, tours organizados. Temporada septiembre-marzo.", "Islas Lofoten: Paisajes dramaticos. Auroras reflejadas en fiordos. Cabanas de pescadores (rorbuer).", "Alta: Observatorio de auroras. Menos turistas que Tromso. Iglesia de hielo cercana.", "Cabo Norte: El punto mas septentrional de Europa continental. Auroras sobre el Artico.", "Cruceros de auroras: Hurtigruten navega la costa noruega. Posibilidad de auroras desde el barco.", "Actividades: Trineo de perros, motos de nieve, pesca en hielo mientras esperas la aurora.", "Presupuesto: Noruega es cara. Hoteles EUR 150-300/noche. Tours EUR 100-200.", "Tip: Reserve cabana con techo de vidrio para ver auroras desde la cama."],
-        image: "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Islandia: Auroras y Paisajes Lunares",
         content: "Islandia combina auroras boreales con geyser, volcanes, glaciares, y aguas termales. Es un destino unico en el mundo:",
         list: ["Reykjavik: Capital accesible. Tours desde la ciudad. Auroras visibles incluso cerca del centro.", "Peninsula de Snaefellsnes: Menos contaminacion luminica. Paisajes volcanicos dramaticos.", "Vik: Sur de Islandia. Playas de arena negra bajo las luces verdes.", "Lago Myvatn: Norte de Islandia. Menos turistas. Banos naturales termales.", "Blue Lagoon: Banarse en aguas termales mientras observas auroras. Experiencia unica.", "Circulo Dorado: Combina auroras con Geysir, Gullfoss, y Thingvellir de noche.", "Mejor epoca: Octubre-marzo. Noches de septiembre y abril tambien posibles.", "Ventaja: Pais pequeno. Puedes moverte rapidamente buscando cielos despejados."],
-        image: "https://images.unsplash.com/photo-1504829857797-ddff29c27927?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504829857797-ddff29c27927?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Finlandia: Auroras en la Laponia Magica",
         content: "Laponia finlandesa ofrece la experiencia artica mas completa: auroras, Santa Claus, renos, saunas, y iglus de cristal:",
         list: ["Rovaniemi: Pueblo de Santa Claus. Aeropuerto internacional. Puerta de entrada a Laponia.", "Saariselka: Resort en el norte. Menos turistas. Parque Nacional Urho Kekkonen cercano.", "Levi: Estacion de esqui. Auroras + esqui + spa. Ambiente animado.", "Inari: Lago Inari congelado en invierno. Cultura Sami. Auroras reflejadas en el hielo.", "Iglus de cristal: Kakslauttanen, Arctic TreeHouse, Levin Iglut. Duerme bajo las auroras.", "Actividades: Safari de renos, huskies, motos de nieve, pesca en hielo, sauna finlandesa.", "Presupuesto: Iglus EUR 300-600/noche. Cabanas normales EUR 100-200/noche.", "Tip: La sauna finlandesa es perfecta para calentarse mientras esperas las auroras."],
-        image: "https://images.unsplash.com/photo-1490682143684-14369e18dce8?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1490682143684-14369e18dce8?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Suecia: La Alternativa Tranquila",
         content: "La Laponia sueca es menos turistica pero igualmente espectacular. Ideal para quien busca tranquilidad:",
         list: ["Abisko: Considerado el mejor lugar de Suecia para auroras. Microclima con cielos despejados.", "Kiruna: Ciudad minera. Base para explorar Laponia sueca. Icehotel cercano.", "Icehotel (Jukkasjarvi): Dormir en un hotel de hielo. Auroras desde suites heladas.", "Aurora Sky Station: Estacion elevada en Abisko. Menos nubes, mas probabilidad de auroras.", "Swedish Lapland: Menos turistas que Noruega o Finlandia. Precios algo mas bajos.", "Tren Artico: Tren nocturno desde Estocolmo hasta Abisko/Kiruna. Experiencia romantica.", "Actividades: Esqui de fondo, trineos, visita a comunidades Sami.", "Presupuesto: Hoteles EUR 100-250/noche. Tours EUR 80-150."],
-        image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Mejor Epoca para Ver la Aurora Boreal",
         content: "El timing es crucial para maximizar tus posibilidades de ver auroras:",
         list: ["Temporada: Septiembre a marzo. Algunas auroras en agosto y abril.", "Mejor mes: Estadisticamente, marzo y septiembre tienen mas actividad solar.", "Hora del dia: Entre 21:00 y 02:00 es el mejor momento. Pico alrededor de medianoche.", "Luna: Luna nueva es ideal. Menos luz en el cielo. Consulta calendario lunar.", "Clima: Cielos despejados son esenciales. Las nubes bloquean la vista.", "Duracion del viaje: Minimo 3-4 noches para tener varias oportunidades.", "Aplicaciones: Aurora Alerts, My Aurora Forecast. Te avisan cuando hay actividad.", "Paciencia: A veces aparecen debilmente y luego explotan. No te vayas temprano."],
-        image: "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Consejos Practicos para Cazar Auroras",
@@ -7472,7 +7472,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Que Hacer Si No Aparece la Aurora",
         content: "Nunca hay garantia, pero estos destinos ofrecen mucho mas que auroras:",
         list: ["Noruega: Fiordos, ciudades encantadoras, gastronomia escandinava, esqui.", "Islandia: Geyser, cascadas, glaciares, Blue Lagoon, ballenas, volcanes.", "Finlandia: Santa Claus, renos, huskies, sauna, cultura Sami, tranquilidad artica.", "Suecia: Icehotel, naturaleza virgen, tren artico, Estocolmo cultural.", "Actividades invernales: Trineo de perros, motos de nieve, pesca en hielo, esqui de fondo.", "Gastronomia: Cocina nordica innovadora. Reno, salmon, bayas articas.", "Cultura Sami: El pueblo indigena del Artico. Visita campamentos, conoce tradiciones.", "Relax: Spa artico, saunas, jacuzzis al aire libre bajo las estrellas."],
-        image: "https://images.unsplash.com/photo-1520769945061-0a448c463865?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520769945061-0a448c463865?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Como Llegar al Circulo Polar Artico",
@@ -7483,7 +7483,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
         title: "Alojamiento Especial para Ver Auroras",
         content: "Hoteles y cabanas disenados para observar auroras sin salir del cuarto:",
         list: ["Kakslauttanen (Finlandia): Iglus de cristal originales. Calefaccion, camas ajustables. EUR 400-600/noche.", "Arctic TreeHouse (Finlandia): Cabanas elevadas con ventanales panoramicos. Diseno moderno.", "Sorrisniva (Noruega): Hotel de hielo y cabanas de vidrio. Cerca de Alta.", "Aurora Basecamp (Islandia): Domos geodesicos cerca de Reykjavik. Accesible.", "Icehotel (Suecia): El original hotel de hielo. Suites de arte tallado. -5 C interior.", "Lyngen Lodge (Noruega): Cabanas de lujo en los fiordos. Auroras privadas.", "Precios: EUR 200-600/noche dependiendo del tipo y ubicacion.", "Reservas: 6-12 meses de anticipacion para temporada alta (diciembre-febrero)."],
-        image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1520681279154-51b3fb4ea0f7?q=60&w=1200&auto=format&fit=crop"
       },
       {
         title: "Presupuesto para un Viaje de Auroras Boreales",
@@ -7493,7 +7493,7 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
       {
         title: "Caza Auroras con Trips Europa",
         content: "En Tripseuropa.com organizamos viajes completos para ver la aurora boreal. Te llevamos a los mejores lugares, reservamos alojamientos especiales con techo de cristal, organizamos tours con guias expertos, y coordinamos actividades articas como trineos de huskies y safaris de renos. Monitoreamos la actividad solar y el clima para maximizar tus posibilidades. La aurora boreal es un sueno que muchos latinoamericanos tienen, y nosotros te ayudamos a cumplirlo. Contactanos por WhatsApp al +34 611 105 448 o visita Tripseuropa.com para cotizar tu aventura artica.",
-        image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=60&w=1200&auto=format&fit=crop"
       }
     ],
     faqs: [

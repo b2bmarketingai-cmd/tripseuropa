@@ -34,7 +34,7 @@ const REGIONS = [
 const FEATURED_PACKAGES = [
   {
     id: "portugal-coastal",
-    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=60&w=800&auto=format&fit=crop",
     title: "Ciudades Costeras y Tesoros Culturales",
     country: "Portugal",
     cities: ["Lisboa", "Sintra", "Porto", "Coimbra"],
@@ -43,7 +43,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "spain-complete",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800&auto=format&fit=crop",
     title: "Madrid, Andalucia, Valencia y Barcelona",
     country: "España",
     cities: ["Madrid", "Sevilla", "Valencia", "Barcelona"],
@@ -52,7 +52,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "ireland-emerald",
-    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=60&w=800&auto=format&fit=crop",
     title: "Esencia de la Isla Esmeralda",
     country: "Irlanda",
     cities: ["Dublin", "Galway", "Cork", "Killarney"],
@@ -61,7 +61,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "italy-eternal",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
     title: "Ciudades Eternas de Italia",
     country: "Italia",
     cities: ["Roma", "Florencia", "Venecia", "Milan"],
@@ -70,7 +70,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "portugal-algarve",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800&auto=format&fit=crop",
     title: "Tesoros Culturales y Escapada al Algarve",
     country: "Portugal",
     cities: ["Lisboa", "Porto", "Faro", "Lagos"],
@@ -79,7 +79,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "portugal-douro",
-    image: "https://images.unsplash.com/photo-1558018333-bcb8c3600a7f?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558018333-bcb8c3600a7f?q=60&w=800&auto=format&fit=crop",
     title: "Ciudades Costeras y el Valle del Douro",
     country: "Portugal",
     cities: ["Porto", "Douro", "Braga", "Guimaraes"],
@@ -88,7 +88,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "italy-amalfi",
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=60&w=800&auto=format&fit=crop",
     title: "Ischia, Costa Amalfitana y Pompeya",
     country: "Italia",
     cities: ["Napoles", "Positano", "Amalfi", "Pompeya"],
@@ -97,7 +97,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "ireland-celtic",
-    image: "https://images.unsplash.com/photo-1564959130747-897c7e0fb6ab?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1564959130747-897c7e0fb6ab?q=60&w=800&auto=format&fit=crop",
     title: "Viaje Celta: Irlanda e Irlanda del Norte",
     country: "Irlanda",
     cities: ["Dublin", "Belfast", "Giants Causeway", "Cliffs of Moher"],
@@ -106,7 +106,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "italy-puglia",
-    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?q=60&w=800&auto=format&fit=crop",
     title: "Maravillas Costeras de Amalfi y Puglia",
     country: "Italia",
     cities: ["Napoles", "Amalfi", "Bari", "Lecce"],
@@ -115,7 +115,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "france-normandy",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800&auto=format&fit=crop",
     title: "Joyas de Normandia y la Riviera Francesa",
     country: "Francia",
     cities: ["Paris", "Mont Saint-Michel", "Niza", "Cannes"],
@@ -124,7 +124,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "switzerland-alps",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=60&w=800&auto=format&fit=crop",
     title: "Alpes y Ciudades de Suiza",
     country: "Suiza",
     cities: ["Zurich", "Lucerna", "Interlaken", "Zermatt"],
@@ -133,7 +133,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "baltics-guided",
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?q=60&w=800&auto=format&fit=crop",
     title: "Viaje Guiado por los Balticos",
     country: "Balticos",
     cities: ["Vilna", "Riga", "Tallin", "Helsinki"],
@@ -191,35 +191,35 @@ const TOP_COUNTRIES = [
   {
     id: "portugal",
     name: "Portugal",
-    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=60&w=600&auto=format&fit=crop",
     description: "Desde Lisboa hasta el Algarve, descubre historia, playas y la calidez portuguesa.",
     trips: 24,
   },
   {
     id: "greece",
     name: "Grecia",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop",
     description: "Islas paradisiacas, ruinas antiguas y la cuna de la civilizacion occidental.",
     trips: 18,
   },
   {
     id: "italy",
     name: "Italia",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     description: "Arte, historia, gastronomía y paisajes que han inspirado al mundo por siglos.",
     trips: 32,
   },
   {
     id: "switzerland",
     name: "Suiza",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=60&w=600&auto=format&fit=crop",
     description: "Los Alpes majestuosos, lagos cristalinos y precision en cada detalle.",
     trips: 12,
   },
   {
     id: "ireland",
     name: "Irlanda",
-    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=60&w=600&auto=format&fit=crop",
     description: "La isla esmeralda te espera con castillos, acantilados y pubs acogedores.",
     trips: 14,
   },
@@ -639,7 +639,7 @@ Desde: Tripseuropa.com`;
       <section 
         className="relative min-h-[60vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1920&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

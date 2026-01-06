@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { Eye, EyeOff, Loader2, ArrowLeft } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { SEOHead } from "@/components/SEOHead";
-import logoPath from "@assets/erasebg-transformed_(2)_1767029138652.png";
+import logoPath from "@assets/logo-optimized.png";
 
 export default function TravelAdvisor() {
   const { language } = useI18n();
@@ -91,7 +91,7 @@ export default function TravelAdvisor() {
       
       <div className="hidden lg:flex lg:w-1/2 relative">
         <img
-          src="https://images.unsplash.com/photo-1504681869696-d977211a5f4c?q=80&w=1200&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1504681869696-d977211a5f4c?q=60&w=1200&auto=format&fit=crop"
           alt="Travel advisor"
           className="absolute inset-0 w-full h-full object-cover"
         />

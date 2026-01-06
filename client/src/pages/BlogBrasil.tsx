@@ -20,7 +20,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Coliseu e Vaticano", "Gastronomia italiana autentica", "Destino romantico", "Arte e cultura milenar"],
     nearby: ["Florenca", "Veneza", "Milao", "Napoles"],
   },
@@ -28,7 +28,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Franca",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Torre Eiffel iconica", "Museu do Louvre", "Gastronomia refinada", "Moda e luxo"],
     nearby: ["Versalhes", "Normandia", "Provenca", "Champagne"],
   },
@@ -36,7 +36,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, Espanha",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Voos via Lisboa com TAP", "Museus Prado e Reina Sofia", "Vida noturna vibrante", "Hub para outros destinos"],
     nearby: ["Barcelona", "Sevilha", "Toledo", "Valencia"],
   },
@@ -44,7 +44,7 @@ const TOP_DESTINATIONS = [
     id: "lisboa",
     name: "Lisboa, Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Voos diretos TAP (2 diarios)", "Idioma portugues", "Hub para toda Europa", "Cultura familiar"],
     nearby: ["Cascais", "Sintra", "Porto", "Algarve"],
   },
@@ -52,7 +52,7 @@ const TOP_DESTINATIONS = [
     id: "florencia",
     name: "Florenca, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=60&w=600&auto=format&fit=crop",
     why: ["Berco do Renascimento", "Galeria Uffizi", "Toscana proxima", "Arte suprema"],
     nearby: ["Pisa", "Siena", "San Gimignano"],
   },
@@ -60,7 +60,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, Espanha",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Gaudi e Sagrada Familia", "Praias mediterraneas", "Vida moderna", "Costa Brava"],
     nearby: ["Costa Brava", "Montserrat", "Girona"],
   },
@@ -68,7 +68,7 @@ const TOP_DESTINATIONS = [
     id: "londres",
     name: "Londres, Reino Unido",
     countryCode: "GB",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=600&auto=format&fit=crop",
     why: ["Via TAP Lisboa", "Historia e monumentos", "Compras de classe mundial", "Cultura britanica"],
     nearby: ["Oxford", "Stonehenge", "Bath", "Escocia"],
   },
@@ -76,7 +76,7 @@ const TOP_DESTINATIONS = [
     id: "grecia",
     name: "Grecia (Atenas + Ilhas)",
     countryCode: "GR",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=600&auto=format&fit=crop",
     why: ["Santorini e Mykonos", "Acropole historica", "Ilhas paradisiacas", "Gastronomia mediterranea"],
     nearby: ["Santorini", "Mykonos", "Creta", "Rodes"],
   },
@@ -142,7 +142,7 @@ const POPULAR_ROUTES = [
     description: "O roteiro mais classico: Roma e Paris, as duas cidades mais romanticas da Europa.",
     destinations: ["Roma", "Florenca", "Paris", "Versalhes"],
     highlights: ["Coliseu e Vaticano", "Arte renascentista", "Torre Eiffel", "Gastronomia refinada"],
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "portugal-espanha",
@@ -150,7 +150,7 @@ const POPULAR_ROUTES = [
     description: "Roteiro perfeito para brasileiros: idioma familiar e cultura ibérica.",
     destinations: ["Lisboa", "Porto", "Madrid", "Barcelona"],
     highlights: ["Idioma português", "Vinho do Porto", "Museus de Madrid", "Praias mediterrâneas"],
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "romantica",
@@ -158,7 +158,7 @@ const POPULAR_ROUTES = [
     description: "Perfeita para lua de mel: Paris, Roma e Veneza.",
     destinations: ["Paris", "Roma", "Veneza", "Florença"],
     highlights: ["Cidade do amor", "Gôndolas em Veneza", "Cenas românticas", "Arte e cultura"],
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "grecia",
@@ -166,7 +166,7 @@ const POPULAR_ROUTES = [
     description: "Ilhas gregas: Santorini, Mykonos e a histórica Atenas.",
     destinations: ["Atenas", "Santorini", "Mykonos", "Creta"],
     highlights: ["Acrópole de Atenas", "Pôr do sol em Santorini", "Praias paradisíacas", "Gastronomia grega"],
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -272,7 +272,7 @@ export default function BlogBrasil() {
         description="Tudo que voce precisa saber para viajar a Europa desde Brasil"
         datePublished="2025-01-01"
         author="Trips Europa"
-        image="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200"
         url="/blog/brasil"
       />
       
@@ -281,7 +281,7 @@ export default function BlogBrasil() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=1920&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=1200&auto=format&fit=crop')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">

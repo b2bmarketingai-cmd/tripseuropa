@@ -21,7 +21,7 @@ const TOP_DESTINATIONS = [
     id: "españa",
     name: "España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Idioma español", "Conexiones directas", "Cultura hispana", "Gastronomia"],
     duration: "8-10 dias",
     priceRange: "$10,500 USD",
@@ -32,7 +32,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Ciudad del amor", "Torre Eiffel", "Moda y lujo", "Museo del Louvre"],
     duration: "8-10 dias",
     priceRange: "$11,000 USD",
@@ -43,7 +43,7 @@ const TOP_DESTINATIONS = [
     id: "italia",
     name: "Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Historia milenaria", "Vaticano", "Pizza y pasta", "Arte"],
     duration: "10-12 dias",
     priceRange: "$11,500 USD",
@@ -54,7 +54,7 @@ const TOP_DESTINATIONS = [
     id: "portugal",
     name: "Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Precio accesible", "Playas hermosas", "Cultura portuguesa", "Gastronomia"],
     duration: "5-7 dias",
     priceRange: "$9,500 USD",
@@ -65,7 +65,7 @@ const TOP_DESTINATIONS = [
     id: "estambul",
     name: "Estambul, Turquia",
     countryCode: "TR",
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=600&auto=format&fit=crop",
     why: ["Precio accesible", "Cultura única", "Gastronomia", "Historia"],
     duration: "7-8 dias",
     priceRange: "$9,000 USD",
@@ -238,7 +238,7 @@ export default function BlogDominicana() {
           : language === "pt"
           ? "Tudo o que você precisa saber para viajar à Europa a partir de RD: destinos, rotas, preços, visto e dicas práticas."
           : "Everything you need to know to travel to Europe from DR: destinations, routes, prices, visa and practical tips."}
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200"
         datePublished="2025-01-01"
         author="Trips Europa"
         url="https://tripseuropa.com/blog/dominicana"
@@ -249,7 +249,7 @@ export default function BlogDominicana() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-dominicana-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1580541631950-7282082b02fe?q=80&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1580541631950-7282082b02fe?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

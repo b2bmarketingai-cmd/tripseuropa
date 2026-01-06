@@ -38,7 +38,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "fall",
     category: "season",
     name: { es: "Viajes de Otono", en: "Fall Trips" },
-    heroImage: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Descubre Europa en su momento mas magico. El otono transforma el continente con colores dorados, festivales de la cosecha y temperaturas perfectas para explorar. Desde los vinedos de la Toscana hasta los castillos de Alemania, vive una experiencia unica.",
       en: "Discover Europe at its most magical moment. Fall transforms the continent with golden colors, harvest festivals, and perfect temperatures for exploration. From the vineyards of Tuscany to the castles of Germany, experience something unique."
@@ -48,9 +48,9 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Wine harvest festivals in France and Italy", "Autumn colors in the Alps", "Fewer tourists and better prices", "Seasonal gastronomy"]
     },
     packages: [
-      { id: "fall-1", name: { es: "Vendimia en Borgona", en: "Burgundy Wine Harvest" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Degustacion de vinos", "Recorrido por vinedos", "Gastronomia gourmet"], en: ["Wine tasting", "Vineyard tours", "Gourmet gastronomy"] } },
-      { id: "fall-2", name: { es: "Otono en la Toscana", en: "Tuscan Autumn" }, destination: "Italy", duration: { es: "10 dias", en: "10 days" }, price: 3450, image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Colinas toscanas", "Trufa blanca", "Pueblos medievales"], en: ["Tuscan hills", "White truffle", "Medieval villages"] } },
-      { id: "fall-3", name: { es: "Castillos de Baviera", en: "Bavarian Castles" }, destination: "Germany", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1534313314376-a72289b6181e?q=80&w=800&auto=format&fit=crop", highlights: { es: ["Neuschwanstein", "Oktoberfest", "Bosques dorados"], en: ["Neuschwanstein", "Oktoberfest", "Golden forests"] } }
+      { id: "fall-1", name: { es: "Vendimia en Borgona", en: "Burgundy Wine Harvest" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=60&w=800&auto=format&fit=crop", highlights: { es: ["Degustacion de vinos", "Recorrido por vinedos", "Gastronomia gourmet"], en: ["Wine tasting", "Vineyard tours", "Gourmet gastronomy"] } },
+      { id: "fall-2", name: { es: "Otono en la Toscana", en: "Tuscan Autumn" }, destination: "Italy", duration: { es: "10 dias", en: "10 days" }, price: 3450, image: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=60&w=800&auto=format&fit=crop", highlights: { es: ["Colinas toscanas", "Trufa blanca", "Pueblos medievales"], en: ["Tuscan hills", "White truffle", "Medieval villages"] } },
+      { id: "fall-3", name: { es: "Castillos de Baviera", en: "Bavarian Castles" }, destination: "Germany", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1534313314376-a72289b6181e?q=60&w=800&auto=format&fit=crop", highlights: { es: ["Neuschwanstein", "Oktoberfest", "Bosques dorados"], en: ["Neuschwanstein", "Oktoberfest", "Golden forests"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada y bienvenida", en: "Arrival and welcome" }, description: { es: "Llegada al destino, traslado al hotel y cena de bienvenida con vinos de la region.", en: "Arrival at destination, transfer to hotel, and welcome dinner with regional wines." } },
@@ -71,7 +71,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "summer",
     category: "season",
     name: { es: "Viajes de Verano", en: "Summer Trips" },
-    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "El verano europeo ofrece dias largos, playas cristalinas y festivales al aire libre. Desde la Costa Amalfitana hasta las islas griegas, disfruta del sol mediterraneo en su maximo esplendor.",
       en: "European summer offers long days, crystal-clear beaches, and outdoor festivals. From the Amalfi Coast to the Greek islands, enjoy the Mediterranean sun at its finest."
@@ -81,9 +81,9 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Mediterranean beaches", "Music festivals", "Long sunny days", "Vibrant nightlife"]
     },
     packages: [
-      { id: "sum-1", name: { es: "Islas Griegas", en: "Greek Islands" }, destination: "Greece", duration: { es: "12 dias", en: "12 days" }, price: 3890, image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800", highlights: { es: ["Santorini", "Mykonos", "Creta"], en: ["Santorini", "Mykonos", "Crete"] } },
-      { id: "sum-2", name: { es: "Costa Amalfitana", en: "Amalfi Coast" }, destination: "Italy", duration: { es: "9 dias", en: "9 days" }, price: 3250, image: "https://images.unsplash.com/photo-1534008757030-27299c4371b6?q=80&w=800", highlights: { es: ["Positano", "Capri", "Ravello"], en: ["Positano", "Capri", "Ravello"] } },
-      { id: "sum-3", name: { es: "Riviera Francesa", en: "French Riviera" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 3450, image: "https://images.unsplash.com/photo-1488866022504-f2584929ca5f?q=80&w=800", highlights: { es: ["Nice", "Monaco", "Cannes"], en: ["Nice", "Monaco", "Cannes"] } }
+      { id: "sum-1", name: { es: "Islas Griegas", en: "Greek Islands" }, destination: "Greece", duration: { es: "12 dias", en: "12 days" }, price: 3890, image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800", highlights: { es: ["Santorini", "Mykonos", "Creta"], en: ["Santorini", "Mykonos", "Crete"] } },
+      { id: "sum-2", name: { es: "Costa Amalfitana", en: "Amalfi Coast" }, destination: "Italy", duration: { es: "9 dias", en: "9 days" }, price: 3250, image: "https://images.unsplash.com/photo-1534008757030-27299c4371b6?q=60&w=800", highlights: { es: ["Positano", "Capri", "Ravello"], en: ["Positano", "Capri", "Ravello"] } },
+      { id: "sum-3", name: { es: "Riviera Francesa", en: "French Riviera" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 3450, image: "https://images.unsplash.com/photo-1488866022504-f2584929ca5f?q=60&w=800", highlights: { es: ["Nice", "Monaco", "Cannes"], en: ["Nice", "Monaco", "Cannes"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada al paraiso", en: "Arrival in paradise" }, description: { es: "Llegada y traslado al resort frente al mar. Coctel de bienvenida al atardecer.", en: "Arrival and transfer to beachfront resort. Welcome cocktail at sunset." } },
@@ -101,7 +101,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "spring",
     category: "season",
     name: { es: "Viajes de Primavera", en: "Spring Trips" },
-    heroImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "La primavera despierta Europa con flores, jardines en flor y temperaturas ideales. Desde los tulipanes de Holanda hasta los cerezos de Paris, vive el renacer del continente.",
       en: "Spring awakens Europe with flowers, blooming gardens, and ideal temperatures. From Holland's tulips to Paris's cherry blossoms, experience the continent's rebirth."
@@ -111,8 +111,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Tulip fields", "Blooming gardens", "Perfect weather", "Fewer crowds"]
     },
     packages: [
-      { id: "spr-1", name: { es: "Tulipanes de Holanda", en: "Holland Tulips" }, destination: "Netherlands", duration: { es: "6 dias", en: "6 days" }, price: 2290, image: "https://images.unsplash.com/photo-1589994160839-163cd867cfe8?q=80&w=800", highlights: { es: ["Keukenhof", "Amsterdam", "Molinos"], en: ["Keukenhof", "Amsterdam", "Windmills"] } },
-      { id: "spr-2", name: { es: "Paris en Flor", en: "Paris in Bloom" }, destination: "France", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800", highlights: { es: ["Jardines de Monet", "Versalles", "Cerezos"], en: ["Monet's Gardens", "Versailles", "Cherry blossoms"] } }
+      { id: "spr-1", name: { es: "Tulipanes de Holanda", en: "Holland Tulips" }, destination: "Netherlands", duration: { es: "6 dias", en: "6 days" }, price: 2290, image: "https://images.unsplash.com/photo-1589994160839-163cd867cfe8?q=60&w=800", highlights: { es: ["Keukenhof", "Amsterdam", "Molinos"], en: ["Keukenhof", "Amsterdam", "Windmills"] } },
+      { id: "spr-2", name: { es: "Paris en Flor", en: "Paris in Bloom" }, destination: "France", duration: { es: "7 dias", en: "7 days" }, price: 2650, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800", highlights: { es: ["Jardines de Monet", "Versalles", "Cerezos"], en: ["Monet's Gardens", "Versailles", "Cherry blossoms"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada primaveral", en: "Spring arrival" }, description: { es: "Llegada y paseo por parques florecidos de la ciudad.", en: "Arrival and stroll through the city's blooming parks." } },
@@ -128,7 +128,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "easter",
     category: "season",
     name: { es: "Semana Santa en Europa", en: "Easter in Europe" },
-    heroImage: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la Semana Santa con tradiciones centenarias en Espana, Italia y mas. Procesiones, gastronomia especial y una atmosfera unica de espiritualidad y celebracion.",
       en: "Experience Easter with centuries-old traditions in Spain, Italy, and beyond. Processions, special gastronomy, and a unique atmosphere of spirituality and celebration."
@@ -138,8 +138,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Traditional processions", "Easter gastronomy", "Religious celebrations", "Authentic local culture"]
     },
     packages: [
-      { id: "eas-1", name: { es: "Semana Santa Sevillana", en: "Seville Holy Week" }, destination: "Spain", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=800", highlights: { es: ["Procesiones", "Flamenco", "Tapas"], en: ["Processions", "Flamenco", "Tapas"] } },
-      { id: "eas-2", name: { es: "Roma Eterna", en: "Eternal Rome" }, destination: "Italy", duration: { es: "7 dias", en: "7 days" }, price: 2750, image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800", highlights: { es: ["Vaticano", "Misa Papal", "Coliseo"], en: ["Vatican", "Papal Mass", "Colosseum"] } }
+      { id: "eas-1", name: { es: "Semana Santa Sevillana", en: "Seville Holy Week" }, destination: "Spain", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=800", highlights: { es: ["Procesiones", "Flamenco", "Tapas"], en: ["Processions", "Flamenco", "Tapas"] } },
+      { id: "eas-2", name: { es: "Roma Eterna", en: "Eternal Rome" }, destination: "Italy", duration: { es: "7 dias", en: "7 days" }, price: 2750, image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=800", highlights: { es: ["Vaticano", "Misa Papal", "Coliseo"], en: ["Vatican", "Papal Mass", "Colosseum"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada y ambientacion", en: "Arrival and setting" }, description: { es: "Llegada y primer contacto con las preparaciones de Semana Santa.", en: "Arrival and first contact with Holy Week preparations." } },
@@ -155,7 +155,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "winter",
     category: "season",
     name: { es: "Viajes de Invierno", en: "Winter Trips" },
-    heroImage: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "El invierno europeo ofrece esqui en los Alpes, auroras boreales en Escandinavia y ciudades magicas cubiertas de nieve. Una experiencia invernal inolvidable.",
       en: "European winter offers skiing in the Alps, northern lights in Scandinavia, and magical snow-covered cities. An unforgettable winter experience."
@@ -165,8 +165,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Alpine skiing", "Northern lights", "Snowy cities", "Christmas markets"]
     },
     packages: [
-      { id: "win-1", name: { es: "Esqui en Suiza", en: "Swiss Skiing" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1520962922320-2038eebab146?q=80&w=800", highlights: { es: ["Zermatt", "Clases de esqui", "Spa alpino"], en: ["Zermatt", "Ski lessons", "Alpine spa"] } },
-      { id: "win-2", name: { es: "Auroras en Laponia", en: "Lapland Auroras" }, destination: "Finland", duration: { es: "6 dias", en: "6 days" }, price: 3890, image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=800", highlights: { es: ["Auroras boreales", "Huskies", "Iglus de cristal"], en: ["Northern lights", "Huskies", "Glass igloos"] } }
+      { id: "win-1", name: { es: "Esqui en Suiza", en: "Swiss Skiing" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1520962922320-2038eebab146?q=60&w=800", highlights: { es: ["Zermatt", "Clases de esqui", "Spa alpino"], en: ["Zermatt", "Ski lessons", "Alpine spa"] } },
+      { id: "win-2", name: { es: "Auroras en Laponia", en: "Lapland Auroras" }, destination: "Finland", duration: { es: "6 dias", en: "6 days" }, price: 3890, image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=60&w=800", highlights: { es: ["Auroras boreales", "Huskies", "Iglus de cristal"], en: ["Northern lights", "Huskies", "Glass igloos"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada invernal", en: "Winter arrival" }, description: { es: "Llegada y acomodacion en chalet alpino con chimenea.", en: "Arrival and accommodation in alpine chalet with fireplace." } },
@@ -182,7 +182,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "christmas",
     category: "season",
     name: { es: "Navidad en Europa", en: "Christmas in Europe" },
-    heroImage: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la magia navidena en los mercados mas encantadores de Europa. Desde Viena hasta Estrasburgo, descubre tradiciones, artesanias y sabores festivos.",
       en: "Experience the magic of Christmas in Europe's most charming markets. From Vienna to Strasbourg, discover traditions, crafts, and festive flavors."
@@ -208,7 +208,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "multi-country",
     category: "interest",
     name: { es: "Viajes Multi-Pais", en: "Multi-Country Trips" },
-    heroImage: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Explora varios paises en un solo viaje. Nuestros itinerarios multi-destino te permiten descubrir la diversidad de Europa de manera eficiente y emocionante.",
       en: "Explore multiple countries in a single trip. Our multi-destination itineraries let you discover Europe's diversity efficiently and excitingly."
@@ -218,8 +218,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Multiple destinations", "Optimized transport", "Cultural diversity", "Best value"]
     },
     packages: [
-      { id: "mc-1", name: { es: "Gran Tour de Europa", en: "Grand European Tour" }, destination: "Multi-Country", duration: { es: "15 dias", en: "15 days" }, price: 4890, image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=800", highlights: { es: ["Paris", "Roma", "Barcelona", "Amsterdam"], en: ["Paris", "Rome", "Barcelona", "Amsterdam"] } },
-      { id: "mc-2", name: { es: "Capitales Imperiales", en: "Imperial Capitals" }, destination: "Central Europe", duration: { es: "12 dias", en: "12 days" }, price: 3890, image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=800", highlights: { es: ["Viena", "Budapest", "Praga"], en: ["Vienna", "Budapest", "Prague"] } }
+      { id: "mc-1", name: { es: "Gran Tour de Europa", en: "Grand European Tour" }, destination: "Multi-Country", duration: { es: "15 dias", en: "15 days" }, price: 4890, image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=800", highlights: { es: ["Paris", "Roma", "Barcelona", "Amsterdam"], en: ["Paris", "Rome", "Barcelona", "Amsterdam"] } },
+      { id: "mc-2", name: { es: "Capitales Imperiales", en: "Imperial Capitals" }, destination: "Central Europe", duration: { es: "12 dias", en: "12 days" }, price: 3890, image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=60&w=800", highlights: { es: ["Viena", "Budapest", "Praga"], en: ["Vienna", "Budapest", "Prague"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Primera capital", en: "First capital" }, description: { es: "Llegada a la primera ciudad y tour de orientacion.", en: "Arrival at first city and orientation tour." } },
@@ -236,7 +236,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "beach",
     category: "interest",
     name: { es: "Viajes de Playa", en: "Beach Trips" },
-    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Las mejores playas de Europa te esperan. Desde las calas secretas del Mediterraneo hasta las costas dramaticas del Atlantico, encuentra tu paraiso costero.",
       en: "Europe's best beaches await you. From secret Mediterranean coves to dramatic Atlantic coasts, find your coastal paradise."
@@ -246,8 +246,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Crystal waters", "Luxury resorts", "Water sports", "Seafood cuisine"]
     },
     packages: [
-      { id: "bch-1", name: { es: "Islas Baleares", en: "Balearic Islands" }, destination: "Spain", duration: { es: "10 dias", en: "10 days" }, price: 3290, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=800", highlights: { es: ["Mallorca", "Ibiza", "Menorca"], en: ["Mallorca", "Ibiza", "Menorca"] } },
-      { id: "bch-2", name: { es: "Costa Croata", en: "Croatian Coast" }, destination: "Croatia", duration: { es: "9 dias", en: "9 days" }, price: 2890, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=800", highlights: { es: ["Dubrovnik", "Split", "Hvar"], en: ["Dubrovnik", "Split", "Hvar"] } }
+      { id: "bch-1", name: { es: "Islas Baleares", en: "Balearic Islands" }, destination: "Spain", duration: { es: "10 dias", en: "10 days" }, price: 3290, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=800", highlights: { es: ["Mallorca", "Ibiza", "Menorca"], en: ["Mallorca", "Ibiza", "Menorca"] } },
+      { id: "bch-2", name: { es: "Costa Croata", en: "Croatian Coast" }, destination: "Croatia", duration: { es: "9 dias", en: "9 days" }, price: 2890, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=800", highlights: { es: ["Dubrovnik", "Split", "Hvar"], en: ["Dubrovnik", "Split", "Hvar"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada al resort", en: "Resort arrival" }, description: { es: "Check-in en resort frente al mar y tarde de relax.", en: "Check-in at beachfront resort and relaxing afternoon." } }
@@ -262,7 +262,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "adventure",
     category: "interest",
     name: { es: "Viajes de Aventura", en: "Adventure Trips" },
-    heroImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Adrenalina y naturaleza se unen en nuestras aventuras europeas. Desde senderismo en los Alpes hasta kayak en fiordos noruegos, supera tus limites.",
       en: "Adrenaline and nature unite in our European adventures. From Alpine hiking to kayaking in Norwegian fjords, push your limits."
@@ -272,8 +272,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Hiking", "Extreme sports", "Pristine nature", "Unique experiences"]
     },
     packages: [
-      { id: "adv-1", name: { es: "Fiordos de Noruega", en: "Norwegian Fjords" }, destination: "Norway", duration: { es: "10 dias", en: "10 days" }, price: 4190, image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=800", highlights: { es: ["Kayak", "Senderismo", "Glaciares"], en: ["Kayaking", "Hiking", "Glaciers"] } },
-      { id: "adv-2", name: { es: "Alpes Suizos", en: "Swiss Alps" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 3590, image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800", highlights: { es: ["Parapente", "Via ferrata", "Glaciares"], en: ["Paragliding", "Via ferrata", "Glaciers"] } }
+      { id: "adv-1", name: { es: "Fiordos de Noruega", en: "Norwegian Fjords" }, destination: "Norway", duration: { es: "10 dias", en: "10 days" }, price: 4190, image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=60&w=800", highlights: { es: ["Kayak", "Senderismo", "Glaciares"], en: ["Kayaking", "Hiking", "Glaciers"] } },
+      { id: "adv-2", name: { es: "Alpes Suizos", en: "Swiss Alps" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 3590, image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=800", highlights: { es: ["Parapente", "Via ferrata", "Glaciares"], en: ["Paragliding", "Via ferrata", "Glaciers"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Briefing de aventura", en: "Adventure briefing" }, description: { es: "Reunion con guias, equipamiento y primera actividad de calentamiento.", en: "Meeting with guides, equipment and first warm-up activity." } }
@@ -288,7 +288,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "safari",
     category: "interest",
     name: { es: "Safari Europeo", en: "European Safari" },
-    heroImage: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Descubre la vida salvaje de Europa. Desde los bisontes de Polonia hasta los osos de Escandinavia, vive encuentros unicos con la fauna europea.",
       en: "Discover Europe's wildlife. From Polish bison to Scandinavian bears, experience unique encounters with European fauna."
@@ -298,7 +298,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Wild fauna", "Natural parks", "Nature photography", "Expert guides"]
     },
     packages: [
-      { id: "saf-1", name: { es: "Osos de Finlandia", en: "Finnish Bears" }, destination: "Finland", duration: { es: "6 dias", en: "6 days" }, price: 3290, image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=800", highlights: { es: ["Osos pardos", "Lobos", "Aguila real"], en: ["Brown bears", "Wolves", "Golden eagle"] } }
+      { id: "saf-1", name: { es: "Osos de Finlandia", en: "Finnish Bears" }, destination: "Finland", duration: { es: "6 dias", en: "6 days" }, price: 3290, image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=60&w=800", highlights: { es: ["Osos pardos", "Lobos", "Aguila real"], en: ["Brown bears", "Wolves", "Golden eagle"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Centro de observacion", en: "Observation center" }, description: { es: "Llegada al centro de fauna y preparacion para avistamientos.", en: "Arrival at wildlife center and preparation for sightings." } }
@@ -313,7 +313,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "cruises",
     category: "interest",
     name: { es: "Cruceros por Europa", en: "European Cruises" },
-    heroImage: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Navega por las aguas mas hermosas de Europa. Desde el Mediterraneo hasta los fiordos nordicos, descubre el continente desde una perspectiva unica.",
       en: "Sail through Europe's most beautiful waters. From the Mediterranean to Nordic fjords, discover the continent from a unique perspective."
@@ -323,8 +323,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Multiple destinations", "Onboard luxury", "All-inclusive", "Entertainment"]
     },
     packages: [
-      { id: "cru-1", name: { es: "Mediterraneo Clasico", en: "Classic Mediterranean" }, destination: "Multi-Country", duration: { es: "12 dias", en: "12 days" }, price: 4590, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=800", highlights: { es: ["Barcelona", "Roma", "Atenas"], en: ["Barcelona", "Rome", "Athens"] } },
-      { id: "cru-2", name: { es: "Fiordos Nordicos", en: "Nordic Fjords" }, destination: "Norway", duration: { es: "10 dias", en: "10 days" }, price: 5290, image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=800", highlights: { es: ["Bergen", "Geirangerfjord", "Tromso"], en: ["Bergen", "Geirangerfjord", "Tromso"] } }
+      { id: "cru-1", name: { es: "Mediterraneo Clasico", en: "Classic Mediterranean" }, destination: "Multi-Country", duration: { es: "12 dias", en: "12 days" }, price: 4590, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=60&w=800", highlights: { es: ["Barcelona", "Roma", "Atenas"], en: ["Barcelona", "Rome", "Athens"] } },
+      { id: "cru-2", name: { es: "Fiordos Nordicos", en: "Nordic Fjords" }, destination: "Norway", duration: { es: "10 dias", en: "10 days" }, price: 5290, image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=60&w=800", highlights: { es: ["Bergen", "Geirangerfjord", "Tromso"], en: ["Bergen", "Geirangerfjord", "Tromso"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Embarque", en: "Embarkation" }, description: { es: "Embarque en el puerto y acomodacion en camarote de lujo.", en: "Embarkation at port and accommodation in luxury cabin." } }
@@ -339,7 +339,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "honeymoon",
     category: "interest",
     name: { es: "Luna de Miel", en: "Honeymoon" },
-    heroImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Celebra tu amor en los destinos mas romanticos de Europa. Desde Venecia hasta la Costa Amalfitana, crea recuerdos inolvidables con tu pareja.",
       en: "Celebrate your love in Europe's most romantic destinations. From Venice to the Amalfi Coast, create unforgettable memories with your partner."
@@ -349,8 +349,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Romantic destinations", "Exclusive experiences", "Private dinners", "Spa and wellness"]
     },
     packages: [
-      { id: "hon-1", name: { es: "Romance en Venecia", en: "Venetian Romance" }, destination: "Italy", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=800", highlights: { es: ["Gondola privada", "Cena romantica", "Murano"], en: ["Private gondola", "Romantic dinner", "Murano"] } },
-      { id: "hon-2", name: { es: "Paris Romantico", en: "Romantic Paris" }, destination: "France", duration: { es: "7 dias", en: "7 days" }, price: 3890, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800", highlights: { es: ["Torre Eiffel", "Crucero Sena", "Champagne"], en: ["Eiffel Tower", "Seine cruise", "Champagne"] } }
+      { id: "hon-1", name: { es: "Romance en Venecia", en: "Venetian Romance" }, destination: "Italy", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=800", highlights: { es: ["Gondola privada", "Cena romantica", "Murano"], en: ["Private gondola", "Romantic dinner", "Murano"] } },
+      { id: "hon-2", name: { es: "Paris Romantico", en: "Romantic Paris" }, destination: "France", duration: { es: "7 dias", en: "7 days" }, price: 3890, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800", highlights: { es: ["Torre Eiffel", "Crucero Sena", "Champagne"], en: ["Eiffel Tower", "Seine cruise", "Champagne"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada romantica", en: "Romantic arrival" }, description: { es: "Recepcion VIP y traslado a suite con decoracion especial.", en: "VIP reception and transfer to specially decorated suite." } }
@@ -365,7 +365,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "nature",
     category: "interest",
     name: { es: "Viajes de Naturaleza", en: "Nature Trips" },
-    heroImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Conecta con la naturaleza en los paisajes mas impresionantes de Europa. Bosques, lagos, montanas y costas virgenes te esperan.",
       en: "Connect with nature in Europe's most impressive landscapes. Forests, lakes, mountains, and pristine coasts await you."
@@ -375,8 +375,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["National parks", "Hiking", "Photography", "Eco-tourism"]
     },
     packages: [
-      { id: "nat-1", name: { es: "Lagos de Plitvice", en: "Plitvice Lakes" }, destination: "Croatia", duration: { es: "7 dias", en: "7 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=800", highlights: { es: ["Cascadas", "Lagos turquesa", "Bosques"], en: ["Waterfalls", "Turquoise lakes", "Forests"] } },
-      { id: "nat-2", name: { es: "Escocia Salvaje", en: "Wild Scotland" }, destination: "Scotland", duration: { es: "9 dias", en: "9 days" }, price: 3190, image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=800", highlights: { es: ["Highlands", "Castillos", "Whisky"], en: ["Highlands", "Castles", "Whisky"] } }
+      { id: "nat-1", name: { es: "Lagos de Plitvice", en: "Plitvice Lakes" }, destination: "Croatia", duration: { es: "7 dias", en: "7 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=800", highlights: { es: ["Cascadas", "Lagos turquesa", "Bosques"], en: ["Waterfalls", "Turquoise lakes", "Forests"] } },
+      { id: "nat-2", name: { es: "Escocia Salvaje", en: "Wild Scotland" }, destination: "Scotland", duration: { es: "9 dias", en: "9 days" }, price: 3190, image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=60&w=800", highlights: { es: ["Highlands", "Castillos", "Whisky"], en: ["Highlands", "Castles", "Whisky"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Inmersion natural", en: "Nature immersion" }, description: { es: "Llegada y primera caminata de exploracion por el parque.", en: "Arrival and first exploratory walk through the park." } }
@@ -391,7 +391,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "culture",
     category: "interest",
     name: { es: "Viajes Culturales", en: "Cultural Trips" },
-    heroImage: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Sumérgete en la rica historia y arte de Europa. Museos de clase mundial, monumentos historicos y tradiciones vivas te esperan.",
       en: "Immerse yourself in Europe's rich history and art. World-class museums, historic monuments, and living traditions await."
@@ -401,8 +401,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Art museums", "Historic monuments", "Local traditions", "Expert guides"]
     },
     packages: [
-      { id: "cul-1", name: { es: "Arte en Paris y Florencia", en: "Art in Paris and Florence" }, destination: "France/Italy", duration: { es: "12 dias", en: "12 days" }, price: 4190, image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800", highlights: { es: ["Louvre", "Uffizi", "Accademia"], en: ["Louvre", "Uffizi", "Accademia"] } },
-      { id: "cul-2", name: { es: "Historia de Roma", en: "History of Rome" }, destination: "Italy", duration: { es: "8 dias", en: "8 days" }, price: 2990, image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800", highlights: { es: ["Coliseo", "Vaticano", "Foro Romano"], en: ["Colosseum", "Vatican", "Roman Forum"] } }
+      { id: "cul-1", name: { es: "Arte en Paris y Florencia", en: "Art in Paris and Florence" }, destination: "France/Italy", duration: { es: "12 dias", en: "12 days" }, price: 4190, image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800", highlights: { es: ["Louvre", "Uffizi", "Accademia"], en: ["Louvre", "Uffizi", "Accademia"] } },
+      { id: "cul-2", name: { es: "Historia de Roma", en: "History of Rome" }, destination: "Italy", duration: { es: "8 dias", en: "8 days" }, price: 2990, image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=800", highlights: { es: ["Coliseo", "Vaticano", "Foro Romano"], en: ["Colosseum", "Vatican", "Roman Forum"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Introduccion cultural", en: "Cultural introduction" }, description: { es: "Llegada y charla introductoria sobre el contexto historico.", en: "Arrival and introductory talk about historical context." } }
@@ -417,7 +417,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "luxury",
     category: "interest",
     name: { es: "Viajes de Lujo", en: "Luxury Trips" },
-    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Experimenta Europa con el maximo refinamiento. Hoteles 5 estrellas, restaurantes con estrella Michelin y experiencias exclusivas.",
       en: "Experience Europe with maximum refinement. 5-star hotels, Michelin-starred restaurants, and exclusive experiences."
@@ -427,8 +427,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["5-star hotels", "Michelin restaurants", "Private transfers", "VIP experiences"]
     },
     packages: [
-      { id: "lux-1", name: { es: "Lujo en la Riviera", en: "Riviera Luxury" }, destination: "France", duration: { es: "10 dias", en: "10 days" }, price: 8990, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800", highlights: { es: ["Monaco", "Cannes", "Saint-Tropez"], en: ["Monaco", "Cannes", "Saint-Tropez"] } },
-      { id: "lux-2", name: { es: "Suiza Exclusiva", en: "Exclusive Switzerland" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 7590, image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800", highlights: { es: ["Gstaad", "St. Moritz", "Zermatt"], en: ["Gstaad", "St. Moritz", "Zermatt"] } }
+      { id: "lux-1", name: { es: "Lujo en la Riviera", en: "Riviera Luxury" }, destination: "France", duration: { es: "10 dias", en: "10 days" }, price: 8990, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=800", highlights: { es: ["Monaco", "Cannes", "Saint-Tropez"], en: ["Monaco", "Cannes", "Saint-Tropez"] } },
+      { id: "lux-2", name: { es: "Suiza Exclusiva", en: "Exclusive Switzerland" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 7590, image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=800", highlights: { es: ["Gstaad", "St. Moritz", "Zermatt"], en: ["Gstaad", "St. Moritz", "Zermatt"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada VIP", en: "VIP arrival" }, description: { es: "Recepcion en jet privado y traslado en limusina al hotel palace.", en: "Private jet reception and limousine transfer to palace hotel." } }
@@ -443,7 +443,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "solo",
     category: "group",
     name: { es: "Viajeros Solos", en: "Solo Travelers" },
-    heroImage: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Viaja solo pero nunca solitario. Unete a grupos de viajeros afines y descubre Europa mientras haces nuevos amigos de todo el mundo.",
       en: "Travel solo but never lonely. Join groups of like-minded travelers and discover Europe while making new friends from around the world."
@@ -453,8 +453,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Small groups", "Social activities", "Single room", "Flexibility"]
     },
     packages: [
-      { id: "sol-1", name: { es: "Portugal para Solos", en: "Portugal for Solos" }, destination: "Portugal", duration: { es: "9 dias", en: "9 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800", highlights: { es: ["Lisboa", "Sintra", "Oporto"], en: ["Lisbon", "Sintra", "Porto"] } },
-      { id: "sol-2", name: { es: "Irlanda para Solos", en: "Ireland for Solos" }, destination: "Ireland", duration: { es: "8 dias", en: "8 days" }, price: 2690, image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=800", highlights: { es: ["Dublin", "Galway", "Acantilados"], en: ["Dublin", "Galway", "Cliffs"] } }
+      { id: "sol-1", name: { es: "Portugal para Solos", en: "Portugal for Solos" }, destination: "Portugal", duration: { es: "9 dias", en: "9 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800", highlights: { es: ["Lisboa", "Sintra", "Oporto"], en: ["Lisbon", "Sintra", "Porto"] } },
+      { id: "sol-2", name: { es: "Irlanda para Solos", en: "Ireland for Solos" }, destination: "Ireland", duration: { es: "8 dias", en: "8 days" }, price: 2690, image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=60&w=800", highlights: { es: ["Dublin", "Galway", "Acantilados"], en: ["Dublin", "Galway", "Cliffs"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Encuentro del grupo", en: "Group meeting" }, description: { es: "Llegada y cena de bienvenida para conocer a tus companeros de viaje.", en: "Arrival and welcome dinner to meet your travel companions." } }
@@ -469,7 +469,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "family",
     category: "group",
     name: { es: "Viajes en Familia", en: "Family Trips" },
-    heroImage: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Crea recuerdos familiares inolvidables en Europa. Actividades para todas las edades, alojamientos familiares y ritmos adaptados a los mas pequenos.",
       en: "Create unforgettable family memories in Europe. Activities for all ages, family accommodations, and rhythms adapted for little ones."
@@ -479,8 +479,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Kids activities", "Family accommodations", "Adapted rhythms", "Educational experiences"]
     },
     packages: [
-      { id: "fam-1", name: { es: "Disney y Paris", en: "Disney and Paris" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 3290, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800", highlights: { es: ["Disneyland", "Torre Eiffel", "Versalles"], en: ["Disneyland", "Eiffel Tower", "Versailles"] } },
-      { id: "fam-2", name: { es: "Legoland y Copenhague", en: "Legoland and Copenhagen" }, destination: "Denmark", duration: { es: "7 dias", en: "7 days" }, price: 2890, image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=800", highlights: { es: ["Legoland", "Tivoli", "La Sirenita"], en: ["Legoland", "Tivoli", "Little Mermaid"] } }
+      { id: "fam-1", name: { es: "Disney y Paris", en: "Disney and Paris" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 3290, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800", highlights: { es: ["Disneyland", "Torre Eiffel", "Versalles"], en: ["Disneyland", "Eiffel Tower", "Versailles"] } },
+      { id: "fam-2", name: { es: "Legoland y Copenhague", en: "Legoland and Copenhagen" }, destination: "Denmark", duration: { es: "7 dias", en: "7 days" }, price: 2890, image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=60&w=800", highlights: { es: ["Legoland", "Tivoli", "La Sirenita"], en: ["Legoland", "Tivoli", "Little Mermaid"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Llegada familiar", en: "Family arrival" }, description: { es: "Llegada y check-in en hotel con habitaciones familiares.", en: "Arrival and check-in at hotel with family rooms." } }
@@ -495,7 +495,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "couples",
     category: "group",
     name: { es: "Viajes en Pareja", en: "Couples Trips" },
-    heroImage: "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Escapa con tu pareja a los destinos mas romanticos de Europa. Experiencias intimas, cenas a la luz de las velas y momentos inolvidables.",
       en: "Escape with your partner to Europe's most romantic destinations. Intimate experiences, candlelit dinners, and unforgettable moments."
@@ -505,8 +505,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Romantic experiences", "Couples spa", "Private dinners", "Romantic walks"]
     },
     packages: [
-      { id: "cpl-1", name: { es: "Escapada a Santorini", en: "Santorini Getaway" }, destination: "Greece", duration: { es: "7 dias", en: "7 days" }, price: 3590, image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800", highlights: { es: ["Atardeceres", "Vinos", "Playas"], en: ["Sunsets", "Wines", "Beaches"] } },
-      { id: "cpl-2", name: { es: "Amor en Praga", en: "Love in Prague" }, destination: "Czech Republic", duration: { es: "5 dias", en: "5 days" }, price: 1990, image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=800", highlights: { es: ["Puente Carlos", "Crucero Moldava", "Cerveza"], en: ["Charles Bridge", "Vltava cruise", "Beer"] } }
+      { id: "cpl-1", name: { es: "Escapada a Santorini", en: "Santorini Getaway" }, destination: "Greece", duration: { es: "7 dias", en: "7 days" }, price: 3590, image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=800", highlights: { es: ["Atardeceres", "Vinos", "Playas"], en: ["Sunsets", "Wines", "Beaches"] } },
+      { id: "cpl-2", name: { es: "Amor en Praga", en: "Love in Prague" }, destination: "Czech Republic", duration: { es: "5 dias", en: "5 days" }, price: 1990, image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=800", highlights: { es: ["Puente Carlos", "Crucero Moldava", "Cerveza"], en: ["Charles Bridge", "Vltava cruise", "Beer"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Recepcion romantica", en: "Romantic reception" }, description: { es: "Llegada VIP con champagne y petalos de rosa en la habitacion.", en: "VIP arrival with champagne and rose petals in the room." } }
@@ -521,7 +521,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "senior",
     category: "group",
     name: { es: "Viajes para Seniors", en: "Senior Trips" },
-    heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Viajes pensados para mayores de 55 anos. Ritmos relajados, comodidad premium y companeros de generacion para compartir experiencias.",
       en: "Trips designed for those over 55. Relaxed rhythms, premium comfort, and same-generation companions to share experiences."
@@ -531,8 +531,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Relaxed pace", "Comfortable hotels", "Specialized guides", "Like-minded groups"]
     },
     packages: [
-      { id: "sen-1", name: { es: "Crucero por el Rin", en: "Rhine River Cruise" }, destination: "Germany", duration: { es: "10 dias", en: "10 days" }, price: 3890, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800", highlights: { es: ["Castillos", "Vinedos", "Ciudades historicas"], en: ["Castles", "Vineyards", "Historic cities"] } },
-      { id: "sen-2", name: { es: "Portugal Clasico", en: "Classic Portugal" }, destination: "Portugal", duration: { es: "12 dias", en: "12 days" }, price: 3290, image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800", highlights: { es: ["Lisboa", "Sintra", "Fado"], en: ["Lisbon", "Sintra", "Fado"] } }
+      { id: "sen-1", name: { es: "Crucero por el Rin", en: "Rhine River Cruise" }, destination: "Germany", duration: { es: "10 dias", en: "10 days" }, price: 3890, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800", highlights: { es: ["Castillos", "Vinedos", "Ciudades historicas"], en: ["Castles", "Vineyards", "Historic cities"] } },
+      { id: "sen-2", name: { es: "Portugal Clasico", en: "Classic Portugal" }, destination: "Portugal", duration: { es: "12 dias", en: "12 days" }, price: 3290, image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800", highlights: { es: ["Lisboa", "Sintra", "Fado"], en: ["Lisbon", "Sintra", "Fado"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Bienvenida especial", en: "Special welcome" }, description: { es: "Llegada con asistencia completa y briefing del viaje.", en: "Arrival with full assistance and trip briefing." } }
@@ -547,7 +547,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "friends-private",
     category: "group",
     name: { es: "Amigos y Tours Privados", en: "Friends & Private Tours" },
-    heroImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Organiza tu viaje perfecto con tu grupo de amigos. Tours privados, itinerarios personalizados y experiencias exclusivas para tu grupo.",
       en: "Organize your perfect trip with your group of friends. Private tours, customized itineraries, and exclusive experiences for your group."
@@ -557,8 +557,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       en: ["Customized itineraries", "Private guide", "Total flexibility", "Tailored experiences"]
     },
     packages: [
-      { id: "fri-1", name: { es: "Ruta del Vino Privada", en: "Private Wine Route" }, destination: "France/Italy", duration: { es: "10 dias", en: "10 days" }, price: 4590, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800", highlights: { es: ["Borgona", "Toscana", "Catas privadas"], en: ["Burgundy", "Tuscany", "Private tastings"] } },
-      { id: "fri-2", name: { es: "Tour Gastronomico", en: "Gastronomic Tour" }, destination: "Spain", duration: { es: "8 dias", en: "8 days" }, price: 3490, image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=800", highlights: { es: ["San Sebastian", "Barcelona", "Madrid"], en: ["San Sebastian", "Barcelona", "Madrid"] } }
+      { id: "fri-1", name: { es: "Ruta del Vino Privada", en: "Private Wine Route" }, destination: "France/Italy", duration: { es: "10 dias", en: "10 days" }, price: 4590, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800", highlights: { es: ["Borgona", "Toscana", "Catas privadas"], en: ["Burgundy", "Tuscany", "Private tastings"] } },
+      { id: "fri-2", name: { es: "Tour Gastronomico", en: "Gastronomic Tour" }, destination: "Spain", duration: { es: "8 dias", en: "8 days" }, price: 3490, image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=60&w=800", highlights: { es: ["San Sebastian", "Barcelona", "Madrid"], en: ["San Sebastian", "Barcelona", "Madrid"] } }
     ],
     sampleItinerary: [
       { day: 1, title: { es: "Reunion de planificacion", en: "Planning meeting" }, description: { es: "Reunion con tu grupo para ajustar los ultimos detalles del itinerario.", en: "Meeting with your group to adjust final itinerary details." } }

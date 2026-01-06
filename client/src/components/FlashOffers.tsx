@@ -9,7 +9,7 @@ import { Link } from "wouter";
 const FLASH_OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=600&auto=format&fit=crop",
     title: { es: "Paris y Castillos del Loira", en: "Paris and Loire Castles" },
     country: { es: "Francia en 8 Dias", en: "France in 8 Days" },
     currentPrice: 999,
@@ -18,7 +18,7 @@ const FLASH_OFFERS = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=600&auto=format&fit=crop",
     title: { es: "Roma, Florencia y Venecia", en: "Rome, Florence and Venice" },
     country: { es: "Italia en 10 Dias", en: "Italy in 10 Days" },
     currentPrice: 1299,
@@ -27,7 +27,7 @@ const FLASH_OFFERS = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop",
     title: { es: "Islas Griegas y Atenas", en: "Greek Islands and Athens" },
     country: { es: "Grecia en 12 Dias", en: "Greece in 12 Days" },
     currentPrice: 1449,
@@ -36,7 +36,7 @@ const FLASH_OFFERS = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     title: { es: "Barcelona y Costa Brava", en: "Barcelona and Costa Brava" },
     country: { es: "España en 7 Dias", en: "Spain in 7 Days" },
     currentPrice: 799,
@@ -45,7 +45,7 @@ const FLASH_OFFERS = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=600&auto=format&fit=crop",
     title: { es: "Alpes Suizos Panoramicos", en: "Panoramic Swiss Alps" },
     country: { es: "Suiza en 9 Dias", en: "Switzerland in 9 Days" },
     currentPrice: 1599,

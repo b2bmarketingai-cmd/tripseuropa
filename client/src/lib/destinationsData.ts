@@ -56,12 +56,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "france",
     name: { es: "Francia", en: "France" },
-    heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551634979-2b11f8c946fe?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551634979-2b11f8c946fe?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1549144511-f099e773c147?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Francia es el destino turístico más visitado del mundo, y no es difícil entender por que. Desde la romántica París con su icónica Torre Eiffel hasta los campos de lavanda de Provenza, pasando por la glamurosa Costa Azul y los castillos del Valle del Loira, Francia ofrece una experiencia única que combina arte, cultura, gastronomía y paisajes de ensueño. Descubre la elegancia francesa, sus vinos de clase mundial y su patrimonio histórico incomparable.",
@@ -182,12 +182,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "italy",
     name: { es: "Italia", en: "Italy" },
-    heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte más importantes del mundo y destino gastronomico por excelencia. Desde el romántico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises más bellos del mundo.",
@@ -314,12 +314,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "spain",
     name: { es: "España", en: "Spain" },
-    heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558370781-d6196949e317?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "España es un pais vibrante que combina historia, cultura, gastronomía y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
@@ -452,12 +452,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "germany",
     name: { es: "Alemania", en: "Germany" },
-    heroImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1554072675-66db59dba46f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1554072675-66db59dba46f?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Alemania combina modernidad con tradicion de manera única. Desde los castillos de cuento de hadas de Baviera hasta la vibrante vida cultural de Berlin, pasando por la romántica Ruta del Rin y los mercados navidenos más famosos del mundo, Alemania ofrece experiencias diversas. Descubre la eficiencia alemana, su cerveza legendaria, y paisajes que van desde los Alpes hasta el Mar del Norte.",
@@ -578,12 +578,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "portugal",
     name: { es: "Portugal", en: "Portugal" },
-    heroImage: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1569959220744-ff553533f492?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1569959220744-ff553533f492?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Portugal es un tesoro escondido de Europa, con una historia maritima fascinante, playas impresionantes y una gastronomía deliciosa. Desde los azulejos de Lisboa hasta los vinos de Oporto, pasando por los acantilados del Algarve y los palacios de Sintra, Portugal encanta con su autenticidad y hospitalidad. Descubre el pais de los navegantes, el fado melancolico y los pasteles de nata.",
@@ -698,12 +698,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "greece",
     name: { es: "Grecia", en: "Greece" },
-    heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1601635671556-7018d4b0e1b0?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555993539-1732b0258235?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601635671556-7018d4b0e1b0?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas más hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
@@ -824,12 +824,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "netherlands",
     name: { es: "Paises Bajos", en: "Netherlands" },
-    heroImage: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Los Paises Bajos son mucho más que Amsterdam. Descubre un pais de canales pintorescos, molinos de viento históricos, campos de tulipanes y una rica herencia artistica. Desde los museos de Van Gogh y Rembrandt hasta los quesos de Gouda y la arquitectura innovadora de Rotterdam, los Paises Bajos ofrecen una experiencia única. Explora en bicicleta como los locales y disfruta de la tolerancia y creatividad holandesa.",
@@ -932,12 +932,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "switzerland",
     name: { es: "Suiza", en: "Switzerland" },
-    heroImage: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1531210483974-4f8c1f33fd35?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1531210483974-4f8c1f33fd35?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Suiza es sinonimo de paisajes alpinos espectaculares, relojes de precision, chocolate exquisito y calidad de vida excepcional. Desde el majestuoso Matterhorn hasta los lagos cristalinos de Lucerna, pasando por las ciudades cosmopolitas de Zurich y Ginebra, Suiza ofrece experiencias de lujo en un entorno natural incomparable. Descubre los trenes panoramicos más famosos del mundo y la perfeccion suiza en cada detalle.",
@@ -1052,12 +1052,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "croatia",
     name: { es: "Croacia", en: "Croatia" },
-    heroImage: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1565711561500-49678a10a63f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1565711561500-49678a10a63f?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "Croacia es la joya del Adriatico, un pais de costas impresionantes, ciudades medievales y parques naturales espectaculares. Desde las murallas de Dubrovnik (escenario de Game of Thrones) hasta las cascadas de Plitvice, pasando por las islas de Hvar y Split, Croacia ofrece una combinacion perfecta de historia, naturaleza y vida mediterranea. Descubre playas de aguas cristalinas, gastronomía de mar y hospitalidad balcanica.",
@@ -1178,12 +1178,12 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "united-kingdom",
     name: { es: "Reino Unido", en: "United Kingdom" },
-    heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1483972440757-5a83b95c0b2d?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1483972440757-5a83b95c0b2d?q=60&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1549144511-f099e773c147?q=60&w=800&auto=format&fit=crop"
     ],
     description: {
       es: "El Reino Unido combina tradicion monarquica con modernidad vibrante. Desde el icónica Londres con el Big Ben y el Palacio de Buckingham hasta los paisajes de las Tierras Altas escocesas, pasando por los castillos de Gales y la campiña inglesa, el Reino Unido ofrece experiencias diversas. Descubre la realeza, los pubs tradicionales, el te de la tarde y una escena cultural de clase mundial.",
@@ -1316,7 +1316,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "albania",
     name: { es: "Albania", en: "Albania" },
-    heroImage: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=60",
     description: {
       es: "Albania, la joya escondida de los Balcanes, ofrece playas virgenes en la Riviera Albanesa, montanas majestuosas, ciudades patrimonio UNESCO como Berat y Gjirokaster, y una hospitalidad legendaria. Descubre ruinas antiguas, bunkers de la era comunista y una gastronomía mediterranea única.",
       en: "Albania, the hidden gem of the Balkans, offers pristine beaches on the Albanian Riviera, majestic mountains, UNESCO heritage cities like Berat and Gjirokaster, and legendary hospitality. Discover ancient ruins, communist-era bunkers, and unique Mediterranean cuisine."
@@ -1356,7 +1356,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "austria",
     name: { es: "Austria", en: "Austria" },
-    heroImage: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1200&q=60",
     description: {
       es: "Austria encanta con los palacios imperiales de Viena, los paisajes alpinos de Salzburgo, la musica clásica de Mozart y los mercados navidenos más magicos de Europa. Vive la elegancia del Imperio Habsburgo entre valses, cafes históricos y los Alpes austriacos.",
       en: "Austria enchants with Vienna's imperial palaces, Salzburg's Alpine landscapes, Mozart's classical music, and Europe's most mágical Christmas markets. Experience the elegance of the Habsburg Empire among waltzes, historic cafes, and the Austrian Alps."
@@ -1366,9 +1366,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Schonbrunn Palace Vienna", "Salzburg Mozart's city", "Hallstatt fairytale village", "Innsbruck alpine capital", "Christmas markets"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?w=800&q=80",
-      "https://images.unsplash.com/photo-1535952531083-5baafb2b56f7?w=800&q=80",
-      "https://images.unsplash.com/photo-1563890738384-0d3a3c15c14c?w=800&q=80"
+      "https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?w=800&q=60",
+      "https://images.unsplash.com/photo-1535952531083-5baafb2b56f7?w=800&q=60",
+      "https://images.unsplash.com/photo-1563890738384-0d3a3c15c14c?w=800&q=60"
     ],
     packages: [
       { id: "austria-1", name: { es: "Austria Imperial", en: "Imperial Austria" }, duration: { es: "9 dias", en: "9 days" }, price: "2,799", taxes: "450", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Concierto Viena"], en: ["Flights", "4* Hotels", "Breakfasts", "Vienna Concert"] } }
@@ -1396,7 +1396,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "belgium",
     name: { es: "Belgica", en: "Belgium" },
-    heroImage: "https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?w=1200&q=60",
     description: {
       es: "Belgica sorprende con sus ciudades medievales perfectamente conservadas, el chocolate más fino del mundo, cervezas artesanales únicas y arquitectura Art Nouveau. Desde la Grand Place de Bruselas hasta los canales románticos de Brujas, cada rincon cuenta historia.",
       en: "Belgium surprises with perfectly preserved medieval cities, the world's finest chocolate, unique craft beers, and Art Nouveau architecture. From Brussels' Grand Place to Bruges' romantic canals, every corner tells a story."
@@ -1406,9 +1406,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Brussels Grand Place", "Bruges canals", "Antwerp diamonds", "Belgian chocolate", "Medieval Ghent"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&q=80"
+      "https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=800&q=60",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=60",
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&q=60"
     ],
     packages: [
       { id: "belgium-1", name: { es: "Belgica Esencial", en: "Essential Belgium" }, duration: { es: "6 dias", en: "6 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Degustaciones"], en: ["Flights", "4* Hotels", "Breakfasts", "Tastings"] } }
@@ -1433,7 +1433,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "czech-republic",
     name: { es: "Republica Checa", en: "Czech Republic" },
-    heroImage: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200&q=60",
     description: {
       es: "La Republica Checa cautiva con Praga, la ciudad de las cien torres, castillos de cuento como Cesky Krumlov, balnearios históricos y la mejor cerveza del mundo. Descubre la bohemia romántica entre puentes goticos, relojes astronomicos y ciudades medievales perfectas.",
       en: "The Czech Republic captivates with Prague, the city of a hundred towers, fairytale castles like Cesky Krumlov, historic spas, and the world's best beer. Discover romantic Bohemia among Gothic bridges, astronomical clocks, and perfect medieval towns."
@@ -1443,9 +1443,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Charles Bridge Prague", "Prague Castle", "Cesky Krumlov", "Karlovy Vary", "Czech beer"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&q=80",
-      "https://images.unsplash.com/photo-1562624475-96c2bc08fab9?w=800&q=80",
-      "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?w=800&q=80"
+      "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&q=60",
+      "https://images.unsplash.com/photo-1562624475-96c2bc08fab9?w=800&q=60",
+      "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?w=800&q=60"
     ],
     packages: [
       { id: "czech-republic-1", name: { es: "Bohemia Romántica", en: "Romantic Bohemia" }, duration: { es: "7 dias", en: "7 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
@@ -1471,7 +1471,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "denmark",
     name: { es: "Dinamarca", en: "Denmark" },
-    heroImage: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1200&q=60",
     description: {
       es: "Dinamarca, cuna del hygge y la felicidad, ofrece Copenhague con sus canales coloridos, castillos de Hamlet, el diseno nordico más vanguardista y los parques de Tivoli. Descubre vikingos, palacios reales y la vida danesa que inspira al mundo.",
       en: "Denmark, home of hygge and happiness, offers Copenhagen with its colorful canals, Hamlet's castles, cutting-edge Nordic design, and Tivoli gardens. Discover Vikings, royal palaces, and the Danish lifestyle that inspires the world."
@@ -1481,9 +1481,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Nyhavn Copenhagen", "Tivoli Gardens", "Kronborg Castle", "Little Mermaid", "Danish design"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1552560880-2482cef14240?w=800&q=80",
-      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80",
-      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80"
+      "https://images.unsplash.com/photo-1552560880-2482cef14240?w=800&q=60",
+      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=60",
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=60"
     ],
     packages: [
       { id: "denmark-1", name: { es: "Dinamarca Hygge", en: "Hygge Denmark" }, duration: { es: "6 dias", en: "6 days" }, price: "2,199", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Copenhagen Card"], en: ["Flights", "4* Hotels", "Breakfasts", "Copenhagen Card"] } }
@@ -1508,7 +1508,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "finland",
     name: { es: "Finlandia", en: "Finland" },
-    heroImage: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=60",
     description: {
       es: "Finlandia es la tierra de la aurora boreal, saunas autenticas, bosques infinitos y el hogar de Papa Noel en Laponia. Desde el diseno vanguardista de Helsinki hasta los lagos cristalinos y la magia del Artico, vive experiencias únicas en el norte de Europa.",
       en: "Finland is the land of the Northern Lights, authentic saunas, endless forests, and Santa Claus' home in Lapland. From Helsinki's cutting-edge design to crystal lakes and Arctic magic, experience unique adventures in Northern Europe."
@@ -1518,9 +1518,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Northern Lights Lapland", "Santa Claus Village", "Finnish saunas", "Crystal lakes", "Helsinki design"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1538029038569-6a2c7b22dd65?w=800&q=80",
-      "https://images.unsplash.com/photo-1545158535-c3f7168c28b6?w=800&q=80",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80"
+      "https://images.unsplash.com/photo-1538029038569-6a2c7b22dd65?w=800&q=60",
+      "https://images.unsplash.com/photo-1545158535-c3f7168c28b6?w=800&q=60",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=60"
     ],
     packages: [
       { id: "finland-1", name: { es: "Laponia Mágica", en: "Mágical Lapland" }, duration: { es: "7 dias", en: "7 days" }, price: "3,299", taxes: "520", includes: { es: ["Vuelos", "Hoteles/Iglus", "Actividades articas", "Aurora tour"], en: ["Flights", "Hotels/Igloos", "Arctic activities", "Aurora tour"] } }
@@ -1546,7 +1546,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "hungary",
     name: { es: "Hungria", en: "Hungary" },
-    heroImage: "https://images.unsplash.com/photo-1541343672885-9be56236302a?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1541343672885-9be56236302a?w=1200&q=60",
     description: {
       es: "Hungria deslumbra con Budapest, la Perla del Danubio dividida por el rio entre Buda y Pest. Banos termales legendarios, el Parlamento más espectacular de Europa, ruinas de bares unicos y la tradicion de los vinos de Tokaj te esperan.",
       en: "Hungary dazzles with Budapest, the Pearl of the Danube divided by the river between Buda and Pest. Legendary thermal baths, Europe's most spectacular Parliament, unique ruin bars, and the tradition of Tokaj wines await you."
@@ -1556,9 +1556,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Budapest Parliament", "Szechenyi Baths", "Buda Castle", "Ruin bars", "Tokaj wines"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=800&q=80",
-      "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9?w=800&q=80",
-      "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&q=80"
+      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=800&q=60",
+      "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9?w=800&q=60",
+      "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&q=60"
     ],
     packages: [
       { id: "hungary-1", name: { es: "Budapest y Danubio", en: "Budapest and Danube" }, duration: { es: "6 dias", en: "6 days" }, price: "1,599", taxes: "300", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Crucero Danubio"], en: ["Flights", "4* Hotels", "Breakfasts", "Danube cruise"] } }
@@ -1583,7 +1583,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "iceland",
     name: { es: "Islandia", en: "Iceland" },
-    heroImage: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1200&q=60",
     description: {
       es: "Islandia es la tierra de hielo y fuego donde glaciares, volcanes, geiseres y cascadas crean paisajes de otro mundo. La Laguna Azul, la aurora boreal, ballenas y la única carretera que rodea la isla ofrecen aventuras incomparables.",
       en: "Iceland is the land of fire and ice where glaciers, volcanoes, geysers, and waterfalls create otherworldly landscapes. The Blue Lagoon, Northern Lights, whales, and the only road circling the island offer unparalleled adventures."
@@ -1593,9 +1593,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Golden Circle", "Blue Lagoon", "Northern Lights", "Epic waterfalls", "Whale watching"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1520769945061-0a448c463865?w=800&q=80",
-      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=800&q=80",
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+      "https://images.unsplash.com/photo-1520769945061-0a448c463865?w=800&q=60",
+      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=800&q=60",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=60"
     ],
     packages: [
       { id: "iceland-1", name: { es: "Islandia Esencial", en: "Essential Iceland" }, duration: { es: "8 dias", en: "8 days" }, price: "3,499", taxes: "550", includes: { es: ["Vuelos", "Hoteles/Cabanas", "4x4", "Actividades"], en: ["Flights", "Hotels/Cabins", "4x4", "Activities"] } }
@@ -1622,7 +1622,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "ireland",
     name: { es: "Irlanda", en: "Ireland" },
-    heroImage: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1200&q=60",
     description: {
       es: "Irlanda, la Isla Esmeralda, cautiva con acantilados dramáticos, castillos antiguos, pubs con musica tradicional y la calidez de su gente. Desde los Cliffs of Moher hasta Dublin literaria, la magia celta te envuelve en cada rincon verde.",
       en: "Ireland, the Emerald Isle, captivates with dramatic cliffs, ancient castles, pubs with traditional music, and the warmth of its people. From the Cliffs of Moher to literary Dublin, Celtic magic envelops you in every green corner."
@@ -1632,9 +1632,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Cliffs of Moher", "Ring of Kerry", "Dublin", "Guinness Storehouse", "Giant's Causeway"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1564959130747-897fb406b9af?w=800&q=80",
-      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+      "https://images.unsplash.com/photo-1564959130747-897fb406b9af?w=800&q=60",
+      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=60",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=60"
     ],
     packages: [
       { id: "ireland-1", name: { es: "Irlanda Esmeralda", en: "Emerald Ireland" }, duration: { es: "9 dias", en: "9 days" }, price: "2,499", taxes: "420", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos irlandeses"], en: ["Flights", "4* Hotels", "Rental car", "Irish breakfasts"] } }
@@ -1662,7 +1662,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "norway",
     name: { es: "Noruega", en: "Norway" },
-    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=60",
     description: {
       es: "Noruega sorprende con los fiordos más dramáticos del mundo, la aurora boreal, el sol de medianoche y ciudades vibrantes como Bergen y Oslo. Cruceros por fiordos, pueblos pesqueros coloridos y naturaleza virgen te esperan en este pais escandinavo.",
       en: "Norway surprises with the world's most dramatic fjords, the Northern Lights, the midnight sun, and vibrant cities like Bergen and Oslo. Fjord cruises, colorful fishing villages, and pristine nature await you in this Scandinavian country."
@@ -1672,9 +1672,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Norwegian fjords", "Colorful Bergen", "Modern Oslo", "Northern Lights", "Flam Railway"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1548783301-1a22b1d7f6e3?w=800&q=80",
-      "https://images.unsplash.com/photo-1531168556467-80aace0d0144?w=800&q=80",
-      "https://images.unsplash.com/photo-1484264883846-1fd0f423c0b3?w=800&q=80"
+      "https://images.unsplash.com/photo-1548783301-1a22b1d7f6e3?w=800&q=60",
+      "https://images.unsplash.com/photo-1531168556467-80aace0d0144?w=800&q=60",
+      "https://images.unsplash.com/photo-1484264883846-1fd0f423c0b3?w=800&q=60"
     ],
     packages: [
       { id: "norway-1", name: { es: "Fiordos de Noruega", en: "Norway's Fjords" }, duration: { es: "9 dias", en: "9 days" }, price: "3,599", taxes: "560", includes: { es: ["Vuelos", "Hoteles 4*", "Crucero fiordo", "Tren panoramico"], en: ["Flights", "4* Hotels", "Fjord cruise", "Panoramic train"] } }
@@ -1702,7 +1702,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "poland",
     name: { es: "Polonia", en: "Poland" },
-    heroImage: "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=60",
     description: {
       es: "Polonia sorprende con Cracovia medieval, Varsovia renacida de las cenizas, las minas de sal de Wieliczka y la memoria de Auschwitz. Castillos goticos, montanas Tatra y la calidez polaca crean un destino fascinante lleno de historia y cultura.",
       en: "Poland surprises with medieval Krakow, Warsaw reborn from the ashes, the Wieliczka salt mines, and the memory of Auschwitz. Gothic castles, Tatra mountains, and Polish warmth create a fascinating destination full of history and culture."
@@ -1712,9 +1712,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Medieval Krakow", "Historic Warsaw", "Wieliczka Salt Mines", "Auschwitz Memorial", "Tatra Mountains"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1580910527948-e26d12ed6d23?w=800&q=80",
-      "https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=80"
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=60",
+      "https://images.unsplash.com/photo-1580910527948-e26d12ed6d23?w=800&q=60",
+      "https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=60"
     ],
     packages: [
       { id: "poland-1", name: { es: "Polonia Esencial", en: "Essential Poland" }, duration: { es: "8 dias", en: "8 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours guiados"], en: ["Flights", "4* Hotels", "Breakfasts", "Guided tours"] } }
@@ -1741,7 +1741,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "romania",
     name: { es: "Rumania", en: "Romania" },
-    heroImage: "https://images.unsplash.com/photo-1585674364415-1e8c8d7de44b?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1585674364415-1e8c8d7de44b?w=1200&q=60",
     description: {
       es: "Rumania fascina con la Transilvania de Dracula, castillos goticos entre montanas, pueblos sajones medievales y el delta del Danubio. Desde el Castillo de Bran hasta los monasterios pintados de Bucovina, descubre los Carpatos y su misterio.",
       en: "Romania fascinates with Dracula's Transylvania, Gothic castles among mountains, medieval Saxon villages, and the Danube Delta. From Bran Castle to Bucovina's painted monasteries, discover the Carpathians and their mystery."
@@ -1751,9 +1751,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Bran Castle", "Transylvania", "Medieval Sighisoara", "Bucovina monasteries", "Bucharest"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80",
-      "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=800&q=80",
-      "https://images.unsplash.com/photo-1584646098378-0874589d76b1?w=800&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=60",
+      "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=800&q=60",
+      "https://images.unsplash.com/photo-1584646098378-0874589d76b1?w=800&q=60"
     ],
     packages: [
       { id: "romania-1", name: { es: "Transilvania Misteriosa", en: "Mysterious Transylvania" }, duration: { es: "8 dias", en: "8 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayunos"], en: ["Flights", "4* Hotels", "Private transport", "Breakfasts"] } }
@@ -1780,7 +1780,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "sweden",
     name: { es: "Suecia", en: "Sweden" },
-    heroImage: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=1200&q=60",
     description: {
       es: "Suecia combina la sofisticacion de Estocolmo, extendida sobre 14 islas, con la naturaleza salvaje de Laponia. Diseno escandinavo, el hotel de hielo, auroras boreales y la herencia vikinga crean experiencias únicas en el reino nordico.",
       en: "Sweden combines Stockholm's sophistication, spread across 14 islands, with Lapland's wild nature. Scandinavian design, the ice hotel, Northern Lights, and Viking heritage create unique experiences in the Nordic kingdom."
@@ -1790,9 +1790,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Stockholm 14 islands", "Gamla Stan", "Vasa Museum", "Lapland Ice Hotel", "Archipelago"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1508189860359-777d945909ef?w=800&q=80",
-      "https://images.unsplash.com/photo-1499002238440-d264b672be47?w=800&q=80",
-      "https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=800&q=80"
+      "https://images.unsplash.com/photo-1508189860359-777d945909ef?w=800&q=60",
+      "https://images.unsplash.com/photo-1499002238440-d264b672be47?w=800&q=60",
+      "https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=800&q=60"
     ],
     packages: [
       { id: "sweden-1", name: { es: "Suecia Esencial", en: "Essential Sweden" }, duration: { es: "7 dias", en: "7 days" }, price: "2,599", taxes: "420", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Stockholm Pass"], en: ["Flights", "4* Hotels", "Breakfasts", "Stockholm Pass"] } }
@@ -1818,7 +1818,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "baltic-states",
     name: { es: "Estados Balticos", en: "Baltic States" },
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=60",
     description: {
       es: "Los Estados Balticos - Estonia, Letonia y Lituania - sorprenden con ciudades medievales como Tallin, Riga y Vilna, todas patrimonio UNESCO. Castillos, bosques infinitos, la herencia hanseática y la cultura única del Baltico esperan.",
       en: "The Baltic States - Estonia, Latvia, and Lithuania - surprise with medieval cities like Tallinn, Riga, and Vilnius, all UNESCO heritage. Castles, endless forests, Hanseatic heritage, and unique Baltic culture await."
@@ -1828,9 +1828,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       en: ["Medieval Tallinn", "Art Nouveau Riga", "Baroque Vilnius", "Hill of Crosses", "Trakai Castle"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1558618047-f4b511d8e9a4?w=800&q=80",
-      "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80",
-      "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=80"
+      "https://images.unsplash.com/photo-1558618047-f4b511d8e9a4?w=800&q=60",
+      "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=60",
+      "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=60"
     ],
     packages: [
       { id: "baltic-states-1", name: { es: "Capitales Balticas", en: "Baltic Capitals" }, duration: { es: "9 dias", en: "9 days" }, price: "1,999", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte entre paises", "Desayunos"], en: ["Flights", "4* Hotels", "Inter-country transport", "Breakfasts"] } }
@@ -1858,7 +1858,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "cyprus",
     name: { es: "Chipre", en: "Cyprus" },
-    heroImage: "https://images.unsplash.com/photo-1586768337645-81c3e6c6eb04?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1586768337645-81c3e6c6eb04?w=1200&q=60",
     description: {
       es: "Chipre, la isla de Afrodita, combina playas mediterraneas cristalinas, ruinas grecorromanas, montanas Troodos con monasterios bizantinos y pueblos tradicionales. La tercera isla más grande del Mediterraneo ofrece historia de 10,000 anos y hospitalidad chipriota.",
       en: "Cyprus, the island of Aphrodite, combines crystal Mediterranean beaches, Greco-Roman ruins, Troodos mountains with Byzantine monasteries, and traditional villages. The third-largest Mediterranean island offers 10,000 years of history and Cypriot hospitality."
@@ -1897,7 +1897,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "scotland",
     name: { es: "Escocia", en: "Scotland" },
-    heroImage: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?w=1200&q=60",
     description: {
       es: "Escocia cautiva con las Highlands salvajes, castillos legendarios, lochs misteriosos como el Ness, Edimburgo medieval y la tradicion del whisky. Gaitas, tartanes y paisajes dramáticos crean una experiencia única en el norte de Gran Bretana.",
       en: "Scotland captivates with wild Highlands, legendary castles, mysterious lochs like Ness, medieval Edinburgh, and whisky tradition. Bagpipes, tartans, and dramatic landscapes create a unique experience in northern Britain."
@@ -1937,7 +1937,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "turkey",
     name: { es: "Turquía", en: "Turkey", pt: "Turquia" },
-    heroImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1200&q=60",
     description: {
       es: "Turquía es el puente entre Europa y Asia, donde las mezquitas otomanas se elevan junto a ruinas griegas, los bazares bulliciosos contrastan con playas turquesas, y la hospitalidad es legendaria. Estambul fascina con Santa Sofía y el Bósforo, Capadocia sorprende con sus paisajes lunares y globos aerostáticos, y la costa turquesa ofrece paraísos mediterráneos. Descubre un país donde la historia milenaria se funde con la modernidad vibrante.",
       en: "Turkey is the bridge between Europe and Asia, where Ottoman mosques rise alongside Greek ruins, bustling bazaars contrast with turquoise beaches, and hospitality is legendary. Istanbul fascinates with Hagia Sophia and the Bosphorus, Cappadocia amazes with lunar landscapes and hot air balloons, and the Turquoise Coast offers Mediterranean paradises. Discover a country where ancient history merges with vibrant modernity.",
@@ -1949,10 +1949,10 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       pt: ["Istambul: Santa Sofia e Mesquita Azul", "Capadócia em balão de ar quente", "Costa Turquesa e Antalya", "Pamukkale e piscinas termais", "Éfeso e ruínas antigas", "Grande Bazar e especiarias"]
     },
     galleryImages: [
-      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
-      "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&q=80",
-      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80",
-      "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?w=800&q=80"
+      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=60",
+      "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&q=60",
+      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=60",
+      "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?w=800&q=60"
     ],
     packages: [
       { id: "turkey-essential", name: { es: "Turquía Esencial", en: "Essential Turkey", pt: "Turquia Essencial" }, duration: { es: "8 días / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" }, price: "1,799", taxes: "350", includes: { es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno turco diario", "Traslados", "Guía en español", "Entradas principales"], en: ["International flights", "4-star hotels", "Daily Turkish breakfast", "Transfers", "Spanish-speaking guide", "Main tickets"], pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã turco diário", "Traslados", "Guia em espanhol", "Entradas principais"] } },

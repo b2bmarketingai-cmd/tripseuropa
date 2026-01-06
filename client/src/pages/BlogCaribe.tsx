@@ -21,7 +21,7 @@ const TOP_DESTINATIONS = [
     id: "españa",
     name: "España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Conexiones aereas", "Idioma español", "Cultura hispana", "Gastronomia"],
     duration: "8-10 dias",
     priceRange: "$10,500 USD",
@@ -32,7 +32,7 @@ const TOP_DESTINATIONS = [
     id: "francia",
     name: "Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Paris ciudad luz", "Moda y lujo", "Gastronomia francesa", "Romantico"],
     duration: "8-10 dias",
     priceRange: "$11,000 USD",
@@ -43,7 +43,7 @@ const TOP_DESTINATIONS = [
     id: "italia",
     name: "Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Historia milenaria", "Arte renacentista", "Gastronomia", "Moda"],
     duration: "10-12 dias",
     priceRange: "$11,500 USD",
@@ -54,7 +54,7 @@ const TOP_DESTINATIONS = [
     id: "portugal",
     name: "Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Precio accesible", "Playas hermosas", "Cultura única", "Gastronomia"],
     duration: "5-7 dias",
     priceRange: "$9,500 USD",
@@ -65,7 +65,7 @@ const TOP_DESTINATIONS = [
     id: "grecia",
     name: "Grecia",
     countryCode: "GR",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=600&auto=format&fit=crop",
     why: ["Islas paradisiacas", "Historia antigua", "Mediterraneo", "Gastronomia"],
     duration: "8-10 dias",
     priceRange: "$10,000 USD",
@@ -252,7 +252,7 @@ export default function BlogCaribe() {
           : language === "pt"
           ? "Tudo o que você precisa saber para viajar à Europa a partir do Caribe: destinos, rotas, preços e dicas práticas."
           : "Everything you need to know to travel to Europe from the Caribbean: destinations, routes, prices and practical tips."}
-        image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200"
         datePublished="2025-01-01"
         author="Trips Europa"
         url="https://tripseuropa.com/blog/caribe"
@@ -263,7 +263,7 @@ export default function BlogCaribe() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-caribe-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

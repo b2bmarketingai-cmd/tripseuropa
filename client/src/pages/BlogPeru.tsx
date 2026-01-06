@@ -20,7 +20,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Idioma espanol", "Conexiones faciles desde Lima", "Museos de clase mundial", "Vida cultural vibrante"],
     nearby: ["Barcelona", "Sevilla", "Toledo", "Valencia"],
   },
@@ -28,7 +28,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Gaudi y modernismo", "Playas mediterraneas", "Sagrada Familia", "FC Barcelona"],
     nearby: ["Costa Brava", "Montserrat", "Girona"],
   },
@@ -36,7 +36,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Ciudad del amor", "Torre Eiffel", "Museo del Louvre", "Moda y gastronomia"],
     nearby: ["Versalles", "Disneyland Paris", "Normandia"],
   },
@@ -44,7 +44,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Historia milenaria", "Vaticano y Coliseo", "Gastronomia italiana", "Arte renacentista"],
     nearby: ["Florencia", "Venecia", "Napoles", "Pompeya"],
   },
@@ -52,7 +52,7 @@ const TOP_DESTINATIONS = [
     id: "lisboa",
     name: "Lisboa, Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Destino accesible", "Cultura unica", "Pasteles de Belem", "Playas cercanas"],
     nearby: ["Sintra", "Cascais", "Oporto", "Algarve"],
   },
@@ -60,7 +60,7 @@ const TOP_DESTINATIONS = [
     id: "londres",
     name: "Londres, Reino Unido",
     countryCode: "GB",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=600&auto=format&fit=crop",
     why: ["Historia y monumentos", "Big Ben y Buckingham", "Museos gratuitos", "Compras de clase mundial"],
     nearby: ["Oxford", "Stonehenge", "Bath"],
   },
@@ -68,7 +68,7 @@ const TOP_DESTINATIONS = [
     id: "amsterdam",
     name: "Amsterdam, Paises Bajos",
     countryCode: "NL",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=600&auto=format&fit=crop",
     why: ["Canales pintorescos", "Museo Van Gogh", "Bicicletas y tulipanes", "Cultura liberal"],
     nearby: ["Bruselas", "Brujas", "Rotterdam"],
   },
@@ -76,7 +76,7 @@ const TOP_DESTINATIONS = [
     id: "florencia",
     name: "Florencia, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=60&w=600&auto=format&fit=crop",
     why: ["Cuna del Renacimiento", "Galeria Uffizi", "Duomo impresionante", "Toscana cercana"],
     nearby: ["Pisa", "Siena", "San Gimignano"],
   },
@@ -122,7 +122,7 @@ const POPULAR_ROUTES = [
     description: "El destino favorito de los peruanos: Madrid y Barcelona con toda la cultura espanola.",
     destinations: ["Madrid", "Barcelona", "Sevilla", "Granada"],
     highlights: ["Idioma espanol", "Flamenco y tapas", "Gaudi y modernismo", "Historia andaluza"],
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "clasica",
@@ -130,7 +130,7 @@ const POPULAR_ROUTES = [
     description: "El recorrido tradicional europeo: Madrid, Paris y Roma.",
     destinations: ["Madrid", "Paris", "Roma"],
     highlights: ["3 capitales iconicas", "Arte y cultura", "Gastronomia variada", "Monumentos historicos"],
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "romantica",
@@ -138,7 +138,7 @@ const POPULAR_ROUTES = [
     description: "Perfecta para parejas y lunas de miel: Paris, Roma y Venecia.",
     destinations: ["Paris", "Roma", "Venecia", "Florencia"],
     highlights: ["Ciudades del amor", "Torre Eiffel", "Gondolas venecianas", "Arte renacentista"],
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "accesible",
@@ -146,7 +146,7 @@ const POPULAR_ROUTES = [
     description: "La mejor relacion calidad-precio: Lisboa, Madrid y Barcelona.",
     destinations: ["Lisboa", "Madrid", "Barcelona"],
     highlights: ["Destinos accesibles", "Idioma similar", "Playas mediterraneas", "Cultura iberica"],
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -252,7 +252,7 @@ export default function BlogPeru() {
         description="Todo lo que necesitas saber para viajar a Europa desde Peru"
         datePublished="2025-01-01"
         author="Trips Europa"
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200"
         url="/blog/peru"
       />
       
@@ -261,7 +261,7 @@ export default function BlogPeru() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1920&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">

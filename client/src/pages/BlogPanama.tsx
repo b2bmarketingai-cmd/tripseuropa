@@ -21,7 +21,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Conexiones Copa Airlines", "Idioma español", "Hub europeo", "Cultura hispana"],
     duration: "8-10 dias",
     priceRange: "$10,500 USD",
@@ -32,7 +32,7 @@ const TOP_DESTINATIONS = [
     id: "estambul",
     name: "Estambul, Turquia",
     countryCode: "TR",
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=600&auto=format&fit=crop",
     why: ["Precio accesible", "Conexiones Turkish Airlines", "Cultura unica", "Gastronomia"],
     duration: "7-8 dias",
     priceRange: "$9,500 USD",
@@ -43,7 +43,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Ciudad del amor", "Torre Eiffel", "Moda y lujo", "Gastronomia"],
     duration: "8-10 dias",
     priceRange: "$11,000 USD",
@@ -54,7 +54,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Historia milenaria", "Vaticano", "Pasta y pizza", "Arte"],
     duration: "10-12 dias",
     priceRange: "$11,500 USD",
@@ -65,7 +65,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Gaudi", "Playa y ciudad", "Vida nocturna", "Gastronomia"],
     duration: "7-9 dias",
     priceRange: "$10,500 USD",
@@ -238,7 +238,7 @@ export default function BlogPanama() {
           : language === "pt"
           ? "Tudo o que voce precisa saber para viajar a Europa desde Panama: destinos, rotas, precos e dicas praticas."
           : "Everything you need to know to travel to Europe from Panama: destinations, routes, prices and practical tips."}
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200"
         datePublished="2025-01-01"
         author="Trips Europa"
         url="https://tripseuropa.com/blog/panama"
@@ -249,7 +249,7 @@ export default function BlogPanama() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-panama-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?q=80&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

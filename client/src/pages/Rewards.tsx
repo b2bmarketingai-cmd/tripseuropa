@@ -273,7 +273,7 @@ export default function Rewards() {
     <div className="min-h-screen bg-background">
       <Header />
       <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">

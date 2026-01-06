@@ -20,7 +20,7 @@ const TOP_DESTINATIONS = [
     id: "madrid",
     name: "Madrid, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=600&auto=format&fit=crop",
     why: ["Vuelo directo Iberia desde San Jose", "Idioma espanol", "Museos Prado y Reina Sofia", "Hub para toda Europa"],
     nearby: ["Toledo", "Segovia", "Barcelona", "Sevilla"],
   },
@@ -28,7 +28,7 @@ const TOP_DESTINATIONS = [
     id: "barcelona",
     name: "Barcelona, España",
     countryCode: "ES",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=600&auto=format&fit=crop",
     why: ["Gaudi y Sagrada Familia", "Playas mediterraneas", "Cultura catalana vibrante", "Gastronomia excepcional"],
     nearby: ["Costa Brava", "Montserrat", "Girona", "Tarragona"],
   },
@@ -36,7 +36,7 @@ const TOP_DESTINATIONS = [
     id: "paris",
     name: "Paris, Francia",
     countryCode: "FR",
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
     why: ["Torre Eiffel iconica", "Museo del Louvre", "Ciudad del amor", "Gastronomia refinada"],
     nearby: ["Versalles", "Normandia", "Champagne", "Valle del Loira"],
   },
@@ -44,7 +44,7 @@ const TOP_DESTINATIONS = [
     id: "roma",
     name: "Roma, Italia",
     countryCode: "IT",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
     why: ["Coliseo y Vaticano", "Historia milenaria", "Gastronomia italiana", "Arte renacentista"],
     nearby: ["Florencia", "Venecia", "Napoles", "Toscana"],
   },
@@ -52,7 +52,7 @@ const TOP_DESTINATIONS = [
     id: "lisboa",
     name: "Lisboa, Portugal",
     countryCode: "PT",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
     why: ["Idioma similar al espanol", "Ciudad costera encantadora", "Pasteles de nata", "Hub TAP para Europa"],
     nearby: ["Sintra", "Cascais", "Porto", "Algarve"],
   },
@@ -60,7 +60,7 @@ const TOP_DESTINATIONS = [
     id: "amsterdam",
     name: "Amsterdam, Paises Bajos",
     countryCode: "NL",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=600&auto=format&fit=crop",
     why: ["Canales pintorescos", "Museo Van Gogh", "Cultura sostenible", "Arquitectura unica"],
     nearby: ["Rotterdam", "La Haya", "Brujas", "Bruselas"],
   },
@@ -68,7 +68,7 @@ const TOP_DESTINATIONS = [
     id: "londres",
     name: "Londres, Reino Unido",
     countryCode: "GB",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=600&auto=format&fit=crop",
     why: ["Historia y monumentos", "Museos gratuitos", "Cultura britanica", "Conexiones via Miami"],
     nearby: ["Oxford", "Stonehenge", "Bath", "Escocia"],
   },
@@ -76,7 +76,7 @@ const TOP_DESTINATIONS = [
     id: "zurich",
     name: "Suiza (Zurich/Ginebra)",
     countryCode: "CH",
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=600&auto=format&fit=crop",
     why: ["Alpes espectaculares", "Lagos cristalinos", "Naturaleza pristina", "Ideal para ecoturistas"],
     nearby: ["Interlaken", "Lucerna", "Zermatt", "Grindelwald"],
   },
@@ -112,7 +112,7 @@ const POPULAR_ROUTES = [
     description: "El roteiro perfecto para ticos: idioma espanol, cultura familiar y clima agradable.",
     destinations: ["Madrid", "Barcelona", "Lisboa", "Porto"],
     highlights: ["Vuelo directo Iberia", "Idioma espanol", "Gastronomia mediterranea", "Arquitectura historica"],
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "europa-clasica",
@@ -120,7 +120,7 @@ const POPULAR_ROUTES = [
     description: "Las capitales mas iconicas del continente en un solo viaje inolvidable.",
     destinations: ["Paris", "Roma", "Venecia", "Florencia"],
     highlights: ["Torre Eiffel", "Coliseo Romano", "Gondolas venecianas", "Arte renacentista"],
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "europa-verde",
@@ -128,7 +128,7 @@ const POPULAR_ROUTES = [
     description: "Ideal para costarricenses amantes de la naturaleza y el ecoturismo.",
     destinations: ["Suiza", "Austria", "Noruega", "Islandia"],
     highlights: ["Alpes suizos", "Lagos austriacos", "Fiordos noruegos", "Geyser islandeses"],
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=800&auto=format&fit=crop",
   },
   {
     id: "mediterraneo",
@@ -136,7 +136,7 @@ const POPULAR_ROUTES = [
     description: "Costas paradisiacas, islas griegas y ciudades costeras encantadoras.",
     destinations: ["Barcelona", "Niza", "Amalfi", "Santorini"],
     highlights: ["Playas mediterraneas", "Gastronomia costera", "Islas griegas", "Costa Amalfitana"],
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -243,7 +243,7 @@ export default function BlogCostaRica() {
         description="Todo lo que necesitas saber para viajar a Europa desde Costa Rica"
         datePublished="2025-01-01"
         author="Trips Europa"
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200"
         url="/blog/costa-rica"
       />
       
@@ -252,7 +252,7 @@ export default function BlogCostaRica() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1920&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=1200&auto=format&fit=crop')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">

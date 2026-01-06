@@ -146,7 +146,7 @@ export default function FromPeru() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-peru-hero">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=60&w=1920&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />
