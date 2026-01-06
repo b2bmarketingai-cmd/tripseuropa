@@ -1,0 +1,693 @@
+71
+FCP
++8
+LCP
++2
+TBT
++29
+CLS
++25
+SI
++8
+Rendimiento
+Los valores son estimaciones y pueden variar. La puntuación del rendimiento se calcula directamente a partir de estas métricas.Ver calculadora.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Métricas
+Ampliar vista
+First Contentful Paint
+1,2 s
+Renderizado del mayor elemento con contenido
+5,5 s
+Total Blocking Time
+100 ms
+Cambios de diseño acumulados
+0
+Speed Index
+1,6 s
+Captured at 6 ene 2026, 10:50 GMT-5
+Escritorio emulado with Lighthouse 13.0.1
+Sesión de una sola página
+Carga inicial de la página
+Limitación personalizada
+Using HeadlessChromium 137.0.7151.119 with lr
+Ver gráfico de rectángulos
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Mostrar auditorías relacionadas con:
+
+All
+
+FCP
+
+LCP
+
+TBT
+Estadísticas
+Mejorar la entrega de imágenes Ahorro estimado de 3784 KiB
+Si se reduce el tiempo de descarga de las imágenes, se puede mejorar el tiempo de carga percibido de la página y el LCP. Más información sobre la optimización del tamaño de las imágenesLCPFCPSin puntuar
+URL
+Tamaño del recurso
+Ahorro estimado
+tripseuropa.com Propio
+2632,7 KiB	2629,7 KiB
+Trips Europa
+<img src="/assets/erasebg-transformed_(2)_1767029138652-BGws6G6L.png" alt="Trips Europa" class="w-auto object-contain max-w-[280px] md:max-w-[360px] lg:max-w-[420px]" loading="eager" width="420" height="90" style="height: clamp(60px, 48px + 6vw, 90px);">
+/assets/erasebg-t…(2)_17670291….png(tripseuropa.com)
+1404,4 KiB
+1402,0 KiB
+Usar un formato de imagen moderno (WebP, AVIF) o aumentar la compresión de la imagen podría mejorar el tamaño de descarga de esta imagen.
+716,4 KiB
+Este archivo de imagen es más grande de lo necesario (2752x1536) para las dimensiones mostradas (161x90). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+1399,5 KiB
+Sofia
+<img src="/assets/professional_european_travel_advisor_sofia-CTnkYIap.png" alt="Sofia" class="w-16 h-16 rounded-full object-cover border-2 border-accent mx-auto mb-3">
+/assets/professional_european_travel_advisor_sofia-CTnkYIap.png(tripseuropa.com)
+1228,3 KiB
+1227,7 KiB
+Usar un formato de imagen moderno (WebP, AVIF) o aumentar la compresión de la imagen podría mejorar el tamaño de descarga de esta imagen.
+1057,6 KiB
+Este archivo de imagen es más grande de lo necesario (1024x1024) para las dimensiones mostradas (60x60). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+1224,1 KiB
+unsplash.com
+2029,5 KiB	1154,5 KiB
+España, Portugal y Marruecos
+<img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&amp;w=1920&amp;a…" alt="España, Portugal y Marruecos" class="w-full h-full object-cover" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer">
+/photo-153…-13e3e96b5017?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+961,3 KiB
+765,9 KiB
+Aumentar el factor de compresión de la imagen podría mejorar su tamaño de descarga.
+648,1 KiB
+Este archivo de imagen es más grande de lo necesario (1920x1002) para las dimensiones mostradas (1342x895). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+361,5 KiB
+Viviendo Europa
+<img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&amp;w=1920&amp;a…" alt="Viviendo Europa" class="w-full h-full object-cover" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer">
+/photo-149…-5b9627545d1a?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+340,4 KiB
+133,1 KiB
+Aumentar el factor de compresión de la imagen podría mejorar su tamaño de descarga.
+27,7 KiB
+Este archivo de imagen es más grande de lo necesario (1920x1001) para las dimensiones mostradas (1342x949). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+114,7 KiB
+Turquia y Grecia
+<img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&amp;w=1920&amp;a…" alt="Turquia y Grecia" class="w-full h-full object-cover" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer">
+/photo-157…-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+316,6 KiB
+113,5 KiB
+Este archivo de imagen es más grande de lo necesario (1920x1001) para las dimensiones mostradas (1342x930). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+111,1 KiB
+Gran Tour de Europa
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&amp;w=1920&amp;a…" alt="Gran Tour de Europa" class="w-full h-full object-cover" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer">
+/photo-150…-3e91760cbb34?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+189,8 KiB
+71,6 KiB
+Este archivo de imagen es más grande de lo necesario (1920x1002) para las dimensiones mostradas (1342x893). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+71,6 KiB
+Europa Clasica
+<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&amp;w=1920&amp;auto…" alt="Europa Clasica" class="w-full h-full object-cover" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer">
+/photo-155…-c0197dd311b5?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+221,4 KiB
+70,3 KiB
+Este archivo de imagen es más grande de lo necesario (1920x1002) para las dimensiones mostradas (1342x979). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+70,3 KiB
+Solicitudes que bloquean el renderizado Ahorro estimado de 40 ms
+Las solicitudes están bloqueando el renderizado inicial de la página, lo que puede retrasar el LCP. Si se posponen o se insertan, estas solicitudes de red pueden salir de la ruta crítica.LCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Duración
+tripseuropa.com Propio
+19,7 KiB	140 ms
+/assets/index-CvgwrDbf.css(tripseuropa.com)
+19,7 KiB
+140 ms
+Google Fonts cdn 
+1,7 KiB	120 ms
+/css2?family=…(fonts.googleapis.com)
+1,7 KiB
+120 ms
+Redistribución forzada
+Se produce un reflow forzado cuando JavaScript consulta propiedades geométricas (como offsetWidth) después de que los estilos hayan sido invalidados por un cambio en el estado del DOM. Esto puede provocar un rendimiento deficiente. Consulta más información sobre los reflows forzados y las posibles mitigaciones.Sin puntuar
+Llamada a función principal
+Tiempo total de redistribución
+/assets/index-BV8QGvJB.js:2:10700(tripseuropa.com)
+123 ms
+Fuente
+Tiempo total de redistribución
+/assets/index-BV8QGvJB.js:149:156276(tripseuropa.com)
+121 ms
+/assets/index-BV8QGvJB.js:54:2062(tripseuropa.com)
+0 ms
+/assets/index-BV8QGvJB.js:102:17871(tripseuropa.com)
+1 ms
+/assets/index-BV8QGvJB.js:102:30042(tripseuropa.com)
+1 ms
+[sin asignación]
+57 ms
+Descubrimiento de solicitudes de LCP
+Optimiza el LCP haciendo descubrible la imagen de LCP desde el HTML directamente y evita la carga en diferidoLCPSin puntuar
+carga en diferido no aplicada
+Se debe aplicar fetchpriority=high
+La solicitud es visible en el documento inicial
+Gran Tour de Europa
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&amp;w=1920&amp;a…" alt="Gran Tour de Europa" class="w-full h-full object-cover" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer">
+Árbol de dependencia de red
+Evita encadenar solicitudes críticas reduciendo la longitud de las cadenas, disminuyendo el tamaño de los recursos o posponiendo la descarga de recursos innecesarios para mejorar la carga de la página.LCPSin puntuar
+Latencia de ruta crítica máxima: 1176 ms
+Navegación inicial
+https://tripseuropa.com - 139 ms, 1,75 KiB
+/assets/index-BV8QGvJB.js(tripseuropa.com) - 521 ms, 707,84 KiB
+…auth/user(tripseuropa.com) - 1176 ms, 0,44 KiB
+/json/(ipapi.co) - 1176 ms, 1,78 KiB
+/assets/index-CvgwrDbf.css(tripseuropa.com) - 244 ms, 19,66 KiB
+/css2?family=…(fonts.googleapis.com) - 257 ms, 1,71 KiB
+…v25/S6u8w4BMU….woff2(fonts.gstatic.com) - 953 ms, 15,30 KiB
+Orígenes preconectados
+Las sugerencias para establecer conexión previamente ayudan al navegador a establecer una conexión antes de que se cargue la página, lo que ahorra tiempo al hacer la primera solicitud a ese origen. A continuación se indican los orígenes con los que la página ha establecido conexión previamente.
+No hay orígenes con los que se haya establecido conexión previamente
+Candidatos para establecer conexión previamente
+Añade sugerencias para establecer conexión previamente con tus orígenes más importantes, pero intenta usar 4 como máximo.
+No hay más orígenes que sean buenos candidatos para establecer conexión previamente
+Optimizar tamaño del DOM
+Un DOM de gran tamaño puede aumentar la duración de los cálculos de estilo y redistribución del diseño, lo que afecta a la capacidad de respuesta de la página. Un DOM de gran tamaño también aumenta el uso de memoria. Consulta cómo evitar un tamaño de DOM excesivo.Sin puntuar
+Estadística
+Elemento
+Valor
+Total de elementos
+1680
+Profundidad de DOM
+div.flex > div.w-5 > svg.lucide > polygon
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2…">
+17
+La mayoría de los elementos secundarios
+Francia Italia España Alemania Portugal Grecia Países Bajos Suiza Croacia Reino…
+<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-2">
+27
+Desglose de LCP
+Cada subparte tiene estrategias de mejora específicas. Lo ideal es que la mayor parte del tiempo de LCP se dedique a cargar los recursos, no a los retrasos.LCPSin puntuar
+Subparte
+Duración
+Time to First Byte
+0 ms
+Retraso de carga de recursos
+950 ms
+Duración de la carga del recurso
+40 ms
+Retraso de renderizado de elementos
+370 ms
+Gran Tour de Europa
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&amp;w=1920&amp;a…" alt="Gran Tour de Europa" class="w-full h-full object-cover" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer">
+Terceros
+El código de terceros puede afectar mucho a la velocidad de carga. Reduce y aplaza la carga del código de terceros para priorizar el contenido de tu página.Sin puntuar
+Tercero
+Tamaño de la transferencia
+Tiempo del hilo principal
+Google Fonts cdn 
+94 KiB	0 ms
+…v40/nuFiD-vYS….woff2(fonts.gstatic.com)
+38 KiB
+0 ms
+…v25/S6u8w4BMU….woff2(fonts.gstatic.com)
+15 KiB
+0 ms
+…v25/S6u9w4BMU….woff2(fonts.gstatic.com)
+15 KiB
+0 ms
+…v25/S6uyw4BMU….woff2(fonts.gstatic.com)
+14 KiB
+0 ms
+/css2?family=…(fonts.googleapis.com)
+8 KiB
+0 ms
+/css2?family=…(fonts.googleapis.com)
+2 KiB
+0 ms
+/css2?family=…(fonts.googleapis.com)
+1 KiB
+0 ms
+unsplash.com
+4795 KiB	0 ms
+/photo-153…-13e3e96b5017?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+962 KiB
+0 ms
+/photo-149…-5b9627545d1a?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+341 KiB
+0 ms
+/photo-157…-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+317 KiB
+0 ms
+/photo-151…-78bda8ba0e5b?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+289 KiB
+0 ms
+/photo-153…-13e3e96b5017?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+246 KiB
+0 ms
+/photo-152…-060bdaf4fe1b?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+234 KiB
+0 ms
+/photo-155…-c0197dd311b5?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+222 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+190 KiB
+0 ms
+/photo-146…-9661b134dd2b?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+186 KiB
+0 ms
+/photo-149…-5b9627545d1a?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+164 KiB
+0 ms
+/photo-151…-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+164 KiB
+0 ms
+/photo-153…-13e3e96b5017?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+143 KiB
+0 ms
+/photo-155…-74d7acaacd8b?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+134 KiB
+0 ms
+/photo-153…-92b9be482077?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+130 KiB
+0 ms
+/photo-153…-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+129 KiB
+0 ms
+/photo-150…-7d83a16ee930?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+110 KiB
+0 ms
+/photo-151…-59663e0ac1ad?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+109 KiB
+0 ms
+/photo-151…-a0e668c92439?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+105 KiB
+0 ms
+/photo-146…-9661b134dd2b?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+102 KiB
+0 ms
+/photo-154…-ec64e4d95325?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+101 KiB
+0 ms
+/photo-149…-5b9627545d1a?w=800&auto=format&fit=crop(images.unsplash.com)
+92 KiB
+0 ms
+/photo-154…-2d8bd64b4a9b?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+92 KiB
+0 ms
+/photo-153…-92b9be482077?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+69 KiB
+0 ms
+/photo-157…-e3a8d69ac5ff?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+54 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+47 KiB
+0 ms
+/photo-155…-c0197dd311b5?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+35 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=80&w=600&auto=format&fit=crop(images.unsplash.com)
+30 KiB
+0 ms
+ipapi.co
+2 KiB	0 ms
+/json/(ipapi.co)
+2 KiB
+0 ms
+Estas estadísticas también están disponibles en el panel Rendimiento de Chrome DevTools. Graba una traza para ver información más detallada.
+Diagnósticos
+Reduce el contenido JavaScript que no se use Ahorro estimado de 232 KiB
+Reduce el contenido JavaScript que no se use y retrasa la carga de secuencias de comandos hasta que se necesiten. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de JavaScript que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+tripseuropa.com Propio
+706,6 KiB	232,2 KiB
+/assets/index-BV8QGvJB.js(tripseuropa.com)
+706,6 KiB
+232,2 KiB
+Reduce el contenido CSS que no se use Ahorro estimado de 15 KiB
+Reduce las reglas que no se usen de las hojas de estilo y retrasa las reglas CSS que no se utilicen para el contenido de la parte visible a primera vista. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de CSS que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+tripseuropa.com Propio
+19,1 KiB	14,7 KiB
+/assets/index-CvgwrDbf.css(tripseuropa.com)
+19,1 KiB
+14,7 KiB
+Evita cargas útiles de red de gran tamaño Tamaño total: 8254 KiB
+Si la carga útil de la red es muy grande, los usuarios consumen más datos móviles y las páginas tardan más en cargarse. Consulta cómo reducir el tamaño de la carga útilSin puntuar
+URL
+Tamaño de la transferencia
+tripseuropa.com Propio
+3341,5 KiB
+/assets/erasebg-t…(2)_17670291….png(tripseuropa.com)
+1404,8 KiB
+/assets/professional_european_travel_advisor_sofia-CTnkYIap.png(tripseuropa.com)
+1228,8 KiB
+/assets/index-BV8QGvJB.js(tripseuropa.com)
+707,8 KiB
+unsplash.com
+2338,7 KiB
+/photo-153…-13e3e96b5017?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+961,9 KiB
+/photo-149…-5b9627545d1a?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+341,0 KiB
+/photo-157…-e3a8d69ac5ff?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+317,2 KiB
+/photo-155…-c0197dd311b5?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+222,0 KiB
+/photo-150…-3e91760cbb34?q=80&w=1920&auto=format&fit=crop(images.unsplash.com)
+190,4 KiB
+/photo-151…-78bda8ba0e5b?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+163,6 KiB
+/photo-153…-13e3e96b5017?q=80&w=800&auto=format&fit=crop(images.unsplash.com)
+142,6 KiB
+Evita tareas largas del hilo principal 3 tareas largas encontradas
+Enumera las tareas más largas del hilo principal, lo que es útil para identificar las que más contribuyen a la latencia. Consulta cómo evitar tareas largas del hilo principalTBTSin puntuar
+URL
+Hora de inicio
+Duración
+tripseuropa.com Propio
+259 ms
+/assets/index-BV8QGvJB.js(tripseuropa.com)
+1689 ms
+151 ms
+/assets/index-BV8QGvJB.js(tripseuropa.com)
+296 ms
+108 ms
+No atribuible
+85 ms
+Unattributable
+404 ms
+85 ms
+Consulta más información sobre el rendimiento de tu aplicación. Estos datos no afectan directamente a la puntuación del rendimiento.
+Auditorías aprobadas (15)
+Mostrar
+85
+Accesibilidad
+Estas comprobaciones permiten identificar oportunidades para mejorar la accesibilidad de tu aplicación web. La detección automática solo puede detectar un subconjunto de problemas y no garantiza la accesibilidad de tu aplicación web, por lo que también te recomendamos que hagas pruebas manuales.
+Nombres y etiquetas
+Los botones no tienen nombres accesibles
+Si un botón no tiene un nombre accesible, los lectores de pantalla lo leerán en voz alta como "botón", lo que hace que el botón no resulte útil a los usuarios que necesitan lectores de pantalla. Consulta cómo hacer que los botones sean más accesibles
+Elementos con errores
+div.container > div.flex > div.hidden > button.w-9
+<button class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:…" data-testid="button-account-open">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-offers-prev">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-offers-next">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-reserve-prev">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-reserve-next">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-offers-prev">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-offers-next">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-favorites-prev">
+div.container > div.flex > div.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" data-testid="button-favorites-next">
+div > div > div.absolute > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm fo…" data-testid="button-play-video">
+section.py-16 > div.container > div.relative > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm fo…" data-testid="button-story-prev">
+section.py-16 > div.container > div.relative > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm fo…" data-testid="button-story-next">
+body > div#root > div.min-h-screen > button.fixed
+<button class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-2xl flex items-c…" data-testid="button-chatbot-toggle">
+div.fixed > div.p-3 > form.flex > button.inline-flex
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" type="submit" disabled="" data-testid="button-chatbot-send">
+A continuación se indican consejos para mejorar la semántica de los controles de tu aplicación. Estos consejos pueden mejorar la experiencia de los usuarios de tecnologías de asistencia, como los lectores de pantalla.
+Contraste
+Los colores de fondo y de primer plano no tienen una relación de contraste adecuada.
+Los textos con poco contraste resultan difíciles o imposibles de leer para muchos usuarios. Consulta cómo crear suficiente contraste de color
+Elementos con errores
+Ida y Vuelta
+<button class="px-6 py-3 text-sm font-medium transition-colors text-accent border-b-2 bor…" data-testid="tab-roundtrip">
+Ida y Vuelta Solo Ida Origen Destino Salida Seleccionar Vuelta Seleccionar Pasa…
+<div class="bg-white rounded-xl shadow-2xl max-w-6xl mx-auto">
+Donde
+<span class="text-accent">
+Donde Quieres Ir? España 24 Viajes Francia 18 Viajes Italia 22 Viajes Portugal …
+<section class="py-16 bg-background" data-testid="section-destination-grid">
+Aparta tu lugar
+<h2 class="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-reserve-title">
+Bloqueos Aparta tu lugar Europa Clasica Smart Desde 1,699USD Por persona en …
+<section class="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-reserve-spot">
+Los Imperdibles del Mes
+<h2 class="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-favorites-title">
+Favoritos Los Imperdibles del Mes Escapada a Grecia Desde 599USD Por persona…
+<section class="py-16 bg-white dark:bg-gray-800" data-testid="section-favorites">
+Por que elegir Trips Europa?
+<h2 class="text-2xl md:text-3xl font-display font-bold mb-4 text-accent" data-testid="text-why-title">
+Por que elegir Trips Europa? Mas de 10 años de experiencia creando viajes inol…
+<section class="py-16 bg-white dark:bg-gray-950" data-testid="section-why-choose">
+Suscribirme
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md…" type="submit" data-testid="button-newsletter-submit">
+Escríbenos por WhatsApp
+<a href="https://api.whatsapp.com/send?phone=34611105448" class="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-m…" data-testid="link-whatsapp">
+Resolvemos Tus Dudas
+<h2 class="text-4xl md:text-5xl font-display font-bold text-accent mb-4" data-testid="text-faq-title">
+Preguntas Frecuentes Resolvemos Tus Dudas Encuentra respuestas a las preguntas…
+<section class="py-24 bg-gray-50" data-testid="section-faq">
+EE.UU., Canada, China, India, Sudafrica, Australia, ETIAS y mas
+<p class="text-xs text-white/40 mt-2">
+Destinos Paquetes Herramientas Blog Comunidad Contacto Sofia Agente de Viajes D…
+<footer class="bg-primary text-white pt-12 pb-8" data-testid="footer">
+2025 TripsEuropa.com - Todos los derechos reservados.
+<p class="text-white/40 text-xs" data-testid="text-footer-copyright">
+Destinos Paquetes Herramientas Blog Comunidad Contacto Sofia Agente de Viajes D…
+<footer class="bg-primary text-white pt-12 pb-8" data-testid="footer">
+Política de Privacidad
+<a href="/privacy" class="hover:text-white transition-colors">
+Destinos Paquetes Herramientas Blog Comunidad Contacto Sofia Agente de Viajes D…
+<footer class="bg-primary text-white pt-12 pb-8" data-testid="footer">
+A continuación se indican consejos para facilitar la lectura del contenido.
+Prácticas recomendadas
+Las áreas táctiles no tienen un tamaño o un espaciado suficientes.
+Las áreas táctiles con un tamaño y un espaciado suficientes ayudan a los usuarios con posibles dificultades para usar controles pequeños a activarlos. Más información sobre las áreas táctiles
+Elementos con errores
+Go to slide 1
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-accent scale-125" aria-label="Go to slide 1" data-testid="button-carousel-dot-0">
+Go to slide 2
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 2" data-testid="button-carousel-dot-1">
+Go to slide 2
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 2" data-testid="button-carousel-dot-1">
+Go to slide 1
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-accent scale-125" aria-label="Go to slide 1" data-testid="button-carousel-dot-0">
+Go to slide 3
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 3" data-testid="button-carousel-dot-2">
+Go to slide 3
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 3" data-testid="button-carousel-dot-2">
+Go to slide 2
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 2" data-testid="button-carousel-dot-1">
+Go to slide 4
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 4" data-testid="button-carousel-dot-3">
+Go to slide 4
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 4" data-testid="button-carousel-dot-3">
+Go to slide 3
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 3" data-testid="button-carousel-dot-2">
+Go to slide 5
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 5" data-testid="button-carousel-dot-4">
+Go to slide 5
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 5" data-testid="button-carousel-dot-4">
+Go to slide 4
+<button class="w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-whit…" aria-label="Go to slide 4" data-testid="button-carousel-dot-3">
+Go to story 1
+<button class="w-3 h-3 rounded-full transition-colors bg-foreground" aria-label="Go to story 1" data-testid="button-story-dot-0">
+Go to story 2
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 2" data-testid="button-story-dot-1">
+Go to story 2
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 2" data-testid="button-story-dot-1">
+Go to story 1
+<button class="w-3 h-3 rounded-full transition-colors bg-foreground" aria-label="Go to story 1" data-testid="button-story-dot-0">
+Go to story 3
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 3" data-testid="button-story-dot-2">
+Go to story 3
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 3" data-testid="button-story-dot-2">
+Go to story 2
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 2" data-testid="button-story-dot-1">
+Go to story 4
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 4" data-testid="button-story-dot-3">
+Go to story 4
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 4" data-testid="button-story-dot-3">
+Go to story 3
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 3" data-testid="button-story-dot-2">
+Go to story 5
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 5" data-testid="button-story-dot-4">
+Go to story 5
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 5" data-testid="button-story-dot-4">
+Go to story 4
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 4" data-testid="button-story-dot-3">
+Go to story 6
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 6" data-testid="button-story-dot-5">
+Go to story 6
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 6" data-testid="button-story-dot-5">
+Go to story 5
+<button class="w-3 h-3 rounded-full transition-colors bg-muted-foreground/30 hover:bg-mut…" aria-label="Go to story 5" data-testid="button-story-dot-4">
+El documento no tiene un punto de referencia principal.
+Los puntos de referencia principal ayudan a los usuarios de lectores de pantalla a desplazarse por una página web. Obtén más información sobre los puntos de referencia.
+Elementos con errores
+html
+<html lang="es">
+Los enlaces idénticos tienen la misma finalidad.
+Los enlaces con el mismo destino deben tener la misma descripción para que los usuarios puedan entender su finalidad y decidir si quieren seguirlo. Obtén más información sobre los enlaces idénticos.Sin puntuar
+Elementos con errores
+Bellezas de Europa Desde 2,399USD Por persona en habitacion doble
+<a href="https://api.whatsapp.com/send?phone=34611105448&amp;text=Hola!%20Me%20interesa…" target="_blank" rel="noopener noreferrer" class="flex-shrink-0" style="scroll-snap-align: start;">
+Bellezas de Europa Desde 2,399USD Por persona en habitacion doble
+<a href="https://api.whatsapp.com/send?phone=34611105448&amp;text=Hola!%20Me%20interesa…" target="_blank" rel="noopener noreferrer" class="flex-shrink-0" style="scroll-snap-align: start;">
+Estos elementos destacan las prácticas recomendadas de accesibilidad más habituales.
+Navegación
+Los elementos de encabezado no aparecen en orden secuencial descendente
+Los títulos ordenados correctamente que no saltan niveles transmiten la estructura semántica de la página, lo que facilita la navegación y la comprensión para los usuarios que usan tecnologías asistenciales. Más información sobre el orden de los encabezados
+Elementos con errores
+DESTINOS POPULARES
+<h4 class="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-destinations-heading">
+Aquí tienes consejos para facilitar el desplazamiento con el teclado en tu aplicación.
+Elementos adicionales que se deben comprobar manualmente (10)
+Mostrar
+Estos elementos se ocupan de áreas que las herramientas de prueba automáticas no pueden analizar. Consulta más información sobre cómo revisar la accesibilidad en nuestra guía.
+Auditorías aprobadas (21)
+Mostrar
+No aplicable (33)
+Ocultar
+Los valores de [accesskey] son únicos
+Las claves de acceso permiten a los usuarios dirigirse rápidamente a una parte concreta de la página. Para facilitar una navegación correcta, las claves de acceso deben ser únicas. Más información sobre las claves de accesoSin puntuar
+Los elementos button, link y menuitem tienen nombres accesibles
+Si un elemento no tiene un nombre accesible, los lectores de pantalla lo leen diciendo un nombre genérico, lo que hace que el elemento no resulte útil a los usuarios que necesitan lectores de pantalla. Consulta cómo hacer que los elementos de comando sean más accesiblesSin puntuar
+Los elementos con role="dialog" o role="alertdialog" tienen nombres accesibles.
+Los elementos del cuadro de diálogo de ARIA sin nombres accesibles pueden impedir que los usuarios de lectores de pantalla distingan la finalidad de esos elementos. Consulta cómo hacer que los elementos del cuadro de diálogo de ARIA sean más accesibles.Sin puntuar
+Los campos de entrada ARIA tienen nombres accesibles
+Si un campo de entrada no tiene un nombre accesible, los lectores de pantalla lo leerán en voz alta con un nombre genérico, lo que hace que el campo no resulte útil a los usuarios que necesitan lectores de pantalla. Más información sobre las etiquetas de campos de entradaSin puntuar
+Los elementos meter de ARIA tienen nombres accesibles
+Si un elemento medidor no tiene un nombre accesible, los lectores de pantalla lo leen diciendo un nombre genérico, lo que hace que no resulte útil para los usuarios que necesitan lectores de pantalla. Consulta cómo asignar un nombre a los elementos meter.Sin puntuar
+Los elementos progressbar de ARIA tienen nombres accesibles
+Si un elemento progressbar no tiene un nombre accesible, los lectores de pantalla lo leen diciendo un nombre genérico, lo que hace que no resulte útil a los usuarios que necesitan lectores de pantalla. Consulta cómo etiquetar elementos progressbarSin puntuar
+Los elementos con un [role] ARIA que requieren que los elementos secundarios contengan un [role] específico tienen todos los elementos secundarios necesarios.
+Algunas funciones principales de ARIA deben contener funciones secundarias específicas para llevar a cabo las funciones de accesibilidad correspondientes. Más información sobre las funciones y los elementos secundarios obligatoriosSin puntuar
+Los atributos [role] están incluidos en los elementos principales correspondientes
+Algunas funciones secundarias de ARIA se deben incluir dentro de funciones principales concretas para poder llevar a cabo las funciones de accesibilidad correspondientes. Más información sobre las funciones de ARIA y el elemento superior obligatorioSin puntuar
+Los elementos con el atributo role=text no tienen descendientes enfocables.
+Añadir role=text alrededor de un nodo de texto dividido por etiquetas permite que VoiceOver lo trate como una sola frase, pero no se anunciarán los descendientes enfocables de ese elemento. Obtén más información sobre el atributo role=text.Sin puntuar
+Los campos de interruptores ARIA tienen nombres accesibles
+Si un campo de interruptor no tiene un nombre accesible, los lectores de pantalla lo leerán en voz alta con un nombre genérico, lo que hace que el campo no resulte útil a los usuarios que necesitan lectores de pantalla. Más información sobre los campos de interruptoresSin puntuar
+Los elementos tooltip de ARIA tienen nombres accesibles
+Si un elemento de descripción emergente no tiene un nombre accesible, los lectores de pantalla lo leen diciendo un nombre genérico, lo que hace que no resulte útil para los usuarios que necesitan lectores de pantalla. Consulta cómo asignar un nombre a los elementos tooltip.Sin puntuar
+Los elementos treeitem de ARIA tienen nombres accesibles
+Si un elemento treeitem no tiene un nombre accesible, los lectores de pantalla lo leen diciendo un nombre genérico, lo que hace que no resulte útil a los usuarios que necesitan lectores de pantalla. Más información sobre cómo etiquetar elementos treeitemSin puntuar
+La página contiene un encabezado, un enlace de omisión o una región de punto de referencia
+Incluir maneras de omitir el contenido repetitivo permite a los usuarios con teclado navegar por la página de forma más eficaz. Más información sobre cómo omitir bloquesSin puntuar
+Los elementos <dl> contienen únicamente grupos de <dt> y <dd> o elementos <script>, <template> o <div> ordenados correctamente.
+Si las listas de definiciones no están bien marcadas, es posible que los lectores de pantalla las interpreten de forma confusa o imprecisa. Consulta cómo estructurar las listas de definición correctamenteSin puntuar
+Los elementos de la lista de definiciones están incluidos dentro de elementos <dl>
+Los elementos de la lista de definiciones (<dt> y <dd>) deben estar incluidos en un elemento <dl> superior para asegurarte de que los lectores de pantalla puedan leerlos en voz alta correctamente. Consulta cómo estructurar las listas de definición correctamenteSin puntuar
+Los ID de ARIA son únicos
+El valor de un ID de ARIA debe ser único para evitar que las tecnologías asistenciales omitan otras instancias. Consulta cómo corregir IDs de ARIA duplicadosSin puntuar
+Ningún campo de formulario tiene varias etiquetas
+Las tecnologías asistenciales, como los lectores de pantalla, pueden leer de forma confusa los campos de formulario que tienen varias etiquetas, ya que pueden usar la primera etiqueta, la última o todas. Consulta cómo utilizar las etiquetas de formulariosSin puntuar
+Los elementos <frame> o <iframe> tienen un título
+Los usuarios de lectores de pantalla confían en que los títulos describan el contenido de los marcos. Más información sobre los títulos de los marcosSin puntuar
+El elemento <html> tiene un atributo [xml:lang] con el mismo idioma base que el atributo [lang].
+Si la página web no indica un idioma de forma coherente, es posible que el lector de pantalla no lea correctamente el texto de la página. Más información sobre el atributo langSin puntuar
+Los botones de entrada tienen texto reconocible.
+Añadir texto reconocible y accesible a los botones de entrada puede ayudar a los usuarios de lectores de pantalla a entender la finalidad de estos botones. Más información sobre los botones de entradaSin puntuar
+Los elementos <input type="image"> tienen texto [alt]
+Cuando se usa una imagen como botón <input>, resulta útil proporcionar un texto alternativo para permitir que los usuarios de lectores de pantalla entiendan cuál es la función del botón. Más información sobre añadir texto alternativo a las imágenesSin puntuar
+El documento no usa <meta http-equiv="refresh">
+Los usuarios no esperan que las páginas se actualicen automáticamente. Si es así, se les volverá a dirigir a la parte superior de la página. Esto puede dar lugar a una experiencia frustrante o confusa. Más información sobre la etiqueta meta de actualizaciónSin puntuar
+Los elementos <object> tienen texto alternativo
+Los lectores de pantalla no pueden traducir contenido que no sea texto. Si añades texto alternativo a los elementos <object>, los lectores de pantalla podrán transmitir su significado a los usuarios. Más información sobre el texto alternativo de los elementos objectSin puntuar
+Los elementos <select> tienen elementos <label> asociados.
+Los elementos <form> sin <label> eficaz pueden causar experiencias frustrantes para los usuarios de lectores de pantalla. Obtén más información sobre el elemento select.Sin puntuar
+Los enlaces de salto son enfocables.
+Incluir un enlace de salto puede ayudar a los usuarios a ir directamente al contenido principal para ahorrar tiempo. Más información sobre los enlaces de saltoSin puntuar
+Las celdas de un elemento <table> que usan el atributo [headers] hacen referencia a otras celdas de la misma tabla.
+Los lectores de pantalla incluyen funciones para facilitar la navegación por las tablas. Asegurarse de que las celdas <td> que usan el atributo [headers] solo hacen referencia a otras celdas de la misma tabla mejora la experiencia de los usuarios de lectores de pantalla. Más información sobre el atributo headersSin puntuar
+Los elementos <th> y los elementos con atributos [role="columnheader"/"rowheader"] contienen las celdas de datos que describen.
+Los lectores de pantalla incluyen funciones para facilitar la navegación por las tablas. Si te aseguras de que los encabezados de las tablas siempre hagan referencia a un conjunto de celdas, puedes mejorar la experiencia de los usuarios de lectores de pantalla. Más información sobre los encabezados de tablaSin puntuar
+Los atributos [lang] tienen un valor válido
+Especificar un idioma BCP 47 en los elementos ayuda a asegurar que los lectores de pantalla pronuncien correctamente las palabras del texto. Consulta cómo utilizar el atributo langSin puntuar
+Los elementos <video> contienen un elemento <track> con el atributo [kind="captions"]
+Si un vídeo tiene subtítulos, los usuarios sordos o con problemas auditivos pueden acceder a la información con más facilidad. Más información sobre los subtítulos de los vídeosSin puntuar
+Las tablas tienen contenido diferente en el atributo summary y en <caption>.
+El atributo summary debe describir la estructura de la tabla y <caption> debe tener el título en pantalla. Etiquetar las tablas de forma precisa ayuda a los usuarios de lectores de pantalla. Más información sobre summary y captionSin puntuar
+Todos los elementos <heading> incluyen contenido.
+Un <heading> sin contenido o con texto inaccesible impide que los usuarios de lectores de pantalla accedan a la información de la estructura de la página. Obtén más información sobre los <heading>.Sin puntuar
+Usa roles de ARIA solo en elementos compatibles
+Hay muchos elementos HTML a los que solo se les pueden asignar determinados roles de ARIA. Usar roles de ARIA si no están permitidos puede afectar a la accesibilidad de la página web. Más información sobre los roles de ARIASin puntuar
+Los elementos de imagen no tienen atributos [alt] que sean texto redundante.
+Los elementos informativos deberían incluir textos alternativos cortos y descriptivos. Si el texto alternativo es idéntico al texto situado junto a un enlace o una imagen, puede resultar confuso para los usuarios de lectores de pantalla, ya que el texto se leerá dos veces. Más información sobre el atributo altSin puntuar
+96
+Prácticas recomendadas
+General
+Se han registrado errores del navegador en la consola
+Los errores registrados en la consola indican que hay problemas sin resolver. Pueden proceder de solicitudes fallidas de la red y otros errores del navegador. Más información sobre estos errores en la auditoría de diagnóstico de la consola
+Fuente
+Descripción
+tripseuropa.com Propio
+…auth/user:1:0(tripseuropa.com)
+Failed to load resource: the server responded with a status of 401 (Unauthorized)
+ipapi.co
+/json/:1:0(ipapi.co)
+Failed to load resource: the server responded with a status of 429 (Too Many Requests)
+No hay mapas de origen para JavaScript propio de gran tamaño
+Los mapas de origen traducen el código minificado al código fuente original. Esto ayuda a los desarrolladores a depurar en producción. Además, Lighthouse puede proporcionar sugerencias adicionales. Plantéate desplegar mapas de origen para disfrutar de estas ventajas. Más información sobre los mapas de origenSin puntuar
+URL
+URL de mapa
+tripseuropa.com Propio
+/assets/index-BV8QGvJB.js(tripseuropa.com)
+La biblioteca de JavaScript de gran tamaño no tiene un mapa de origen
+Confianza y seguridad
+Asegura que la CSP sea efectiva frente a ataques XSS
+Una política de seguridad de contenido (CSP) sólida reduce considerablemente el riesgo de ataques de cross-site scripting (XSS). Consulta cómo usar una CSP para prevenir XSSSin puntuar
+Descripción
+Directiva
+Gravedad
+No se ha encontrado ninguna CSP en el modo obligatorio
+Alta
+Usa una política de HSTS sólida
+La implementación del encabezado HSTS reduce considerablemente el riesgo de cambiar las conexiones HTTP a versiones inferiores y de recibir ataques de eavesdropping. Se recomienda implementarlo por fases, empezando con un valor de max-age bajo. Más información sobre usar una política de HSTS sólidaSin puntuar
+Descripción
+Directiva
+Gravedad
+No se han encontrado directivas `preload`
+preload
+Media
+Asegúrate de que el aislamiento de orígenes sea adecuado con COOP
+La política de apertura de orígenes cruzados (COOP) se puede usar para aislar la ventana de nivel superior de otros documentos, como ventanas emergentes. Más información sobre cómo implementar el encabezado COOPSin puntuar
+Descripción
+Directiva
+Gravedad
+No se han encontrado encabezados COOP
+Alta
+Mitiga el secuestro de clics con XFO o CSP
+El encabezado X-Frame-Options (XFO) o la directiva frame-ancestors en el encabezado Content-Security-Policy (CSP) controlan dónde se puede insertar una página. Pueden mitigar los ataques de secuestro de clics impidiendo que algunos o todos los sitios puedan insertar la página. Más información sobre cómo mitigar el secuestro de clicsSin puntuar
+Descripción
+Gravedad
+No se han encontrado políticas de control de marcos
+Alta
+Mitigar el XSS basado en DOM con Trusted Types
+La directiva require-trusted-types-for del encabezado Content-Security-Policy (CSP) indica a los user-agents que controlen los datos que se pasan a las funciones de sumidero de XSS basado en DOM. Consulta más información sobre cómo mitigar el XSS basado en DOM con Trusted Types.Sin puntuar
+Descripción
+Gravedad
+No se ha encontrado ningún encabezado `Content-Security-Policy` con la directiva Trusted Types
+Alta
+Auditorías aprobadas (11)
+Mostrar
+No aplicable (2)
+Ocultar
+Redirige el tráfico HTTP a HTTPS
+Asegúrate de redirigir todo el tráfico HTTP a HTTPS para habilitar funciones web seguras para todos los usuarios. Más informaciónSin puntuar
+Bibliotecas de JavaScript detectadas
+Todas las bibliotecas frontend de JavaScript detectadas en la página. Más información sobre esta auditoría de diagnóstico de detección de bibliotecas de JavaScriptSin puntuar
