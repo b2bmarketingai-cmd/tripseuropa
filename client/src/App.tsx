@@ -1,5 +1,5 @@
 import { Switch, Route, Redirect, useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -8,7 +8,14 @@ import { useAuth } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
 import { ABTestingProvider } from "@/lib/abTesting";
 
-// Scroll to top on route change
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="animate-pulse text-muted-foreground">Cargando...</div>
+    </div>
+  );
+}
+
 function ScrollToTop() {
   const [location] = useLocation();
   
@@ -19,55 +26,55 @@ function ScrollToTop() {
   return null;
 }
 
-// Pages
 import Home from "@/pages/Home";
-import Login from "@/pages/Login";
-import Dashboard from "@/pages/Dashboard";
-import Tools from "@/pages/Tools";
-import Policies from "@/pages/Policies";
-import Destinations from "@/pages/Destinations";
-import Packages from "@/pages/Packages";
-import Blog from "@/pages/Blog";
-import Contact from "@/pages/Contact";
-import About from "@/pages/About";
-import Testimonials from "@/pages/Testimonials";
-import Privacy from "@/pages/Privacy";
-import FromColombia from "@/pages/FromColombia";
-import FromBrazil from "@/pages/FromBrazil";
-import FromMexico from "@/pages/FromMexico";
-import FromPanama from "@/pages/FromPanama";
-import FromArgentina from "@/pages/FromArgentina";
-import FromPeru from "@/pages/FromPeru";
-import FromCostaRica from "@/pages/FromCostaRica";
-import BlogColombia from "@/pages/BlogColombia";
-import BlogArgentina from "@/pages/BlogArgentina";
-import BlogPeru from "@/pages/BlogPeru";
-import BlogPanama from "@/pages/BlogPanama";
-import BlogCostaRica from "@/pages/BlogCostaRica";
-import BlogDominicana from "@/pages/BlogDominicana";
-import BlogCaribe from "@/pages/BlogCaribe";
-import BlogMexico from "@/pages/BlogMexico";
-import BlogBrasil from "@/pages/BlogBrasil";
-import VacacionesEuropa from "@/pages/VacacionesEuropa";
-import TravelAdvisor from "@/pages/TravelAdvisor";
-import TravelAssistant from "@/pages/TravelAssistant";
-import RouteTemplate from "@/pages/RouteTemplate";
-import CityOriginTemplate from "@/pages/CityOriginTemplate";
-import BlogPost from "@/pages/BlogPost";
-import DestinationPage from "@/pages/DestinationPage";
-import Rewards from "@/pages/Rewards";
-import TravelStylePage from "@/pages/TravelStylePage";
-import LastMinuteOffers from "@/pages/LastMinuteOffers";
-import ESim from "@/pages/ESim";
-import VisaRequirements from "@/pages/VisaRequirements";
-import Forum from "@/pages/Forum";
-import Flights from "@/pages/services/Flights";
-import Hotels from "@/pages/services/Hotels";
-import PackagesService from "@/pages/services/Packages";
-import Tours from "@/pages/services/Tours";
-import Insurance from "@/pages/services/Insurance";
 import NotFound from "@/pages/not-found";
-import CountryLanding from "@/pages/CountryLanding";
+
+const Login = lazy(() => import("@/pages/Login"));
+const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const Tools = lazy(() => import("@/pages/Tools"));
+const Policies = lazy(() => import("@/pages/Policies"));
+const Destinations = lazy(() => import("@/pages/Destinations"));
+const Packages = lazy(() => import("@/pages/Packages"));
+const Blog = lazy(() => import("@/pages/Blog"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const About = lazy(() => import("@/pages/About"));
+const Testimonials = lazy(() => import("@/pages/Testimonials"));
+const Privacy = lazy(() => import("@/pages/Privacy"));
+const FromColombia = lazy(() => import("@/pages/FromColombia"));
+const FromBrazil = lazy(() => import("@/pages/FromBrazil"));
+const FromMexico = lazy(() => import("@/pages/FromMexico"));
+const FromPanama = lazy(() => import("@/pages/FromPanama"));
+const FromArgentina = lazy(() => import("@/pages/FromArgentina"));
+const FromPeru = lazy(() => import("@/pages/FromPeru"));
+const FromCostaRica = lazy(() => import("@/pages/FromCostaRica"));
+const BlogColombia = lazy(() => import("@/pages/BlogColombia"));
+const BlogArgentina = lazy(() => import("@/pages/BlogArgentina"));
+const BlogPeru = lazy(() => import("@/pages/BlogPeru"));
+const BlogPanama = lazy(() => import("@/pages/BlogPanama"));
+const BlogCostaRica = lazy(() => import("@/pages/BlogCostaRica"));
+const BlogDominicana = lazy(() => import("@/pages/BlogDominicana"));
+const BlogCaribe = lazy(() => import("@/pages/BlogCaribe"));
+const BlogMexico = lazy(() => import("@/pages/BlogMexico"));
+const BlogBrasil = lazy(() => import("@/pages/BlogBrasil"));
+const VacacionesEuropa = lazy(() => import("@/pages/VacacionesEuropa"));
+const TravelAdvisor = lazy(() => import("@/pages/TravelAdvisor"));
+const TravelAssistant = lazy(() => import("@/pages/TravelAssistant"));
+const RouteTemplate = lazy(() => import("@/pages/RouteTemplate"));
+const CityOriginTemplate = lazy(() => import("@/pages/CityOriginTemplate"));
+const BlogPost = lazy(() => import("@/pages/BlogPost"));
+const DestinationPage = lazy(() => import("@/pages/DestinationPage"));
+const Rewards = lazy(() => import("@/pages/Rewards"));
+const TravelStylePage = lazy(() => import("@/pages/TravelStylePage"));
+const LastMinuteOffers = lazy(() => import("@/pages/LastMinuteOffers"));
+const ESim = lazy(() => import("@/pages/ESim"));
+const VisaRequirements = lazy(() => import("@/pages/VisaRequirements"));
+const Forum = lazy(() => import("@/pages/Forum"));
+const Flights = lazy(() => import("@/pages/services/Flights"));
+const Hotels = lazy(() => import("@/pages/services/Hotels"));
+const PackagesService = lazy(() => import("@/pages/services/Packages"));
+const Tours = lazy(() => import("@/pages/services/Tours"));
+const Insurance = lazy(() => import("@/pages/services/Insurance"));
+const CountryLanding = lazy(() => import("@/pages/CountryLanding"));
 
 // Protected Route Wrapper
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
@@ -217,7 +224,9 @@ function App() {
           <TooltipProvider>
             <ScrollToTop />
             <Toaster />
-            <Router />
+            <Suspense fallback={<LoadingFallback />}>
+              <Router />
+            </Suspense>
           </TooltipProvider>
         </ABTestingProvider>
       </I18nProvider>

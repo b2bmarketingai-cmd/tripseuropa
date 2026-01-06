@@ -107,6 +107,7 @@ export function Chatbot() {
           isOpen ? "bg-red-500 text-white rotate-90" : "bg-accent text-primary"
         )}
         data-testid="button-chatbot-toggle"
+        aria-label={isOpen ? "Cerrar chat" : "Abrir chat con Sofia"}
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-7 h-7" />}
       </button>

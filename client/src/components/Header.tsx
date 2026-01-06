@@ -503,6 +503,7 @@ export function Header() {
                 onClick={() => setAccountModalOpen(true)}
                 className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                 data-testid="button-account-open"
+                aria-label="Abrir cuenta de usuario"
               >
                 <User className="w-5 h-5 text-primary" />
               </button>
@@ -511,7 +512,10 @@ export function Header() {
             <div className="flex lg:hidden items-center gap-3">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center gap-1 px-2 py-1 rounded hover:bg-gray-100 transition-colors">
+                  <button 
+                    className="flex items-center gap-1 px-2 py-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Cambiar idioma"
+                  >
                     <span className="text-lg">{COUNTRY_FLAGS[language]?.flag}</span>
                   </button>
                 </DropdownMenuTrigger>
@@ -534,6 +538,7 @@ export function Header() {
               <button 
                 onClick={() => setAccountModalOpen(true)}
                 className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"
+                aria-label="Abrir cuenta de usuario"
               >
                 <User className="w-4 h-4 text-primary" />
               </button>
@@ -542,6 +547,7 @@ export function Header() {
                 className="text-gray-700 p-1"
                 onClick={() => setIsOpen(!isOpen)}
                 data-testid="button-mobile-menu"
+                aria-label={isOpen ? "Cerrar menu" : "Abrir menu"}
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
