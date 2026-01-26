@@ -1,0 +1,347 @@
+---
+
+### ✅ TAREA 4: CORREGIR ROUTING - CONTINUACIÓN
+
+```javascript
+        co" />} />
+        <Route path="/es-co/paquetes/:package" element={<PackagePage lang="es-co" />} />
+        <Route path="/es-co/ofertas/:offer" element={<OfferPage lang="es-co" />} />
+        
+        {/* Multilingüe - Español Costa Rica */}
+        <Route path="/es-cr/paquetes/:package" element={<PackagePage lang="es-cr" />} />
+        <Route path="/es-cr/ofertas/:offer" element={<OfferPage lang="es-cr" />} />
+        
+        {/* Multilingüe - Español República Dominicana */}
+        <Route path="/es-do" element={<HomePage lang="es-do" />} />
+        <Route path="/es-do/destinos/:destination" element={<DestinationPage lang="es-do" />} />
+        <Route path="/es-do/experiencias/:experience" element={<ExperiencePage lang="es-do" />} />
+        <Route path="/es-do/paquetes/:package" element={<PackagePage lang="es-do" />} />
+        <Route path="/es-do/ofertas/:offer" element={<OfferPage lang="es-do" />} />
+        
+        {/* Multilingüe - Español México */}
+        <Route path="/es-mx/paquetes/:package" element={<PackagePage lang="es-mx" />} />
+        <Route path="/es-mx/ofertas/:offer" element={<OfferPage lang="es-mx" />} />
+        
+        {/* Multilingüe - Español Panamá */}
+        <Route path="/es-pa" element={<HomePage lang="es-pa" />} />
+        <Route path="/es-pa/destinos/:destination" element={<DestinationPage lang="es-pa" />} />
+        <Route path="/es-pa/experiencias/:experience" element={<ExperiencePage lang="es-pa" />} />
+        <Route path="/es-pa/paquetes/:package" element={<PackagePage lang="es-pa" />} />
+        <Route path="/es-pa/ofertas/:offer" element={<OfferPage lang="es-pa" />} />
+        
+        {/* Multilingüe - Español Perú */}
+        <Route path="/es-pe" element={<HomePage lang="es-pe" />} />
+        <Route path="/es-pe/destinos/:destination" element={<DestinationPage lang="es-pe" />} />
+        
+        {/* Multilingüe - English Argentina */}
+        <Route path="/en-ar" element={<HomePage lang="en-ar" />} />
+        <Route path="/en-ar/destinations/:destination" element={<DestinationPage lang="en-ar" />} />
+        <Route path="/en-ar/experiences/:experience" element={<ExperiencePage lang="en-ar" />} />
+        <Route path="/en-ar/packages/:package" element={<PackagePage lang="en-ar" />} />
+        
+        {/* Multilingüe - English Colombia */}
+        <Route path="/en-co" element={<HomePage lang="en-co" />} />
+        <Route path="/en-co/destinations/:destination" element={<DestinationPage lang="en-co" />} />
+        <Route path="/en-co/experiences/:experience" element={<ExperiencePage lang="en-co" />} />
+        <Route path="/en-co/packages/:package" element={<PackagePage lang="en-co" />} />
+        
+        {/* Multilingüe - English México */}
+        <Route path="/en-mx" element={<HomePage lang="en-mx" />} />
+        <Route path="/en-mx/destinations/:destination" element={<DestinationPage lang="en-mx" />} />
+        <Route path="/en-mx/experiences/:experience" element={<ExperiencePage lang="en-mx" />} />
+        <Route path="/en-mx/packages/:package" element={<PackagePage lang="en-mx" />} />
+        
+        {/* Blog EN */}
+        <Route path="/en/blog/:country" element={<BlogPage lang="en" />} />
+        <Route path="/en/blog/post/:slug" element={<BlogPostPage lang="en" />} />
+        
+        {/* Português Brasil */}
+        <Route path="/pt-br/ofertas/:offer" element={<OfferPage lang="pt-br" />} />
+        
+        {/* 404 - DEBE IR AL FINAL */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+
+**Configuración del servidor para SPA (CRÍTICO):**
+
+```javascript
+// server.js (crear si no existe)
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// CRÍTICO: Todas las rutas deben servir index.html para SPA
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Server running on http://0.0.0.0:${PORT}`);
+});
+```
+
+**Actualizar package.json:**
+
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "react-helmet-async": "^2.0.4"
+  }
+}
+```
+
+**Configurar .replit:**
+
+```toml
+run = "npm run build && npm start"
+
+[deployment]
+run = ["sh", "-c", "npm install && npm run generate-sitemap && npm run build && npm start"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+```
+
+***
+
+### ✅ TAREA 5: CREAR COMPONENTES BASE (30 min)
+
+**Estructura de carpetas:**
+```
+src/
+├── pages/
+│   ├── HomePage.jsx
+│   ├── DestinationPage.jsx
+│   ├── PackagePage.jsx
+│   ├── ExperiencePage.jsx
+│   ├── OfferPage.jsx
+│   ├── BlogPage.jsx
+│   ├── BlogPostPage.jsx
+│   ├── LegalPage.jsx
+│   └── NotFound.jsx
+├── components/
+│   ├── SEO.jsx
+│   └── Layout.jsx
+└── data/
+    └── content.js
+```
+
+**Componente SEO reutilizable:**
+
+```javascript
+// src/components/SEO.jsx
+import { Helmet } from 'react-helmet-async';
+
+export default function SEO({ 
+  title, 
+  description, 
+  canonical, 
+  lang = 'es',
+  type = 'website' 
+}) {
+  const fullTitle = `${title} | Trips Europa`;
+  
+  return (
+    <Helmet>
+      <html lang={lang} />
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={canonical} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:site_name" content="Trips Europa" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
+  );
+}
+```
+
+**Página de Destinos:**
+
+```javascript
+// src/pages/DestinationPage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { destinations } from '../data/content';
+
+export default function DestinationPage({ lang = 'es' }) {
+  const { destination } = useParams();
+  
+  // Normalizar nombre
+  const destName = destination.charAt(0).toUpperCase() + 
+                   destination.slice(1).replace(/-/g, ' ');
+  
+  const content = destinations[destination] || {
+    title: destName,
+    description: `Descubre ${destName} con Trips Europa`,
+    content: `Viaja a ${destName} y vive experiencias inolvidables.`
+  };
+  
+  const path = lang.startsWith('en') ? 'destinations' : 'destinos';
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}${path}/${destination}`;
+  
+  return (
+    <>
+      <SEO
+        title={content.title}
+        description={content.description}
+        canonical={canonical}
+        lang={lang}
+      />
+      
+      <div className="destination-page">
+        <h1>{content.title}</h1>
+        <p className="lead">{content.description}</p>
+        <div className="content">
+          {content.content}
+        </div>
+        <button className="cta-button">Reservar Ahora</button>
+      </div>
+    </>
+  );
+}
+```
+
+**Página de Paquetes:**
+
+```javascript
+// src/pages/PackagePage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function PackagePage({ lang = 'es' }) {
+  const { package: packageSlug } = useParams();
+  
+  const packages = {
+    'capitales-europeas': {
+      es: { title: 'Capitales Europeas', desc: 'Tour por las principales capitales' },
+      en: { title: 'European Capitals', desc: 'Tour of the main capitals' }
+    },
+    'europa-10-dias': {
+      es: { title: 'Europa en 10 Días', desc: 'Recorrido completo en 10 días' },
+      en: { title: 'Europe in 10 Days', desc: 'Complete tour in 10 days' }
+    },
+    'europa-15-dias': {
+      es: { title: 'Europa en 15 Días', desc: 'Gran tour de 15 días' },
+      en: { title: 'Europe in 15 Days', desc: 'Grand 15-day tour' }
+    },
+    'europa-21-dias': {
+      es: { title: 'Europa en 21 Días', desc: 'Tour completo de 21 días' },
+      en: { title: 'Europe in 21 Days', desc: 'Complete 21-day tour' }
+    },
+    'europa-7-dias': {
+      es: { title: 'Europa Express 7 Días', desc: 'Tour express de 7 días' },
+      en: { title: 'Europe Express 7 Days', desc: 'Express 7-day tour' }
+    },
+    'europa-clasica': {
+      es: { title: 'Europa Clásica', desc: 'Lo mejor de Europa clásica' },
+      en: { title: 'Classic Europe', desc: 'The best of classic Europe' }
+    },
+    'europa-express': {
+      es: { title: 'Europa Express', desc: 'Tour rápido por Europa' },
+      en: { title: 'Europe Express', desc: 'Quick tour of Europe' }
+    },
+    'europa-oriental': {
+      es: { title: 'Europa Oriental', desc: 'Descubre el Este europeo' },
+      en: { title: 'Eastern Europe', desc: 'Discover Eastern Europe' }
+    },
+    'familia-europa': {
+      es: { title: 'Europa en Familia', desc: 'Viaje perfecto para familias' },
+      en: { title: 'Family Europe', desc: 'Perfect family trip' }
+    },
+    'luna-de-miel': {
+      es: { title: 'Luna de Miel Europa', desc: 'Romance en Europa' },
+      en: { title: 'Europe Honeymoon', desc: 'Romance in Europe' }
+    },
+    'norte-europa': {
+      es: { title: 'Norte de Europa', desc: 'Escandinavia y países nórdicos' },
+      en: { title: 'Northern Europe', desc: 'Scandinavia and Nordic countries' }
+    },
+    'tour-mediterraeo': {
+      es: { title: 'Tour Mediterráneo', desc: 'Costa mediterránea' },
+      en: { title: 'Mediterranean Tour', desc: 'Mediterranean coast' }
+    }
+  };
+  
+  const isEnglish = lang.startsWith('en');
+  const pkg = packages[packageSlug]?.[isEnglish ? 'en' : 'es'] || {
+    title: packageSlug.replace(/-/g, ' ').toUpperCase(),
+    desc: 'Paquete turístico por Europa'
+  };
+  
+  const path = isEnglish ? 'packages' : 'paquetes';
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}${path}/${packageSlug}`;
+  
+  return (
+    <>
+      <SEO
+        title={pkg.title}
+        description={pkg.desc}
+        canonical={canonical}
+        lang={lang}
+      />
+      
+      <div className="package-page">
+        <h1>{pkg.title}</h1>
+        <p>{pkg.desc}</p>
+        <div className="package-info">
+          <p><strong>Duración:</strong> Variable</p>
+          <p><strong>Desde:</strong> $2,500 USD</p>
+        </div>
+        <button className="cta-button">Solicitar Cotización</button>
+      </div>
+    </>
+  );
+}
+```
+
+**Página de Experiencias:**
+
+```javascript
+// src/pages/ExperiencePage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function ExperiencePage({ lang = 'es' }) {
+  const { experience } = useParams();
+  
+  const experiences = {
+    'año-nuevo-europa': 'Año Nuevo en Europa',
+    'arte-cultura': 'Arte y Cultura Europea',
+    'aventura-naturaleza': '

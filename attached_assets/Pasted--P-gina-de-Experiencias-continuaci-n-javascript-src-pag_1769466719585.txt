@@ -1,0 +1,430 @@
+---
+
+**Página de Experiencias (continuación):**
+
+```javascript
+// src/pages/ExperiencePage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function ExperiencePage({ lang = 'es' }) {
+  const { experience } = useParams();
+  
+  const experiences = {
+    'año-nuevo-europa': {
+      es: 'Año Nuevo en Europa',
+      en: 'New Year in Europe'
+    },
+    'arte-cultura': {
+      es: 'Arte y Cultura Europea',
+      en: 'European Art & Culture'
+    },
+    'aventura-naturaleza': {
+      es: 'Aventura y Naturaleza',
+      en: 'Adventure & Nature'
+    },
+    'ciudades-historicas': {
+      es: 'Ciudades Históricas',
+      en: 'Historic Cities'
+    },
+    'gastronomia-europa': {
+      es: 'Gastronomía Europea',
+      en: 'European Gastronomy'
+    },
+    'invierno-europa': {
+      es: 'Invierno en Europa',
+      en: 'Winter in Europe'
+    },
+    'navidad-europa': {
+      es: 'Navidad en Europa',
+      en: 'Christmas in Europe'
+    },
+    'otono-europa': {
+      es: 'Otoño en Europa',
+      en: 'Autumn in Europe'
+    },
+    'primavera-europa': {
+      es: 'Primavera en Europa',
+      en: 'Spring in Europe'
+    },
+    'verano-europa': {
+      es: 'Verano en Europa',
+      en: 'Summer in Europe'
+    }
+  };
+  
+  const isEnglish = lang.startsWith('en');
+  const title = experiences[experience]?.[isEnglish ? 'en' : 'es'] || 
+                experience.replace(/-/g, ' ').toUpperCase();
+  
+  const path = isEnglish ? 'experiences' : 'experiencias';
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}${path}/${experience}`;
+  
+  return (
+    <>
+      <SEO
+        title={title}
+        description={`Descubre ${title} con Trips Europa`}
+        canonical={canonical}
+        lang={lang}
+      />
+      
+      <div className="experience-page">
+        <h1>{title}</h1>
+        <p>Vive experiencias únicas e inolvidables en Europa</p>
+        <div className="experience-content">
+          <p>Descubre lo mejor de Europa a través de {title.toLowerCase()}.</p>
+        </div>
+        <button className="cta-button">Ver Paquetes</button>
+      </div>
+    </>
+  );
+}
+```
+
+**Página de Ofertas:**
+
+```javascript
+// src/pages/OfferPage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function OfferPage({ lang = 'es' }) {
+  const { offer } = useParams();
+  
+  const offers = {
+    'black-friday': {
+      title: 'Black Friday - Viajes a Europa',
+      discount: '50%',
+      description: 'Aprovecha nuestras ofertas de Black Friday en viajes a Europa'
+    },
+    'cyber-monday': {
+      title: 'Cyber Monday - Ofertas Especiales',
+      discount: '45%',
+      description: 'Descuentos exclusivos de Cyber Monday en tours europeos'
+    },
+    'ofertas-invierno': {
+      title: 'Ofertas de Invierno',
+      discount: '30%',
+      description: 'Descubre Europa en invierno con precios especiales'
+    },
+    'ofertas-ultima-hora': {
+      title: 'Ofertas de Última Hora',
+      discount: '40%',
+      description: 'Aprovecha nuestras ofertas flash para viajar a Europa'
+    },
+    'ofertas-verano': {
+      title: 'Ofertas de Verano',
+      discount: '35%',
+      description: 'Viaja a Europa en verano con descuentos increíbles'
+    },
+    'promociones-especiales': {
+      title: 'Promociones Especiales',
+      discount: '25%',
+      description: 'Promociones exclusivas para ti en viajes a Europa'
+    }
+  };
+  
+  const offerData = offers[offer] || {
+    title: offer.replace(/-/g, ' ').toUpperCase(),
+    discount: '30%',
+    description: 'Oferta especial en viajes a Europa'
+  };
+  
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}ofertas/${offer}`;
+  
+  return (
+    <>
+      <SEO
+        title={offerData.title}
+        description={offerData.description}
+        canonical={canonical}
+        lang={lang}
+      />
+      
+      <div className="offer-page">
+        <div className="offer-badge">Hasta {offerData.discount} OFF</div>
+        <h1>{offerData.title}</h1>
+        <p className="lead">{offerData.description}</p>
+        <div className="offer-cta">
+          <button className="cta-button">Ver Paquetes en Oferta</button>
+        </div>
+      </div>
+    </>
+  );
+}
+```
+
+**Página de Blog:**
+
+```javascript
+// src/pages/BlogPage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function BlogPage({ lang = 'es' }) {
+  const { country } = useParams();
+  
+  const countries = {
+    'argentina': 'Argentina',
+    'brasil': 'Brasil',
+    'caribe': 'Caribe',
+    'colombia': 'Colombia',
+    'costa-rica': 'Costa Rica',
+    'dominicana': 'República Dominicana',
+    'mexico': 'México',
+    'panama': 'Panamá',
+    'peru': 'Perú'
+  };
+  
+  const countryName = countries[country] || country;
+  const title = `Viajes a Europa desde ${countryName}`;
+  
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}blog/${country}`;
+  
+  return (
+    <>
+      <SEO
+        title={title}
+        description={`Guía completa de viajes a Europa desde ${countryName}. Tips, recomendaciones y paquetes especiales.`}
+        canonical={canonical}
+        lang={lang}
+        type="article"
+      />
+      
+      <article className="blog-page">
+        <h1>{title}</h1>
+        <p className="lead">
+          Descubre todo lo que necesitas saber para viajar a Europa desde {countryName}.
+        </p>
+        <div className="blog-content">
+          <h2>Información para viajeros de {countryName}</h2>
+          <p>Europa te espera con experiencias inolvidables.</p>
+          <ul>
+            <li>Requisitos de visa y documentación</li>
+            <li>Mejores temporadas para viajar</li>
+            <li>Vuelos y conexiones</li>
+            <li>Paquetes recomendados</li>
+          </ul>
+        </div>
+      </article>
+    </>
+  );
+}
+```
+
+**Página de Blog Post:**
+
+```javascript
+// src/pages/BlogPostPage.jsx
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function BlogPostPage({ lang = 'es' }) {
+  const { slug } = useParams();
+  
+  const posts = {
+    'alojamiento-europa': {
+      title: 'Guía de Alojamiento en Europa',
+      description: 'Todo sobre dónde hospedarse en Europa'
+    },
+    'ciudades-romanticas-europa': {
+      title: 'Las Ciudades Más Románticas de Europa',
+      description: 'Destinos perfectos para parejas'
+    },
+    'documentacion-viaje-europa': {
+      title: 'Documentación para Viajar a Europa',
+      description: 'Requisitos y documentos necesarios'
+    },
+    'etias-latinoamericanos': {
+      title: 'ETIAS para Latinoamericanos',
+      description: 'Todo sobre el nuevo sistema ETIAS'
+    },
+    'europa-en-15-dias': {
+      title: 'Cómo Recorrer Europa en 15 Días',
+      description: 'Itinerario completo por Europa'
+    },
+    'gastronomia-europea': {
+      title: 'Guía de Gastronomía Europea',
+      description: 'Platos típicos y restaurantes imperdibles'
+    },
+    'guia-viaje-paris-2026': {
+      title: 'Guía Completa de París 2026',
+      description: 'Todo para tu viaje a París'
+    },
+    'luna-miel-europa': {
+      title: 'Luna de Miel en Europa',
+      description: 'Destinos románticos para tu luna de miel'
+    },
+    'mejores-destinos-europa-presupuesto': {
+      title: 'Europa con Presupuesto Limitado',
+      description: 'Destinos económicos en Europa'
+    },
+    'seguro-viaje-europa': {
+      title: 'Seguro de Viaje para Europa',
+      description: 'Guía completa de seguros de viaje'
+    },
+    'temporada-alta-baja-europa': {
+      title: 'Temporadas Alta y Baja en Europa',
+      description: 'Cuándo viajar según tu presupuesto'
+    },
+    'trenes-europa': {
+      title: 'Viajar en Tren por Europa',
+      description: 'Guía de Eurail y trenes europeos'
+    },
+    'viaje-familia-europa': {
+      title: 'Viajar a Europa en Familia',
+      description: 'Tips para viajar con niños'
+    },
+    'visado-schengen': {
+      title: 'Visa Schengen: Guía Completa',
+      description: 'Cómo tramitar tu visa Schengen'
+    },
+    'vuelos-baratos-europa': {
+      title: 'Cómo Encontrar Vuelos Baratos a Europa',
+      description: 'Tips para ahorrar en vuelos'
+    }
+  };
+  
+  const post = posts[slug] || {
+    title: slug.replace(/-/g, ' ').toUpperCase(),
+    description: 'Artículo del blog Trips Europa'
+  };
+  
+  const canonical = `https://tripseuropa.com/${lang !== 'es' ? lang + '/' : ''}blog/post/${slug}`;
+  
+  return (
+    <>
+      <SEO
+        title={post.title}
+        description={post.description}
+        canonical={canonical}
+        lang={lang}
+        type="article"
+      />
+      
+      <article className="blog-post">
+        <h1>{post.title}</h1>
+        <p className="lead">{post.description}</p>
+        <div className="post-content">
+          <p>Contenido del artículo sobre {post.title.toLowerCase()}.</p>
+        </div>
+      </article>
+    </>
+  );
+}
+```
+
+**Página Legal:**
+
+```javascript
+// src/pages/LegalPage.jsx
+import SEO from '../components/SEO';
+
+export default function LegalPage({ page = 'terms' }) {
+  const content = {
+    terms: {
+      title: 'Condiciones de Venta',
+      description: 'Términos y condiciones de Trips Europa',
+      url: 'condiciones-venta'
+    },
+    cookies: {
+      title: 'Política de Cookies',
+      description: 'Política de cookies de Trips Europa',
+      url: 'cookies'
+    }
+  };
+  
+  const pageContent = content[page];
+  
+  return (
+    <>
+      <SEO
+        title={pageContent.title}
+        description={pageContent.description}
+        canonical={`https://tripseuropa.com/${pageContent.url}`}
+      />
+      
+      <div className="legal-page">
+        <h1>{pageContent.title}</h1>
+        <div className="legal-content">
+          <p>Última actualización: 26 de enero de 2026</p>
+          <p>{pageContent.description}</p>
+        </div>
+      </div>
+    </>
+  );
+}
+```
+
+**Página 404:**
+
+```javascript
+// src/pages/NotFound.jsx
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+
+export default function NotFound() {
+  return (
+    <>
+      <SEO
+        title="Página No Encontrada - 404"
+        description="La página que buscas no existe"
+        canonical="https://tripseuropa.com/404"
+      />
+      
+      <div className="not-found">
+        <h1>404 - Página No Encontrada</h1>
+        <p>Lo sentimos, la página que buscas no existe.</p>
+        <Link to="/" className="cta-button">Volver al Inicio</Link>
+      </div>
+    </>
+  );
+}
+```
+
+***
+
+### ✅ TAREA 6: META TAGS SEO (15 min)
+
+**Archivo principal index.html:**
+
+```html
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Base -->
+  <title>Trips Europa - Viajes y Paquetes Turísticos a Europa</title>
+  <meta name="description" content="Descubre Europa con nuestros paquetes turísticos. Tours, destinos, experiencias y ofertas especiales para latinoamericanos." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tripseuropa.com/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Trips Europa" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Site Verification (si tienes) -->
+  <meta name="google-site-verification" content="TU_CODIGO_AQUI" />
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+```
+
+***
+
+### ✅ TAREA 7: TESTING Y VALIDACIÓN (20 min)
+
+**Script de testing:**
+
+```javascript
+// scripts/test-urls.js
+const urls = 
