@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 
@@ -212,15 +211,6 @@ export function HeroCarousel() {
           </div>
         </div>
       </div>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/50 transition-colors z-30"
-        aria-label="Next slide"
-        data-testid="button-carousel-next"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-30" data-testid="carousel-dots">
         {CAROUSEL_SLIDES.map((_, index) => (
