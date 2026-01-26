@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 
@@ -79,10 +79,6 @@ export function HeroCarousel() {
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-  }, []);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + CAROUSEL_SLIDES.length) % CAROUSEL_SLIDES.length);
   }, []);
 
   const goToSlide = (index: number) => {
@@ -216,15 +212,6 @@ export function HeroCarousel() {
           </div>
         </div>
       </div>
-
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/50 transition-colors z-30"
-        aria-label="Previous slide"
-        data-testid="button-carousel-prev"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
 
       <button
         onClick={nextSlide}
