@@ -1,0 +1,346 @@
+Continúo con el prompt completo desde Schema Article:
+
+***
+
+### 3.2 SCHEMA ARTICLE (CONTINUACIÓN)
+
+```html
+  "articleSection": "Guías de Viaje",
+  "wordCount": 1200,
+  "keywords": "[palabra clave 1], [palabra clave 2], [palabra clave 3]",
+  "about": {
+    "@type": "Thing",
+    "name": "[Tema principal del artículo]"
+  }
+}
+</script>
+```
+
+***
+
+### 3.3 SCHEMA BREADCRUMB (TODAS LAS PÁGINAS)
+
+```html
+<!-- Agregar en TODAS las páginas después del header -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tripseuropa.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "[Categoría]",
+      "item": "https://tripseuropa.co/[categoria]"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "[Título de la página]",
+      "item": "https://tripseuropa.co/[categoria]/[slug]"
+    }
+  ]
+}
+</script>
+```
+
+**Ejemplos específicos:**
+
+```javascript
+// Para: /blog/alojamiento-europa
+{
+  "itemListElement": [
+    {"position": 1, "name": "Inicio", "item": "https://tripseuropa.co"},
+    {"position": 2, "name": "Blog", "item": "https://tripseuropa.co/blog"},
+    {"position": 3, "name": "Alojamiento en Europa", "item": "https://tripseuropa.co/blog/alojamiento-europa"}
+  ]
+}
+
+// Para: /destinos/francia
+{
+  "itemListElement": [
+    {"position": 1, "name": "Inicio", "item": "https://tripseuropa.co"},
+    {"position": 2, "name": "Destinos", "item": "https://tripseuropa.co/destinos"},
+    {"position": 3, "name": "Francia", "item": "https://tripseuropa.co/destinos/francia"}
+  ]
+}
+
+// Para: /es-pe/paquetes/europa-15-dias
+{
+  "itemListElement": [
+    {"position": 1, "name": "Inicio", "item": "https://tripseuropa.co"},
+    {"position": 2, "name": "Paquetes", "item": "https://tripseuropa.co/paquetes"},
+    {"position": 3, "name": "Europa 15 Días", "item": "https://tripseuropa.co/es-pe/paquetes/europa-15-dias"}
+  ]
+}
+```
+
+***
+
+### 3.4 SCHEMA FAQ (PARA ARTÍCULOS CON PREGUNTAS FRECUENTES)
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la mejor época para viajar a Europa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La mejor época para viajar a Europa es durante la primavera (abril-junio) y otoño (septiembre-octubre). El clima es agradable, hay menos turistas que en verano y los precios son más accesibles. Sin embargo, cada estación tiene sus ventajas: verano ofrece días más largos y festivales, mientras que invierno es ideal para mercados navideños y deportes de nieve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito visa para viajar a Europa desde Latinoamérica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu país de origen. Ciudadanos de Argentina, Chile, México, Uruguay, Venezuela, Brasil, Colombia, Perú y otros países latinoamericanos NO necesitan visa para estancias turísticas de hasta 90 días en el espacio Schengen. Sin embargo, a partir de 2025 necesitarán autorización ETIAS. Países como Bolivia, Ecuador y República Dominicana sí requieren visa Schengen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dinero necesito para un viaje de 15 días a Europa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para un viaje de 15 días a Europa, el presupuesto recomendado varía según tu estilo: Económico: $2,000-3,000 USD (hostales, comida económica, transporte público). Medio: $4,000-6,000 USD (hoteles 3-4 estrellas, restaurantes, tours). Premium: $8,000+ USD (hoteles 5 estrellas, experiencias exclusivas). Esto incluye alojamiento, comidas, transporte local, entradas y actividades. Los vuelos internacionales se calculan aparte."
+      }
+    }
+  ]
+}
+</script>
+```
+
+**Implementar en artículos:**
+- Todos los artículos de blog con sección de FAQ
+- Páginas de visa y documentación
+- Guías de destinos
+- Mínimo 5 preguntas por página
+
+***
+
+### 3.5 SCHEMA TOURIST DESTINATION (PÁGINAS DE DESTINOS)
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  "name": "[Nombre del destino]",
+  "description": "[Descripción atractiva del destino]",
+  "url": "https://tripseuropa.co/destinos/[slug]",
+  "image": "https://tripseuropa.co/images/destinos/[destino].jpg",
+  "touristType": "Turismo cultural, familiar, romántico",
+  "includesAttraction": [
+    {
+      "@type": "TouristAttraction",
+      "name": "[Atracción principal 1]",
+      "description": "[Descripción de la atracción]"
+    },
+    {
+      "@type": "TouristAttraction",
+      "name": "[Atracción principal 2]",
+      "description": "[Descripción de la atracción]"
+    }
+  ]
+}
+</script>
+```
+
+***
+
+### 3.6 SCHEMA PRODUCT (PÁGINAS DE PAQUETES TURÍSTICOS)
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "[Nombre del paquete turístico]",
+  "description": "[Descripción completa del paquete]",
+  "image": "https://tripseuropa.co/images/paquetes/[paquete].jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "Trips Europa"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://tripseuropa.co/paquetes/[slug]",
+    "priceCurrency": "USD",
+    "price": "1899",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Trips Europa"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "156"
+  }
+}
+</script>
+```
+
+***
+
+## 🟢 FASE 4: OPTIMIZACIÓN DE ENLACES INTERNOS
+
+### 4.1 ESTRATEGIA DE ENLACES INTERNOS
+
+**OBJETIVO:** Crear una red sólida de enlaces que distribuya PageRank y ayude a Google a descubrir e indexar contenido.
+
+**REGLAS DE ENLAZADO:**
+
+```
+DESDE LA HOME (https://tripseuropa.co):
+- Enlazar a las 10 categorías principales de destinos
+- Enlazar a las 5 secciones principales (Destinos, Paquetes, Blog, Servicios, Herramientas)
+- Enlazar a los 3 artículos de blog más importantes
+- Total mínimo: 20 enlaces internos desde home
+
+DESDE PÁGINAS DE BLOG:
+- Enlaces a 3-5 artículos relacionados (al final del artículo)
+- Enlaces contextuales a 2-3 destinos mencionados (dentro del contenido)
+- Enlaces a 1-2 paquetes relevantes (en sección CTA)
+- Enlace de vuelta a página índice del blog
+- Total mínimo: 7 enlaces internos por artículo
+
+DESDE PÁGINAS DE DESTINOS:
+- Enlaces a otros destinos cercanos (mínimo 3)
+- Enlaces a paquetes que incluyan ese destino (mínimo 2)
+- Enlaces a artículos de blog relacionados (mínimo 3)
+- Enlace a página de servicios (visas, seguros)
+- Total mínimo: 8 enlaces internos por destino
+
+DESDE PÁGINAS DE PAQUETES:
+- Enlaces a destinos incluidos en el paquete (todos)
+- Enlaces a artículos de blog sobre esos destinos (mínimo 2)
+- Enlaces a paquetes similares (mínimo 3)
+- Total mínimo: 6 enlaces internos por paquete
+```
+
+***
+
+### 4.2 ANCHOR TEXT OPTIMIZATION
+
+**BUENAS PRÁCTICAS:**
+
+✅ **HACER:**
+```html
+<!-- Anchor text descriptivo y natural -->
+<a href="/destinos/paris">mejores atracciones de París</a>
+<a href="/blog/visa-schengen">requisitos para la visa Schengen</a>
+<a href="/paquetes/europa-clasica">paquete Europa Clásica de 15 días</a>
+```
+
+❌ **NO HACER:**
+```html
+<!-- Anchor text genérico -->
+<a href="/destinos/paris">haz clic aquí</a>
+<a href="/blog/visa-schengen">leer más</a>
+<a href="/paquetes/europa-clasica">ver</a>
+```
+
+***
+
+### 4.3 IMPLEMENTAR SECCIÓN "ARTÍCULOS RELACIONADOS"
+
+**En cada artículo de blog, agregar al final:**
+
+```html
+<section class="related-articles">
+    <h2>Artículos Relacionados que Te Pueden Interesar</h2>
+    <div class="articles-grid">
+        <article class="related-card">
+            <img src="/images/blog/thumb-[articulo1].jpg" alt="[Título artículo 1]" loading="lazy">
+            <h3><a href="/blog/[slug-articulo-1]">[Título completo del artículo relacionado 1]</a></h3>
+            <p>[Breve descripción de 80-100 caracteres]</p>
+        </article>
+        
+        <article class="related-card">
+            <img src="/images/blog/thumb-[articulo2].jpg" alt="[Título artículo 2]" loading="lazy">
+            <h3><a href="/blog/[slug-articulo-2]">[Título completo del artículo relacionado 2]</a></h3>
+            <p>[Breve descripción de 80-100 caracteres]</p>
+        </article>
+        
+        <article class="related-card">
+            <img src="/images/blog/thumb-[articulo3].jpg" alt="[Título artículo 3]" loading="lazy">
+            <h3><a href="/blog/[slug-articulo-3]">[Título completo del artículo relacionado 3]</a></h3>
+            <p>[Breve descripción de 80-100 caracteres]</p>
+        </article>
+    </div>
+</section>
+
+<section class="related-destinations">
+    <h2>Destinos Mencionados en Este Artículo</h2>
+    <ul class="destination-list">
+        <li><a href="/destinos/[destino-1]">🇫🇷 [Nombre Destino 1]</a></li>
+        <li><a href="/destinos/[destino-2]">🇮🇹 [Nombre Destino 2]</a></li>
+        <li><a href="/destinos/[destino-3]">🇪🇸 [Nombre Destino 3]</a></li>
+    </ul>
+</section>
+
+<section class="related-packages">
+    <h2>Paquetes Recomendados</h2>
+    <div class="packages-grid">
+        <div class="package-card">
+            <img src="/images/paquetes/[paquete1].jpg" alt="[Nombre paquete 1]" loading="lazy">
+            <h3><a href="/paquetes/[slug-paquete-1]">[Nombre completo del paquete 1]</a></h3>
+            <p class="price">Desde $1,899 USD</p>
+            <p class="duration">15 días / 13 noches</p>
+        </div>
+        
+        <div class="package-card">
+            <img src="/images/paquetes/[paquete2].jpg" alt="[Nombre paquete 2]" loading="lazy">
+            <h3><a href="/paquetes/[slug-paquete-2]">[Nombre completo del paquete 2]</a></h3>
+            <p class="price">Desde $2,399 USD</p>
+            <p class="duration">19 días / 17 noches</p>
+        </div>
+    </div>
+</section>
+```
+
+***
+
+## 🔵 FASE 5: CORRECCIÓN DE ERRORES ESPECÍFICOS
+
+### 5.1 REPARAR SOFT 404 (2 PÁGINAS)
+
+**URL 1: /blog/guia-viaje-paris-2026**
+
+**PROBLEMA:** Página parece vacía o con contenido insuficiente.
+
+**SOLUCIÓN:**
+```
+CONTENIDO MÍNIMO REQUERIDO: 1,500 palabras
+
+Estructura obligatoria:
+H1: Guía Completa para Viajar a París en 2026: Qué Ver, Hacer y Comer
+
+Secciones requeridas:
+1. Introducción (150 palabras)
+2. Mejor época para visitar París 2026 (200 palabras)
+3. Top 15 Atracciones Imperdibles de París (400 palabras)
+   - Torre Eiffel
+   - Museo del Louvre
+   - Arco del Triunfo
+   - Notre-Dame
+   - Sacré-Cœur
+   - Campos Elíseos
+   - Versalles
+   - + 8 más
+4. Dónde Alojarse en París por Barrio (300 palabras)
+5. Mejores Restaurantes y Cafés (200 palabras)
+6.

@@ -11,6 +11,7 @@ import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
+import { BreadcrumbSchema } from "@/components/SEOSchemas";
 
 function parseSpanishDate(dateStr: string): string {
   const months: Record<string, string> = {
@@ -45,7 +46,7 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     "headline": title,
     "description": description,
     "image": image,
-    "url": `https://tripseuropa.com/blog/post/${slug}`,
+    "url": `https://tripseuropa.co/blog/post/${slug}`,
     "datePublished": isoDate,
     "dateModified": isoDate,
     "author": hasPersonAuthor ? {
@@ -54,19 +55,19 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     } : {
       "@type": "Organization",
       "name": "Trips Europa",
-      "url": "https://tripseuropa.com"
+      "url": "https://tripseuropa.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Trips Europa",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://tripseuropa.com/favicon.png"
+        "url": "https://tripseuropa.co/favicon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://tripseuropa.com/blog/post/${slug}`
+      "@id": `https://tripseuropa.co/blog/post/${slug}`
     }
   };
   
@@ -107,8 +108,8 @@ export default function BlogPost() {
     );
   }
 
-  const title = post.title[language] || post.title.es;
-  const excerpt = post.excerpt[language] || post.excerpt.es;
+  const title = (post.title as Record<string, string>)[language] || post.title.es;
+  const excerpt = (post.excerpt as Record<string, string>)[language] || post.excerpt.es;
   const postSlug = fullPost?.slug || post.id;
   const isoDate = parseSpanishDate(post.date);
 
@@ -118,7 +119,7 @@ export default function BlogPost() {
         title={title}
         description={excerpt}
         keywords={post.keywords.join(", ")}
-        url={`https://tripseuropa.com/blog/post/${postSlug}`}
+        url={`https://tripseuropa.co/blog/post/${postSlug}`}
         image={post.image}
         type="article"
         publishedTime={isoDate}
@@ -133,6 +134,13 @@ export default function BlogPost() {
         date={post.date}
         author={fullPost?.author}
       />
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", url: "https://tripseuropa.co" },
+          { name: "Blog", url: "https://tripseuropa.co/blog" },
+          { name: title, url: `https://tripseuropa.co/blog/post/${postSlug}` }
+        ]}
+      />
       <Header />
       <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
@@ -145,7 +153,7 @@ export default function BlogPost() {
             </Link>
             
             <Badge variant="secondary" className="mb-4" data-testid="badge-post-category">
-              {post.categoryLabel[language] || post.categoryLabel.es}
+              {(post.categoryLabel as Record<string, string>)[language] || post.categoryLabel.es}
             </Badge>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-accent mb-4 leading-tight" data-testid="text-post-title">

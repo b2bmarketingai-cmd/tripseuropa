@@ -77,6 +77,7 @@ const Insurance = lazy(() => import("@/pages/services/Insurance"));
 const CountryLanding = lazy(() => import("@/pages/CountryLanding"));
 const CondicionesVenta = lazy(() => import("@/pages/CondicionesVenta"));
 const CookiesPage = lazy(() => import("@/pages/Cookies"));
+const TermsConditions = lazy(() => import("@/pages/TermsConditions"));
 const ExperiencePage = lazy(() => import("@/pages/ExperiencePage"));
 const PackagePage = lazy(() => import("@/pages/PackagePage"));
 const OfferPage = lazy(() => import("@/pages/OfferPage"));
@@ -149,6 +150,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/condiciones-venta" component={CondicionesVenta} />
       <Route path="/cookies" component={CookiesPage} />
+      <Route path="/terminos-condiciones" component={TermsConditions} />
       
       {/* Experience, Package, Offer Pages */}
       <Route path="/experiencias/:slug" component={ExperiencePage} />

@@ -1,0 +1,327 @@
+Perfecto, continúo con el prompt completo desde la Fase 2:
+
+***
+
+# 🛠️ PROMPT COMPLETO PARA REPLIT AGENT - CONTINUACIÓN
+
+## 🟡 FASE 2: MEJORA DE CALIDAD DE CONTENIDO (CONTINUACIÓN)
+
+### 2.1 OPTIMIZACIÓN DE PÁGINAS DE BLOG (214 PÁGINAS) - CONTINUACIÓN
+
+**ESTRUCTURA DE CONTENIDO MÍNIMA REQUERIDA:**
+
+```html
+        <section class="introduccion">
+            <p class="lead">[Párrafo introductorio atractivo de 100-150 palabras que enganche al lector]</p>
+            
+            <img src="/images/blog/[imagen-principal].jpg" 
+                 alt="[Descripción detallada de la imagen para SEO]" 
+                 width="1200" 
+                 height="630"
+                 loading="lazy" />
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL: MÍNIMO 800 PALABRAS -->
+        <section>
+            <h2>[Subtítulo relevante 1 - keyword principal]</h2>
+            <p>[Mínimo 200 palabras de contenido útil, específico y original]</p>
+            <p>[Continuar desarrollando el tema con información práctica]</p>
+            
+            <h3>[Sub-subtítulo específico]</h3>
+            <ul>
+                <li>[Punto específico con información útil]</li>
+                <li>[Punto específico con información útil]</li>
+                <li>[Punto específico con información útil]</li>
+                <li>[Mínimo 5-7 puntos por lista]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>[Subtítulo relevante 2 - keyword secundaria]</h2>
+            <p>[Mínimo 200 palabras adicionales de contenido único]</p>
+            
+            <img src="/images/blog/[imagen-secundaria].jpg" 
+                 alt="[Descripción detallada]" 
+                 width="800" 
+                 height="600"
+                 loading="lazy" />
+            
+            <h3>[Sub-subtítulo específico 2]</h3>
+            <p>[Continuar con información detallada y práctica]</p>
+        </section>
+
+        <section>
+            <h2>[Subtítulo relevante 3 - keyword terciaria]</h2>
+            <p>[Mínimo 200 palabras más de contenido valioso]</p>
+            
+            <h3>[Sub-subtítulo práctico]</h3>
+            <ol>
+                <li><strong>[Paso 1]:</strong> [Explicación detallada]</li>
+                <li><strong>[Paso 2]:</strong> [Explicación detallada]</li>
+                <li><strong>[Paso 3]:</strong> [Explicación detallada]</li>
+            </ol>
+        </section>
+
+        <section class="consejo-experto">
+            <h2>💡 Consejos de Expertos</h2>
+            <blockquote>
+                <p>[Consejo valioso específico del tema, mínimo 100 palabras]</p>
+            </blockquote>
+        </section>
+
+        <section class="enlaces-relacionados">
+            <h2>Artículos Relacionados</h2>
+            <ul>
+                <li><a href="/blog/[articulo-relacionado-1]">[Título artículo relacionado 1]</a></li>
+                <li><a href="/blog/[articulo-relacionado-2]">[Título artículo relacionado 2]</a></li>
+                <li><a href="/blog/[articulo-relacionado-3]">[Título artículo relacionado 3]</a></li>
+                <li><a href="/destinos/[destino-relacionado]">[Título destino relacionado]</a></li>
+            </ul>
+        </section>
+
+        <section class="cta">
+            <h2>¿Listo para tu viaje a Europa?</h2>
+            <p>[Call to action específico del tema del artículo]</p>
+            <a href="/paquetes" class="btn-primary">Ver Paquetes Disponibles</a>
+            <a href="/travel-assistant" class="btn-secondary">Consultar con Sofia</a>
+        </section>
+
+        <footer class="article-footer">
+            <p><strong>Última actualización:</strong> 26 de enero de 2026</p>
+            <div class="social-share">
+                <p>Compartir:</p>
+                <!-- Botones de redes sociales -->
+            </div>
+        </footer>
+    </article>
+</body>
+</html>
+```
+
+***
+
+### 2.2 ESPECIFICACIONES DE CONTENIDO POR ARTÍCULO
+
+**REQUISITOS MÍNIMOS OBLIGATORIOS:**
+
+✅ **Longitud de contenido:**
+- Mínimo: 800 palabras de contenido único
+- Recomendado: 1200-1500 palabras
+- Para guías completas: 2000+ palabras
+
+✅ **Estructura de encabezados:**
+- 1 título H1 único (solo uno por página)
+- Mínimo 3 encabezados H2
+- Mínimo 2 encabezados H3 por cada H2
+- Jerarquía correcta: H1 > H2 > H3 (nunca saltar niveles)
+
+✅ **Elementos multimedia:**
+- Mínimo 3 imágenes optimizadas
+- Todas con atributo alt descriptivo único
+- Formato WebP o JPG optimizado
+- Tamaño máximo: 200KB por imagen
+- Dimensiones recomendadas: 1200x675px (16:9)
+- Atributo loading="lazy" en todas excepto primera
+
+✅ **Enlaces internos:**
+- Mínimo 5 enlaces a otras páginas del sitio
+- Enlaces contextuales (dentro del contenido)
+- Anchor text descriptivo y variado
+- Enlazar a: otros artículos, destinos, paquetes, servicios
+
+✅ **Meta información:**
+- Title tag: 50-60 caracteres, incluir palabra clave principal
+- Meta description: 150-160 caracteres, incluir call-to-action
+- Ambos únicos, sin duplicados en todo el sitio
+
+***
+
+### 2.3 PLANTILLA DE CONTENIDO PARA ARTÍCULOS ESPECÍFICOS
+
+**PARA ARTÍCULO: "Alojamiento en Europa"**
+```
+Título: Dónde Alojarse en Europa: Guía Completa 2026 | Trips Europa
+Meta: Descubre las mejores opciones de alojamiento en Europa: hoteles, apartamentos, hostales. Precios, zonas recomendadas y consejos de expertos. ¡Reserva ya!
+
+H1: Guía Completa de Alojamiento en Europa 2026
+H2: Tipos de Alojamiento en Europa
+  H3: Hoteles: Desde Económicos hasta Lujo
+  H3: Apartamentos y Airbnb: Ventajas y Desventajas
+  H3: Hostales: Opción Económica para Jóvenes
+H2: Mejores Zonas para Alojarse por Ciudad
+  H3: París: Dónde Hospedarse por Barrio
+  H3: Roma: Las Mejores Zonas Turísticas
+  H3: Barcelona: Guía de Barrios Recomendados
+H2: Precios Promedio de Alojamiento en Europa
+  H3: Temporada Alta vs Temporada Baja
+  H3: Presupuesto Diario Recomendado por País
+H2: Consejos para Reservar Alojamiento en Europa
+  H3: Mejor Época para Reservar
+  H3: Plataformas Recomendadas
+  H3: Errores Comunes a Evitar
+H2: Servicios que Debes Buscar en tu Alojamiento
+
+Contenido: 1,200+ palabras
+Imágenes: 5 (hoteles europeos, apartamentos, ubicaciones)
+Enlaces internos: 8 (destinos, paquetes, guía de viaje)
+```
+
+***
+
+**PARA ARTÍCULO: "Ciudades Románticas de Europa"**
+```
+Título: 15 Ciudades Más Románticas de Europa para Parejas 2026 | Trips Europa
+Meta: Las ciudades más románticas de Europa para tu luna de miel o escapada romántica. París, Venecia, Praga y más. Paquetes especiales para parejas.
+
+H1: Las 15 Ciudades Más Románticas de Europa
+H2: Top 5 Destinos Románticos Imperdibles
+  H3: París: La Ciudad del Amor
+  H3: Venecia: Romance en los Canales
+  H3: Praga: Cuento de Hadas Medieval
+H2: Ciudades Románticas Menos Conocidas
+  H3: Sintra, Portugal: Palacios de Ensueño
+  H3: Bruges, Bélgica: Encanto Medieval
+  H3: Santorini, Grecia: Atardeceres Únicos
+H2: Actividades Románticas en Europa
+  H3: Cenas con Vista
+  H3: Paseos en Góndola y Barco
+  H3: Miradores Imperdibles
+H2: Mejor Época para Viajar en Pareja
+H2: Paquetes Románticos Especiales de Trips Europa
+
+Contenido: 1,500+ palabras
+Imágenes: 8 (una por ciudad destacada)
+Enlaces internos: 10 (a cada destino mencionado, paquetes románticos)
+```
+
+***
+
+### 2.4 CONTENIDO PARA PÁGINAS "RASTREADAS SIN INDEXAR" (8 PÁGINAS)
+
+**URL: /es-pa/visa-schengen-panamenos**
+```
+PROBLEMA ACTUAL: Contenido insuficiente o genérico
+
+SOLUCIÓN REQUERIDA:
+- Título: Visa Schengen para Panameños: Guía Completa 2026
+- Meta: Todo sobre la visa Schengen para panameños: requisitos, documentos, proceso paso a paso, costos y tiempos. Agenda tu cita hoy.
+- Contenido mínimo: 1,200 palabras
+- Incluir:
+  * Requisitos específicos para ciudadanos panameños
+  * Lista completa de documentos necesarios
+  * Proceso paso a paso con imágenes
+  * Formulario de solicitud explicado
+  * Costos actualizados 2026
+  * Tiempos de procesamiento
+  * Consejos para aprobar la visa
+  * Preguntas frecuentes (mínimo 10)
+  * Enlace a servicio de asesoría de Trips Europa
+- Imágenes: 6 (pasaporte, formulario, embajada, documentos)
+- Schema FAQ markup para preguntas frecuentes
+```
+
+**URL: /cities/santorini**
+```
+PROBLEMA ACTUAL: Contenido delgado
+
+SOLUCIÓN REQUERIDA:
+- Título: Santorini: Guía Completa de Viaje 2026 | Qué Ver y Hacer
+- Meta: Descubre Santorini: mejores playas, pueblos, hoteles, restaurantes, qué ver y hacer. Guía completa con precios, mapa y consejos de expertos.
+- Contenido mínimo: 1,500 palabras
+- Incluir:
+  * Historia de Santorini
+  * Mejores pueblos (Oia, Fira, Imerovigli)
+  * Top 10 playas de Santorini
+  * Mejores hoteles por presupuesto
+  * Restaurantes recomendados
+  * Actividades imperdibles
+  * Mejor época para visitar
+  * Cómo llegar desde Atenas
+  * Presupuesto diario recomendado
+  * Itinerario sugerido 3-5 días
+- Imágenes: 10 (calles, playas, atardeceres, iglesias)
+- Enlaces internos: 5 (paquetes a Grecia, otros destinos griegos)
+- Schema TouristAttraction para lugares destacados
+```
+
+***
+
+## 🟠 FASE 3: DATOS ESTRUCTURADOS (SCHEMA.ORG)
+
+### 3.1 SCHEMA ORGANIZATION (PÁGINA PRINCIPAL)
+
+```html
+<!-- Agregar en todas las páginas del sitio -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Trips Europa",
+  "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Latinoamérica",
+  "url": "https://tripseuropa.co",
+  "logo": "https://tripseuropa.co/images/logo.png",
+  "image": "https://tripseuropa.co/images/og-image.jpg",
+  "telephone": "+34-611-105-448",
+  "email": "info@tripseuropa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Gran Vía 45",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    "https://facebook.com/tripseuropa",
+    "https://instagram.com/tripseuropa",
+    "https://youtube.com/@tripseuropa",
+    "https://tiktok.com/@tripseuropa"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "28547",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+```
+
+***
+
+### 3.2 SCHEMA ARTICLE (PARA TODOS LOS BLOG POSTS)
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Título del artículo - máximo 110 caracteres]",
+  "description": "[Meta description del artículo]",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tripseuropa.co/images/blog/[imagen].jpg",
+    "width": 1200,
+    "height": 675
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Trips Europa",
+    "url": "https://tripseuropa.co"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Trips Europa",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tripseuropa.co/images/logo.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "datePublished": "2026-01-26T10:00:00+00:00",
+  "dateModified": "2026-01-26T10:00:00+00:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tripseuropa.co/blog/[slug]"
+  },
+  "articleSection": "Guías de Viaje",

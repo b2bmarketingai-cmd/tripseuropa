@@ -1,0 +1,399 @@
+Continúo el prompt completo desde la Fase 5:
+
+***
+
+## 🔵 FASE 5: CORRECCIÓN DE ERRORES ESPECÍFICOS (CONTINUACIÓN)
+
+### 5.1 REPARAR SOFT 404 (CONTINUACIÓN)
+
+**URL 1: /blog/guia-viaje-paris-2026** (continuación)
+
+```
+6. Itinerario Sugerido: París en 3, 5 o 7 Días (250 palabras)
+7. Presupuesto Diario Estimado 2026 (150 palabras)
+8. Consejos Prácticos para Viajar a París (200 palabras)
+9. Preguntas Frecuentes (150 palabras)
+
+Imágenes requeridas: 8
+- Torre Eiffel desde diferentes ángulos
+- Interior del Louvre
+- Calles de Montmartre
+- Vista desde Sacré-Cœur
+- Café parisino típico
+- Mapa de París con zonas turísticas
+- Imagen de baguette/croissant
+- Vista del Sena al atardecer
+
+Enlaces internos mínimo: 10
+- /destinos/francia
+- /destinos/paris (crear si no existe)
+- /paquetes/europa-clasica
+- /blog/mejores-museos-europa
+- /blog/documentacion-viaje-europa
+- /services/hoteles
+- /services/tours
+- 3 artículos relacionados de Francia
+
+Schema requerido:
+- Article
+- Breadcrumb
+- FAQPage (mínimo 5 preguntas)
+```
+
+***
+
+**URL 2: /terminos-condiciones**
+
+**PROBLEMA:** Página muy delgada, parece de error.
+
+**SOLUCIÓN:**
+```
+CONTENIDO MÍNIMO: 1,000 palabras
+
+Título: Términos y Condiciones de Uso | Trips Europa
+Meta: Lee nuestros términos y condiciones de servicio para la reserva de paquetes turísticos a Europa. Políticas de pago, cancelación y modificaciones.
+
+Estructura obligatoria:
+H1: Términos y Condiciones de Servicio
+
+Secciones requeridas:
+1. Introducción y Aceptación de Términos (100 palabras)
+2. Definiciones y Terminología (100 palabras)
+3. Servicios Ofrecidos (150 palabras)
+4. Proceso de Reserva y Confirmación (200 palabras)
+5. Precios y Formas de Pago (150 palabras)
+6. Política de Cancelación y Reembolsos (200 palabras)
+7. Modificaciones de Reserva (100 palabras)
+8. Responsabilidades del Cliente (100 palabras)
+9. Responsabilidades de Trips Europa (150 palabras)
+10. Fuerza Mayor (100 palabras)
+11. Protección de Datos Personales (150 palabras)
+12. Propiedad Intelectual (100 palabras)
+13. Jurisdicción y Ley Aplicable (100 palabras)
+14. Contacto (50 palabras)
+
+Formato:
+- Texto legal estructurado con numeración
+- Secciones claramente divididas
+- Fecha de última actualización visible
+- Enlace a Política de Privacidad
+- Enlace a contacto
+
+Meta robots: index, follow (SÍ indexar esta página)
+```
+
+***
+
+### 5.2 REPARAR PÁGINA DUPLICADA SIN CANONICAL
+
+**URL: /es-co/destinos/albania**
+
+**PROBLEMA:** Falta etiqueta canonical.
+
+**SOLUCIÓN:**
+```html
+<head>
+    <meta charset="UTF-8">
+    <title>Albania: Guía de Viaje Completa 2026 | Trips Europa</title>
+    <meta name="description" content="Descubre Albania: playas paradisíacas, ciudades históricas, costos bajos. Guía completa con qué ver, dónde alojarse, presupuesto y consejos de viaje.">
+    
+    <!-- CANONICAL - CRÍTICO -->
+    <link rel="canonical" href="https://tripseuropa.co/es-co/destinos/albania" />
+    
+    <!-- HREFLANG PARA VERSIONES DE OTROS PAÍSES -->
+    <link rel="alternate" hreflang="es-CO" href="https://tripseuropa.co/es-co/destinos/albania" />
+    <link rel="alternate" hreflang="es-AR" href="https://tripseuropa.co/es-ar/destinos/albania" />
+    <link rel="alternate" hreflang="es-MX" href="https://tripseuropa.co/es-mx/destinos/albania" />
+    <link rel="alternate" hreflang="es-PE" href="https://tripseuropa.co/es-pe/destinos/albania" />
+    <link rel="alternate" hreflang="en" href="https://tripseuropa.co/en/destinations/albania" />
+    <link rel="alternate" hreflang="x-default" href="https://tripseuropa.co/destinos/albania" />
+    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+```
+
+**ADEMÁS, ampliar contenido a mínimo 1,200 palabras:**
+- Historia de Albania
+- Principales ciudades (Tirana, Berat, Saranda)
+- Riviera albanesa y mejores playas
+- Sitios UNESCO (Berat, Gjirokastra)
+- Gastronomía albanesa
+- Costos y presupuesto
+- Mejor época para visitar
+- Cómo llegar desde otros países europeos
+- Itinerario sugerido 5-7 días
+
+***
+
+### 5.3 VERIFICAR REDIRECCIÓN HTTP → HTTPS
+
+**URL: http://tripseuropa.co/**
+
+**ESTADO ACTUAL:** Funciona correctamente (redirección 301 a HTTPS)
+
+**ACCIÓN:** ✅ No requiere cambios, pero VERIFICAR que:
+```
+1. Todas las URLs internas usen HTTPS
+2. No haya enlaces internos apuntando a HTTP
+3. Sitemap solo contenga URLs HTTPS
+4. Canonical tags todos usen HTTPS
+5. Schema.org URLs todos usen HTTPS
+```
+
+***
+
+## 🟣 FASE 6: OPTIMIZACIÓN DE PERFORMANCE Y TÉCNICA
+
+### 6.1 OPTIMIZACIÓN DE IMÁGENES
+
+**ACCIONES REQUERIDAS:**
+
+```
+TODAS LAS IMÁGENES DEL SITIO:
+
+1. FORMATO:
+   ✅ Usar WebP para navegadores modernos
+   ✅ Fallback a JPG para navegadores antiguos
+   ❌ NO usar PNG para fotos (solo para logos/iconos)
+
+2. COMPRESIÓN:
+   - Reducir peso sin perder calidad visible
+   - Objetivo: <150KB por imagen en blog
+   - Objetivo: <100KB por thumbnail
+   - Objetivo: <50KB por icono/logo
+
+3. DIMENSIONES:
+   - Imágenes de héroe: 1920x1080px máximo
+   - Imágenes de blog: 1200x675px (16:9)
+   - Thumbnails: 400x225px
+   - Imágenes de galería: 800x600px
+   
+4. ATRIBUTOS HTML OBLIGATORIOS:
+   <img src="imagen.webp" 
+        alt="Descripción detallada y única para SEO" 
+        width="1200" 
+        height="675"
+        loading="lazy"
+        decoding="async">
+   
+5. LAZY LOADING:
+   - Todas las imágenes excepto la primera visible
+   - Usar atributo loading="lazy" nativo
+   
+6. ALT TEXT:
+   ✅ BUENO: "Torre Eiffel iluminada al atardecer desde Trocadero en París"
+   ❌ MALO: "torre", "img123", "imagen"
+```
+
+**HERRAMIENTAS PARA OPTIMIZAR:**
+- TinyPNG / Squoosh.app para compresión
+- CloudConvert para conversión a WebP
+- ImageMagick para procesamiento batch
+
+***
+
+### 6.2 OPTIMIZACIÓN DE VELOCIDAD
+
+**ACCIONES CRÍTICAS:**
+
+```javascript
+// 1. MINIFICACIÓN
+- Minificar todos los archivos CSS
+- Minificar todos los archivos JavaScript
+- Remover comentarios y espacios en blanco
+
+// 2. COMPRESIÓN GZIP/BROTLI
+// Agregar en archivo .htaccess (si usas Apache):
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+// O en Nginx config:
+gzip on;
+gzip_types text/plain text/css application/json application/javascript text/xml application/xml;
+
+// 3. CACHÉ DEL NAVEGADOR
+// Agregar headers de caché:
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+// 4. FONTS OPTIMIZATION
+- Usar font-display: swap para fuentes
+- Cargar solo los pesos de fuente necesarios
+- Preconectar a dominios de fuentes:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+// 5. CRITICAL CSS
+- Extraer CSS crítico inline en <head>
+- Cargar resto de CSS de forma asíncrona
+
+// 6. DEFER/ASYNC JAVASCRIPT
+<script src="script.js" defer></script>
+<script src="analytics.js" async></script>
+```
+
+***
+
+### 6.3 CORE WEB VITALS
+
+**MÉTRICAS OBJETIVO:**
+
+```
+LCP (Largest Contentful Paint): < 2.5 segundos
+- Optimizar imágenes de héroe
+- Usar CDN para assets estáticos
+- Implementar lazy loading
+
+FID (First Input Delay): < 100 milisegundos
+- Minimizar JavaScript
+- Dividir código en chunks
+- Usar web workers cuando sea posible
+
+CLS (Cumulative Layout Shift): < 0.1
+- Especificar width y height en todas las imágenes
+- Reservar espacio para ads y embeds
+- Evitar insertar contenido dinámico sobre contenido existente
+```
+
+***
+
+### 6.4 MOBILE-FIRST
+
+**VERIFICACIONES OBLIGATORIAS:**
+
+```
+✅ Diseño responsive en todos los dispositivos
+✅ Viewport meta tag correcto: <meta name="viewport" content="width=device-width, initial-scale=1">
+✅ Texto legible sin zoom (mínimo 16px)
+✅ Elementos táctiles separados (mínimo 48x48px)
+✅ No usar Flash o tecnologías no compatibles
+✅ Evitar popups intrusivos en móvil
+✅ Menú de navegación funcional en móvil
+✅ Formularios optimizados para móvil
+```
+
+***
+
+## 🟤 FASE 7: ACTUALIZACIÓN Y VALIDACIÓN DE SITEMAPS
+
+### 7.1 VERIFICAR CONTENIDO DE SITEMAPS
+
+**PROBLEMA DETECTADO:** Los sitemaps están registrados pero las URLs no se indexan.
+
+**ACCIÓN:** Revisar cada sitemap y asegurar que:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- CADA URL DEBE TENER: -->
+  <url>
+    <loc>https://tripseuropa.co/blog/alojamiento-europa</loc>
+    <lastmod>2026-01-26</lastmod>
+    hangefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- MÁS URLs... -->
+  
+</urlset>
+```
+
+**REGLAS PARA SITEMAPS:**
+
+```
+✅ INCLUIR en sitemap:
+- Solo URLs con contenido sustancial (>500 palabras)
+- Solo URLs con código 200 (sin errores)
+- Solo URLs que quieres que Google indexe
+- URLs actualizadas recientemente primero
+
+❌ NO INCLUIR en sitemap:
+- URLs con canonical apuntando a otra URL
+- URLs bloqueadas en robots.txt
+- URLs con noindex
+- URLs duplicadas
+- URLs de paginación (?page=2)
+- URLs con parámetros de tracking
+
+PRIORITIES:
+- Homepage: 1.0
+- Categorías principales: 0.9
+- Páginas de destinos: 0.8
+- Artículos de blog importantes: 0.8
+- Paquetes turísticos: 0.7
+- Artículos de blog antiguos: 0.6
+```
+
+***
+
+### 7.2 CREAR SITEMAP INDEX
+
+**Si tienes múltiples sitemaps, crear un sitemap index:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://tripseuropa.co/sitemaps/sitemap-blog-es-co.xml</loc>
+    <lastmod>2026-01-26</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://tripseuropa.co/sitemaps/sitemap-destinos-europa-en-co.xml</loc>
+    <lastmod>2026-01-26</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://tripseuropa.co/sitemaps/sitemap-paquetes-co.xml</loc>
+    <lastmod>2026-01-26</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://tripseuropa.co/sitemaps/sitemap-general-co.xml</loc>
+    <lastmod>2026-01-26</lastmod>
+  </sitemap>
+  
+  <!-- Todos los demás sitemaps... -->
+  
+</sitemapindex>
+```
+
+**Guardar como:** `/sitemaps/sitemap-index.xml`
+
+***
+
+### 7.3 ACTUALIZAR ROBOTS.TXT
+
+```
+User-agent: *
+Allow: /
+
+# Bloquear parámetros de búsqueda y tracking
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Permitir recursos importantes
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Sitemap principal
+Sitemap: https://tripseuropa.co/sitemaps/sitemap-index.xml
+
+# Sitemaps individuales (opcional, si no usas index)
+Sitemap: https://tripseuropa.co/sitemaps/sitemap-blog-es-co.xml
+Sitemap: https://tripseuropa.co/sitemaps/

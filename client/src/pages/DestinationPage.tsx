@@ -34,6 +34,8 @@ import {
 import { SiWhatsapp } from "react-icons/si";
 import { FloatingContactButtons } from "@/components/support";
 import { ContactForm } from "@/components/ContactForm";
+import { SEOHead, generateCountryHreflangUrls } from "@/components/SEOHead";
+import { BreadcrumbSchema, TouristDestinationSchema, FAQSchema } from "@/components/SEOSchemas";
 
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -196,8 +198,39 @@ export default function DestinationPage() {
   const travelStylesByGroup = TRAVEL_STYLE_DATA.filter(ts => ts.category === "group");
 
   
+  const destinationUrl = `https://tripseuropa.co/destinos/${slug}`;
+  const hreflangUrls = generateCountryHreflangUrls(`/destinos/${slug}`);
+  
+  const faqsForSchema = destination.faqs.map(faq => ({
+    question: faq.question[dataLang],
+    answer: faq.answer[dataLang]
+  }));
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOHead
+        title={`${destination.name[dataLang]} - Guia de Viaje Completa`}
+        description={destination.description[dataLang]}
+        keywords={`viajes ${destination.name[dataLang]}, turismo ${destination.name[dataLang]}, paquetes ${destination.name[dataLang]}, que ver ${destination.name[dataLang]}`}
+        url={destinationUrl}
+        image={destination.heroImage}
+        alternateUrls={hreflangUrls}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", url: "https://tripseuropa.co" },
+          { name: "Destinos", url: "https://tripseuropa.co/destinos" },
+          { name: destination.name[dataLang], url: destinationUrl }
+        ]}
+      />
+      <TouristDestinationSchema
+        name={destination.name[dataLang]}
+        description={destination.description[dataLang]}
+        url={destinationUrl}
+        image={destination.heroImage}
+        attractions={destination.highlights[dataLang].slice(0, 5).map(h => ({ name: h }))}
+      />
+      <FAQSchema faqs={faqsForSchema} />
       <Header />
       <section 
         className="relative min-h-[500px] flex items-center justify-center"
