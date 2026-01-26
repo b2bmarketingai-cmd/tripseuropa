@@ -1,0 +1,335 @@
+# 🚨 PROMPT COMPLETO PARA AGENTE REPLIT - CORRECCIÓN ERRORES GOOGLE SEARCH CONSOLE
+
+***
+
+## 📊 RESUMEN EJECUTIVO
+
+**Sitio:** https://tripseuropa.com  
+**Replit:** https://replit.com/@holidayhub/Europa-Trips  
+**Problema:** 500+ URLs no rastreables por Google  
+**Fecha:** 26 de enero de 2026  
+**Prioridad:** 🔴 CRÍTICA - Pérdida masiva de tráfico SEO
+
+***
+
+## 🎯 OBJETIVO
+
+Corregir TODAS las URLs que Google no puede rastrear, asegurando que:
+1. ✅ Todas las rutas devuelvan HTTP 200
+2. ✅ robots.txt permita el rastreo
+3. ✅ Sitemap.xml contenga todas las URLs
+4. ✅ Sistema de routing funcione correctamente
+5. ✅ Meta tags SEO estén presentes
+
+***
+
+## 📋 URLS PROBLEMÁTICAS
+
+### Categorías Afectadas:
+- **Blog:** 50+ posts (ES, EN, PT-BR)
+- **Destinos:** 70+ páginas
+- **Paquetes:** 120+ páginas multilingües
+- **Experiencias:** 80+ páginas
+- **Ofertas:** 50+ páginas
+- **Páginas regionales:** 12 variantes de idioma/país
+
+### Idiomas Afectados:
+```
+es (español base), es-ar, es-co, es-cr, es-do, es-mx, es-pa, es-pe
+en, en-ar, en-co, en-mx
+pt-br
+```
+
+### URLs Críticas con Problemas:
+```
+# Rastreadas pero con advertencias
+https://tripseuropa.com/es-co/destinos/belgica (9 ene 2026)
+https://tripseuropa.com/es-pe/destinos/francia (6 ene 2026)
+https://tripseuropa.com/destinos?lang=en (5 ene 2026) ⚠️ Query params
+
+# NO Rastreadas (N/D) - Ver listado completo en contexto anterior
+https://tripseuropa.com/blog/* (todas)
+https://tripseuropa.com/destinos/* (70+)
+https://tripseuropa.com/{locale}/paquetes/* (120+)
+https://tripseuropa.com/{locale}/experiencias/* (80+)
+https://tripseuropa.com/{locale}/ofertas/* (50+)
+```
+
+***
+
+## 🔧 TAREAS PRIORITARIAS
+
+### ✅ TAREA 1: DIAGNÓSTICO (10 min)
+
+```bash
+# Ejecuta estos comandos en la terminal de Replit
+npm list                    # Ver dependencias
+npm run dev                 # Probar servidor local
+curl -I https://tripseuropa.com/blog/argentina  # Test HTTP
+```
+
+**Verifica:**
+- [ ] Framework usado (React/Next.js/Vite)
+- [ ] Sistema de routing actual
+- [ ] Configuración del servidor
+- [ ] Archivos existentes: robots.txt, sitemap.xml
+
+***
+
+### ✅ TAREA 2: ROBOTS.TXT (5 min)
+
+**Archivo:** `/public/robots.txt`
+
+```txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://tripseuropa.com/sitemap.xml
+
+Crawl-delay: 1
+```
+
+**Validar en:** https://tripseuropa.com/robots.txt
+
+***
+
+### ✅ TAREA 3: SITEMAP.XML COMPLETO (30 min)
+
+**Crea un generador automático de sitemap:**
+
+```javascript
+// scripts/generate-sitemap.js
+import { writeFileSync } from 'fs';
+
+const baseUrl = 'https://tripseuropa.com';
+const today = new Date().toISOString().split('T')[0];
+
+// Define todas las rutas
+const locales = ['es', 'es-ar', 'es-co', 'es-cr', 'es-do', 'es-mx', 'es-pa', 'es-pe', 'en-ar', 'en-co', 'en-mx', 'en', 'pt-br'];
+
+const destinations = [
+  'albania', 'alemania', 'amsterdam', 'atenas', 'austria', 'barcelona', 
+  'belgica', 'berlin', 'bruselas', 'budapest', 'chipre', 'cinque-terre',
+  'copenhague', 'costa-amalfitana', 'croacia', 'dinamarca', 'dublin',
+  'dubrovnik', 'edimburgo', 'escocia', 'espana', 'estados-balticos',
+  'estocolmo', 'finlandia', 'florencia', 'francia', 'grecia', 'helsinki',
+  'hungria', 'ibiza', 'irlanda', 'islandia', 'italia', 'lisboa', 'londres',
+  'madrid', 'malta', 'milan', 'munich', 'mykonos', 'niza', 'noruega',
+  'oslo', 'paises-bajos', 'paris', 'polonia', 'porto', 'portugal', 'praga',
+  'reino-unido', 'republica-checa', 'reykjavik', 'roma', 'rumania',
+  'santorini', 'sevilla', 'split', 'suecia', 'suiza', 'varsovia',
+  'venecia', 'viena', 'zurich'
+];
+
+const packages = [
+  'capitales-europeas', 'europa-10-dias', 'europa-15-dias', 'europa-21-dias',
+  'europa-7-dias', 'europa-clasica', 'europa-express', 'europa-oriental',
+  'familia-europa', 'luna-de-miel', 'norte-europa', 'tour-mediterraeo'
+];
+
+const experiences = [
+  'año-nuevo-europa', 'arte-cultura', 'aventura-naturaleza',
+  'ciudades-historicas', 'gastronomia-europa', 'invierno-europa',
+  'navidad-europa', 'otono-europa', 'primavera-europa', 'verano-europa'
+];
+
+const offers = [
+  'black-friday', 'cyber-monday', 'ofertas-invierno',
+  'ofertas-ultima-hora', 'ofertas-verano', 'promociones-especiales'
+];
+
+const blogCountries = [
+  'argentina', 'brasil', 'caribe', 'colombia', 'costa-rica',
+  'dominicana', 'mexico', 'panama', 'peru'
+];
+
+const blogPosts = [
+  'alojamiento-europa', 'ciudades-romanticas-europa',
+  'documentacion-viaje-europa', 'etias-latinoamericanos',
+  'europa-en-15-dias', 'gastronomia-europea', 'guia-viaje-paris-2026',
+  'luna-miel-europa', 'mejores-destinos-europa-presupuesto',
+  'seguro-viaje-europa', 'temporada-alta-baja-europa', 'trenes-europa',
+  'viaje-familia-europa', 'visado-schengen', 'vuelos-baratos-europa'
+];
+
+function generateUrl(loc, priority = '0.8', changefreq = 'weekly') {
+  return `  <url>
+    <loc>${baseUrl}${loc}</loc>
+    <lastmod>${today}</lastmod>
+    hangefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+}
+
+// Generar URLs
+let urls = [];
+
+// Homepage
+urls.push(generateUrl('/', '1.0', 'daily'));
+
+// Blog español
+blogCountries.forEach(country => {
+  urls.push(generateUrl(`/blog/${country}`, '0.8'));
+});
+
+blogPosts.forEach(post => {
+  urls.push(generateUrl(`/blog/post/${post}`, '0.8'));
+});
+
+// Destinos español
+destinations.forEach(dest => {
+  urls.push(generateUrl(`/destinos/${dest}`, '0.9'));
+});
+
+// Páginas legales
+urls.push(generateUrl('/condiciones-venta', '0.5', 'monthly'));
+urls.push(generateUrl('/cookies', '0.5', 'monthly'));
+
+// Rutas multilingües
+locales.forEach(locale => {
+  if (locale === 'es') return; // Skip base español
+  
+  urls.push(generateUrl(`/${locale}`, '0.8'));
+  
+  // Destinos
+  const destPath = locale.startsWith('en') ? 'destinations' : 'destinos';
+  destinations.forEach(dest => {
+    const destSlug = locale.startsWith('en') ? 
+      dest.replace('alemania', 'germany')
+          .replace('espana', 'spain')
+          .replace('francia', 'france')
+          .replace('grecia', 'greece')
+          .replace('paises-bajos', 'netherlands')
+          .replace('reino-unido', 'united-kingdom')
+          .replace('republica-checa', 'czech-republic')
+          .replace('suecia', 'sweden')
+          .replace('suiza', 'switzerland')
+          .replace('estados-balticos', 'baltics')
+          .replace('noruega', 'norway')
+          .replace('dinamarca', 'denmark')
+          .replace('finlandia', 'finland')
+          .replace('islandia', 'iceland')
+          .replace('irlanda', 'ireland')
+          .replace('polonia', 'poland')
+          .replace('austria', 'austria')
+          .replace('belgica', 'belgium')
+          .replace('croacia', 'croatia')
+          .replace('hungria', 'hungary')
+          .replace('rumania', 'romania')
+          .replace('escocia', 'scotland')
+          .replace('chipre', 'cyprus')
+          .replace('malta', 'malta')
+          .replace('albania', 'albania')
+          .replace('portugal', 'portugal')
+          .replace('italia', 'italy') : dest;
+    
+    urls.push(generateUrl(`/${locale}/${destPath}/${destSlug}`, '0.8'));
+  });
+  
+  // Paquetes
+  const pkgPath = locale.startsWith('en') ? 'packages' : 'paquetes';
+  packages.forEach(pkg => {
+    urls.push(generateUrl(`/${locale}/${pkgPath}/${pkg}`, '0.8'));
+  });
+  
+  // Experiencias
+  const expPath = locale.startsWith('en') ? 'experiences' : 'experiencias';
+  experiences.forEach(exp => {
+    urls.push(generateUrl(`/${locale}/${expPath}/${exp}`, '0.7'));
+  });
+  
+  // Ofertas (solo español)
+  if (!locale.startsWith('en') && locale !== 'pt-br') {
+    offers.forEach(offer => {
+      urls.push(generateUrl(`/${locale}/ofertas/${offer}`, '0.7'));
+    });
+  }
+});
+
+// Blog en inglés
+if (true) {
+  blogCountries.forEach(country => {
+    urls.push(generateUrl(`/en/blog/${country}`, '0.7'));
+  });
+  
+  blogPosts.forEach(post => {
+    urls.push(generateUrl(`/en/blog/post/${post}`, '0.7'));
+  });
+}
+
+// Português
+urls.push(generateUrl('/pt-br/ofertas/ofertas-verano', '0.7'));
+
+// Generar XML
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>`;
+
+writeFileSync('public/sitemap.xml', sitemap);
+console.log(`✅ Sitemap generado con ${urls.length} URLs`);
+console.log('📍 Archivo: public/sitemap.xml');
+```
+
+**Ejecutar:**
+```bash
+node scripts/generate-sitemap.js
+```
+
+**Validar en:**
+- https://tripseuropa.com/sitemap.xml
+- https://www.xml-sitemaps.com/validate-xml-sitemap.html
+
+***
+
+### ✅ TAREA 4: CORREGIR ROUTING (1 hora)
+
+**Problema identificado:** Query params en URLs (`?lang=en`) indican routing mal configurado
+
+**Solución para React Router:**
+
+```javascript
+// src/App.jsx
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import DestinationPage from './pages/DestinationPage';
+import PackagePage from './pages/PackagePage';
+import ExperiencePage from './pages/ExperiencePage';
+import OfferPage from './pages/OfferPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
+import LegalPage from './pages/LegalPage';
+import NotFound from './pages/NotFound';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Homepage */}
+        <Route path="/" element={<HomePage lang="es" />} />
+        
+        {/* Redirect query params a rutas limpias */}
+        <Route path="/destinos" element={<Navigate to="/destinos/paris" replace />} />
+        
+        {/* Blog ES */}
+        <Route path="/blog/:country" element={<BlogPage lang="es" />} />
+        <Route path="/blog/post/:slug" element={<BlogPostPage lang="es" />} />
+        
+        {/* Destinos ES */}
+        <Route path="/destinos/:destination" element={<DestinationPage lang="es" />} />
+        
+        {/* Legal */}
+        <Route path="/condiciones-venta" element={<LegalPage page="terms" />} />
+        <Route path="/cookies" element={<LegalPage page="cookies" />} />
+        
+        {/* Multilingüe - Español Argentina */}
+        <Route path="/es-ar" element={<HomePage lang="es-ar" />} />
+        <Route path="/es-ar/destinos/:destination" element={<DestinationPage lang="es-ar" />} />
+        <Route path="/es-ar/experiencias/:experience" element={<ExperiencePage lang="es-ar" />} />
+        <Route path="/es-ar/paquetes/:package" element={<PackagePage lang="es-ar" />} />
+        <Route path="/es-ar/ofertas/:offer" element={<OfferPage lang="es-ar" />} />
+        
+        {/* Multilingüe - Español Colombia */}
+        <Route path="/es-co/destinos/:destination" element={<DestinationPage lang="es-
