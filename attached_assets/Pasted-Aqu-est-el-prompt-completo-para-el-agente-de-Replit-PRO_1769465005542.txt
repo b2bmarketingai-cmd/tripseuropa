@@ -1,0 +1,217 @@
+Aquí está el prompt completo para el agente de Replit:
+
+***
+
+**PROMPT PARA AGENTE REPLIT - CORRECCIÓN DE ERRORES GOOGLE SEARCH CONSOLE**
+
+# Contexto
+El sitio web https://tripseuropa.com tiene problemas de indexación en Google Search Console. Google no puede rastrear múltiples URLs del sitio (status "N/D" - No Disponible). Necesito que corrijas todos los problemas técnicos que impiden el rastreo correcto de estas páginas.
+
+# URL del Proyecto
+Replit Project: https://replit.com/@holidayhub/Europa-Trips
+
+# Problemas Identificados en Google Search Console
+**Total de URLs no rastreadas:** 150+ páginas
+
+**Categorías afectadas:**
+1. Blog posts (/blog/post/*)
+2. Páginas de destinos (/destinos/*)
+3. Páginas multilingües (/en-ar/, /en-co/, /pt-br/)
+4. Páginas de experiencias (/experiences/*)
+5. Páginas de paquetes turísticos (/packages/*)
+6. Páginas legales (/condiciones-venta, /cookies)
+
+# Lista Completa de URLs con Error (N/D - No Rastreadas)
+
+```
+https://tripseuropa.com/pt-br/ofertas/ofertas-verano
+https://tripseuropa.com/blog/argentina
+https://tripseuropa.com/blog/brasil
+https://tripseuropa.com/blog/caribe
+https://tripseuropa.com/blog/colombia
+https://tripseuropa.com/blog/costa-rica
+https://tripseuropa.com/blog/dominicana
+https://tripseuropa.com/blog/mexico
+https://tripseuropa.com/blog/panama
+https://tripseuropa.com/blog/peru
+https://tripseuropa.com/blog/post/alojamiento-europa
+https://tripseuropa.com/blog/post/ciudades-romanticas-europa
+https://tripseuropa.com/blog/post/documentacion-viaje-europa
+https://tripseuropa.com/blog/post/etias-latinoamericanos
+https://tripseuropa.com/blog/post/europa-en-15-dias
+https://tripseuropa.com/blog/post/gastronomia-europea
+https://tripseuropa.com/blog/post/guia-viaje-paris-2026
+https://tripseuropa.com/blog/post/luna-miel-europa
+https://tripseuropa.com/blog/post/mejores-destinos-europa-presupuesto
+https://tripseuropa.com/blog/post/seguro-viaje-europa
+https://tripseuropa.com/blog/post/temporada-alta-baja-europa
+https://tripseuropa.com/blog/post/trenes-europa
+https://tripseuropa.com/blog/post/viaje-familia-europa
+https://tripseuropa.com/blog/post/visado-schengen
+https://tripseuropa.com/blog/post/vuelos-baratos-europa
+https://tripseuropa.com/condiciones-venta
+https://tripseuropa.com/cookies
+https://tripseuropa.com/destinos/albania
+https://tripseuropa.com/destinos/alemania
+https://tripseuropa.com/destinos/amsterdam
+https://tripseuropa.com/destinos/atenas
+https://tripseuropa.com/destinos/austria
+https://tripseuropa.com/destinos/barcelona
+https://tripseuropa.com/destinos/belgica
+https://tripseuropa.com/destinos/berlin
+https://tripseuropa.com/destinos/bruselas
+https://tripseuropa.com/destinos/budapest
+https://tripseuropa.com/destinos/chipre
+https://tripseuropa.com/destinos/cinque-terre
+https://tripseuropa.com/destinos/copenhague
+https://tripseuropa.com/destinos/costa-amalfitana
+https://tripseuropa.com/destinos/croacia
+https://tripseuropa.com/destinos/dinamarca
+https://tripseuropa.com/destinos/dublin
+https://tripseuropa.com/destinos/dubrovnik
+https://tripseuropa.com/destinos/edimburgo
+https://tripseuropa.com/destinos/escocia
+https://tripseuropa.com/destinos/espana
+https://tripseuropa.com/destinos/estados-balticos
+https://tripseuropa.com/destinos/estocolmo
+https://tripseuropa.com/destinos/finlandia
+https://tripseuropa.com/destinos/florencia
+https://tripseuropa.com/destinos/francia
+https://tripseuropa.com/destinos/grecia
+https://tripseuropa.com/destinos/helsinki
+https://tripseuropa.com/destinos/hungria
+https://tripseuropa.com/destinos/ibiza
+https://tripseuropa.com/destinos/irlanda
+https://tripseuropa.com/destinos/islandia
+https://tripseuropa.com/destinos/italia
+https://tripseuropa.com/destinos/lisboa
+https://tripseuropa.com/destinos/londres
+https://tripseuropa.com/destinos/madrid
+https://tripseuropa.com/destinos/malta
+https://tripseuropa.com/destinos/milan
+https://tripseuropa.com/destinos/munich
+https://tripseuropa.com/destinos/mykonos
+https://tripseuropa.com/destinos/niza
+https://tripseuropa.com/destinos/noruega
+https://tripseuropa.com/destinos/oslo
+https://tripseuropa.com/destinos/paises-bajos
+https://tripseuropa.com/destinos/paris
+https://tripseuropa.com/destinos/polonia
+https://tripseuropa.com/destinos/porto
+https://tripseuropa.com/destinos/portugal
+https://tripseuropa.com/destinos/praga
+https://tripseuropa.com/destinos/reino-unido
+https://tripseuropa.com/destinos/republica-checa
+https://tripseuropa.com/destinos/reykjavik
+https://tripseuropa.com/destinos/roma
+https://tripseuropa.com/destinos/rumania
+https://tripseuropa.com/destinos/santorini
+https://tripseuropa.com/destinos/sevilla
+https://tripseuropa.com/destinos/split
+https://tripseuropa.com/destinos/suecia
+https://tripseuropa.com/destinos/suiza
+https://tripseuropa.com/destinos/varsovia
+https://tripseuropa.com/destinos/venecia
+https://tripseuropa.com/destinos/viena
+https://tripseuropa.com/destinos/zurich
+https://tripseuropa.com/en-ar/
+https://tripseuropa.com/en-ar/destinations/*
+https://tripseuropa.com/en-ar/experiences/*
+https://tripseuropa.com/en-ar/packages/*
+https://tripseuropa.com/en-co/
+https://tripseuropa.com/en-co/destinations/*
+https://tripseuropa.com/en-co/experiences/*
+https://tripseuropa.com/en-co/packages/*
+```
+
+# Tareas a Realizar (EN ORDEN DE PRIORIDAD)
+
+## 1. VERIFICACIÓN Y CORRECCIÓN DE RUTAS
+- [ ] Verifica que TODAS las rutas listadas arriba existan en el código de la aplicación
+- [ ] Si alguna ruta no existe, créala o configura un redirect 301 apropiado
+- [ ] Asegúrate de que todas las rutas devuelvan HTTP 200 (no 404, 500 o errores)
+- [ ] Prueba cada URL manualmente en el navegador
+
+## 2. CORRECCIÓN DE ROBOTS.TXT
+- [ ] Verifica que el archivo `/public/robots.txt` NO esté bloqueando estas URLs
+- [ ] Asegúrate de que el robots.txt tenga:
+```
+User-agent: *
+Allow: /
+Sitemap: https://tripseuropa.com/sitemap.xml
+```
+- [ ] Si no existe robots.txt, créalo con el contenido de arriba
+
+## 3. GENERACIÓN Y ACTUALIZACIÓN DE SITEMAP.XML
+- [ ] Crea o actualiza `/public/sitemap.xml` con TODAS las URLs del sitio
+- [ ] Incluye:
+  - Todas las páginas de blog
+  - Todas las páginas de destinos
+  - Todas las páginas multilingües (es, en-ar, en-co, pt-br)
+  - Todas las páginas de paquetes y experiencias
+  - Páginas legales
+- [ ] Formato correcto del sitemap:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tripseuropa.com/</loc>
+    <lastmod>2026-01-26</lastmod>
+    hangefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Agregar TODAS las URLs listadas arriba -->
+</urlset>
+```
+
+## 4. META TAGS Y SEO
+Para cada página NO rastreada, verifica que tenga:
+- [ ] Meta title único y descriptivo
+- [ ] Meta description única (150-160 caracteres)
+- [ ] Meta robots: `<meta name="robots" content="index, follow">`
+- [ ] Canonical URL correcto
+- [ ] Open Graph tags básicos
+
+## 5. CORRECCIÓN DE ENLACES INTERNOS
+- [ ] Verifica que todas las páginas estén enlazadas desde al menos una página del sitio
+- [ ] Crea un sistema de navegación que conecte todas las páginas
+- [ ] Añade enlaces en footer, menú de navegación o breadcrumbs
+
+## 6. CONFIGURACIÓN DEL SERVIDOR (Replit)
+- [ ] Asegúrate de que el servidor responde correctamente a todas las rutas
+- [ ] Configura correctamente el enrutamiento para React/Next.js/tu framework
+- [ ] Verifica que no haya errores en los logs del servidor
+- [ ] Si usas routing client-side, configura el servidor para servir index.html en todas las rutas
+
+## 7. PERFORMANCE Y ACCESIBILIDAD
+- [ ] Verifica que las páginas carguen en menos de 3 segundos
+- [ ] Asegúrate de que el contenido sea accesible sin JavaScript (SSR o SSG)
+- [ ] Verifica que no haya errores 500 en ninguna página
+
+## 8. VERIFICACIÓN FINAL
+- [ ] Prueba al menos 10 URLs aleatorias de la lista manualmente
+- [ ] Verifica que devuelvan contenido real (no páginas vacías)
+- [ ] Comprueba que el sitemap.xml sea accesible en https://tripseuropa.com/sitemap.xml
+- [ ] Verifica que robots.txt sea accesible en https://tripseuropa.com/robots.txt
+
+# Respuesta Esperada
+Al finalizar, proporciona:
+1. ✅ Lista de URLs corregidas
+2. 🔧 Cambios realizados en el código
+3. 📋 Archivos creados o modificados (robots.txt, sitemap.xml, etc.)
+4. ⚠️ URLs que requieren atención manual o no se pudieron corregir
+5. 🔗 Link al sitemap.xml generado
+6. 📊 Resumen del estado antes/después
+
+# Prioridad
+🚨 **ALTA PRIORIDAD** - Este problema está afectando la visibilidad del sitio en Google. Necesito que lo corrijas INMEDIATAMENTE.
+
+# Recursos Útiles
+- Google Search Console: https://search.google.com/search-console
+- Documentación de Sitemaps: https://www.sitemaps.org/
+- Robots.txt Tester: https://www.google.com/webmasters/tools/robots-testing-tool
+
+***
+
+**NOTA IMPORTANTE:** Después de implementar las correcciones, debo enviar el sitemap actualizado a Google Search Console manualmente. Proporciona el enlace directo al sitemap.xml generado para que pueda enviarlo.

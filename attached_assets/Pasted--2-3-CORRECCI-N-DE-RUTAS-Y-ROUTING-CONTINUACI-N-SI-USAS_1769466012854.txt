@@ -1,0 +1,437 @@
+---
+
+#### 2.3 CORRECCIÓN DE RUTAS Y ROUTING - CONTINUACIÓN
+
+**SI USAS REACT + REACT ROUTER:** (Continuación)
+
+```javascript
+        <Route path="/en-mx/packages/:package" element={<PackagePage lang="en-mx" />} />
+        
+        {/* Blog en inglés */}
+        <Route path="/en/blog/:country" element={<BlogPost lang="en" />} />
+        <Route path="/en/blog/post/:slug" element={<BlogPost lang="en" />} />
+        
+        {/* Português Brasil */}
+        <Route path="/pt-br/ofertas/:offer" element={<OfferPage lang="pt-br" />} />
+        
+        {/* Ruta 404 - IMPORTANTE: debe ir al final */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+
+**Configuración del servidor para SPA (vite.config.js o similar):**
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  preview: {
+    port: 3000,
+    strictPort: true,
+  },
+  server: {
+    port: 3000,
+    strictPort: true,
+    host: true,
+    historyApiFallback: true // CRÍTICO para routing client-side
+  }
+});
+```
+
+***
+
+**SI USAS NEXT.JS (App Router):**
+
+```
+📁 app/
+├── 📁 [locale]/
+│   ├── page.jsx                          # HomePage multilingüe
+│   ├── 📁 destinos/
+│   │   └── 📁 [destination]/
+│   │       └── page.jsx                  # Página de destino
+│   ├── 📁 destinations/
+│   │   └── 📁 [destination]/
+│   │       └── page.jsx                  # Página de destino EN
+│   ├── 📁 experiencias/
+│   │   └── 📁 [experience]/
+│   │       └── page.jsx                  # Página de experiencia
+│   ├── 📁 experiences/
+│   │   └── 📁 [experience]/
+│   │       └── page.jsx                  # Página de experiencia EN
+│   ├── 📁 paquetes/
+│   │   └── 📁 [package]/
+│   │       └── page.jsx                  # Página de paquete
+│   ├── 📁 packages/
+│   │   └── 📁 [package]/
+│   │       └── page.jsx                  # Página de paquete EN
+│   ├── 📁 ofertas/
+│   │   └── 📁 [offer]/
+│   │       └── page.jsx                  # Página de oferta
+│   └── layout.jsx
+├── 📁 blog/
+│   ├── 📁 [country]/
+│   │   └── page.jsx
+│   └── 📁 post/
+│       └── 📁 [slug]/
+│           └── page.jsx
+├── 📁 destinos/
+│   └── 📁 [destination]/
+│       └── page.jsx
+├── 📁 condiciones-venta/
+│   └── page.jsx
+├── 📁 cookies/
+│   └── page.jsx
+├── page.jsx                              # HomePage español
+└── layout.jsx
+```
+
+**Middleware para i18n (middleware.js):**
+```javascript
+// middleware.js
+import { NextResponse } from 'next/server';
+
+const locales = ['es', 'es-ar', 'es-co', 'es-cr', 'es-do', 'es-mx', 'es-pa', 'es-pe', 'en-ar', 'en-co', 'en-mx', 'en', 'pt-br'];
+
+export function middleware(request) {
+  const pathname = request.nextUrl.pathname;
+  
+  // Permite archivos estáticos
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.includes('.') // archivos con extensión
+  ) {
+    return NextResponse.next();
+  }
+
+  // Verifica si la ruta ya tiene locale
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) {
+    return NextResponse.next();
+  }
+
+  // Si no tiene locale, es ruta en español (default)
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+};
+```
+
+**Generar páginas estáticas (next.config.js):**
+```javascript
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // Para sitio estático
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  // O si usas SSR/SSG:
+  // output: 'standalone',
+};
+
+module.exports = nextConfig;
+```
+
+***
+
+**SI USAS VITE + REACT (SPA):**
+
+**Archivo de configuración del servidor:**
+
+```javascript
+// server.js o replit.nix config
+import express from 'express';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Servir archivos estáticos
+app.use(express.static(join(__dirname, 'dist')));
+
+// CRÍTICO: Redirigir TODAS las rutas al index.html (SPA)
+app.get('*', (req, res) => {
+  res.sendFile(join(__dirname, 'dist', 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
+
+**O configuración en .replit:**
+```toml
+# .replit
+run = "npm run dev"
+
+[deployment]
+run = ["sh", "-c", "npm run build && npm run preview"]
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+```
+
+***
+
+#### 2.4 CREACIÓN DE COMPONENTES FALTANTES
+
+**Crea componentes genéricos reutilizables:**
+
+```javascript
+// src/pages/DestinationPage.jsx
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
+export default function DestinationPage({ lang = 'es' }) {
+  const { destination } = useParams();
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    // Cargar contenido del destino
+    import(`../data/destinations/${lang}/${destination}.json`)
+      .then(data => setContent(data.default))
+      .catch(() => setContent({
+        title: destination.replace(/-/g, ' ').toUpperCase(),
+        description: `Descubre ${destination}`,
+        content: 'Contenido en construcción'
+      }));
+  }, [destination, lang]);
+
+  if (!content) return <div>Cargando...</div>;
+
+  return (
+    <div className="destination-page">
+      <h1>{content.title}</h1>
+      <p>{content.description}</p>
+      <div dangerouslySetInnerHTML={{ __html: content.content }} />
+    </div>
+  );
+}
+```
+
+```javascript
+// src/pages/PackagePage.jsx
+import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+export default function PackagePage({ lang = 'es' }) {
+  const { package: packageSlug } = useParams();
+  
+  // Mapeo de paquetes
+  const packages = {
+    'capitales-europeas': {
+      title: 'Capitales Europeas',
+      description: 'Tour por las principales capitales de Europa',
+      days: 10,
+      price: 2500
+    },
+    'europa-10-dias': {
+      title: 'Europa en 10 Días',
+      description: 'Recorrido express por Europa',
+      days: 10,
+      price: 2200
+    },
+    'europa-15-dias': {
+      title: 'Europa en 15 Días',
+      description: 'Viaje completo por Europa',
+      days: 15,
+      price: 3200
+    },
+    'europa-21-dias': {
+      title: 'Europa en 21 Días',
+      description: 'Gran tour europeo',
+      days: 21,
+      price: 4200
+    },
+    'europa-7-dias': {
+      title: 'Europa Express en 7 Días',
+      description: 'Lo mejor de Europa en una semana',
+      days: 7,
+      price: 1800
+    },
+    'europa-clasica': {
+      title: 'Europa Clásica',
+      description: 'Visita los destinos más emblemáticos',
+      days: 12,
+      price: 2800
+    },
+    'europa-express': {
+      title: 'Europa Express',
+      description: 'Tour rápido por Europa',
+      days: 8,
+      price: 2000
+    },
+    'europa-oriental': {
+      title: 'Europa Oriental',
+      description: 'Descubre el Este de Europa',
+      days: 14,
+      price: 2600
+    },
+    'familia-europa': {
+      title: 'Europa en Familia',
+      description: 'Viaje familiar por Europa',
+      days: 12,
+      price: 3500
+    },
+    'luna-de-miel': {
+      title: 'Luna de Miel en Europa',
+      description: 'Romance en los destinos más bellos',
+      days: 10,
+      price: 4000
+    },
+    'norte-europa': {
+      title: 'Norte de Europa',
+      description: 'Explora Escandinavia y países nórdicos',
+      days: 14,
+      price: 3800
+    },
+    'tour-mediterraeo': {
+      title: 'Tour Mediterráneo',
+      description: 'Costa mediterránea europea',
+      days: 12,
+      price: 3000
+    }
+  };
+
+  const pkg = packages[packageSlug] || {
+    title: packageSlug.replace(/-/g, ' ').toUpperCase(),
+    description: 'Paquete turístico',
+    days: 10,
+    price: 2500
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{pkg.title} - Trips Europa</title>
+        <meta name="description" content={pkg.description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://tripseuropa.com/${lang}/paquetes/${packageSlug}`} />
+      </Helmet>
+      
+      <div className="package-page">
+        <h1>{pkg.title}</h1>
+        <p>{pkg.description}</p>
+        <div className="package-details">
+          <p><strong>Duración:</strong> {pkg.days} días</p>
+          <p><strong>Precio desde:</strong> ${pkg.price} USD</p>
+        </div>
+        <button className="cta-button">Reservar Ahora</button>
+      </div>
+    </>
+  );
+}
+```
+
+```javascript
+// src/pages/ExperiencePage.jsx
+import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+export default function ExperiencePage({ lang = 'es' }) {
+  const { experience } = useParams();
+  
+  const experiences = {
+    'año-nuevo-europa': 'Año Nuevo en Europa',
+    'arte-cultura': 'Arte y Cultura',
+    'aventura-naturaleza': 'Aventura y Naturaleza',
+    'ciudades-historicas': 'Ciudades Históricas',
+    'gastronomia-europa': 'Gastronomía Europea',
+    'invierno-europa': 'Invierno en Europa',
+    'navidad-europa': 'Navidad en Europa',
+    'otono-europa': 'Otoño en Europa',
+    'primavera-europa': 'Primavera en Europa',
+    'verano-europa': 'Verano en Europa'
+  };
+
+  const title = experiences[experience] || experience.replace(/-/g, ' ').toUpperCase();
+
+  return (
+    <>
+      <Helmet>
+        <title>{title} - Trips Europa</title>
+        <meta name="description" content={`Descubre ${title} en Europa`} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      
+      <div className="experience-page">
+        <h1>{title}</h1>
+        <p>Vive experiencias únicas en Europa</p>
+      </div>
+    </>
+  );
+}
+```
+
+```javascript
+// src/pages/OfferPage.jsx
+import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+export default function OfferPage({ lang = 'es' }) {
+  const { offer } = useParams();
+  
+  const offers = {
+    'black-friday': {
+      title: 'Black Friday - Ofertas Europa',
+      discount: '50%',
+      description: 'Aprovecha nuestras ofertas de Black Friday'
+    },
+    'cyber-monday': {
+      title: 'Cyber Monday - Viajes a Europa',
+      discount: '45%',
+      description: 'Descuentos especiales de Cyber Monday'
+    },
+    'ofertas-invierno': {
+      title: 'Ofertas de Invierno',
+      discount: '30%',
+      description: 'Viaja a Europa en invierno con descuento'
+    },
+    'ofertas-ultima-hora': {
+      title: 'Ofertas de Última Hora',
+      discount: '40%',
+      description: 'Aprovecha nuestras ofertas flash'
+    },
+    'ofertas-verano': {
+      title: 'Ofertas de Verano',
+      discount: '35%',
+      description: 'Verano en Europa a precios increíbles'
+    },
+    'promociones-especiales': {
+      title: 'Promociones Especiales',
+      discount: '25%',
+      description: 'Promociones exclusivas para ti'
+    }
+  };
+
+  const offerData = offers[offer] || {
+    title: offer.replace(

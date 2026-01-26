@@ -75,6 +75,11 @@ const PackagesService = lazy(() => import("@/pages/services/Packages"));
 const Tours = lazy(() => import("@/pages/services/Tours"));
 const Insurance = lazy(() => import("@/pages/services/Insurance"));
 const CountryLanding = lazy(() => import("@/pages/CountryLanding"));
+const CondicionesVenta = lazy(() => import("@/pages/CondicionesVenta"));
+const CookiesPage = lazy(() => import("@/pages/Cookies"));
+const ExperiencePage = lazy(() => import("@/pages/ExperiencePage"));
+const PackagePage = lazy(() => import("@/pages/PackagePage"));
+const OfferPage = lazy(() => import("@/pages/OfferPage"));
 
 // Protected Route Wrapper
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
@@ -142,6 +147,14 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/testimonios" component={Testimonials} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/condiciones-venta" component={CondicionesVenta} />
+      <Route path="/cookies" component={CookiesPage} />
+      
+      {/* Experience, Package, Offer Pages */}
+      <Route path="/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/experiences/:slug" component={ExperiencePage} />
+      <Route path="/paquetes/:slug" component={PackagePage} />
+      <Route path="/ofertas/:slug" component={OfferPage} />
       
       {/* Local SEO Landing Pages */}
       <Route path="/desde-colombia" component={FromColombia} />
@@ -156,45 +169,116 @@ function Router() {
       <Route path="/desde/:country" component={CountryLanding} />
       
       {/* Country-Specific SEO Routes (hreflang targeting) */}
+      {/* Spanish Colombia (es-co) */}
       <Route path="/es-co" component={Home} />
       <Route path="/es-co/" component={Home} />
       <Route path="/es-co/destinos" component={Destinations} />
       <Route path="/es-co/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-co/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-co/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-co/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Mexico (es-mx) */}
       <Route path="/es-mx" component={Home} />
       <Route path="/es-mx/" component={Home} />
       <Route path="/es-mx/destinos" component={Destinations} />
       <Route path="/es-mx/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-mx/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-mx/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-mx/ofertas/:slug" component={OfferPage} />
+      
+      {/* Portuguese Brazil (pt-br) */}
       <Route path="/pt-br" component={Home} />
       <Route path="/pt-br/" component={Home} />
       <Route path="/pt-br/destinos" component={Destinations} />
       <Route path="/pt-br/destinos/:slug" component={DestinationPage} />
+      <Route path="/pt-br/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/pt-br/paquetes/:slug" component={PackagePage} />
+      <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
       <Route path="/es-ar/" component={Home} />
       <Route path="/es-ar/destinos" component={Destinations} />
       <Route path="/es-ar/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-ar/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-ar/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-ar/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Peru (es-pe) */}
       <Route path="/es-pe" component={Home} />
       <Route path="/es-pe/" component={Home} />
       <Route path="/es-pe/destinos" component={Destinations} />
       <Route path="/es-pe/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-pe/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-pe/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-pe/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Panama (es-pa) */}
       <Route path="/es-pa" component={Home} />
       <Route path="/es-pa/" component={Home} />
       <Route path="/es-pa/destinos" component={Destinations} />
       <Route path="/es-pa/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-pa/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-pa/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-pa/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Costa Rica (es-cr) */}
       <Route path="/es-cr" component={Home} />
       <Route path="/es-cr/" component={Home} />
       <Route path="/es-cr/destinos" component={Destinations} />
       <Route path="/es-cr/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-cr/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-cr/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-cr/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Dominican Republic (es-do) */}
       <Route path="/es-do" component={Home} />
       <Route path="/es-do/" component={Home} />
       <Route path="/es-do/destinos" component={Destinations} />
       <Route path="/es-do/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-do/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-do/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-do/ofertas/:slug" component={OfferPage} />
+      
+      {/* Spanish Caribbean */}
       <Route path="/es/caribe" component={Home} />
       <Route path="/es/caribe/" component={Home} />
       <Route path="/es/caribe/destinos" component={Destinations} />
+      
+      {/* English routes */}
       <Route path="/en" component={Home} />
       <Route path="/en/" component={Home} />
       <Route path="/en/destinations" component={Destinations} />
       <Route path="/en/destinations/:slug" component={DestinationPage} />
+      <Route path="/en/experiences/:slug" component={ExperiencePage} />
+      <Route path="/en/packages/:slug" component={PackagePage} />
+      <Route path="/en/blog/:country" component={Blog} />
+      <Route path="/en/blog/post/:slug" component={BlogPost} />
+      
+      {/* English Argentina (en-ar) */}
+      <Route path="/en-ar" component={Home} />
+      <Route path="/en-ar/" component={Home} />
+      <Route path="/en-ar/destinations" component={Destinations} />
+      <Route path="/en-ar/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-ar/experiences/:slug" component={ExperiencePage} />
+      <Route path="/en-ar/packages/:slug" component={PackagePage} />
+      
+      {/* English Colombia (en-co) */}
+      <Route path="/en-co" component={Home} />
+      <Route path="/en-co/" component={Home} />
+      <Route path="/en-co/destinations" component={Destinations} />
+      <Route path="/en-co/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-co/experiences/:slug" component={ExperiencePage} />
+      <Route path="/en-co/packages/:slug" component={PackagePage} />
+      
+      {/* English Mexico (en-mx) */}
+      <Route path="/en-mx" component={Home} />
+      <Route path="/en-mx/" component={Home} />
+      <Route path="/en-mx/destinations" component={Destinations} />
+      <Route path="/en-mx/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-mx/experiences/:slug" component={ExperiencePage} />
+      <Route path="/en-mx/packages/:slug" component={PackagePage} />
       
       {/* Route Pages (Origin-Destination) */}
       <Route path="/routes/:route" component={RouteTemplate} />

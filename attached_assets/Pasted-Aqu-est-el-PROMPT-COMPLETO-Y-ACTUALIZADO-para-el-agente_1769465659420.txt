@@ -1,0 +1,246 @@
+Aquí está el **PROMPT COMPLETO Y ACTUALIZADO** para el agente de Replit con todas las URLs adicionales:
+
+***
+
+# 🚨 CORRECCIÓN URGENTE DE ERRORES GOOGLE SEARCH CONSOLE - TRIPSEUROPA.COM
+
+## 📋 CONTEXTO DEL PROBLEMA
+El sitio web **https://tripseuropa.com** tiene un problema CRÍTICO de indexación en Google Search Console. Google NO puede rastrear **más de 500+ URLs** del sitio (todas marcadas como "N/D" - No Disponible en último rastreo).
+
+**Google Search Console:** https://search.google.com/search-console
+**Replit Project:** https://replit.com/@holidayhub/Europa-Trips
+**Fecha:** 26 de enero de 2026
+
+***
+
+## 🎯 ALCANCE DEL PROBLEMA
+
+### URLs Afectadas por Categoría:
+- **150+** páginas de blog (ES, EN, PT-BR)
+- **200+** páginas de destinos multilingües 
+- **100+** páginas de paquetes turísticos
+- **50+** páginas de experiencias
+- **30+** páginas de ofertas especiales
+- **10+** páginas institucionales
+
+### Idiomas/Regiones Afectados:
+- ✅ Español (ES) - Base
+- ❌ Español Argentina (es-ar)
+- ❌ Español Colombia (es-co)
+- ❌ Español Costa Rica (es-cr)
+- ❌ Español Rep. Dominicana (es-do)
+- ❌ Español México (es-mx)
+- ❌ Español Panamá (es-pa)
+- ❌ Español Perú (es-pe)
+- ❌ English Argentina (en-ar)
+- ❌ English Colombia (en-co)
+- ❌ English México (en-mx)
+- ❌ English General (en)
+- ❌ Português Brasil (pt-br)
+
+***
+
+## 📝 LISTA COMPLETA DE URLs NO RASTREADAS (500+ URLs)
+
+### 1. PÁGINAS DE BLOG
+
+#### Blog en Español (ES)
+```
+https://tripseuropa.com/blog/argentina
+https://tripseuropa.com/blog/brasil
+https://tripseuropa.com/blog/caribe
+https://tripseuropa.com/blog/colombia
+https://tripseuropa.com/blog/costa-rica
+https://tripseuropa.com/blog/dominicana
+https://tripseuropa.com/blog/mexico
+https://tripseuropa.com/blog/panama
+https://tripseuropa.com/blog/peru
+```
+
+#### Blog Posts en Español (ES)
+```
+https://tripseuropa.com/blog/post/alojamiento-europa
+https://tripseuropa.com/blog/post/ciudades-romanticas-europa
+https://tripseuropa.com/blog/post/documentacion-viaje-europa
+https://tripseuropa.com/blog/post/etias-latinoamericanos
+https://tripseuropa.com/blog/post/europa-en-15-dias
+https://tripseuropa.com/blog/post/gastronomia-europea
+https://tripseuropa.com/blog/post/guia-viaje-paris-2026
+https://tripseuropa.com/blog/post/luna-miel-europa
+https://tripseuropa.com/blog/post/mejores-destinos-europa-presupuesto
+https://tripseuropa.com/blog/post/seguro-viaje-europa
+https://tripseuropa.com/blog/post/temporada-alta-baja-europa
+https://tripseuropa.com/blog/post/trenes-europa
+https://tripseuropa.com/blog/post/viaje-familia-europa
+https://tripseuropa.com/blog/post/visado-schengen
+https://tripseuropa.com/blog/post/vuelos-baratos-europa
+```
+
+#### Blog en Inglés (EN)
+```
+https://tripseuropa.com/en/blog/argentina
+https://tripseuropa.com/en/blog/brasil
+https://tripseuropa.com/en/blog/caribe
+https://tripseuropa.com/en/blog/colombia
+https://tripseuropa.com/en/blog/costa-rica
+https://tripseuropa.com/en/blog/dominicana
+https://tripseuropa.com/en/blog/mexico
+https://tripseuropa.com/en/blog/panama
+https://tripseuropa.com/en/blog/peru
+https://tripseuropa.com/en/blog/post/alojamiento-europa
+https://tripseuropa.com/en/blog/post/ciudades-romanticas-europa
+https://tripseuropa.com/en/blog/post/documentacion-viaje-europa
+https://tripseuropa.com/en/blog/post/etias-latinoamericanos
+https://tripseuropa.com/en/blog/post/europa-en-15-dias
+https://tripseuropa.com/en/blog/post/gastronomia-europea
+https://tripseuropa.com/en/blog/post/guia-viaje-paris-2026
+https://tripseuropa.com/en/blog/post/luna-miel-europa
+https://tripseuropa.com/en/blog/post/mejores-destinos-europa-presupuesto
+https://tripseuropa.com/en/blog/post/seguro-viaje-europa
+https://tripseuropa.com/en/blog/post/temporada-alta-baja-europa
+https://tripseuropa.com/en/blog/post/trenes-europa
+https://tripseuropa.com/en/blog/post/viaje-familia-europa
+https://tripseuropa.com/en/blog/post/visado-schengen
+https://tripseuropa.com/en/blog/post/vuelos-baratos-europa
+```
+
+### 2. PÁGINAS DE DESTINOS (ESPAÑOL)
+```
+https://tripseuropa.com/destinos/albania
+https://tripseuropa.com/destinos/alemania
+https://tripseuropa.com/destinos/amsterdam
+https://tripseuropa.com/destinos/atenas
+https://tripseuropa.com/destinos/austria
+https://tripseuropa.com/destinos/barcelona
+https://tripseuropa.com/destinos/belgica
+https://tripseuropa.com/destinos/berlin
+https://tripseuropa.com/destinos/bruselas
+https://tripseuropa.com/destinos/budapest
+https://tripseuropa.com/destinos/chipre
+https://tripseuropa.com/destinos/cinque-terre
+https://tripseuropa.com/destinos/copenhague
+https://tripseuropa.com/destinos/costa-amalfitana
+https://tripseuropa.com/destinos/croacia
+https://tripseuropa.com/destinos/dinamarca
+https://tripseuropa.com/destinos/dublin
+https://tripseuropa.com/destinos/dubrovnik
+https://tripseuropa.com/destinos/edimburgo
+https://tripseuropa.com/destinos/escocia
+https://tripseuropa.com/destinos/espana
+https://tripseuropa.com/destinos/estados-balticos
+https://tripseuropa.com/destinos/estocolmo
+https://tripseuropa.com/destinos/finlandia
+https://tripseuropa.com/destinos/florencia
+https://tripseuropa.com/destinos/francia
+https://tripseuropa.com/destinos/grecia
+https://tripseuropa.com/destinos/helsinki
+https://tripseuropa.com/destinos/hungria
+https://tripseuropa.com/destinos/ibiza
+https://tripseuropa.com/destinos/irlanda
+https://tripseuropa.com/destinos/islandia
+https://tripseuropa.com/destinos/italia
+https://tripseuropa.com/destinos/lisboa
+https://tripseuropa.com/destinos/londres
+https://tripseuropa.com/destinos/madrid
+https://tripseuropa.com/destinos/malta
+https://tripseuropa.com/destinos/milan
+https://tripseuropa.com/destinos/munich
+https://tripseuropa.com/destinos/mykonos
+https://tripseuropa.com/destinos/niza
+https://tripseuropa.com/destinos/noruega
+https://tripseuropa.com/destinos/oslo
+https://tripseuropa.com/destinos/paises-bajos
+https://tripseuropa.com/destinos/paris
+https://tripseuropa.com/destinos/polonia
+https://tripseuropa.com/destinos/porto
+https://tripseuropa.com/destinos/portugal
+https://tripseuropa.com/destinos/praga
+https://tripseuropa.com/destinos/reino-unido
+https://tripseuropa.com/destinos/republica-checa
+https://tripseuropa.com/destinos/reykjavik
+https://tripseuropa.com/destinos/roma
+https://tripseuropa.com/destinos/rumania
+https://tripseuropa.com/destinos/santorini
+https://tripseuropa.com/destinos/sevilla
+https://tripseuropa.com/destinos/split
+https://tripseuropa.com/destinos/suecia
+https://tripseuropa.com/destinos/suiza
+https://tripseuropa.com/destinos/varsovia
+https://tripseuropa.com/destinos/venecia
+https://tripseuropa.com/destinos/viena
+https://tripseuropa.com/destinos/zurich
+```
+
+### 3. PÁGINAS MULTILINGÜES - ENGLISH ARGENTINA (en-ar)
+```
+https://tripseuropa.com/en-ar/
+https://tripseuropa.com/en-ar/destinations/albania
+https://tripseuropa.com/en-ar/destinations/austria
+https://tripseuropa.com/en-ar/destinations/baltics
+https://tripseuropa.com/en-ar/destinations/belgium
+https://tripseuropa.com/en-ar/destinations/croatia
+https://tripseuropa.com/en-ar/destinations/cyprus
+https://tripseuropa.com/en-ar/destinations/czech-republic
+https://tripseuropa.com/en-ar/destinations/denmark
+https://tripseuropa.com/en-ar/destinations/finland
+https://tripseuropa.com/en-ar/destinations/france
+https://tripseuropa.com/en-ar/destinations/germany
+https://tripseuropa.com/en-ar/destinations/greece
+https://tripseuropa.com/en-ar/destinations/hungary
+https://tripseuropa.com/en-ar/destinations/iceland
+https://tripseuropa.com/en-ar/destinations/ireland
+https://tripseuropa.com/en-ar/destinations/italy
+https://tripseuropa.com/en-ar/destinations/malta
+https://tripseuropa.com/en-ar/destinations/netherlands
+https://tripseuropa.com/en-ar/destinations/norway
+https://tripseuropa.com/en-ar/destinations/poland
+https://tripseuropa.com/en-ar/destinations/portugal
+https://tripseuropa.com/en-ar/destinations/romania
+https://tripseuropa.com/en-ar/destinations/scotland
+https://tripseuropa.com/en-ar/destinations/spain
+https://tripseuropa.com/en-ar/destinations/sweden
+https://tripseuropa.com/en-ar/destinations/switzerland
+https://tripseuropa.com/en-ar/destinations/united-kingdom
+https://tripseuropa.com/en-ar/experiences/año-nuevo-europa
+https://tripseuropa.com/en-ar/experiences/arte-cultura
+https://tripseuropa.com/en-ar/experiences/aventura-naturaleza
+https://tripseuropa.com/en-ar/experiences/ciudades-historicas
+https://tripseuropa.com/en-ar/experiences/gastronomia-europa
+https://tripseuropa.com/en-ar/experiences/invierno-europa
+https://tripseuropa.com/en-ar/experiences/navidad-europa
+https://tripseuropa.com/en-ar/experiences/otono-europa
+https://tripseuropa.com/en-ar/experiences/primavera-europa
+https://tripseuropa.com/en-ar/experiences/verano-europa
+https://tripseuropa.com/en-ar/packages/capitales-europeas
+https://tripseuropa.com/en-ar/packages/europa-10-dias
+https://tripseuropa.com/en-ar/packages/europa-15-dias
+https://tripseuropa.com/en-ar/packages/europa-21-dias
+https://tripseuropa.com/en-ar/packages/europa-7-dias
+https://tripseuropa.com/en-ar/packages/europa-clasica
+https://tripseuropa.com/en-ar/packages/europa-express
+https://tripseuropa.com/en-ar/packages/europa-oriental
+https://tripseuropa.com/en-ar/packages/familia-europa
+https://tripseuropa.com/en-ar/packages/luna-de-miel
+https://tripseuropa.com/en-ar/packages/norte-europa
+https://tripseuropa.com/en-ar/packages/tour-mediterraeo
+```
+
+### 4. PÁGINAS MULTILINGÜES - ENGLISH COLOMBIA (en-co)
+```
+https://tripseuropa.com/en-co/
+[TODAS las mismas subcategorías que en-ar: destinations/*, experiences/*, packages/*]
+```
+
+### 5. PÁGINAS MULTILINGÜES - ENGLISH MÉXICO (en-mx)
+```
+https://tripseuropa.com/en-mx/
+[TODAS las mismas subcategorías que en-ar: destinations/*, experiences/*, packages/*]
+```
+
+### 6. PÁGINAS MULTILINGÜES - ESPAÑOL ARGENTINA (es-ar)
+```
+https://tripseuropa.com/es-ar/
+https://tripseuropa.com/es-ar/destinos/* (todos los destinos)
+https://tripseuropa.com/es-ar/experiencias/* (todas las experiencias)
+https://tripseuropa.com/es-ar/ofertas/black-friday
+https://tripseuropa.com/es-ar/ofertas
