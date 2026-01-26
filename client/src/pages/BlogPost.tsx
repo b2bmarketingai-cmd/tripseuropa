@@ -12,6 +12,72 @@ import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blog
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
 
+function parseSpanishDate(dateStr: string): string {
+  const months: Record<string, string> = {
+    'Ene': '01', 'Feb': '02', 'Mar': '03', 'Abr': '04', 
+    'May': '05', 'Jun': '06', 'Jul': '07', 'Ago': '08',
+    'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dic': '12'
+  };
+  const parts = dateStr.split(' ');
+  if (parts.length === 3) {
+    const day = parts[0].padStart(2, '0');
+    const month = months[parts[1]] || '01';
+    const year = parts[2];
+    return `${year}-${month}-${day}`;
+  }
+  return new Date().toISOString().split('T')[0];
+}
+
+function ArticleSchema({ title, description, image, slug, date, author }: { 
+  title: string; 
+  description: string; 
+  image: string; 
+  slug: string; 
+  date: string;
+  author?: string;
+}) {
+  const isoDate = parseSpanishDate(date);
+  const hasPersonAuthor = author && author !== "Trips Europa";
+  
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "image": image,
+    "url": `https://tripseuropa.com/blog/post/${slug}`,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": hasPersonAuthor ? {
+      "@type": "Person",
+      "name": author
+    } : {
+      "@type": "Organization",
+      "name": "Trips Europa",
+      "url": "https://tripseuropa.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Trips Europa",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tripseuropa.com/favicon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://tripseuropa.com/blog/post/${slug}`
+    }
+  };
+  
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -25,11 +91,11 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-display text-accent mb-4">Articulo No Encontrado</h1>
-          <p className="text-muted-foreground mb-8">El articulo que buscas no existe o ha sido movido.</p>
+        <main className="container mx-auto px-4 py-16 text-center" data-testid="section-not-found">
+          <h1 className="text-3xl font-display text-accent mb-4" data-testid="text-not-found-title">Articulo No Encontrado</h1>
+          <p className="text-muted-foreground mb-8" data-testid="text-not-found-message">El articulo que buscas no existe o ha sido movido.</p>
           <Link href="/blog">
-            <Button variant="outline">
+            <Button variant="outline" data-testid="button-not-found-back">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Blog
             </Button>
@@ -44,6 +110,7 @@ export default function BlogPost() {
   const title = post.title[language] || post.title.es;
   const excerpt = post.excerpt[language] || post.excerpt.es;
   const postSlug = fullPost?.slug || post.id;
+  const isoDate = parseSpanishDate(post.date);
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,19 +121,30 @@ export default function BlogPost() {
         url={`https://tripseuropa.com/blog/post/${postSlug}`}
         image={post.image}
         type="article"
+        publishedTime={isoDate}
+        modifiedTime={isoDate}
+        author={fullPost?.author || "Trips Europa"}
+      />
+      <ArticleSchema 
+        title={title}
+        description={excerpt}
+        image={post.image}
+        slug={postSlug}
+        date={post.date}
+        author={fullPost?.author}
       />
       <Header />
       <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
             <Link href="/blog">
-              <Button variant="ghost" size="sm" className="mb-4">
+              <Button variant="ghost" size="sm" className="mb-4" data-testid="button-back-blog">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver al Blog
               </Button>
             </Link>
             
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4" data-testid="badge-post-category">
               {post.categoryLabel[language] || post.categoryLabel.es}
             </Badge>
             
@@ -74,15 +152,15 @@ export default function BlogPost() {
               {title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-6">
+            <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-6" data-testid="text-post-meta">
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                <span>{post.date}</span>
+                <span data-testid="text-post-date">{post.date}</span>
               </div>
               {fullPost?.author && (
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
-                  <span>{fullPost.author}</span>
+                  <span data-testid="text-post-author">{fullPost.author}</span>
                 </div>
               )}
             </div>
@@ -99,18 +177,18 @@ export default function BlogPost() {
           </div>
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="text-post-excerpt">
               {excerpt}
             </p>
 
             {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
-              <section key={index} className="mb-10">
-                <h2 className="text-2xl font-display text-accent mb-4">{section.title}</h2>
+              <section key={index} className="mb-10" data-testid={`section-content-${index}`}>
+                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{section.title}</h2>
                 
-                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line">{section.content}</p>
+                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{section.content}</p>
                 
                 {section.list && (
-                  <ul className="list-disc pl-6 space-y-2 text-foreground">
+                  <ul className="list-disc pl-6 space-y-2 text-foreground" data-testid={`list-section-${index}`}>
                     {section.list.map((item: string, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -120,14 +198,14 @@ export default function BlogPost() {
             ))}
 
             {fullPost?.faqs && fullPost.faqs.length > 0 && (
-              <section className="mt-12">
-                <h2 className="text-2xl font-display text-accent mb-6">Preguntas Frecuentes</h2>
+              <section className="mt-12" data-testid="section-faq">
+                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">Preguntas Frecuentes</h2>
                 <div className="space-y-4">
                   {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
-                    <Card key={index}>
+                    <Card key={index} data-testid={`card-faq-${index}`}>
                       <CardContent className="p-4">
-                        <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
-                        <p className="text-muted-foreground">{faq.answer}</p>
+                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{faq.question}</h3>
+                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{faq.answer}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -136,19 +214,19 @@ export default function BlogPost() {
             )}
           </div>
 
-          <div className="mt-12 pt-8 border-t">
+          <div className="mt-12 pt-8 border-t" data-testid="section-post-footer">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">Etiquetas:</p>
+                <p className="text-sm text-muted-foreground mb-2" data-testid="text-tags-label">Etiquetas:</p>
                 <div className="flex flex-wrap gap-2">
                   {post.keywords.slice(0, 5).map((keyword: string, index: number) => (
-                    <Badge key={index} variant="outline" className="text-xs">
+                    <Badge key={index} variant="outline" className="text-xs" data-testid={`badge-keyword-${index}`}>
                       {keyword}
                     </Badge>
                   ))}
                 </div>
               </div>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" data-testid="button-share">
                 <Share2 className="w-4 h-4 mr-2" />
                 Compartir
               </Button>

@@ -21,6 +21,7 @@ import { TrustpilotReviews } from "@/components/TrustpilotReviews";
 import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
 import { DestinationGrid } from "@/components/DestinationGrid";
 import { ContactSupportModal } from "@/components/ContactSupportModal";
+import { BlogHighlights } from "@/components/BlogHighlights";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -93,6 +94,7 @@ export default function Home() {
         </div>
       </section>
       <BestPriceGuarantee />
+      <BlogHighlights />
       <NewsletterSignup />
       <TrustpilotReviews />
       <PromotionalVideoBanner />
