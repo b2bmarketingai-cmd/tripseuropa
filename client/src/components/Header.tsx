@@ -223,6 +223,28 @@ export function Header() {
   const { user, isAuthenticated, logout } = useAuth();
   const [location] = useLocation();
 
+  const handleLanguageChange = (newLang: 'es' | 'en' | 'pt') => {
+    const currentPath = window.location.pathname;
+    const cleanPath = currentPath.replace(/^\/(es|en|pt-br|[a-z]{2}-[a-z]{2})/, '');
+    const prefix = newLang === 'pt' ? '/pt-br' : `/${newLang}`;
+    setLanguage(newLang);
+    const newPath = `${prefix}${cleanPath.startsWith('/') ? cleanPath : '/' + cleanPath}`;
+    window.location.href = newPath;
+  };
+
+  const getLocalizedPath = (path: string) => {
+    if (!path) return '/';
+    if (path.startsWith('http') || path.startsWith('tel:') || path.startsWith('mailto:')) return path;
+    const currentPath = window.location.pathname;
+    const match = currentPath.match(/^\/(es|en|pt-br|[a-z]{2}-[a-z]{2})/);
+    const prefix = match ? match[0] : '';
+
+    if (prefix && path.startsWith('/') && !path.startsWith(prefix)) {
+      return `${prefix}${path === '/' ? '' : path}`;
+    }
+    return path;
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -230,6 +252,11 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    window.location.href = getLocalizedPath(href);
+  };
 
   const currentLang = language as "es" | "en" | "pt";
 
@@ -308,7 +335,7 @@ export function Header() {
                     };
                     return (
                       <DropdownMenuItem key={idx} asChild className="cursor-pointer">
-                        <Link href={`/destinations/${slugMap[item] || item.toLowerCase().replace(/\s+/g, '-')}`} className="w-full">
+                        <Link href={getLocalizedPath(`/destinations/${slugMap[item] || item.toLowerCase().replace(/\s+/g, '-')}`)} className="w-full">
                           {item}
                         </Link>
                       </DropdownMenuItem>
@@ -387,7 +414,7 @@ export function Header() {
                 <DropdownMenuContent align="start" className="w-64 bg-white p-2">
                   {OFFERS_MENU[currentLang].map((item, idx) => (
                     <DropdownMenuItem key={idx} asChild className="cursor-pointer">
-                      <Link href={item.href} className="w-full">
+                      <Link href={getLocalizedPath(item.href)} className="w-full">
                         {item.name}
                       </Link>
                     </DropdownMenuItem>
@@ -396,7 +423,7 @@ export function Header() {
               </DropdownMenu>
             </div>
 
-            <Link href="/" className="flex items-center justify-center absolute left-1/2 -translate-x-1/2" data-testid="link-home-logo">
+            <Link href={getLocalizedPath("/")} className="flex items-center justify-center absolute left-1/2 -translate-x-1/2" data-testid="link-home-logo">
               <img 
                 src={logoUrl} 
                 alt="Trips Europa" 
@@ -432,13 +459,13 @@ export function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-64 bg-white p-2">
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
-                    <Link href="/travel-assistant" className="flex items-center gap-3 w-full">
+                    <Link href={getLocalizedPath("/travel-assistant")} className="flex items-center gap-3 w-full">
                       <MessageCircle className="w-5 h-5" />
                       <span>{labels.asistenciaChat[currentLang]}</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="cursor-pointer gap-3">
-                    <Link href="/contact" className="flex items-center gap-3 w-full">
+                    <Link href={getLocalizedPath("/contact")} className="flex items-center gap-3 w-full">
                       <HelpCircle className="w-5 h-5" />
                       <span>{labels.centroAyuda[currentLang]}</span>
                     </Link>
@@ -473,7 +500,7 @@ export function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white">
                   <DropdownMenuItem 
-                    onClick={() => setLanguage("es")} 
+                    onClick={() => handleLanguageChange("es")} 
                     className={cn("cursor-pointer gap-2", language === "es" && "bg-accent/10")}
                     data-testid="button-lang-es"
                   >
@@ -481,7 +508,7 @@ export function Header() {
                     <span>Español</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
-                    onClick={() => setLanguage("en")} 
+                    onClick={() => handleLanguageChange("en")} 
                     className={cn("cursor-pointer gap-2", language === "en" && "bg-accent/10")}
                     data-testid="button-lang-en"
                   >
@@ -489,7 +516,7 @@ export function Header() {
                     <span>English</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
-                    onClick={() => setLanguage("pt")} 
+                    onClick={() => handleLanguageChange("pt")} 
                     className={cn("cursor-pointer gap-2", language === "pt" && "bg-accent/10")}
                     data-testid="button-lang-pt"
                   >
@@ -520,15 +547,15 @@ export function Header() {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white">
-                  <DropdownMenuItem onClick={() => setLanguage("es")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem onClick={() => handleLanguageChange("es")} className="cursor-pointer gap-2">
                     <span className="text-lg">🇪🇸</span>
                     <span>ES</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage("en")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem onClick={() => handleLanguageChange("en")} className="cursor-pointer gap-2">
                     <span className="text-lg">🇬🇧</span>
                     <span>EN</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage("pt")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem onClick={() => handleLanguageChange("pt")} className="cursor-pointer gap-2">
                     <span className="text-lg">🇧🇷</span>
                     <span>PT</span>
                   </DropdownMenuItem>
@@ -678,11 +705,11 @@ export function Header() {
                   <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="pl-4 py-2 space-y-2">
-                  <Link href="/travel-assistant" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsOpen(false)}>
+                  <Link href={getLocalizedPath("/travel-assistant")} className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsOpen(false)}>
                     <MessageCircle className="w-4 h-4" />
                     {labels.asistenciaChat[currentLang]}
                   </Link>
-                  <Link href="/contact" className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link href={getLocalizedPath("/contact")} className="flex items-center gap-2 py-1 text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
                     <HelpCircle className="w-4 h-4" />
                     {labels.centroAyudaMobile[currentLang]}
                   </Link>
@@ -766,7 +793,7 @@ export function Header() {
                 <p className="text-sm text-muted-foreground mb-2">
                   {labels.eresAgente[currentLang]}
                 </p>
-                <Link href="/agentes/registro">
+                <Link href={getLocalizedPath("/agentes/registro")}>
                   <Button variant="outline" className="w-full" onClick={() => setAccountModalOpen(false)}>
                     {labels.registrarse[currentLang]}
                   </Button>
