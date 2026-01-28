@@ -1170,13 +1170,9 @@ const translations: Record<Language, Record<string, string>> = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('language') as Language;
   const [location] = useLocation();
-  
+
   const [language, setLanguage] = useState<Language>(() => {
-    // Extract language from URL path (e.g., /en/, /pt-br/, /es/)
     if (typeof window !== 'undefined') {
       const path = window.location.pathname;
       const match = path.match(/^\/(en|pt-br|es)(?:\/|$)/);
@@ -1185,14 +1181,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         if (urlLang === 'pt-br') return 'pt';
         return urlLang as Language;
       }
-      // Fallback to localStorage
       const saved = localStorage.getItem('language') as Language;
       return saved || 'es';
     }
     return 'es';
   });
-  
-  // Update language when URL changes
+
   useEffect(() => {
     const path = location;
     const match = path.match(/^\/(en|pt-br|es)(?:\/|$)/);
@@ -1203,9 +1197,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         setLanguage(newLang);
       }
     }
-  }, [location]);}, [language]);
+  }, [location]);
 
-    // Save language to localStorage
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);

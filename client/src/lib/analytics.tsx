@@ -36,7 +36,6 @@ interface EventParams {
 export function trackEvent(eventName: EventName, params?: EventParams): void {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, params);
-    console.log(`[Analytics] Event: ${eventName}`, params);
   }
 }
 
@@ -123,7 +122,6 @@ export function initializeAnalytics(measurementId: string): void {
     send_page_view: false,
   });
 
-  console.log(`[Analytics] Initialized with ID: ${measurementId}`);
 }
 
 export function useAnalytics() {

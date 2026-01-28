@@ -27,6 +27,7 @@ import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { FloatingContactButtons } from "@/components/support";
+import SEOContent from "@/components/SEOContent";
 
 export default function Home() {
   const { language } = useI18n();
@@ -82,6 +83,7 @@ export default function Home() {
       <Header />
       <HeroCarousel />
       <HeroFlightSearch />
+      <SEOContent />
       <TopOffers />
       <DestinationGrid />
       <ReserveSpot />

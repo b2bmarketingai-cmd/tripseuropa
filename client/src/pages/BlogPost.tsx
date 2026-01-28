@@ -12,6 +12,7 @@ import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blog
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
 import { BreadcrumbSchema } from "@/components/SEOSchemas";
+import PageBreadcrumbs, { getHomeLabel, getHomePath } from "@/components/PageBreadcrumbs";
 
 function parseSpanishDate(dateStr: string): string {
   const months: Record<string, string> = {
@@ -143,6 +144,11 @@ export default function BlogPost() {
         ]}
       />
       <Header />
+      <PageBreadcrumbs items={[
+        { label: getHomeLabel(language), href: getHomePath(language) },
+        { label: "Blog", href: `${langPrefix}/blog` },
+        { label: title }
+      ]} />
       <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
