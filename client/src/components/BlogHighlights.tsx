@@ -12,6 +12,7 @@ const recentPosts = BLOG_POSTS_SIMPLE.slice(0, 6);
 export function BlogHighlights() {
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
+  const langPrefix = lang === "es" ? "" : `/${lang}`;
   
   const content = {
     es: {
@@ -65,7 +66,7 @@ export function BlogHighlights() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {posts.map((post) => (
-            <Link key={post.id} href={`/blog/post/${post.id}`}>
+            <Link key={post.id} href={`${langPrefix}/blog/post/${post.id}`}>
               <Card className="h-full cursor-pointer" data-testid={`card-blog-${post.id}`}>
                 <div className="aspect-video relative">
                   <img 
@@ -104,7 +105,7 @@ export function BlogHighlights() {
           <h3 className="text-lg font-semibold text-center mb-4" data-testid="text-blog-countries">{c.blogCountries}</h3>
           <div className="flex flex-wrap justify-center gap-2">
             {blogCountries.map((country) => (
-              <Link key={country.slug} href={`/blog/${country.slug}`}>
+              <Link key={country.slug} href={`${langPrefix}/blog/${country.slug}`}>
                 <Badge variant="outline" className="cursor-pointer" data-testid={`link-blog-${country.slug}`}>
                   {country.name[lang] || country.name.es}
                 </Badge>
@@ -114,7 +115,7 @@ export function BlogHighlights() {
         </div>
         
         <div className="text-center">
-          <Link href="/blog">
+          <Link href={`${langPrefix}/blog`}>
             <Button variant="outline" size="lg" data-testid="button-view-all-blog">
               {c.viewAll}
               <ArrowRight className="w-4 h-4 ml-2" />

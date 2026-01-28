@@ -75,6 +75,7 @@ const DESTINATIONS = [
 export function DestinationGrid() {
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
+  const langPrefix = lang === "es" ? "" : `/${lang}`;
 
   const content = {
     es: {
@@ -106,7 +107,7 @@ export function DestinationGrid() {
           {DESTINATIONS.map((dest) => (
             <Link 
               key={dest.id} 
-              href={`/destinations/${dest.id}`}
+              href={`${langPrefix}/destinations/${dest.id}`}
               data-testid={`link-destination-${dest.id}`}
             >
               <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer bg-gray-200">
@@ -137,7 +138,7 @@ export function DestinationGrid() {
         </div>
 
         <div className="text-center mt-10">
-          <Link href="/destinations">
+          <Link href={`${langPrefix}/destinations`}>
             <Button variant="outline" size="lg" data-testid="button-view-all-destinations">
               {content[lang].viewAll}
             </Button>
