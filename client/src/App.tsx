@@ -170,6 +170,77 @@ function Router() {
       {/* Dynamic Country Landing Pages */}
       <Route path="/desde/:country" component={CountryLanding} />
       
+      {/* Simple Language Prefix Routes (/es, /en) */}
+      {/* Spanish (es) */}
+      <Route path="/es" component={Home} />
+      <Route path="/es/" component={Home} />
+      <Route path="/es/destinations" component={Destinations} />
+      <Route path="/es/destinations/:slug" component={DestinationPage} />
+      <Route path="/es/destinos" component={Destinations} />
+      <Route path="/es/destinos/:slug" component={DestinationPage} />
+      <Route path="/es/packages" component={Packages} />
+      <Route path="/es/paquetes" component={Packages} />
+      <Route path="/es/paquetes/:slug" component={PackagePage} />
+      <Route path="/es/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es/ofertas/:slug" component={OfferPage} />
+      <Route path="/es/blog" component={Blog} />
+      <Route path="/es/blog/post/:slug" component={BlogPost} />
+      <Route path="/es/blog/:country" component={Blog} />
+      <Route path="/es/contact" component={Contact} />
+      <Route path="/es/about" component={About} />
+      <Route path="/es/travel-assistant" component={TravelAssistant} />
+      <Route path="/es/asistente" component={TravelAssistant} />
+      <Route path="/es/rewards" component={Rewards} />
+      <Route path="/es/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/es/ofertas-ultima-hora" component={LastMinuteOffers} />
+      <Route path="/es/last-minute-offers" component={LastMinuteOffers} />
+      <Route path="/es/services/vuelos" component={Flights} />
+      <Route path="/es/services/flights" component={Flights} />
+      <Route path="/es/services/hoteles" component={Hotels} />
+      <Route path="/es/services/hotels" component={Hotels} />
+      <Route path="/es/services/paquetes" component={PackagesService} />
+      <Route path="/es/services/packages" component={PackagesService} />
+      <Route path="/es/services/tours" component={Tours} />
+      <Route path="/es/services/seguros" component={Insurance} />
+      <Route path="/es/services/insurance" component={Insurance} />
+      <Route path="/es/services/esim" component={ESim} />
+      <Route path="/es/esim" component={ESim} />
+      <Route path="/es/privacy" component={Privacy} />
+      <Route path="/es/testimonios" component={Testimonials} />
+      <Route path="/es/forum" component={Forum} />
+      <Route path="/es/foro" component={Forum} />
+      <Route path="/es/agentes/registro" component={Contact} />
+      
+      {/* English (en) */}
+      <Route path="/en" component={Home} />
+      <Route path="/en/" component={Home} />
+      <Route path="/en/destinations" component={Destinations} />
+      <Route path="/en/destinations/:slug" component={DestinationPage} />
+      <Route path="/en/packages" component={Packages} />
+      <Route path="/en/paquetes/:slug" component={PackagePage} />
+      <Route path="/en/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/en/ofertas/:slug" component={OfferPage} />
+      <Route path="/en/blog" component={Blog} />
+      <Route path="/en/blog/post/:slug" component={BlogPost} />
+      <Route path="/en/blog/:country" component={Blog} />
+      <Route path="/en/contact" component={Contact} />
+      <Route path="/en/about" component={About} />
+      <Route path="/en/travel-assistant" component={TravelAssistant} />
+      <Route path="/en/rewards" component={Rewards} />
+      <Route path="/en/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/en/last-minute-offers" component={LastMinuteOffers} />
+      <Route path="/en/services/flights" component={Flights} />
+      <Route path="/en/services/hotels" component={Hotels} />
+      <Route path="/en/services/packages" component={PackagesService} />
+      <Route path="/en/services/tours" component={Tours} />
+      <Route path="/en/services/insurance" component={Insurance} />
+      <Route path="/en/services/esim" component={ESim} />
+      <Route path="/en/esim" component={ESim} />
+      <Route path="/en/privacy" component={Privacy} />
+      <Route path="/en/testimonials" component={Testimonials} />
+      <Route path="/en/forum" component={Forum} />
+      <Route path="/en/agents/register" component={Contact} />
+      
       {/* Country-Specific SEO Routes (hreflang targeting) */}
       {/* Spanish Colombia (es-co) */}
       <Route path="/es-co" component={Home} />
