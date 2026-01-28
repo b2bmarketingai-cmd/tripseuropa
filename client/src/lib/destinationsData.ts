@@ -612,104 +612,107 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "portugal-esencial",
-        name: { es: "Portugal Esencial", en: "Essential Portugal" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Portugal Esencial", en: "Essential Portugal", pt: "Portugal Essencial" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,499",
         taxes: "300",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Espectaculo de fado"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Fado show"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Fado show"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Traslados", "Guia em portugues", "Show de fado"]
         }
       },
       {
         id: "portugal-algarve",
-        name: { es: "Portugal y Algarve", en: "Portugal and Algarve" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Portugal y Algarve", en: "Portugal and Algarve", pt: "Portugal e Algarve" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Coche de alquiler", "Tour de vinos", "Excursion en barco"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Rental car", "Wine tour", "Boat excursion"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Rental car", "Wine tour", "Boat excursion"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha", "Carro alugado", "Tour de vinhos", "Passeio de barco"]
         }
       },
       {
         id: "portugal-completo",
-        name: { es: "Gran Tour de Portugal", en: "Grand Tour of Portugal" },
-        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights" },
+        name: { es: "Gran Tour de Portugal", en: "Grand Tour of Portugal", pt: "Grande Tour de Portugal" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
         price: "2,499",
         taxes: "450",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Tours premium", "Experiencias gastronomicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Premium tours", "Gastronomic experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Premium tours", "Gastronomic experiences"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "Todos os traslados", "Tours premium", "Experiencias gastronomicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Lisboa", en: "Arrival in Lisbon" },
-        description: { es: "Bienvenida en Lisboa, la ciudad de las siete colinas.", en: "Welcome to Lisbon, the city of seven hills." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Alfama"], en: ["Airport pickup", "Hotel check-in", "Alfama neighborhood"] }
+        title: { es: "Llegada a Lisboa", en: "Arrival in Lisbon", pt: "Chegada em Lisboa" },
+        description: { es: "Bienvenida en Lisboa, la ciudad de las siete colinas.", en: "Welcome to Lisbon, the city of seven hills.", pt: "Boas-vindas em Lisboa, a cidade das sete colinas." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Alfama"], en: ["Airport pickup", "Hotel check-in", "Alfama neighborhood"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Bairro de Alfama"] }
       },
       {
         day: 2,
-        title: { es: "Lisboa Monumental", en: "Monumental Lisbon" },
-        description: { es: "Explora los monumentos emblematicos de Lisboa.", en: "Explore Lisbon's emblematic monuments." },
-        activities: { es: ["Torre de Belem", "Monasterio Jeronimos", "Pasteis de Belem"], en: ["Belem Tower", "Jeronimos Monastery", "Pasteis de Belem"] }
+        title: { es: "Lisboa Monumental", en: "Monumental Lisbon", pt: "Lisboa Monumental" },
+        description: { es: "Explora los monumentos emblematicos de Lisboa.", en: "Explore Lisbon's emblematic monuments.", pt: "Explore os monumentos emblematicos de Lisboa." },
+        activities: { es: ["Torre de Belem", "Monasterio Jeronimos", "Pasteis de Belem"], en: ["Belem Tower", "Jeronimos Monastery", "Pasteis de Belem"], pt: ["Torre de Belem", "Mosteiro dos Jeronimos", "Pasteis de Belem"] }
       },
       {
         day: 3,
-        title: { es: "Sintra", en: "Sintra" },
-        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's mágical palaces." },
-        activities: { es: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"], en: ["Pena Palace", "Quinta da Regaleira", "Cabo da Roca"] }
+        title: { es: "Sintra", en: "Sintra", pt: "Sintra" },
+        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's mágical palaces.", pt: "Excursao aos palacios magicos de Sintra." },
+        activities: { es: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"], en: ["Pena Palace", "Quinta da Regaleira", "Cabo da Roca"], pt: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"] }
       },
       {
         day: 4,
-        title: { es: "Oporto", en: "Porto" },
-        description: { es: "Viaje en tren a la encantadora ciudad de Oporto.", en: "Train journey to the charming city of Porto." },
-        activities: { es: ["Tren a Oporto", "Ribeira", "Torre dos Clerigos"], en: ["Train to Porto", "Ribeira", "Clerigos Tower"] }
+        title: { es: "Oporto", en: "Porto", pt: "Porto" },
+        description: { es: "Viaje en tren a la encantadora ciudad de Oporto.", en: "Train journey to the charming city of Porto.", pt: "Viagem de trem ate a encantadora cidade do Porto." },
+        activities: { es: ["Tren a Oporto", "Ribeira", "Torre dos Clerigos"], en: ["Train to Porto", "Ribeira", "Clerigos Tower"], pt: ["Trem para o Porto", "Ribeira", "Torre dos Clerigos"] }
       },
       {
         day: 5,
-        title: { es: "Bodegas de Oporto", en: "Porto Wineries" },
-        description: { es: "Visita las famosas bodegas de vino de Oporto.", en: "Visit Porto's famous wine cellars." },
-        activities: { es: ["Bodegas en Gaia", "Cata de vino", "Libreria Lello"], en: ["Gaia cellars", "Wine tasting", "Lello Bookstore"] }
+        title: { es: "Bodegas de Oporto", en: "Porto Wineries", pt: "Caves do Porto" },
+        description: { es: "Visita las famosas bodegas de vino de Oporto.", en: "Visit Porto's famous wine cellars.", pt: "Visite as famosas caves de vinho do Porto." },
+        activities: { es: ["Bodegas en Gaia", "Cata de vino", "Libreria Lello"], en: ["Gaia cellars", "Wine tasting", "Lello Bookstore"], pt: ["Caves em Gaia", "Degustacao de vinho", "Livraria Lello"] }
       },
       {
         day: 6,
-        title: { es: "Valle del Duero", en: "Douro Valley" },
-        description: { es: "Excursion al pintoresco Valle del Duero.", en: "Excursion to the picturesque Douro Valley." },
-        activities: { es: ["Crucero por el Duero", "Vinedos", "Almuerzo tipico"], en: ["Douro cruise", "Vineyards", "Typical lunch"] }
+        title: { es: "Valle del Duero", en: "Douro Valley", pt: "Vale do Douro" },
+        description: { es: "Excursion al pintoresco Valle del Duero.", en: "Excursion to the picturesque Douro Valley.", pt: "Excursao ao pitoresco Vale do Douro." },
+        activities: { es: ["Crucero por el Duero", "Vinedos", "Almuerzo tipico"], en: ["Douro cruise", "Vineyards", "Typical lunch"], pt: ["Cruzeiro pelo Douro", "Vinhedos", "Almoco tipico"] }
       },
       {
         day: 7,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight." },
-        activities: { es: ["Tiempo libre", "Check-out", "Vuelo de regreso"], en: ["Free time", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight.", pt: "Traslado ao aeroporto para o voo de retorno." },
+        activities: { es: ["Tiempo libre", "Check-out", "Vuelo de regreso"], en: ["Free time", "Check-out", "Return flight"], pt: ["Tempo livre", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Portugal?", en: "Do I need a visa to travel to Portugal?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Portugal sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Portugal without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Portugal?", en: "Do I need a visa to travel to Portugal?", pt: "Preciso de visto para viajar para Portugal?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Portugal sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Portugal without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar em Portugal sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Es facil entender el portugues?", en: "Is Portuguese easy to understand?" },
-        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan español.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish." }
+        question: { es: "Es facil entender el portugues?", en: "Is Portuguese easy to understand?", pt: "E facil entender o portugues europeu?" },
+        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan español.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish.", pt: "O portugues europeu tem sotaque diferente do brasileiro, mas brasileiros se comunicam facilmente com portugueses." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Portugal?", en: "When is the best time to visit Portugal?" },
-        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Portugal?", en: "When is the best time to visit Portugal?", pt: "Qual e a melhor epoca para visitar Portugal?" },
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded.", pt: "Primavera e outono sao ideais. O verao e perfeito para o Algarve, mas pode estar muito lotado." }
       },
       {
-        question: { es: "Portugal es un destino economico?", en: "Is Portugal an affordable destination?" },
-        answer: { es: "Portugal es uno de los destinos más economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money." }
+        question: { es: "Portugal es un destino economico?", en: "Is Portugal an affordable destination?", pt: "Portugal e um destino economico?" },
+        answer: { es: "Portugal es uno de los destinos más economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money.", pt: "Portugal e um dos destinos mais acessiveis da Europa Ocidental, com excelente custo-beneficio." }
       }
     ],
-    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
+    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November", pt: "Marco a Junho e Setembro a Novembro" },
     currency: "EUR",
-    language: { es: "Portugues", en: "Portuguese" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Portugues", en: "Portuguese", pt: "Portugues" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "greece",
@@ -734,110 +737,113 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "grecia-clasica",
-        name: { es: "Grecia Clásica", en: "Classic Greece" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Grecia Clásica", en: "Classic Greece", pt: "Grecia Classica" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,799",
         taxes: "360",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Ferry a islas", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Island ferry", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Island ferry", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Ferry para as ilhas", "Guia em portugues", "Ingressos principais"]
         }
       },
       {
         id: "grecia-islas",
-        name: { es: "Islas Griegas", en: "Greek Islands" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Islas Griegas", en: "Greek Islands", pt: "Ilhas Gregas" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,299",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles con vistas", "Desayuno", "Ferries entre islas", "Tour en catamaran", "Cena romántica"],
-          en: ["International flights", "Hotels with views", "Breakfast", "Inter-island ferries", "Catamaran tour", "Romantic dinner"]
+          en: ["International flights", "Hotels with views", "Breakfast", "Inter-island ferries", "Catamaran tour", "Romantic dinner"],
+          pt: ["Voos internacionais", "Hoteis com vista", "Cafe da manha", "Ferries entre ilhas", "Passeio de catamaras", "Jantar romantico"]
         }
       },
       {
         id: "grecia-completa",
-        name: { es: "Gran Tour de Grecia", en: "Grand Tour of Greece" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour de Grecia", en: "Grand Tour of Greece", pt: "Grande Tour da Grecia" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "3,199",
         taxes: "520",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Crucero por islas", "Experiencias únicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Island cruise", "Unique experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Island cruise", "Unique experiences"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "Todos os traslados", "Cruzeiro pelas ilhas", "Experiencias unicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Atenas", en: "Arrival in Athens" },
-        description: { es: "Bienvenida en Atenas, cuna de la democracia.", en: "Welcome to Athens, birthplace of democracy." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Plaka"], en: ["Airport pickup", "Hotel check-in", "Plaka neighborhood"] }
+        title: { es: "Llegada a Atenas", en: "Arrival in Athens", pt: "Chegada em Atenas" },
+        description: { es: "Bienvenida en Atenas, cuna de la democracia.", en: "Welcome to Athens, birthplace of democracy.", pt: "Boas-vindas em Atenas, berco da democracia." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Plaka"], en: ["Airport pickup", "Hotel check-in", "Plaka neighborhood"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Bairro de Plaka"] }
       },
       {
         day: 2,
-        title: { es: "Atenas Antigua", en: "Ancient Athens" },
-        description: { es: "Explora la Acropolis y el Partenon.", en: "Explore the Acropolis and Parthenon." },
-        activities: { es: ["Acropolis", "Partenon", "Museo de la Acropolis"], en: ["Acropolis", "Parthenon", "Acropolis Museum"] }
+        title: { es: "Atenas Antigua", en: "Ancient Athens", pt: "Atenas Antiga" },
+        description: { es: "Explora la Acropolis y el Partenon.", en: "Explore the Acropolis and Parthenon.", pt: "Explore a Acropole e o Partenon." },
+        activities: { es: ["Acropolis", "Partenon", "Museo de la Acropolis"], en: ["Acropolis", "Parthenon", "Acropolis Museum"], pt: ["Acropole", "Partenon", "Museu da Acropole"] }
       },
       {
         day: 3,
-        title: { es: "Delfos", en: "Delphi" },
-        description: { es: "Excursion al Oraculo de Delfos.", en: "Excursion to the Oracle of Delphi." },
-        activities: { es: ["Santuario de Apolo", "Teatro antiguo", "Museo de Delfos"], en: ["Apollo Sanctuary", "Ancient theater", "Delphi Museum"] }
+        title: { es: "Delfos", en: "Delphi", pt: "Delfos" },
+        description: { es: "Excursion al Oraculo de Delfos.", en: "Excursion to the Oracle of Delphi.", pt: "Excursao ao Oraculo de Delfos." },
+        activities: { es: ["Santuario de Apolo", "Teatro antiguo", "Museo de Delfos"], en: ["Apollo Sanctuary", "Ancient theater", "Delphi Museum"], pt: ["Santuario de Apolo", "Teatro antigo", "Museu de Delfos"] }
       },
       {
         day: 4,
-        title: { es: "Santorini", en: "Santorini" },
-        description: { es: "Vuelo a la espectacular isla de Santorini.", en: "Flight to spectacular Santorini island." },
-        activities: { es: ["Vuelo a Santorini", "Oia", "Atardecer famoso"], en: ["Flight to Santorini", "Oia", "Famous sunset"] }
+        title: { es: "Santorini", en: "Santorini", pt: "Santorini" },
+        description: { es: "Vuelo a la espectacular isla de Santorini.", en: "Flight to spectacular Santorini island.", pt: "Voo para a espetacular ilha de Santorini." },
+        activities: { es: ["Vuelo a Santorini", "Oia", "Atardecer famoso"], en: ["Flight to Santorini", "Oia", "Famous sunset"], pt: ["Voo para Santorini", "Oia", "Por do sol famoso"] }
       },
       {
         day: 5,
-        title: { es: "Santorini Completo", en: "Full Santorini" },
-        description: { es: "Explora los pueblos y playas de Santorini.", en: "Explore Santorini's villages and beaches." },
-        activities: { es: ["Fira", "Playa Roja", "Bodega local"], en: ["Fira", "Red Beach", "Local winery"] }
+        title: { es: "Santorini Completo", en: "Full Santorini", pt: "Santorini Completo" },
+        description: { es: "Explora los pueblos y playas de Santorini.", en: "Explore Santorini's villages and beaches.", pt: "Explore as vilas e praias de Santorini." },
+        activities: { es: ["Fira", "Playa Roja", "Bodega local"], en: ["Fira", "Red Beach", "Local winery"], pt: ["Fira", "Praia Vermelha", "Vinicola local"] }
       },
       {
         day: 6,
-        title: { es: "Tour en Catamaran", en: "Catamaran Tour" },
-        description: { es: "Navegacion por la caldera de Santorini.", en: "Sailing around Santorini's caldera." },
-        activities: { es: ["Tour en catamaran", "Aguas termales", "Almuerzo a bordo"], en: ["Catamaran tour", "Hot springs", "Lunch on board"] }
+        title: { es: "Tour en Catamaran", en: "Catamaran Tour", pt: "Passeio de Catamara" },
+        description: { es: "Navegacion por la caldera de Santorini.", en: "Sailing around Santorini's caldera.", pt: "Navegacao pela caldeira de Santorini." },
+        activities: { es: ["Tour en catamaran", "Aguas termales", "Almuerzo a bordo"], en: ["Catamaran tour", "Hot springs", "Lunch on board"], pt: ["Passeio de catamara", "Aguas termais", "Almoco a bordo"] }
       },
       {
         day: 7,
-        title: { es: "Mykonos", en: "Mykonos" },
-        description: { es: "Ferry a la vibrante isla de Mykonos.", en: "Ferry to vibrant Mykonos island." },
-        activities: { es: ["Ferry a Mykonos", "Pequena Venecia", "Molinos de viento"], en: ["Ferry to Mykonos", "Little Venice", "Windmills"] }
+        title: { es: "Mykonos", en: "Mykonos", pt: "Mykonos" },
+        description: { es: "Ferry a la vibrante isla de Mykonos.", en: "Ferry to vibrant Mykonos island.", pt: "Ferry para a vibrante ilha de Mykonos." },
+        activities: { es: ["Ferry a Mykonos", "Pequena Venecia", "Molinos de viento"], en: ["Ferry to Mykonos", "Little Venice", "Windmills"], pt: ["Ferry para Mykonos", "Pequena Veneza", "Moinhos de vento"] }
       },
       {
         day: 8,
-        title: { es: "Playas de Mykonos", en: "Mykonos Beaches" },
-        description: { es: "Disfruta de las famosas playas de Mykonos.", en: "Enjoy Mykonos' famous beaches." },
-        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomía griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"] }
+        title: { es: "Playas de Mykonos", en: "Mykonos Beaches", pt: "Praias de Mykonos" },
+        description: { es: "Disfruta de las famosas playas de Mykonos.", en: "Enjoy Mykonos' famous beaches.", pt: "Aproveite as famosas praias de Mykonos." },
+        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomía griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"], pt: ["Paradise Beach", "Super Paradise", "Gastronomia grega"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Grecia?", en: "Do I need a visa to travel to Greece?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Grecia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Greece without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Grecia?", en: "Do I need a visa to travel to Greece?", pt: "Preciso de visto para viajar para a Grecia?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Grecia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Greece without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar na Grecia sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar las islas griegas?", en: "When is the best time to visit the Greek islands?" },
-        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero más turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices." }
+        question: { es: "Cual es la mejor epoca para visitar las islas griegas?", en: "When is the best time to visit the Greek islands?", pt: "Qual e a melhor epoca para visitar as ilhas gregas?" },
+        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero más turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices.", pt: "Maio a outubro e ideal. Julho e agosto tem o melhor clima, mas mais turistas e precos altos." }
       },
       {
-        question: { es: "Como me muevo entre las islas?", en: "How do I get around between islands?" },
-        answer: { es: "Los ferries son el medio principal. Hay opciones rápidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands." }
+        question: { es: "Como me muevo entre las islas?", en: "How do I get around between islands?", pt: "Como me locomovo entre as ilhas?" },
+        answer: { es: "Los ferries son el medio principal. Hay opciones rápidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands.", pt: "Os ferries sao o principal meio de transporte. Ha opcoes rapidas e economicas. Tambem ha voos entre as ilhas principais." }
       },
       {
-        question: { es: "Es caro visitar Grecia?", en: "Is Greece expensive to visit?" },
-        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son más caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland." }
+        question: { es: "Es caro visitar Grecia?", en: "Is Greece expensive to visit?", pt: "E caro visitar a Grecia?" },
+        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son más caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland.", pt: "A Grecia oferece opcoes para todos os orcamentos. Ilhas turisticas como Santorini sao mais caras que o continente." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October" },
+    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October", pt: "Maio a Outubro" },
     currency: "EUR",
-    language: { es: "Griego", en: "Greek" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Griego", en: "Greek", pt: "Grego" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "netherlands",
