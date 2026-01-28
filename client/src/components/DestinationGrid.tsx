@@ -75,7 +75,7 @@ const DESTINATIONS = [
 export function DestinationGrid() {
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
-  const langPrefix = lang === "es" ? "" : `/${lang}`;
+  const langPrefix = lang === "es" ? "" : lang === "pt" ? "/pt-br" : `/${lang}`;
 
   const content = {
     es: {

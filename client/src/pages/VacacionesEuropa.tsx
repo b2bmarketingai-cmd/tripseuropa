@@ -527,6 +527,7 @@ const TESTIMONIALS = [
 
 export default function VacacionesEuropa() {
   const { t, language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [showFullIntro, setShowFullIntro] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState("");
@@ -747,7 +748,7 @@ Desde: Tripseuropa.com`;
             <h2 className="font-playfair text-3xl font-bold" style={{ color: "#d4af37" }}>
               Paquetes Destacados
             </h2>
-            <Link href="/packages">
+            <Link href={`${langPrefix}/packages`}>
               <Button variant="ghost" className="text-accent" data-testid="link-view-all-packages">
                 Ver todos <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
@@ -984,7 +985,7 @@ Desde: Tripseuropa.com`;
               "Austria", "Alemania", "Irlanda", "Reino Unido", "Croacia", 
               "Holanda", "Belgica", "Noruega", "Islandia", "Turquia"
             ].map((country) => (
-              <Link key={country} href={`/destinations/${country.toLowerCase()}`}>
+              <Link key={country} href={`${langPrefix}/destinations/${country.toLowerCase()}`}>
                 <Badge 
                   variant="outline" 
                   className="cursor-pointer hover-elevate px-4 py-2"

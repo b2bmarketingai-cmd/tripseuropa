@@ -221,6 +221,7 @@ const FEATURED_DESTINATIONS = ["france", "italy", "spain", "greece", "portugal",
 
 export default function Rewards() {
   const { language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const content = CONTENT[language];
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -472,7 +473,7 @@ export default function Rewards() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredPackages.map((dest) => (
-              <Link key={dest.slug} href={`/destinations/${dest.slug}`}>
+              <Link key={dest.slug} href={`${langPrefix}/destinations/${dest.slug}`}>
                 <Card className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow">
                   <div className="relative h-48 overflow-hidden">
                     <img

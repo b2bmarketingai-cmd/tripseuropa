@@ -772,6 +772,7 @@ const BLOG_POSTS = [
 
 export default function Blog() {
   const { language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const { toast } = useToast();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -902,7 +903,7 @@ From: Tripseuropa.com/blog`;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredPosts.map((post) => (
-              <Link href={`/blog/post/${'slug' in post ? post.slug : post.id}`} key={post.id}>
+              <Link href={`${langPrefix}/blog/post/${'slug' in post ? post.slug : post.id}`} key={post.id}>
                 <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-featured-${post.id}`}>
                   <div className="relative h-48 sm:h-52 overflow-hidden bg-muted">
                     <img 
@@ -934,7 +935,7 @@ From: Tripseuropa.com/blog`;
 
       <section className="py-8 bg-accent" data-testid="section-vacaciones-europa-banner">
         <div className="container mx-auto px-4">
-          <Link href="/vacaciones-europa">
+          <Link href={`${langPrefix}/vacaciones-europa`}>
             <Card className="bg-primary/95 border-accent/30 hover:bg-primary transition-all cursor-pointer overflow-hidden" data-testid="link-vacaciones-europa">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row items-center">
@@ -981,7 +982,7 @@ From: Tripseuropa.com/blog`;
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            <Link href="/blog/colombia">
+            <Link href={`${langPrefix}/blog/colombia`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-colombia">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -990,7 +991,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/mexico">
+            <Link href={`${langPrefix}/blog/mexico`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-mexico">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -999,7 +1000,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/brasil">
+            <Link href={`${langPrefix}/blog/brasil`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-brasil">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1008,7 +1009,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/argentina">
+            <Link href={`${langPrefix}/blog/argentina`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-argentina">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1017,7 +1018,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/peru">
+            <Link href={`${langPrefix}/blog/peru`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-peru">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1026,7 +1027,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/panama">
+            <Link href={`${langPrefix}/blog/panama`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-panama">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1035,7 +1036,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/costa-rica">
+            <Link href={`${langPrefix}/blog/costa-rica`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-costa-rica">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1044,7 +1045,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/dominicana">
+            <Link href={`${langPrefix}/blog/dominicana`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-dominicana">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1053,7 +1054,7 @@ From: Tripseuropa.com/blog`;
                 <p className="text-accent text-xs font-medium">{language === "es" ? "Guia Completa" : language === "pt" ? "Guia Completo" : "Complete Guide"}</p>
               </Card>
             </Link>
-            <Link href="/blog/caribe">
+            <Link href={`${langPrefix}/blog/caribe`}>
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all cursor-pointer text-center p-4" data-testid="link-blog-caribe">
                 <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -1112,7 +1113,7 @@ From: Tripseuropa.com/blog`;
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <Link href={`/blog/post/${'slug' in post && post.slug ? post.slug : post.id}`} key={post.id}>
+                <Link href={`${langPrefix}/blog/post/${'slug' in post && post.slug ? post.slug : post.id}`} key={post.id}>
                   <Card className="group overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" data-testid={`card-blog-${post.id}`}>
                     <div className="relative h-48 sm:h-52 overflow-hidden bg-muted">
                       <img 

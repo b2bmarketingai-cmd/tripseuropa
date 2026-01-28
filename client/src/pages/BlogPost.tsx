@@ -83,6 +83,7 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
   const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
@@ -95,7 +96,7 @@ export default function BlogPost() {
         <main className="container mx-auto px-4 py-16 text-center" data-testid="section-not-found">
           <h1 className="text-3xl font-display text-accent mb-4" data-testid="text-not-found-title">Articulo No Encontrado</h1>
           <p className="text-muted-foreground mb-8" data-testid="text-not-found-message">El articulo que buscas no existe o ha sido movido.</p>
-          <Link href="/blog">
+          <Link href={`${langPrefix}/blog`}>
             <Button variant="outline" data-testid="button-not-found-back">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Blog
@@ -145,7 +146,7 @@ export default function BlogPost() {
       <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
-            <Link href="/blog">
+            <Link href={`${langPrefix}/blog`}>
               <Button variant="ghost" size="sm" className="mb-4" data-testid="button-back-blog">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver al Blog

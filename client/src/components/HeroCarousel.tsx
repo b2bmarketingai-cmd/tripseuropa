@@ -68,6 +68,7 @@ export function HeroCarousel() {
     typeof window !== "undefined" && window.innerWidth < 768
   );
   const { language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const lang = language as "es" | "en" | "pt";
 
   useEffect(() => {
@@ -198,7 +199,7 @@ export function HeroCarousel() {
                 {content[lang].quote}
               </Button>
             </a>
-            <Link href="/packages">
+            <Link href={`${langPrefix}/packages`}>
               <Button 
                 size="lg" 
                 variant="outline" 

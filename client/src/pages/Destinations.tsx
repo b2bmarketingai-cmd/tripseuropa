@@ -221,6 +221,7 @@ const DESTINATIONS = [
 
 export default function Destinations() {
   const { t, language } = useI18n();
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -257,7 +258,7 @@ export default function Destinations() {
             {DESTINATIONS.map((dest) => {
               const dataLang = (language === "pt" ? "es" : language) as "es" | "en";
               return (
-                <Link key={dest.slug} href={`/destinations/${dest.slug}`}>
+                <Link key={dest.slug} href={`${langPrefix}/destinations/${dest.slug}`}>
                   <Card className="group overflow-hidden cursor-pointer hover-elevate" data-testid={`card-destination-${dest.slug}`}>
                     <div className="relative h-56 overflow-hidden">
                       <img 

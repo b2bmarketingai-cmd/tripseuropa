@@ -12,7 +12,7 @@ const recentPosts = BLOG_POSTS_SIMPLE.slice(0, 6);
 export function BlogHighlights() {
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
-  const langPrefix = lang === "es" ? "" : `/${lang}`;
+  const langPrefix = lang === "es" ? "" : lang === "pt" ? "/pt-br" : `/${lang}`;
   
   const content = {
     es: {

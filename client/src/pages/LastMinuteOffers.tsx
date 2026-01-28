@@ -212,6 +212,7 @@ const LAST_MINUTE_OFFERS = [
 export default function LastMinuteOffers() {
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
+  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const dataLang = (language === "pt" ? "es" : language) as "es" | "en";
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -342,7 +343,7 @@ export default function LastMinuteOffers() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {LAST_MINUTE_OFFERS.map((offer, index) => (
-              <Link key={offer.id} href={`/destinations/${offer.slug}`}>
+              <Link key={offer.id} href={`${langPrefix}/destinations/${offer.slug}`}>
                 <Card className="group overflow-visible cursor-pointer hover-elevate h-full" data-testid={`card-offer-${offer.id}`}>
                   <div className="relative h-56 overflow-hidden rounded-t-lg">
                     <img 

@@ -1017,7 +1017,7 @@ export function Header() {
                     return (
                       <Link
                         key={idx}
-                        href={`/destinations/${slugMap[item] || item.toLowerCase().replace(/\s+/g, "-")}`}
+                        href={getLocalizedPath(`/destinations/${slugMap[item] || item.toLowerCase().replace(/\s+/g, "-")}`)}
                         className="block py-1 text-gray-600 hover:text-primary"
                         onClick={() => setIsOpen(false)}
                       >
