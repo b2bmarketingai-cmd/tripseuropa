@@ -7,6 +7,19 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const { t, language } = useI18n();
+
+  const getLocalizedPath = (path: string) => {
+    if (!path) return '/';
+    if (path.startsWith('http') || path.startsWith('tel:') || path.startsWith('mailto:')) return path;
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
+    const match = currentPath.match(/^\/(es|en|pt-br|[a-z]{2}-[a-z]{2})/);
+    const prefix = match ? match[0] : '';
+
+    if (prefix && path.startsWith('/') && !path.startsWith(prefix)) {
+      return `${prefix}${path === '/' ? '' : path}`;
+    }
+    return path;
+  };
   
   const mainNav = [
     { name: { es: "Destinos", en: "Destinations", pt: "Destinos" }, href: "/destinations", icon: Map },
@@ -84,7 +97,7 @@ export function Footer() {
           {mainNav.map((item, index) => (
             <Link 
               key={index} 
-              href={item.href} 
+              href={getLocalizedPath(item.href)} 
               className="flex items-center gap-2 text-[#d5b034] hover:text-[#f0d060] hover:drop-shadow-[0_0_8px_rgba(213,176,52,0.6)] transition-all duration-300 text-sm md:text-base font-medium"
               data-testid={`link-footer-nav-${index}`}
             >
@@ -103,7 +116,7 @@ export function Footer() {
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-2">
               {destinations.map((dest, index) => (
                 <li key={index}>
-                  <Link href={dest.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
+                  <Link href={getLocalizedPath(dest.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
                     {dest.name[language as "es" | "en" | "pt"] || dest.name.es}
                   </Link>
                 </li>
@@ -118,7 +131,7 @@ export function Footer() {
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link href={service.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
+                  <Link href={getLocalizedPath(service.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
                     {t(service.nameKey)}
                   </Link>
                 </li>
@@ -133,13 +146,13 @@ export function Footer() {
             <ul className="space-y-2">
               {company.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
+                  <Link href={getLocalizedPath(item.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
                     {t(item.nameKey)}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/travel-assistant" className="text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
+                <Link href={getLocalizedPath("/travel-assistant")} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
                   {language === "es" ? "Sofia Agente de Viajes" : language === "pt" ? "Sofia Agente de Viagens" : "Sofia Travel Agent"}
                 </Link>
               </li>
@@ -153,7 +166,7 @@ export function Footer() {
             <ul className="space-y-2">
               {countries.map((country, index) => (
                 <li key={index}>
-                  <Link href={country.href} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
+                  <Link href={getLocalizedPath(country.href)} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
                     <span className="text-xs bg-white/10 px-1 rounded font-mono">{country.code}</span>
                     {country.name[language as "es" | "en" | "pt"] || country.name.es}
                   </Link>
@@ -163,7 +176,7 @@ export function Footer() {
             
             <div className="mt-6 pt-4 border-t border-white/10">
               <Link 
-                href="/requisitos-visa"
+                href={getLocalizedPath("/requisitos-visa")}
                 className="flex items-center gap-2 text-sm text-[#d4af37] hover:text-[#f0d060] transition-colors font-medium"
                 data-testid="link-visa-requirements"
               >
@@ -312,7 +325,7 @@ export function Footer() {
             <VisitorCounter />
           </div>
           <div className="flex gap-4 text-xs text-white/40 flex-wrap justify-center">
-            <Link href="/privacy" className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
+            <Link href={getLocalizedPath("/privacy")} className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
           </div>
         </div>
       </div>
