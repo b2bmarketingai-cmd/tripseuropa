@@ -1,3 +1,5 @@
+export type MultiLangText = { es: string; en: string; pt?: string };
+
 export interface BlogSection {
   title: string;
   content: string;
@@ -8,11 +10,12 @@ export interface BlogSection {
 export interface BlogPostData {
   id: string;
   slug: string;
+  slugs?: MultiLangText;
   image: string;
-  title: { es: string; en: string };
-  excerpt: { es: string; en: string };
+  title: MultiLangText;
+  excerpt: MultiLangText;
   category: string;
-  categoryLabel: { es: string; en: string };
+  categoryLabel: MultiLangText;
   date: string;
   readTime: number;
   author?: string;
@@ -26,11 +29,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "mejores-lugares-espana",
     slug: "mejores-lugares-espana",
+    slugs: { es: "mejores-lugares-espana", en: "best-places-spain", pt: "melhores-lugares-espanha" },
     image: "/assets/generated_images/mejores-lugares-espana.png",
-    title: { es: "20 Mejores Lugares de España que Debes Visitar", en: "20 Best Places in Spain You Must Visit" },
-    excerpt: { es: "España es un pais fascinante lleno de paisajes impresionantes y rica historia. Descubre los mejores lugares para explorar desde Barcelona hasta Sevilla.", en: "Spain is a fascinating country full of stunning landscapes and rich history. Discover the best places to explore from Barcelona to Seville." },
+    title: { es: "20 Mejores Lugares de España que Debes Visitar", en: "20 Best Places in Spain You Must Visit", pt: "20 Melhores Lugares da Espanha para Visitar" },
+    excerpt: { es: "España es un pais fascinante lleno de paisajes impresionantes y rica historia. Descubre los mejores lugares para explorar desde Barcelona hasta Sevilla.", en: "Spain is a fascinating country full of stunning landscapes and rich history. Discover the best places to explore from Barcelona to Seville.", pt: "A Espanha e um pais fascinante cheio de paisagens impressionantes e rica historia. Descubra os melhores lugares para explorar de Barcelona a Sevilha." },
     category: "destinos",
-    categoryLabel: { es: "Destinos", en: "Destinations" },
+    categoryLabel: { es: "Destinos", en: "Destinations", pt: "Destinos" },
     date: "02 Ene 2025",
     readTime: 15,
     author: "Trips Europa",
@@ -84,11 +88,12 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
   {
     id: "playas-alicante",
     slug: "playas-alicante",
+    slugs: { es: "playas-alicante", en: "alicante-beaches", pt: "praias-alicante" },
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
-    title: { es: "10 Mejores Playas de Alicante para Relajarte en 2026", en: "10 Best Beaches in Alicante to Relax in 2026" },
-    excerpt: { es: "Descubre las playas mas hermosas de Alicante, desde calas escondidas hasta extensas playas de arena dorada perfectas para familias.", en: "Discover the most beautiful beaches in Alicante, from hidden coves to extensive golden sand beaches perfect for families." },
+    title: { es: "10 Mejores Playas de Alicante para Relajarte en 2026", en: "10 Best Beaches in Alicante to Relax in 2026", pt: "10 Melhores Praias de Alicante para Relaxar em 2026" },
+    excerpt: { es: "Descubre las playas mas hermosas de Alicante, desde calas escondidas hasta extensas playas de arena dorada perfectas para familias.", en: "Discover the most beautiful beaches in Alicante, from hidden coves to extensive golden sand beaches perfect for families.", pt: "Descubra as praias mais bonitas de Alicante, desde enseadas escondidas ate extensas praias de areia dourada perfeitas para familias." },
     category: "destinos",
-    categoryLabel: { es: "Destinos", en: "Destinations" },
+    categoryLabel: { es: "Destinos", en: "Destinations", pt: "Destinos" },
     date: "01 Ene 2026",
     readTime: 10,
     author: "Trips Europa",
@@ -7506,3 +7511,26 @@ export const BLOG_POSTS_DATA: BlogPostData[] = [
     ]
   }
 ];
+
+
+export function getBlogPostBySlug(slug: string, language: "es" | "en" | "pt" = "es"): BlogPostData | undefined {
+  const dataLang = language === "pt" ? "es" : language;
+  return BLOG_POSTS_DATA.find(post => {
+    if (post.slugs) {
+      return post.slugs[language] === slug || post.slugs[dataLang] === slug || post.slug === slug;
+    }
+    return post.slug === slug;
+  });
+}
+
+export function getLocalizedBlogSlug(post: BlogPostData, language: "es" | "en" | "pt"): string {
+  if (post.slugs && post.slugs[language]) {
+    return post.slugs[language];
+  }
+  return post.slug;
+}
+
+export function getBlogText(text: MultiLangText, language: "es" | "en" | "pt"): string {
+  const dataLang = language === "pt" ? "es" : language;
+  return text[language] || text[dataLang] || text.es;
+}
