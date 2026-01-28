@@ -104,12 +104,24 @@ const CONTENT = {
   }
 };
 
+type MultiLangText = { es: string; en: string; pt?: string };
+type MultiLangArray = { es: string[]; en: string[]; pt?: string[] };
+
+function getText(text: MultiLangText, lang: "es" | "en" | "pt"): string {
+  if (lang === "pt") return text.pt || text.es;
+  return text[lang];
+}
+
+function getArray(arr: MultiLangArray, lang: "es" | "en" | "pt"): string[] {
+  if (lang === "pt") return arr.pt || arr.es;
+  return arr[lang];
+}
+
 export default function TravelStylePage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
-  const contentLang = language as "es" | "en" | "pt";
-  const dataLang = language === "pt" ? "es" : (language as "es" | "en");
-  const content = CONTENT[contentLang];
+  const lang = language as "es" | "en" | "pt";
+  const content = CONTENT[lang];
   const travelStyle = getTravelStyleBySlug(slug || "");
   
   if (!travelStyle) {
@@ -146,7 +158,7 @@ export default function TravelStylePage() {
         <div className="absolute inset-0">
           <img
             src={travelStyle.heroImage}
-            alt={travelStyle.name[dataLang]}
+            alt={getText(travelStyle.name, lang)}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
@@ -157,22 +169,22 @@ export default function TravelStylePage() {
             {content.back}
           </Link>
           <Badge className="mb-4 bg-accent/20 text-accent border-accent/30">
-            {categoryLabels[travelStyle.category][contentLang]}
+            {categoryLabels[travelStyle.category][lang]}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 text-accent" data-testid="text-title">
-            {travelStyle.name[dataLang]}
+            {getText(travelStyle.name, lang)}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mb-6">
-            {travelStyle.description[dataLang]}
+            {getText(travelStyle.description, lang)}
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md">
               <Users className="w-5 h-5 text-accent" />
-              <span className="text-sm">{content.bestFor}: {travelStyle.bestFor[dataLang]}</span>
+              <span className="text-sm">{content.bestFor}: {getText(travelStyle.bestFor, lang)}</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">{content.idealDuration}: {travelStyle.idealDuration[dataLang]}</span>
+              <span className="text-sm">{content.idealDuration}: {getText(travelStyle.idealDuration, lang)}</span>
             </div>
           </div>
         </div>
@@ -184,7 +196,7 @@ export default function TravelStylePage() {
             {content.highlights}
           </h2>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {travelStyle.highlights[dataLang].map((highlight, idx) => (
+            {getArray(travelStyle.highlights, lang).map((highlight, idx) => (
               <div key={idx} className="flex items-center gap-3 bg-card p-4 rounded-md">
                 <Check className="w-5 h-5 text-accent shrink-0" />
                 <span className="text-sm">{highlight}</span>
@@ -205,19 +217,19 @@ export default function TravelStylePage() {
                 {idx === 0 && (
                   <Badge className="absolute top-4 right-4 bg-accent text-primary z-10">
                     <Star className="w-3 h-3 mr-1" />
-                    {contentLang === "es" ? "Recomendado" : contentLang === "pt" ? "Recomendado" : "Recommended"}
+                    {lang === "es" ? "Recomendado" : lang === "pt" ? "Recomendado" : "Recommended"}
                   </Badge>
                 )}
                 <div className="relative h-48">
                   <img
                     src={pkg.image}
-                    alt={pkg.name[dataLang]}
+                    alt={getText(pkg.name, lang)}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="font-display font-bold text-lg text-white mb-1">
-                      {pkg.name[dataLang]}
+                      {getText(pkg.name, lang)}
                     </h3>
                     <div className="flex items-center gap-2 text-white/80 text-sm">
                       <MapPin className="w-4 h-4" />
@@ -228,7 +240,7 @@ export default function TravelStylePage() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-2 text-muted-foreground mb-4">
                     <Clock className="w-4 h-4" />
-                    <span className="text-sm">{pkg.duration[dataLang]}</span>
+                    <span className="text-sm">{getText(pkg.duration, lang)}</span>
                   </div>
                   
                   <div className="mb-4">
@@ -241,7 +253,7 @@ export default function TravelStylePage() {
                   </div>
 
                   <ul className="space-y-1 mb-4">
-                    {pkg.highlights[dataLang].map((h, i) => (
+                    {getArray(pkg.highlights, lang).map((h, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
                         <Check className="w-4 h-4 text-accent shrink-0" />
                         <span>{h}</span>
@@ -283,9 +295,9 @@ export default function TravelStylePage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-display font-bold text-accent mb-1">
-                    {content.day} {day.day}: {day.title[dataLang]}
+                    {content.day} {day.day}: {getText(day.title, lang)}
                   </h3>
-                  <p className="text-muted-foreground">{day.description[dataLang]}</p>
+                  <p className="text-muted-foreground">{getText(day.description, lang)}</p>
                 </div>
               </div>
             ))}
@@ -303,10 +315,10 @@ export default function TravelStylePage() {
               {travelStyle.faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`faq-${idx}`}>
                   <AccordionTrigger className="text-left hover:no-underline" data-testid={`faq-${idx}`}>
-                    <span className="font-medium">{faq.question[dataLang]}</span>
+                    <span className="font-medium">{getText(faq.question, lang)}</span>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-muted-foreground">{faq.answer[dataLang]}</p>
+                    <p className="text-muted-foreground">{getText(faq.answer, lang)}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -327,7 +339,7 @@ export default function TravelStylePage() {
             
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-3">
-                <ContactForm variant="page" defaultMessage={`Interesado en: ${travelStyle.name[dataLang]}`} />
+                <ContactForm variant="page" defaultMessage={`${lang === "en" ? "Interested in" : lang === "pt" ? "Interessado em" : "Interesado en"}: ${getText(travelStyle.name, lang)}`} />
               </div>
               
               <div className="md:col-span-2 space-y-4">
@@ -361,9 +373,9 @@ export default function TravelStylePage() {
                   <CardContent className="pt-6 text-white">
                     <MessageSquare className="w-8 h-8 text-accent mb-3" />
                     <p className="text-sm">
-                      {contentLang === "es" 
+                      {lang === "es" 
                         ? "Nuestros asesores estan disponibles de lunes a viernes de 9:00 AM a 7:00 PM y sabados de 9:00 AM a 2:00 PM." 
-                        : contentLang === "pt"
+                        : lang === "pt"
                         ? "Nossos consultores estao disponiveis de segunda a sexta das 9h as 19h e sabados das 9h as 14h."
                         : "Our advisors are available Monday to Friday from 9:00 AM to 7:00 PM and Saturdays from 9:00 AM to 2:00 PM."}
                     </p>

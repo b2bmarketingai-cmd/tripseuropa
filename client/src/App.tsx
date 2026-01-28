@@ -299,6 +299,9 @@ function Router() {
       <Route path="/pt-br/privacy" component={Privacy} />
       <Route path="/pt-br/privacidade" component={Privacy} />
       <Route path="/pt-br/forum" component={Forum} />
+      <Route path="/pt-br/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/pt-br/estilo-viagem/:slug" component={TravelStylePage} />
+      <Route path="/pt-br/blog/:slug" component={BlogPost} />
       
       {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
