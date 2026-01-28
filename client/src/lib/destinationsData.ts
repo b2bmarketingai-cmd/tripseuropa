@@ -204,92 +204,95 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "italia-esencial",
-        name: { es: "Italia Esencial", en: "Essential Italy" },
-        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights" },
+        name: { es: "Italia Esencial", en: "Essential Italy", pt: "Italia Essencial" },
+        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights", pt: "9 dias / 8 noites" },
         price: "2,099",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Trenes de alta velocidad", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "High-speed trains", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "High-speed trains", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Trens de alta velocidade", "Guia em portugues", "Ingressos principais"]
         }
       },
       {
         id: "italia-romantica",
-        name: { es: "Italia Romántica", en: "Romantic Italy" },
-        duration: { es: "11 dias / 10 noches", en: "11 days / 10 nights" },
+        name: { es: "Italia Romántica", en: "Romantic Italy", pt: "Italia Romantica" },
+        duration: { es: "11 dias / 10 noches", en: "11 days / 10 nights", pt: "11 dias / 10 noites" },
         price: "2,699",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Gondola en Venecia", "Tour de vinos en Toscana", "Cena romántica"],
-          en: ["International flights", "Boutique hotels", "Half board", "Venice gondola", "Tuscany wine tour", "Romantic dinner"]
+          en: ["International flights", "Boutique hotels", "Half board", "Venice gondola", "Tuscany wine tour", "Romantic dinner"],
+          pt: ["Voos internacionais", "Hoteis boutique", "Meia pensao", "Gondola em Veneza", "Tour de vinhos na Toscana", "Jantar romantico"]
         }
       },
       {
         id: "italia-completa",
-        name: { es: "Gran Tour de Italia", en: "Grand Tour of Italy" },
-        duration: { es: "15 dias / 14 noches", en: "15 days / 14 nights" },
+        name: { es: "Gran Tour de Italia", en: "Grand Tour of Italy", pt: "Grande Tour da Italia" },
+        duration: { es: "15 dias / 14 noches", en: "15 days / 14 nights", pt: "15 dias / 14 noites" },
         price: "3,499",
         taxes: "550",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Tours exclusivos", "Experiencias gastronomicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Exclusive tours", "Gastronomic experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Exclusive tours", "Gastronomic experiences"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "Todos os traslados", "Tours exclusivos", "Experiencias gastronomicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Roma", en: "Arrival in Rome" },
-        description: { es: "Bienvenida en Roma, la Ciudad Eterna. Traslado al hotel y tiempo libre.", en: "Welcome to Rome, the Eternal City. Hotel transfer and free time." },
-        activities: { es: ["Recogida en aeropuerto", "Check-in hotel", "Paseo por Trastevere"], en: ["Airport pickup", "Hotel check-in", "Trastevere walk"] }
+        title: { es: "Llegada a Roma", en: "Arrival in Rome", pt: "Chegada em Roma" },
+        description: { es: "Bienvenida en Roma, la Ciudad Eterna. Traslado al hotel y tiempo libre.", en: "Welcome to Rome, the Eternal City. Hotel transfer and free time.", pt: "Boas-vindas em Roma, a Cidade Eterna. Traslado ao hotel e tempo livre." },
+        activities: { es: ["Recogida en aeropuerto", "Check-in hotel", "Paseo por Trastevere"], en: ["Airport pickup", "Hotel check-in", "Trastevere walk"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Passeio por Trastevere"] }
       },
       {
         day: 2,
-        title: { es: "Roma Imperial", en: "Imperial Rome" },
-        description: { es: "Descubre el Coliseo, el Foro Romano y el Palatino.", en: "Discover the Colosseum, Roman Forum, and Palatine Hill." },
-        activities: { es: ["Coliseo", "Foro Romano", "Monte Palatino"], en: ["Colosseum", "Roman Forum", "Palatine Hill"] }
+        title: { es: "Roma Imperial", en: "Imperial Rome", pt: "Roma Imperial" },
+        description: { es: "Descubre el Coliseo, el Foro Romano y el Palatino.", en: "Discover the Colosseum, Roman Forum, and Palatine Hill.", pt: "Descubra o Coliseu, o Forum Romano e o Monte Palatino." },
+        activities: { es: ["Coliseo", "Foro Romano", "Monte Palatino"], en: ["Colosseum", "Roman Forum", "Palatine Hill"], pt: ["Coliseu", "Forum Romano", "Monte Palatino"] }
       },
       {
         day: 3,
-        title: { es: "Vaticano", en: "Vatican" },
-        description: { es: "Visita los Museos Vaticanos, la Capilla Sixtina y la Basilica de San Pedro.", en: "Visit the Vatican Museums, Sistine Chapel, and St. Peter's Basilica." },
-        activities: { es: ["Museos Vaticanos", "Capilla Sixtina", "Plaza San Pedro"], en: ["Vatican Museums", "Sistine Chapel", "St. Peter's Square"] }
+        title: { es: "Vaticano", en: "Vatican", pt: "Vaticano" },
+        description: { es: "Visita los Museos Vaticanos, la Capilla Sixtina y la Basilica de San Pedro.", en: "Visit the Vatican Museums, Sistine Chapel, and St. Peter's Basilica.", pt: "Visite os Museus do Vaticano, a Capela Sistina e a Basilica de Sao Pedro." },
+        activities: { es: ["Museos Vaticanos", "Capilla Sixtina", "Plaza San Pedro"], en: ["Vatican Museums", "Sistine Chapel", "St. Peter's Square"], pt: ["Museus do Vaticano", "Capela Sistina", "Praca Sao Pedro"] }
       },
       {
         day: 4,
-        title: { es: "Florencia", en: "Florence" },
-        description: { es: "Viaje en tren de alta velocidad a Florencia, cuna del Renacimiento.", en: "High-speed train to Florence, cradle of the Renaissance." },
-        activities: { es: ["Tren a Florencia", "Galeria Uffizi", "Ponte Vecchio"], en: ["Train to Florence", "Uffizi Gallery", "Ponte Vecchio"] }
+        title: { es: "Florencia", en: "Florence", pt: "Florenca" },
+        description: { es: "Viaje en tren de alta velocidad a Florencia, cuna del Renacimiento.", en: "High-speed train to Florence, cradle of the Renaissance.", pt: "Viagem de trem de alta velocidade ate Florenca, berco da Renascenca." },
+        activities: { es: ["Tren a Florencia", "Galeria Uffizi", "Ponte Vecchio"], en: ["Train to Florence", "Uffizi Gallery", "Ponte Vecchio"], pt: ["Trem para Florenca", "Galeria Uffizi", "Ponte Vecchio"] }
       },
       {
         day: 5,
-        title: { es: "Toscana", en: "Tuscany" },
-        description: { es: "Excursion por la campiña toscana con degustacion de vinos.", en: "Excursion through the Tuscan countryside with wine tasting." },
-        activities: { es: ["San Gimignano", "Siena", "Degustacion Chianti"], en: ["San Gimignano", "Siena", "Chianti tasting"] }
+        title: { es: "Toscana", en: "Tuscany", pt: "Toscana" },
+        description: { es: "Excursion por la campiña toscana con degustacion de vinos.", en: "Excursion through the Tuscan countryside with wine tasting.", pt: "Excursao pelo interior da Toscana com degustacao de vinhos." },
+        activities: { es: ["San Gimignano", "Siena", "Degustacion Chianti"], en: ["San Gimignano", "Siena", "Chianti tasting"], pt: ["San Gimignano", "Siena", "Degustacao de Chianti"] }
       },
       {
         day: 6,
-        title: { es: "Venecia", en: "Venice" },
-        description: { es: "Llegada a Venecia, la ciudad flotante.", en: "Arrival in Venice, the floating city." },
-        activities: { es: ["Tren a Venecia", "Plaza San Marcos", "Paseo en gondola"], en: ["Train to Venice", "St. Mark's Square", "Gondola ride"] }
+        title: { es: "Venecia", en: "Venice", pt: "Veneza" },
+        description: { es: "Llegada a Venecia, la ciudad flotante.", en: "Arrival in Venice, the floating city.", pt: "Chegada em Veneza, a cidade flutuante." },
+        activities: { es: ["Tren a Venecia", "Plaza San Marcos", "Paseo en gondola"], en: ["Train to Venice", "St. Mark's Square", "Gondola ride"], pt: ["Trem para Veneza", "Praca Sao Marcos", "Passeio de gondola"] }
       },
       {
         day: 7,
-        title: { es: "Islas de Venecia", en: "Venice Islands" },
-        description: { es: "Excursion a las coloridas islas de Murano y Burano.", en: "Excursion to the colorful islands of Murano and Burano." },
-        activities: { es: ["Murano y cristal", "Burano y encajes", "Torcello"], en: ["Murano and glass", "Burano and lace", "Torcello"] }
+        title: { es: "Islas de Venecia", en: "Venice Islands", pt: "Ilhas de Veneza" },
+        description: { es: "Excursion a las coloridas islas de Murano y Burano.", en: "Excursion to the colorful islands of Murano and Burano.", pt: "Excursao as coloridas ilhas de Murano e Burano." },
+        activities: { es: ["Murano y cristal", "Burano y encajes", "Torcello"], en: ["Murano and glass", "Burano and lace", "Torcello"], pt: ["Murano e cristal", "Burano e rendas", "Torcello"] }
       },
       {
         day: 8,
-        title: { es: "Milan", en: "Milan" },
-        description: { es: "Viaje a Milan, capital de la moda y el diseño.", en: "Trip to Milan, capital of fashion and design." },
-        activities: { es: ["Duomo de Milan", "Galeria Vittorio Emanuele", "La Ultima Cena"], en: ["Milan Cathedral", "Galleria Vittorio Emanuele", "The Last Supper"] }
+        title: { es: "Milan", en: "Milan", pt: "Milao" },
+        description: { es: "Viaje a Milan, capital de la moda y el diseño.", en: "Trip to Milan, capital of fashion and design.", pt: "Viagem a Milao, capital da moda e do design." },
+        activities: { es: ["Duomo de Milan", "Galeria Vittorio Emanuele", "La Ultima Cena"], en: ["Milan Cathedral", "Galleria Vittorio Emanuele", "The Last Supper"], pt: ["Duomo de Milao", "Galeria Vittorio Emanuele", "A Ultima Ceia"] }
       },
       {
         day: 9,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight." },
-        activities: { es: ["Check-out", "Tiempo libre", "Vuelo de regreso"], en: ["Check-out", "Free time", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight.", pt: "Traslado ao aeroporto para o voo de retorno." },
+        activities: { es: ["Check-out", "Tiempo libre", "Vuelo de regreso"], en: ["Check-out", "Free time", "Return flight"], pt: ["Check-out", "Tempo livre", "Voo de retorno"] }
       }
     ],
     faqs: [
