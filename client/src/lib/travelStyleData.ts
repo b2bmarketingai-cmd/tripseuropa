@@ -1,36 +1,39 @@
+export type MultiLangText = { es: string; en: string; pt?: string };
+export type MultiLangArray = { es: string[]; en: string[]; pt?: string[] };
+
 export interface TravelStylePackage {
   id: string;
-  name: { es: string; en: string };
+  name: MultiLangText;
   destination: string;
-  duration: { es: string; en: string };
+  duration: MultiLangText;
   price: number;
   image: string;
-  highlights: { es: string[]; en: string[] };
+  highlights: MultiLangArray;
 }
 
 export interface TravelStyleItinerary {
   day: number;
-  title: { es: string; en: string };
-  description: { es: string; en: string };
+  title: MultiLangText;
+  description: MultiLangText;
 }
 
 export interface TravelStyleFAQ {
-  question: { es: string; en: string };
-  answer: { es: string; en: string };
+  question: MultiLangText;
+  answer: MultiLangText;
 }
 
 export interface TravelStyleData {
   slug: string;
   category: "season" | "interest" | "group";
-  name: { es: string; en: string };
+  name: MultiLangText;
   heroImage: string;
-  description: { es: string; en: string };
-  highlights: { es: string[]; en: string[] };
+  description: MultiLangText;
+  highlights: MultiLangArray;
   packages: TravelStylePackage[];
   sampleItinerary: TravelStyleItinerary[];
   faqs: TravelStyleFAQ[];
-  bestFor: { es: string; en: string };
-  idealDuration: { es: string; en: string };
+  bestFor: MultiLangText;
+  idealDuration: MultiLangText;
 }
 
 export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
