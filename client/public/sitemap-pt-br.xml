@@ -3,12 +3,441 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tripseuropa.com/pt-br</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinos</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinos"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/packages</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/packages"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/packages"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/packages"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/packages"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/blog</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/blog"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/contact</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/contact"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/contato</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/contato"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/about</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/about"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/sobre</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/sobre"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/testimonios</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/testimonios"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/testimonios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/testimonios"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/rewards</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/rewards"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/rewards"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/rewards"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/rewards"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/travel-assistant</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/travel-assistant"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/travel-assistant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/travel-assistant"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/travel-assistant"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/assistente</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/travel-assistant"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/asistente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/travel-assistant"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/assistente"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/last-minute</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/ofertas-ultima-hora"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/ofertas-ultima-hora"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/last-minute-offers"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/last-minute"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/vacaciones-europa</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/ferias-europa"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/ferias-europa</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/vacaciones-europa"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/ferias-europa"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/forum</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/forum"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/forum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/forum"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/forum"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/tools</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/tools"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/tools"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/privacy</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/privacy"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/policies</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/policies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/policies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/policies"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/policies"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/requisitos-visa</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/requisitos-visa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/requisitos-visa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/visa-requirements"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/requisitos-visa"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/flights</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/vuelos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/vuelos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/flights"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/flights"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/hotels</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/hoteles"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/hoteles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/hotels"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/hotels"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/packages</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/paquetes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/paquetes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/packages"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/packages"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/tours</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/tours"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/tours"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/tours"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/tours"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/insurance</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/seguros"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/seguros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/insurance"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/insurance"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/services/esim</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/services/esim"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/services/esim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/services/esim"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/services/esim"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/france</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/france"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/france"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/france"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/france"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/italy</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/italy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/italy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/italy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/italy"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/spain</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/spain"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/spain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/spain"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/spain"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/germany</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/germany"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/germany"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/germany"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/germany"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/portugal</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/portugal"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/portugal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/portugal"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/portugal"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/greece</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/greece"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/greece"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/greece"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/greece"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/netherlands</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/netherlands"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/netherlands"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/netherlands"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/netherlands"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/switzerland</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/switzerland"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/switzerland"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/switzerland"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/switzerland"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/united-kingdom</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/united-kingdom"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/united-kingdom"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/united-kingdom"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/united-kingdom"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/destinations/croatia</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/destinations/croatia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/destinations/croatia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/destinations/croatia"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/destinations/croatia"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/blog/colombia</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/blog/colombia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/blog/colombia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/blog/colombia"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/blog/colombia"/>
+  </url>
+  
+  <url>
+    <loc>https://tripseuropa.com/pt-br/blog/brasil</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/blog/brasil"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tripseuropa.com/blog/brasil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tripseuropa.com/en/blog/brasil"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/pt-br/blog/brasil"/>
+  </url>
+  
+  <url>
     <loc>https://tripseuropa.com/desde-brasil</loc>
-    <lastmod>2025-01-05</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tripseuropa.com/desde-brasil"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://tripseuropa.com/desde-brasil"/>
   </url>
-
+  
 </urlset>
