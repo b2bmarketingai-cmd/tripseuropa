@@ -35,6 +35,17 @@ export interface DestinationFAQ {
   answer: MultiLangText;
 }
 
+export interface PracticalInfoTip {
+  tip: MultiLangText;
+}
+
+export interface PracticalInfo {
+  currency: PracticalInfoTip;
+  language: PracticalInfoTip;
+  transport: PracticalInfoTip;
+  safety: PracticalInfoTip;
+}
+
 export interface DestinationData {
   slug: string;
   name: MultiLangText;
@@ -50,6 +61,7 @@ export interface DestinationData {
   currency: string;
   language: MultiLangText;
   visaInfo: MultiLangText;
+  practicalInfo?: PracticalInfo;
 }
 
 export const DESTINATIONS_DATA: DestinationData[] = [
@@ -1963,7 +1975,37 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "EUR",
     language: { es: "Lituano/Leton/Estonio", en: "Lithuanian/Latvian/Estonian", pt: "Lituano/Letao/Estoniano" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" },
+    practicalInfo: {
+      currency: {
+        tip: {
+          es: "El Euro es la moneda oficial en los tres paises. Tarjetas de credito son ampliamente aceptadas. Cajeros automaticos disponibles en todas las ciudades.",
+          en: "The Euro is the official currency in all three countries. Credit cards are widely accepted. ATMs available in all cities.",
+          pt: "O Euro e a moeda oficial nos tres paises. Cartoes de credito sao amplamente aceitos. Caixas eletronicos disponiveis em todas as cidades."
+        }
+      },
+      language: {
+        tip: {
+          es: "Cada pais tiene su propio idioma (lituano, leton, estonio), pero el ingles es muy hablado, especialmente por jovenes y en zonas turisticas.",
+          en: "Each country has its own language (Lithuanian, Latvian, Estonian), but English is widely spoken, especially by young people and in tourist areas.",
+          pt: "Cada pais tem seu proprio idioma (lituano, letao, estoniano), mas o ingles e muito falado, especialmente por jovens e em areas turisticas."
+        }
+      },
+      transport: {
+        tip: {
+          es: "Excelentes conexiones de autobus entre las tres capitales. Lux Express y Ecolines son las principales companias. Trenes limitados pero en expansion.",
+          en: "Excellent bus connections between the three capitals. Lux Express and Ecolines are the main companies. Limited but expanding train services.",
+          pt: "Excelentes conexoes de onibus entre as tres capitais. Lux Express e Ecolines sao as principais empresas. Servicos de trem limitados, mas em expansao."
+        }
+      },
+      safety: {
+        tip: {
+          es: "Los tres paises son muy seguros para turistas. Bajo indice de criminalidad. Precauciones normales en zonas turisticas concurridas.",
+          en: "All three countries are very safe for tourists. Low crime rate. Normal precautions in crowded tourist areas.",
+          pt: "Os tres paises sao muito seguros para turistas. Baixo indice de criminalidade. Precaucoes normais em areas turisticas movimentadas."
+        }
+      }
+    }
   },
   {
     slug: "cyprus",
@@ -2039,7 +2081,37 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     bestTimeToVisit: { es: "Abril a Octubre", en: "April to October", pt: "Abril a Outubro" },
     currency: "EUR",
     language: { es: "Griego/Turco", en: "Greek/Turkish", pt: "Grego/Turco" },
-    visaInfo: { es: "Union Europea - verificar requisitos", en: "European Union - check requirements", pt: "Uniao Europeia - nao requer visto para ate 90 dias" }
+    visaInfo: { es: "Union Europea - verificar requisitos", en: "European Union - check requirements", pt: "Uniao Europeia - nao requer visto para ate 90 dias" },
+    practicalInfo: {
+      currency: {
+        tip: {
+          es: "El Euro es la moneda oficial en la Republica de Chipre. En el norte se usa la Lira Turca. Tarjetas de credito ampliamente aceptadas en el sur.",
+          en: "The Euro is the official currency in the Republic of Cyprus. Turkish Lira is used in the north. Credit cards widely accepted in the south.",
+          pt: "O Euro e a moeda oficial na Republica de Chipre. No norte usa-se a Lira Turca. Cartoes de credito amplamente aceitos no sul."
+        }
+      },
+      language: {
+        tip: {
+          es: "El griego es el idioma oficial en el sur, turco en el norte. El ingles es muy hablado en toda la isla debido al pasado britanico.",
+          en: "Greek is the official language in the south, Turkish in the north. English is widely spoken across the island due to British colonial past.",
+          pt: "O grego e o idioma oficial no sul, turco no norte. O ingles e muito falado em toda a ilha devido ao passado colonico britanico."
+        }
+      },
+      transport: {
+        tip: {
+          es: "No hay sistema de trenes. Alquilar coche es la mejor opcion para explorar la isla. Autobuses urbanos e interurbanos disponibles.",
+          en: "No train system. Renting a car is the best option to explore the island. Urban and intercity buses available.",
+          pt: "Nao ha sistema de trens. Alugar carro e a melhor opcao para explorar a ilha. Onibus urbanos e interurbanos disponiveis."
+        }
+      },
+      safety: {
+        tip: {
+          es: "Chipre es muy seguro para turistas. La isla tiene uno de los indices de criminalidad mas bajos de Europa. Cuidado con el sol intenso en verano.",
+          en: "Cyprus is very safe for tourists. The island has one of the lowest crime rates in Europe. Be careful with intense summer sun.",
+          pt: "Chipre e muito seguro para turistas. A ilha tem um dos indices de criminalidade mais baixos da Europa. Cuidado com o sol intenso no verao."
+        }
+      }
+    }
   },
   {
     slug: "scotland",
