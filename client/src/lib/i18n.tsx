@@ -1173,11 +1173,39 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('language') as Language;
+  const [location] = useLocation();
+  
+  const [language, setLanguage] = useState<Language>(() => {
+    // Extract language from URL path (e.g., /en/, /pt-br/, /es/)
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      const match = path.match(/^\/(en|pt-br|es)(?:\/|$)/);
+      if (match) {
+        const urlLang = match[1];
+        if (urlLang === 'pt-br') return 'pt';
+        return urlLang as Language;
+      }
+      // Fallback to localStorage
+      const saved = localStorage.getItem('language') as Language;
       return saved || 'es';
     }
     return 'es';
   });
+  
+  // Update language when URL changes
+  useEffect(() => {
+    const path = location;
+    const match = path.match(/^\/(en|pt-br|es)(?:\/|$)/);
+    if (match) {
+      const urlLang = match[1];
+      const newLang = (urlLang === 'pt-br' ? 'pt' : urlLang) as Language;
+      if (newLang !== language) {
+        setLanguage(newLang);
+      }
+    }
+  }, [location]);}, [language]);
 
+    // Save language to localStorage
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);
