@@ -2,12 +2,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
-import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
-import { Link, useParams } from "wouter";
+import { Link, useParams, useLocation } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
@@ -82,7 +81,15 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const { language } = useI18n();
+  const [location] = useLocation();
+  
+  const getLanguageFromPath = (): string => {
+    if (location.startsWith('/pt-br')) return 'pt';
+    if (location.startsWith('/en')) return 'en';
+    return 'es';
+  };
+  
+  const language = getLanguageFromPath();
   const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
