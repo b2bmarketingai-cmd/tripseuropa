@@ -9,10 +9,13 @@ import { Shield, Lock, Eye, FileText, Mail, Clock } from "lucide-react";
 export default function Privacy() {
   const { language } = useI18n();
 
+  type LangKey = "es" | "en" | "pt";
+  const dataLang: LangKey = language === "pt" ? "es" : language;
+
   const sections = [
     {
       icon: FileText,
-      title: { es: "Informacion que Recopilamos", en: "Information We Collect" },
+      title: { es: "Informacion que Recopilamos", en: "Information We Collect", pt: "Informacoes que Coletamos" },
       content: {
         es: [
           "Datos personales: nombre, correo electronico, telefono, direccion",
@@ -25,12 +28,18 @@ export default function Privacy() {
           "Travel information: passport, preferences, travel history",
           "Payment data: securely processed with SSL encryption",
           "Navigation information: cookies and site usage data"
+        ],
+        pt: [
+          "Dados pessoais: nome, e-mail, telefone, endereco",
+          "Informacoes de viagem: passaporte, preferencias, historico de viagens",
+          "Dados de pagamento: processados com seguranca com criptografia SSL",
+          "Informacoes de navegacao: cookies e dados de uso do site"
         ]
       }
     },
     {
       icon: Eye,
-      title: { es: "Como Usamos tu Informacion", en: "How We Use Your Information" },
+      title: { es: "Como Usamos tu Informacion", en: "How We Use Your Information", pt: "Como Usamos Suas Informacoes" },
       content: {
         es: [
           "Procesar y gestionar tus reservas de viaje",
@@ -43,12 +52,18 @@ export default function Privacy() {
           "Communicate with you about your trip and relevant offers",
           "Improve our services and user experience",
           "Comply with legal and visa requirements"
+        ],
+        pt: [
+          "Processar e gerenciar suas reservas de viagem",
+          "Comunicar-nos com voce sobre sua viagem e ofertas relevantes",
+          "Melhorar nossos servicos e experiencia do usuario",
+          "Cumprir requisitos legais e de vistos"
         ]
       }
     },
     {
       icon: Lock,
-      title: { es: "Proteccion de Datos", en: "Data Protection" },
+      title: { es: "Proteccion de Datos", en: "Data Protection", pt: "Protecao de Dados" },
       content: {
         es: [
           "Encriptacion SSL en todas las transmisiones de datos",
@@ -61,12 +76,18 @@ export default function Privacy() {
           "Secure storage on certified servers",
           "Restricted access only to authorized personnel",
           "Regular security audits"
+        ],
+        pt: [
+          "Criptografia SSL em todas as transmissoes de dados",
+          "Armazenamento seguro em servidores certificados",
+          "Acesso restrito apenas a pessoal autorizado",
+          "Auditorias regulares de seguranca"
         ]
       }
     },
     {
       icon: Shield,
-      title: { es: "Tus Derechos", en: "Your Rights" },
+      title: { es: "Tus Derechos", en: "Your Rights", pt: "Seus Direitos" },
       content: {
         es: [
           "Acceder a tus datos personales en cualquier momento",
@@ -79,6 +100,12 @@ export default function Privacy() {
           "Request correction of inaccurate information",
           "Request deletion of your data (right to be forgotten)",
           "Object to processing of your data for marketing"
+        ],
+        pt: [
+          "Acessar seus dados pessoais a qualquer momento",
+          "Solicitar correcao de informacoes imprecisas",
+          "Pedir exclusao de seus dados (direito ao esquecimento)",
+          "Opor-se ao processamento de seus dados para marketing"
         ]
       }
     }
@@ -90,15 +117,13 @@ export default function Privacy() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-privacy-hero">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="bg-accent/20 text-accent border-accent/30 mb-4" data-testid="badge-privacy">
-            {language === "es" ? "Privacidad" : "Privacy"}
+            {{ es: "Privacidad", en: "Privacy", pt: "Privacidade" }[language]}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-testid="text-privacy-title">
-            {language === "es" ? "Politica de Privacidad" : "Privacy Policy"}
+            {{ es: "Politica de Privacidad", en: "Privacy Policy", pt: "Politica de Privacidade" }[language]}
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-privacy-subtitle">
-            {language === "es" 
-              ? "Tu privacidad es nuestra prioridad. Conoce como protegemos tu informacion" 
-              : "Your privacy is our priority. Learn how we protect your information"}
+            {{ es: "Tu privacidad es nuestra prioridad. Conoce como protegemos tu informacion", en: "Your privacy is our priority. Learn how we protect your information", pt: "Sua privacidade e nossa prioridade. Saiba como protegemos suas informacoes" }[language]}
           </p>
         </div>
       </section>
@@ -110,14 +135,12 @@ export default function Privacy() {
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-6 h-6 text-accent" />
                   <div>
-                    <p className="font-bold">{language === "es" ? "Ultima actualizacion" : "Last updated"}</p>
+                    <p className="font-bold">{{ es: "Ultima actualizacion", en: "Last updated", pt: "Ultima atualizacao" }[language]}</p>
                     <p className="text-muted-foreground text-sm">28 de Diciembre, 2024</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  {language === "es" 
-                    ? "Esta politica de privacidad describe como Trips Europa recopila, usa y protege tu informacion personal cuando utilizas nuestros servicios."
-                    : "This privacy policy describes how Trips Europa collects, uses and protects your personal information when you use our services."}
+                  {{ es: "Esta politica de privacidad describe como Trips Europa recopila, usa y protege tu informacion personal cuando utilizas nuestros servicios.", en: "This privacy policy describes how Trips Europa collects, uses and protects your personal information when you use our services.", pt: "Esta politica de privacidade descreve como a Trips Europa coleta, usa e protege suas informacoes pessoais quando voce usa nossos servicos." }[language]}
                 </p>
               </CardContent>
             </Card>
@@ -149,12 +172,10 @@ export default function Privacy() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Mail className="w-6 h-6 text-accent" />
-                  <h2 className="text-xl font-display font-bold">{language === "es" ? "Contacto" : "Contact"}</h2>
+                  <h2 className="text-xl font-display font-bold">{{ es: "Contacto", en: "Contact", pt: "Contato" }[language]}</h2>
                 </div>
                 <p className="text-white/80 mb-4">
-                  {language === "es" 
-                    ? "Si tienes preguntas sobre esta politica de privacidad o deseas ejercer tus derechos, contactanos:"
-                    : "If you have questions about this privacy policy or wish to exercise your rights, contact us:"}
+                  {{ es: "Si tienes preguntas sobre esta politica de privacidad o deseas ejercer tus derechos, contactanos:", en: "If you have questions about this privacy policy or wish to exercise your rights, contact us:", pt: "Se voce tiver duvidas sobre esta politica de privacidade ou desejar exercer seus direitos, entre em contato:" }[language]}
                 </p>
                 <div className="space-y-2 text-white/80">
                   <p>Email: info@tripseuropa.com</p>
