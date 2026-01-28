@@ -277,6 +277,28 @@ function Router() {
       <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
       <Route path="/pt-br/blog" component={Blog} />
       <Route path="/pt-br/blog/:country" component={Blog} />
+      <Route path="/pt-br/rewards" component={Rewards} />
+      <Route path="/pt-br/recompensas" component={Rewards} />
+      <Route path="/pt-br/contact" component={Contact} />
+      <Route path="/pt-br/contato" component={Contact} />
+      <Route path="/pt-br/about" component={About} />
+      <Route path="/pt-br/sobre" component={About} />
+      <Route path="/pt-br/travel-assistant" component={TravelAssistant} />
+      <Route path="/pt-br/assistente" component={TravelAssistant} />
+      <Route path="/pt-br/services/voos" component={Flights} />
+      <Route path="/pt-br/services/flights" component={Flights} />
+      <Route path="/pt-br/services/hoteis" component={Hotels} />
+      <Route path="/pt-br/services/hotels" component={Hotels} />
+      <Route path="/pt-br/services/pacotes" component={PackagesService} />
+      <Route path="/pt-br/services/packages" component={PackagesService} />
+      <Route path="/pt-br/services/tours" component={Tours} />
+      <Route path="/pt-br/services/seguros" component={Insurance} />
+      <Route path="/pt-br/services/insurance" component={Insurance} />
+      <Route path="/pt-br/services/esim" component={ESim} />
+      <Route path="/pt-br/esim" component={ESim} />
+      <Route path="/pt-br/privacy" component={Privacy} />
+      <Route path="/pt-br/privacidade" component={Privacy} />
+      <Route path="/pt-br/forum" component={Forum} />
       
       {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
