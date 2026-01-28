@@ -17,7 +17,7 @@ Preferred communication style: Simple, everyday language.
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
 - **Styling**: Tailwind CSS with custom design tokens (navy primary #0f172a, gold accent #d4af37)
 - **Typography**: Playfair Display (headings) and Lato (body) fonts for luxury branding
-- **Internationalization**: Custom i18n context supporting Spanish and English
+- **Internationalization**: Custom i18n context supporting Spanish, English, and Brazilian Portuguese (PT-BR)
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express
@@ -109,10 +109,17 @@ All sitemaps include proper hreflang tags for:
 ### Content Coverage
 - 27 European destination countries
 - 36 European cities
-- 15 blog posts (multilingual)
+- 119 blog posts (fully trilingual ES/EN/PT-BR)
 - 12 travel packages
 - 10 travel experiences
 - 6 promotional offers
+
+### Blog Data Structure (`client/src/lib/blogData.ts`)
+- **BlogSection interface**: Uses MultiLangText for title/content, MultiLangArray for lists
+- **BlogFAQ interface**: Uses MultiLangText for question/answer
+- **BlogPostData interface**: Full trilingual support with slugs, title, excerpt, categoryLabel, sections, faqs
+- **Translation count**: 2,534+ Portuguese translations added
+- **All 119 blog posts** have complete Spanish, English, and Brazilian Portuguese content
 
 ## Branding Assets (PERMANENTE - NO MODIFICAR)
 
