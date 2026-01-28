@@ -7,6 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Star, Users, Plane, Hotel, Bus } from "lucide-react";
 import { Link } from "wouter";
+import PageBreadcrumbs, { getHomeLabel, getHomePath } from "@/components/PageBreadcrumbs";
+import { BreadcrumbSchema, ProductSchema } from "@/components/SEOSchemas";
+import { SEOHead } from "@/components/SEOHead";
 
 const packages: Record<string, { 
   title: { es: string; en: string; pt: string };
@@ -260,8 +263,34 @@ export default function PackagePage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="page-package">
+      <SEOHead
+        title={`${pkg.title[lang]} - Trips Europa`}
+        description={pkg.description[lang]}
+        keywords={`paquete ${pkg.title[lang]}, viaje europa ${pkg.days} dias, tour europa`}
+        url={`https://tripseuropa.co/paquetes/${slug}`}
+        image={pkg.image}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: getHomeLabel(lang), url: "https://tripseuropa.co" },
+          { name: lang === "es" ? "Paquetes" : lang === "pt" ? "Pacotes" : "Packages", url: "https://tripseuropa.co/packages" },
+          { name: pkg.title[lang], url: `https://tripseuropa.co/paquetes/${slug}` }
+        ]}
+      />
+      <ProductSchema
+        name={pkg.title[lang]}
+        description={pkg.description[lang]}
+        image={pkg.image}
+        url={`https://tripseuropa.co/paquetes/${slug}`}
+        price={pkg.price}
+      />
       <Header />
-      
+      <PageBreadcrumbs items={[
+        { label: getHomeLabel(lang), href: getHomePath(lang) },
+        { label: lang === "es" ? "Paquetes" : lang === "pt" ? "Pacotes" : "Packages", href: lang === "en" ? "/en/packages" : lang === "pt" ? "/pt-br/pacotes" : "/packages" },
+        { label: pkg.title[lang] }
+      ]} />
+
       <main className="flex-1">
         <section 
           className="relative h-[50vh] min-h-[400px] bg-cover bg-center"

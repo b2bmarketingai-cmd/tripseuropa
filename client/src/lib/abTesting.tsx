@@ -191,21 +191,18 @@ export function ABTestingProvider({ children }: { children: ReactNode }) {
         variant: variant,
       });
     }
-    
-    console.log(`[A/B] Impression: ${experimentId} - Variant ${variant}`);
+
   };
 
   const trackConversion = (experimentId: string): void => {
     const variant = getVariant(experimentId);
-    
+
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", "experiment_conversion", {
         experiment_id: experimentId,
         variant: variant,
       });
     }
-    
-    console.log(`[A/B] Conversion: ${experimentId} - Variant ${variant}`);
   };
 
   return (

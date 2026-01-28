@@ -36,6 +36,7 @@ import { FloatingContactButtons } from "@/components/support";
 import { ContactForm } from "@/components/ContactForm";
 import { SEOHead, generateCountryHreflangUrls } from "@/components/SEOHead";
 import { BreadcrumbSchema, TouristDestinationSchema, FAQSchema } from "@/components/SEOSchemas";
+import PageBreadcrumbs, { getHomeLabel, getHomePath } from "@/components/PageBreadcrumbs";
 
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -239,7 +240,12 @@ export default function DestinationPage() {
       />
       <FAQSchema faqs={faqsForSchema} />
       <Header />
-      <section 
+      <PageBreadcrumbs items={[
+        { label: getHomeLabel(contentLang), href: getHomePath(contentLang) },
+        { label: contentLang === "es" ? "Destinos" : contentLang === "pt" ? "Destinos" : "Destinations", href: contentLang === "en" ? "/en/destinations" : contentLang === "pt" ? "/pt-br/destinos" : "/destinos" },
+        { label: destination.name[dataLang] || destination.name["es"] }
+      ]} />
+      <section
         className="relative min-h-[500px] flex items-center justify-center"
         data-testid="section-destination-hero"
       >
