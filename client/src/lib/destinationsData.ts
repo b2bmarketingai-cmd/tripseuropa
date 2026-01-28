@@ -1109,110 +1109,113 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "croacia-esencial",
-        name: { es: "Croacia Esencial", en: "Essential Croatia" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Croacia Esencial", en: "Essential Croatia", pt: "Croacia Essencial" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,699",
         taxes: "340",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Plitvice"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Plitvice"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Plitvice"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Traslados", "Guia em portugues", "Plitvice"]
         }
       },
       {
         id: "croacia-islas",
-        name: { es: "Croacia e Islas", en: "Croatia and Islands" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Croacia e Islas", en: "Croatia and Islands", pt: "Croacia e Ilhas" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,199",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles con vistas", "Desayuno", "Ferries a islas", "Tour en barco", "Excursiones"],
-          en: ["International flights", "Hotels with views", "Breakfast", "Island ferries", "Boat tour", "Excursions"]
+          en: ["International flights", "Hotels with views", "Breakfast", "Island ferries", "Boat tour", "Excursions"],
+          pt: ["Voos internacionais", "Hoteis com vista", "Cafe da manha", "Ferries para ilhas", "Passeio de barco", "Excursoes"]
         }
       },
       {
         id: "croacia-got",
-        name: { es: "Ruta Game of Thrones", en: "Game of Thrones Route" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Ruta Game of Thrones", en: "Game of Thrones Route", pt: "Rota Game of Thrones" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Tours GOT", "Dubrovnik completo", "Guia especializado"],
-          en: ["International flights", "4-star hotels", "Breakfast", "GOT tours", "Full Dubrovnik", "Specialized guide"]
+          en: ["International flights", "4-star hotels", "Breakfast", "GOT tours", "Full Dubrovnik", "Specialized guide"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha", "Tours GOT", "Dubrovnik completo", "Guia especializado"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Zagreb", en: "Arrival in Zagreb" },
-        description: { es: "Bienvenida en Zagreb, la capital croata.", en: "Welcome to Zagreb, the Croatian capital." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Ciudad alta"], en: ["Airport pickup", "Hotel check-in", "Upper town"] }
+        title: { es: "Llegada a Zagreb", en: "Arrival in Zagreb", pt: "Chegada em Zagreb" },
+        description: { es: "Bienvenida en Zagreb, la capital croata.", en: "Welcome to Zagreb, the Croatian capital.", pt: "Boas-vindas em Zagreb, a capital croata." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Ciudad alta"], en: ["Airport pickup", "Hotel check-in", "Upper town"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Cidade alta"] }
       },
       {
         day: 2,
-        title: { es: "Lagos de Plitvice", en: "Plitvice Lakes" },
-        description: { es: "Excursion al parque nacional más famoso de Croacia.", en: "Excursion to Croatia's most famous national park." },
-        activities: { es: ["Lagos superiores", "Lagos inferiores", "Cascadas"], en: ["Upper lakes", "Lower lakes", "Waterfalls"] }
+        title: { es: "Lagos de Plitvice", en: "Plitvice Lakes", pt: "Lagos de Plitvice" },
+        description: { es: "Excursion al parque nacional más famoso de Croacia.", en: "Excursion to Croatia's most famous national park.", pt: "Excursao ao parque nacional mais famoso da Croacia." },
+        activities: { es: ["Lagos superiores", "Lagos inferiores", "Cascadas"], en: ["Upper lakes", "Lower lakes", "Waterfalls"], pt: ["Lagos superiores", "Lagos inferiores", "Cachoeiras"] }
       },
       {
         day: 3,
-        title: { es: "Split", en: "Split" },
-        description: { es: "Viaje a Split, ciudad del Palacio de Diocleciano.", en: "Trip to Split, city of Diocletian's Palace." },
-        activities: { es: ["Viaje a Split", "Palacio Diocleciano", "Riva"], en: ["Trip to Split", "Diocletian's Palace", "Riva"] }
+        title: { es: "Split", en: "Split", pt: "Split" },
+        description: { es: "Viaje a Split, ciudad del Palacio de Diocleciano.", en: "Trip to Split, city of Diocletian's Palace.", pt: "Viagem a Split, cidade do Palacio de Diocleciano." },
+        activities: { es: ["Viaje a Split", "Palacio Diocleciano", "Riva"], en: ["Trip to Split", "Diocletian's Palace", "Riva"], pt: ["Viagem a Split", "Palacio de Diocleciano", "Riva"] }
       },
       {
         day: 4,
-        title: { es: "Isla de Hvar", en: "Hvar Island" },
-        description: { es: "Ferry a la glamurosa isla de Hvar.", en: "Ferry to glamorous Hvar island." },
-        activities: { es: ["Ferry a Hvar", "Ciudad de Hvar", "Playas"], en: ["Ferry to Hvar", "Hvar town", "Beaches"] }
+        title: { es: "Isla de Hvar", en: "Hvar Island", pt: "Ilha de Hvar" },
+        description: { es: "Ferry a la glamurosa isla de Hvar.", en: "Ferry to glamorous Hvar island.", pt: "Ferry para a glamorosa ilha de Hvar." },
+        activities: { es: ["Ferry a Hvar", "Ciudad de Hvar", "Playas"], en: ["Ferry to Hvar", "Hvar town", "Beaches"], pt: ["Ferry para Hvar", "Cidade de Hvar", "Praias"] }
       },
       {
         day: 5,
-        title: { es: "Dubrovnik", en: "Dubrovnik" },
-        description: { es: "Viaje a la perla del Adriatico.", en: "Trip to the Pearl of the Adriatic." },
-        activities: { es: ["Viaje a Dubrovnik", "Murallas", "Casco antiguo"], en: ["Trip to Dubrovnik", "Walls", "Old town"] }
+        title: { es: "Dubrovnik", en: "Dubrovnik", pt: "Dubrovnik" },
+        description: { es: "Viaje a la perla del Adriatico.", en: "Trip to the Pearl of the Adriatic.", pt: "Viagem a perola do Adriatico." },
+        activities: { es: ["Viaje a Dubrovnik", "Murallas", "Casco antiguo"], en: ["Trip to Dubrovnik", "Walls", "Old town"], pt: ["Viagem a Dubrovnik", "Muralhas", "Centro historico"] }
       },
       {
         day: 6,
-        title: { es: "Dubrovnik Game of Thrones", en: "Dubrovnik Game of Thrones" },
-        description: { es: "Tour por las locaciones de Game of Thrones.", en: "Tour of Game of Thrones locations." },
-        activities: { es: ["Tour GOT", "Fuerte Lovrijenac", "Escaleras de la verguenza"], en: ["GOT tour", "Fort Lovrijenac", "Shame stairs"] }
+        title: { es: "Dubrovnik Game of Thrones", en: "Dubrovnik Game of Thrones", pt: "Dubrovnik Game of Thrones" },
+        description: { es: "Tour por las locaciones de Game of Thrones.", en: "Tour of Game of Thrones locations.", pt: "Tour pelas locacoes de Game of Thrones." },
+        activities: { es: ["Tour GOT", "Fuerte Lovrijenac", "Escaleras de la verguenza"], en: ["GOT tour", "Fort Lovrijenac", "Shame stairs"], pt: ["Tour GOT", "Forte Lovrijenac", "Escadas da vergonha"] }
       },
       {
         day: 7,
-        title: { es: "Islas Elafiti", en: "Elafiti Islands" },
-        description: { es: "Crucero por las Islas Elafiti.", en: "Cruise to the Elafiti Islands." },
-        activities: { es: ["Crucero", "Lopud", "Sipan", "Almuerzo de mariscos"], en: ["Cruise", "Lopud", "Sipan", "Seafood lunch"] }
+        title: { es: "Islas Elafiti", en: "Elafiti Islands", pt: "Ilhas Elafiti" },
+        description: { es: "Crucero por las Islas Elafiti.", en: "Cruise to the Elafiti Islands.", pt: "Cruzeiro pelas Ilhas Elafiti." },
+        activities: { es: ["Crucero", "Lopud", "Sipan", "Almuerzo de mariscos"], en: ["Cruise", "Lopud", "Sipan", "Seafood lunch"], pt: ["Cruzeiro", "Lopud", "Sipan", "Almoco de frutos do mar"] }
       },
       {
         day: 8,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Tiempo libre y vuelo de regreso.", en: "Free time and return flight." },
-        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Tiempo libre y vuelo de regreso.", en: "Free time and return flight.", pt: "Tempo livre e voo de retorno." },
+        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"], pt: ["Compras", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Croacia?", en: "Do I need a visa to travel to Croatia?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Croacia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Croatia without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Croacia?", en: "Do I need a visa to travel to Croatia?", pt: "Preciso de visto para viajar para a Croacia?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Croacia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Croatia without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar na Croacia sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Croacia usa el Euro?", en: "Does Croatia use the Euro?" },
-        answer: { es: "Si, desde 2023 Croacia es parte de la Eurozona y usa el Euro como moneda oficial.", en: "Yes, since 2023 Croatia is part of the Eurozone and uses the Euro as official currency." }
+        question: { es: "Croacia usa el Euro?", en: "Does Croatia use the Euro?", pt: "A Croacia usa o Euro?" },
+        answer: { es: "Si, desde 2023 Croacia es parte de la Eurozona y usa el Euro como moneda oficial.", en: "Yes, since 2023 Croatia is part of the Eurozone and uses the Euro as official currency.", pt: "Sim, desde 2023 a Croacia faz parte da Zona do Euro e usa o Euro como moeda oficial." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Croacia?", en: "When is the best time to visit Croatia?" },
-        answer: { es: "Mayo a octubre. Julio y agosto son los meses más calurosos y concurridos.", en: "May to October. July and August are the hottest and most crowded months." }
+        question: { es: "Cual es la mejor epoca para visitar Croacia?", en: "When is the best time to visit Croatia?", pt: "Qual e a melhor epoca para visitar a Croacia?" },
+        answer: { es: "Mayo a octubre. Julio y agosto son los meses más calurosos y concurridos.", en: "May to October. July and August are the hottest and most crowded months.", pt: "Maio a outubro. Julho e agosto sao os meses mais quentes e lotados." }
       },
       {
-        question: { es: "Vale la pena el tour de Game of Thrones?", en: "Is the Game of Thrones tour worth it?" },
-        answer: { es: "Absolutamente, especialmente en Dubrovnik donde se filmaron muchas escenas icónicas de la serie.", en: "Absolutely, especially in Dubrovnik where many iconic scenes from the series were filmed." }
+        question: { es: "Vale la pena el tour de Game of Thrones?", en: "Is the Game of Thrones tour worth it?", pt: "Vale a pena o tour de Game of Thrones?" },
+        answer: { es: "Absolutamente, especialmente en Dubrovnik donde se filmaron muchas escenas icónicas de la serie.", en: "Absolutely, especially in Dubrovnik where many iconic scenes from the series were filmed.", pt: "Com certeza, especialmente em Dubrovnik onde muitas cenas iconicas da serie foram filmadas." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October" },
+    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October", pt: "Maio a Outubro" },
     currency: "EUR",
-    language: { es: "Croata", en: "Croatian" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Croata", en: "Croatian", pt: "Croata" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "united-kingdom",
@@ -1500,25 +1503,25 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?w=800&q=60"
     ],
     packages: [
-      { id: "czech-republic-1", name: { es: "Bohemia Romántica", en: "Romantic Bohemia" }, duration: { es: "7 dias", en: "7 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"] } }
+      { id: "czech-republic-1", name: { es: "Bohemia Romántica", en: "Romantic Bohemia", pt: "Boemia Romantica" }, duration: { es: "7 dias", en: "7 days", pt: "7 dias" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours"], en: ["Flights", "4* Hotels", "Breakfasts", "Tours"], pt: ["Voos", "Hoteis 4*", "Cafes da manha", "Tours"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Praga Llegada", en: "Prague Arrival" }, description: { es: "Bienvenida a la ciudad de las cien torres.", en: "Welcome to the city of a hundred towers." }, activities: { es: ["Traslado hotel", "Plaza Ciudad Vieja", "Cena tipica"], en: ["Hotel transfer", "Old Town Square", "Traditional dinner"] } },
-      { day: 2, title: { es: "Praga Historica", en: "Historic Prague" }, description: { es: "El corazon gotico y barroco de la ciudad.", en: "The Gothic and Baroque heart of the city." }, activities: { es: ["Puente Carlos", "Reloj Astronomico", "Barrio Judio"], en: ["Charles Bridge", "Astronomical Clock", "Jewish Quarter"] } },
-      { day: 3, title: { es: "Castillo de Praga", en: "Prague Castle" }, description: { es: "El complejo de castillos más grande del mundo.", en: "The world's largest castle complex." }, activities: { es: ["Castillo de Praga", "Catedral San Vito", "Callejon del Oro"], en: ["Prague Castle", "St. Vitus Cathedral", "Golden Lane"] } },
-      { day: 4, title: { es: "Cesky Krumlov", en: "Cesky Krumlov" }, description: { es: "Ciudad medieval perfecta, patrimonio UNESCO.", en: "Perfect medieval town, UNESCO heritage." }, activities: { es: ["Castillo Cesky Krumlov", "Centro histórico", "Rafting rio Vltava"], en: ["Cesky Krumlov Castle", "Historic center", "Vltava River rafting"] } },
-      { day: 5, title: { es: "Karlovy Vary", en: "Karlovy Vary" }, description: { es: "El spa más famoso de Europa Central.", en: "Central Europe's most famous spa." }, activities: { es: ["Columnata spa", "Aguas termales", "Cristaleria Moser"], en: ["Spa colonnade", "Thermal waters", "Moser glassworks"] } },
-      { day: 6, title: { es: "Kutna Hora", en: "Kutna Hora" }, description: { es: "Ciudad minera medieval con el osario de Sedlec.", en: "Medieval mining town with the Sedlec ossuary." }, activities: { es: ["Osario de Sedlec", "Catedral Santa Barbara", "Centro histórico"], en: ["Sedlec Ossuary", "St. Barbara's Cathedral", "Historic center"] } },
-      { day: 7, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight." }, activities: { es: ["Compras cristal", "Traslado aeropuerto", "Vuelo regreso"], en: ["Crystal shopping", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Praga Llegada", en: "Prague Arrival", pt: "Chegada em Praga" }, description: { es: "Bienvenida a la ciudad de las cien torres.", en: "Welcome to the city of a hundred towers.", pt: "Boas-vindas a cidade das cem torres." }, activities: { es: ["Traslado hotel", "Plaza Ciudad Vieja", "Cena tipica"], en: ["Hotel transfer", "Old Town Square", "Traditional dinner"], pt: ["Traslado ao hotel", "Praca da Cidade Velha", "Jantar tipico"] } },
+      { day: 2, title: { es: "Praga Historica", en: "Historic Prague", pt: "Praga Historica" }, description: { es: "El corazon gotico y barroco de la ciudad.", en: "The Gothic and Baroque heart of the city.", pt: "O coracao gotico e barroco da cidade." }, activities: { es: ["Puente Carlos", "Reloj Astronomico", "Barrio Judio"], en: ["Charles Bridge", "Astronomical Clock", "Jewish Quarter"], pt: ["Ponte Carlos", "Relogio Astronomico", "Bairro Judeu"] } },
+      { day: 3, title: { es: "Castillo de Praga", en: "Prague Castle", pt: "Castelo de Praga" }, description: { es: "El complejo de castillos más grande del mundo.", en: "The world's largest castle complex.", pt: "O maior complexo de castelos do mundo." }, activities: { es: ["Castillo de Praga", "Catedral San Vito", "Callejon del Oro"], en: ["Prague Castle", "St. Vitus Cathedral", "Golden Lane"], pt: ["Castelo de Praga", "Catedral de Sao Vito", "Beco Dourado"] } },
+      { day: 4, title: { es: "Cesky Krumlov", en: "Cesky Krumlov", pt: "Cesky Krumlov" }, description: { es: "Ciudad medieval perfecta, patrimonio UNESCO.", en: "Perfect medieval town, UNESCO heritage.", pt: "Cidade medieval perfeita, patrimonio UNESCO." }, activities: { es: ["Castillo Cesky Krumlov", "Centro histórico", "Rafting rio Vltava"], en: ["Cesky Krumlov Castle", "Historic center", "Vltava River rafting"], pt: ["Castelo Cesky Krumlov", "Centro historico", "Rafting rio Vltava"] } },
+      { day: 5, title: { es: "Karlovy Vary", en: "Karlovy Vary", pt: "Karlovy Vary" }, description: { es: "El spa más famoso de Europa Central.", en: "Central Europe's most famous spa.", pt: "O spa mais famoso da Europa Central." }, activities: { es: ["Columnata spa", "Aguas termales", "Cristaleria Moser"], en: ["Spa colonnade", "Thermal waters", "Moser glassworks"], pt: ["Colunata do spa", "Aguas termais", "Cristaleria Moser"] } },
+      { day: 6, title: { es: "Kutna Hora", en: "Kutna Hora", pt: "Kutna Hora" }, description: { es: "Ciudad minera medieval con el osario de Sedlec.", en: "Medieval mining town with the Sedlec ossuary.", pt: "Cidade mineradora medieval com o ossuario de Sedlec." }, activities: { es: ["Osario de Sedlec", "Catedral Santa Barbara", "Centro histórico"], en: ["Sedlec Ossuary", "St. Barbara's Cathedral", "Historic center"], pt: ["Ossuario de Sedlec", "Catedral de Santa Barbara", "Centro historico"] } },
+      { day: 7, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight.", pt: "Ultimo passeio e voo de retorno." }, activities: { es: ["Compras cristal", "Traslado aeropuerto", "Vuelo regreso"], en: ["Crystal shopping", "Airport transfer", "Return flight"], pt: ["Compras de cristal", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Cual es la moneda de Republica Checa?", en: "What is the currency of the Czech Republic?" }, answer: { es: "La Corona Checa (CZK). Muchos lugares aceptan euros pero el cambio puede ser desfavorable.", en: "The Czech Crown (CZK). Many places accept euros but the exchange rate may be unfavorable." } },
-      { question: { es: "Praga es cara?", en: "Is Prague expensive?" }, answer: { es: "Praga es más economica que Europa Occidental. Comida y bebida son bastante accesibles.", en: "Prague is cheaper than Western Europe. Food and drinks are quite affordable." } }
+      { question: { es: "Cual es la moneda de Republica Checa?", en: "What is the currency of the Czech Republic?", pt: "Qual e a moeda da Republica Tcheca?" }, answer: { es: "La Corona Checa (CZK). Muchos lugares aceptan euros pero el cambio puede ser desfavorable.", en: "The Czech Crown (CZK). Many places accept euros but the exchange rate may be unfavorable.", pt: "A Coroa Tcheca (CZK). Muitos lugares aceitam euros, mas o cambio pode ser desfavoravel." } },
+      { question: { es: "Praga es cara?", en: "Is Prague expensive?", pt: "Praga e cara?" }, answer: { es: "Praga es más economica que Europa Occidental. Comida y bebida son bastante accesibles.", en: "Prague is cheaper than Western Europe. Food and drinks are quite affordable.", pt: "Praga e mais economica que a Europa Ocidental. Comida e bebida sao bem acessiveis." } }
     ],
-    bestTimeToVisit: { es: "Abril a Octubre", en: "April to October" },
+    bestTimeToVisit: { es: "Abril a Octubre", en: "April to October", pt: "Abril a Outubro" },
     currency: "CZK",
-    language: { es: "Checo", en: "Czech" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Checo", en: "Czech", pt: "Tcheco" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "denmark",
@@ -1619,24 +1622,24 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&q=60"
     ],
     packages: [
-      { id: "hungary-1", name: { es: "Budapest y Danubio", en: "Budapest and Danube" }, duration: { es: "6 dias", en: "6 days" }, price: "1,599", taxes: "300", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Crucero Danubio"], en: ["Flights", "4* Hotels", "Breakfasts", "Danube cruise"] } }
+      { id: "hungary-1", name: { es: "Budapest y Danubio", en: "Budapest and Danube", pt: "Budapeste e Danubio" }, duration: { es: "6 dias", en: "6 days", pt: "6 dias" }, price: "1,599", taxes: "300", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Crucero Danubio"], en: ["Flights", "4* Hotels", "Breakfasts", "Danube cruise"], pt: ["Voos", "Hoteis 4*", "Cafes da manha", "Cruzeiro Danubio"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Budapest Llegada", en: "Budapest Arrival" }, description: { es: "Bienvenida a la Perla del Danubio.", en: "Welcome to the Pearl of the Danube." }, activities: { es: ["Traslado hotel", "Paseo Pest", "Crucero nocturno Danubio"], en: ["Hotel transfer", "Pest walk", "Danube night cruise"] } },
-      { day: 2, title: { es: "Pest", en: "Pest" }, description: { es: "El lado vibrante de la ciudad.", en: "The vibrant side of the city." }, activities: { es: ["Parlamento", "Basilica San Esteban", "Avenida Andrassy"], en: ["Parliament", "St. Stephen's Basilica", "Andrassy Avenue"] } },
-      { day: 3, title: { es: "Buda", en: "Buda" }, description: { es: "La colina historica y los palacios.", en: "The historic hill and palaces." }, activities: { es: ["Castillo de Buda", "Bastion Pescadores", "Iglesia Matias"], en: ["Buda Castle", "Fisherman's Bastion", "Matthias Church"] } },
-      { day: 4, title: { es: "Banos Termales", en: "Thermal Baths" }, description: { es: "Relax en los legendarios banos hungaros.", en: "Relax in the legendary Hungarian baths." }, activities: { es: ["Banos Szechenyi", "Parque Varosliget", "Ruin bars noche"], en: ["Szechenyi Baths", "Varosliget Park", "Ruin bars night"] } },
-      { day: 5, title: { es: "Recodo del Danubio", en: "Danube Bend" }, description: { es: "Excursion a las joyas del Danubio.", en: "Excursion to the Danube gems." }, activities: { es: ["Szentendre", "Visegrad", "Esztergom"], en: ["Szentendre", "Visegrad", "Esztergom"] } },
-      { day: 6, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight." }, activities: { es: ["Mercado Central", "Traslado aeropuerto", "Vuelo regreso"], en: ["Central Market", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Budapest Llegada", en: "Budapest Arrival", pt: "Chegada em Budapeste" }, description: { es: "Bienvenida a la Perla del Danubio.", en: "Welcome to the Pearl of the Danube.", pt: "Boas-vindas a Perola do Danubio." }, activities: { es: ["Traslado hotel", "Paseo Pest", "Crucero nocturno Danubio"], en: ["Hotel transfer", "Pest walk", "Danube night cruise"], pt: ["Traslado ao hotel", "Passeio por Pest", "Cruzeiro noturno Danubio"] } },
+      { day: 2, title: { es: "Pest", en: "Pest", pt: "Pest" }, description: { es: "El lado vibrante de la ciudad.", en: "The vibrant side of the city.", pt: "O lado vibrante da cidade." }, activities: { es: ["Parlamento", "Basilica San Esteban", "Avenida Andrassy"], en: ["Parliament", "St. Stephen's Basilica", "Andrassy Avenue"], pt: ["Parlamento", "Basilica de Santo Estevao", "Avenida Andrassy"] } },
+      { day: 3, title: { es: "Buda", en: "Buda", pt: "Buda" }, description: { es: "La colina historica y los palacios.", en: "The historic hill and palaces.", pt: "A colina historica e os palacios." }, activities: { es: ["Castillo de Buda", "Bastion Pescadores", "Iglesia Matias"], en: ["Buda Castle", "Fisherman's Bastion", "Matthias Church"], pt: ["Castelo de Buda", "Bastiao dos Pescadores", "Igreja Matias"] } },
+      { day: 4, title: { es: "Banos Termales", en: "Thermal Baths", pt: "Banhos Termais" }, description: { es: "Relax en los legendarios banos hungaros.", en: "Relax in the legendary Hungarian baths.", pt: "Relaxe nos lendarios banhos hungaros." }, activities: { es: ["Banos Szechenyi", "Parque Varosliget", "Ruin bars noche"], en: ["Szechenyi Baths", "Varosliget Park", "Ruin bars night"], pt: ["Banhos Szechenyi", "Parque Varosliget", "Ruin bars a noite"] } },
+      { day: 5, title: { es: "Recodo del Danubio", en: "Danube Bend", pt: "Curva do Danubio" }, description: { es: "Excursion a las joyas del Danubio.", en: "Excursion to the Danube gems.", pt: "Excursao as joias do Danubio." }, activities: { es: ["Szentendre", "Visegrad", "Esztergom"], en: ["Szentendre", "Visegrad", "Esztergom"], pt: ["Szentendre", "Visegrad", "Esztergom"] } },
+      { day: 6, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight.", pt: "Ultimo passeio e voo de retorno." }, activities: { es: ["Mercado Central", "Traslado aeropuerto", "Vuelo regreso"], en: ["Central Market", "Airport transfer", "Return flight"], pt: ["Mercado Central", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Hungria usa el euro?", en: "Does Hungary use the euro?" }, answer: { es: "No, la moneda es el Forinto Hungaro (HUF). Muchos lugares aceptan euros pero el cambio puede variar.", en: "No, the currency is the Hungarian Forint (HUF). Many places accept euros but exchange rates vary." } },
-      { question: { es: "Son seguros los ruin bars?", en: "Are ruin bars safe?" }, answer: { es: "Si, son bares tematicos en edificios abandonados rehabilitados. Szimpla Kert es el más famoso.", en: "Yes, they're themed bars in refurbished abandoned buildings. Szimpla Kert is the most famous." } }
+      { question: { es: "Hungria usa el euro?", en: "Does Hungary use the euro?", pt: "A Hungria usa o euro?" }, answer: { es: "No, la moneda es el Forinto Hungaro (HUF). Muchos lugares aceptan euros pero el cambio puede variar.", en: "No, the currency is the Hungarian Forint (HUF). Many places accept euros but exchange rates vary.", pt: "Nao, a moeda e o Florim Hungaro (HUF). Muitos lugares aceitam euros, mas o cambio pode variar." } },
+      { question: { es: "Son seguros los ruin bars?", en: "Are ruin bars safe?", pt: "Os ruin bars sao seguros?" }, answer: { es: "Si, son bares tematicos en edificios abandonados rehabilitados. Szimpla Kert es el más famoso.", en: "Yes, they're themed bars in refurbished abandoned buildings. Szimpla Kert is the most famous.", pt: "Sim, sao bares tematicos em predios abandonados reformados. Szimpla Kert e o mais famoso." } }
     ],
-    bestTimeToVisit: { es: "Marzo a Mayo, Septiembre a Noviembre", en: "March to May, September to November" },
+    bestTimeToVisit: { es: "Marzo a Mayo, Septiembre a Noviembre", en: "March to May, September to November", pt: "Marco a Maio, Setembro a Novembro" },
     currency: "HUF",
-    language: { es: "Hungaro", en: "Hungarian" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Hungaro", en: "Hungarian", pt: "Hungaro" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "iceland",
@@ -1741,27 +1744,27 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1484264883846-1fd0f423c0b3?w=800&q=60"
     ],
     packages: [
-      { id: "norway-1", name: { es: "Fiordos de Noruega", en: "Norway's Fjords" }, duration: { es: "9 dias", en: "9 days" }, price: "3,599", taxes: "560", includes: { es: ["Vuelos", "Hoteles 4*", "Crucero fiordo", "Tren panoramico"], en: ["Flights", "4* Hotels", "Fjord cruise", "Panoramic train"] } }
+      { id: "norway-1", name: { es: "Fiordos de Noruega", en: "Norway's Fjords", pt: "Fiordes da Noruega" }, duration: { es: "9 dias", en: "9 days", pt: "9 dias" }, price: "3,599", taxes: "560", includes: { es: ["Vuelos", "Hoteles 4*", "Crucero fiordo", "Tren panoramico"], en: ["Flights", "4* Hotels", "Fjord cruise", "Panoramic train"], pt: ["Voos", "Hoteis 4*", "Cruzeiro fiorde", "Trem panoramico"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Oslo", en: "Oslo" }, description: { es: "Llegada a la capital noruega.", en: "Arrival in the Norwegian capital." }, activities: { es: ["Traslado hotel", "Opera Oslo", "Paseo Aker Brygge"], en: ["Hotel transfer", "Oslo Opera", "Aker Brygge walk"] } },
-      { day: 2, title: { es: "Oslo Cultura", en: "Oslo Culture" }, description: { es: "Museos y arte en la capital.", en: "Museums and art in the capital." }, activities: { es: ["Museo Munch", "Parque Vigeland", "Fortaleza Akershus"], en: ["Munch Museum", "Vigeland Park", "Akershus Fortress"] } },
-      { day: 3, title: { es: "Tren a Bergen", en: "Train to Bergen" }, description: { es: "El viaje en tren más bello de Europa.", en: "Europe's most beautiful train journey." }, activities: { es: ["Tren Oslo-Bergen", "Paisajes montanas", "Llegada Bergen"], en: ["Oslo-Bergen train", "Mountain landscapes", "Bergen arrival"] } },
-      { day: 4, title: { es: "Bergen", en: "Bergen" }, description: { es: "La puerta a los fiordos.", en: "The gateway to the fjords." }, activities: { es: ["Bryggen UNESCO", "Funicular Floyen", "Mercado pescado"], en: ["Bryggen UNESCO", "Floyen Funicular", "Fish market"] } },
-      { day: 5, title: { es: "Crucero Fiordo", en: "Fjord Cruise" }, description: { es: "Navegando el Sognefjord, el rey de los fiordos.", en: "Sailing the Sognefjord, king of the fjords." }, activities: { es: ["Crucero Sognefjord", "Cascadas", "Pueblo Flam"], en: ["Sognefjord cruise", "Waterfalls", "Flam village"] } },
-      { day: 6, title: { es: "Tren de Flam", en: "Flam Railway" }, description: { es: "Uno de los viajes en tren más espectaculares.", en: "One of the most spectacular train journeys." }, activities: { es: ["Tren Flam", "Cascada Kjosfossen", "Ruta a Geiranger"], en: ["Flam Railway", "Kjosfossen Waterfall", "Route to Geiranger"] } },
-      { day: 7, title: { es: "Geirangerfjord", en: "Geirangerfjord" }, description: { es: "El fiordo patrimonio UNESCO más famoso.", en: "The most famous UNESCO heritage fjord." }, activities: { es: ["Crucero Geiranger", "Siete Hermanas cascada", "Mirador Flydalsjuvet"], en: ["Geiranger cruise", "Seven Sisters waterfall", "Flydalsjuvet viewpoint"] } },
-      { day: 8, title: { es: "Alesund", en: "Alesund" }, description: { es: "Ciudad Art Nouveau única.", en: "Unique Art Nouveau city." }, activities: { es: ["Centro Alesund", "Mirador Aksla", "Acuario"], en: ["Alesund center", "Aksla viewpoint", "Aquarium"] } },
-      { day: 9, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso via Oslo.", en: "Return flight via Oslo." }, activities: { es: ["Vuelo interno", "Conexion internacional", "Vuelo regreso"], en: ["Domestic flight", "International connection", "Return flight"] } }
+      { day: 1, title: { es: "Oslo", en: "Oslo", pt: "Oslo" }, description: { es: "Llegada a la capital noruega.", en: "Arrival in the Norwegian capital.", pt: "Chegada a capital norueguesa." }, activities: { es: ["Traslado hotel", "Opera Oslo", "Paseo Aker Brygge"], en: ["Hotel transfer", "Oslo Opera", "Aker Brygge walk"], pt: ["Traslado ao hotel", "Opera de Oslo", "Passeio Aker Brygge"] } },
+      { day: 2, title: { es: "Oslo Cultura", en: "Oslo Culture", pt: "Oslo Cultural" }, description: { es: "Museos y arte en la capital.", en: "Museums and art in the capital.", pt: "Museus e arte na capital." }, activities: { es: ["Museo Munch", "Parque Vigeland", "Fortaleza Akershus"], en: ["Munch Museum", "Vigeland Park", "Akershus Fortress"], pt: ["Museu Munch", "Parque Vigeland", "Fortaleza Akershus"] } },
+      { day: 3, title: { es: "Tren a Bergen", en: "Train to Bergen", pt: "Trem para Bergen" }, description: { es: "El viaje en tren más bello de Europa.", en: "Europe's most beautiful train journey.", pt: "A viagem de trem mais bela da Europa." }, activities: { es: ["Tren Oslo-Bergen", "Paisajes montanas", "Llegada Bergen"], en: ["Oslo-Bergen train", "Mountain landscapes", "Bergen arrival"], pt: ["Trem Oslo-Bergen", "Paisagens montanhosas", "Chegada Bergen"] } },
+      { day: 4, title: { es: "Bergen", en: "Bergen", pt: "Bergen" }, description: { es: "La puerta a los fiordos.", en: "The gateway to the fjords.", pt: "O portal para os fiordes." }, activities: { es: ["Bryggen UNESCO", "Funicular Floyen", "Mercado pescado"], en: ["Bryggen UNESCO", "Floyen Funicular", "Fish market"], pt: ["Bryggen UNESCO", "Funicular Floyen", "Mercado de peixes"] } },
+      { day: 5, title: { es: "Crucero Fiordo", en: "Fjord Cruise", pt: "Cruzeiro pelo Fiorde" }, description: { es: "Navegando el Sognefjord, el rey de los fiordos.", en: "Sailing the Sognefjord, king of the fjords.", pt: "Navegando pelo Sognefjord, o rei dos fiordes." }, activities: { es: ["Crucero Sognefjord", "Cascadas", "Pueblo Flam"], en: ["Sognefjord cruise", "Waterfalls", "Flam village"], pt: ["Cruzeiro Sognefjord", "Cachoeiras", "Vila de Flam"] } },
+      { day: 6, title: { es: "Tren de Flam", en: "Flam Railway", pt: "Trem de Flam" }, description: { es: "Uno de los viajes en tren más espectaculares.", en: "One of the most spectacular train journeys.", pt: "Uma das viagens de trem mais espetaculares." }, activities: { es: ["Tren Flam", "Cascada Kjosfossen", "Ruta a Geiranger"], en: ["Flam Railway", "Kjosfossen Waterfall", "Route to Geiranger"], pt: ["Trem de Flam", "Cachoeira Kjosfossen", "Rota para Geiranger"] } },
+      { day: 7, title: { es: "Geirangerfjord", en: "Geirangerfjord", pt: "Geirangerfjord" }, description: { es: "El fiordo patrimonio UNESCO más famoso.", en: "The most famous UNESCO heritage fjord.", pt: "O fiorde patrimonio UNESCO mais famoso." }, activities: { es: ["Crucero Geiranger", "Siete Hermanas cascada", "Mirador Flydalsjuvet"], en: ["Geiranger cruise", "Seven Sisters waterfall", "Flydalsjuvet viewpoint"], pt: ["Cruzeiro Geiranger", "Cachoeira Sete Irmas", "Mirante Flydalsjuvet"] } },
+      { day: 8, title: { es: "Alesund", en: "Alesund", pt: "Alesund" }, description: { es: "Ciudad Art Nouveau única.", en: "Unique Art Nouveau city.", pt: "Cidade Art Nouveau unica." }, activities: { es: ["Centro Alesund", "Mirador Aksla", "Acuario"], en: ["Alesund center", "Aksla viewpoint", "Aquarium"], pt: ["Centro de Alesund", "Mirante Aksla", "Aquario"] } },
+      { day: 9, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Vuelo de regreso via Oslo.", en: "Return flight via Oslo.", pt: "Voo de retorno via Oslo." }, activities: { es: ["Vuelo interno", "Conexion internacional", "Vuelo regreso"], en: ["Domestic flight", "International connection", "Return flight"], pt: ["Voo domestico", "Conexao internacional", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Noruega es muy cara?", en: "Is Norway very expensive?" }, answer: { es: "Si, es uno de los paises más caros del mundo. Los tours organizados ayudan a optimizar costos.", en: "Yes, it's one of the world's most expensive countries. Organized tours help optimize costs." } },
-      { question: { es: "Cual es la mejor epoca para los fiordos?", en: "When is the best time for the fjords?" }, answer: { es: "Mayo a septiembre para clima templado. Junio-julio tienen sol de medianoche.", en: "May to September for mild weather. June-July has the midnight sun." } }
+      { question: { es: "Noruega es muy cara?", en: "Is Norway very expensive?", pt: "A Noruega e muito cara?" }, answer: { es: "Si, es uno de los paises más caros del mundo. Los tours organizados ayudan a optimizar costos.", en: "Yes, it's one of the world's most expensive countries. Organized tours help optimize costs.", pt: "Sim, e um dos paises mais caros do mundo. Tours organizados ajudam a otimizar custos." } },
+      { question: { es: "Cual es la mejor epoca para los fiordos?", en: "When is the best time for the fjords?", pt: "Qual e a melhor epoca para os fiordes?" }, answer: { es: "Mayo a septiembre para clima templado. Junio-julio tienen sol de medianoche.", en: "May to September for mild weather. June-July has the midnight sun.", pt: "Maio a setembro para clima ameno. Junho-julho tem sol da meia-noite." } }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
+    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "NOK",
-    language: { es: "Noruego", en: "Norwegian" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Noruego", en: "Norwegian", pt: "Noruegues" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "poland",
@@ -1783,26 +1786,26 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=60"
     ],
     packages: [
-      { id: "poland-1", name: { es: "Polonia Esencial", en: "Essential Poland" }, duration: { es: "8 dias", en: "8 days" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours guiados"], en: ["Flights", "4* Hotels", "Breakfasts", "Guided tours"] } }
+      { id: "poland-1", name: { es: "Polonia Esencial", en: "Essential Poland", pt: "Polonia Essencial" }, duration: { es: "8 dias", en: "8 days", pt: "8 dias" }, price: "1,799", taxes: "340", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Tours guiados"], en: ["Flights", "4* Hotels", "Breakfasts", "Guided tours"], pt: ["Voos", "Hoteis 4*", "Cafes da manha", "Tours guiados"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Varsovia", en: "Warsaw" }, description: { es: "Llegada a la capital polaca.", en: "Arrival in the Polish capital." }, activities: { es: ["Traslado hotel", "Ciudad Vieja", "Cena polaca"], en: ["Hotel transfer", "Old Town", "Polish dinner"] } },
-      { day: 2, title: { es: "Varsovia Historica", en: "Historic Warsaw" }, description: { es: "La ciudad que renacio de sus cenizas.", en: "The city that rose from its ashes." }, activities: { es: ["Palacio Cultura", "Museo Insurreccion", "Lazienki Park"], en: ["Palace of Culture", "Uprising Museum", "Lazienki Park"] } },
-      { day: 3, title: { es: "Tren a Cracovia", en: "Train to Krakow" }, description: { es: "Hacia la joya medieval de Polonia.", en: "To Poland's medieval jewel." }, activities: { es: ["Tren a Cracovia", "Plaza Mayor", "Basilica Santa Maria"], en: ["Train to Krakow", "Main Square", "St. Mary's Basilica"] } },
-      { day: 4, title: { es: "Cracovia", en: "Krakow" }, description: { es: "El centro histórico patrimonio UNESCO.", en: "The UNESCO heritage historic center." }, activities: { es: ["Castillo Wawel", "Barrio Kazimierz", "Tour gastronomico"], en: ["Wawel Castle", "Kazimierz Quarter", "Food tour"] } },
-      { day: 5, title: { es: "Auschwitz", en: "Auschwitz" }, description: { es: "Visita al memorial del Holocausto.", en: "Visit to the Holocaust memorial." }, activities: { es: ["Auschwitz I", "Birkenau", "Reflexion y memoria"], en: ["Auschwitz I", "Birkenau", "Reflection and memory"] } },
-      { day: 6, title: { es: "Wieliczka", en: "Wieliczka" }, description: { es: "Las minas de sal más famosas del mundo.", en: "The world's most famous salt mines." }, activities: { es: ["Minas Wieliczka", "Capilla subterranea", "Lagos salados"], en: ["Wieliczka Mines", "Underground chapel", "Salt lakes"] } },
-      { day: 7, title: { es: "Zakopane", en: "Zakopane" }, description: { es: "La capital de invierno en los Tatras.", en: "The winter capital in the Tatras." }, activities: { es: ["Montanas Tatra", "Cultura montanesa", "Queso oscypek"], en: ["Tatra Mountains", "Highlander culture", "Oscypek cheese"] } },
-      { day: 8, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso desde Cracovia.", en: "Return flight from Krakow." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Varsovia", en: "Warsaw", pt: "Varsovia" }, description: { es: "Llegada a la capital polaca.", en: "Arrival in the Polish capital.", pt: "Chegada a capital polonesa." }, activities: { es: ["Traslado hotel", "Ciudad Vieja", "Cena polaca"], en: ["Hotel transfer", "Old Town", "Polish dinner"], pt: ["Traslado ao hotel", "Cidade Velha", "Jantar polones"] } },
+      { day: 2, title: { es: "Varsovia Historica", en: "Historic Warsaw", pt: "Varsovia Historica" }, description: { es: "La ciudad que renacio de sus cenizas.", en: "The city that rose from its ashes.", pt: "A cidade que renasceu das cinzas." }, activities: { es: ["Palacio Cultura", "Museo Insurreccion", "Lazienki Park"], en: ["Palace of Culture", "Uprising Museum", "Lazienki Park"], pt: ["Palacio da Cultura", "Museu da Insurreicao", "Parque Lazienki"] } },
+      { day: 3, title: { es: "Tren a Cracovia", en: "Train to Krakow", pt: "Trem para Cracovia" }, description: { es: "Hacia la joya medieval de Polonia.", en: "To Poland's medieval jewel.", pt: "Rumo a joia medieval da Polonia." }, activities: { es: ["Tren a Cracovia", "Plaza Mayor", "Basilica Santa Maria"], en: ["Train to Krakow", "Main Square", "St. Mary's Basilica"], pt: ["Trem para Cracovia", "Praca Principal", "Basilica de Santa Maria"] } },
+      { day: 4, title: { es: "Cracovia", en: "Krakow", pt: "Cracovia" }, description: { es: "El centro histórico patrimonio UNESCO.", en: "The UNESCO heritage historic center.", pt: "O centro historico patrimonio UNESCO." }, activities: { es: ["Castillo Wawel", "Barrio Kazimierz", "Tour gastronomico"], en: ["Wawel Castle", "Kazimierz Quarter", "Food tour"], pt: ["Castelo Wawel", "Bairro Kazimierz", "Tour gastronomico"] } },
+      { day: 5, title: { es: "Auschwitz", en: "Auschwitz", pt: "Auschwitz" }, description: { es: "Visita al memorial del Holocausto.", en: "Visit to the Holocaust memorial.", pt: "Visita ao memorial do Holocausto." }, activities: { es: ["Auschwitz I", "Birkenau", "Reflexion y memoria"], en: ["Auschwitz I", "Birkenau", "Reflection and memory"], pt: ["Auschwitz I", "Birkenau", "Reflexao e memoria"] } },
+      { day: 6, title: { es: "Wieliczka", en: "Wieliczka", pt: "Wieliczka" }, description: { es: "Las minas de sal más famosas del mundo.", en: "The world's most famous salt mines.", pt: "As minas de sal mais famosas do mundo." }, activities: { es: ["Minas Wieliczka", "Capilla subterranea", "Lagos salados"], en: ["Wieliczka Mines", "Underground chapel", "Salt lakes"], pt: ["Minas Wieliczka", "Capela subterranea", "Lagos de sal"] } },
+      { day: 7, title: { es: "Zakopane", en: "Zakopane", pt: "Zakopane" }, description: { es: "La capital de invierno en los Tatras.", en: "The winter capital in the Tatras.", pt: "A capital de inverno nos Tatras." }, activities: { es: ["Montanas Tatra", "Cultura montanesa", "Queso oscypek"], en: ["Tatra Mountains", "Highlander culture", "Oscypek cheese"], pt: ["Montanhas Tatra", "Cultura montanhesa", "Queijo oscypek"] } },
+      { day: 8, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Vuelo de regreso desde Cracovia.", en: "Return flight from Krakow.", pt: "Voo de retorno de Cracovia." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"], pt: ["Tempo livre", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Polonia es economica?", en: "Is Poland affordable?" }, answer: { es: "Si, Polonia ofrece excelente relacion calidad-precio comparado con Europa Occidental.", en: "Yes, Poland offers excellent value for money compared to Western Europe." } },
-      { question: { es: "Es difícil visitar Auschwitz?", en: "Is it difficult to visit Auschwitz?" }, answer: { es: "Emocionalmente si. Es una experiencia profunda e importante. Se recomienda prepararse mentalmente.", en: "Emotionally, yes. It's a profound and important experience. Mental preparation is recommended." } }
+      { question: { es: "Polonia es economica?", en: "Is Poland affordable?", pt: "A Polonia e economica?" }, answer: { es: "Si, Polonia ofrece excelente relacion calidad-precio comparado con Europa Occidental.", en: "Yes, Poland offers excellent value for money compared to Western Europe.", pt: "Sim, a Polonia oferece excelente custo-beneficio comparado a Europa Ocidental." } },
+      { question: { es: "Es difícil visitar Auschwitz?", en: "Is it difficult to visit Auschwitz?", pt: "E dificil visitar Auschwitz?" }, answer: { es: "Emocionalmente si. Es una experiencia profunda e importante. Se recomienda prepararse mentalmente.", en: "Emotionally, yes. It's a profound and important experience. Mental preparation is recommended.", pt: "Emocionalmente, sim. E uma experiencia profunda e importante. Preparacao mental e recomendada." } }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
+    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "PLN",
-    language: { es: "Polaco", en: "Polish" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Polaco", en: "Polish", pt: "Polones" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "romania",
@@ -1824,26 +1827,26 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1584646098378-0874589d76b1?w=800&q=60"
     ],
     packages: [
-      { id: "romania-1", name: { es: "Transilvania Misteriosa", en: "Mysterious Transylvania" }, duration: { es: "8 dias", en: "8 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayunos"], en: ["Flights", "4* Hotels", "Private transport", "Breakfasts"] } }
+      { id: "romania-1", name: { es: "Transilvania Misteriosa", en: "Mysterious Transylvania", pt: "Transilvania Misteriosa" }, duration: { es: "8 dias", en: "8 days", pt: "8 dias" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte privado", "Desayunos"], en: ["Flights", "4* Hotels", "Private transport", "Breakfasts"], pt: ["Voos", "Hoteis 4*", "Transporte privado", "Cafes da manha"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Bucarest", en: "Bucharest" }, description: { es: "Llegada a la capital rumana.", en: "Arrival in the Romanian capital." }, activities: { es: ["Traslado hotel", "Palacio Parlamento", "Casco antiguo"], en: ["Hotel transfer", "Parliament Palace", "Old Town"] } },
-      { day: 2, title: { es: "Bucarest Historica", en: "Historic Bucharest" }, description: { es: "El pequeno París del Este.", en: "The Little París of the East." }, activities: { es: ["Ateneo Romano", "Museo Pueblo", "Lipscani"], en: ["Romanian Atheneum", "Village Museum", "Lipscani"] } },
-      { day: 3, title: { es: "Sinaia", en: "Sinaia" }, description: { es: "La Perla de los Carpatos.", en: "The Pearl of the Carpathians." }, activities: { es: ["Castillo Peles", "Monasterio Sinaia", "Paisajes Carpatos"], en: ["Peles Castle", "Sinaia Monastery", "Carpathian landscapes"] } },
-      { day: 4, title: { es: "Castillo de Bran", en: "Bran Castle" }, description: { es: "El legendario castillo de Dracula.", en: "The legendary Dracula castle." }, activities: { es: ["Castillo Bran", "Brasov", "Fortaleza Rasnov"], en: ["Bran Castle", "Brasov", "Rasnov Fortress"] } },
-      { day: 5, title: { es: "Brasov", en: "Brasov" }, description: { es: "Ciudad medieval sajona en Transilvania.", en: "Saxon medieval city in Transylvania." }, activities: { es: ["Iglesia Negra", "Plaza Sfatului", "Tampa Montana"], en: ["Black Church", "Sfatului Square", "Tampa Mountain"] } },
-      { day: 6, title: { es: "Sighisoara", en: "Sighisoara" }, description: { es: "Ciudad natal de Vlad Tepes.", en: "Birthplace of Vlad the Impaler." }, activities: { es: ["Ciudadela medieval", "Casa Dracula", "Torre Reloj"], en: ["Medieval citadel", "Dracula's House", "Clock Tower"] } },
-      { day: 7, title: { es: "Sibiu", en: "Sibiu" }, description: { es: "Capital cultural de Transilvania.", en: "Cultural capital of Transylvania." }, activities: { es: ["Plaza Grande", "Museo Brukenthal", "Puente Mentiras"], en: ["Great Square", "Brukenthal Museum", "Bridge of Lies"] } },
-      { day: 8, title: { es: "Regreso", en: "Return" }, description: { es: "Regreso a Bucarest y vuelo.", en: "Return to Bucharest and flight." }, activities: { es: ["Ruta panoramica", "Traslado aeropuerto", "Vuelo regreso"], en: ["Scenic route", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Bucarest", en: "Bucharest", pt: "Bucareste" }, description: { es: "Llegada a la capital rumana.", en: "Arrival in the Romanian capital.", pt: "Chegada a capital romena." }, activities: { es: ["Traslado hotel", "Palacio Parlamento", "Casco antiguo"], en: ["Hotel transfer", "Parliament Palace", "Old Town"], pt: ["Traslado ao hotel", "Palacio do Parlamento", "Centro historico"] } },
+      { day: 2, title: { es: "Bucarest Historica", en: "Historic Bucharest", pt: "Bucareste Historica" }, description: { es: "El pequeno París del Este.", en: "The Little París of the East.", pt: "A pequena Paris do Leste." }, activities: { es: ["Ateneo Romano", "Museo Pueblo", "Lipscani"], en: ["Romanian Atheneum", "Village Museum", "Lipscani"], pt: ["Ateneu Romeno", "Museu da Vila", "Lipscani"] } },
+      { day: 3, title: { es: "Sinaia", en: "Sinaia", pt: "Sinaia" }, description: { es: "La Perla de los Carpatos.", en: "The Pearl of the Carpathians.", pt: "A Perola dos Carpatos." }, activities: { es: ["Castillo Peles", "Monasterio Sinaia", "Paisajes Carpatos"], en: ["Peles Castle", "Sinaia Monastery", "Carpathian landscapes"], pt: ["Castelo Peles", "Mosteiro de Sinaia", "Paisagens dos Carpatos"] } },
+      { day: 4, title: { es: "Castillo de Bran", en: "Bran Castle", pt: "Castelo de Bran" }, description: { es: "El legendario castillo de Dracula.", en: "The legendary Dracula castle.", pt: "O lendario castelo do Dracula." }, activities: { es: ["Castillo Bran", "Brasov", "Fortaleza Rasnov"], en: ["Bran Castle", "Brasov", "Rasnov Fortress"], pt: ["Castelo de Bran", "Brasov", "Fortaleza Rasnov"] } },
+      { day: 5, title: { es: "Brasov", en: "Brasov", pt: "Brasov" }, description: { es: "Ciudad medieval sajona en Transilvania.", en: "Saxon medieval city in Transylvania.", pt: "Cidade medieval saxonica na Transilvania." }, activities: { es: ["Iglesia Negra", "Plaza Sfatului", "Tampa Montana"], en: ["Black Church", "Sfatului Square", "Tampa Mountain"], pt: ["Igreja Negra", "Praca Sfatului", "Montanha Tampa"] } },
+      { day: 6, title: { es: "Sighisoara", en: "Sighisoara", pt: "Sighisoara" }, description: { es: "Ciudad natal de Vlad Tepes.", en: "Birthplace of Vlad the Impaler.", pt: "Cidade natal de Vlad Tepes." }, activities: { es: ["Ciudadela medieval", "Casa Dracula", "Torre Reloj"], en: ["Medieval citadel", "Dracula's House", "Clock Tower"], pt: ["Cidadela medieval", "Casa do Dracula", "Torre do Relogio"] } },
+      { day: 7, title: { es: "Sibiu", en: "Sibiu", pt: "Sibiu" }, description: { es: "Capital cultural de Transilvania.", en: "Cultural capital of Transylvania.", pt: "Capital cultural da Transilvania." }, activities: { es: ["Plaza Grande", "Museo Brukenthal", "Puente Mentiras"], en: ["Great Square", "Brukenthal Museum", "Bridge of Lies"], pt: ["Praca Grande", "Museu Brukenthal", "Ponte das Mentiras"] } },
+      { day: 8, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Regreso a Bucarest y vuelo.", en: "Return to Bucharest and flight.", pt: "Retorno a Bucareste e voo." }, activities: { es: ["Ruta panoramica", "Traslado aeropuerto", "Vuelo regreso"], en: ["Scenic route", "Airport transfer", "Return flight"], pt: ["Rota panoramica", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "El Castillo de Bran es de Dracula?", en: "Is Bran Castle Dracula's castle?" }, answer: { es: "Historicamente, Vlad Tepes no vivio alli. Pero la leyenda lo asocia al lugar por su arquitectura gotica.", en: "Historically, Vlad Tepes didn't live there. But legend associates it due to its Gothic architecture." } },
-      { question: { es: "Es seguro viajar por Rumania?", en: "Is it safe to travel in Romania?" }, answer: { es: "Si, Rumania es un pais seguro con baja criminalidad. Las carreteras de montana requieren precaucion.", en: "Yes, Romania is a safe country with low crime. Mountain roads require caution." } }
+      { question: { es: "El Castillo de Bran es de Dracula?", en: "Is Bran Castle Dracula's castle?", pt: "O Castelo de Bran e do Dracula?" }, answer: { es: "Historicamente, Vlad Tepes no vivio alli. Pero la leyenda lo asocia al lugar por su arquitectura gotica.", en: "Historically, Vlad Tepes didn't live there. But legend associates it due to its Gothic architecture.", pt: "Historicamente, Vlad Tepes nao morou la. Mas a lenda o associa ao local por sua arquitetura gotica." } },
+      { question: { es: "Es seguro viajar por Rumania?", en: "Is it safe to travel in Romania?", pt: "E seguro viajar pela Romenia?" }, answer: { es: "Si, Rumania es un pais seguro con baja criminalidad. Las carreteras de montana requieren precaucion.", en: "Yes, Romania is a safe country with low crime. Mountain roads require caution.", pt: "Sim, a Romenia e um pais seguro com baixa criminalidade. As estradas de montanha requerem precaucao." } }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
+    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "RON",
-    language: { es: "Rumano", en: "Romanian" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Rumano", en: "Romanian", pt: "Romeno" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "sweden",
