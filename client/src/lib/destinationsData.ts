@@ -55,7 +55,7 @@ export interface DestinationData {
 export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "france",
-    name: { es: "Francia", en: "France" },
+    name: { es: "Francia", en: "France", pt: "Franca" },
     heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
@@ -65,11 +65,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Francia es el destino turístico más visitado del mundo, y no es difícil entender por que. Desde la romántica París con su icónica Torre Eiffel hasta los campos de lavanda de Provenza, pasando por la glamurosa Costa Azul y los castillos del Valle del Loira, Francia ofrece una experiencia única que combina arte, cultura, gastronomía y paisajes de ensueño. Descubre la elegancia francesa, sus vinos de clase mundial y su patrimonio histórico incomparable.",
-      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic París with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage."
+      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic París with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage.",
+      pt: "A Franca e o destino turistico mais visitado do mundo, e nao e dificil entender por que. Da romantica Paris com sua iconica Torre Eiffel aos campos de lavanda da Provenca, passando pela glamorosa Riviera Francesa e os castelos do Vale do Loire, a Franca oferece uma experiencia unica que combina arte, cultura, gastronomia e paisagens de sonho. Descubra a elegancia francesa, seus vinhos de classe mundial e seu patrimonio historico incomparavel."
     },
     highlights: {
       es: ["Torre Eiffel y París romántico", "Castillos del Valle del Loira", "Costa Azul y Niza", "Campos de lavanda de Provenza", "Gastronomía y vinos franceses", "Mont Saint-Michel"],
-      en: ["Eiffel Tower and romantic París", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"]
+      en: ["Eiffel Tower and romantic París", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"],
+      pt: ["Torre Eiffel e Paris romantica", "Castelos do Vale do Loire", "Riviera Francesa e Nice", "Campos de lavanda da Provenca", "Gastronomia e vinhos franceses", "Mont Saint-Michel"]
     },
     packages: [
       {
@@ -181,7 +183,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "italy",
-    name: { es: "Italia", en: "Italy" },
+    name: { es: "Italia", en: "Italy", pt: "Italia" },
     heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=800&auto=format&fit=crop",
@@ -191,11 +193,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte más importantes del mundo y destino gastronomico por excelencia. Desde el romántico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises más bellos del mundo.",
-      en: "Italy is the cradle of the Renaissance, home to some of the world's most important artworks, and a gastronomic destination par excellence. From romantic Venice to eternal Rome, through cultural Florence and the spectacular Amalfi Coast, Italy captivates with its millennial history, impressive architecture, and delicious cuisine. Experience la dolce vita in one of the most beautiful countries in the world."
+      en: "Italy is the cradle of the Renaissance, home to some of the world's most important artworks, and a gastronomic destination par excellence. From romantic Venice to eternal Rome, through cultural Florence and the spectacular Amalfi Coast, Italy captivates with its millennial history, impressive architecture, and delicious cuisine. Experience la dolce vita in one of the most beautiful countries in the world.",
+      pt: "A Italia e o berco da Renascenca, lar de algumas das obras de arte mais importantes do mundo e destino gastronomico por excelencia. Da romantica Veneza a eterna Roma, passando pela cultural Florenca e a espetacular Costa Amalfitana, a Italia cativa com sua historia milenar, arquitetura impressionante e deliciosa culinaria. Viva a dolce vita em um dos paises mais belos do mundo."
     },
     highlights: {
       es: ["Coliseo Romano y Vaticano", "Canales de Venecia", "Arte en Florencia", "Costa Amalfitana", "Toscana y sus vinos", "Cinque Terre"],
-      en: ["Roman Colosseum and Vatican", "Venice Canals", "Art in Florence", "Amalfi Coast", "Tuscany and its wines", "Cinque Terre"]
+      en: ["Roman Colosseum and Vatican", "Venice Canals", "Art in Florence", "Amalfi Coast", "Tuscany and its wines", "Cinque Terre"],
+      pt: ["Coliseu Romano e Vaticano", "Canais de Veneza", "Arte em Florenca", "Costa Amalfitana", "Toscana e seus vinhos", "Cinque Terre"]
     },
     packages: [
       {
@@ -313,7 +317,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "spain",
-    name: { es: "España", en: "Spain" },
+    name: { es: "España", en: "Spain", pt: "Espanha" },
     heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=800&auto=format&fit=crop",
@@ -323,11 +327,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "España es un pais vibrante que combina historia, cultura, gastronomía y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
-      en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations."
+      en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations.",
+      pt: "A Espanha e um pais vibrante que combina historia, cultura, gastronomia e vida noturna como nenhum outro. Da arquitetura de Gaudi em Barcelona ao flamenco apaixonado de Sevilha, passando pelos museus de Madri e as praias da Costa del Sol, a Espanha oferece experiencias inesqueciveis. Desfrute de tapas, sangria e a calidez de seu povo em um dos destinos favoritos dos viajantes latino-americanos."
     },
     highlights: {
       es: ["Sagrada Familia en Barcelona", "Alhambra de Granada", "Museo del Prado en Madrid", "Flamenco en Sevilla", "Playas de la Costa Brava", "San Sebastian y su gastronomía"],
-      en: ["Sagrada Familia in Barcelona", "Alhambra of Granada", "Prado Museum in Madrid", "Flamenco in Seville", "Costa Brava beaches", "San Sebastian gastronomy"]
+      en: ["Sagrada Familia in Barcelona", "Alhambra of Granada", "Prado Museum in Madrid", "Flamenco in Seville", "Costa Brava beaches", "San Sebastian gastronomy"],
+      pt: ["Sagrada Familia em Barcelona", "Alhambra de Granada", "Museu do Prado em Madri", "Flamenco em Sevilha", "Praias da Costa Brava", "San Sebastian e sua gastronomia"]
     },
     packages: [
       {
@@ -451,7 +457,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "germany",
-    name: { es: "Alemania", en: "Germany" },
+    name: { es: "Alemania", en: "Germany", pt: "Alemanha" },
     heroImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=800&auto=format&fit=crop",
@@ -461,11 +467,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Alemania combina modernidad con tradicion de manera única. Desde los castillos de cuento de hadas de Baviera hasta la vibrante vida cultural de Berlin, pasando por la romántica Ruta del Rin y los mercados navidenos más famosos del mundo, Alemania ofrece experiencias diversas. Descubre la eficiencia alemana, su cerveza legendaria, y paisajes que van desde los Alpes hasta el Mar del Norte.",
-      en: "Germany uniquely combines modernity with tradition. From Bavaria's fairy-tale castles to Berlin's vibrant cultural life, through the romantic Rhine Route and the world's most famous Christmas markets, Germany offers diverse experiences. Discover German efficiency, legendary beer, and landscapes ranging from the Alps to the North Sea."
+      en: "Germany uniquely combines modernity with tradition. From Bavaria's fairy-tale castles to Berlin's vibrant cultural life, through the romantic Rhine Route and the world's most famous Christmas markets, Germany offers diverse experiences. Discover German efficiency, legendary beer, and landscapes ranging from the Alps to the North Sea.",
+      pt: "A Alemanha combina modernidade com tradicao de maneira unica. Dos castelos de contos de fadas da Baviera a vibrante vida cultural de Berlim, passando pela romantica Rota do Reno e os mercados natalinos mais famosos do mundo, a Alemanha oferece experiencias diversas. Descubra a eficiencia alema, sua cerveja lendaria e paisagens que vao dos Alpes ao Mar do Norte."
     },
     highlights: {
       es: ["Castillo de Neuschwanstein", "Puerta de Brandeburgo", "Selva Negra", "Ruta Romántica", "Mercados navidenos", "Cerveza y Oktoberfest"],
-      en: ["Neuschwanstein Castle", "Brandenburg Gate", "Black Forest", "Romantic Road", "Christmas markets", "Beer and Oktoberfest"]
+      en: ["Neuschwanstein Castle", "Brandenburg Gate", "Black Forest", "Romantic Road", "Christmas markets", "Beer and Oktoberfest"],
+      pt: ["Castelo de Neuschwanstein", "Portao de Brandemburgo", "Floresta Negra", "Rota Romantica", "Mercados natalinos", "Cerveja e Oktoberfest"]
     },
     packages: [
       {
@@ -577,7 +585,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "portugal",
-    name: { es: "Portugal", en: "Portugal" },
+    name: { es: "Portugal", en: "Portugal", pt: "Portugal" },
     heroImage: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800&auto=format&fit=crop",
@@ -587,11 +595,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Portugal es un tesoro escondido de Europa, con una historia maritima fascinante, playas impresionantes y una gastronomía deliciosa. Desde los azulejos de Lisboa hasta los vinos de Oporto, pasando por los acantilados del Algarve y los palacios de Sintra, Portugal encanta con su autenticidad y hospitalidad. Descubre el pais de los navegantes, el fado melancolico y los pasteles de nata.",
-      en: "Portugal is a hidden treasure of Europe, with fascinating maritime history, stunning beaches, and delicious gastronomy. From Lisbon's tiles to Porto's wines, through the Algarve cliffs and Sintra palaces, Portugal charms with its authenticity and hospitality. Discover the land of navigators, melancholic fado, and pastel de nata."
+      en: "Portugal is a hidden treasure of Europe, with fascinating maritime history, stunning beaches, and delicious gastronomy. From Lisbon's tiles to Porto's wines, through the Algarve cliffs and Sintra palaces, Portugal charms with its authenticity and hospitality. Discover the land of navigators, melancholic fado, and pastel de nata.",
+      pt: "Portugal e um tesouro escondido da Europa, com uma historia maritima fascinante, praias impressionantes e uma gastronomia deliciosa. Dos azulejos de Lisboa aos vinhos do Porto, passando pelas falesias do Algarve e os palacios de Sintra, Portugal encanta com sua autenticidade e hospitalidade. Descubra o pais dos navegadores, o fado melancolico e os pasteis de nata."
     },
     highlights: {
       es: ["Torre de Belem en Lisboa", "Bodegas de Oporto", "Playas del Algarve", "Palacios de Sintra", "Fado tradicional", "Gastronomía portuguesa"],
-      en: ["Belem Tower in Lisbon", "Porto wine cellars", "Algarve beaches", "Sintra palaces", "Traditional fado", "Portuguese gastronomy"]
+      en: ["Belem Tower in Lisbon", "Porto wine cellars", "Algarve beaches", "Sintra palaces", "Traditional fado", "Portuguese gastronomy"],
+      pt: ["Torre de Belem em Lisboa", "Caves do Porto", "Praias do Algarve", "Palacios de Sintra", "Fado tradicional", "Gastronomia portuguesa"]
     },
     packages: [
       {
@@ -697,7 +707,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "greece",
-    name: { es: "Grecia", en: "Greece" },
+    name: { es: "Grecia", en: "Greece", pt: "Grecia" },
     heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
@@ -707,11 +717,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas más hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
-      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and mágical sunsets."
+      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and mágical sunsets.",
+      pt: "A Grecia e o berco da civilizacao ocidental, lar dos deuses do Olimpo e das ilhas mais belas do Mediterraneo. Da Acropole de Atenas as cupulas azuis de Santorini, passando pelas praias de Mykonos e as ruinas de Delfos, a Grecia oferece historia, cultura e beleza natural incomparaveis. Viva a experiencia grega com sua hospitalidade lendaria, culinaria mediterranea e pores do sol magicos."
     },
     highlights: {
       es: ["Acropolis de Atenas", "Santorini y sus atardeceres", "Playas de Mykonos", "Meteora", "Delfos y Olimpia", "Gastronomía griega"],
-      en: ["Athens Acropolis", "Santorini sunsets", "Mykonos beaches", "Meteora", "Delphi and Olympia", "Greek gastronomy"]
+      en: ["Athens Acropolis", "Santorini sunsets", "Mykonos beaches", "Meteora", "Delphi and Olympia", "Greek gastronomy"],
+      pt: ["Acropole de Atenas", "Por do sol em Santorini", "Praias de Mykonos", "Meteora", "Delfos e Olimpia", "Gastronomia grega"]
     },
     packages: [
       {
