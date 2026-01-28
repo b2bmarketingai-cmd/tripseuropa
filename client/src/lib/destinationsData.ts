@@ -297,26 +297,26 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Italia?", en: "Do I need a visa to travel to Italy?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Italia sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Italy without a visa for up to 90 days for tourism." }
+        question: { es: "Necesito visa para viajar a Italia?", en: "Do I need a visa to travel to Italy?", pt: "Preciso de visto para viajar para a Italia?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Italia sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Italy without a visa for up to 90 days for tourism.", pt: "Cidadaos brasileiros podem entrar na Italia sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Italia?", en: "When is the best time to visit Italy?" },
-        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Italia?", en: "When is the best time to visit Italy?", pt: "Qual e a melhor epoca para visitar a Italia?" },
+        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded.", pt: "A primavera (abril-junho) e o outono (setembro-outubro) sao ideais. O verao pode ser muito quente e lotado." }
       },
       {
-        question: { es: "Como me muevo entre ciudades en Italia?", en: "How do I get around between cities in Italy?" },
-        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rápida y cómoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably." }
+        question: { es: "Como me muevo entre ciudades en Italia?", en: "How do I get around between cities in Italy?", pt: "Como me locomovo entre cidades na Italia?" },
+        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rápida y cómoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably.", pt: "Os trens de alta velocidade (Frecciarossa) conectam as principais cidades de forma rapida e confortavel." }
       },
       {
-        question: { es: "Es caro comer en Italia?", en: "Is eating in Italy expensive?" },
-        answer: { es: "Hay opciones para todos los presupuestos. Los trattorias locales ofrecen comida autentica a precios razonables.", en: "There are options for all budgets. Local trattorias offer authentic food at reasonable prices." }
+        question: { es: "Es caro comer en Italia?", en: "Is eating in Italy expensive?", pt: "E caro comer na Italia?" },
+        answer: { es: "Hay opciones para todos los presupuestos. Los trattorias locales ofrecen comida autentica a precios razonables.", en: "There are options for all budgets. Local trattorias offer authentic food at reasonable prices.", pt: "Ha opcoes para todos os orcamentos. As trattorias locais oferecem comida autentica a precos acessiveis." }
       }
     ],
-    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October" },
+    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October", pt: "Abril a Junho e Setembro a Outubro" },
     currency: "EUR",
-    language: { es: "Italiano", en: "Italian" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Italiano", en: "Italian", pt: "Italiano" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "spain",
@@ -341,122 +341,125 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "espana-clasica",
-        name: { es: "España Clásica", en: "Classic Spain" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "España Clásica", en: "Classic Spain", pt: "Espanha Classica" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "1,799",
         taxes: "360",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "AVE entre ciudades", "Guia en español", "Espectaculo flamenco"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "AVE between cities", "Spanish-speaking guide", "Flamenco show"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "AVE between cities", "Spanish-speaking guide", "Flamenco show"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "AVE entre cidades", "Guia em portugues", "Show de flamenco"]
         }
       },
       {
         id: "espana-andalucia",
-        name: { es: "Andalucia Mágica", en: "Mágical Andalusia" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Andalucia Mágica", en: "Mágical Andalusia", pt: "Andaluzia Magica" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,599",
         taxes: "320",
         includes: {
           es: ["Vuelos internacionales", "Hoteles con encanto", "Desayuno", "Coche de alquiler", "Entradas Alhambra", "Tour de tapas"],
-          en: ["International flights", "Charming hotels", "Breakfast", "Rental car", "Alhambra tickets", "Tapas tour"]
+          en: ["International flights", "Charming hotels", "Breakfast", "Rental car", "Alhambra tickets", "Tapas tour"],
+          pt: ["Voos internacionais", "Hoteis charmosos", "Cafe da manha", "Carro alugado", "Ingressos para Alhambra", "Tour de tapas"]
         }
       },
       {
         id: "espana-completa",
-        name: { es: "Gran Tour de Espana", en: "Grand Tour of Spain" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour de Espana", en: "Grand Tour of Spain", pt: "Grande Tour da Espanha" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "2,899",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Trenes AVE", "Tours exclusivos", "Experiencias únicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "AVE trains", "Exclusive tours", "Unique experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "AVE trains", "Exclusive tours", "Unique experiences"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "Trens AVE", "Tours exclusivos", "Experiencias unicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Madrid", en: "Arrival in Madrid" },
-        description: { es: "Bienvenida en Madrid, la vibrante capital de España.", en: "Welcome to Madrid, Spain's vibrant capital." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Gran Via"], en: ["Airport pickup", "Hotel check-in", "Gran Via walk"] }
+        title: { es: "Llegada a Madrid", en: "Arrival in Madrid", pt: "Chegada em Madri" },
+        description: { es: "Bienvenida en Madrid, la vibrante capital de España.", en: "Welcome to Madrid, Spain's vibrant capital.", pt: "Boas-vindas em Madri, a vibrante capital da Espanha." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Gran Via"], en: ["Airport pickup", "Hotel check-in", "Gran Via walk"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Passeio pela Gran Via"] }
       },
       {
         day: 2,
-        title: { es: "Madrid Monumental", en: "Monumental Madrid" },
-        description: { es: "Descubre el Palacio Real, la Plaza Mayor y el Museo del Prado.", en: "Discover the Royal Palace, Plaza Mayor, and Prado Museum." },
-        activities: { es: ["Palacio Real", "Plaza Mayor", "Museo del Prado"], en: ["Royal Palace", "Plaza Mayor", "Prado Museum"] }
+        title: { es: "Madrid Monumental", en: "Monumental Madrid", pt: "Madri Monumental" },
+        description: { es: "Descubre el Palacio Real, la Plaza Mayor y el Museo del Prado.", en: "Discover the Royal Palace, Plaza Mayor, and Prado Museum.", pt: "Descubra o Palacio Real, a Plaza Mayor e o Museu do Prado." },
+        activities: { es: ["Palacio Real", "Plaza Mayor", "Museo del Prado"], en: ["Royal Palace", "Plaza Mayor", "Prado Museum"], pt: ["Palacio Real", "Plaza Mayor", "Museu do Prado"] }
       },
       {
         day: 3,
-        title: { es: "Toledo", en: "Toledo" },
-        description: { es: "Excursion a Toledo, la ciudad de las tres culturas.", en: "Excursion to Toledo, the city of three cultures." },
-        activities: { es: ["Catedral de Toledo", "Sinagoga", "Alcazar"], en: ["Toledo Cathedral", "Synagogue", "Alcazar"] }
+        title: { es: "Toledo", en: "Toledo", pt: "Toledo" },
+        description: { es: "Excursion a Toledo, la ciudad de las tres culturas.", en: "Excursion to Toledo, the city of three cultures.", pt: "Excursao a Toledo, a cidade das tres culturas." },
+        activities: { es: ["Catedral de Toledo", "Sinagoga", "Alcazar"], en: ["Toledo Cathedral", "Synagogue", "Alcazar"], pt: ["Catedral de Toledo", "Sinagoga", "Alcazar"] }
       },
       {
         day: 4,
-        title: { es: "Sevilla", en: "Seville" },
-        description: { es: "Viaje en AVE a Sevilla, corazon de Andalucia.", en: "AVE train to Seville, heart of Andalusia." },
-        activities: { es: ["AVE a Sevilla", "Catedral y Giralda", "Barrio Santa Cruz"], en: ["AVE to Seville", "Cathedral and Giralda", "Santa Cruz quarter"] }
+        title: { es: "Sevilla", en: "Seville", pt: "Sevilha" },
+        description: { es: "Viaje en AVE a Sevilla, corazon de Andalucia.", en: "AVE train to Seville, heart of Andalusia.", pt: "Viagem de AVE ate Sevilha, coracao da Andaluzia." },
+        activities: { es: ["AVE a Sevilla", "Catedral y Giralda", "Barrio Santa Cruz"], en: ["AVE to Seville", "Cathedral and Giralda", "Santa Cruz quarter"], pt: ["AVE para Sevilha", "Catedral e Giralda", "Bairro Santa Cruz"] }
       },
       {
         day: 5,
-        title: { es: "Sevilla y Flamenco", en: "Seville and Flamenco" },
-        description: { es: "Real Alcazar por la manana y espectaculo flamenco por la noche.", en: "Royal Alcazar in the morning and flamenco show at night." },
-        activities: { es: ["Real Alcazar", "Plaza de Espana", "Tablao flamenco"], en: ["Royal Alcazar", "Plaza de España", "Flamenco tablao"] }
+        title: { es: "Sevilla y Flamenco", en: "Seville and Flamenco", pt: "Sevilha e Flamenco" },
+        description: { es: "Real Alcazar por la manana y espectaculo flamenco por la noche.", en: "Royal Alcazar in the morning and flamenco show at night.", pt: "Real Alcazar pela manha e show de flamenco a noite." },
+        activities: { es: ["Real Alcazar", "Plaza de Espana", "Tablao flamenco"], en: ["Royal Alcazar", "Plaza de España", "Flamenco tablao"], pt: ["Real Alcazar", "Praca da Espanha", "Show de flamenco"] }
       },
       {
         day: 6,
-        title: { es: "Granada", en: "Granada" },
-        description: { es: "Viaje a Granada para visitar la majestuosa Alhambra.", en: "Trip to Granada to visit the majestic Alhambra." },
-        activities: { es: ["Viaje a Granada", "Alhambra", "Generalife"], en: ["Trip to Granada", "Alhambra", "Generalife"] }
+        title: { es: "Granada", en: "Granada", pt: "Granada" },
+        description: { es: "Viaje a Granada para visitar la majestuosa Alhambra.", en: "Trip to Granada to visit the majestic Alhambra.", pt: "Viagem a Granada para visitar a majestosa Alhambra." },
+        activities: { es: ["Viaje a Granada", "Alhambra", "Generalife"], en: ["Trip to Granada", "Alhambra", "Generalife"], pt: ["Viagem a Granada", "Alhambra", "Generalife"] }
       },
       {
         day: 7,
-        title: { es: "Barcelona", en: "Barcelona" },
-        description: { es: "Vuelo a Barcelona, la capital catalana.", en: "Flight to Barcelona, the Catalan capital." },
-        activities: { es: ["Vuelo a Barcelona", "Las Ramblas", "Barrio Gotico"], en: ["Flight to Barcelona", "Las Ramblas", "Gothic Quarter"] }
+        title: { es: "Barcelona", en: "Barcelona", pt: "Barcelona" },
+        description: { es: "Vuelo a Barcelona, la capital catalana.", en: "Flight to Barcelona, the Catalan capital.", pt: "Voo para Barcelona, a capital catala." },
+        activities: { es: ["Vuelo a Barcelona", "Las Ramblas", "Barrio Gotico"], en: ["Flight to Barcelona", "Las Ramblas", "Gothic Quarter"], pt: ["Voo para Barcelona", "Las Ramblas", "Bairro Gotico"] }
       },
       {
         day: 8,
-        title: { es: "Barcelona Gaudi", en: "Barcelona Gaudi" },
-        description: { es: "Descubre las obras maestras de Antoni Gaudi.", en: "Discover Antoni Gaudi's masterpieces." },
-        activities: { es: ["Sagrada Familia", "Park Guell", "Casa Batllo"], en: ["Sagrada Familia", "Park Guell", "Casa Batllo"] }
+        title: { es: "Barcelona Gaudi", en: "Barcelona Gaudi", pt: "Barcelona Gaudi" },
+        description: { es: "Descubre las obras maestras de Antoni Gaudi.", en: "Discover Antoni Gaudi's masterpieces.", pt: "Descubra as obras-primas de Antoni Gaudi." },
+        activities: { es: ["Sagrada Familia", "Park Guell", "Casa Batllo"], en: ["Sagrada Familia", "Park Guell", "Casa Batllo"], pt: ["Sagrada Familia", "Park Guell", "Casa Batllo"] }
       },
       {
         day: 9,
-        title: { es: "Costa Brava", en: "Costa Brava" },
-        description: { es: "Excursion opcional a la hermosa Costa Brava.", en: "Optional excursion to the beautiful Costa Brava." },
-        activities: { es: ["Tossa de Mar", "Platja d'Aro", "Tiempo libre"], en: ["Tossa de Mar", "Platja d'Aro", "Free time"] }
+        title: { es: "Costa Brava", en: "Costa Brava", pt: "Costa Brava" },
+        description: { es: "Excursion opcional a la hermosa Costa Brava.", en: "Optional excursion to the beautiful Costa Brava.", pt: "Excursao opcional a bela Costa Brava." },
+        activities: { es: ["Tossa de Mar", "Platja d'Aro", "Tiempo libre"], en: ["Tossa de Mar", "Platja d'Aro", "Free time"], pt: ["Tossa de Mar", "Platja d'Aro", "Tempo livre"] }
       },
       {
         day: 10,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Tiempo libre y traslado al aeropuerto.", en: "Free time and airport transfer." },
-        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Tiempo libre y traslado al aeropuerto.", en: "Free time and airport transfer.", pt: "Tempo livre e traslado ao aeroporto." },
+        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"], pt: ["Compras", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Espana?", en: "Do I need a visa to travel to Spain?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a España sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism." }
+        question: { es: "Necesito visa para viajar a Espana?", en: "Do I need a visa to travel to Spain?", pt: "Preciso de visto para viajar para a Espanha?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a España sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism.", pt: "Cidadaos brasileiros podem entrar na Espanha sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?" },
-        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south." }
+        question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?", pt: "Qual e a melhor epoca para visitar a Espanha?" },
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south.", pt: "Primavera e outono sao ideais. O verao e perfeito para praias, mas muito quente no sul." }
       },
       {
-        question: { es: "Es facil comúnicarse en español?", en: "Is it easy to commúnicate in Spanish?" },
-        answer: { es: "Si, el español es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home." }
+        question: { es: "Es facil comúnicarse en español?", en: "Is it easy to commúnicate in Spanish?", pt: "E facil se comunicar em espanhol?" },
+        answer: { es: "Si, el español es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home.", pt: "Sim, o espanhol e o idioma oficial. Brasileiros se comunicam facilmente devido a similaridade dos idiomas." }
       },
       {
-        question: { es: "Como es la gastronomía española?", en: "What is Spanish gastronomy like?" },
-        answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties." }
+        question: { es: "Como es la gastronomía española?", en: "What is Spanish gastronomy like?", pt: "Como e a gastronomia espanhola?" },
+        answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties.", pt: "A Espanha e famosa por suas tapas, paella, presunto iberico e vinhos. Cada regiao tem suas especialidades." }
       }
     ],
-    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
+    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November", pt: "Marco a Junho e Setembro a Novembro" },
     currency: "EUR",
-    language: { es: "Español", en: "Spanish" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Español", en: "Spanish", pt: "Espanhol" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "germany",
