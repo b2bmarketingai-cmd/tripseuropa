@@ -835,7 +835,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "netherlands",
-    name: { es: "Paises Bajos", en: "Netherlands" },
+    name: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" },
     heroImage: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=60&w=800&auto=format&fit=crop",
@@ -845,11 +845,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Los Paises Bajos son mucho más que Amsterdam. Descubre un pais de canales pintorescos, molinos de viento históricos, campos de tulipanes y una rica herencia artistica. Desde los museos de Van Gogh y Rembrandt hasta los quesos de Gouda y la arquitectura innovadora de Rotterdam, los Paises Bajos ofrecen una experiencia única. Explora en bicicleta como los locales y disfruta de la tolerancia y creatividad holandesa.",
-      en: "The Netherlands is much more than Amsterdam. Discover a country of picturesque canals, historic windmills, tulip fields, and rich artistic heritage. From Van Gogh and Rembrandt museums to Gouda cheeses and Rotterdam's innovative architecture, the Netherlands offers a unique experience. Explore by bike like locals and enjoy Dutch tolerance and creativity."
+      en: "The Netherlands is much more than Amsterdam. Discover a country of picturesque canals, historic windmills, tulip fields, and rich artistic heritage. From Van Gogh and Rembrandt museums to Gouda cheeses and Rotterdam's innovative architecture, the Netherlands offers a unique experience. Explore by bike like locals and enjoy Dutch tolerance and creativity.",
+      pt: "Os Paises Baixos sao muito mais que Amsterdam. Descubra um pais de canais pitorescos, moinhos de vento historicos, campos de tulipas e rica heranca artistica. Dos museus de Van Gogh e Rembrandt aos queijos de Gouda e a arquitetura inovadora de Rotterdam, os Paises Baixos oferecem uma experiencia unica. Explore de bicicleta como os locais e aprecie a tolerancia e criatividade holandesa."
     },
     highlights: {
       es: ["Canales de Amsterdam", "Museo Van Gogh", "Campos de tulipanes", "Molinos de Kinderdijk", "Quesos de Gouda", "Arquitectura de Rotterdam"],
-      en: ["Amsterdam canals", "Van Gogh Museum", "Tulip fields", "Kinderdijk windmills", "Gouda cheeses", "Rotterdam architecture"]
+      en: ["Amsterdam canals", "Van Gogh Museum", "Tulip fields", "Kinderdijk windmills", "Gouda cheeses", "Rotterdam architecture"],
+      pt: ["Canais de Amsterdam", "Museu Van Gogh", "Campos de tulipas", "Moinhos de Kinderdijk", "Queijos de Gouda", "Arquitetura de Rotterdam"]
     },
     packages: [
       {
@@ -943,7 +945,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "switzerland",
-    name: { es: "Suiza", en: "Switzerland" },
+    name: { es: "Suiza", en: "Switzerland", pt: "Suica" },
     heroImage: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=60&w=800&auto=format&fit=crop",
@@ -953,11 +955,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Suiza es sinonimo de paisajes alpinos espectaculares, relojes de precision, chocolate exquisito y calidad de vida excepcional. Desde el majestuoso Matterhorn hasta los lagos cristalinos de Lucerna, pasando por las ciudades cosmopolitas de Zurich y Ginebra, Suiza ofrece experiencias de lujo en un entorno natural incomparable. Descubre los trenes panoramicos más famosos del mundo y la perfeccion suiza en cada detalle.",
-      en: "Switzerland is synonymous with spectacular Alpine landscapes, precision watches, exquisite chocolate, and exceptional quality of life. From the majestic Matterhorn to the crystal-clear lakes of Lucerne, through the cosmopolitan cities of Zurich and Geneva, Switzerland offers luxury experiences in an unparalleled natural setting. Discover the world's most famous panoramic trains and Swiss perfection in every detail."
+      en: "Switzerland is synonymous with spectacular Alpine landscapes, precision watches, exquisite chocolate, and exceptional quality of life. From the majestic Matterhorn to the crystal-clear lakes of Lucerne, through the cosmopolitan cities of Zurich and Geneva, Switzerland offers luxury experiences in an unparalleled natural setting. Discover the world's most famous panoramic trains and Swiss perfection in every detail.",
+      pt: "A Suica e sinonimo de paisagens alpinas espetaculares, relogios de precisao, chocolate requintado e qualidade de vida excepcional. Do majestoso Matterhorn aos lagos cristalinos de Lucerna, passando pelas cidades cosmopolitas de Zurique e Genebra, a Suica oferece experiencias de luxo em um cenario natural incomparavel. Descubra os trens panoramicos mais famosos do mundo e a perfeicao suica em cada detalhe."
     },
     highlights: {
       es: ["Matterhorn en Zermatt", "Jungfraujoch", "Lago de Lucerna", "Glacier Express", "Chocolate y relojes", "Interlaken"],
-      en: ["Matterhorn in Zermatt", "Jungfraujoch", "Lake Lucerne", "Glacier Express", "Chocolate and watches", "Interlaken"]
+      en: ["Matterhorn in Zermatt", "Jungfraujoch", "Lake Lucerne", "Glacier Express", "Chocolate and watches", "Interlaken"],
+      pt: ["Matterhorn em Zermatt", "Jungfraujoch", "Lago Lucerna", "Glacier Express", "Chocolate e relogios", "Interlaken"]
     },
     packages: [
       {
@@ -1063,7 +1067,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "croatia",
-    name: { es: "Croacia", en: "Croatia" },
+    name: { es: "Croacia", en: "Croatia", pt: "Croacia" },
     heroImage: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1565711561500-49678a10a63f?q=60&w=800&auto=format&fit=crop",
@@ -1073,11 +1077,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Croacia es la joya del Adriatico, un pais de costas impresionantes, ciudades medievales y parques naturales espectaculares. Desde las murallas de Dubrovnik (escenario de Game of Thrones) hasta las cascadas de Plitvice, pasando por las islas de Hvar y Split, Croacia ofrece una combinacion perfecta de historia, naturaleza y vida mediterranea. Descubre playas de aguas cristalinas, gastronomía de mar y hospitalidad balcanica.",
-      en: "Croatia is the jewel of the Adriatic, a country of stunning coastlines, medieval cities, and spectacular natural parks. From Dubrovnik's walls (Game of Thrones setting) to Plitvice's waterfalls, through the islands of Hvar and Split, Croatia offers a perfect combination of history, nature, and Mediterranean life. Discover crystal-clear beaches, seafood gastronomy, and Balkan hospitality."
+      en: "Croatia is the jewel of the Adriatic, a country of stunning coastlines, medieval cities, and spectacular natural parks. From Dubrovnik's walls (Game of Thrones setting) to Plitvice's waterfalls, through the islands of Hvar and Split, Croatia offers a perfect combination of history, nature, and Mediterranean life. Discover crystal-clear beaches, seafood gastronomy, and Balkan hospitality.",
+      pt: "A Croacia e a joia do Adriatico, um pais de costas impressionantes, cidades medievais e parques naturais espetaculares. Das muralhas de Dubrovnik (cenario de Game of Thrones) as cachoeiras de Plitvice, passando pelas ilhas de Hvar e Split, a Croacia oferece uma combinacao perfeita de historia, natureza e vida mediterranea. Descubra praias de aguas cristalinas, gastronomia do mar e hospitalidade balcanica."
     },
     highlights: {
       es: ["Murallas de Dubrovnik", "Lagos de Plitvice", "Split y Diocleciano", "Isla de Hvar", "Costa del Adriatico", "Juego de Tronos tours"],
-      en: ["Dubrovnik walls", "Plitvice Lakes", "Split and Diocletian", "Hvar Island", "Adriatic coast", "Game of Thrones tours"]
+      en: ["Dubrovnik walls", "Plitvice Lakes", "Split and Diocletian", "Hvar Island", "Adriatic coast", "Game of Thrones tours"],
+      pt: ["Muralhas de Dubrovnik", "Lagos de Plitvice", "Split e Diocleciano", "Ilha de Hvar", "Costa do Adriatico", "Tours Game of Thrones"]
     },
     packages: [
       {
@@ -1189,7 +1195,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "united-kingdom",
-    name: { es: "Reino Unido", en: "United Kingdom" },
+    name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" },
     heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=60&w=800&auto=format&fit=crop",
@@ -1199,11 +1205,13 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "El Reino Unido combina tradicion monarquica con modernidad vibrante. Desde el icónica Londres con el Big Ben y el Palacio de Buckingham hasta los paisajes de las Tierras Altas escocesas, pasando por los castillos de Gales y la campiña inglesa, el Reino Unido ofrece experiencias diversas. Descubre la realeza, los pubs tradicionales, el te de la tarde y una escena cultural de clase mundial.",
-      en: "The United Kingdom combines monarchical tradition with vibrant modernity. From iconic London with Big Ben and Buckingham Palace to the Scottish Highlands landscapes, through Welsh castles and the English countryside, the UK offers diverse experiences. Discover royalty, traditional pubs, afternoon tea, and a world-class cultural scene."
+      en: "The United Kingdom combines monarchical tradition with vibrant modernity. From iconic London with Big Ben and Buckingham Palace to the Scottish Highlands landscapes, through Welsh castles and the English countryside, the UK offers diverse experiences. Discover royalty, traditional pubs, afternoon tea, and a world-class cultural scene.",
+      pt: "O Reino Unido combina tradicao monarquica com modernidade vibrante. Da iconica Londres com o Big Ben e o Palacio de Buckingham as paisagens das Terras Altas escocesas, passando pelos castelos de Gales e o campo ingles, o Reino Unido oferece experiencias diversas. Descubra a realeza, os pubs tradicionais, o cha da tarde e uma cena cultural de classe mundial."
     },
     highlights: {
       es: ["Big Ben y Parlamento", "Palacio de Buckingham", "Stonehenge", "Edimburgo y castillo", "Tierras Altas escocesas", "Oxford y Cambridge"],
-      en: ["Big Ben and Parliament", "Buckingham Palace", "Stonehenge", "Edinburgh and castle", "Scottish Highlands", "Oxford and Cambridge"]
+      en: ["Big Ben and Parliament", "Buckingham Palace", "Stonehenge", "Edinburgh and castle", "Scottish Highlands", "Oxford and Cambridge"],
+      pt: ["Big Ben e Parlamento", "Palacio de Buckingham", "Stonehenge", "Edimburgo e castelo", "Terras Altas escocesas", "Oxford e Cambridge"]
     },
     packages: [
       {
@@ -1327,15 +1335,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "albania",
-    name: { es: "Albania", en: "Albania" },
+    name: { es: "Albania", en: "Albania", pt: "Albania" },
     heroImage: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=60",
     description: {
       es: "Albania, la joya escondida de los Balcanes, ofrece playas virgenes en la Riviera Albanesa, montanas majestuosas, ciudades patrimonio UNESCO como Berat y Gjirokaster, y una hospitalidad legendaria. Descubre ruinas antiguas, bunkers de la era comunista y una gastronomía mediterranea única.",
-      en: "Albania, the hidden gem of the Balkans, offers pristine beaches on the Albanian Riviera, majestic mountains, UNESCO heritage cities like Berat and Gjirokaster, and legendary hospitality. Discover ancient ruins, communist-era bunkers, and unique Mediterranean cuisine."
+      en: "Albania, the hidden gem of the Balkans, offers pristine beaches on the Albanian Riviera, majestic mountains, UNESCO heritage cities like Berat and Gjirokaster, and legendary hospitality. Discover ancient ruins, communist-era bunkers, and unique Mediterranean cuisine.",
+      pt: "A Albania, a joia escondida dos Balcas, oferece praias virgens na Riviera Albanesa, montanhas majestosas, cidades patrimonio UNESCO como Berat e Gjirokaster, e hospitalidade lendaria. Descubra ruinas antigas, bunkers da era comunista e culinaria mediterranea unica."
     },
     highlights: {
       es: ["Riviera Albanesa", "Berat ciudad de mil ventanas", "Gjirokaster ciudad de piedra", "Lago Ohrid", "Tirana la capital colorida"],
-      en: ["Albanian Riviera", "Berat city of a thousand windows", "Gjirokaster stone city", "Lake Ohrid", "Tirana the colorful capital"]
+      en: ["Albanian Riviera", "Berat city of a thousand windows", "Gjirokaster stone city", "Lake Ohrid", "Tirana the colorful capital"],
+      pt: ["Riviera Albanesa", "Berat cidade de mil janelas", "Gjirokaster cidade de pedra", "Lago Ohrid", "Tirana a capital colorida"]
     },
     galleryImages: [
       "/assets/stock_images/albania_landscape_co_eb3c4c05.jpg",
@@ -1367,15 +1377,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "austria",
-    name: { es: "Austria", en: "Austria" },
+    name: { es: "Austria", en: "Austria", pt: "Austria" },
     heroImage: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1200&q=60",
     description: {
       es: "Austria encanta con los palacios imperiales de Viena, los paisajes alpinos de Salzburgo, la musica clásica de Mozart y los mercados navidenos más magicos de Europa. Vive la elegancia del Imperio Habsburgo entre valses, cafes históricos y los Alpes austriacos.",
-      en: "Austria enchants with Vienna's imperial palaces, Salzburg's Alpine landscapes, Mozart's classical music, and Europe's most mágical Christmas markets. Experience the elegance of the Habsburg Empire among waltzes, historic cafes, and the Austrian Alps."
+      en: "Austria enchants with Vienna's imperial palaces, Salzburg's Alpine landscapes, Mozart's classical music, and Europe's most mágical Christmas markets. Experience the elegance of the Habsburg Empire among waltzes, historic cafes, and the Austrian Alps.",
+      pt: "A Austria encanta com os palacios imperiais de Viena, as paisagens alpinas de Salzburgo, a musica classica de Mozart e os mercados natalinos mais magicos da Europa. Viva a elegancia do Imperio Habsburgo entre valsas, cafes historicos e os Alpes austriacos."
     },
     highlights: {
       es: ["Palacio Schonbrunn Viena", "Salzburgo ciudad de Mozart", "Hallstatt pueblo de cuento", "Innsbruck capital alpina", "Mercados navidenos"],
-      en: ["Schonbrunn Palace Vienna", "Salzburg Mozart's city", "Hallstatt fairytale village", "Innsbruck alpine capital", "Christmas markets"]
+      en: ["Schonbrunn Palace Vienna", "Salzburg Mozart's city", "Hallstatt fairytale village", "Innsbruck alpine capital", "Christmas markets"],
+      pt: ["Palacio Schonbrunn Viena", "Salzburgo cidade de Mozart", "Hallstatt vila de conto de fadas", "Innsbruck capital alpina", "Mercados natalinos"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?w=800&q=60",
@@ -1407,15 +1419,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "belgium",
-    name: { es: "Belgica", en: "Belgium" },
+    name: { es: "Belgica", en: "Belgium", pt: "Belgica" },
     heroImage: "https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?w=1200&q=60",
     description: {
       es: "Belgica sorprende con sus ciudades medievales perfectamente conservadas, el chocolate más fino del mundo, cervezas artesanales únicas y arquitectura Art Nouveau. Desde la Grand Place de Bruselas hasta los canales románticos de Brujas, cada rincon cuenta historia.",
-      en: "Belgium surprises with perfectly preserved medieval cities, the world's finest chocolate, unique craft beers, and Art Nouveau architecture. From Brussels' Grand Place to Bruges' romantic canals, every corner tells a story."
+      en: "Belgium surprises with perfectly preserved medieval cities, the world's finest chocolate, unique craft beers, and Art Nouveau architecture. From Brussels' Grand Place to Bruges' romantic canals, every corner tells a story.",
+      pt: "A Belgica surpreende com suas cidades medievais perfeitamente preservadas, o chocolate mais fino do mundo, cervejas artesanais unicas e arquitetura Art Nouveau. Da Grand Place de Bruxelas aos canais romanticos de Bruges, cada canto conta uma historia."
     },
     highlights: {
       es: ["Grand Place Bruselas", "Canales de Brujas", "Diamantes de Amberes", "Chocolate belga", "Gante medieval"],
-      en: ["Brussels Grand Place", "Bruges canals", "Antwerp diamonds", "Belgian chocolate", "Medieval Ghent"]
+      en: ["Brussels Grand Place", "Bruges canals", "Antwerp diamonds", "Belgian chocolate", "Medieval Ghent"],
+      pt: ["Grand Place Bruxelas", "Canais de Bruges", "Diamantes de Antuarpia", "Chocolate belga", "Gante medieval"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=800&q=60",
@@ -1444,15 +1458,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "czech-republic",
-    name: { es: "Republica Checa", en: "Czech Republic" },
+    name: { es: "Republica Checa", en: "Czech Republic", pt: "Republica Tcheca" },
     heroImage: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200&q=60",
     description: {
       es: "La Republica Checa cautiva con Praga, la ciudad de las cien torres, castillos de cuento como Cesky Krumlov, balnearios históricos y la mejor cerveza del mundo. Descubre la bohemia romántica entre puentes goticos, relojes astronomicos y ciudades medievales perfectas.",
-      en: "The Czech Republic captivates with Prague, the city of a hundred towers, fairytale castles like Cesky Krumlov, historic spas, and the world's best beer. Discover romantic Bohemia among Gothic bridges, astronomical clocks, and perfect medieval towns."
+      en: "The Czech Republic captivates with Prague, the city of a hundred towers, fairytale castles like Cesky Krumlov, historic spas, and the world's best beer. Discover romantic Bohemia among Gothic bridges, astronomical clocks, and perfect medieval towns.",
+      pt: "A Republica Tcheca cativa com Praga, a cidade das cem torres, castelos de contos de fadas como Cesky Krumlov, spas historicos e a melhor cerveja do mundo. Descubra a Boemia romantica entre pontes goticas, relogios astronomicos e cidades medievais perfeitas."
     },
     highlights: {
       es: ["Puente Carlos Praga", "Castillo de Praga", "Cesky Krumlov", "Karlovy Vary", "Cerveza checa"],
-      en: ["Charles Bridge Prague", "Prague Castle", "Cesky Krumlov", "Karlovy Vary", "Czech beer"]
+      en: ["Charles Bridge Prague", "Prague Castle", "Cesky Krumlov", "Karlovy Vary", "Czech beer"],
+      pt: ["Ponte Carlos Praga", "Castelo de Praga", "Cesky Krumlov", "Karlovy Vary", "Cerveja tcheca"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&q=60",
@@ -1482,15 +1498,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "denmark",
-    name: { es: "Dinamarca", en: "Denmark" },
+    name: { es: "Dinamarca", en: "Denmark", pt: "Dinamarca" },
     heroImage: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1200&q=60",
     description: {
       es: "Dinamarca, cuna del hygge y la felicidad, ofrece Copenhague con sus canales coloridos, castillos de Hamlet, el diseno nordico más vanguardista y los parques de Tivoli. Descubre vikingos, palacios reales y la vida danesa que inspira al mundo.",
-      en: "Denmark, home of hygge and happiness, offers Copenhagen with its colorful canals, Hamlet's castles, cutting-edge Nordic design, and Tivoli gardens. Discover Vikings, royal palaces, and the Danish lifestyle that inspires the world."
+      en: "Denmark, home of hygge and happiness, offers Copenhagen with its colorful canals, Hamlet's castles, cutting-edge Nordic design, and Tivoli gardens. Discover Vikings, royal palaces, and the Danish lifestyle that inspires the world.",
+      pt: "A Dinamarca, berco do hygge e da felicidade, oferece Copenhague com seus canais coloridos, castelos de Hamlet, design nordico de vanguarda e os jardins Tivoli. Descubra vikings, palacios reais e o estilo de vida dinamarques que inspira o mundo."
     },
     highlights: {
       es: ["Nyhavn Copenhague", "Jardines Tivoli", "Castillo Kronborg", "Sirenita", "Diseno danes"],
-      en: ["Nyhavn Copenhagen", "Tivoli Gardens", "Kronborg Castle", "Little Mermaid", "Danish design"]
+      en: ["Nyhavn Copenhagen", "Tivoli Gardens", "Kronborg Castle", "Little Mermaid", "Danish design"],
+      pt: ["Nyhavn Copenhague", "Jardins Tivoli", "Castelo Kronborg", "Pequena Sereia", "Design dinamarques"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1552560880-2482cef14240?w=800&q=60",
@@ -1519,15 +1537,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "finland",
-    name: { es: "Finlandia", en: "Finland" },
+    name: { es: "Finlandia", en: "Finland", pt: "Finlandia" },
     heroImage: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=60",
     description: {
       es: "Finlandia es la tierra de la aurora boreal, saunas autenticas, bosques infinitos y el hogar de Papa Noel en Laponia. Desde el diseno vanguardista de Helsinki hasta los lagos cristalinos y la magia del Artico, vive experiencias únicas en el norte de Europa.",
-      en: "Finland is the land of the Northern Lights, authentic saunas, endless forests, and Santa Claus' home in Lapland. From Helsinki's cutting-edge design to crystal lakes and Arctic magic, experience unique adventures in Northern Europe."
+      en: "Finland is the land of the Northern Lights, authentic saunas, endless forests, and Santa Claus' home in Lapland. From Helsinki's cutting-edge design to crystal lakes and Arctic magic, experience unique adventures in Northern Europe.",
+      pt: "A Finlandia e a terra da aurora boreal, saunas autenticas, florestas infinitas e o lar do Papai Noel na Laponia. Do design de vanguarda de Helsinki aos lagos cristalinos e a magia do Artico, viva experiencias unicas no norte da Europa."
     },
     highlights: {
       es: ["Aurora boreal Laponia", "Aldea Papa Noel", "Saunas finlandesas", "Lagos cristalinos", "Diseno Helsinki"],
-      en: ["Northern Lights Lapland", "Santa Claus Village", "Finnish saunas", "Crystal lakes", "Helsinki design"]
+      en: ["Northern Lights Lapland", "Santa Claus Village", "Finnish saunas", "Crystal lakes", "Helsinki design"],
+      pt: ["Aurora boreal Laponia", "Vila do Papai Noel", "Saunas finlandesas", "Lagos cristalinos", "Design Helsinki"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1538029038569-6a2c7b22dd65?w=800&q=60",
@@ -1557,15 +1577,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "hungary",
-    name: { es: "Hungria", en: "Hungary" },
+    name: { es: "Hungria", en: "Hungary", pt: "Hungria" },
     heroImage: "https://images.unsplash.com/photo-1541343672885-9be56236302a?w=1200&q=60",
     description: {
       es: "Hungria deslumbra con Budapest, la Perla del Danubio dividida por el rio entre Buda y Pest. Banos termales legendarios, el Parlamento más espectacular de Europa, ruinas de bares unicos y la tradicion de los vinos de Tokaj te esperan.",
-      en: "Hungary dazzles with Budapest, the Pearl of the Danube divided by the river between Buda and Pest. Legendary thermal baths, Europe's most spectacular Parliament, unique ruin bars, and the tradition of Tokaj wines await you."
+      en: "Hungary dazzles with Budapest, the Pearl of the Danube divided by the river between Buda and Pest. Legendary thermal baths, Europe's most spectacular Parliament, unique ruin bars, and the tradition of Tokaj wines await you.",
+      pt: "A Hungria deslumbra com Budapeste, a Perola do Danubio dividida pelo rio entre Buda e Pest. Banhos termais lendarios, o Parlamento mais espetacular da Europa, bares de ruinas unicos e a tradicao dos vinhos Tokaj esperam por voce."
     },
     highlights: {
       es: ["Parlamento Budapest", "Banos Szechenyi", "Castillo de Buda", "Ruin bars", "Vinos Tokaj"],
-      en: ["Budapest Parliament", "Szechenyi Baths", "Buda Castle", "Ruin bars", "Tokaj wines"]
+      en: ["Budapest Parliament", "Szechenyi Baths", "Buda Castle", "Ruin bars", "Tokaj wines"],
+      pt: ["Parlamento Budapeste", "Banhos Szechenyi", "Castelo de Buda", "Ruin bars", "Vinhos Tokaj"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=800&q=60",
@@ -1594,15 +1616,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "iceland",
-    name: { es: "Islandia", en: "Iceland" },
+    name: { es: "Islandia", en: "Iceland", pt: "Islandia" },
     heroImage: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1200&q=60",
     description: {
       es: "Islandia es la tierra de hielo y fuego donde glaciares, volcanes, geiseres y cascadas crean paisajes de otro mundo. La Laguna Azul, la aurora boreal, ballenas y la única carretera que rodea la isla ofrecen aventuras incomparables.",
-      en: "Iceland is the land of fire and ice where glaciers, volcanoes, geysers, and waterfalls create otherworldly landscapes. The Blue Lagoon, Northern Lights, whales, and the only road circling the island offer unparalleled adventures."
+      en: "Iceland is the land of fire and ice where glaciers, volcanoes, geysers, and waterfalls create otherworldly landscapes. The Blue Lagoon, Northern Lights, whales, and the only road circling the island offer unparalleled adventures.",
+      pt: "A Islandia e a terra de gelo e fogo onde geleiras, vulcoes, geiseres e cachoeiras criam paisagens de outro mundo. A Lagoa Azul, a aurora boreal, baleias e a unica estrada que circunda a ilha oferecem aventuras incomparaveis."
     },
     highlights: {
       es: ["Circulo Dorado", "Laguna Azul", "Aurora boreal", "Cascadas epicas", "Avistamiento ballenas"],
-      en: ["Golden Circle", "Blue Lagoon", "Northern Lights", "Epic waterfalls", "Whale watching"]
+      en: ["Golden Circle", "Blue Lagoon", "Northern Lights", "Epic waterfalls", "Whale watching"],
+      pt: ["Circulo Dourado", "Lagoa Azul", "Aurora boreal", "Cachoeiras epicas", "Avistamento de baleias"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1520769945061-0a448c463865?w=800&q=60",
@@ -1633,15 +1657,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "ireland",
-    name: { es: "Irlanda", en: "Ireland" },
+    name: { es: "Irlanda", en: "Ireland", pt: "Irlanda" },
     heroImage: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1200&q=60",
     description: {
       es: "Irlanda, la Isla Esmeralda, cautiva con acantilados dramáticos, castillos antiguos, pubs con musica tradicional y la calidez de su gente. Desde los Cliffs of Moher hasta Dublin literaria, la magia celta te envuelve en cada rincon verde.",
-      en: "Ireland, the Emerald Isle, captivates with dramatic cliffs, ancient castles, pubs with traditional music, and the warmth of its people. From the Cliffs of Moher to literary Dublin, Celtic magic envelops you in every green corner."
+      en: "Ireland, the Emerald Isle, captivates with dramatic cliffs, ancient castles, pubs with traditional music, and the warmth of its people. From the Cliffs of Moher to literary Dublin, Celtic magic envelops you in every green corner.",
+      pt: "A Irlanda, a Ilha Esmeralda, cativa com falesias dramaticas, castelos antigos, pubs com musica tradicional e o calor de seu povo. Dos Cliffs of Moher a Dublin literaria, a magia celta te envolve em cada canto verde."
     },
     highlights: {
       es: ["Cliffs of Moher", "Ring of Kerry", "Dublin", "Guinness Storehouse", "Giant's Causeway"],
-      en: ["Cliffs of Moher", "Ring of Kerry", "Dublin", "Guinness Storehouse", "Giant's Causeway"]
+      en: ["Cliffs of Moher", "Ring of Kerry", "Dublin", "Guinness Storehouse", "Giant's Causeway"],
+      pt: ["Cliffs of Moher", "Ring of Kerry", "Dublin", "Guinness Storehouse", "Giant's Causeway"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1564959130747-897fb406b9af?w=800&q=60",
@@ -1673,15 +1699,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "norway",
-    name: { es: "Noruega", en: "Norway" },
+    name: { es: "Noruega", en: "Norway", pt: "Noruega" },
     heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=60",
     description: {
       es: "Noruega sorprende con los fiordos más dramáticos del mundo, la aurora boreal, el sol de medianoche y ciudades vibrantes como Bergen y Oslo. Cruceros por fiordos, pueblos pesqueros coloridos y naturaleza virgen te esperan en este pais escandinavo.",
-      en: "Norway surprises with the world's most dramatic fjords, the Northern Lights, the midnight sun, and vibrant cities like Bergen and Oslo. Fjord cruises, colorful fishing villages, and pristine nature await you in this Scandinavian country."
+      en: "Norway surprises with the world's most dramatic fjords, the Northern Lights, the midnight sun, and vibrant cities like Bergen and Oslo. Fjord cruises, colorful fishing villages, and pristine nature await you in this Scandinavian country.",
+      pt: "A Noruega surpreende com os fiordes mais dramaticos do mundo, a aurora boreal, o sol da meia-noite e cidades vibrantes como Bergen e Oslo. Cruzeiros pelos fiordes, vilas de pescadores coloridas e natureza intocada esperam por voce neste pais escandinavo."
     },
     highlights: {
       es: ["Fiordos noruegos", "Bergen colorida", "Oslo moderna", "Aurora boreal", "Tren Flam"],
-      en: ["Norwegian fjords", "Colorful Bergen", "Modern Oslo", "Northern Lights", "Flam Railway"]
+      en: ["Norwegian fjords", "Colorful Bergen", "Modern Oslo", "Northern Lights", "Flam Railway"],
+      pt: ["Fiordes noruegueses", "Bergen colorida", "Oslo moderna", "Aurora boreal", "Trem Flam"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1548783301-1a22b1d7f6e3?w=800&q=60",
@@ -1713,15 +1741,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "poland",
-    name: { es: "Polonia", en: "Poland" },
+    name: { es: "Polonia", en: "Poland", pt: "Polonia" },
     heroImage: "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=60",
     description: {
       es: "Polonia sorprende con Cracovia medieval, Varsovia renacida de las cenizas, las minas de sal de Wieliczka y la memoria de Auschwitz. Castillos goticos, montanas Tatra y la calidez polaca crean un destino fascinante lleno de historia y cultura.",
-      en: "Poland surprises with medieval Krakow, Warsaw reborn from the ashes, the Wieliczka salt mines, and the memory of Auschwitz. Gothic castles, Tatra mountains, and Polish warmth create a fascinating destination full of history and culture."
+      en: "Poland surprises with medieval Krakow, Warsaw reborn from the ashes, the Wieliczka salt mines, and the memory of Auschwitz. Gothic castles, Tatra mountains, and Polish warmth create a fascinating destination full of history and culture.",
+      pt: "A Polonia surpreende com Cracovia medieval, Varsovia renascida das cinzas, as minas de sal de Wieliczka e a memoria de Auschwitz. Castelos goticos, montanhas Tatra e o calor polones criam um destino fascinante cheio de historia e cultura."
     },
     highlights: {
       es: ["Cracovia medieval", "Varsovia historica", "Minas de sal Wieliczka", "Auschwitz memorial", "Montanas Tatra"],
-      en: ["Medieval Krakow", "Historic Warsaw", "Wieliczka Salt Mines", "Auschwitz Memorial", "Tatra Mountains"]
+      en: ["Medieval Krakow", "Historic Warsaw", "Wieliczka Salt Mines", "Auschwitz Memorial", "Tatra Mountains"],
+      pt: ["Cracovia medieval", "Varsovia historica", "Minas de sal Wieliczka", "Memorial Auschwitz", "Montanhas Tatra"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=60",
@@ -1752,15 +1782,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "romania",
-    name: { es: "Rumania", en: "Romania" },
+    name: { es: "Rumania", en: "Romania", pt: "Romenia" },
     heroImage: "https://images.unsplash.com/photo-1585674364415-1e8c8d7de44b?w=1200&q=60",
     description: {
       es: "Rumania fascina con la Transilvania de Dracula, castillos goticos entre montanas, pueblos sajones medievales y el delta del Danubio. Desde el Castillo de Bran hasta los monasterios pintados de Bucovina, descubre los Carpatos y su misterio.",
-      en: "Romania fascinates with Dracula's Transylvania, Gothic castles among mountains, medieval Saxon villages, and the Danube Delta. From Bran Castle to Bucovina's painted monasteries, discover the Carpathians and their mystery."
+      en: "Romania fascinates with Dracula's Transylvania, Gothic castles among mountains, medieval Saxon villages, and the Danube Delta. From Bran Castle to Bucovina's painted monasteries, discover the Carpathians and their mystery.",
+      pt: "A Romenia fascina com a Transilvania de Dracula, castelos goticos entre montanhas, vilas saxonicas medievais e o delta do Danubio. Do Castelo de Bran aos mosteiros pintados da Bucovina, descubra os Carpatos e seu misterio."
     },
     highlights: {
       es: ["Castillo de Bran", "Transilvania", "Sighisoara medieval", "Bucovina monasterios", "Bucarest"],
-      en: ["Bran Castle", "Transylvania", "Medieval Sighisoara", "Bucovina monasteries", "Bucharest"]
+      en: ["Bran Castle", "Transylvania", "Medieval Sighisoara", "Bucovina monasteries", "Bucharest"],
+      pt: ["Castelo de Bran", "Transilvania", "Sighisoara medieval", "Mosteiros Bucovina", "Bucareste"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=60",
@@ -1791,15 +1823,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "sweden",
-    name: { es: "Suecia", en: "Sweden" },
+    name: { es: "Suecia", en: "Sweden", pt: "Suecia" },
     heroImage: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=1200&q=60",
     description: {
       es: "Suecia combina la sofisticacion de Estocolmo, extendida sobre 14 islas, con la naturaleza salvaje de Laponia. Diseno escandinavo, el hotel de hielo, auroras boreales y la herencia vikinga crean experiencias únicas en el reino nordico.",
-      en: "Sweden combines Stockholm's sophistication, spread across 14 islands, with Lapland's wild nature. Scandinavian design, the ice hotel, Northern Lights, and Viking heritage create unique experiences in the Nordic kingdom."
+      en: "Sweden combines Stockholm's sophistication, spread across 14 islands, with Lapland's wild nature. Scandinavian design, the ice hotel, Northern Lights, and Viking heritage create unique experiences in the Nordic kingdom.",
+      pt: "A Suecia combina a sofisticacao de Estocolmo, espalhada por 14 ilhas, com a natureza selvagem da Laponia. Design escandinavo, o hotel de gelo, auroras boreais e a heranca viking criam experiencias unicas no reino nordico."
     },
     highlights: {
       es: ["Estocolmo 14 islas", "Gamla Stan", "Museo Vasa", "Ice Hotel Laponia", "Archipelago"],
-      en: ["Stockholm 14 islands", "Gamla Stan", "Vasa Museum", "Lapland Ice Hotel", "Archipelago"]
+      en: ["Stockholm 14 islands", "Gamla Stan", "Vasa Museum", "Lapland Ice Hotel", "Archipelago"],
+      pt: ["Estocolmo 14 ilhas", "Gamla Stan", "Museu Vasa", "Hotel de Gelo Laponia", "Arquipelago"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1508189860359-777d945909ef?w=800&q=60",
@@ -1829,15 +1863,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "baltic-states",
-    name: { es: "Estados Balticos", en: "Baltic States" },
+    name: { es: "Estados Balticos", en: "Baltic States", pt: "Estados Balticos" },
     heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=60",
     description: {
       es: "Los Estados Balticos - Estonia, Letonia y Lituania - sorprenden con ciudades medievales como Tallin, Riga y Vilna, todas patrimonio UNESCO. Castillos, bosques infinitos, la herencia hanseática y la cultura única del Baltico esperan.",
-      en: "The Baltic States - Estonia, Latvia, and Lithuania - surprise with medieval cities like Tallinn, Riga, and Vilnius, all UNESCO heritage. Castles, endless forests, Hanseatic heritage, and unique Baltic culture await."
+      en: "The Baltic States - Estonia, Latvia, and Lithuania - surprise with medieval cities like Tallinn, Riga, and Vilnius, all UNESCO heritage. Castles, endless forests, Hanseatic heritage, and unique Baltic culture await.",
+      pt: "Os Estados Balticos - Estonia, Letonia e Lituania - surpreendem com cidades medievais como Tallinn, Riga e Vilnius, todas patrimonio UNESCO. Castelos, florestas infinitas, heranca hanseatica e cultura unica do Baltico esperam."
     },
     highlights: {
       es: ["Tallin medieval", "Art Nouveau Riga", "Vilna barroca", "Colina Cruces", "Trakai castillo"],
-      en: ["Medieval Tallinn", "Art Nouveau Riga", "Baroque Vilnius", "Hill of Crosses", "Trakai Castle"]
+      en: ["Medieval Tallinn", "Art Nouveau Riga", "Baroque Vilnius", "Hill of Crosses", "Trakai Castle"],
+      pt: ["Tallinn medieval", "Art Nouveau Riga", "Vilnius barroca", "Colina das Cruzes", "Castelo Trakai"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1558618047-f4b511d8e9a4?w=800&q=60",
@@ -1869,15 +1905,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "cyprus",
-    name: { es: "Chipre", en: "Cyprus" },
+    name: { es: "Chipre", en: "Cyprus", pt: "Chipre" },
     heroImage: "https://images.unsplash.com/photo-1586768337645-81c3e6c6eb04?w=1200&q=60",
     description: {
       es: "Chipre, la isla de Afrodita, combina playas mediterraneas cristalinas, ruinas grecorromanas, montanas Troodos con monasterios bizantinos y pueblos tradicionales. La tercera isla más grande del Mediterraneo ofrece historia de 10,000 anos y hospitalidad chipriota.",
-      en: "Cyprus, the island of Aphrodite, combines crystal Mediterranean beaches, Greco-Roman ruins, Troodos mountains with Byzantine monasteries, and traditional villages. The third-largest Mediterranean island offers 10,000 years of history and Cypriot hospitality."
+      en: "Cyprus, the island of Aphrodite, combines crystal Mediterranean beaches, Greco-Roman ruins, Troodos mountains with Byzantine monasteries, and traditional villages. The third-largest Mediterranean island offers 10,000 years of history and Cypriot hospitality.",
+      pt: "Chipre, a ilha de Afrodite, combina praias mediterraneas cristalinas, ruinas greco-romanas, montanhas Troodos com mosteiros bizantinos e vilas tradicionais. A terceira maior ilha do Mediterraneo oferece 10.000 anos de historia e hospitalidade cipriota."
     },
     highlights: {
       es: ["Playas Ayia Napa", "Ruinas Pafos", "Montanas Troodos", "Nicosia dividida", "Roca Afrodita"],
-      en: ["Ayia Napa beaches", "Paphos ruins", "Troodos Mountains", "Divided Nicosia", "Aphrodite's Rock"]
+      en: ["Ayia Napa beaches", "Paphos ruins", "Troodos Mountains", "Divided Nicosia", "Aphrodite's Rock"],
+      pt: ["Praias Ayia Napa", "Ruinas Pafos", "Montanhas Troodos", "Nicosia dividida", "Rocha de Afrodite"]
     },
     galleryImages: [
       "/assets/stock_images/cyprus_mediterranean_14204acf.jpg",
@@ -1908,15 +1946,17 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "scotland",
-    name: { es: "Escocia", en: "Scotland" },
+    name: { es: "Escocia", en: "Scotland", pt: "Escocia" },
     heroImage: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?w=1200&q=60",
     description: {
       es: "Escocia cautiva con las Highlands salvajes, castillos legendarios, lochs misteriosos como el Ness, Edimburgo medieval y la tradicion del whisky. Gaitas, tartanes y paisajes dramáticos crean una experiencia única en el norte de Gran Bretana.",
-      en: "Scotland captivates with wild Highlands, legendary castles, mysterious lochs like Ness, medieval Edinburgh, and whisky tradition. Bagpipes, tartans, and dramatic landscapes create a unique experience in northern Britain."
+      en: "Scotland captivates with wild Highlands, legendary castles, mysterious lochs like Ness, medieval Edinburgh, and whisky tradition. Bagpipes, tartans, and dramatic landscapes create a unique experience in northern Britain.",
+      pt: "A Escocia cativa com as Highlands selvagens, castelos lendarios, lochs misteriosos como o Ness, Edimburgo medieval e a tradicao do whisky. Gaitas de foles, tartans e paisagens dramaticas criam uma experiencia unica no norte da Gra-Bretanha."
     },
     highlights: {
       es: ["Edimburgo medieval", "Highlands escocesas", "Lago Ness", "Castillos legendarios", "Destilerias whisky"],
-      en: ["Medieval Edinburgh", "Scottish Highlands", "Loch Ness", "Legendary castles", "Whisky distilleries"]
+      en: ["Medieval Edinburgh", "Scottish Highlands", "Loch Ness", "Legendary castles", "Whisky distilleries"],
+      pt: ["Edimburgo medieval", "Highlands escocesas", "Lago Ness", "Castelos lendarios", "Destilarias whisky"]
     },
     galleryImages: [
       "/assets/stock_images/scotland_highlands_e_97dd3c1f.jpg",
