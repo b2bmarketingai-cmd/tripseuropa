@@ -484,110 +484,113 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "alemania-esencial",
-        name: { es: "Alemania Esencial", en: "Essential Germany" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Alemania Esencial", en: "Essential Germany", pt: "Alemanha Essencial" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Trenes ICE", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Buffet breakfast", "ICE trains", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Buffet breakfast", "ICE trains", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha buffet", "Trens ICE", "Guia em portugues", "Ingressos principais"]
         }
       },
       {
         id: "alemania-baviera",
-        name: { es: "Baviera Mágica", en: "Mágical Bavaria" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Baviera Mágica", en: "Mágical Bavaria", pt: "Baviera Magica" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,699",
         taxes: "340",
         includes: {
           es: ["Vuelos internacionales", "Hoteles tipicos", "Desayuno", "Coche de alquiler", "Neuschwanstein", "Experiencia cervecera"],
-          en: ["International flights", "Typical hotels", "Breakfast", "Rental car", "Neuschwanstein", "Beer experience"]
+          en: ["International flights", "Typical hotels", "Breakfast", "Rental car", "Neuschwanstein", "Beer experience"],
+          pt: ["Voos internacionais", "Hoteis tipicos", "Cafe da manha", "Carro alugado", "Neuschwanstein", "Experiencia cervejeira"]
         }
       },
       {
         id: "alemania-completa",
-        name: { es: "Gran Tour de Alemania", en: "Grand Tour of Germany" },
-        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights" },
+        name: { es: "Gran Tour de Alemania", en: "Grand Tour of Germany", pt: "Grande Tour da Alemanha" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
         price: "2,799",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Rail Pass", "Tours exclusivos", "Crucero por el Rin"],
-          en: ["International flights", "4-5 star hotels", "Half board", "Rail Pass", "Exclusive tours", "Rhine cruise"]
+          en: ["International flights", "4-5 star hotels", "Half board", "Rail Pass", "Exclusive tours", "Rhine cruise"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "Rail Pass", "Tours exclusivos", "Cruzeiro pelo Reno"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Munich", en: "Arrival in Munich" },
-        description: { es: "Bienvenida en Munich, capital de Baviera.", en: "Welcome to Munich, capital of Bavaria." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Marienplatz"], en: ["Airport pickup", "Hotel check-in", "Marienplatz"] }
+        title: { es: "Llegada a Munich", en: "Arrival in Munich", pt: "Chegada em Munique" },
+        description: { es: "Bienvenida en Munich, capital de Baviera.", en: "Welcome to Munich, capital of Bavaria.", pt: "Boas-vindas em Munique, capital da Baviera." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Marienplatz"], en: ["Airport pickup", "Hotel check-in", "Marienplatz"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Marienplatz"] }
       },
       {
         day: 2,
-        title: { es: "Munich y Cerveza", en: "Munich and Beer" },
-        description: { es: "Explora Munich y su famosa cultura cervecera.", en: "Explore Munich and its famous beer culture." },
-        activities: { es: ["Residenz", "Hofbrauhaus", "Jardin Ingles"], en: ["Residenz", "Hofbrauhaus", "English Garden"] }
+        title: { es: "Munich y Cerveza", en: "Munich and Beer", pt: "Munique e Cerveja" },
+        description: { es: "Explora Munich y su famosa cultura cervecera.", en: "Explore Munich and its famous beer culture.", pt: "Explore Munique e sua famosa cultura cervejeira." },
+        activities: { es: ["Residenz", "Hofbrauhaus", "Jardin Ingles"], en: ["Residenz", "Hofbrauhaus", "English Garden"], pt: ["Residenz", "Hofbrauhaus", "Jardim Ingles"] }
       },
       {
         day: 3,
-        title: { es: "Neuschwanstein", en: "Neuschwanstein" },
-        description: { es: "Excursion al castillo de cuento de hadas.", en: "Excursion to the fairy-tale castle." },
-        activities: { es: ["Castillo Neuschwanstein", "Hohenschwangau", "Fussen"], en: ["Neuschwanstein Castle", "Hohenschwangau", "Fussen"] }
+        title: { es: "Neuschwanstein", en: "Neuschwanstein", pt: "Neuschwanstein" },
+        description: { es: "Excursion al castillo de cuento de hadas.", en: "Excursion to the fairy-tale castle.", pt: "Excursao ao castelo de contos de fadas." },
+        activities: { es: ["Castillo Neuschwanstein", "Hohenschwangau", "Fussen"], en: ["Neuschwanstein Castle", "Hohenschwangau", "Fussen"], pt: ["Castelo Neuschwanstein", "Hohenschwangau", "Fussen"] }
       },
       {
         day: 4,
-        title: { es: "Selva Negra", en: "Black Forest" },
-        description: { es: "Viaje a la mágica region de la Selva Negra.", en: "Trip to the mágical Black Forest region." },
-        activities: { es: ["Cascadas Triberg", "Friburgo", "Pueblo tradicional"], en: ["Triberg Waterfalls", "Freiburg", "Traditional village"] }
+        title: { es: "Selva Negra", en: "Black Forest", pt: "Floresta Negra" },
+        description: { es: "Viaje a la mágica region de la Selva Negra.", en: "Trip to the mágical Black Forest region.", pt: "Viagem a magica regiao da Floresta Negra." },
+        activities: { es: ["Cascadas Triberg", "Friburgo", "Pueblo tradicional"], en: ["Triberg Waterfalls", "Freiburg", "Traditional village"], pt: ["Cascatas de Triberg", "Friburgo", "Vila tradicional"] }
       },
       {
         day: 5,
-        title: { es: "Heidelberg", en: "Heidelberg" },
-        description: { es: "Descubre la romántica ciudad universitaria.", en: "Discover the romantic university city." },
-        activities: { es: ["Castillo Heidelberg", "Casco antiguo", "Puente viejo"], en: ["Heidelberg Castle", "Old town", "Old bridge"] }
+        title: { es: "Heidelberg", en: "Heidelberg", pt: "Heidelberg" },
+        description: { es: "Descubre la romántica ciudad universitaria.", en: "Discover the romantic university city.", pt: "Descubra a romantica cidade universitaria." },
+        activities: { es: ["Castillo Heidelberg", "Casco antiguo", "Puente viejo"], en: ["Heidelberg Castle", "Old town", "Old bridge"], pt: ["Castelo de Heidelberg", "Centro historico", "Ponte antiga"] }
       },
       {
         day: 6,
-        title: { es: "Valle del Rin", en: "Rhine Valley" },
-        description: { es: "Crucero por el romántico Valle del Rin.", en: "Cruise through the romantic Rhine Valley." },
-        activities: { es: ["Crucero fluvial", "Castillos del Rin", "Cata de vinos"], en: ["River cruise", "Rhine castles", "Wine tasting"] }
+        title: { es: "Valle del Rin", en: "Rhine Valley", pt: "Vale do Reno" },
+        description: { es: "Crucero por el romántico Valle del Rin.", en: "Cruise through the romantic Rhine Valley.", pt: "Cruzeiro pelo romantico Vale do Reno." },
+        activities: { es: ["Crucero fluvial", "Castillos del Rin", "Cata de vinos"], en: ["River cruise", "Rhine castles", "Wine tasting"], pt: ["Cruzeiro fluvial", "Castelos do Reno", "Degustacao de vinhos"] }
       },
       {
         day: 7,
-        title: { es: "Berlin", en: "Berlin" },
-        description: { es: "Viaje en tren de alta velocidad a Berlin.", en: "High-speed train to Berlin." },
-        activities: { es: ["Tren a Berlin", "Puerta de Brandeburgo", "Reichstag"], en: ["Train to Berlin", "Brandenburg Gate", "Reichstag"] }
+        title: { es: "Berlin", en: "Berlin", pt: "Berlim" },
+        description: { es: "Viaje en tren de alta velocidad a Berlin.", en: "High-speed train to Berlin.", pt: "Viagem de trem de alta velocidade para Berlim." },
+        activities: { es: ["Tren a Berlin", "Puerta de Brandeburgo", "Reichstag"], en: ["Train to Berlin", "Brandenburg Gate", "Reichstag"], pt: ["Trem para Berlim", "Portao de Brandemburgo", "Reichstag"] }
       },
       {
         day: 8,
-        title: { es: "Berlin Historico", en: "Historic Berlin" },
-        description: { es: "Explora la historia de Berlin dividido.", en: "Explore the history of divided Berlin." },
-        activities: { es: ["Muro de Berlin", "Checkpoint Charlie", "Isla de los Museos"], en: ["Berlin Wall", "Checkpoint Charlie", "Museum Island"] }
+        title: { es: "Berlin Historico", en: "Historic Berlin", pt: "Berlim Historica" },
+        description: { es: "Explora la historia de Berlin dividido.", en: "Explore the history of divided Berlin.", pt: "Explore a historia de Berlim dividida." },
+        activities: { es: ["Muro de Berlin", "Checkpoint Charlie", "Isla de los Museos"], en: ["Berlin Wall", "Checkpoint Charlie", "Museum Island"], pt: ["Muro de Berlim", "Checkpoint Charlie", "Ilha dos Museus"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Alemania?", en: "Do I need a visa to travel to Germany?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Alemania sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Germany without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Alemania?", en: "Do I need a visa to travel to Germany?", pt: "Preciso de visto para viajar para a Alemanha?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Alemania sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Germany without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar na Alemanha sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Alemania?", en: "When is the best time to visit Germany?" },
-        answer: { es: "Mayo a septiembre para buen clima. Diciembre para mercados navidenos y septiembre-octubre para Oktoberfest.", en: "May to September for good weather. December for Christmas markets and September-October for Oktoberfest." }
+        question: { es: "Cual es la mejor epoca para visitar Alemania?", en: "When is the best time to visit Germany?", pt: "Qual e a melhor epoca para visitar a Alemanha?" },
+        answer: { es: "Mayo a septiembre para buen clima. Diciembre para mercados navidenos y septiembre-octubre para Oktoberfest.", en: "May to September for good weather. December for Christmas markets and September-October for Oktoberfest.", pt: "Maio a setembro para bom clima. Dezembro para mercados natalinos e setembro-outubro para Oktoberfest." }
       },
       {
-        question: { es: "Es difícil el idioma aleman?", en: "Is German a difficult language?" },
-        answer: { es: "El aleman puede ser desafiante, pero en zonas turisticas muchos hablan ingles. Aprende frases basicas.", en: "German can be challenging, but many speak English in tourist areas. Learn basic phrases." }
+        question: { es: "Es difícil el idioma aleman?", en: "Is German a difficult language?", pt: "O alemao e um idioma dificil?" },
+        answer: { es: "El aleman puede ser desafiante, pero en zonas turisticas muchos hablan ingles. Aprende frases basicas.", en: "German can be challenging, but many speak English in tourist areas. Learn basic phrases.", pt: "O alemao pode ser desafiador, mas em areas turisticas muitos falam ingles. Aprenda frases basicas." }
       },
       {
-        question: { es: "Como es el transporte en Alemania?", en: "How is transportation in Germany?" },
-        answer: { es: "Alemania tiene excelente infraestructura. Los trenes ICE son puntuales y conectan todas las ciudades principales.", en: "Germany has excellent infrastructure. ICE trains are punctual and connect all major cities." }
+        question: { es: "Como es el transporte en Alemania?", en: "How is transportation in Germany?", pt: "Como e o transporte na Alemanha?" },
+        answer: { es: "Alemania tiene excelente infraestructura. Los trenes ICE son puntuales y conectan todas las ciudades principales.", en: "Germany has excellent infrastructure. ICE trains are punctual and connect all major cities.", pt: "A Alemanha tem excelente infraestrutura. Os trens ICE sao pontuais e conectam todas as principais cidades." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Octubre y Diciembre", en: "May to October and December" },
+    bestTimeToVisit: { es: "Mayo a Octubre y Diciembre", en: "May to October and December", pt: "Maio a Outubro e Dezembro" },
     currency: "EUR",
-    language: { es: "Aleman", en: "German" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Aleman", en: "German", pt: "Alemao" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "portugal",
@@ -868,92 +871,95 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "holanda-express",
-        name: { es: "Holanda Express", en: "Holland Express" },
-        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights" },
+        name: { es: "Holanda Express", en: "Holland Express", pt: "Holanda Express" },
+        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights", pt: "5 dias / 4 noites" },
         price: "1,299",
         taxes: "260",
         includes: {
           es: ["Vuelos internacionales", "Hotel 4 estrellas", "Desayuno diario", "Crucero por canales", "Museo Van Gogh", "Traslados"],
-          en: ["International flights", "4-star hotel", "Daily breakfast", "Canal cruise", "Van Gogh Museum", "Transfers"]
+          en: ["International flights", "4-star hotel", "Daily breakfast", "Canal cruise", "Van Gogh Museum", "Transfers"],
+          pt: ["Voos internacionais", "Hotel 4 estrelas", "Cafe da manha diario", "Cruzeiro pelos canais", "Museu Van Gogh", "Traslados"]
         }
       },
       {
         id: "holanda-tulipanes",
-        name: { es: "Holanda y Tulipanes", en: "Holland and Tulips" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Holanda y Tulipanes", en: "Holland and Tulips", pt: "Holanda e Tulipas" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,699",
         taxes: "340",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Keukenhof", "Zaanse Schans", "Bicicleta incluida"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Keukenhof", "Zaanse Schans", "Bicycle included"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Keukenhof", "Zaanse Schans", "Bicycle included"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha", "Keukenhof", "Zaanse Schans", "Bicicleta inclusa"]
         }
       },
       {
         id: "holanda-belgica",
-        name: { es: "Holanda y Belgica", en: "Holland and Belgium" },
-        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights" },
+        name: { es: "Holanda y Belgica", en: "Holland and Belgium", pt: "Holanda e Belgica" },
+        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights", pt: "9 dias / 8 noites" },
         price: "2,199",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Trenes", "Brujas y Bruselas", "Tours guiados"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Bruges and Brussels", "Guided tours"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Bruges and Brussels", "Guided tours"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha", "Trens", "Bruges e Bruxelas", "Tours guiados"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Amsterdam", en: "Arrival in Amsterdam" },
-        description: { es: "Bienvenida en Amsterdam, la Venecia del Norte.", en: "Welcome to Amsterdam, the Venice of the North." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Jordaan"], en: ["Airport pickup", "Hotel check-in", "Jordaan walk"] }
+        title: { es: "Llegada a Amsterdam", en: "Arrival in Amsterdam", pt: "Chegada em Amsterdam" },
+        description: { es: "Bienvenida en Amsterdam, la Venecia del Norte.", en: "Welcome to Amsterdam, the Venice of the North.", pt: "Boas-vindas em Amsterdam, a Veneza do Norte." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Jordaan"], en: ["Airport pickup", "Hotel check-in", "Jordaan walk"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Passeio pelo Jordaan"] }
       },
       {
         day: 2,
-        title: { es: "Amsterdam Clásico", en: "Classic Amsterdam" },
-        description: { es: "Explora los iconos de Amsterdam.", en: "Explore Amsterdam's icons." },
-        activities: { es: ["Museo Van Gogh", "Casa de Ana Frank", "Crucero por canales"], en: ["Van Gogh Museum", "Anne Frank House", "Canal cruise"] }
+        title: { es: "Amsterdam Clásico", en: "Classic Amsterdam", pt: "Amsterdam Classica" },
+        description: { es: "Explora los iconos de Amsterdam.", en: "Explore Amsterdam's icons.", pt: "Explore os icones de Amsterdam." },
+        activities: { es: ["Museo Van Gogh", "Casa de Ana Frank", "Crucero por canales"], en: ["Van Gogh Museum", "Anne Frank House", "Canal cruise"], pt: ["Museu Van Gogh", "Casa de Anne Frank", "Cruzeiro pelos canais"] }
       },
       {
         day: 3,
-        title: { es: "Keukenhof", en: "Keukenhof" },
-        description: { es: "Visita los espectaculares jardines de tulipanes (en temporada).", en: "Visit the spectacular tulip gardens (in season)." },
-        activities: { es: ["Jardines Keukenhof", "Campos de tulipanes", "Lisse"], en: ["Keukenhof Gardens", "Tulip fields", "Lisse"] }
+        title: { es: "Keukenhof", en: "Keukenhof", pt: "Keukenhof" },
+        description: { es: "Visita los espectaculares jardines de tulipanes (en temporada).", en: "Visit the spectacular tulip gardens (in season).", pt: "Visite os espetaculares jardins de tulipas (na temporada)." },
+        activities: { es: ["Jardines Keukenhof", "Campos de tulipanes", "Lisse"], en: ["Keukenhof Gardens", "Tulip fields", "Lisse"], pt: ["Jardins Keukenhof", "Campos de tulipas", "Lisse"] }
       },
       {
         day: 4,
-        title: { es: "Zaanse Schans", en: "Zaanse Schans" },
-        description: { es: "Descubre los molinos de viento tradicionales.", en: "Discover traditional windmills." },
-        activities: { es: ["Molinos de viento", "Fabrica de queso", "Casas de madera"], en: ["Windmills", "Cheese factory", "Wooden houses"] }
+        title: { es: "Zaanse Schans", en: "Zaanse Schans", pt: "Zaanse Schans" },
+        description: { es: "Descubre los molinos de viento tradicionales.", en: "Discover traditional windmills.", pt: "Descubra os moinhos de vento tradicionais." },
+        activities: { es: ["Molinos de viento", "Fabrica de queso", "Casas de madera"], en: ["Windmills", "Cheese factory", "Wooden houses"], pt: ["Moinhos de vento", "Fabrica de queijo", "Casas de madeira"] }
       },
       {
         day: 5,
-        title: { es: "Rotterdam y La Haya", en: "Rotterdam and The Hague" },
-        description: { es: "Arquitectura moderna y la sede del gobierno.", en: "Modern architecture and the seat of government." },
-        activities: { es: ["Casas cubo", "Markthal", "Palacio de la Paz"], en: ["Cube houses", "Markthal", "Peace Palace"] }
+        title: { es: "Rotterdam y La Haya", en: "Rotterdam and The Hague", pt: "Rotterdam e Haia" },
+        description: { es: "Arquitectura moderna y la sede del gobierno.", en: "Modern architecture and the seat of government.", pt: "Arquitetura moderna e sede do governo." },
+        activities: { es: ["Casas cubo", "Markthal", "Palacio de la Paz"], en: ["Cube houses", "Markthal", "Peace Palace"], pt: ["Casas cubo", "Markthal", "Palacio da Paz"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Paises Bajos?", en: "Do I need a visa to travel to the Netherlands?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Paises Bajos?", en: "Do I need a visa to travel to the Netherlands?", pt: "Preciso de visto para viajar para os Paises Baixos?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Cuando florecen los tulipanes?", en: "When do tulips bloom?" },
-        answer: { es: "La temporada de tulipanes es de mediados de marzo a mediados de mayo, con el pico en abril.", en: "Tulip season is mid-March to mid-May, with the peak in April." }
+        question: { es: "Cuando florecen los tulipanes?", en: "When do tulips bloom?", pt: "Quando as tulipas florescem?" },
+        answer: { es: "La temporada de tulipanes es de mediados de marzo a mediados de mayo, con el pico en abril.", en: "Tulip season is mid-March to mid-May, with the peak in April.", pt: "A temporada de tulipas vai de meados de marco a meados de maio, com pico em abril." }
       },
       {
-        question: { es: "Es seguro andar en bicicleta?", en: "Is it safe to cycle?" },
-        answer: { es: "Los Paises Bajos tienen la mejor infraestructura ciclista del mundo. Es muy seguro y recomendado.", en: "The Netherlands has the world's best cycling infrastructure. It's very safe and recommended." }
+        question: { es: "Es seguro andar en bicicleta?", en: "Is it safe to cycle?", pt: "E seguro andar de bicicleta?" },
+        answer: { es: "Los Paises Bajos tienen la mejor infraestructura ciclista del mundo. Es muy seguro y recomendado.", en: "The Netherlands has the world's best cycling infrastructure. It's very safe and recommended.", pt: "Os Paises Baixos tem a melhor infraestrutura cicloviaria do mundo. E muito seguro e recomendado." }
       },
       {
-        question: { es: "Cual es el clima en Holanda?", en: "What is the weather like in Holland?" },
-        answer: { es: "El clima es templado pero variable. Lleva siempre una chaqueta impermeable.", en: "The climate is temperate but variable. Always bring a waterproof jacket." }
+        question: { es: "Cual es el clima en Holanda?", en: "What is the weather like in Holland?", pt: "Como e o clima na Holanda?" },
+        answer: { es: "El clima es templado pero variable. Lleva siempre una chaqueta impermeable.", en: "The climate is temperate but variable. Always bring a waterproof jacket.", pt: "O clima e temperado mas variavel. Sempre leve uma jaqueta impermeavel." }
       }
     ],
-    bestTimeToVisit: { es: "Abril a Mayo y Septiembre", en: "April to May and September" },
+    bestTimeToVisit: { es: "Abril a Mayo y Septiembre", en: "April to May and September", pt: "Abril a Maio e Setembro" },
     currency: "EUR",
-    language: { es: "Holandes", en: "Dutch" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Holandes", en: "Dutch", pt: "Holandes" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "switzerland",
@@ -978,104 +984,107 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "suiza-esencial",
-        name: { es: "Suiza Esencial", en: "Essential Switzerland" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Suiza Esencial", en: "Essential Switzerland", pt: "Suica Essencial" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "2,599",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Swiss Travel Pass", "Guia en español", "Jungfraujoch"],
-          en: ["International flights", "4-star hotels", "Buffet breakfast", "Swiss Travel Pass", "Spanish-speaking guide", "Jungfraujoch"]
+          en: ["International flights", "4-star hotels", "Buffet breakfast", "Swiss Travel Pass", "Spanish-speaking guide", "Jungfraujoch"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha buffet", "Swiss Travel Pass", "Guia em portugues", "Jungfraujoch"]
         }
       },
       {
         id: "suiza-glaciar",
-        name: { es: "Glacier Express", en: "Glacier Express" },
-        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights" },
+        name: { es: "Glacier Express", en: "Glacier Express", pt: "Glacier Express" },
+        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights", pt: "9 dias / 8 noites" },
         price: "3,299",
         taxes: "550",
         includes: {
           es: ["Vuelos internacionales", "Hoteles de montana", "Media pension", "Glacier Express", "Bernina Express", "Actividades alpinas"],
-          en: ["International flights", "Mountain hotels", "Half board", "Glacier Express", "Bernina Express", "Alpine activities"]
+          en: ["International flights", "Mountain hotels", "Half board", "Glacier Express", "Bernina Express", "Alpine activities"],
+          pt: ["Voos internacionais", "Hoteis de montanha", "Meia pensao", "Glacier Express", "Bernina Express", "Atividades alpinas"]
         }
       },
       {
         id: "suiza-lujo",
-        name: { es: "Suiza de Lujo", en: "Luxury Switzerland" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Suiza de Lujo", en: "Luxury Switzerland", pt: "Suica de Luxo" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "4,499",
         taxes: "650",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 5 estrellas", "Pension completa", "Todos los trenes", "Experiencias VIP", "Cena gourmet"],
-          en: ["International flights", "5-star hotels", "Full board", "All trains", "VIP experiences", "Gourmet dinner"]
+          en: ["International flights", "5-star hotels", "Full board", "All trains", "VIP experiences", "Gourmet dinner"],
+          pt: ["Voos internacionais", "Hoteis 5 estrelas", "Pensao completa", "Todos os trens", "Experiencias VIP", "Jantar gourmet"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Zurich", en: "Arrival in Zurich" },
-        description: { es: "Bienvenida en Zurich, la ciudad financiera de Suiza.", en: "Welcome to Zurich, Switzerland's financial city." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Casco antiguo"], en: ["Airport pickup", "Hotel check-in", "Old town"] }
+        title: { es: "Llegada a Zurich", en: "Arrival in Zurich", pt: "Chegada em Zurique" },
+        description: { es: "Bienvenida en Zurich, la ciudad financiera de Suiza.", en: "Welcome to Zurich, Switzerland's financial city.", pt: "Boas-vindas em Zurique, a cidade financeira da Suica." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Casco antiguo"], en: ["Airport pickup", "Hotel check-in", "Old town"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Centro historico"] }
       },
       {
         day: 2,
-        title: { es: "Lucerna", en: "Lucerne" },
-        description: { es: "Viaje a la encantadora Lucerna junto al lago.", en: "Trip to charming Lucerne by the lake." },
-        activities: { es: ["Puente de la Capilla", "Monte Pilatus", "Crucero por el lago"], en: ["Chapel Bridge", "Mount Pilatus", "Lake cruise"] }
+        title: { es: "Lucerna", en: "Lucerne", pt: "Lucerna" },
+        description: { es: "Viaje a la encantadora Lucerna junto al lago.", en: "Trip to charming Lucerne by the lake.", pt: "Viagem a encantadora Lucerna junto ao lago." },
+        activities: { es: ["Puente de la Capilla", "Monte Pilatus", "Crucero por el lago"], en: ["Chapel Bridge", "Mount Pilatus", "Lake cruise"], pt: ["Ponte da Capela", "Monte Pilatus", "Cruzeiro pelo lago"] }
       },
       {
         day: 3,
-        title: { es: "Interlaken", en: "Interlaken" },
-        description: { es: "Viaje a Interlaken, capital de los deportes de aventura.", en: "Trip to Interlaken, adventure sports capital." },
-        activities: { es: ["Golden Pass", "Llegada Interlaken", "Paseo por lagos"], en: ["Golden Pass", "Interlaken arrival", "Lakes walk"] }
+        title: { es: "Interlaken", en: "Interlaken", pt: "Interlaken" },
+        description: { es: "Viaje a Interlaken, capital de los deportes de aventura.", en: "Trip to Interlaken, adventure sports capital.", pt: "Viagem a Interlaken, capital dos esportes de aventura." },
+        activities: { es: ["Golden Pass", "Llegada Interlaken", "Paseo por lagos"], en: ["Golden Pass", "Interlaken arrival", "Lakes walk"], pt: ["Golden Pass", "Chegada em Interlaken", "Passeio pelos lagos"] }
       },
       {
         day: 4,
-        title: { es: "Jungfraujoch", en: "Jungfraujoch" },
-        description: { es: "Excursion a la cima de Europa.", en: "Excursion to the Top of Europe." },
-        activities: { es: ["Tren cremallera", "Jungfraujoch", "Glaciar Aletsch"], en: ["Cog railway", "Jungfraujoch", "Aletsch Glacier"] }
+        title: { es: "Jungfraujoch", en: "Jungfraujoch", pt: "Jungfraujoch" },
+        description: { es: "Excursion a la cima de Europa.", en: "Excursion to the Top of Europe.", pt: "Excursao ao Topo da Europa." },
+        activities: { es: ["Tren cremallera", "Jungfraujoch", "Glaciar Aletsch"], en: ["Cog railway", "Jungfraujoch", "Aletsch Glacier"], pt: ["Trem cremalheira", "Jungfraujoch", "Glaciar Aletsch"] }
       },
       {
         day: 5,
-        title: { es: "Zermatt", en: "Zermatt" },
-        description: { es: "Viaje a Zermatt al pie del Matterhorn.", en: "Trip to Zermatt at the foot of the Matterhorn." },
-        activities: { es: ["Tren a Zermatt", "Gornergrat", "Vista del Matterhorn"], en: ["Train to Zermatt", "Gornergrat", "Matterhorn view"] }
+        title: { es: "Zermatt", en: "Zermatt", pt: "Zermatt" },
+        description: { es: "Viaje a Zermatt al pie del Matterhorn.", en: "Trip to Zermatt at the foot of the Matterhorn.", pt: "Viagem a Zermatt aos pes do Matterhorn." },
+        activities: { es: ["Tren a Zermatt", "Gornergrat", "Vista del Matterhorn"], en: ["Train to Zermatt", "Gornergrat", "Matterhorn view"], pt: ["Trem para Zermatt", "Gornergrat", "Vista do Matterhorn"] }
       },
       {
         day: 6,
-        title: { es: "Glacier Express", en: "Glacier Express" },
-        description: { es: "El viaje en tren más espectacular del mundo.", en: "The world's most spectacular train journey." },
-        activities: { es: ["Glacier Express", "Paisajes alpinos", "Almuerzo a bordo"], en: ["Glacier Express", "Alpine landscapes", "Lunch on board"] }
+        title: { es: "Glacier Express", en: "Glacier Express", pt: "Glacier Express" },
+        description: { es: "El viaje en tren más espectacular del mundo.", en: "The world's most spectacular train journey.", pt: "A viagem de trem mais espetacular do mundo." },
+        activities: { es: ["Glacier Express", "Paisajes alpinos", "Almuerzo a bordo"], en: ["Glacier Express", "Alpine landscapes", "Lunch on board"], pt: ["Glacier Express", "Paisagens alpinas", "Almoco a bordo"] }
       },
       {
         day: 7,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Tiempo libre y vuelo de regreso.", en: "Free time and return flight." },
-        activities: { es: ["Compras de chocolate", "Check-out", "Vuelo de regreso"], en: ["Chocolate shopping", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Tiempo libre y vuelo de regreso.", en: "Free time and return flight.", pt: "Tempo livre e voo de retorno." },
+        activities: { es: ["Compras de chocolate", "Check-out", "Vuelo de regreso"], en: ["Chocolate shopping", "Check-out", "Return flight"], pt: ["Compras de chocolate", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Suiza?", en: "Do I need a visa to travel to Switzerland?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Suiza sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Switzerland without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Suiza?", en: "Do I need a visa to travel to Switzerland?", pt: "Preciso de visto para viajar para a Suica?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Suiza sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Switzerland without a visa for up to 90 days.", pt: "Cidadaos brasileiros podem entrar na Suica sem visto por ate 90 dias para turismo." }
       },
       {
-        question: { es: "Suiza es muy cara?", en: "Is Switzerland very expensive?" },
-        answer: { es: "Suiza es uno de los paises más caros del mundo, pero la calidad y experiencias justifican el precio.", en: "Switzerland is one of the world's most expensive countries, but quality and experiences justify the price." }
+        question: { es: "Suiza es muy cara?", en: "Is Switzerland very expensive?", pt: "A Suica e muito cara?" },
+        answer: { es: "Suiza es uno de los paises más caros del mundo, pero la calidad y experiencias justifican el precio.", en: "Switzerland is one of the world's most expensive countries, but quality and experiences justify the price.", pt: "A Suica e um dos paises mais caros do mundo, mas a qualidade e experiencias justificam o preco." }
       },
       {
-        question: { es: "Que moneda se usa en Suiza?", en: "What currency is used in Switzerland?" },
-        answer: { es: "El Franco Suizo (CHF). Algunos lugares aceptan euros pero dan cambio en francos.", en: "The Swiss Franc (CHF). Some places accept euros but give change in francs." }
+        question: { es: "Que moneda se usa en Suiza?", en: "What currency is used in Switzerland?", pt: "Qual moeda e usada na Suica?" },
+        answer: { es: "El Franco Suizo (CHF). Algunos lugares aceptan euros pero dan cambio en francos.", en: "The Swiss Franc (CHF). Some places accept euros but give change in francs.", pt: "O Franco Suico (CHF). Alguns lugares aceitam euros, mas dao troco em francos." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Suiza?", en: "When is the best time to visit Switzerland?" },
-        answer: { es: "Verano (junio-agosto) para senderismo, invierno (diciembre-marzo) para esqui. Primavera y otoño son menos concurridos.", en: "Summer (June-August) for hiking, winter (December-March) for skiing. Spring and autumn are less crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Suiza?", en: "When is the best time to visit Switzerland?", pt: "Qual e a melhor epoca para visitar a Suica?" },
+        answer: { es: "Verano (junio-agosto) para senderismo, invierno (diciembre-marzo) para esqui. Primavera y otoño son menos concurridos.", en: "Summer (June-August) for hiking, winter (December-March) for skiing. Spring and autumn are less crowded.", pt: "Verao (junho-agosto) para trilhas, inverno (dezembro-marco) para esqui. Primavera e outono sao menos movimentados." }
       }
     ],
-    bestTimeToVisit: { es: "Junio a Septiembre y Diciembre a Marzo", en: "June to September and December to March" },
+    bestTimeToVisit: { es: "Junio a Septiembre y Diciembre a Marzo", en: "June to September and December to March", pt: "Junho a Setembro e Dezembro a Marco" },
     currency: "CHF",
-    language: { es: "Aleman, Frances, Italiano", en: "German, French, Italian" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Aleman, Frances, Italiano", en: "German, French, Italian", pt: "Alemao, Frances, Italiano" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Nao requer visto para estadias de ate 90 dias" }
   },
   {
     slug: "croatia",
@@ -1228,122 +1237,125 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     packages: [
       {
         id: "londres-express",
-        name: { es: "Londres Express", en: "London Express" },
-        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights" },
+        name: { es: "Londres Express", en: "London Express", pt: "Londres Express" },
+        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights", pt: "5 dias / 4 noites" },
         price: "1,499",
         taxes: "300",
         includes: {
           es: ["Vuelos internacionales", "Hotel 4 estrellas", "Desayuno ingles", "London Pass", "Guia en español", "Tour panoramico"],
-          en: ["International flights", "4-star hotel", "English breakfast", "London Pass", "Spanish-speaking guide", "Panoramic tour"]
+          en: ["International flights", "4-star hotel", "English breakfast", "London Pass", "Spanish-speaking guide", "Panoramic tour"],
+          pt: ["Voos internacionais", "Hotel 4 estrelas", "Cafe da manha ingles", "London Pass", "Guia em portugues", "Tour panoramico"]
         }
       },
       {
         id: "uk-clasico",
-        name: { es: "Reino Unido Clásico", en: "Classic UK" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Reino Unido Clásico", en: "Classic UK", pt: "Reino Unido Classico" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,499",
         taxes: "450",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Trenes", "Stonehenge y Bath", "Edimburgo"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Stonehenge and Bath", "Edinburgh"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Stonehenge and Bath", "Edinburgh"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha", "Trens", "Stonehenge e Bath", "Edimburgo"]
         }
       },
       {
         id: "uk-completo",
-        name: { es: "Gran Tour del Reino Unido", en: "Grand Tour of UK" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour del Reino Unido", en: "Grand Tour of UK", pt: "Grande Tour do Reino Unido" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "3,499",
         taxes: "550",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "BritRail Pass", "Tours exclusivos", "Tierras Altas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "BritRail Pass", "Exclusive tours", "Highlands"]
+          en: ["International flights", "4-5 star hotels", "Half board", "BritRail Pass", "Exclusive tours", "Highlands"],
+          pt: ["Voos internacionais", "Hoteis 4-5 estrelas", "Meia pensao", "BritRail Pass", "Tours exclusivos", "Terras Altas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Londres", en: "Arrival in London" },
-        description: { es: "Bienvenida en Londres, la capital del Reino Unido.", en: "Welcome to London, the capital of the United Kingdom." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Piccadilly Circus"], en: ["Airport pickup", "Hotel check-in", "Piccadilly Circus"] }
+        title: { es: "Llegada a Londres", en: "Arrival in London", pt: "Chegada em Londres" },
+        description: { es: "Bienvenida en Londres, la capital del Reino Unido.", en: "Welcome to London, the capital of the United Kingdom.", pt: "Boas-vindas em Londres, a capital do Reino Unido." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Piccadilly Circus"], en: ["Airport pickup", "Hotel check-in", "Piccadilly Circus"], pt: ["Recepcao no aeroporto", "Check-in no hotel", "Piccadilly Circus"] }
       },
       {
         day: 2,
-        title: { es: "Londres Clásico", en: "Classic London" },
-        description: { es: "Los iconos más famosos de Londres.", en: "London's most famous icons." },
-        activities: { es: ["Big Ben", "Abadia Westminster", "Cambio de guardia"], en: ["Big Ben", "Westminster Abbey", "Changing of the Guard"] }
+        title: { es: "Londres Clásico", en: "Classic London", pt: "Londres Classica" },
+        description: { es: "Los iconos más famosos de Londres.", en: "London's most famous icons.", pt: "Os icones mais famosos de Londres." },
+        activities: { es: ["Big Ben", "Abadia Westminster", "Cambio de guardia"], en: ["Big Ben", "Westminster Abbey", "Changing of the Guard"], pt: ["Big Ben", "Abadia de Westminster", "Troca da guarda"] }
       },
       {
         day: 3,
-        title: { es: "Torre y Museos", en: "Tower and Museums" },
-        description: { es: "Historia y cultura de clase mundial.", en: "World-class history and culture." },
-        activities: { es: ["Torre de Londres", "British Museum", "Covent Garden"], en: ["Tower of London", "British Museum", "Covent Garden"] }
+        title: { es: "Torre y Museos", en: "Tower and Museums", pt: "Torre e Museus" },
+        description: { es: "Historia y cultura de clase mundial.", en: "World-class history and culture.", pt: "Historia e cultura de classe mundial." },
+        activities: { es: ["Torre de Londres", "British Museum", "Covent Garden"], en: ["Tower of London", "British Museum", "Covent Garden"], pt: ["Torre de Londres", "British Museum", "Covent Garden"] }
       },
       {
         day: 4,
-        title: { es: "Stonehenge y Bath", en: "Stonehenge and Bath" },
-        description: { es: "Excursion al misterioso Stonehenge y la elegante Bath.", en: "Excursion to mysterious Stonehenge and elegant Bath." },
-        activities: { es: ["Stonehenge", "Termas romanas", "Ciudad de Bath"], en: ["Stonehenge", "Roman baths", "City of Bath"] }
+        title: { es: "Stonehenge y Bath", en: "Stonehenge and Bath", pt: "Stonehenge e Bath" },
+        description: { es: "Excursion al misterioso Stonehenge y la elegante Bath.", en: "Excursion to mysterious Stonehenge and elegant Bath.", pt: "Excursao ao misterioso Stonehenge e a elegante Bath." },
+        activities: { es: ["Stonehenge", "Termas romanas", "Ciudad de Bath"], en: ["Stonehenge", "Roman baths", "City of Bath"], pt: ["Stonehenge", "Termas romanas", "Cidade de Bath"] }
       },
       {
         day: 5,
-        title: { es: "Oxford", en: "Oxford" },
-        description: { es: "La prestigiosa ciudad universitaria.", en: "The prestigious university city." },
-        activities: { es: ["Colleges de Oxford", "Biblioteca Bodleian", "Harry Potter tour"], en: ["Oxford Colleges", "Bodleian Library", "Harry Potter tour"] }
+        title: { es: "Oxford", en: "Oxford", pt: "Oxford" },
+        description: { es: "La prestigiosa ciudad universitaria.", en: "The prestigious university city.", pt: "A prestigiosa cidade universitaria." },
+        activities: { es: ["Colleges de Oxford", "Biblioteca Bodleian", "Harry Potter tour"], en: ["Oxford Colleges", "Bodleian Library", "Harry Potter tour"], pt: ["Colleges de Oxford", "Biblioteca Bodleian", "Tour Harry Potter"] }
       },
       {
         day: 6,
-        title: { es: "Edimburgo", en: "Edinburgh" },
-        description: { es: "Viaje en tren a la capital escocesa.", en: "Train journey to the Scottish capital." },
-        activities: { es: ["Tren a Edimburgo", "Royal Mile", "Castillo de Edimburgo"], en: ["Train to Edinburgh", "Royal Mile", "Edinburgh Castle"] }
+        title: { es: "Edimburgo", en: "Edinburgh", pt: "Edimburgo" },
+        description: { es: "Viaje en tren a la capital escocesa.", en: "Train journey to the Scottish capital.", pt: "Viagem de trem ate a capital escocesa." },
+        activities: { es: ["Tren a Edimburgo", "Royal Mile", "Castillo de Edimburgo"], en: ["Train to Edinburgh", "Royal Mile", "Edinburgh Castle"], pt: ["Trem para Edimburgo", "Royal Mile", "Castelo de Edimburgo"] }
       },
       {
         day: 7,
-        title: { es: "Tierras Altas", en: "Highlands" },
-        description: { es: "Excursion a las espectaculares Tierras Altas.", en: "Excursion to the spectacular Highlands." },
-        activities: { es: ["Lago Ness", "Glencoe", "Fort William"], en: ["Loch Ness", "Glencoe", "Fort William"] }
+        title: { es: "Tierras Altas", en: "Highlands", pt: "Terras Altas" },
+        description: { es: "Excursion a las espectaculares Tierras Altas.", en: "Excursion to the spectacular Highlands.", pt: "Excursao as espetaculares Terras Altas." },
+        activities: { es: ["Lago Ness", "Glencoe", "Fort William"], en: ["Loch Ness", "Glencoe", "Fort William"], pt: ["Lago Ness", "Glencoe", "Fort William"] }
       },
       {
         day: 8,
-        title: { es: "Whisky y Cultura", en: "Whisky and Culture" },
-        description: { es: "Descubre el whisky escoces y la cultura local.", en: "Discover Scotch whisky and local culture." },
-        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomía escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"] }
+        title: { es: "Whisky y Cultura", en: "Whisky and Culture", pt: "Whisky e Cultura" },
+        description: { es: "Descubre el whisky escoces y la cultura local.", en: "Discover Scotch whisky and local culture.", pt: "Descubra o whisky escoces e a cultura local." },
+        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomía escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"], pt: ["Destilaria de whisky", "Museu Nacional", "Gastronomia escocesa"] }
       },
       {
         day: 9,
-        title: { es: "York", en: "York" },
-        description: { es: "La ciudad medieval mejor conservada de Inglaterra.", en: "England's best-preserved medieval city." },
-        activities: { es: ["Tren a York", "Catedral de York", "The Shambles"], en: ["Train to York", "York Minster", "The Shambles"] }
+        title: { es: "York", en: "York", pt: "York" },
+        description: { es: "La ciudad medieval mejor conservada de Inglaterra.", en: "England's best-preserved medieval city.", pt: "A cidade medieval mais bem preservada da Inglaterra." },
+        activities: { es: ["Tren a York", "Catedral de York", "The Shambles"], en: ["Train to York", "York Minster", "The Shambles"], pt: ["Trem para York", "Catedral de York", "The Shambles"] }
       },
       {
         day: 10,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Regreso a Londres y vuelo de vuelta.", en: "Return to London and flight home." },
-        activities: { es: ["Tren a Londres", "Tiempo libre", "Vuelo de regreso"], en: ["Train to London", "Free time", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Regreso a Londres y vuelo de vuelta.", en: "Return to London and flight home.", pt: "Retorno a Londres e voo de volta." },
+        activities: { es: ["Tren a Londres", "Tiempo libre", "Vuelo de regreso"], en: ["Train to London", "Free time", "Return flight"], pt: ["Trem para Londres", "Tempo livre", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar al Reino Unido?", en: "Do I need a visa to travel to the UK?" },
-        answer: { es: "Depende de tu nacionalidad. Ciudadanos de algunos paises latinoamericanos necesitan visa. Verifica antes de viajar.", en: "It depends on your nationality. Citizens of some Latin American countries need a visa. Check before traveling." }
+        question: { es: "Necesito visa para viajar al Reino Unido?", en: "Do I need a visa to travel to the UK?", pt: "Preciso de visto para viajar para o Reino Unido?" },
+        answer: { es: "Depende de tu nacionalidad. Ciudadanos de algunos paises latinoamericanos necesitan visa. Verifica antes de viajar.", en: "It depends on your nationality. Citizens of some Latin American countries need a visa. Check before traveling.", pt: "Cidadaos brasileiros precisam de visto para o Reino Unido. Verifique os requisitos antes de viajar." }
       },
       {
-        question: { es: "Que moneda se usa en el Reino Unido?", en: "What currency is used in the UK?" },
-        answer: { es: "La Libra Esterlina (GBP). No se usa el Euro en el Reino Unido.", en: "The Pound Sterling (GBP). The Euro is not used in the UK." }
+        question: { es: "Que moneda se usa en el Reino Unido?", en: "What currency is used in the UK?", pt: "Qual moeda e usada no Reino Unido?" },
+        answer: { es: "La Libra Esterlina (GBP). No se usa el Euro en el Reino Unido.", en: "The Pound Sterling (GBP). The Euro is not used in the UK.", pt: "A Libra Esterlina (GBP). O Euro nao e aceito no Reino Unido." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar?", en: "When is the best time to visit?" },
-        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is mágical for Christmas markets." }
+        question: { es: "Cual es la mejor epoca para visitar?", en: "When is the best time to visit?", pt: "Qual e a melhor epoca para visitar?" },
+        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is mágical for Christmas markets.", pt: "Maio a setembro tem melhor clima. Dezembro e magico pelos mercados natalinos." }
       },
       {
-        question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?" },
-        answer: { es: "Variable y lluvioso. Lleva siempre un paraguas y capas de ropa. Los veranos son templados.", en: "Variable and rainy. Always carry an umbrella and layers. Summers are mild." }
+        question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?", pt: "Como e o clima no Reino Unido?" },
+        answer: { es: "Variable y lluvioso. Lleva siempre un paraguas y capas de ropa. Los veranos son templados.", en: "Variable and rainy. Always carry an umbrella and layers. Summers are mild.", pt: "Variavel e chuvoso. Sempre leve um guarda-chuva e camadas de roupa. Os veraos sao amenos." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
+    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "GBP",
-    language: { es: "Ingles", en: "English" },
-    visaInfo: { es: "Algunos paises requieren visa - verificar antes de viajar", en: "Some countries require visa - check before traveling" }
+    language: { es: "Ingles", en: "English", pt: "Ingles" },
+    visaInfo: { es: "Algunos paises requieren visa - verificar antes de viajar", en: "Some countries require visa - check before traveling", pt: "Brasileiros precisam de visto - verificar antes de viajar" }
   },
   {
     slug: "albania",
@@ -1407,27 +1419,27 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1563890738384-0d3a3c15c14c?w=800&q=60"
     ],
     packages: [
-      { id: "austria-1", name: { es: "Austria Imperial", en: "Imperial Austria" }, duration: { es: "9 dias", en: "9 days" }, price: "2,799", taxes: "450", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Concierto Viena"], en: ["Flights", "4* Hotels", "Breakfasts", "Vienna Concert"] } }
+      { id: "austria-1", name: { es: "Austria Imperial", en: "Imperial Austria", pt: "Austria Imperial" }, duration: { es: "9 dias", en: "9 days", pt: "9 dias" }, price: "2,799", taxes: "450", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Concierto Viena"], en: ["Flights", "4* Hotels", "Breakfasts", "Vienna Concert"], pt: ["Voos", "Hoteis 4*", "Cafes da manha", "Concerto em Viena"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Viena Llegada", en: "Vienna Arrival" }, description: { es: "Bienvenida a la capital imperial austriaca.", en: "Welcome to the Austrian imperial capital." }, activities: { es: ["Traslado hotel", "Paseo Ringstrasse", "Cena de bienvenida"], en: ["Hotel transfer", "Ringstrasse walk", "Welcome dinner"] } },
-      { day: 2, title: { es: "Viena Imperial", en: "Imperial Vienna" }, description: { es: "Los grandes palacios y la historia de los Habsburgo.", en: "The grand palaces and Habsburg history." }, activities: { es: ["Palacio Schonbrunn", "Opera Estatal", "Cafe Sacher"], en: ["Schonbrunn Palace", "State Opera", "Cafe Sacher"] } },
-      { day: 3, title: { es: "Viena Cultural", en: "Cultural Vienna" }, description: { es: "Museos, arte y musica clásica.", en: "Museums, art, and classical music." }, activities: { es: ["Museo Historia Arte", "Palacio Belvedere", "Concierto Mozart"], en: ["Art History Museum", "Belvedere Palace", "Mozart Concert"] } },
-      { day: 4, title: { es: "Salzburgo", en: "Salzburg" }, description: { es: "La ciudad de Mozart y paisajes alpinos.", en: "Mozart's city and Alpine landscapes." }, activities: { es: ["Tren panoramico", "Casco antiguo", "Casa natal Mozart"], en: ["Panoramic train", "Old Town", "Mozart's Birthplace"] } },
-      { day: 5, title: { es: "Salzburgo y alrededores", en: "Salzburg surroundings" }, description: { es: "Fortaleza y lagos de los Alpes.", en: "Fortress and Alpine lakes." }, activities: { es: ["Fortaleza Hohensalzburg", "Lago Wolfgang", "Jardines Mirabell"], en: ["Hohensalzburg Fortress", "Lake Wolfgang", "Mirabell Gardens"] } },
-      { day: 6, title: { es: "Hallstatt", en: "Hallstatt" }, description: { es: "El pueblo más fotografiado del mundo.", en: "The world's most photographed village." }, activities: { es: ["Pueblo Hallstatt", "Minas de sal", "Lago Hallstatt"], en: ["Hallstatt Village", "Salt mines", "Hallstatt Lake"] } },
-      { day: 7, title: { es: "Innsbruck", en: "Innsbruck" }, description: { es: "Capital de los Alpes austriacos.", en: "Capital of the Austrian Alps." }, activities: { es: ["Tejadillo de Oro", "Palacio Ambras", "Teleferico Alpes"], en: ["Golden Roof", "Ambras Castle", "Alps Cable Car"] } },
-      { day: 8, title: { es: "Wachau", en: "Wachau" }, description: { es: "Valle del Danubio con vinedos y castillos.", en: "Danube Valley with vineyards and castles." }, activities: { es: ["Crucero Danubio", "Abadia Melk", "Cata de vinos"], en: ["Danube cruise", "Melk Abbey", "Wine tasting"] } },
-      { day: 9, title: { es: "Regreso", en: "Return" }, description: { es: "Vuelo de regreso desde Viena.", en: "Return flight from Vienna." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Viena Llegada", en: "Vienna Arrival", pt: "Chegada em Viena" }, description: { es: "Bienvenida a la capital imperial austriaca.", en: "Welcome to the Austrian imperial capital.", pt: "Boas-vindas a capital imperial austriaca." }, activities: { es: ["Traslado hotel", "Paseo Ringstrasse", "Cena de bienvenida"], en: ["Hotel transfer", "Ringstrasse walk", "Welcome dinner"], pt: ["Traslado ao hotel", "Passeio pela Ringstrasse", "Jantar de boas-vindas"] } },
+      { day: 2, title: { es: "Viena Imperial", en: "Imperial Vienna", pt: "Viena Imperial" }, description: { es: "Los grandes palacios y la historia de los Habsburgo.", en: "The grand palaces and Habsburg history.", pt: "Os grandes palacios e a historia dos Habsburgo." }, activities: { es: ["Palacio Schonbrunn", "Opera Estatal", "Cafe Sacher"], en: ["Schonbrunn Palace", "State Opera", "Cafe Sacher"], pt: ["Palacio Schonbrunn", "Opera Estatal", "Cafe Sacher"] } },
+      { day: 3, title: { es: "Viena Cultural", en: "Cultural Vienna", pt: "Viena Cultural" }, description: { es: "Museos, arte y musica clásica.", en: "Museums, art, and classical music.", pt: "Museus, arte e musica classica." }, activities: { es: ["Museo Historia Arte", "Palacio Belvedere", "Concierto Mozart"], en: ["Art History Museum", "Belvedere Palace", "Mozart Concert"], pt: ["Museu de Historia da Arte", "Palacio Belvedere", "Concerto de Mozart"] } },
+      { day: 4, title: { es: "Salzburgo", en: "Salzburg", pt: "Salzburgo" }, description: { es: "La ciudad de Mozart y paisajes alpinos.", en: "Mozart's city and Alpine landscapes.", pt: "A cidade de Mozart e paisagens alpinas." }, activities: { es: ["Tren panoramico", "Casco antiguo", "Casa natal Mozart"], en: ["Panoramic train", "Old Town", "Mozart's Birthplace"], pt: ["Trem panoramico", "Centro historico", "Casa natal de Mozart"] } },
+      { day: 5, title: { es: "Salzburgo y alrededores", en: "Salzburg surroundings", pt: "Salzburgo e arredores" }, description: { es: "Fortaleza y lagos de los Alpes.", en: "Fortress and Alpine lakes.", pt: "Fortaleza e lagos dos Alpes." }, activities: { es: ["Fortaleza Hohensalzburg", "Lago Wolfgang", "Jardines Mirabell"], en: ["Hohensalzburg Fortress", "Lake Wolfgang", "Mirabell Gardens"], pt: ["Fortaleza Hohensalzburg", "Lago Wolfgang", "Jardins Mirabell"] } },
+      { day: 6, title: { es: "Hallstatt", en: "Hallstatt", pt: "Hallstatt" }, description: { es: "El pueblo más fotografiado del mundo.", en: "The world's most photographed village.", pt: "A vila mais fotografada do mundo." }, activities: { es: ["Pueblo Hallstatt", "Minas de sal", "Lago Hallstatt"], en: ["Hallstatt Village", "Salt mines", "Hallstatt Lake"], pt: ["Vila de Hallstatt", "Minas de sal", "Lago Hallstatt"] } },
+      { day: 7, title: { es: "Innsbruck", en: "Innsbruck", pt: "Innsbruck" }, description: { es: "Capital de los Alpes austriacos.", en: "Capital of the Austrian Alps.", pt: "Capital dos Alpes austriacos." }, activities: { es: ["Tejadillo de Oro", "Palacio Ambras", "Teleferico Alpes"], en: ["Golden Roof", "Ambras Castle", "Alps Cable Car"], pt: ["Telhado Dourado", "Castelo Ambras", "Teleferico dos Alpes"] } },
+      { day: 8, title: { es: "Wachau", en: "Wachau", pt: "Wachau" }, description: { es: "Valle del Danubio con vinedos y castillos.", en: "Danube Valley with vineyards and castles.", pt: "Vale do Danubio com vinhedos e castelos." }, activities: { es: ["Crucero Danubio", "Abadia Melk", "Cata de vinos"], en: ["Danube cruise", "Melk Abbey", "Wine tasting"], pt: ["Cruzeiro pelo Danubio", "Abadia de Melk", "Degustacao de vinhos"] } },
+      { day: 9, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Vuelo de regreso desde Viena.", en: "Return flight from Vienna.", pt: "Voo de retorno de Viena." }, activities: { es: ["Tiempo libre", "Traslado aeropuerto", "Vuelo regreso"], en: ["Free time", "Airport transfer", "Return flight"], pt: ["Tempo livre", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Cual es la mejor epoca para visitar Austria?", en: "When is the best time to visit Austria?" }, answer: { es: "Verano para senderismo, diciembre para mercados navidenos, invierno para esqui.", en: "Summer for hiking, December for Christmas markets, winter for skiing." } },
-      { question: { es: "Es caro viajar en Austria?", en: "Is Austria expensive to travel?" }, answer: { es: "Austria tiene precios moderados-altos. Viena y zonas turisticas son más caras.", en: "Austria has moderate-high prices. Vienna and tourist areas are more expensive." } }
+      { question: { es: "Cual es la mejor epoca para visitar Austria?", en: "When is the best time to visit Austria?", pt: "Qual e a melhor epoca para visitar a Austria?" }, answer: { es: "Verano para senderismo, diciembre para mercados navidenos, invierno para esqui.", en: "Summer for hiking, December for Christmas markets, winter for skiing.", pt: "Verao para trilhas, dezembro para mercados natalinos, inverno para esqui." } },
+      { question: { es: "Es caro viajar en Austria?", en: "Is Austria expensive to travel?", pt: "E caro viajar na Austria?" }, answer: { es: "Austria tiene precios moderados-altos. Viena y zonas turisticas son más caras.", en: "Austria has moderate-high prices. Vienna and tourist areas are more expensive.", pt: "A Austria tem precos moderados a altos. Viena e areas turisticas sao mais caras." } }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre, Diciembre", en: "May to September, December" },
+    bestTimeToVisit: { es: "Mayo a Septiembre, Diciembre", en: "May to September, December", pt: "Maio a Setembro, Dezembro" },
     currency: "EUR",
-    language: { es: "Aleman", en: "German" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Aleman", en: "German", pt: "Alemao" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "belgium",
@@ -1449,24 +1461,24 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&q=60"
     ],
     packages: [
-      { id: "belgium-1", name: { es: "Belgica Esencial", en: "Essential Belgium" }, duration: { es: "6 dias", en: "6 days" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Degustaciones"], en: ["Flights", "4* Hotels", "Breakfasts", "Tastings"] } }
+      { id: "belgium-1", name: { es: "Belgica Esencial", en: "Essential Belgium", pt: "Belgica Essencial" }, duration: { es: "6 dias", en: "6 days", pt: "6 dias" }, price: "1,699", taxes: "320", includes: { es: ["Vuelos", "Hoteles 4*", "Desayunos", "Degustaciones"], en: ["Flights", "4* Hotels", "Breakfasts", "Tastings"], pt: ["Voos", "Hoteis 4*", "Cafes da manha", "Degustacoes"] } }
     ],
     itinerary: [
-      { day: 1, title: { es: "Bruselas", en: "Brussels" }, description: { es: "Llegada a la capital de Europa.", en: "Arrival in the capital of Europe." }, activities: { es: ["Grand Place", "Manneken Pis", "Galerias Saint-Hubert"], en: ["Grand Place", "Manneken Pis", "Saint-Hubert Galleries"] } },
-      { day: 2, title: { es: "Bruselas Art Nouveau", en: "Art Nouveau Brussels" }, description: { es: "La herencia arquitectonica de Horta.", en: "Horta's architectural heritage." }, activities: { es: ["Museo Horta", "Atomium", "Barrio Europeo"], en: ["Horta Museum", "Atomium", "European Quarter"] } },
-      { day: 3, title: { es: "Brujas", en: "Bruges" }, description: { es: "La Venecia del Norte, ciudad de cuento.", en: "The Venice of the North, fairytale city." }, activities: { es: ["Canales en barca", "Plaza del Mercado", "Campanario"], en: ["Canal boat tour", "Market Square", "Belfry"] } },
-      { day: 4, title: { es: "Gante", en: "Ghent" }, description: { es: "Ciudad universitaria con historia medieval.", en: "University city with medieval history." }, activities: { es: ["Catedral San Bavon", "Castillo Gravensteen", "Graslei"], en: ["Saint Bavo Cathedral", "Gravensteen Castle", "Graslei"] } },
-      { day: 5, title: { es: "Amberes", en: "Antwerp" }, description: { es: "Moda, diamantes y el legado de Rubens.", en: "Fashion, diamonds, and Rubens' legacy." }, activities: { es: ["Barrio diamantes", "Casa Rubens", "MAS museo"], en: ["Diamond district", "Rubens House", "MAS museum"] } },
-      { day: 6, title: { es: "Regreso", en: "Return" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight." }, activities: { es: ["Compras chocolate", "Traslado aeropuerto", "Vuelo regreso"], en: ["Chocolate shopping", "Airport transfer", "Return flight"] } }
+      { day: 1, title: { es: "Bruselas", en: "Brussels", pt: "Bruxelas" }, description: { es: "Llegada a la capital de Europa.", en: "Arrival in the capital of Europe.", pt: "Chegada a capital da Europa." }, activities: { es: ["Grand Place", "Manneken Pis", "Galerias Saint-Hubert"], en: ["Grand Place", "Manneken Pis", "Saint-Hubert Galleries"], pt: ["Grand Place", "Manneken Pis", "Galerias Saint-Hubert"] } },
+      { day: 2, title: { es: "Bruselas Art Nouveau", en: "Art Nouveau Brussels", pt: "Bruxelas Art Nouveau" }, description: { es: "La herencia arquitectonica de Horta.", en: "Horta's architectural heritage.", pt: "A heranca arquitetonica de Horta." }, activities: { es: ["Museo Horta", "Atomium", "Barrio Europeo"], en: ["Horta Museum", "Atomium", "European Quarter"], pt: ["Museu Horta", "Atomium", "Bairro Europeu"] } },
+      { day: 3, title: { es: "Brujas", en: "Bruges", pt: "Bruges" }, description: { es: "La Venecia del Norte, ciudad de cuento.", en: "The Venice of the North, fairytale city.", pt: "A Veneza do Norte, cidade de conto de fadas." }, activities: { es: ["Canales en barca", "Plaza del Mercado", "Campanario"], en: ["Canal boat tour", "Market Square", "Belfry"], pt: ["Passeio de barco pelos canais", "Praca do Mercado", "Campanario"] } },
+      { day: 4, title: { es: "Gante", en: "Ghent", pt: "Gante" }, description: { es: "Ciudad universitaria con historia medieval.", en: "University city with medieval history.", pt: "Cidade universitaria com historia medieval." }, activities: { es: ["Catedral San Bavon", "Castillo Gravensteen", "Graslei"], en: ["Saint Bavo Cathedral", "Gravensteen Castle", "Graslei"], pt: ["Catedral de Sao Bavao", "Castelo Gravensteen", "Graslei"] } },
+      { day: 5, title: { es: "Amberes", en: "Antwerp", pt: "Antuarpia" }, description: { es: "Moda, diamantes y el legado de Rubens.", en: "Fashion, diamonds, and Rubens' legacy.", pt: "Moda, diamantes e o legado de Rubens." }, activities: { es: ["Barrio diamantes", "Casa Rubens", "MAS museo"], en: ["Diamond district", "Rubens House", "MAS museum"], pt: ["Bairro dos diamantes", "Casa de Rubens", "Museu MAS"] } },
+      { day: 6, title: { es: "Regreso", en: "Return", pt: "Retorno" }, description: { es: "Ultimo paseo y vuelo de regreso.", en: "Last stroll and return flight.", pt: "Ultimo passeio e voo de retorno." }, activities: { es: ["Compras chocolate", "Traslado aeropuerto", "Vuelo regreso"], en: ["Chocolate shopping", "Airport transfer", "Return flight"], pt: ["Compras de chocolate", "Traslado ao aeroporto", "Voo de retorno"] } }
     ],
     faqs: [
-      { question: { es: "Que idiomas se hablan en Belgica?", en: "What languages are spoken in Belgium?" }, answer: { es: "Frances en Valonia, neerlandes en Flandes, aleman en el este. Ingles es comun.", en: "French in Wallonia, Dutch in Flanders, German in the east. English is common." } },
-      { question: { es: "Vale la pena visitar Belgica?", en: "Is Belgium worth visiting?" }, answer: { es: "Absolutamente. Ciudades medievales, gastronomía única y ubicacion perfecta para explorar Europa.", en: "Absolutely. Medieval cities, unique gastronomy, and perfect location to explore Europe." } }
+      { question: { es: "Que idiomas se hablan en Belgica?", en: "What languages are spoken in Belgium?", pt: "Quais idiomas sao falados na Belgica?" }, answer: { es: "Frances en Valonia, neerlandes en Flandes, aleman en el este. Ingles es comun.", en: "French in Wallonia, Dutch in Flanders, German in the east. English is common.", pt: "Frances na Valonia, holandes em Flandres, alemao no leste. Ingles e comum." } },
+      { question: { es: "Vale la pena visitar Belgica?", en: "Is Belgium worth visiting?", pt: "Vale a pena visitar a Belgica?" }, answer: { es: "Absolutamente. Ciudades medievales, gastronomía única y ubicacion perfecta para explorar Europa.", en: "Absolutely. Medieval cities, unique gastronomy, and perfect location to explore Europe.", pt: "Com certeza. Cidades medievais, gastronomia unica e localizacao perfeita para explorar a Europa." } }
     ],
-    bestTimeToVisit: { es: "Abril a Octubre", en: "April to October" },
+    bestTimeToVisit: { es: "Abril a Octubre", en: "April to October", pt: "Abril a Outubro" },
     currency: "EUR",
-    language: { es: "Frances/Neerlandes/Aleman", en: "French/Dutch/German" },
-    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements" }
+    language: { es: "Frances/Neerlandes/Aleman", en: "French/Dutch/German", pt: "Frances/Holandes/Alemao" },
+    visaInfo: { es: "Espacio Schengen - verificar requisitos", en: "Schengen Area - check requirements", pt: "Espaco Schengen - nao requer visto para ate 90 dias" }
   },
   {
     slug: "czech-republic",
