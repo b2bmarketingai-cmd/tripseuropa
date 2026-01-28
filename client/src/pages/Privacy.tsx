@@ -9,8 +9,6 @@ import { Shield, Lock, Eye, FileText, Mail, Clock } from "lucide-react";
 export default function Privacy() {
   const { language } = useI18n();
 
-  type LangKey = "es" | "en" | "pt";
-  const dataLang: LangKey = language === "pt" ? "es" : language;
 
   const sections = [
     {

@@ -853,9 +853,11 @@ From: Tripseuropa.com/blog`;
   const filteredPosts = useMemo(() => {
     return allPosts.filter(post => {
       const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
+      const titleText = (post.title[language] || post.title.es || "").toLowerCase();
+      const excerptText = (post.excerpt[language] || post.excerpt.es || "").toLowerCase();
       const matchesSearch = !searchQuery || 
-        post.title[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt[language].toLowerCase().includes(searchQuery.toLowerCase());
+        titleText.includes(searchQuery.toLowerCase()) ||
+        excerptText.includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [allPosts, selectedCategory, searchQuery, language]);
