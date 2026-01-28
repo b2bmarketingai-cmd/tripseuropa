@@ -40,15 +40,17 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
   {
     slug: "fall",
     category: "season",
-    name: { es: "Viajes de Otono", en: "Fall Trips" },
+    name: { es: "Viajes de Otono", en: "Fall Trips", pt: "Viagens de Outono" },
     heroImage: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Descubre Europa en su momento mas magico. El otono transforma el continente con colores dorados, festivales de la cosecha y temperaturas perfectas para explorar. Desde los vinedos de la Toscana hasta los castillos de Alemania, vive una experiencia unica.",
-      en: "Discover Europe at its most magical moment. Fall transforms the continent with golden colors, harvest festivals, and perfect temperatures for exploration. From the vineyards of Tuscany to the castles of Germany, experience something unique."
+      en: "Discover Europe at its most magical moment. Fall transforms the continent with golden colors, harvest festivals, and perfect temperatures for exploration. From the vineyards of Tuscany to the castles of Germany, experience something unique.",
+      pt: "Descubra a Europa no seu momento mais magico. O outono transforma o continente com cores douradas, festivais da colheita e temperaturas perfeitas para explorar. Dos vinhedos da Toscana aos castelos da Alemanha, viva uma experiencia unica."
     },
     highlights: {
       es: ["Festivales de vendimia en Francia e Italia", "Colores otonales en los Alpes", "Menos turistas y mejores precios", "Gastronomia de temporada"],
-      en: ["Wine harvest festivals in France and Italy", "Autumn colors in the Alps", "Fewer tourists and better prices", "Seasonal gastronomy"]
+      en: ["Wine harvest festivals in France and Italy", "Autumn colors in the Alps", "Fewer tourists and better prices", "Seasonal gastronomy"],
+      pt: ["Festivais de vindima na Franca e Italia", "Cores outonais nos Alpes", "Menos turistas e melhores precos", "Gastronomia da temporada"]
     },
     packages: [
       { id: "fall-1", name: { es: "Vendimia en Borgona", en: "Burgundy Wine Harvest" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=60&w=800&auto=format&fit=crop", highlights: { es: ["Degustacion de vinos", "Recorrido por vinedos", "Gastronomia gourmet"], en: ["Wine tasting", "Vineyard tours", "Gourmet gastronomy"] } },
@@ -67,21 +69,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       { question: { es: "Que ropa debo llevar?", en: "What clothing should I bring?" }, answer: { es: "Recomendamos capas: chaqueta ligera, sueter, y ropa comoda para caminar. Las temperaturas varian entre 10-20 grados.", en: "We recommend layers: light jacket, sweater, and comfortable walking clothes. Temperatures range from 10-20 degrees." } },
       { question: { es: "Los tours incluyen transporte?", en: "Do tours include transportation?" }, answer: { es: "Si, todos nuestros paquetes incluyen traslados aeropuerto-hotel y transporte durante las excursiones.", en: "Yes, all our packages include airport-hotel transfers and transportation during excursions." } }
     ],
-    bestFor: { es: "Amantes del vino, gastronomia y fotografia", en: "Wine lovers, gastronomy and photography enthusiasts" },
-    idealDuration: { es: "7-10 dias", en: "7-10 days" }
+    bestFor: { es: "Amantes del vino, gastronomia y fotografia", en: "Wine lovers, gastronomy and photography enthusiasts", pt: "Amantes do vinho, gastronomia e fotografia" },
+    idealDuration: { es: "7-10 dias", en: "7-10 days", pt: "7-10 dias" }
   },
   {
     slug: "summer",
     category: "season",
-    name: { es: "Viajes de Verano", en: "Summer Trips" },
+    name: { es: "Viajes de Verano", en: "Summer Trips", pt: "Viagens de Verao" },
     heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "El verano europeo ofrece dias largos, playas cristalinas y festivales al aire libre. Desde la Costa Amalfitana hasta las islas griegas, disfruta del sol mediterraneo en su maximo esplendor.",
-      en: "European summer offers long days, crystal-clear beaches, and outdoor festivals. From the Amalfi Coast to the Greek islands, enjoy the Mediterranean sun at its finest."
+      en: "European summer offers long days, crystal-clear beaches, and outdoor festivals. From the Amalfi Coast to the Greek islands, enjoy the Mediterranean sun at its finest.",
+      pt: "O verao europeu oferece dias longos, praias cristalinas e festivais ao ar livre. Da Costa Amalfitana as ilhas gregas, desfrute do sol mediterraneo em seu maximo esplendor."
     },
     highlights: {
       es: ["Playas del Mediterraneo", "Festivales de musica", "Dias largos de sol", "Vida nocturna vibrante"],
-      en: ["Mediterranean beaches", "Music festivals", "Long sunny days", "Vibrant nightlife"]
+      en: ["Mediterranean beaches", "Music festivals", "Long sunny days", "Vibrant nightlife"],
+      pt: ["Praias do Mediterraneo", "Festivais de musica", "Dias longos de sol", "Vida noturna vibrante"]
     },
     packages: [
       { id: "sum-1", name: { es: "Islas Griegas", en: "Greek Islands" }, destination: "Greece", duration: { es: "12 dias", en: "12 days" }, price: 3890, image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800", highlights: { es: ["Santorini", "Mykonos", "Creta"], en: ["Santorini", "Mykonos", "Crete"] } },
@@ -97,21 +101,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
       { question: { es: "Cual es la temperatura en verano?", en: "What's the temperature in summer?" }, answer: { es: "Las temperaturas oscilan entre 25-35 grados. Recomendamos proteccion solar y ropa ligera.", en: "Temperatures range from 25-35 degrees. We recommend sun protection and light clothing." } },
       { question: { es: "Hay mucha gente en verano?", en: "Is it crowded in summer?" }, answer: { es: "Es temporada alta, pero nuestros itinerarios incluyen acceso prioritario y horarios estrategicos.", en: "It's peak season, but our itineraries include priority access and strategic schedules." } }
     ],
-    bestFor: { es: "Amantes de la playa, sol y vida social", en: "Beach lovers, sun and social life enthusiasts" },
-    idealDuration: { es: "8-14 dias", en: "8-14 days" }
+    bestFor: { es: "Amantes de la playa, sol y vida social", en: "Beach lovers, sun and social life enthusiasts", pt: "Amantes da praia, sol e vida social" },
+    idealDuration: { es: "8-14 dias", en: "8-14 days", pt: "8-14 dias" }
   },
   {
     slug: "spring",
     category: "season",
-    name: { es: "Viajes de Primavera", en: "Spring Trips" },
+    name: { es: "Viajes de Primavera", en: "Spring Trips", pt: "Viagens de Primavera" },
     heroImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "La primavera despierta Europa con flores, jardines en flor y temperaturas ideales. Desde los tulipanes de Holanda hasta los cerezos de Paris, vive el renacer del continente.",
-      en: "Spring awakens Europe with flowers, blooming gardens, and ideal temperatures. From Holland's tulips to Paris's cherry blossoms, experience the continent's rebirth."
+      en: "Spring awakens Europe with flowers, blooming gardens, and ideal temperatures. From Holland's tulips to Paris's cherry blossoms, experience the continent's rebirth.",
+      pt: "A primavera desperta a Europa com flores, jardins floridos e temperaturas ideais. Das tulipas da Holanda as cerejeiras de Paris, viva o renascimento do continente."
     },
     highlights: {
       es: ["Campos de tulipanes", "Jardines en flor", "Clima perfecto", "Menos multitudes"],
-      en: ["Tulip fields", "Blooming gardens", "Perfect weather", "Fewer crowds"]
+      en: ["Tulip fields", "Blooming gardens", "Perfect weather", "Fewer crowds"],
+      pt: ["Campos de tulipas", "Jardins floridos", "Clima perfeito", "Menos multidoes"]
     },
     packages: [
       { id: "spr-1", name: { es: "Tulipanes de Holanda", en: "Holland Tulips" }, destination: "Netherlands", duration: { es: "6 dias", en: "6 days" }, price: 2290, image: "https://images.unsplash.com/photo-1589994160839-163cd867cfe8?q=60&w=800", highlights: { es: ["Keukenhof", "Amsterdam", "Molinos"], en: ["Keukenhof", "Amsterdam", "Windmills"] } },
@@ -124,21 +130,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Cuando es la mejor fecha para ver tulipanes?", en: "When is the best time to see tulips?" }, answer: { es: "Mediados de abril es el momento optimo para ver los campos de tulipanes en plena floracion.", en: "Mid-April is the optimal time to see tulip fields in full bloom." } }
     ],
-    bestFor: { es: "Amantes de la naturaleza y fotografia", en: "Nature and photography lovers" },
-    idealDuration: { es: "5-8 dias", en: "5-8 days" }
+    bestFor: { es: "Amantes de la naturaleza y fotografia", en: "Nature and photography lovers", pt: "Amantes da natureza e fotografia" },
+    idealDuration: { es: "5-8 dias", en: "5-8 days", pt: "5-8 dias" }
   },
   {
     slug: "easter",
     category: "season",
-    name: { es: "Semana Santa en Europa", en: "Easter in Europe" },
+    name: { es: "Semana Santa en Europa", en: "Easter in Europe", pt: "Pascoa na Europa" },
     heroImage: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la Semana Santa con tradiciones centenarias en Espana, Italia y mas. Procesiones, gastronomia especial y una atmosfera unica de espiritualidad y celebracion.",
-      en: "Experience Easter with centuries-old traditions in Spain, Italy, and beyond. Processions, special gastronomy, and a unique atmosphere of spirituality and celebration."
+      en: "Experience Easter with centuries-old traditions in Spain, Italy, and beyond. Processions, special gastronomy, and a unique atmosphere of spirituality and celebration.",
+      pt: "Viva a Pascoa com tradicoes centenarias na Espanha, Italia e mais. Procissoes, gastronomia especial e uma atmosfera unica de espiritualidade e celebracao."
     },
     highlights: {
       es: ["Procesiones tradicionales", "Gastronomia de Pascua", "Celebraciones religiosas", "Cultura local autentica"],
-      en: ["Traditional processions", "Easter gastronomy", "Religious celebrations", "Authentic local culture"]
+      en: ["Traditional processions", "Easter gastronomy", "Religious celebrations", "Authentic local culture"],
+      pt: ["Procissoes tradicionais", "Gastronomia de Pascoa", "Celebracoes religiosas", "Cultura local autentica"]
     },
     packages: [
       { id: "eas-1", name: { es: "Semana Santa Sevillana", en: "Seville Holy Week" }, destination: "Spain", duration: { es: "8 dias", en: "8 days" }, price: 2890, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=800", highlights: { es: ["Procesiones", "Flamenco", "Tapas"], en: ["Processions", "Flamenco", "Tapas"] } },
@@ -151,21 +159,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Necesito reservar con anticipacion?", en: "Do I need to book in advance?" }, answer: { es: "Si, Semana Santa es muy popular. Recomendamos reservar con 3-4 meses de anticipacion.", en: "Yes, Easter is very popular. We recommend booking 3-4 months in advance." } }
     ],
-    bestFor: { es: "Viajeros culturales y espirituales", en: "Cultural and spiritual travelers" },
-    idealDuration: { es: "6-9 dias", en: "6-9 days" }
+    bestFor: { es: "Viajeros culturales y espirituales", en: "Cultural and spiritual travelers", pt: "Viajantes culturais e espirituais" },
+    idealDuration: { es: "6-9 dias", en: "6-9 days", pt: "6-9 dias" }
   },
   {
     slug: "winter",
     category: "season",
-    name: { es: "Viajes de Invierno", en: "Winter Trips" },
+    name: { es: "Viajes de Invierno", en: "Winter Trips", pt: "Viagens de Inverno" },
     heroImage: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "El invierno europeo ofrece esqui en los Alpes, auroras boreales en Escandinavia y ciudades magicas cubiertas de nieve. Una experiencia invernal inolvidable.",
-      en: "European winter offers skiing in the Alps, northern lights in Scandinavia, and magical snow-covered cities. An unforgettable winter experience."
+      en: "European winter offers skiing in the Alps, northern lights in Scandinavia, and magical snow-covered cities. An unforgettable winter experience.",
+      pt: "O inverno europeu oferece esqui nos Alpes, auroras boreais na Escandinavia e cidades magicas cobertas de neve. Uma experiencia invernal inesquecivel."
     },
     highlights: {
       es: ["Esqui en los Alpes", "Auroras boreales", "Ciudades nevadas", "Mercados navidenos"],
-      en: ["Alpine skiing", "Northern lights", "Snowy cities", "Christmas markets"]
+      en: ["Alpine skiing", "Northern lights", "Snowy cities", "Christmas markets"],
+      pt: ["Esqui nos Alpes", "Auroras boreais", "Cidades nevadas", "Mercados de Natal"]
     },
     packages: [
       { id: "win-1", name: { es: "Esqui en Suiza", en: "Swiss Skiing" }, destination: "Switzerland", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1520962922320-2038eebab146?q=60&w=800", highlights: { es: ["Zermatt", "Clases de esqui", "Spa alpino"], en: ["Zermatt", "Ski lessons", "Alpine spa"] } },
@@ -178,21 +188,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Que nivel de esqui necesito?", en: "What ski level do I need?" }, answer: { es: "Tenemos paquetes para todos los niveles, desde principiantes hasta expertos.", en: "We have packages for all levels, from beginners to experts." } }
     ],
-    bestFor: { es: "Amantes del esqui y deportes de invierno", en: "Skiing and winter sports enthusiasts" },
-    idealDuration: { es: "6-10 dias", en: "6-10 days" }
+    bestFor: { es: "Amantes del esqui y deportes de invierno", en: "Skiing and winter sports enthusiasts", pt: "Amantes do esqui e esportes de inverno" },
+    idealDuration: { es: "6-10 dias", en: "6-10 days", pt: "6-10 dias" }
   },
   {
     slug: "christmas",
     category: "season",
-    name: { es: "Navidad en Europa", en: "Christmas in Europe" },
+    name: { es: "Navidad en Europa", en: "Christmas in Europe", pt: "Natal na Europa" },
     heroImage: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la magia navidena en los mercados mas encantadores de Europa. Desde Viena hasta Estrasburgo, descubre tradiciones, artesanias y sabores festivos.",
-      en: "Experience the magic of Christmas in Europe's most charming markets. From Vienna to Strasbourg, discover traditions, crafts, and festive flavors."
+      en: "Experience the magic of Christmas in Europe's most charming markets. From Vienna to Strasbourg, discover traditions, crafts, and festive flavors.",
+      pt: "Viva a magia natalina nos mercados mais encantadores da Europa. De Viena a Estrasburgo, descubra tradicoes, artesanatos e sabores festivos."
     },
     highlights: {
       es: ["Mercados navidenos", "Luces festivas", "Gastronomia tipica", "Tradiciones locales"],
-      en: ["Christmas markets", "Festive lights", "Traditional cuisine", "Local traditions"]
+      en: ["Christmas markets", "Festive lights", "Traditional cuisine", "Local traditions"],
+      pt: ["Mercados de Natal", "Luzes festivas", "Gastronomia tipica", "Tradicoes locais"]
     },
     packages: [
       { id: "chr-1", name: { es: "Mercados de Alemania", en: "German Christmas Markets" }, destination: "Germany", duration: { es: "9 dias", en: "9 days" }, price: 2990, image: "/assets/stock_images/christmas_market_ger_17f23500.jpg", highlights: { es: ["Nuremberg", "Colonia", "Dresde"], en: ["Nuremberg", "Cologne", "Dresden"] } },
@@ -204,21 +216,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Cuando abren los mercados navidenos?", en: "When do Christmas markets open?" }, answer: { es: "La mayoria abre desde finales de noviembre hasta fin de ano.", en: "Most open from late November until year end." } }
     ],
-    bestFor: { es: "Familias y amantes de la Navidad", en: "Families and Christmas enthusiasts" },
-    idealDuration: { es: "5-10 dias", en: "5-10 days" }
+    bestFor: { es: "Familias y amantes de la Navidad", en: "Families and Christmas enthusiasts", pt: "Familias e amantes do Natal" },
+    idealDuration: { es: "5-10 dias", en: "5-10 days", pt: "5-10 dias" }
   },
   {
     slug: "multi-country",
     category: "interest",
-    name: { es: "Viajes Multi-Pais", en: "Multi-Country Trips" },
+    name: { es: "Viajes Multi-Pais", en: "Multi-Country Trips", pt: "Viagens Multi-Pais" },
     heroImage: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Explora varios paises en un solo viaje. Nuestros itinerarios multi-destino te permiten descubrir la diversidad de Europa de manera eficiente y emocionante.",
-      en: "Explore multiple countries in a single trip. Our multi-destination itineraries let you discover Europe's diversity efficiently and excitingly."
+      en: "Explore multiple countries in a single trip. Our multi-destination itineraries let you discover Europe's diversity efficiently and excitingly.",
+      pt: "Explore varios paises em uma unica viagem. Nossos itinerarios multi-destino permitem descobrir a diversidade da Europa de forma eficiente e emocionante."
     },
     highlights: {
       es: ["Varios destinos", "Transporte optimizado", "Diversidad cultural", "Mejor valor"],
-      en: ["Multiple destinations", "Optimized transport", "Cultural diversity", "Best value"]
+      en: ["Multiple destinations", "Optimized transport", "Cultural diversity", "Best value"],
+      pt: ["Varios destinos", "Transporte otimizado", "Diversidade cultural", "Melhor valor"]
     },
     packages: [
       { id: "mc-1", name: { es: "Gran Tour de Europa", en: "Grand European Tour" }, destination: "Multi-Country", duration: { es: "15 dias", en: "15 days" }, price: 4890, image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=800", highlights: { es: ["Paris", "Roma", "Barcelona", "Amsterdam"], en: ["Paris", "Rome", "Barcelona", "Amsterdam"] } },
@@ -232,21 +246,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Como nos movemos entre paises?", en: "How do we travel between countries?" }, answer: { es: "Usamos trenes de alta velocidad, vuelos cortos o buses de lujo segun la ruta optima.", en: "We use high-speed trains, short flights, or luxury buses depending on the optimal route." } }
     ],
-    bestFor: { es: "Viajeros que quieren ver mucho en poco tiempo", en: "Travelers who want to see a lot in little time" },
-    idealDuration: { es: "10-18 dias", en: "10-18 days" }
+    bestFor: { es: "Viajeros que quieren ver mucho en poco tiempo", en: "Travelers who want to see a lot in little time", pt: "Viajantes que querem ver muito em pouco tempo" },
+    idealDuration: { es: "10-18 dias", en: "10-18 days", pt: "10-18 dias" }
   },
   {
     slug: "beach",
     category: "interest",
-    name: { es: "Viajes de Playa", en: "Beach Trips" },
+    name: { es: "Viajes de Playa", en: "Beach Trips", pt: "Viagens de Praia" },
     heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Las mejores playas de Europa te esperan. Desde las calas secretas del Mediterraneo hasta las costas dramaticas del Atlantico, encuentra tu paraiso costero.",
-      en: "Europe's best beaches await you. From secret Mediterranean coves to dramatic Atlantic coasts, find your coastal paradise."
+      en: "Europe's best beaches await you. From secret Mediterranean coves to dramatic Atlantic coasts, find your coastal paradise.",
+      pt: "As melhores praias da Europa esperam por voce. Das enseadas secretas do Mediterraneo as costas dramaticas do Atlantico, encontre seu paraiso costeiro."
     },
     highlights: {
       es: ["Aguas cristalinas", "Resorts de lujo", "Deportes acuaticos", "Gastronomia marina"],
-      en: ["Crystal waters", "Luxury resorts", "Water sports", "Seafood cuisine"]
+      en: ["Crystal waters", "Luxury resorts", "Water sports", "Seafood cuisine"],
+      pt: ["Aguas cristalinas", "Resorts de luxo", "Esportes aquaticos", "Gastronomia marinha"]
     },
     packages: [
       { id: "bch-1", name: { es: "Islas Baleares", en: "Balearic Islands" }, destination: "Spain", duration: { es: "10 dias", en: "10 days" }, price: 3290, image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=60&w=800", highlights: { es: ["Mallorca", "Ibiza", "Menorca"], en: ["Mallorca", "Ibiza", "Menorca"] } },
@@ -258,21 +274,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Las playas son privadas?", en: "Are the beaches private?" }, answer: { es: "Algunas playas son de acceso exclusivo del resort, otras son publicas con servicios VIP.", en: "Some beaches are resort-exclusive, others are public with VIP services." } }
     ],
-    bestFor: { es: "Amantes del sol y el mar", en: "Sun and sea lovers" },
-    idealDuration: { es: "7-12 dias", en: "7-12 days" }
+    bestFor: { es: "Amantes del sol y el mar", en: "Sun and sea lovers", pt: "Amantes do sol e do mar" },
+    idealDuration: { es: "7-12 dias", en: "7-12 days", pt: "7-12 dias" }
   },
   {
     slug: "adventure",
     category: "interest",
-    name: { es: "Viajes de Aventura", en: "Adventure Trips" },
+    name: { es: "Viajes de Aventura", en: "Adventure Trips", pt: "Viagens de Aventura" },
     heroImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Adrenalina y naturaleza se unen en nuestras aventuras europeas. Desde senderismo en los Alpes hasta kayak en fiordos noruegos, supera tus limites.",
-      en: "Adrenaline and nature unite in our European adventures. From Alpine hiking to kayaking in Norwegian fjords, push your limits."
+      en: "Adrenaline and nature unite in our European adventures. From Alpine hiking to kayaking in Norwegian fjords, push your limits.",
+      pt: "Adrenalina e natureza se unem em nossas aventuras europeias. Desde trilhas nos Alpes ate caiaque em fiordes noruegueses, supere seus limites."
     },
     highlights: {
       es: ["Senderismo", "Deportes extremos", "Naturaleza virgen", "Experiencias unicas"],
-      en: ["Hiking", "Extreme sports", "Pristine nature", "Unique experiences"]
+      en: ["Hiking", "Extreme sports", "Pristine nature", "Unique experiences"],
+      pt: ["Trilhas", "Esportes radicais", "Natureza intocada", "Experiencias unicas"]
     },
     packages: [
       { id: "adv-1", name: { es: "Fiordos de Noruega", en: "Norwegian Fjords" }, destination: "Norway", duration: { es: "10 dias", en: "10 days" }, price: 4190, image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=60&w=800", highlights: { es: ["Kayak", "Senderismo", "Glaciares"], en: ["Kayaking", "Hiking", "Glaciers"] } },
@@ -284,21 +302,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Necesito experiencia previa?", en: "Do I need prior experience?" }, answer: { es: "Tenemos niveles para principiantes y expertos. Siempre hay guias certificados.", en: "We have levels for beginners and experts. There are always certified guides." } }
     ],
-    bestFor: { es: "Aventureros y amantes del aire libre", en: "Adventurers and outdoor enthusiasts" },
-    idealDuration: { es: "7-12 dias", en: "7-12 days" }
+    bestFor: { es: "Aventureros y amantes del aire libre", en: "Adventurers and outdoor enthusiasts", pt: "Aventureiros e amantes do ar livre" },
+    idealDuration: { es: "7-12 dias", en: "7-12 days", pt: "7-12 dias" }
   },
   {
     slug: "safari",
     category: "interest",
-    name: { es: "Safari Europeo", en: "European Safari" },
+    name: { es: "Safari Europeo", en: "European Safari", pt: "Safari Europeu" },
     heroImage: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Descubre la vida salvaje de Europa. Desde los bisontes de Polonia hasta los osos de Escandinavia, vive encuentros unicos con la fauna europea.",
-      en: "Discover Europe's wildlife. From Polish bison to Scandinavian bears, experience unique encounters with European fauna."
+      en: "Discover Europe's wildlife. From Polish bison to Scandinavian bears, experience unique encounters with European fauna.",
+      pt: "Descubra a vida selvagem da Europa. Dos bisontes da Polonia aos ursos da Escandinavia, viva encontros unicos com a fauna europeia."
     },
     highlights: {
       es: ["Fauna salvaje", "Parques naturales", "Fotografia de naturaleza", "Guias expertos"],
-      en: ["Wild fauna", "Natural parks", "Nature photography", "Expert guides"]
+      en: ["Wild fauna", "Natural parks", "Nature photography", "Expert guides"],
+      pt: ["Fauna selvagem", "Parques naturais", "Fotografia de natureza", "Guias especializados"]
     },
     packages: [
       { id: "saf-1", name: { es: "Osos de Finlandia", en: "Finnish Bears" }, destination: "Finland", duration: { es: "6 dias", en: "6 days" }, price: 3290, image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?q=60&w=800", highlights: { es: ["Osos pardos", "Lobos", "Aguila real"], en: ["Brown bears", "Wolves", "Golden eagle"] } }
@@ -309,21 +329,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Es seguro observar animales salvajes?", en: "Is it safe to observe wild animals?" }, answer: { es: "Si, siempre con guias expertos y desde escondites seguros.", en: "Yes, always with expert guides and from safe hides." } }
     ],
-    bestFor: { es: "Amantes de la naturaleza y fotografia", en: "Nature and photography lovers" },
-    idealDuration: { es: "5-8 dias", en: "5-8 days" }
+    bestFor: { es: "Amantes de la naturaleza y fotografia", en: "Nature and photography lovers", pt: "Amantes da natureza e fotografia" },
+    idealDuration: { es: "5-8 dias", en: "5-8 days", pt: "5-8 dias" }
   },
   {
     slug: "cruises",
     category: "interest",
-    name: { es: "Cruceros por Europa", en: "European Cruises" },
+    name: { es: "Cruceros por Europa", en: "European Cruises", pt: "Cruzeiros pela Europa" },
     heroImage: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Navega por las aguas mas hermosas de Europa. Desde el Mediterraneo hasta los fiordos nordicos, descubre el continente desde una perspectiva unica.",
-      en: "Sail through Europe's most beautiful waters. From the Mediterranean to Nordic fjords, discover the continent from a unique perspective."
+      en: "Sail through Europe's most beautiful waters. From the Mediterranean to Nordic fjords, discover the continent from a unique perspective.",
+      pt: "Navegue pelas aguas mais bonitas da Europa. Do Mediterraneo aos fiordes nordicos, descubra o continente de uma perspectiva unica."
     },
     highlights: {
       es: ["Multiples destinos", "Lujo a bordo", "Todo incluido", "Entretenimiento"],
-      en: ["Multiple destinations", "Onboard luxury", "All-inclusive", "Entertainment"]
+      en: ["Multiple destinations", "Onboard luxury", "All-inclusive", "Entertainment"],
+      pt: ["Multiplos destinos", "Luxo a bordo", "Tudo incluido", "Entretenimento"]
     },
     packages: [
       { id: "cru-1", name: { es: "Mediterraneo Clasico", en: "Classic Mediterranean" }, destination: "Multi-Country", duration: { es: "12 dias", en: "12 days" }, price: 4590, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=60&w=800", highlights: { es: ["Barcelona", "Roma", "Atenas"], en: ["Barcelona", "Rome", "Athens"] } },
@@ -335,21 +357,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Que esta incluido en el crucero?", en: "What's included in the cruise?" }, answer: { es: "Alojamiento, comidas, entretenimiento a bordo y transporte entre puertos.", en: "Accommodation, meals, onboard entertainment, and transport between ports." } }
     ],
-    bestFor: { es: "Quienes buscan comodidad y multiples destinos", en: "Those seeking comfort and multiple destinations" },
-    idealDuration: { es: "7-14 dias", en: "7-14 days" }
+    bestFor: { es: "Quienes buscan comodidad y multiples destinos", en: "Those seeking comfort and multiple destinations", pt: "Quem busca conforto e multiplos destinos" },
+    idealDuration: { es: "7-14 dias", en: "7-14 days", pt: "7-14 dias" }
   },
   {
     slug: "honeymoon",
     category: "interest",
-    name: { es: "Luna de Miel", en: "Honeymoon" },
+    name: { es: "Luna de Miel", en: "Honeymoon", pt: "Lua de Mel" },
     heroImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Celebra tu amor en los destinos mas romanticos de Europa. Desde Venecia hasta la Costa Amalfitana, crea recuerdos inolvidables con tu pareja.",
-      en: "Celebrate your love in Europe's most romantic destinations. From Venice to the Amalfi Coast, create unforgettable memories with your partner."
+      en: "Celebrate your love in Europe's most romantic destinations. From Venice to the Amalfi Coast, create unforgettable memories with your partner.",
+      pt: "Celebre seu amor nos destinos mais romanticos da Europa. De Veneza a Costa Amalfitana, crie memorias inesqueciveis com seu parceiro."
     },
     highlights: {
       es: ["Destinos romanticos", "Experiencias exclusivas", "Cenas privadas", "Spa y bienestar"],
-      en: ["Romantic destinations", "Exclusive experiences", "Private dinners", "Spa and wellness"]
+      en: ["Romantic destinations", "Exclusive experiences", "Private dinners", "Spa and wellness"],
+      pt: ["Destinos romanticos", "Experiencias exclusivas", "Jantares privados", "Spa e bem-estar"]
     },
     packages: [
       { id: "hon-1", name: { es: "Romance en Venecia", en: "Venetian Romance" }, destination: "Italy", duration: { es: "8 dias", en: "8 days" }, price: 4290, image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=800", highlights: { es: ["Gondola privada", "Cena romantica", "Murano"], en: ["Private gondola", "Romantic dinner", "Murano"] } },
@@ -361,21 +385,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Pueden personalizar el viaje?", en: "Can you customize the trip?" }, answer: { es: "Absolutamente. Cada luna de miel se adapta a sus deseos especiales.", en: "Absolutely. Every honeymoon is adapted to your special wishes." } }
     ],
-    bestFor: { es: "Parejas recien casadas", en: "Newlywed couples" },
-    idealDuration: { es: "7-12 dias", en: "7-12 days" }
+    bestFor: { es: "Parejas recien casadas", en: "Newlywed couples", pt: "Casais recem-casados" },
+    idealDuration: { es: "7-12 dias", en: "7-12 days", pt: "7-12 dias" }
   },
   {
     slug: "nature",
     category: "interest",
-    name: { es: "Viajes de Naturaleza", en: "Nature Trips" },
+    name: { es: "Viajes de Naturaleza", en: "Nature Trips", pt: "Viagens de Natureza" },
     heroImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Conecta con la naturaleza en los paisajes mas impresionantes de Europa. Bosques, lagos, montanas y costas virgenes te esperan.",
-      en: "Connect with nature in Europe's most impressive landscapes. Forests, lakes, mountains, and pristine coasts await you."
+      en: "Connect with nature in Europe's most impressive landscapes. Forests, lakes, mountains, and pristine coasts await you.",
+      pt: "Conecte-se com a natureza nas paisagens mais impressionantes da Europa. Florestas, lagos, montanhas e costas intocadas esperam por voce."
     },
     highlights: {
       es: ["Parques nacionales", "Senderismo", "Fotografia", "Eco-turismo"],
-      en: ["National parks", "Hiking", "Photography", "Eco-tourism"]
+      en: ["National parks", "Hiking", "Photography", "Eco-tourism"],
+      pt: ["Parques nacionais", "Trilhas", "Fotografia", "Ecoturismo"]
     },
     packages: [
       { id: "nat-1", name: { es: "Lagos de Plitvice", en: "Plitvice Lakes" }, destination: "Croatia", duration: { es: "7 dias", en: "7 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=800", highlights: { es: ["Cascadas", "Lagos turquesa", "Bosques"], en: ["Waterfalls", "Turquoise lakes", "Forests"] } },
@@ -387,21 +413,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Que nivel fisico necesito?", en: "What fitness level do I need?" }, answer: { es: "Tenemos rutas para todos los niveles, desde paseos suaves hasta trekkings exigentes.", en: "We have routes for all levels, from gentle walks to demanding treks." } }
     ],
-    bestFor: { es: "Amantes de la naturaleza y el aire libre", en: "Nature and outdoor lovers" },
-    idealDuration: { es: "6-10 dias", en: "6-10 days" }
+    bestFor: { es: "Amantes de la naturaleza y el aire libre", en: "Nature and outdoor lovers", pt: "Amantes da natureza e ar livre" },
+    idealDuration: { es: "6-10 dias", en: "6-10 days", pt: "6-10 dias" }
   },
   {
     slug: "culture",
     category: "interest",
-    name: { es: "Viajes Culturales", en: "Cultural Trips" },
+    name: { es: "Viajes Culturales", en: "Cultural Trips", pt: "Viagens Culturais" },
     heroImage: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Sumérgete en la rica historia y arte de Europa. Museos de clase mundial, monumentos historicos y tradiciones vivas te esperan.",
-      en: "Immerse yourself in Europe's rich history and art. World-class museums, historic monuments, and living traditions await."
+      en: "Immerse yourself in Europe's rich history and art. World-class museums, historic monuments, and living traditions await.",
+      pt: "Mergulhe na rica historia e arte da Europa. Museus de classe mundial, monumentos historicos e tradicoes vivas esperam por voce."
     },
     highlights: {
       es: ["Museos de arte", "Monumentos historicos", "Tradiciones locales", "Guias expertos"],
-      en: ["Art museums", "Historic monuments", "Local traditions", "Expert guides"]
+      en: ["Art museums", "Historic monuments", "Local traditions", "Expert guides"],
+      pt: ["Museus de arte", "Monumentos historicos", "Tradicoes locais", "Guias especializados"]
     },
     packages: [
       { id: "cul-1", name: { es: "Arte en Paris y Florencia", en: "Art in Paris and Florence" }, destination: "France/Italy", duration: { es: "12 dias", en: "12 days" }, price: 4190, image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800", highlights: { es: ["Louvre", "Uffizi", "Accademia"], en: ["Louvre", "Uffizi", "Accademia"] } },
@@ -413,21 +441,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Las entradas a museos estan incluidas?", en: "Are museum tickets included?" }, answer: { es: "Si, todas las entradas y accesos prioritarios estan incluidos.", en: "Yes, all tickets and priority access are included." } }
     ],
-    bestFor: { es: "Amantes del arte y la historia", en: "Art and history lovers" },
-    idealDuration: { es: "7-14 dias", en: "7-14 days" }
+    bestFor: { es: "Amantes del arte y la historia", en: "Art and history lovers", pt: "Amantes da arte e historia" },
+    idealDuration: { es: "7-14 dias", en: "7-14 days", pt: "7-14 dias" }
   },
   {
     slug: "luxury",
     category: "interest",
-    name: { es: "Viajes de Lujo", en: "Luxury Trips" },
+    name: { es: "Viajes de Lujo", en: "Luxury Trips", pt: "Viagens de Luxo" },
     heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Experimenta Europa con el maximo refinamiento. Hoteles 5 estrellas, restaurantes con estrella Michelin y experiencias exclusivas.",
-      en: "Experience Europe with maximum refinement. 5-star hotels, Michelin-starred restaurants, and exclusive experiences."
+      en: "Experience Europe with maximum refinement. 5-star hotels, Michelin-starred restaurants, and exclusive experiences.",
+      pt: "Experimente a Europa com o maximo refinamento. Hoteis 5 estrelas, restaurantes com estrelas Michelin e experiencias exclusivas."
     },
     highlights: {
       es: ["Hoteles 5 estrellas", "Restaurantes Michelin", "Traslados privados", "Experiencias VIP"],
-      en: ["5-star hotels", "Michelin restaurants", "Private transfers", "VIP experiences"]
+      en: ["5-star hotels", "Michelin restaurants", "Private transfers", "VIP experiences"],
+      pt: ["Hoteis 5 estrelas", "Restaurantes Michelin", "Transfers privados", "Experiencias VIP"]
     },
     packages: [
       { id: "lux-1", name: { es: "Lujo en la Riviera", en: "Riviera Luxury" }, destination: "France", duration: { es: "10 dias", en: "10 days" }, price: 8990, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=800", highlights: { es: ["Monaco", "Cannes", "Saint-Tropez"], en: ["Monaco", "Cannes", "Saint-Tropez"] } },
@@ -439,21 +469,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Que diferencia hay con otros paquetes?", en: "What's the difference from other packages?" }, answer: { es: "Todo es de la mas alta calidad: hoteles palace, chefs privados, acceso exclusivo.", en: "Everything is of the highest quality: palace hotels, private chefs, exclusive access." } }
     ],
-    bestFor: { es: "Viajeros que buscan lo mejor de lo mejor", en: "Travelers seeking the best of the best" },
-    idealDuration: { es: "7-14 dias", en: "7-14 days" }
+    bestFor: { es: "Viajeros que buscan lo mejor de lo mejor", en: "Travelers seeking the best of the best", pt: "Viajantes que buscam o melhor do melhor" },
+    idealDuration: { es: "7-14 dias", en: "7-14 days", pt: "7-14 dias" }
   },
   {
     slug: "solo",
     category: "group",
-    name: { es: "Viajeros Solos", en: "Solo Travelers" },
+    name: { es: "Viajeros Solos", en: "Solo Travelers", pt: "Viajantes Solo" },
     heroImage: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Viaja solo pero nunca solitario. Unete a grupos de viajeros afines y descubre Europa mientras haces nuevos amigos de todo el mundo.",
-      en: "Travel solo but never lonely. Join groups of like-minded travelers and discover Europe while making new friends from around the world."
+      en: "Travel solo but never lonely. Join groups of like-minded travelers and discover Europe while making new friends from around the world.",
+      pt: "Viaje sozinho mas nunca solitario. Junte-se a grupos de viajantes com interesses semelhantes e descubra a Europa enquanto faz novos amigos de todo o mundo."
     },
     highlights: {
       es: ["Grupos pequenos", "Actividades sociales", "Habitacion individual", "Flexibilidad"],
-      en: ["Small groups", "Social activities", "Single room", "Flexibility"]
+      en: ["Small groups", "Social activities", "Single room", "Flexibility"],
+      pt: ["Grupos pequenos", "Atividades sociais", "Quarto individual", "Flexibilidade"]
     },
     packages: [
       { id: "sol-1", name: { es: "Portugal para Solos", en: "Portugal for Solos" }, destination: "Portugal", duration: { es: "9 dias", en: "9 days" }, price: 2490, image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800", highlights: { es: ["Lisboa", "Sintra", "Oporto"], en: ["Lisbon", "Sintra", "Porto"] } },
@@ -465,21 +497,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Hay suplemento por habitacion individual?", en: "Is there a single room supplement?" }, answer: { es: "Algunos paquetes lo incluyen, otros tienen opcion de compartir habitacion.", en: "Some packages include it, others have room-sharing options." } }
     ],
-    bestFor: { es: "Viajeros independientes que buscan compania", en: "Independent travelers seeking company" },
-    idealDuration: { es: "7-12 dias", en: "7-12 days" }
+    bestFor: { es: "Viajeros independientes que buscan compania", en: "Independent travelers seeking company", pt: "Viajantes independentes que buscam companhia" },
+    idealDuration: { es: "7-12 dias", en: "7-12 days", pt: "7-12 dias" }
   },
   {
     slug: "family",
     category: "group",
-    name: { es: "Viajes en Familia", en: "Family Trips" },
+    name: { es: "Viajes en Familia", en: "Family Trips", pt: "Viagens em Familia" },
     heroImage: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Crea recuerdos familiares inolvidables en Europa. Actividades para todas las edades, alojamientos familiares y ritmos adaptados a los mas pequenos.",
-      en: "Create unforgettable family memories in Europe. Activities for all ages, family accommodations, and rhythms adapted for little ones."
+      en: "Create unforgettable family memories in Europe. Activities for all ages, family accommodations, and rhythms adapted for little ones.",
+      pt: "Crie memorias familiares inesqueciveis na Europa. Atividades para todas as idades, hospedagens familiares e ritmos adaptados para os pequenos."
     },
     highlights: {
       es: ["Actividades para ninos", "Alojamientos familiares", "Ritmos adaptados", "Experiencias educativas"],
-      en: ["Kids activities", "Family accommodations", "Adapted rhythms", "Educational experiences"]
+      en: ["Kids activities", "Family accommodations", "Adapted rhythms", "Educational experiences"],
+      pt: ["Atividades para criancas", "Hospedagens familiares", "Ritmos adaptados", "Experiencias educativas"]
     },
     packages: [
       { id: "fam-1", name: { es: "Disney y Paris", en: "Disney and Paris" }, destination: "France", duration: { es: "8 dias", en: "8 days" }, price: 3290, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800", highlights: { es: ["Disneyland", "Torre Eiffel", "Versalles"], en: ["Disneyland", "Eiffel Tower", "Versailles"] } },
@@ -491,21 +525,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Hay descuentos para ninos?", en: "Are there discounts for children?" }, answer: { es: "Si, ninos menores de 12 anos tienen descuentos y menores de 3 viajan gratis.", en: "Yes, children under 12 have discounts and under 3 travel free." } }
     ],
-    bestFor: { es: "Familias con ninos de todas las edades", en: "Families with children of all ages" },
-    idealDuration: { es: "7-10 dias", en: "7-10 days" }
+    bestFor: { es: "Familias con ninos de todas las edades", en: "Families with children of all ages", pt: "Familias com criancas de todas as idades" },
+    idealDuration: { es: "7-10 dias", en: "7-10 days", pt: "7-10 dias" }
   },
   {
     slug: "couples",
     category: "group",
-    name: { es: "Viajes en Pareja", en: "Couples Trips" },
+    name: { es: "Viajes en Pareja", en: "Couples Trips", pt: "Viagens a Dois" },
     heroImage: "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Escapa con tu pareja a los destinos mas romanticos de Europa. Experiencias intimas, cenas a la luz de las velas y momentos inolvidables.",
-      en: "Escape with your partner to Europe's most romantic destinations. Intimate experiences, candlelit dinners, and unforgettable moments."
+      en: "Escape with your partner to Europe's most romantic destinations. Intimate experiences, candlelit dinners, and unforgettable moments.",
+      pt: "Fuja com seu parceiro para os destinos mais romanticos da Europa. Experiencias intimas, jantares a luz de velas e momentos inesqueciveis."
     },
     highlights: {
       es: ["Experiencias romanticas", "Spa para parejas", "Cenas privadas", "Paseos romanticos"],
-      en: ["Romantic experiences", "Couples spa", "Private dinners", "Romantic walks"]
+      en: ["Romantic experiences", "Couples spa", "Private dinners", "Romantic walks"],
+      pt: ["Experiencias romanticas", "Spa para casais", "Jantares privados", "Passeios romanticos"]
     },
     packages: [
       { id: "cpl-1", name: { es: "Escapada a Santorini", en: "Santorini Getaway" }, destination: "Greece", duration: { es: "7 dias", en: "7 days" }, price: 3590, image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=800", highlights: { es: ["Atardeceres", "Vinos", "Playas"], en: ["Sunsets", "Wines", "Beaches"] } },
@@ -517,21 +553,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Hay opciones de aniversario?", en: "Are there anniversary options?" }, answer: { es: "Si, ofrecemos paquetes especiales para aniversarios con extras romanticos.", en: "Yes, we offer special anniversary packages with romantic extras." } }
     ],
-    bestFor: { es: "Parejas buscando momentos especiales", en: "Couples seeking special moments" },
-    idealDuration: { es: "5-9 dias", en: "5-9 days" }
+    bestFor: { es: "Parejas buscando momentos especiales", en: "Couples seeking special moments", pt: "Casais buscando momentos especiais" },
+    idealDuration: { es: "5-9 dias", en: "5-9 days", pt: "5-9 dias" }
   },
   {
     slug: "senior",
     category: "group",
-    name: { es: "Viajes para Seniors", en: "Senior Trips" },
+    name: { es: "Viajes para Seniors", en: "Senior Trips", pt: "Viagens para Seniors" },
     heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Viajes pensados para mayores de 55 anos. Ritmos relajados, comodidad premium y companeros de generacion para compartir experiencias.",
-      en: "Trips designed for those over 55. Relaxed rhythms, premium comfort, and same-generation companions to share experiences."
+      en: "Trips designed for those over 55. Relaxed rhythms, premium comfort, and same-generation companions to share experiences.",
+      pt: "Viagens pensadas para maiores de 55 anos. Ritmos relaxados, conforto premium e companheiros da mesma geracao para compartilhar experiencias."
     },
     highlights: {
       es: ["Ritmo relajado", "Hoteles comodos", "Guias especializados", "Grupos afines"],
-      en: ["Relaxed pace", "Comfortable hotels", "Specialized guides", "Like-minded groups"]
+      en: ["Relaxed pace", "Comfortable hotels", "Specialized guides", "Like-minded groups"],
+      pt: ["Ritmo relaxado", "Hoteis confortaveis", "Guias especializados", "Grupos afins"]
     },
     packages: [
       { id: "sen-1", name: { es: "Crucero por el Rin", en: "Rhine River Cruise" }, destination: "Germany", duration: { es: "10 dias", en: "10 days" }, price: 3890, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800", highlights: { es: ["Castillos", "Vinedos", "Ciudades historicas"], en: ["Castles", "Vineyards", "Historic cities"] } },
@@ -543,21 +581,23 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Los itinerarios son muy exigentes?", en: "Are itineraries very demanding?" }, answer: { es: "No, estan disenados con ritmos tranquilos y tiempos de descanso.", en: "No, they are designed with calm rhythms and rest times." } }
     ],
-    bestFor: { es: "Mayores de 55 que buscan viajes comodos", en: "Over 55s seeking comfortable trips" },
-    idealDuration: { es: "8-14 dias", en: "8-14 days" }
+    bestFor: { es: "Mayores de 55 que buscan viajes comodos", en: "Over 55s seeking comfortable trips", pt: "Maiores de 55 que buscam viagens confortaveis" },
+    idealDuration: { es: "8-14 dias", en: "8-14 days", pt: "8-14 dias" }
   },
   {
     slug: "friends-private",
     category: "group",
-    name: { es: "Amigos y Tours Privados", en: "Friends & Private Tours" },
+    name: { es: "Amigos y Tours Privados", en: "Friends & Private Tours", pt: "Amigos e Tours Privados" },
     heroImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Organiza tu viaje perfecto con tu grupo de amigos. Tours privados, itinerarios personalizados y experiencias exclusivas para tu grupo.",
-      en: "Organize your perfect trip with your group of friends. Private tours, customized itineraries, and exclusive experiences for your group."
+      en: "Organize your perfect trip with your group of friends. Private tours, customized itineraries, and exclusive experiences for your group.",
+      pt: "Organize sua viagem perfeita com seu grupo de amigos. Tours privados, itinerarios personalizados e experiencias exclusivas para seu grupo."
     },
     highlights: {
       es: ["Itinerarios personalizados", "Guia privado", "Flexibilidad total", "Experiencias a medida"],
-      en: ["Customized itineraries", "Private guide", "Total flexibility", "Tailored experiences"]
+      en: ["Customized itineraries", "Private guide", "Total flexibility", "Tailored experiences"],
+      pt: ["Itinerarios personalizados", "Guia privado", "Flexibilidade total", "Experiencias sob medida"]
     },
     packages: [
       { id: "fri-1", name: { es: "Ruta del Vino Privada", en: "Private Wine Route" }, destination: "France/Italy", duration: { es: "10 dias", en: "10 days" }, price: 4590, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800", highlights: { es: ["Borgona", "Toscana", "Catas privadas"], en: ["Burgundy", "Tuscany", "Private tastings"] } },
@@ -569,8 +609,8 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     faqs: [
       { question: { es: "Cual es el minimo de personas?", en: "What's the minimum number of people?" }, answer: { es: "Tours privados desde 4 personas. A mayor grupo, mejor precio por persona.", en: "Private tours from 4 people. The larger the group, the better price per person." } }
     ],
-    bestFor: { es: "Grupos de amigos buscando exclusividad", en: "Friend groups seeking exclusivity" },
-    idealDuration: { es: "7-14 dias", en: "7-14 days" }
+    bestFor: { es: "Grupos de amigos buscando exclusividad", en: "Friend groups seeking exclusivity", pt: "Grupos de amigos buscando exclusividade" },
+    idealDuration: { es: "7-14 dias", en: "7-14 days", pt: "7-14 dias" }
   }
 ];
 
