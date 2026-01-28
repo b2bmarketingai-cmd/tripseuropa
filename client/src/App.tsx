@@ -271,11 +271,27 @@ function Router() {
       <Route path="/pt-br/" component={Home} />
       <Route path="/pt-br/destinos" component={Destinations} />
       <Route path="/pt-br/destinos/:slug" component={DestinationPage} />
+      <Route path="/pt-br/destinations" component={Destinations} />
+      <Route path="/pt-br/destinations/:slug" component={DestinationPage} />
+      <Route path="/pt-br/packages" component={Packages} />
       <Route path="/pt-br/paquetes" component={Packages} />
+      <Route path="/pt-br/pacotes" component={Packages} />
       <Route path="/pt-br/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/pt-br/experiences/:slug" component={ExperiencePage} />
       <Route path="/pt-br/paquetes/:slug" component={PackagePage} />
+      <Route path="/pt-br/packages/:slug" component={PackagePage} />
       <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
       <Route path="/pt-br/blog" component={Blog} />
+      <Route path="/pt-br/blog/post/:slug" component={BlogPost} />
+      <Route path="/pt-br/blog/colombia" component={BlogColombia} />
+      <Route path="/pt-br/blog/argentina" component={BlogArgentina} />
+      <Route path="/pt-br/blog/peru" component={BlogPeru} />
+      <Route path="/pt-br/blog/panama" component={BlogPanama} />
+      <Route path="/pt-br/blog/costa-rica" component={BlogCostaRica} />
+      <Route path="/pt-br/blog/dominicana" component={BlogDominicana} />
+      <Route path="/pt-br/blog/caribe" component={BlogCaribe} />
+      <Route path="/pt-br/blog/mexico" component={BlogMexico} />
+      <Route path="/pt-br/blog/brasil" component={BlogBrasil} />
       <Route path="/pt-br/blog/:country" component={Blog} />
       <Route path="/pt-br/rewards" component={Rewards} />
       <Route path="/pt-br/recompensas" component={Rewards} />
@@ -298,10 +314,25 @@ function Router() {
       <Route path="/pt-br/esim" component={ESim} />
       <Route path="/pt-br/privacy" component={Privacy} />
       <Route path="/pt-br/privacidade" component={Privacy} />
+      <Route path="/pt-br/policies" component={Policies} />
+      <Route path="/pt-br/tools" component={Tools} />
+      <Route path="/pt-br/ferramentas" component={Tools} />
       <Route path="/pt-br/forum" component={Forum} />
+      <Route path="/pt-br/foro" component={Forum} />
+      <Route path="/pt-br/testimonios" component={Testimonials} />
+      <Route path="/pt-br/depoimentos" component={Testimonials} />
       <Route path="/pt-br/travel-style/:slug" component={TravelStylePage} />
       <Route path="/pt-br/estilo-viagem/:slug" component={TravelStylePage} />
-      <Route path="/pt-br/blog/:slug" component={BlogPost} />
+      <Route path="/pt-br/last-minute" component={LastMinuteOffers} />
+      <Route path="/pt-br/last-minute-offers" component={LastMinuteOffers} />
+      <Route path="/pt-br/ofertas-ultima-hora" component={LastMinuteOffers} />
+      <Route path="/pt-br/vacaciones-europa" component={VacacionesEuropa} />
+      <Route path="/pt-br/ferias-europa" component={VacacionesEuropa} />
+      <Route path="/pt-br/requisitos-visa" component={VisaRequirements} />
+      <Route path="/pt-br/visa-requirements" component={VisaRequirements} />
+      <Route path="/pt-br/condiciones-venta" component={CondicionesVenta} />
+      <Route path="/pt-br/cookies" component={CookiesPage} />
+      <Route path="/pt-br/terminos-condiciones" component={TermsConditions} />
       
       {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
