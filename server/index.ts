@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
@@ -72,6 +73,28 @@ app.get("/ready", (_req, res) => {
   } else {
     res.status(503).send("Not Ready");
   }
+});
+
+// SEO: Serve sitemap XML files from /public folder
+app.get("/sitemap*.xml", (req, res) => {
+  const filePath = path.join(__dirname, "../public", req.path);
+  res.setHeader("Content-Type", "application/xml");
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+});
+
+// SEO: Serve robots.txt from /public folder
+app.get("/robots.txt", (_req, res) => {
+  const filePath = path.join(__dirname, "../public/robots.txt");
+  res.setHeader("Content-Type", "text/plain");
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send("robots.txt not found");
+    }
+  });
 });
 
 app.use((req, res, next) => {
