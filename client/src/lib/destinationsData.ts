@@ -1898,9 +1898,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       pt: "Os Estados Balticos - Estonia, Letonia e Lituania - surpreendem com cidades medievais como Tallinn, Riga e Vilnius, todas patrimonio UNESCO. Castelos, florestas infinitas, heranca hanseatica e cultura unica do Baltico esperam."
     },
     highlights: {
-      es: ["Tallin medieval", "Art Nouveau Riga", "Vilna barroca", "Colina Cruces", "Trakai castillo"],
-      en: ["Medieval Tallinn", "Art Nouveau Riga", "Baroque Vilnius", "Hill of Crosses", "Trakai Castle"],
-      pt: ["Tallinn medieval", "Art Nouveau Riga", "Vilnius barroca", "Colina das Cruzes", "Castelo Trakai"]
+      es: ["Tallin medieval", "Art Nouveau Riga", "Vilna barroca", "Colina de las Cruces", "Castillo Trakai", "Costa baltica y Parnu"],
+      en: ["Medieval Tallinn", "Art Nouveau Riga", "Baroque Vilnius", "Hill of Crosses", "Trakai Castle", "Baltic coast and Parnu"],
+      pt: ["Tallinn medieval", "Art Nouveau Riga", "Vilnius barroca", "Colina das Cruzes", "Castelo Trakai", "Costa baltica e Parnu"]
     },
     galleryImages: [
       "https://images.unsplash.com/photo-1558618047-f4b511d8e9a4?w=800&q=60",
@@ -1908,7 +1908,42 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=60"
     ],
     packages: [
-      { id: "baltic-states-1", name: { es: "Capitales Balticas", en: "Baltic Capitals", pt: "Capitais Balticas" }, duration: { es: "9 dias", en: "9 days", pt: "9 dias" }, price: "1,999", taxes: "380", includes: { es: ["Vuelos", "Hoteles 4*", "Transporte entre paises", "Desayunos"], en: ["Flights", "4* Hotels", "Inter-country transport", "Breakfasts"], pt: ["Voos", "Hoteis 4*", "Transporte entre paises", "Cafes da manha"] } }
+      {
+        id: "baltic-states-essential",
+        name: { es: "Baltico Esencial", en: "Essential Baltic", pt: "Baltico Essencial" },
+        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights", pt: "9 dias / 8 noites" },
+        price: "1,799",
+        taxes: "350",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Transporte entre ciudades", "Guia en espanol", "Entradas principales"],
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Inter-city transport", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Transporte entre cidades", "Guia em portugues", "Ingressos principais"]
+        }
+      },
+      {
+        id: "baltic-states-complete",
+        name: { es: "Capitales Balticas Completo", en: "Complete Baltic Capitals", pt: "Capitais Balticas Completo" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
+        price: "2,299",
+        taxes: "420",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Trenes y ferries", "Tours exclusivos", "Experiencias gastronomicas"],
+          en: ["International flights", "Boutique hotels", "Half board", "Trains and ferries", "Exclusive tours", "Gastronomic experiences"],
+          pt: ["Voos internacionais", "Hoteis boutique", "Meia pensao", "Trens e ferries", "Tours exclusivos", "Experiencias gastronomicas"]
+        }
+      },
+      {
+        id: "baltic-states-luxury",
+        name: { es: "Gran Tour del Baltico", en: "Grand Baltic Tour", pt: "Grande Tour do Baltico" },
+        duration: { es: "15 dias / 14 noches", en: "15 days / 14 nights", pt: "15 dias / 14 noites" },
+        price: "2,999",
+        taxes: "520",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles 5 estrellas", "Pension completa", "Transporte privado", "Guia privado", "Todas las entradas y experiencias"],
+          en: ["International flights", "5-star hotels", "Full board", "Private transport", "Private guide", "All tickets and experiences"],
+          pt: ["Voos internacionais", "Hoteis 5 estrelas", "Pensao completa", "Transporte privado", "Guia privado", "Todos os ingressos e experiencias"]
+        }
+      }
     ],
     itinerary: [
       { day: 1, title: { es: "Vilna", en: "Vilnius", pt: "Vilnius" }, description: { es: "Llegada a la capital lituana.", en: "Arrival in the Lithuanian capital.", pt: "Chegada a capital lituana." }, activities: { es: ["Traslado hotel", "Catedral Vilna", "Ciudad Vieja"], en: ["Hotel transfer", "Vilnius Cathedral", "Old Town"], pt: ["Traslado ao hotel", "Catedral de Vilnius", "Cidade Velha"] } },
@@ -1940,9 +1975,9 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       pt: "Chipre, a ilha de Afrodite, combina praias mediterraneas cristalinas, ruinas greco-romanas, montanhas Troodos com mosteiros bizantinos e vilas tradicionais. A terceira maior ilha do Mediterraneo oferece 10.000 anos de historia e hospitalidade cipriota."
     },
     highlights: {
-      es: ["Playas Ayia Napa", "Ruinas Pafos", "Montanas Troodos", "Nicosia dividida", "Roca Afrodita"],
-      en: ["Ayia Napa beaches", "Paphos ruins", "Troodos Mountains", "Divided Nicosia", "Aphrodite's Rock"],
-      pt: ["Praias Ayia Napa", "Ruinas Pafos", "Montanhas Troodos", "Nicosia dividida", "Rocha de Afrodite"]
+      es: ["Playas Ayia Napa", "Ruinas Pafos UNESCO", "Montanas Troodos", "Nicosia dividida", "Roca de Afrodita", "Monasterios bizantinos"],
+      en: ["Ayia Napa beaches", "Paphos UNESCO ruins", "Troodos Mountains", "Divided Nicosia", "Aphrodite's Rock", "Byzantine monasteries"],
+      pt: ["Praias Ayia Napa", "Ruinas UNESCO de Pafos", "Montanhas Troodos", "Nicosia dividida", "Rocha de Afrodite", "Mosteiros bizantinos"]
     },
     galleryImages: [
       "/assets/stock_images/cyprus_mediterranean_14204acf.jpg",
@@ -1951,7 +1986,42 @@ export const DESTINATIONS_DATA: DestinationData[] = [
       "/assets/stock_images/cyprus_mediterranean_05be4876.jpg"
     ],
     packages: [
-      { id: "cyprus-1", name: { es: "Chipre Esencial", en: "Essential Cyprus", pt: "Chipre Essencial" }, duration: { es: "7 dias", en: "7 days", pt: "7 dias" }, price: "1,899", taxes: "360", includes: { es: ["Vuelos", "Hoteles 4*", "Coche alquiler", "Desayunos"], en: ["Flights", "4* Hotels", "Rental car", "Breakfasts"], pt: ["Voos", "Hoteis 4*", "Carro alugado", "Cafes da manha"] } }
+      {
+        id: "cyprus-essential",
+        name: { es: "Chipre Esencial", en: "Essential Cyprus", pt: "Chipre Essencial" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
+        price: "1,599",
+        taxes: "320",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Coche de alquiler", "Guia en espanol", "Entradas principales"],
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Rental car", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hoteis 4 estrelas", "Cafe da manha diario", "Carro alugado", "Guia em portugues", "Ingressos principais"]
+        }
+      },
+      {
+        id: "cyprus-complete",
+        name: { es: "Chipre Completo", en: "Complete Cyprus", pt: "Chipre Completo" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
+        price: "2,199",
+        taxes: "420",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Coche de alquiler", "Tours de vino", "Experiencia gastronomica chipriota"],
+          en: ["International flights", "Boutique hotels", "Half board", "Rental car", "Wine tours", "Cypriot gastronomic experience"],
+          pt: ["Voos internacionais", "Hoteis boutique", "Meia pensao", "Carro alugado", "Tours de vinho", "Experiencia gastronomica cipriota"]
+        }
+      },
+      {
+        id: "cyprus-luxury",
+        name: { es: "Gran Tour de Chipre", en: "Grand Cyprus Tour", pt: "Grande Tour de Chipre" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
+        price: "2,899",
+        taxes: "520",
+        includes: {
+          es: ["Vuelos internacionales", "Hoteles 5 estrellas", "Pension completa", "Vehiculo privado con chofer", "Guia privado", "Todas las entradas y experiencias"],
+          en: ["International flights", "5-star hotels", "Full board", "Private vehicle with driver", "Private guide", "All tickets and experiences"],
+          pt: ["Voos internacionais", "Hoteis 5 estrelas", "Pensao completa", "Veiculo privado com motorista", "Guia privado", "Todos os ingressos e experiencias"]
+        }
+      }
     ],
     itinerary: [
       { day: 1, title: { es: "Larnaca", en: "Larnaca", pt: "Larnaca" }, description: { es: "Llegada a Chipre.", en: "Arrival in Cyprus.", pt: "Chegada a Chipre." }, activities: { es: ["Traslado hotel", "Paseo maritimo", "Iglesia San Lazaro"], en: ["Hotel transfer", "Seafront promenade", "St. Lazarus Church"], pt: ["Traslado ao hotel", "Calcadao maritimo", "Igreja de Sao Lazaro"] } },
