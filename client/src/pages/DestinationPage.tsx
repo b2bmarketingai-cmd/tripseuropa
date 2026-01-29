@@ -4,6 +4,7 @@ import { getDestinationBySlug } from "@/lib/destinationsData";
 import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -239,6 +240,10 @@ export default function DestinationPage() {
       />
       <FAQSchema faqs={faqsForSchema} />
       <Header />
+      <Breadcrumbs items={[
+        { label: currentLang === 'pt' ? "Destinos" : currentLang === 'en' ? "Destinations" : "Destinos", href: `${currentLang === 'es' ? '' : currentLang === 'pt' ? '/pt-br' : '/en'}/destinos` },
+        { label: destination.name[dataLang] || destination.name["es"] }
+      ]} />
       <section 
         className="relative min-h-[500px] flex items-center justify-center"
         data-testid="section-destination-hero"

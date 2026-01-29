@@ -1,10 +1,14 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
 import path from "path";
+import { fileURLToPath } from "url";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { testDatabaseConnection } from "./db";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -75,9 +79,9 @@ app.get("/ready", (_req, res) => {
   }
 });
 
-// SEO: Serve sitemap XML files from /public folder
+// SEO: Serve sitemap XML files from /client/public folder and /client/public/sitemaps
 app.get("/sitemap*.xml", (req, res) => {
-  const filePath = path.join(__dirname, "../public", req.path);
+  let filePath = path.join(__dirname, "../client/public", req.path);
   res.setHeader("Content-Type", "application/xml");
   res.sendFile(filePath, (err) => {
     if (err) {
@@ -86,9 +90,19 @@ app.get("/sitemap*.xml", (req, res) => {
   });
 });
 
-// SEO: Serve robots.txt from /public folder
+app.get("/sitemaps/*", (req, res) => {
+  const filePath = path.join(__dirname, "../client/public", req.path);
+  res.setHeader("Content-Type", "application/xml");
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+});
+
+// SEO: Serve robots.txt from /client/public folder
 app.get("/robots.txt", (_req, res) => {
-  const filePath = path.join(__dirname, "../public/robots.txt");
+  const filePath = path.join(__dirname, "../client/public/robots.txt");
   res.setHeader("Content-Type", "text/plain");
   res.sendFile(filePath, (err) => {
     if (err) {

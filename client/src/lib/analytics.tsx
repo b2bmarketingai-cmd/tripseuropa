@@ -36,7 +36,6 @@ interface EventParams {
 export function trackEvent(eventName: EventName, params?: EventParams): void {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, params);
-    console.log(`[Analytics] Event: ${eventName}`, params);
   }
 }
 

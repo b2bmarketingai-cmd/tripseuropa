@@ -7,10 +7,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 import { Link, useParams, useLocation } from "wouter";
-import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
+import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection, type BlogFAQ, type MultiLangText, type MultiLangArray } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
 import { BreadcrumbSchema } from "@/components/SEOSchemas";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+function getTextForLang(text: MultiLangText, lang: string): string {
+  if (lang === 'pt' && text.pt) return text.pt;
+  if (lang === 'en') return text.en;
+  return text.es;
+}
+
+function getArrayForLang(arr: MultiLangArray | undefined, lang: string): string[] {
+  if (!arr) return [];
+  if (lang === 'pt' && arr.pt) return arr.pt;
+  if (lang === 'en') return arr.en;
+  return arr.es;
+}
 
 function parseSpanishDate(dateStr: string): string {
   const months: Record<string, string> = {
@@ -45,7 +59,7 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     "headline": title,
     "description": description,
     "image": image,
-    "url": `https://tripseuropa.co/blog/post/${slug}`,
+    "url": `https://tripseuropa.com/blog/post/${slug}`,
     "datePublished": isoDate,
     "dateModified": isoDate,
     "author": hasPersonAuthor ? {
@@ -54,19 +68,19 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     } : {
       "@type": "Organization",
       "name": "Trips Europa",
-      "url": "https://tripseuropa.co"
+      "url": "https://tripseuropa.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Trips Europa",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://tripseuropa.co/favicon.png"
+        "url": "https://tripseuropa.com/favicon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://tripseuropa.co/blog/post/${slug}`
+      "@id": `https://tripseuropa.com/blog/post/${slug}`
     }
   };
   
@@ -127,7 +141,7 @@ export default function BlogPost() {
         title={title}
         description={excerpt}
         keywords={post.keywords.join(", ")}
-        url={`https://tripseuropa.co/blog/post/${postSlug}`}
+        url={`https://tripseuropa.com/blog/post/${postSlug}`}
         image={post.image}
         type="article"
         publishedTime={isoDate}
@@ -144,13 +158,17 @@ export default function BlogPost() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Inicio", url: "https://tripseuropa.co" },
-          { name: "Blog", url: "https://tripseuropa.co/blog" },
-          { name: title, url: `https://tripseuropa.co/blog/post/${postSlug}` }
+          { name: "Inicio", url: "https://tripseuropa.com" },
+          { name: "Blog", url: "https://tripseuropa.com/blog" },
+          { name: title, url: `https://tripseuropa.com/blog/post/${postSlug}` }
         ]}
       />
       <Header />
-      <main className="pt-24">
+      <Breadcrumbs items={[
+        { label: "Blog", href: `${langPrefix}/blog` },
+        { label: title }
+      ]} />
+      <main className="pt-8">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
             <Link href={`${langPrefix}/blog`}>
@@ -199,13 +217,13 @@ export default function BlogPost() {
 
             {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
               <section key={index} className="mb-10" data-testid={`section-content-${index}`}>
-                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{section.title}</h2>
+                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{getTextForLang(section.title, language)}</h2>
                 
-                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{section.content}</p>
+                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{getTextForLang(section.content, language)}</p>
                 
-                {section.list && (
+                {section.list && getArrayForLang(section.list, language).length > 0 && (
                   <ul className="list-disc pl-6 space-y-2 text-foreground" data-testid={`list-section-${index}`}>
-                    {section.list.map((item: string, i: number) => (
+                    {getArrayForLang(section.list, language).map((item: string, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
@@ -215,13 +233,15 @@ export default function BlogPost() {
 
             {fullPost?.faqs && fullPost.faqs.length > 0 && (
               <section className="mt-12" data-testid="section-faq">
-                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">Preguntas Frecuentes</h2>
+                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">
+                  {language === 'pt' ? 'Perguntas Frequentes' : language === 'en' ? 'Frequently Asked Questions' : 'Preguntas Frecuentes'}
+                </h2>
                 <div className="space-y-4">
-                  {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
+                  {fullPost.faqs.map((faq: BlogFAQ, index: number) => (
                     <Card key={index} data-testid={`card-faq-${index}`}>
                       <CardContent className="p-4">
-                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{faq.question}</h3>
-                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{faq.answer}</p>
+                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{getTextForLang(faq.question, language)}</h3>
+                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{getTextForLang(faq.answer, language)}</p>
                       </CardContent>
                     </Card>
                   ))}

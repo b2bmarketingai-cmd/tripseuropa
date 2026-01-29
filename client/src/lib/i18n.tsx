@@ -1170,9 +1170,6 @@ const translations: Record<Language, Record<string, string>> = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('language') as Language;
   const [location] = useLocation();
   
   const [language, setLanguage] = useState<Language>(() => {
@@ -1203,9 +1200,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         setLanguage(newLang);
       }
     }
-  }, [location]);}, [language]);
+  }, [location]);
 
-    // Save language to localStorage
+  // Save language to localStorage
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);

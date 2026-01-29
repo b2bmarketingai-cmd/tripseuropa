@@ -22,6 +22,7 @@ import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
 import { DestinationGrid } from "@/components/DestinationGrid";
 import { ContactSupportModal } from "@/components/ContactSupportModal";
 import { BlogHighlights } from "@/components/BlogHighlights";
+import { SEOContent } from "@/components/SEOContent";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -81,6 +82,7 @@ export default function Home() {
       <UrgencyBanner />
       <Header />
       <HeroCarousel />
+      <SEOContent />
       <HeroFlightSearch />
       <TopOffers />
       <DestinationGrid />

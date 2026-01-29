@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
 import { ABTestingProvider } from "@/lib/abTesting";
+import { SkipToContent } from "@/components/SkipToContent";
 
 function LoadingFallback() {
   return (
@@ -459,10 +460,13 @@ function App() {
       <I18nProvider>
         <ABTestingProvider>
           <TooltipProvider>
+            <SkipToContent />
             <ScrollToTop />
             <Toaster />
             <Suspense fallback={<LoadingFallback />}>
-              <Router />
+              <main id="main-content" role="main">
+                <Router />
+              </main>
             </Suspense>
           </TooltipProvider>
         </ABTestingProvider>

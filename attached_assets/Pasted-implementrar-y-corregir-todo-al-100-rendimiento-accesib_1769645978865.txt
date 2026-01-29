@@ -1,0 +1,1473 @@
+implementrar y corregir todo al 100 rendimiento accesibilidad y practicas remomendadas realiza el informe y guardarlo en la carpeta de descarga https://pagespeed.web.dev/analysis/https-tripseuropa-com/5rg6yf43l3?form_factor=desktop 🖥️ INFORME DESKTOP - OPTIMIZACIÓN 100/100 EN TODAS LAS MÉTRICAS
+
+Análisis PageSpeed Insights Desktop y Plan de Acción Completo
+Fecha: 28 de Enero 2026
+Sitio Web: https://tripseuropa.com
+Dispositivo: Desktop (Emulated)
+Puntuaciones Actuales:
+
+🟢 Rendimiento: 89/100 → Objetivo: 100/100 (+11 puntos)
+⚠️ Accesibilidad: 96/100 → Objetivo: 100/100 (+4 puntos)
+✅ Prácticas Recomendadas: 100/100 → Mantener
+🟡 SEO: 89/100 → Objetivo: 100/100 (+11 puntos)
+Auditor: Claude Sonnet 4.5
+Referencia: PageSpeed Desktop Report
+
+📋 TABLA DE CONTENIDOS
+Resumen Ejecutivo
+Core Web Vitals Desktop
+Problemas de Rendimiento
+Problemas de Accesibilidad
+Optimizaciones SEO
+Seguridad
+Plan de Implementación
+Código de Reparación
+Validación y Testing
+🎯 1. RESUMEN EJECUTIVO
+Estado Actual Desktop vs Mobile
+Métrica	Desktop	Mobile	Diferencia
+Rendimiento	89	85	+4 mejor
+FCP	0.8s	3.7s	4.6x más rápido
+LCP	1.3s	ERROR	✅ funciona
+TBT	200ms	ERROR	✅ funciona
+CLS	0	0	= perfecto
+Speed Index	1.3s	5.1s	3.9x más rápido
+Análisis:
+Desktop está significativamente mejor que Mobile, pero todavía hay optimizaciones críticas para llegar a 100/100.
+
+Gap Analysis - ¿Qué falta para 100/100?
+Rendimiento (89 → 100): -11 puntos
+
+Problema	Impacto	Ahorro
+Solicitudes bloqueando renderizado	🔴 Alto	380ms
+Redistribución forzada (forced reflow)	🔴 Alto	402ms
+Retraso carga recursos LCP	🟡 Medio	1020ms
+JavaScript sin usar	🟡 Medio	101KB
+CSS sin usar	🟡 Medio	15KB
+4 tareas largas hilo principal	🟡 Medio	TBT 200ms
+Total ahorro potencial: 1.8s en LCP + 200ms en TBT = Rendimiento 100/100
+
+Accesibilidad (96 → 100): -4 puntos
+
+❌ 12 botones sin aria-label
+❌ 14 elementos contraste insuficiente
+❌ 30 touch targets pequeños (desktop también importa)
+❌ Sin <main> landmark
+SEO (89 → 100): -11 puntos
+
+Requiere análisis específico (no incluido en reporte actual)
+📊 2. CORE WEB VITALS DESKTOP
+Métricas Actuales vs Objetivos
+Métrica	Actual	Objetivo	Estado	Gap
+First Contentful Paint	0.8s	<0.9s	✅ EXCELENTE	+0.1s margen
+Largest Contentful Paint	1.3s	<1.2s	⚠️ CASI	-0.1s
+Total Blocking Time	200ms	<150ms	⚠️ CASI	-50ms
+Cumulative Layout Shift	0	<0.1	✅ PERFECTO	N/A
+Speed Index	1.3s	<1.2s	⚠️ CASI	-0.1s
+Desglose LCP Desktop (1.3s)
+Subparte	Duración	% del Total	Optimizable
+Time to First Byte (TTFB)	0ms	0%	✅ Perfecto
+Retraso carga recursos	1020ms	78%	🔴 CRÍTICO
+Duración carga recurso	20ms	2%	✅ Bien
+Retraso renderizado	320ms	25%	🟡 MEJORAR
+Análisis:
+El 78% del LCP está en el retraso de carga de recursos. Si eliminamos este retraso, LCP pasaría de 1.3s a ~0.3s.
+
+Elemento LCP Detectado
+<img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=1200&a..."
+     alt="España, Portugal y Marruecos"
+     class="w-full h-full object-cover"
+     loading="eager"
+     fetchpriority="high"
+     decoding="sync"
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer">
+
+Estado:
+
+✅ loading="eager" aplicado
+✅ fetchpriority="high" aplicado
+✅ Visible en HTML inicial
+❌ Retraso de 1020ms en carga (PROBLEMA PRINCIPAL)
+⚡ 3. PROBLEMAS DE RENDIMIENTO DESKTOP
+3.1. Solicitudes Bloqueando Renderizado (380ms)
+Problema CRÍTICO:
+
+Ahorro estimado: 380ms
+Bloquean FCP y LCP
+
+Recursos bloqueantes:
+
+CSS Principal (90ms)
+
+URL: /assets/index-BVz631PN.css
+Tamaño: 19.8 KB
+Bloqueo: 90ms
+Google Fonts (210ms)
+
+URL: https://fonts.googleapis.com/css2?family=...
+Tamaño: 1.7 KB
+Bloqueo: 210ms
+SOLUCIÓN CRÍTICA:
+
+A) Eliminar Bloqueo de Google Fonts
+Archivo: client/index.html
+
+<!-- ❌ ANTES (BLOQUEANTE): -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin" rel="stylesheet">
+
+<!-- ✅ DESPUÉS (NO BLOQUEANTE): -->
+<!-- Preconnect ANTES de cualquier cosa -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload de fonts críticos -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin">
+
+<!-- Load async con media swap trick -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'">
+
+<!-- Fallback sin JS -->
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin" rel="stylesheet">
+</noscript>
+
+<!-- Font loading optimization -->
+<style>
+  /* FOIT prevention - use system fonts until custom fonts load */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* Apply custom fonts when loaded */
+  .fonts-loaded body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+</style>
+
+<!-- Font loading detection -->
+<script>
+  // Detect when fonts are loaded
+  if ('fonts' in document) {
+    Promise.all([
+      document.fonts.load('400 1em Lato'),
+      document.fonts.load('700 1em Lato'),
+      document.fonts.load('400 1em Playfair Display'),
+      document.fonts.load('700 1em Playfair Display')
+    ]).then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+  }
+</script>
+
+Resultado esperado: -210ms (de 380ms a 170ms)
+
+B) Inline Critical CSS
+Script: scripts/inline-critical-css.js
+
+/**
+ * Inline Critical CSS - Elimina bloqueo de CSS
+ */
+const critical = require('critical');
+const fs = require('fs');
+const path = require('path');
+
+async function inlineCriticalCSS() {
+  try {
+    const { html } = await critical.generate({
+      base: 'dist/',
+      src: 'index.html',
+      target: {
+        html: 'index-critical.html',
+        css: 'critical.css',
+      },
+      width: 1920,
+      height: 1080,
+      inline: true,
+      extract: true,
+      minify: true,
+      dimensions: [
+        {
+          width: 1920,
+          height: 1080
+        },
+        {
+          width: 1366,
+          height: 768
+        }
+      ]
+    });
+
+    // Reemplazar index.html original
+    fs.writeFileSync(
+      path.join(__dirname, '../dist/index.html'),
+      html
+    );
+
+    console.log('✅ Critical CSS inlined successfully');
+  } catch (error) {
+    console.error('❌ Error inlining critical CSS:', error);
+    process.exit(1);
+  }
+}
+
+inlineCriticalCSS();
+
+Instalar dependencia:
+
+npm install --save-dev critical
+
+Añadir a package.json:
+
+{
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "node scripts/inline-critical-css.js"
+  }
+}
+
+Resultado esperado: -90ms adicional = Total -300ms de 380ms
+
+3.2. Redistribución Forzada (402ms)
+Problema CRÍTICO:
+
+Tiempo total perdido: 402ms
+Causa: JavaScript consultando geometría DOM después de modificaciones
+
+Llamadas problemáticas:
+
+/assets/index-CMFm0AFm.js:3:10613 - 203ms
+/assets/index-CMFm0AFm.js:105:80374 - 199ms
+SOLUCIÓN: Implementar FastDOM
+
+Instalar:
+
+npm install fastdom
+
+Crear: client/src/lib/fastdom.ts
+
+/**
+ * FastDOM - Elimina forced reflows automáticamente
+ * Agrupa todas las lecturas y escrituras del DOM
+ */
+import fastdom from 'fastdom';
+
+export class DOMScheduler {
+  /**
+   * Schedule a DOM measurement (read)
+   */
+  static measure<T>(callback: () => T): Promise<T> {
+    return new Promise((resolve) => {
+      fastdom.measure(() => {
+        resolve(callback());
+      });
+    });
+  }
+
+  /**
+   * Schedule a DOM mutation (write)
+   */
+  static mutate(callback: () => void): Promise<void> {
+    return new Promise((resolve) => {
+      fastdom.mutate(() => {
+        callback();
+        resolve();
+      });
+    });
+  }
+
+  /**
+   * Batch multiple measurements and mutations
+   */
+  static async batch<T>(
+    measurements: Array<() => T>,
+    mutations: Array<(results: T[]) => void>
+  ): Promise<void> {
+    // Measure all first
+    const results = await Promise.all(
+      measurements.map(m => this.measure(m))
+    );
+
+    // Then mutate all
+    await Promise.all(
+      mutations.map(mut => this.mutate(() => mut(results)))
+    );
+  }
+}
+
+/**
+ * React Hook para operaciones DOM optimizadas
+ */
+import { useEffect } from 'react';
+
+export function useOptimizedLayout(
+  measure: () => any,
+  mutate: (measured: any) => void,
+  deps: any[] = []
+) {
+  useEffect(() => {
+    let mounted = true;
+
+    DOMScheduler.measure(measure).then((result) => {
+      if (!mounted) return;
+      return DOMScheduler.mutate(() => mutate(result));
+    });
+
+    return () => {
+      mounted = false;
+    };
+  }, deps);
+}
+
+Usar en componentes problemáticos:
+
+import { DOMScheduler, useOptimizedLayout } from '@/lib/fastdom';
+
+// EJEMPLO 1: En resize handlers
+function MyComponent() {
+  useOptimizedLayout(
+    // Measure phase
+    () => {
+      const width = containerRef.current?.offsetWidth || 0;
+      const height = containerRef.current?.offsetHeight || 0;
+      return { width, height };
+    },
+    // Mutate phase
+    ({ width, height }) => {
+      if (itemRef.current) {
+        itemRef.current.style.width = `${width}px`;
+        itemRef.current.style.height = `${height}px`;
+      }
+    },
+    [] // Solo en mount
+  );
+
+  return <div ref={containerRef}>...</div>;
+}
+
+// EJEMPLO 2: En scroll handlers
+const handleScroll = async () => {
+  const scrollTop = await DOMScheduler.measure(() => window.scrollY);
+
+  await DOMScheduler.mutate(() => {
+    header.style.transform = `translateY(${scrollTop > 100 ? '-100%' : '0'})`;
+  });
+};
+
+Resultado esperado: -402ms en forced reflows = TBT de 200ms a ~0ms
+
+3.3. Retraso de Carga de Recursos LCP (1020ms)
+Problema:
+La imagen LCP tarda 1020ms en empezar a cargar
+
+Árbol de dependencia:
+
+Navegación inicial (219ms)
+  → /assets/index-CMFm0AFm.js (459ms)
+    → /assets/index-BVz631PN.css (285ms)
+      → Google Fonts (293ms)
+        → Imagen LCP (1020ms) ← AQUÍ ESTÁ EL PROBLEMA
+
+Causa raíz:
+La imagen LCP solo empieza a cargar después de que CSS y fonts se descarguen.
+
+SOLUCIÓN: Preload de imagen LCP con prioridad máxima
+
+Archivo: client/index.html
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+
+  <!-- PRIORIDAD 1: Preconnect a orígenes críticos -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- PRIORIDAD 2: Preload imagen LCP (ANTES DE CSS) -->
+  <link rel="preload"
+        as="image"
+        href="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=1200&auto=format&fit=crop&fm=webp"
+        fetchpriority="high"
+        imagesrcset="
+          https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=75&w=400&auto=format&fit=crop&fm=webp 400w,
+          https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=70&w=800&auto=format&fit=crop&fm=webp 800w,
+          https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=1200&auto=format&fit=crop&fm=webp 1200w,
+          https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=55&w=1920&auto=format&fit=crop&fm=webp 1920w"
+        imagesizes="100vw"
+        crossorigin="anonymous">
+
+  <!-- PRIORIDAD 3: Critical CSS inline -->
+  <style>
+    /* Critical CSS aquí (generado por script) */
+  </style>
+
+  <!-- PRIORIDAD 4: Resto de recursos -->
+  <link rel="preload" as="style" href="/assets/index-BVz631PN.css">
+  <link rel="stylesheet" href="/assets/index-BVz631PN.css" media="print" onload="this.media='all'">
+</head>
+
+Resultado esperado: Retraso de 1020ms → ~200ms = -820ms en LCP
+
+LCP final esperado: 1.3s - 0.82s = 0.48s (EXCELENTE)
+
+3.4. JavaScript Sin Usar (101 KB)
+Problema:
+
+Archivo: /assets/index-CMFm0AFm.js
+Tamaño total: 267.2 KB
+Sin usar: 100.9 KB (38%)
+
+SOLUCIÓN: Code Splitting Agresivo + Tree Shaking
+
+A) Configurar Tree Shaking en Vite
+Archivo: vite.config.ts
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+
+export default defineConfig({
+  plugins: [
+    react(),
+    // Visualizar bundle para detectar imports grandes
+    visualizer({
+      filename: './dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true
+    })
+  ],
+  build: {
+    target: 'es2020',
+    minify: 'terser',
+
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3, // 3 pasadas de optimización
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true
+      }
+    },
+
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('wouter')) {
+              return 'router-vendor';
+            }
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
+            }
+            return 'vendor';
+          }
+
+          // UI components chunk
+          if (id.includes('/components/ui/')) {
+            return 'ui-components';
+          }
+
+          // Utils chunk
+          if (id.includes('/lib/') || id.includes('/hooks/')) {
+            return 'utils';
+          }
+        },
+
+        // Optimal chunk naming
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      },
+
+      // Tree shaking optimization
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        unknownGlobalSideEffects: false
+      }
+    },
+
+    // Chunk size optimization
+    chunkSizeWarningLimit: 400,
+
+    // Enable source maps only for production debugging
+    sourcemap: false
+  },
+
+  // Development optimizations
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'wouter'],
+    exclude: ['lucide-react']
+  }
+});
+
+Instalar dependencias:
+
+npm install --save-dev rollup-plugin-visualizer
+
+B) Lazy Loading de Componentes
+Archivo: client/src/pages/Home.tsx
+
+import { lazy, Suspense } from 'react';
+import { HeroCarousel } from '@/components/HeroCarousel';
+import { HomePageSEO } from '@/components/SEOHead';
+
+// Lazy load componentes below-the-fold
+const SearchBar = lazy(() => import('@/components/SearchBar'));
+const DestinationGrid = lazy(() => import('@/components/DestinationGrid'));
+const SpecialOffers = lazy(() => import('@/components/SpecialOffers'));
+const ReserveSpot = lazy(() => import('@/components/ReserveSpot'));
+const FeaturedPackages = lazy(() => import('@/components/FeaturedPackages'));
+const Testimonials = lazy(() => import('@/components/Testimonials'));
+const WhyChoose = lazy(() => import('@/components/WhyChoose'));
+const TravelStories = lazy(() => import('@/components/TravelStories'));
+const FAQ = lazy(() => import('@/components/FAQ'));
+const Newsletter = lazy(() => import('@/components/Newsletter'));
+
+function LoadingSkeleton() {
+  return (
+    <div className="py-16">
+      <div className="container">
+        <div className="animate-pulse space-y-4">
+          <div className="h-8 bg-gray-200 rounded w-1/4"></div>
+          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <HomePageSEO />
+
+      {/* Above the fold - carga inmediata */}
+      <HeroCarousel />
+
+      {/* Below the fold - lazy load */}
+      <Suspense fallback={<LoadingSkeleton />}>
+        <SearchBar />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <DestinationGrid />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <SpecialOffers />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <ReserveSpot />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <FeaturedPackages />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <Testimonials />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <WhyChoose />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <TravelStories />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <FAQ />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSkeleton />}>
+        <Newsletter />
+      </Suspense>
+    </>
+  );
+}
+
+C) Tree Shaking de Lucide Icons
+Problema: Importar de lucide-react importa TODOS los iconos (700+ icons = 200KB)
+
+// ❌ ANTES (importa TODO):
+import { Home, Search, User, Mail, Calendar, MapPin } from 'lucide-react';
+
+// ✅ DESPUÉS (tree shaking efectivo):
+import Home from 'lucide-react/dist/esm/icons/home';
+import Search from 'lucide-react/dist/esm/icons/search';
+import User from 'lucide-react/dist/esm/icons/user';
+import Mail from 'lucide-react/dist/esm/icons/mail';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+
+Crear helper para imports:
+
+Archivo: client/src/lib/icons.ts
+
+/**
+ * Icon imports - Optimizado para tree shaking
+ * Importar solo los iconos necesarios
+ */
+
+// Navigation icons
+export { default as Home } from 'lucide-react/dist/esm/icons/home';
+export { default as Search } from 'lucide-react/dist/esm/icons/search';
+export { default as Menu } from 'lucide-react/dist/esm/icons/menu';
+export { default as X } from 'lucide-react/dist/esm/icons/x';
+
+// User icons
+export { default as User } from 'lucide-react/dist/esm/icons/user';
+export { default as Mail } from 'lucide-react/dist/esm/icons/mail';
+export { default as Phone } from 'lucide-react/dist/esm/icons/phone';
+
+// Arrow icons
+export { default as ChevronLeft } from 'lucide-react/dist/esm/icons/chevron-left';
+export { default as ChevronRight } from 'lucide-react/dist/esm/icons/chevron-right';
+export { default as ChevronDown } from 'lucide-react/dist/esm/icons/chevron-down';
+export { default as ArrowRight } from 'lucide-react/dist/esm/icons/arrow-right';
+
+// Feature icons
+export { default as Calendar } from 'lucide-react/dist/esm/icons/calendar';
+export { default as MapPin } from 'lucide-react/dist/esm/icons/map-pin';
+export { default as Globe } from 'lucide-react/dist/esm/icons/globe';
+export { default as Star } from 'lucide-react/dist/esm/icons/star';
+export { default as Heart } from 'lucide-react/dist/esm/icons/heart';
+
+// Social icons
+export { default as Facebook } from 'lucide-react/dist/esm/icons/facebook';
+export { default as Twitter } from 'lucide-react/dist/esm/icons/twitter';
+export { default as Instagram } from 'lucide-react/dist/esm/icons/instagram';
+export { default as Linkedin } from 'lucide-react/dist/esm/icons/linkedin';
+
+// Action icons
+export { default as Send } from 'lucide-react/dist/esm/icons/send';
+export { default as Download } from 'lucide-react/dist/esm/icons/download';
+export { default as Upload } from 'lucide-react/dist/esm/icons/upload';
+export { default as Play } from 'lucide-react/dist/esm/icons/play';
+
+Usar en componentes:
+
+import { Home, Search, User, Mail } from '@/lib/icons';
+
+Resultado esperado: -50KB de JavaScript sin usar
+
+3.5. CSS Sin Usar (15 KB)
+Problema:
+
+Archivo: /assets/index-BVz631PN.css
+Tamaño: 19.2 KB
+Sin usar: 14.7 KB (76%)
+
+SOLUCIÓN: PurgeCSS Automático
+
+Archivo: scripts/purge-unused-css.js
+
+/**
+ * PurgeCSS - Elimina CSS no usado automáticamente
+ */
+const { PurgeCSS } = require('purgecss');
+const fs = require('fs');
+const glob = require('glob');
+const path = require('path');
+
+async function purgeUnusedCSS() {
+  // Encontrar todos los archivos CSS en dist
+  const cssFiles = glob.sync('./dist/assets/*.css');
+
+  if (cssFiles.length === 0) {
+    console.log('⚠️  No CSS files found in dist/assets');
+    return;
+  }
+
+  console.log(`\n🎨 Purging unused CSS from ${cssFiles.length} file(s)...\n`);
+
+  for (const cssFile of cssFiles) {
+    const originalSize = fs.statSync(cssFile).size;
+
+    const purgeCSSResults = await new PurgeCSS().purge({
+      content: [
+        './dist/**/*.html',
+        './dist/**/*.js',
+        './client/src/**/*.tsx',
+        './client/src/**/*.ts',
+        './client/index.html'
+      ],
+      css: [cssFile],
+
+      // Safelist - clases que NUNCA deben purgarse
+      safelist: {
+        standard: [
+          'html',
+          'body',
+          /^data-/,
+          /^aria-/,
+          /^role-/
+        ],
+        deep: [
+          // Componentes dinámicos
+          /toast/,
+          /dialog/,
+          /popover/,
+          /dropdown/,
+          /tooltip/,
+
+          // Animaciones
+          /animate-/,
+          /transition-/,
+          /duration-/,
+          /ease-/,
+
+          // Estados
+          /hover:/,
+          /focus:/,
+          /active:/,
+          /disabled:/,
+
+          // Dark mode
+          /dark:/,
+
+          // Responsive
+          /sm:/,
+          /md:/,
+          /lg:/,
+          /xl:/,
+          /2xl:/
+        ],
+        greedy: [
+          /motion-/,
+          /scroll-/
+        ]
+      },
+
+      // Opciones
+      variables: true,    // Mantener CSS custom properties
+      keyframes: true,    // Mantener @keyframes
+      fontFace: true,     // Mantener @font-face
+      rejected: false,    // No mostrar CSS eliminado
+      rejectedCss: false
+    });
+
+    const purgedCSS = purgeCSSResults[0].css;
+
+    // Sobrescribir archivo
+    fs.writeFileSync(cssFile, purgedCSS);
+
+    const newSize = Buffer.byteLength(purgedCSS);
+    const savings = ((1 - newSize / originalSize) * 100).toFixed(1);
+    const savedKB = ((originalSize - newSize) / 1024).toFixed(1);
+
+    console.log(`✅ ${path.basename(cssFile)}`);
+    console.log(`   Original: ${(originalSize / 1024).toFixed(1)} KB`);
+    console.log(`   Purged:   ${(newSize / 1024).toFixed(1)} KB`);
+    console.log(`   Saved:    ${savedKB} KB (${savings}% reduction)\n`);
+  }
+
+  console.log('✨ CSS purge completed!\n');
+}
+
+purgeUnusedCSS().catch((error) => {
+  console.error('❌ Error purging CSS:', error);
+  process.exit(1);
+});
+
+Instalar dependencia:
+
+npm install --save-dev purgecss
+
+Integrar en build:
+
+{
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "node scripts/purge-unused-css.js && node scripts/inline-critical-css.js"
+  }
+}
+
+Resultado esperado: 19.2 KB → 4.5 KB = -14.7 KB CSS
+
+3.6. Tareas Largas del Hilo Principal (200ms TBT)
+Problema:
+4 tareas largas detectadas:
+
+Tarea 1: 953ms (240ms bloqueante)
+
+URL: /assets/index-CMFm0AFm.js
+Inicio: 390ms
+Tarea 2: 233ms (87ms bloqueante)
+
+URL: /assets/index-CMFm0AFm.js
+Inicio: 1193ms
+Tarea 3: 63ms (no bloqueante)
+
+URL: /assets/index-CMFm0AFm.js
+Tarea 4: 415ms (87ms bloqueante)
+
+No atribuible
+Total TBT: 200ms (240ms + 87ms - overhead)
+
+SOLUCIÓN: Code Splitting + Scheduler API
+
+Crear: client/src/lib/scheduler.ts
+
+/**
+ * Task Scheduler - Divide tareas pesadas en chunks pequeños
+ * Usa Scheduler API (si disponible) o requestIdleCallback
+ */
+
+interface SchedulerOptions {
+  priority?: 'user-blocking' | 'user-visible' | 'background';
+  signal?: AbortSignal;
+}
+
+class TaskScheduler {
+  /**
+   * Ejecutar tarea con prioridad
+   */
+  async schedule(
+    task: () => void | Promise<void>,
+    options: SchedulerOptions = {}
+  ): Promise<void> {
+    const { priority = 'user-visible', signal } = options;
+
+    // Usar Scheduler API si está disponible
+    if ('scheduler' in window && 'postTask' in (window as any).scheduler) {
+      await (window as any).scheduler.postTask(task, { priority, signal });
+      return;
+    }
+
+    // Fallback a requestIdleCallback
+    if ('requestIdleCallback' in window) {
+      return new Promise((resolve) => {
+        requestIdleCallback(
+          () => {
+            const result = task();
+            if (result instanceof Promise) {
+              result.then(resolve);
+            } else {
+              resolve();
+            }
+          },
+          { timeout: 1000 }
+        );
+      });
+    }
+
+    // Fallback a setTimeout
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const result = task();
+        if (result instanceof Promise) {
+          result.then(resolve);
+        } else {
+          resolve();
+        }
+      }, 0);
+    });
+  }
+
+  /**
+   * Dividir array grande en chunks y procesarlos
+   */
+  async processInChunks<T>(
+    items: T[],
+    processor: (item: T, index: number) => void,
+    chunkSize: number = 50
+  ): Promise<void> {
+    for (let i = 0; i < items.length; i += chunkSize) {
+      await this.schedule(() => {
+        const chunk = items.slice(i, i + chunkSize);
+        chunk.forEach((item, index) => processor(item, i + index));
+      }, { priority: 'background' });
+    }
+  }
+
+  /**
+   * Yield to main thread
+   */
+  async yieldToMain(): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(resolve, 0);
+    });
+  }
+}
+
+export const scheduler = new TaskScheduler();
+
+/**
+ * React Hook para tareas pesadas
+ */
+import { useEffect, useState } from 'react';
+
+export function useScheduledTask<T>(
+  task: () => T | Promise<T>,
+  deps: any[] = []
+): T | undefined {
+  const [result, setResult] = useState<T | undefined>();
+
+  useEffect(() => {
+    const abortController = new AbortController();
+
+    scheduler.schedule(
+      async () => {
+        const value = await task();
+        if (!abortController.signal.aborted) {
+          setResult(value);
+        }
+      },
+      { signal: abortController.signal }
+    );
+
+    return () => abortController.abort();
+  }, deps);
+
+  return result;
+}
+
+Usar en componentes pesados:
+
+import { scheduler, useScheduledTask } from '@/lib/scheduler';
+
+// EJEMPLO 1: Procesar lista grande
+function DestinationGrid({ destinations }) {
+  const [renderedItems, setRenderedItems] = useState([]);
+
+  useEffect(() => {
+    // Renderizar en chunks para no bloquear
+    scheduler.processInChunks(
+      destinations,
+      (destination) => {
+        setRenderedItems(prev => [...prev, destination]);
+      },
+      20 // 20 items por chunk
+    );
+  }, [destinations]);
+
+  return (
+    <div className="grid">
+      {renderedItems.map(dest => (
+        <DestinationCard key={dest.id} destination={dest} />
+      ))}
+    </div>
+  );
+}
+
+// EJEMPLO 2: Inicialización pesada
+function App() {
+  useScheduledTask(async () => {
+    // Inicializar analytics (no bloqueante)
+    await initAnalytics();
+  });
+
+  useScheduledTask(async () => {
+    // Cargar preferencias usuario (no bloqueante)
+    await loadUserPreferences();
+  });
+
+  return <Routes />;
+}
+
+// EJEMPLO 3: Yielding manual
+async function processLargeData(data) {
+  for (let i = 0; i < data.length; i++) {
+    // Procesar item
+    processItem(data[i]);
+
+    // Yield cada 50 items
+    if (i % 50 === 0) {
+      await scheduler.yieldToMain();
+    }
+  }
+}
+
+Resultado esperado: TBT de 200ms → <50ms
+
+♿ 4. PROBLEMAS DE ACCESIBILIDAD
+4.1. Botones Sin Nombres Accesibles (12 elementos)
+Mismos problemas que en Mobile:
+
+Solución rápida con script:
+
+Crear: scripts/fix-aria-labels.ts
+
+/**
+ * Fix ARIA Labels - Añade aria-label a botones sin nombre
+ */
+import * as fs from 'fs';
+import * as path from 'path';
+import * as glob from 'glob';
+
+interface ButtonFix {
+  dataTestid: string;
+  ariaLabel: string;
+  srOnlyText: string;
+}
+
+const buttonFixes: ButtonFix[] = [
+  {
+    dataTestid: 'button-offers-prev',
+    ariaLabel: 'Ver ofertas anteriores',
+    srOnlyText: 'Anterior'
+  },
+  {
+    dataTestid: 'button-offers-next',
+    ariaLabel: 'Ver siguientes ofertas',
+    srOnlyText: 'Siguiente'
+  },
+  {
+    dataTestid: 'button-reserve-prev',
+    ariaLabel: 'Ver paquetes anteriores para reservar',
+    srOnlyText: 'Anterior'
+  },
+  {
+    dataTestid: 'button-reserve-next',
+    ariaLabel: 'Ver siguientes paquetes para reservar',
+    srOnlyText: 'Siguiente'
+  },
+  {
+    dataTestid: 'button-favorites-prev',
+    ariaLabel: 'Ver favoritos anteriores',
+    srOnlyText: 'Anterior'
+  },
+  {
+    dataTestid: 'button-favorites-next',
+    ariaLabel: 'Ver siguientes favoritos',
+    srOnlyText: 'Siguiente'
+  },
+  {
+    dataTestid: 'button-play-video',
+    ariaLabel: 'Reproducir video de presentación',
+    srOnlyText: 'Reproducir'
+  },
+  {
+    dataTestid: 'button-story-prev',
+    ariaLabel: 'Ver historia anterior',
+    srOnlyText: 'Anterior'
+  },
+  {
+    dataTestid: 'button-story-next',
+    ariaLabel: 'Ver siguiente historia',
+    srOnlyText: 'Siguiente'
+  },
+  {
+    dataTestid: 'button-chatbot-send',
+    ariaLabel: 'Enviar mensaje al asistente virtual',
+    srOnlyText: 'Enviar'
+  }
+];
+
+function fixAriaLabels() {
+  const files = glob.sync('./client/src/**/*.{tsx,jsx}');
+
+  let totalFixes = 0;
+
+  files.forEach(file => {
+    let content = fs.readFileSync(file, 'utf-8');
+    let modified = false;
+
+    buttonFixes.forEach(({ dataTestid, ariaLabel, srOnlyText }) => {
+      // Buscar botón por data-testid
+      const buttonRegex = new RegExp(
+        `<button([^>]*?)data-testid="${dataTestid}"([^>]*?)>`,
+        'g'
+      );
+
+      content = content.replace(buttonRegex, (match, before, after) => {
+        // Si ya tiene aria-label, skip
+        if (match.includes('aria-label')) {
+          return match;
+        }
+
+        modified = true;
+        totalFixes++;
+
+        // Añadir aria-label
+        return `<button${before}data-testid="${dataTestid}"${after} aria-label="${ariaLabel}">`;
+      });
+    });
+
+    if (modified) {
+      fs.writeFileSync(file, content);
+      console.log(`✅ Fixed: ${path.relative(process.cwd(), file)}`);
+    }
+  });
+
+  console.log(`\n✨ Total fixes applied: ${totalFixes}`);
+}
+
+fixAriaLabels();
+
+Ejecutar:
+
+npx tsx scripts/fix-aria-labels.ts
+
+4.2. Contraste Insuficiente (14 elementos)
+Solución: Actualizar colores en Tailwind
+
+Archivo: tailwind.config.js
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        // ❌ ANTES: #c9a227 (contraste 3.8:1)
+        // ✅ DESPUÉS: #a68610 (contraste 7.2:1 - AAA)
+        accent: {
+          DEFAULT: '#a68610',
+          50: '#fdf8e8',
+          100: '#fbefc4',
+          200: '#f7e08c',
+          300: '#f2cd54',
+          400: '#edb828',
+          500: '#dda210',
+          600: '#bf7d0a',
+          700: '#a68610', // <- Principal
+          800: '#86580c',
+          900: '#6f470f',
+          950: '#412503'
+        },
+
+        // Footer text
+        'footer-text': 'rgba(255, 255, 255, 0.9)', // Contraste 15:1
+        'footer-muted': 'rgba(255, 255, 255, 0.7)' // Contraste 10:1
+      }
+    }
+  }
+}
+
+Reemplazar en components:
+
+# Script de reemplazo global
+find ./client/src -type f \( -name "*.tsx" -o -name "*.ts" \) -exec sed -i 's/text-white\/40/text-footer-text/g' {} +
+find ./client/src -type f \( -name "*.tsx" -o -name "*.ts" \) -exec sed -i 's/text-white\/60/text-footer-muted/g' {} +
+
+4.3. Touch Targets Pequeños (30 elementos)
+Solución ya documentada en informe Mobile - aplicar la misma
+
+Crear componente CarouselDot con touch target de 48px × 48px.
+
+4.4. Sin Punto de Referencia Principal
+Solución: Añadir landmarks semánticos
+
+Archivo: client/src/App.tsx
+
+export default function App() {
+  return (
+    <>
+      <SkipToContent />
+
+      <header role="banner">
+        <Navbar />
+      </header>
+
+      <main id="main-content" role="main">
+        <Switch>
+          {/* Routes */}
+        </Switch>
+      </main>
+
+      <footer role="contentinfo">
+        <Footer />
+      </footer>
+    </>
+  );
+}
+
+🔍 5. OPTIMIZACIONES SEO (89 → 100)
+5.1. Problemas SEO Detectados
+Pendientes de análisis específico:
+
+Sitemap.xml (ya creado)
+Meta tags optimization
+Schema.org markup (ya implementado)
+Internal linking
+Content optimization
+Acciones recomendadas:
+
+Verificar sitemap.xml generado correctamente
+Submit a Google Search Console
+Verificar hreflang tags
+Optimizar títulos y descripciones
+Mejorar internal linking
+🔒 6. SEGURIDAD
+Mismos problemas que Mobile:
+
+Sin CSP
+Sin HSTS preload
+Sin COOP
+Sin XFO
+Sin Trusted Types
+Soluciones ya documentadas en informe Mobile.
+
+📅 7. PLAN DE IMPLEMENTACIÓN
+Fase 1: Rendimiento Desktop (4-5 horas)
+Prioridad 1: Eliminar Render Blocking (1h)
+
+✅ Fonts async loading
+✅ Critical CSS inline
+Ahorro esperado: -300ms
+Prioridad 2: Eliminar Forced Reflows (1.5h)
+
+✅ Implementar FastDOM
+✅ Refactor operaciones DOM
+Ahorro esperado: -402ms TBT
+Prioridad 3: Preload LCP Image (30min)
+
+✅ Preconnect Unsplash
+✅ Preload con srcset
+Ahorro esperado: -820ms LCP
+Prioridad 4: Code Splitting (1.5h)
+
+✅ Tree shaking Lucide
+✅ Lazy loading pages
+✅ Manual chunks config
+Ahorro esperado: -50KB JS
+Prioridad 5: PurgeCSS (30min)
+
+✅ Script automatizado
+✅ Integrar en build
+Ahorro esperado: -14.7KB CSS
+Resultado Esperado Fase 1:
+
+Rendimiento: 89 → 98-100
+FCP: 0.8s → 0.5s
+LCP: 1.3s → 0.5s
+TBT: 200ms → <50ms
+Speed Index: 1.3s → 0.7s
+Fase 2: Accesibilidad (1h)
+Prioridad 1: Fix ARIA Labels (20min)
+
+✅ Script automatizado
+✅ 12 botones corregidos
+Prioridad 2: Contraste (20min)
+
+✅ Actualizar Tailwind config
+✅ Reemplazo global
+Prioridad 3: Touch Targets (10min)
+
+✅ CarouselDot component
+Prioridad 4: Landmarks (10min)
+
+✅ <main>, <header>, <footer>
+Resultado Esperado Fase 2:
+
+Accesibilidad: 96 → 100
+Fase 3: Validación (30min)
+Tests:
+
+# Desktop
+lighthouse https://tripseuropa.com --form-factor=desktop --only-categories=performance,accessibility --view
+
+# Mobile (verificar no regression)
+lighthouse https://tripseuropa.com --form-factor=mobile --only-categories=performance,accessibility --view
+
+Criterios de Éxito:
+
+✅ Desktop Performance: 98+
+✅ Desktop Accessibility: 100
+✅ Mobile Performance: 95+ (sin regression)
+✅ Mobile Accessibility: 100
+💻 8. CÓDIGO DE REPARACIÓN COMPLETO
+8.1. Package.json Scripts
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "npm run optimize:all",
+    "optimize:all": "npm run purge:css && npm run inline:critical",
+    "purge:css": "node scripts/purge-unused-css.js",
+    "inline:critical": "node scripts/inline-critical-css.js",
+    "fix:aria": "npx tsx scripts/fix-aria-labels.ts",
+    "analyze": "vite build && open dist/stats.html",
+    "lighthouse:desktop": "lighthouse https://tripseuropa.com --form-factor=desktop --output=html --output-path=./reports/lighthouse-desktop.html --view",
+    "lighthouse:mobile": "lighthouse https://tripseuropa.com --form-factor=mobile --output=html --output-path=./reports/lighthouse-mobile.html --view",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "critical": "^6.0.0",
+    "fastdom": "^1.0.11",
+    "lighthouse": "^11.5.0",
+    "purgecss": "^5.0.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "terser": "^5.26.0",
+    "tsx": "^4.7.0",
+    "vite": "^5.0.11",
+    "vite-plugin-compression2": "^0.12.0"
+  }
+}
+
+8.2. Instalación de Dependencias
+# Instalar todas las dependencias necesarias
+npm install --save-dev \
+  critical \
+  fastdom \
+  lighthouse \
+  purgecss \
+  rollup-plugin-visualizer \
+  terser \
+  tsx \
+  vite-plugin-compression2
+
+✅ 9. VALIDACIÓN Y TESTING
+9.1. Checklist Pre-Deploy
+## Performance Desktop
+- [ ] FCP < 0.9s
+- [ ] LCP < 1.2s
+- [ ] TBT < 150ms
+- [ ] CLS < 0.1
+- [ ] Speed Index < 1.2s
+- [ ] Fonts loading async
+- [ ] Critical CSS inline
+- [ ] LCP image preloaded
+- [ ] FastDOM implemented
+- [ ] JS bundle < 200KB
+- [ ] CSS purged
+
+## Accessibility
+- [ ] All buttons have aria-label
+- [ ] Contrast 7:1+ everywhere
+- [ ] Touch targets 44px+
+- [ ] <main> landmark present
+- [ ] Heading hierarchy correct
+
+## SEO
+- [ ] Sitemap.xml exists
+- [ ] Meta tags optimized
+- [ ] Schema.org markup
+- [ ] Hreflang tags
+
+## Security
+- [ ] CSP configured
+- [ ] HSTS enabled
+- [ ] COOP/COEP headers
+
+## Testing
+- [ ] Lighthouse Desktop: 98+
+- [ ] Lighthouse Mobile: 95+
+- [ ] aXe DevTools: 0 errors
+- [ ] Manual keyboard test
+- [ ] Cross-browser test
+
+9.2. Comando de Validación Final
+#!/bin/bash
+
+echo "🔍 Running Final Validation..."
+echo "================================\n"
+
+# 1. Build optimizado
+echo "📦 Building optimized version..."
+npm run build
+
+# 2. Lighthouse Desktop
+echo "\n🖥️  Testing Desktop Performance..."
+npm run lighthouse:desktop
+
+# 3. Lighthouse Mobile
+echo "\n📱 Testing Mobile Performance..."
+npm run lighthouse:mobile
+
+# 4. Bundle analysis
+echo "\n📊 Analyzing Bundle Size..."
+npm run analyze
+
+echo "\n✨ Validation Complete!"
+echo "Check reports in ./reports/ directory"
+
+📈 MÉTRICAS ESPERADAS POST-IMPLEMENTACIÓN
+Desktop
+Métrica	Antes	Después	Mejora
+Rendimiento	89	98-100	+11 puntos
+FCP	0.8s	0.5s	-38%
+LCP	1.3s	0.5s	-62%
+TBT	200ms	<50ms	-75%
+Speed Index	1.3s	0.7s	-46%
+CLS	0	0	✅
+Accesibilidad	96	100	+4 puntos
+Bundle Size			
+JS	267KB	180KB	-33%
+CSS	19.2KB	4.5KB	-77%
+Total	2845KB	1200KB	-58%
+Mobile (sin regression)
+Métrica	Actual	Post-Desktop	Estado
+Rendimiento	85	95+	✅ Mejora
+FCP	3.7s	1.5s	✅ Mejora
+LCP	ERROR	2.0s	✅ Fixed
+Accesibilidad	96	100	✅ Mejora
+🎯 CONCLUSIONES
+Resumen de Optimizaciones
+Desktop está casi perfecto (89/100), solo necesita:
+
+Eliminar render blocking (-300ms)
+Eliminar forced reflows (-402ms TBT)
+Preload LCP image (-820ms LCP)
+Code splitting (-50KB JS)
+PurgeCSS (-14.7KB CSS)
+Fix accesibilidad (12 botones, contraste, landmarks)
+Total tiempo implementación: 5-6 horas
+
+Impacto esperado:
+
+Desktop: 89 → 98-100
+Mobile: 85 → 95+ (beneficio colateral)
+Conversión: +100-150%
+Bounce rate: -25%
+Prioridad de Ejecución
+HOY (Critical - 2h):
+
+Fonts async loading
+Preload LCP image
+Fix aria-labels
+MAÑANA (High - 3h):
+
+FastDOM implementation
+Code splitting
+PurgeCSS
+ESTA SEMANA (Medium - 1h):
+
+Landmarks semánticos
+Contrast fixes
+Validation testing
+Generado por: Claude Sonnet 4.5
+Fecha: 28 de Enero 2026
+Versión: 1.0 Desktop
+Estado: LISTO PARA IMPLEMENTACIÓN
+
+🚀 COMENZAR IMPLEMENTACIÓN DESKTOP AHORA 🚀
+
+Show more
+(no content)
+
+Update Todos
+ Fix render-blocking fonts in index.html
+ Preload LCP hero image in index.html
+ Fix accessibility: aria-labels on buttons
+ Fix accessibility: color contrast issues
+ Fix accessibility: add main landmark to App.tsx
+ Fix SEO issues for 100/100
+ Remove console.log and unused code
+ Save report to downloads folder
+ Build, commit and push to GitHub
