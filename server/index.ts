@@ -13,6 +13,33 @@ const app = express();
 
 // Enable GZIP compression for all responses
 app.use(compression());
+
+// Security headers middleware
+app.use((_req, res, next) => {
+  // Content Security Policy - balanced for functionality and security
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' https://js.stripe.com; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com; " +
+    "img-src 'self' data: blob: https:; " +
+    "connect-src 'self' https://api.stripe.com https://api.openai.com https://ipapi.co https://*.replit.dev https://*.replit.app wss://*.replit.dev; " +
+    "frame-src 'self' https://js.stripe.com; " +
+    "object-src 'none'; " +
+    "base-uri 'self'"
+  );
+  // HTTP Strict Transport Security
+  res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  // Prevent clickjacking
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  // Prevent MIME type sniffing
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  // Referrer Policy
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  next();
+});
+
 const httpServer = createServer(app);
 
 declare module "http" {

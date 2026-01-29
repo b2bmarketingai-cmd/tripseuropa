@@ -983,10 +983,11 @@ Can you help me with a quote?`;
               <div className="col-span-1 flex items-end">
                 <Button
                   onClick={handleNextStep}
-                  className="w-full h-[46px] bg-accent hover:bg-accent/90 text-primary font-semibold"
+                  className="w-full h-[46px] bg-accent text-primary font-semibold"
                   data-testid="button-next-step-mobile"
+                  aria-label="Siguiente paso"
                 >
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </div>
             </div>

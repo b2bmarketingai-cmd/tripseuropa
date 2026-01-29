@@ -113,16 +113,18 @@ export function ReserveSpot() {
               variant="outline"
               onClick={() => scroll("left")}
               data-testid="button-reserve-prev"
+              aria-label="Ver destinos anteriores"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
             </Button>
             <Button
               size="icon"
               variant="outline"
               onClick={() => scroll("right")}
               data-testid="button-reserve-next"
+              aria-label="Ver siguientes destinos"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
         </div>

@@ -140,6 +140,8 @@ export function HeroCarousel() {
           src={getResponsiveImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, isMobile)}
           alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
           className="w-full h-full object-cover"
+          width={1200}
+          height={700}
           loading="eager"
           // @ts-ignore
           fetchpriority="high"
@@ -213,19 +215,21 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-30" data-testid="carousel-dots">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1 z-30" data-testid="carousel-dots">
         {CAROUSEL_SLIDES.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className="w-11 h-11 flex items-center justify-center"
+            aria-label={`Go to slide ${index + 1}`}
+            data-testid={`button-carousel-dot-${index}`}
+          >
+            <span className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
                 ? "bg-accent scale-125"
                 : "bg-white/50 hover:bg-white/70"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-            data-testid={`button-carousel-dot-${index}`}
-          />
+            }`} />
+          </button>
         ))}
       </div>
     </section>

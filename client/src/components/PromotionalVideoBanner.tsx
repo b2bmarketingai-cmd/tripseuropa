@@ -115,8 +115,9 @@ export function PromotionalVideoBanner() {
                       size="lg"
                       className="rounded-full w-16 h-16 bg-white/20 backdrop-blur-sm border border-white/30 group-hover:bg-white/30 transition-all"
                       data-testid="button-play-video"
+                      aria-label="Reproducir video promocional"
                     >
-                      <Play className="w-8 h-8 text-white fill-white ml-1" />
+                      <Play className="w-8 h-8 text-white fill-white ml-1" aria-hidden="true" />
                     </Button>
                   </div>
 

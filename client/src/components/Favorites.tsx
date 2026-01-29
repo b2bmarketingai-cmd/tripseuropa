@@ -113,16 +113,18 @@ export function Favorites() {
               variant="outline"
               onClick={() => scroll("left")}
               data-testid="button-favorites-prev"
+              aria-label="Ver favoritos anteriores"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
             </Button>
             <Button
               size="icon"
               variant="outline"
               onClick={() => scroll("right")}
               data-testid="button-favorites-next"
+              aria-label="Ver siguientes favoritos"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
         </div>
