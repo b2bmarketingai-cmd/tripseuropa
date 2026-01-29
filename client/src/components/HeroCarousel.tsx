@@ -64,17 +64,19 @@ function getResponsiveImageUrl(base: string, isMobile: boolean): string {
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isMobile, setIsMobile] = useState(() => 
-    typeof window !== "undefined" && window.innerWidth < 768
-  );
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 767px)").matches;
+  });
   const { language } = useI18n();
   const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
   const lang = language as "es" | "en" | "pt";
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const mql = window.matchMedia("(max-width: 767px)");
+    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
   }, []);
 
   const nextSlide = useCallback(() => {

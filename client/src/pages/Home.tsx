@@ -1,33 +1,36 @@
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
 import { HomePageSEO } from "@/components/SEOHead";
-import { Chatbot } from "@/components/Chatbot";
-import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { HeroFlightSearch } from "@/components/HeroFlightSearch";
-import { SmartSearchBar } from "@/components/SmartSearchBar";
-import { FAQAccordion } from "@/components/FAQAccordion";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { TopOffers } from "@/components/TopOffers";
-import { ReserveSpot } from "@/components/ReserveSpot";
-import { Favorites } from "@/components/Favorites";
-import { SpecialOffers } from "@/components/SpecialOffers";
-import { UrgencyBanner } from "@/components/UrgencyBanner";
-import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { TravelerStories } from "@/components/TravelerStories";
-import { TrustpilotReviews } from "@/components/TrustpilotReviews";
-import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
-import { DestinationGrid } from "@/components/DestinationGrid";
-import { ContactSupportModal } from "@/components/ContactSupportModal";
-import { BlogHighlights } from "@/components/BlogHighlights";
-import { SEOContent } from "@/components/SEOContent";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { FloatingContactButtons } from "@/components/support";
+
+const Chatbot = lazy(() => import("@/components/Chatbot").then(m => ({ default: m.Chatbot })));
+const ContactForm = lazy(() => import("@/components/ContactForm").then(m => ({ default: m.ContactForm })));
+const SmartSearchBar = lazy(() => import("@/components/SmartSearchBar").then(m => ({ default: m.SmartSearchBar })));
+const FAQAccordion = lazy(() => import("@/components/FAQAccordion").then(m => ({ default: m.FAQAccordion })));
+const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const TopOffers = lazy(() => import("@/components/TopOffers").then(m => ({ default: m.TopOffers })));
+const ReserveSpot = lazy(() => import("@/components/ReserveSpot").then(m => ({ default: m.ReserveSpot })));
+const Favorites = lazy(() => import("@/components/Favorites").then(m => ({ default: m.Favorites })));
+const SpecialOffers = lazy(() => import("@/components/SpecialOffers").then(m => ({ default: m.SpecialOffers })));
+const UrgencyBanner = lazy(() => import("@/components/UrgencyBanner").then(m => ({ default: m.UrgencyBanner })));
+const BestPriceGuarantee = lazy(() => import("@/components/BestPriceGuarantee").then(m => ({ default: m.BestPriceGuarantee })));
+const NewsletterSignup = lazy(() => import("@/components/NewsletterSignup").then(m => ({ default: m.NewsletterSignup })));
+const TravelerStories = lazy(() => import("@/components/TravelerStories").then(m => ({ default: m.TravelerStories })));
+const TrustpilotReviews = lazy(() => import("@/components/TrustpilotReviews").then(m => ({ default: m.TrustpilotReviews })));
+const PromotionalVideoBanner = lazy(() => import("@/components/PromotionalVideoBanner").then(m => ({ default: m.PromotionalVideoBanner })));
+const DestinationGrid = lazy(() => import("@/components/DestinationGrid").then(m => ({ default: m.DestinationGrid })));
+const ContactSupportModal = lazy(() => import("@/components/ContactSupportModal").then(m => ({ default: m.ContactSupportModal })));
+const BlogHighlights = lazy(() => import("@/components/BlogHighlights").then(m => ({ default: m.BlogHighlights })));
+const SEOContent = lazy(() => import("@/components/SEOContent").then(m => ({ default: m.SEOContent })));
+
 
 export default function Home() {
   const { language } = useI18n();
@@ -79,28 +82,29 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col w-full overflow-x-hidden">
       <HomePageSEO />
-      <UrgencyBanner />
+      <Suspense fallback={null}><UrgencyBanner /></Suspense>
       <Header />
       <HeroCarousel />
-      <SEOContent />
       <HeroFlightSearch />
-      <TopOffers />
-      <DestinationGrid />
-      <ReserveSpot />
-      <SpecialOffers />
-      <Favorites />
-      <WhyChooseUs />
-      <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <SmartSearchBar variant="hero" />
-        </div>
-      </section>
-      <BestPriceGuarantee />
-      <BlogHighlights />
-      <NewsletterSignup />
-      <TrustpilotReviews />
-      <PromotionalVideoBanner />
-      <TravelerStories />
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-100" />}><TopOffers /></Suspense>
+      <Suspense fallback={<div className="min-h-[500px] bg-gray-50" />}><DestinationGrid /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-primary" />}><ReserveSpot /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-900" />}><SpecialOffers /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><Favorites /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-white" />}><WhyChooseUs /></Suspense>
+      <Suspense fallback={<div className="min-h-[200px] bg-[#d5b034]" />}>
+        <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <SmartSearchBar variant="hero" />
+          </div>
+        </section>
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[300px] bg-white" />}><BestPriceGuarantee /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><BlogHighlights /></Suspense>
+      <Suspense fallback={<div className="min-h-[200px] bg-primary" />}><NewsletterSignup /></Suspense>
+      <Suspense fallback={<div className="min-h-[300px] bg-gray-50" />}><TrustpilotReviews /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-900" />}><PromotionalVideoBanner /></Suspense>
+      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><TravelerStories /></Suspense>
       <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -157,14 +161,16 @@ export default function Home() {
             </div>
 
             <div>
-              <ContactForm variant="page" title={c.formTitle} />
+              <Suspense fallback={<div className="min-h-[400px] bg-white rounded-lg" />}>
+                <ContactForm variant="page" title={c.formTitle} />
+              </Suspense>
             </div>
           </div>
         </div>
       </section>
-      <FAQAccordion />
+      <Suspense fallback={<div className="min-h-[300px] bg-gray-50" />}><FAQAccordion /></Suspense>
       <Footer />
-      <Chatbot />
+      <Suspense fallback={null}><Chatbot /></Suspense>
       <FloatingContactButtons />
       <TravelAgencySchema />
       <WebsiteSchema />
