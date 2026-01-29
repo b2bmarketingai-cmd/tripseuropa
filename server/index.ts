@@ -1,14 +1,13 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
 import path from "path";
-import { fileURLToPath } from "url";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { testDatabaseConnection } from "./db";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Use process.cwd() for production compatibility (works in both ESM and CJS)
+const __dirname = process.cwd();
 
 const app = express();
 
@@ -79,34 +78,53 @@ app.get("/ready", (_req, res) => {
   }
 });
 
-// SEO: Serve sitemap XML files from /client/public folder and /client/public/sitemaps
+// SEO: Serve sitemap XML files - check both dist/public and client/public
 app.get("/sitemap*.xml", (req, res) => {
-  let filePath = path.join(__dirname, "../client/public", req.path);
+  const prodPath = path.join(__dirname, "dist/public", req.path);
+  const devPath = path.join(__dirname, "client/public", req.path);
   res.setHeader("Content-Type", "application/xml");
-  res.sendFile(filePath, (err) => {
+  
+  // Try production path first, then development path
+  res.sendFile(prodPath, (err) => {
     if (err) {
-      res.status(404).send("Sitemap not found");
+      res.sendFile(devPath, (devErr) => {
+        if (devErr) {
+          res.status(404).send("Sitemap not found");
+        }
+      });
     }
   });
 });
 
 app.get("/sitemaps/*", (req, res) => {
-  const filePath = path.join(__dirname, "../client/public", req.path);
+  const prodPath = path.join(__dirname, "dist/public", req.path);
+  const devPath = path.join(__dirname, "client/public", req.path);
   res.setHeader("Content-Type", "application/xml");
-  res.sendFile(filePath, (err) => {
+  
+  res.sendFile(prodPath, (err) => {
     if (err) {
-      res.status(404).send("Sitemap not found");
+      res.sendFile(devPath, (devErr) => {
+        if (devErr) {
+          res.status(404).send("Sitemap not found");
+        }
+      });
     }
   });
 });
 
-// SEO: Serve robots.txt from /client/public folder
+// SEO: Serve robots.txt
 app.get("/robots.txt", (_req, res) => {
-  const filePath = path.join(__dirname, "../client/public/robots.txt");
+  const prodPath = path.join(__dirname, "dist/public/robots.txt");
+  const devPath = path.join(__dirname, "client/public/robots.txt");
   res.setHeader("Content-Type", "text/plain");
-  res.sendFile(filePath, (err) => {
+  
+  res.sendFile(prodPath, (err) => {
     if (err) {
-      res.status(404).send("robots.txt not found");
+      res.sendFile(devPath, (devErr) => {
+        if (devErr) {
+          res.status(404).send("robots.txt not found");
+        }
+      });
     }
   });
 });
