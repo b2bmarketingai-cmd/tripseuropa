@@ -1,8 +1,7 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
-import OptimizedImage from "@/components/OptimizedImage";
 
 const CAROUSEL_SLIDES = [
   {
@@ -122,13 +121,19 @@ export function HeroCarousel() {
       data-testid="section-hero-carousel"
     >
       <div className="absolute inset-0">
-        <OptimizedImage
-          src={CAROUSEL_SLIDES[currentSlide].imageBase}
+        {/* LCP Image - Native img for fastest detection by browser preload scanner */}
+        <img
+          src={`${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1200&q=60&auto=format&fit=crop&fm=webp`}
+          srcSet={`${CAROUSEL_SLIDES[currentSlide].imageBase}?w=400&q=40&auto=format&fit=crop&fm=webp 400w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=800&q=50&auto=format&fit=crop&fm=webp 800w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1200&q=60&auto=format&fit=crop&fm=webp 1200w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1920&q=60&auto=format&fit=crop&fm=webp 1920w`}
+          sizes="100vw"
           alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
-          objectFit="cover"
+          fetchpriority="high"
+          decoding="sync"
+          style={{ contentVisibility: 'auto' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>

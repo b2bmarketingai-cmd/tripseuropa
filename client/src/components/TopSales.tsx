@@ -9,7 +9,7 @@ import { Link } from "wouter";
 const TOP_SALES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Grand Tour de Italia", en: "Grand Tour of Italy" },
     country: { es: "Italia en 14 Dias", en: "Italy in 14 Days" },
     currentPrice: 2299,
@@ -19,7 +19,7 @@ const TOP_SALES = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Santorini y Mykonos", en: "Santorini and Mykonos" },
     country: { es: "Grecia en 10 Dias", en: "Greece in 10 Days" },
     currentPrice: 1999,
@@ -29,7 +29,7 @@ const TOP_SALES = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Paris y la Provenza", en: "Paris and Provence" },
     country: { es: "Francia en 11 Dias", en: "France in 11 Days" },
     currentPrice: 2149,
@@ -39,7 +39,7 @@ const TOP_SALES = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Andalucia Magica", en: "Magical Andalusia" },
     country: { es: "España en 9 Dias", en: "Spain in 9 Days" },
     currentPrice: 1749,
@@ -49,7 +49,7 @@ const TOP_SALES = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Fiordos y Auroras Boreales", en: "Fjords and Northern Lights" },
     country: { es: "Noruega en 8 Dias", en: "Norway in 8 Days" },
     currentPrice: 2499,
@@ -59,7 +59,7 @@ const TOP_SALES = [
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1541343672885-9be56236c64e?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541343672885-9be56236c64e?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Croacia y los Balcanes", en: "Croatia and the Balkans" },
     country: { es: "Croacia en 10 Dias", en: "Croatia in 10 Days" },
     currentPrice: 1899,
@@ -69,7 +69,7 @@ const TOP_SALES = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Escocia Legendaria", en: "Legendary Scotland" },
     country: { es: "Escocia en 9 Dias", en: "Scotland in 9 Days" },
     currentPrice: 1999,
@@ -79,7 +79,7 @@ const TOP_SALES = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Islandia Salvaje", en: "Wild Iceland" },
     country: { es: "Islandia en 7 Dias", en: "Iceland in 7 Days" },
     currentPrice: 2299,

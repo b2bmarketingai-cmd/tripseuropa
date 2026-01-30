@@ -39,30 +39,51 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.trace'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Split React and core libraries
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-helmet-async')) {
+            // React core - loaded first, cached long-term
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-helmet-async') || id.includes('scheduler')) {
               return 'react-vendor';
             }
+            // UI components
             if (id.includes('@radix-ui')) {
               return 'ui';
             }
-            if (id.includes('lucide-react')) {
+            // Icons - deferred
+            if (id.includes('lucide-react') || id.includes('react-icons')) {
               return 'icons';
             }
-            if (id.includes('react-hook-form') || id.includes('zod')) {
+            // Forms - only on form pages
+            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
               return 'forms';
             }
+            // Animations - deferred
             if (id.includes('framer-motion')) {
               return 'animations';
             }
-            // Split other node_modules into vendor chunk
+            // Carousel - isolated to reduce reflow impact
+            if (id.includes('embla-carousel')) {
+              return 'carousel';
+            }
             return 'vendor';
+          }
+          // Split large static data into separate lazy chunks
+          if (id.includes('blogData') || id.includes('BlogPostsSimple')) {
+            return 'blogData';
+          }
+          if (id.includes('destinationsData')) {
+            return 'destinationsData';
+          }
+          if (id.includes('travelStyleData')) {
+            return 'travelStyleData';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -75,6 +96,8 @@ export default defineConfig({
       },
     },
     chunkSizeWarningLimit: 600,
+    target: 'es2020',
+    reportCompressedSize: true,
   },
   server: {
     fs: {

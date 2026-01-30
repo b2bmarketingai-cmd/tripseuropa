@@ -94,7 +94,7 @@ export function PromotionalVideoBanner() {
                 <AspectRatio ratio={16 / 9}>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1a365d] via-[#0f172a] to-[#064e3b]">
                     <img
-                      src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop"
+                      src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&auto=format&fit=crop"
                       alt="European adventure"
                       className="w-full h-full object-cover opacity-60 mix-blend-overlay"
                     />

@@ -225,7 +225,7 @@ export function TrustpilotReviews() {
   };
 
   return (
-    <section className="py-16 bg-muted/30" data-testid="section-trustpilot-reviews">
+    <section className="py-16 bg-muted/30" data-testid="section-trustpilot-reviews" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 500px' }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <div className="flex-shrink-0 lg:w-48">

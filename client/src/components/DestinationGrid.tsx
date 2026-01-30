@@ -7,67 +7,67 @@ import OptimizedImage from "@/components/OptimizedImage";
 const DESTINATIONS = [
   {
     id: "spain",
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "España", en: "Spain", pt: "Espanha" },
     trips: 24,
   },
   {
     id: "france",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Francia", en: "France", pt: "Franca" },
     trips: 18,
   },
   {
     id: "italy",
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Italia", en: "Italy", pt: "Italia" },
     trips: 22,
   },
   {
     id: "portugal",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Portugal", en: "Portugal", pt: "Portugal" },
     trips: 12,
   },
   {
     id: "greece",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Grecia", en: "Greece", pt: "Grecia" },
     trips: 8,
   },
   {
     id: "uk",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" },
     trips: 15,
   },
   {
     id: "germany",
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Alemania", en: "Germany", pt: "Alemanha" },
     trips: 10,
   },
   {
     id: "netherlands",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Paises Bajos", en: "Netherlands", pt: "Paises Baixos" },
     trips: 6,
   },
   {
     id: "switzerland",
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Suiza", en: "Switzerland", pt: "Suica" },
     trips: 9,
   },
   {
     id: "croatia",
-    image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Croacia", en: "Croatia", pt: "Croacia" },
     trips: 5,
   },
   {
     id: "turkey",
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=45&w=400&auto=format&fit=crop&fm=webp",
     name: { es: "Turquía", en: "Turkey", pt: "Turquia" },
     trips: 7,
   },
@@ -110,13 +110,15 @@ export function DestinationGrid() {
               href={`/destinations/${dest.id}`}
               data-testid={`link-destination-${dest.id}`}
             >
-              <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer bg-gray-200">
-                <OptimizedImage
+              <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer bg-gray-200" style={{ containIntrinsicSize: '200px 250px', contentVisibility: 'auto' }}>
+                <img
                   src={dest.image}
                   alt={dest.name[lang]}
+                  width={400}
+                  height={500}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
-                  objectFit="cover"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 

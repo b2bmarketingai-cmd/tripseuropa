@@ -43,15 +43,12 @@ export default function OptimizedImage({
       return '';
     }
 
-    // Define responsive breakpoints with optimized quality for performance
+    // Fewer breakpoints = fewer bytes in srcset attribute, faster parsing
     const sizes = [
-      { w: 400, q: 40 },   // Mobile portrait - lower quality for faster load
-      { w: 640, q: 50 },   // Mobile landscape / small tablet
-      { w: 768, q: 55 },   // Tablet portrait
-      { w: 1024, q: 60 },  // Tablet landscape / small desktop
-      { w: 1280, q: 65 },  // Desktop
-      { w: 1536, q: 65 },  // Large desktop
-      { w: 1920, q: 60 },  // Full HD
+      { w: 320, q: 35 },   // Mobile portrait - aggressive compression
+      { w: 640, q: 40 },   // Mobile landscape
+      { w: 1024, q: 50 },  // Tablet / small desktop
+      { w: 1440, q: 55 },  // Desktop
     ];
 
     return sizes
@@ -82,10 +79,10 @@ export default function OptimizedImage({
       return url;
     }
 
-    // Default size: 1200px width with quality 60 for better performance
+    // Default size: 800px width with quality 50 for faster loading
     const params = new URLSearchParams({
-      w: '1200',
-      q: '60',
+      w: '800',
+      q: '50',
       auto: 'format',
       fit: 'crop',
       fm: 'webp',
