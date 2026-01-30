@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -83,7 +84,20 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
-  
+
+  // Detect language from URL path for proper PT-BR rendering
+  const getLanguageFromPath = (): "es" | "en" | "pt" => {
+    if (typeof window !== 'undefined') {
+      const pathname = window.location.pathname;
+      if (pathname.startsWith('/pt-br')) return 'pt';
+      if (pathname.startsWith('/en')) return 'en';
+    }
+    return 'es';
+  };
+
+  // Use URL-based language detection instead of i18n context
+  const currentLanguage = getLanguageFromPath();
+
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
   const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
   const post = fullPost || simplePost;
@@ -108,8 +122,8 @@ export default function BlogPost() {
     );
   }
 
-  const title = (post.title as Record<string, string>)[language] || post.title.es;
-  const excerpt = (post.excerpt as Record<string, string>)[language] || post.excerpt.es;
+  const title = (post.title as Record<string, string>)[currentLanguage] || post.title.es;
+  const excerpt = (post.excerpt as Record<string, string>)[currentLanguage] || post.excerpt.es;
   const postSlug = fullPost?.slug || post.id;
   const isoDate = parseSpanishDate(post.date);
 
@@ -142,6 +156,18 @@ export default function BlogPost() {
         ]}
       />
       <Header />
+      <Breadcrumbs
+        items={[
+          {
+            label: "Blog",
+            href: "/blog"
+          },
+          {
+            label: title,
+            href: `/blog/post/${postSlug}`
+          }
+        ]}
+      />
       <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
@@ -153,7 +179,7 @@ export default function BlogPost() {
             </Link>
             
             <Badge variant="secondary" className="mb-4" data-testid="badge-post-category">
-              {(post.categoryLabel as Record<string, string>)[language] || post.categoryLabel.es}
+              {(post.categoryLabel as Record<string, string>)[currentLanguage] || post.categoryLabel.es}
             </Badge>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-accent mb-4 leading-tight" data-testid="text-post-title">

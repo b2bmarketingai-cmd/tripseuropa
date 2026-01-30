@@ -27,6 +27,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { HreflangTags } from "@/components/HreflangTags";
 
 const DESTINATIONS_MENU = {
   es: [
@@ -261,10 +262,11 @@ export function Header() {
 
   return (
     <>
-      <header 
+      <HreflangTags />
+      <header
         className={cn(
           "sticky top-0 w-full z-50 transition-all duration-300",
-          scrolled || isOpen 
+          scrolled || isOpen
             ? "bg-white shadow-lg border-b border-gray-100" 
             : "bg-white/95 backdrop-blur-sm"
         )}
@@ -472,29 +474,47 @@ export function Header() {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white">
-                  <DropdownMenuItem 
-                    onClick={() => setLanguage("es")} 
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/es${pathWithoutLang}`;
+                      setLanguage("es");
+                      window.location.href = newPath;
+                    }}
                     className={cn("cursor-pointer gap-2", language === "es" && "bg-accent/10")}
                     data-testid="button-lang-es"
                   >
                     <span className="text-lg">🇪🇸</span>
                     <span>Español</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => setLanguage("en")} 
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/en${pathWithoutLang}`;
+                      setLanguage("en");
+                      window.location.href = newPath;
+                    }}
                     className={cn("cursor-pointer gap-2", language === "en" && "bg-accent/10")}
                     data-testid="button-lang-en"
                   >
                     <span className="text-lg">🇬🇧</span>
                     <span>English</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => setLanguage("pt")} 
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/pt-br${pathWithoutLang}`;
+                      setLanguage("pt");
+                      window.location.href = newPath;
+                    }}
                     className={cn("cursor-pointer gap-2", language === "pt" && "bg-accent/10")}
                     data-testid="button-lang-pt"
                   >
                     <span className="text-lg">🇧🇷</span>
-                    <span>Portugues</span>
+                    <span>Português</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -520,15 +540,42 @@ export function Header() {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white">
-                  <DropdownMenuItem onClick={() => setLanguage("es")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/es${pathWithoutLang}`;
+                      setLanguage("es");
+                      window.location.href = newPath;
+                    }}
+                    className="cursor-pointer gap-2"
+                  >
                     <span className="text-lg">🇪🇸</span>
                     <span>ES</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage("en")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/en${pathWithoutLang}`;
+                      setLanguage("en");
+                      window.location.href = newPath;
+                    }}
+                    className="cursor-pointer gap-2"
+                  >
                     <span className="text-lg">🇬🇧</span>
                     <span>EN</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage("pt")} className="cursor-pointer gap-2">
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const currentPath = location;
+                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const newPath = `/pt-br${pathWithoutLang}`;
+                      setLanguage("pt");
+                      window.location.href = newPath;
+                    }}
+                    className="cursor-pointer gap-2"
+                  >
                     <span className="text-lg">🇧🇷</span>
                     <span>PT</span>
                   </DropdownMenuItem>

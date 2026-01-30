@@ -4,11 +4,45 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { testDatabaseConnection } from "./db";
+import { serveSitemap } from "./sitemap";
 
 const app = express();
 
 // Enable GZIP compression for all responses
 app.use(compression());
+
+// Security Headers Middleware
+app.use((req, res, next) => {
+  // Prevent XSS attacks
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+
+  // Prevent clickjacking
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+
+  // Prevent MIME type sniffing
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+
+  // Referrer policy
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // Permissions policy
+  res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+
+  // Content Security Policy (basic)
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com; " +
+    "img-src 'self' data: https: http:; " +
+    "connect-src 'self' https://api.openai.com https://www.google-analytics.com; " +
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com;"
+  );
+
+  next();
+});
+
 const httpServer = createServer(app);
 
 declare module "http" {
@@ -103,12 +137,16 @@ app.use((req, res, next) => {
 async function startServer() {
   try {
     log("Starting server initialization...");
-    
+
     // Test database connection before starting
     const dbConnected = await testDatabaseConnection();
     if (!dbConnected) {
       log("Warning: Database connection failed, some features may not work");
     }
+
+    // Serve sitemap.xml for SEO
+    app.get('/sitemap.xml', serveSitemap);
+    log("Sitemap route registered at /sitemap.xml");
 
     await registerRoutes(httpServer, app);
 

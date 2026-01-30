@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+    <meta name="description" content="Descubre Europa con Trips Europa - Paquetes turísticos personalizados, ofertas exclusivas y experiencias inolvidables en los mejores destinos europeos. Viaja desde Latinoamérica con los mejores precios." />
     <meta name="theme-color" content="#c9a227" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -21,12 +22,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
     
-    <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop" fetchpriority="high">
+    <!-- Preload LCP hero image with multiple sizes -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=600&auto=format&fit=crop" media="(max-width: 640px)" fetchpriority="high">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=50&w=1024&auto=format&fit=crop" media="(min-width: 641px) and (max-width: 1024px)" fetchpriority="high">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1920&auto=format&fit=crop" media="(min-width: 1025px)" fetchpriority="high">
     
-    <!-- Load only essential fonts (Playfair Display + Lato) with display=swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"></noscript>
+    <!-- Preload critical fonts for LCP optimization -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin">
+
+    <!-- Load only essential fonts (Playfair Display + Lato) with display=swap and latin subset -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin"></noscript>
   </head>
   <body>
     <div id="root"></div>

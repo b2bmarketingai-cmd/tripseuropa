@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const DESTINATIONS = [
   {
@@ -110,13 +111,12 @@ export function DestinationGrid() {
               data-testid={`link-destination-${dest.id}`}
             >
               <div className="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer bg-gray-200">
-                <img
+                <OptimizedImage
                   src={dest.image}
                   alt={dest.name[lang]}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
-                  crossOrigin="anonymous"
-                  referrerPolicy="no-referrer"
+                  objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 

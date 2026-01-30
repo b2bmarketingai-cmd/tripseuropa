@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 import { openWhatsAppQuote } from "@/lib/whatsapp";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const PACKAGES = [
   {
@@ -103,11 +104,12 @@ export function FeaturedPackages() {
           {PACKAGES.map((pkg) => (
             <Card key={pkg.id} className="overflow-hidden group" data-testid={`card-package-${pkg.id}`}>
               <div className="relative aspect-[16/10]">
-                <img
+                <OptimizedImage
                   src={pkg.image}
                   alt={pkg.title[lang]}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  objectFit="cover"
                 />
                 <Badge className="absolute top-4 left-4 bg-primary text-white">
                   {pkg.id}

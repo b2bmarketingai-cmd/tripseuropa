@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const CAROUSEL_SLIDES = [
   {
@@ -56,25 +57,11 @@ const CAROUSEL_SLIDES = [
   },
 ];
 
-function getResponsiveImageUrl(base: string, isMobile: boolean): string {
-  const width = isMobile ? 600 : 1200;
-  return `${base}?q=40&w=${width}&auto=format&fit=crop`;
-}
-
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isMobile, setIsMobile] = useState(() => 
-    typeof window !== "undefined" && window.innerWidth < 768
-  );
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
@@ -135,16 +122,13 @@ export function HeroCarousel() {
       data-testid="section-hero-carousel"
     >
       <div className="absolute inset-0">
-        <img
-          src={getResponsiveImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, isMobile)}
+        <OptimizedImage
+          src={CAROUSEL_SLIDES[currentSlide].imageBase}
           alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
           className="w-full h-full object-cover"
           loading="eager"
-          // @ts-ignore
-          fetchpriority="high"
-          decoding="sync"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
+          fetchPriority="high"
+          objectFit="cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>

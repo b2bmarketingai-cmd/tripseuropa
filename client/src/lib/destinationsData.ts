@@ -1,5 +1,5 @@
-export type MultiLangText = { es: string; en: string; pt?: string };
-export type MultiLangArray = { es: string[]; en: string[]; pt?: string[] };
+export type MultiLangText = { es: string; en: string; pt: string };
+export type MultiLangArray = { es: string[]; en: string[]; pt: string[] };
 
 export interface ItineraryDay {
   day: number;
@@ -55,7 +55,7 @@ export interface DestinationData {
 export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "france",
-    name: { es: "Francia", en: "France" },
+    name: { es: "Francia", en: "France", pt: "França" },
     heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=800&auto=format&fit=crop",
@@ -65,123 +65,128 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Francia es el destino turístico más visitado del mundo, y no es difícil entender por que. Desde la romántica París con su icónica Torre Eiffel hasta los campos de lavanda de Provenza, pasando por la glamurosa Costa Azul y los castillos del Valle del Loira, Francia ofrece una experiencia única que combina arte, cultura, gastronomía y paisajes de ensueño. Descubre la elegancia francesa, sus vinos de clase mundial y su patrimonio histórico incomparable.",
-      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic París with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage."
+      en: "France is the most visited tourist destination in the world, and it's not hard to understand why. From romantic París with its iconic Eiffel Tower to the lavender fields of Provence, the glamorous French Riviera, and the castles of the Loire Valley, France offers a unique experience combining art, culture, gastronomy, and dreamlike landscapes. Discover French elegance, world-class wines, and unparalleled historical heritage.",
+      pt: "A França é o destino turístico mais visitado do mundo, e não é difícil entender por quê. De Paris romântica com sua icônica Torre Eiffel aos campos de lavanda da Provença, passando pela glamorosa Costa Azul e os castelos do Vale do Loire, a França oferece uma experiência única que combina arte, cultura, gastronomia e paisagens de sonho. Descubra a elegância francesa, seus vinhos de classe mundial e seu patrimônio histórico incomparável."
     },
     highlights: {
       es: ["Torre Eiffel y París romántico", "Castillos del Valle del Loira", "Costa Azul y Niza", "Campos de lavanda de Provenza", "Gastronomía y vinos franceses", "Mont Saint-Michel"],
-      en: ["Eiffel Tower and romantic París", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"]
+      en: ["Eiffel Tower and romantic París", "Loire Valley Castles", "French Riviera and Nice", "Lavender fields of Provence", "French gastronomy and wines", "Mont Saint-Michel"],
+      pt: ["Torre Eiffel e Paris romântica", "Castelos do Vale do Loire", "Costa Azul e Nice", "Campos de lavanda da Provença", "Gastronomia e vinhos franceses", "Mont Saint-Michel"]
     },
     packages: [
       {
         id: "francia-clasico",
-        name: { es: "Francia Clásica", en: "Classic France" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Francia Clásica", en: "Classic France", pt: "França Clássica" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Entradas a monumentos principales"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Main monument tickets"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Main monument tickets"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã diário", "Traslados", "Guia em espanhol", "Entradas aos principais monumentos"]
         }
       },
       {
         id: "francia-romantica",
-        name: { es: "Francia Romántica", en: "Romantic France" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Francia Romántica", en: "Romantic France", pt: "França Romântica" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,499",
         taxes: "450",
         includes: {
           es: ["Vuelos internacionales", "Hoteles boutique", "Desayuno y cenas", "Crucero por el Sena", "Tour de vinos", "Experiencia gastronomica"],
-          en: ["International flights", "Boutique hotels", "Breakfast and dinners", "Seine cruise", "Wine tour", "Gastronomic experience"]
+          en: ["International flights", "Boutique hotels", "Breakfast and dinners", "Seine cruise", "Wine tour", "Gastronomic experience"],
+          pt: ["Voos internacionais", "Hotéis boutique", "Café da manhã e jantares", "Cruzeiro pelo Sena", "Tour de vinhos", "Experiência gastronômica"]
         }
       },
       {
         id: "francia-completa",
-        name: { es: "Gran Tour de Francia", en: "Grand Tour of France" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour de Francia", en: "Grand Tour of France", pt: "Grande Tour da França" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "3,299",
         taxes: "520",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "TGV entre ciudades", "Tours exclusivos", "Seguro de viaje premium"],
-          en: ["International flights", "4-5 star hotels", "Half board", "TGV between cities", "Exclusive tours", "Premium travel insurance"]
+          en: ["International flights", "4-5 star hotels", "Half board", "TGV between cities", "Exclusive tours", "Premium travel insurance"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "TGV entre cidades", "Tours exclusivos", "Seguro viagem premium"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a París", en: "Arrival in París" },
-        description: { es: "Bienvenida en el aeropuerto y traslado al hotel. Tarde libre para pasear por los Campos Eliseos.", en: "Airport welcome and hotel transfer. Free afternoon to stroll along the Champs-Élysées." },
-        activities: { es: ["Recogida en aeropuerto", "Check-in en hotel", "Paseo por Campos Eliseos"], en: ["Airport pickup", "Hotel check-in", "Champs-Élysées walk"] }
+        title: { es: "Llegada a París", en: "Arrival in París", pt: "Chegada a Paris" },
+        description: { es: "Bienvenida en el aeropuerto y traslado al hotel. Tarde libre para pasear por los Campos Eliseos.", en: "Airport welcome and hotel transfer. Free afternoon to stroll along the Champs-Élysées.", pt: "Recepção no aeroporto e traslado ao hotel. Tarde livre para passear pelos Campos Elíseos." },
+        activities: { es: ["Recogida en aeropuerto", "Check-in en hotel", "Paseo por Campos Eliseos"], en: ["Airport pickup", "Hotel check-in", "Champs-Élysées walk"], pt: ["Retirada no aeroporto", "Check-in no hotel", "Passeio pelos Campos Elíseos"] }
       },
       {
         day: 2,
-        title: { es: "Paris: Torre Eiffel y Louvre", en: "Paris: Eiffel Tower and Louvre" },
-        description: { es: "Visita a la icónica Torre Eiffel y el mundialmente famoso Museo del Louvre.", en: "Visit the iconic Eiffel Tower and the world-famous Louvre Museum." },
-        activities: { es: ["Subida a la Torre Eiffel", "Visita guiada al Louvre", "Almuerzo en Le Marais"], en: ["Eiffel Tower ascent", "Louvre guided tour", "Lunch in Le Marais"] }
+        title: { es: "Paris: Torre Eiffel y Louvre", en: "Paris: Eiffel Tower and Louvre", pt: "Paris: Torre Eiffel e Louvre" },
+        description: { es: "Visita a la icónica Torre Eiffel y el mundialmente famoso Museo del Louvre.", en: "Visit the iconic Eiffel Tower and the world-famous Louvre Museum.", pt: "Visita à icônica Torre Eiffel e ao mundialmente famoso Museu do Louvre." },
+        activities: { es: ["Subida a la Torre Eiffel", "Visita guiada al Louvre", "Almuerzo en Le Marais"], en: ["Eiffel Tower ascent", "Louvre guided tour", "Lunch in Le Marais"], pt: ["Subida à Torre Eiffel", "Visita guiada ao Louvre", "Almoço em Le Marais"] }
       },
       {
         day: 3,
-        title: { es: "Versalles", en: "Versailles" },
-        description: { es: "Excursion al majestuoso Palacio de Versalles y sus jardines.", en: "Excursion to the majestic Palace of Versailles and its gardens." },
-        activities: { es: ["Tour del palacio", "Paseo por jardines", "Fuentes musicales"], en: ["Palace tour", "Garden walk", "Musical fountains"] }
+        title: { es: "Versalles", en: "Versailles", pt: "Versalhes" },
+        description: { es: "Excursion al majestuoso Palacio de Versalles y sus jardines.", en: "Excursion to the majestic Palace of Versailles and its gardens.", pt: "Excursão ao majestoso Palácio de Versalhes e seus jardins." },
+        activities: { es: ["Tour del palacio", "Paseo por jardines", "Fuentes musicales"], en: ["Palace tour", "Garden walk", "Musical fountains"], pt: ["Tour do palácio", "Passeio pelos jardins", "Fontes musicais"] }
       },
       {
         day: 4,
-        title: { es: "Valle del Loira", en: "Loire Valley" },
-        description: { es: "Descubre los impresionantes castillos del Valle del Loira.", en: "Discover the impressive castles of the Loire Valley." },
-        activities: { es: ["Castillo de Chambord", "Castillo de Chenonceau", "Degustacion de vinos"], en: ["Chambord Castle", "Chenonceau Castle", "Wine tasting"] }
+        title: { es: "Valle del Loira", en: "Loire Valley", pt: "Vale do Loire" },
+        description: { es: "Descubre los impresionantes castillos del Valle del Loira.", en: "Discover the impressive castles of the Loire Valley.", pt: "Descubra os impressionantes castelos do Vale do Loire." },
+        activities: { es: ["Castillo de Chambord", "Castillo de Chenonceau", "Degustacion de vinos"], en: ["Chambord Castle", "Chenonceau Castle", "Wine tasting"], pt: ["Castelo de Chambord", "Castelo de Chenonceau", "Degustação de vinhos"] }
       },
       {
         day: 5,
-        title: { es: "Provenza", en: "Provence" },
-        description: { es: "Traslado a la hermosa region de Provenza, tierra de lavanda y encanto.", en: "Transfer to the beautiful Provence region, land of lavender and charm." },
-        activities: { es: ["Viaje en tren TGV", "Llegada a Aviñon", "Tour del centro histórico"], en: ["TGV train journey", "Arrival in Avignon", "Historic center tour"] }
+        title: { es: "Provenza", en: "Provence", pt: "Provença" },
+        description: { es: "Traslado a la hermosa region de Provenza, tierra de lavanda y encanto.", en: "Transfer to the beautiful Provence region, land of lavender and charm.", pt: "Traslado à bela região da Provença, terra de lavanda e encanto." },
+        activities: { es: ["Viaje en tren TGV", "Llegada a Aviñon", "Tour del centro histórico"], en: ["TGV train journey", "Arrival in Avignon", "Historic center tour"], pt: ["Viagem de trem TGV", "Chegada a Avignon", "Tour pelo centro histórico"] }
       },
       {
         day: 6,
-        title: { es: "Costa Azul", en: "French Riviera" },
-        description: { es: "Explora la glamurosa Costa Azul: Niza, Cannes y Monaco.", en: "Explore the glamorous French Riviera: Nice, Cannes, and Monaco." },
-        activities: { es: ["Paseo por Niza", "Visita a Cannes", "Tour de Monaco"], en: ["Nice promenade", "Cannes visit", "Monaco tour"] }
+        title: { es: "Costa Azul", en: "French Riviera", pt: "Costa Azul" },
+        description: { es: "Explora la glamurosa Costa Azul: Niza, Cannes y Monaco.", en: "Explore the glamorous French Riviera: Nice, Cannes, and Monaco.", pt: "Explore a glamorosa Costa Azul: Nice, Cannes e Mônaco." },
+        activities: { es: ["Paseo por Niza", "Visita a Cannes", "Tour de Monaco"], en: ["Nice promenade", "Cannes visit", "Monaco tour"], pt: ["Passeio por Nice", "Visita a Cannes", "Tour de Mônaco"] }
       },
       {
         day: 7,
-        title: { es: "Dia libre en la Riviera", en: "Free day on the Riviera" },
-        description: { es: "Dia libre para disfrutar de las playas o actividades opcionales.", en: "Free day to enjoy beaches or optional activities." },
-        activities: { es: ["Playa", "Compras", "Gastronomía local"], en: ["Beach", "Shopping", "Local gastronomy"] }
+        title: { es: "Dia libre en la Riviera", en: "Free day on the Riviera", pt: "Dia livre na Riviera" },
+        description: { es: "Dia libre para disfrutar de las playas o actividades opcionales.", en: "Free day to enjoy beaches or optional activities.", pt: "Dia livre para desfrutar das praias ou atividades opcionais." },
+        activities: { es: ["Playa", "Compras", "Gastronomía local"], en: ["Beach", "Shopping", "Local gastronomy"], pt: ["Praia", "Compras", "Gastronomia local"] }
       },
       {
         day: 8,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight." },
-        activities: { es: ["Check-out", "Traslado al aeropuerto", "Vuelo de regreso"], en: ["Check-out", "Airport transfer", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight.", pt: "Traslado ao aeroporto para o voo de retorno." },
+        activities: { es: ["Check-out", "Traslado al aeropuerto", "Vuelo de regreso"], en: ["Check-out", "Airport transfer", "Return flight"], pt: ["Check-out", "Traslado ao aeroporto", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Francia?", en: "Do I need a visa to travel to France?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Francia sin visa por hasta 90 dias para turismo dentro del espacio Schengen.", en: "Citizens of most Latin American countries can enter France without a visa for up to 90 days for tourism within the Schengen area." }
+        question: { es: "Necesito visa para viajar a Francia?", en: "Do I need a visa to travel to France?", pt: "Preciso de visto para viajar à França?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Francia sin visa por hasta 90 dias para turismo dentro del espacio Schengen.", en: "Citizens of most Latin American countries can enter France without a visa for up to 90 days for tourism within the Schengen area.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar na França sem visto por até 90 dias para turismo dentro do espaço Schengen." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Francia?", en: "When is the best time to visit France?" },
-        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) ofrecen clima agradable y menos turistas. El verano es ideal para la Costa Azul pero París puede estar muy concurrido.", en: "Spring (April-June) and autumn (September-October) offer pleasant weather and fewer tourists. Summer is ideal for the French Riviera but París can be very crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Francia?", en: "When is the best time to visit France?", pt: "Qual é a melhor época para visitar a França?" },
+        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) ofrecen clima agradable y menos turistas. El verano es ideal para la Costa Azul pero París puede estar muy concurrido.", en: "Spring (April-June) and autumn (September-October) offer pleasant weather and fewer tourists. Summer is ideal for the French Riviera but París can be very crowded.", pt: "A primavera (abril-junho) e o outono (setembro-outubro) oferecem clima agradável e menos turistas. O verão é ideal para a Costa Azul mas Paris pode estar muito lotado." }
       },
       {
-        question: { es: "Que idioma se habla en Francia?", en: "What language is spoken in France?" },
-        answer: { es: "El idioma oficial es el frances. En zonas turisticas muchas personas hablan ingles, pero es recomendable aprender frases basicas en frances.", en: "The official language is French. In tourist areas, many people speak English, but learning basic French phrases is recommended." }
+        question: { es: "Que idioma se habla en Francia?", en: "What language is spoken in France?", pt: "Que idioma se fala na França?" },
+        answer: { es: "El idioma oficial es el frances. En zonas turisticas muchas personas hablan ingles, pero es recomendable aprender frases basicas en frances.", en: "The official language is French. In tourist areas, many people speak English, but learning basic French phrases is recommended.", pt: "O idioma oficial é o francês. Nas áreas turísticas muitas pessoas falam inglês, mas é recomendável aprender frases básicas em francês." }
       },
       {
-        question: { es: "Cual es la moneda en Francia?", en: "What is the currency in France?" },
-        answer: { es: "La moneda oficial es el Euro (EUR). Se aceptan tarjetas de credito en la mayoria de establecimientos.", en: "The official currency is the Euro (EUR). Credit cards are accepted in most establishments." }
+        question: { es: "Cual es la moneda en Francia?", en: "What is the currency in France?", pt: "Qual é a moeda na França?" },
+        answer: { es: "La moneda oficial es el Euro (EUR). Se aceptan tarjetas de credito en la mayoria de establecimientos.", en: "The official currency is the Euro (EUR). Credit cards are accepted in most establishments.", pt: "A moeda oficial é o Euro (EUR). Cartões de crédito são aceitos na maioria dos estabelecimentos." }
       }
     ],
-    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October" },
+    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October", pt: "Abril a Junho e Setembro a Outubro" },
     currency: "EUR",
-    language: { es: "Frances", en: "French" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Frances", en: "French", pt: "Francês" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
     slug: "italy",
-    name: { es: "Italia", en: "Italy" },
+    name: { es: "Italia", en: "Italy", pt: "Itália" },
     heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=60&w=800&auto=format&fit=crop",
@@ -191,129 +196,134 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Italia es la cuna del Renacimiento, hogar de algunas de las obras de arte más importantes del mundo y destino gastronomico por excelencia. Desde el romántico Venecia hasta la eterna Roma, pasando por la cultural Florencia y la espectacular Costa Amalfitana, Italia cautiva con su historia milenaria, su arquitectura impresionante y su deliciosa cocina. Vive la dolce vita en uno de los paises más bellos del mundo.",
-      en: "Italy is the cradle of the Renaissance, home to some of the world's most important artworks, and a gastronomic destination par excellence. From romantic Venice to eternal Rome, through cultural Florence and the spectacular Amalfi Coast, Italy captivates with its millennial history, impressive architecture, and delicious cuisine. Experience la dolce vita in one of the most beautiful countries in the world."
+      en: "Italy is the cradle of the Renaissance, home to some of the world's most important artworks, and a gastronomic destination par excellence. From romantic Venice to eternal Rome, through cultural Florence and the spectacular Amalfi Coast, Italy captivates with its millennial history, impressive architecture, and delicious cuisine. Experience la dolce vita in one of the most beautiful countries in the world.",
+      pt: "A Itália é o berço do Renascimento, lar de algumas das obras de arte mais importantes do mundo e destino gastronômico por excelência. De Veneza romântica à eterna Roma, passando pela cultural Florença e pela espetacular Costa Amalfitana, a Itália cativa com sua história milenar, arquitetura impressionante e deliciosa culinária. Viva la dolce vita em um dos países mais belos do mundo."
     },
     highlights: {
       es: ["Coliseo Romano y Vaticano", "Canales de Venecia", "Arte en Florencia", "Costa Amalfitana", "Toscana y sus vinos", "Cinque Terre"],
-      en: ["Roman Colosseum and Vatican", "Venice Canals", "Art in Florence", "Amalfi Coast", "Tuscany and its wines", "Cinque Terre"]
+      en: ["Roman Colosseum and Vatican", "Venice Canals", "Art in Florence", "Amalfi Coast", "Tuscany and its wines", "Cinque Terre"],
+      pt: ["Coliseu Romano e Vaticano", "Canais de Veneza", "Arte em Florença", "Costa Amalfitana", "Toscana e seus vinhos", "Cinque Terre"]
     },
     packages: [
       {
         id: "italia-esencial",
-        name: { es: "Italia Esencial", en: "Essential Italy" },
-        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights" },
+        name: { es: "Italia Esencial", en: "Essential Italy", pt: "Itália Essencial" },
+        duration: { es: "9 dias / 8 noches", en: "9 days / 8 nights", pt: "9 dias / 8 noites" },
         price: "2,099",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Trenes de alta velocidad", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "High-speed trains", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "High-speed trains", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã diário", "Trens de alta velocidade", "Guia em espanhol", "Ingressos principais"]
         }
       },
       {
         id: "italia-romantica",
-        name: { es: "Italia Romántica", en: "Romantic Italy" },
-        duration: { es: "11 dias / 10 noches", en: "11 days / 10 nights" },
+        name: { es: "Italia Romántica", en: "Romantic Italy", pt: "Itália Romântica" },
+        duration: { es: "11 dias / 10 noches", en: "11 days / 10 nights", pt: "11 dias / 10 noites" },
         price: "2,699",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles boutique", "Media pension", "Gondola en Venecia", "Tour de vinos en Toscana", "Cena romántica"],
-          en: ["International flights", "Boutique hotels", "Half board", "Venice gondola", "Tuscany wine tour", "Romantic dinner"]
+          en: ["International flights", "Boutique hotels", "Half board", "Venice gondola", "Tuscany wine tour", "Romantic dinner"],
+          pt: ["Voos internacionais", "Hotéis boutique", "Meia pensão", "Gôndola em Veneza", "Tour de vinhos na Toscana", "Jantar romântico"]
         }
       },
       {
         id: "italia-completa",
-        name: { es: "Gran Tour de Italia", en: "Grand Tour of Italy" },
-        duration: { es: "15 dias / 14 noches", en: "15 days / 14 nights" },
+        name: { es: "Gran Tour de Italia", en: "Grand Tour of Italy", pt: "Grande Tour da Itália" },
+        duration: { es: "15 dias / 14 noches", en: "15 days / 14 nights", pt: "15 dias / 14 noites" },
         price: "3,499",
         taxes: "550",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Tours exclusivos", "Experiencias gastronomicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Exclusive tours", "Gastronomic experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Exclusive tours", "Gastronomic experiences"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "Todas as transferências", "Tours exclusivos", "Experiências gastronômicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Roma", en: "Arrival in Rome" },
-        description: { es: "Bienvenida en Roma, la Ciudad Eterna. Traslado al hotel y tiempo libre.", en: "Welcome to Rome, the Eternal City. Hotel transfer and free time." },
-        activities: { es: ["Recogida en aeropuerto", "Check-in hotel", "Paseo por Trastevere"], en: ["Airport pickup", "Hotel check-in", "Trastevere walk"] }
+        title: { es: "Llegada a Roma", en: "Arrival in Rome", pt: "Chegada em Roma" },
+        description: { es: "Bienvenida en Roma, la Ciudad Eterna. Traslado al hotel y tiempo libre.", en: "Welcome to Rome, the Eternal City. Hotel transfer and free time.", pt: "Boas-vindas em Roma, a Cidade Eterna. Transfer ao hotel e tempo livre." },
+        activities: { es: ["Recogida en aeropuerto", "Check-in hotel", "Paseo por Trastevere"], en: ["Airport pickup", "Hotel check-in", "Trastevere walk"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Passeio por Trastevere"] }
       },
       {
         day: 2,
-        title: { es: "Roma Imperial", en: "Imperial Rome" },
-        description: { es: "Descubre el Coliseo, el Foro Romano y el Palatino.", en: "Discover the Colosseum, Roman Forum, and Palatine Hill." },
-        activities: { es: ["Coliseo", "Foro Romano", "Monte Palatino"], en: ["Colosseum", "Roman Forum", "Palatine Hill"] }
+        title: { es: "Roma Imperial", en: "Imperial Rome", pt: "Roma Imperial" },
+        description: { es: "Descubre el Coliseo, el Foro Romano y el Palatino.", en: "Discover the Colosseum, Roman Forum, and Palatine Hill.", pt: "Descubra o Coliseu, o Fórum Romano e o Monte Palatino." },
+        activities: { es: ["Coliseo", "Foro Romano", "Monte Palatino"], en: ["Colosseum", "Roman Forum", "Palatine Hill"], pt: ["Coliseu", "Fórum Romano", "Monte Palatino"] }
       },
       {
         day: 3,
-        title: { es: "Vaticano", en: "Vatican" },
-        description: { es: "Visita los Museos Vaticanos, la Capilla Sixtina y la Basilica de San Pedro.", en: "Visit the Vatican Museums, Sistine Chapel, and St. Peter's Basilica." },
-        activities: { es: ["Museos Vaticanos", "Capilla Sixtina", "Plaza San Pedro"], en: ["Vatican Museums", "Sistine Chapel", "St. Peter's Square"] }
+        title: { es: "Vaticano", en: "Vatican", pt: "Vaticano" },
+        description: { es: "Visita los Museos Vaticanos, la Capilla Sixtina y la Basilica de San Pedro.", en: "Visit the Vatican Museums, Sistine Chapel, and St. Peter's Basilica.", pt: "Visite os Museus do Vaticano, a Capela Sistina e a Basílica de São Pedro." },
+        activities: { es: ["Museos Vaticanos", "Capilla Sixtina", "Plaza San Pedro"], en: ["Vatican Museums", "Sistine Chapel", "St. Peter's Square"], pt: ["Museus do Vaticano", "Capela Sistina", "Praça de São Pedro"] }
       },
       {
         day: 4,
-        title: { es: "Florencia", en: "Florence" },
-        description: { es: "Viaje en tren de alta velocidad a Florencia, cuna del Renacimiento.", en: "High-speed train to Florence, cradle of the Renaissance." },
-        activities: { es: ["Tren a Florencia", "Galeria Uffizi", "Ponte Vecchio"], en: ["Train to Florence", "Uffizi Gallery", "Ponte Vecchio"] }
+        title: { es: "Florencia", en: "Florence", pt: "Florença" },
+        description: { es: "Viaje en tren de alta velocidad a Florencia, cuna del Renacimiento.", en: "High-speed train to Florence, cradle of the Renaissance.", pt: "Viagem de trem de alta velocidade para Florença, berço do Renascimento." },
+        activities: { es: ["Tren a Florencia", "Galeria Uffizi", "Ponte Vecchio"], en: ["Train to Florence", "Uffizi Gallery", "Ponte Vecchio"], pt: ["Trem para Florença", "Galeria Uffizi", "Ponte Vecchio"] }
       },
       {
         day: 5,
-        title: { es: "Toscana", en: "Tuscany" },
-        description: { es: "Excursion por la campiña toscana con degustacion de vinos.", en: "Excursion through the Tuscan countryside with wine tasting." },
-        activities: { es: ["San Gimignano", "Siena", "Degustacion Chianti"], en: ["San Gimignano", "Siena", "Chianti tasting"] }
+        title: { es: "Toscana", en: "Tuscany", pt: "Toscana" },
+        description: { es: "Excursion por la campiña toscana con degustacion de vinos.", en: "Excursion through the Tuscan countryside with wine tasting.", pt: "Excursão pela zona rural toscana com degustação de vinhos." },
+        activities: { es: ["San Gimignano", "Siena", "Degustacion Chianti"], en: ["San Gimignano", "Siena", "Chianti tasting"], pt: ["San Gimignano", "Siena", "Degustação Chianti"] }
       },
       {
         day: 6,
-        title: { es: "Venecia", en: "Venice" },
-        description: { es: "Llegada a Venecia, la ciudad flotante.", en: "Arrival in Venice, the floating city." },
-        activities: { es: ["Tren a Venecia", "Plaza San Marcos", "Paseo en gondola"], en: ["Train to Venice", "St. Mark's Square", "Gondola ride"] }
+        title: { es: "Venecia", en: "Venice", pt: "Veneza" },
+        description: { es: "Llegada a Venecia, la ciudad flotante.", en: "Arrival in Venice, the floating city.", pt: "Chegada em Veneza, a cidade flutuante." },
+        activities: { es: ["Tren a Venecia", "Plaza San Marcos", "Paseo en gondola"], en: ["Train to Venice", "St. Mark's Square", "Gondola ride"], pt: ["Trem para Veneza", "Praça de São Marcos", "Passeio de gôndola"] }
       },
       {
         day: 7,
-        title: { es: "Islas de Venecia", en: "Venice Islands" },
-        description: { es: "Excursion a las coloridas islas de Murano y Burano.", en: "Excursion to the colorful islands of Murano and Burano." },
-        activities: { es: ["Murano y cristal", "Burano y encajes", "Torcello"], en: ["Murano and glass", "Burano and lace", "Torcello"] }
+        title: { es: "Islas de Venecia", en: "Venice Islands", pt: "Ilhas de Veneza" },
+        description: { es: "Excursion a las coloridas islas de Murano y Burano.", en: "Excursion to the colorful islands of Murano and Burano.", pt: "Excursão às coloridas ilhas de Murano e Burano." },
+        activities: { es: ["Murano y cristal", "Burano y encajes", "Torcello"], en: ["Murano and glass", "Burano and lace", "Torcello"], pt: ["Murano e vidro", "Burano e rendas", "Torcello"] }
       },
       {
         day: 8,
-        title: { es: "Milan", en: "Milan" },
-        description: { es: "Viaje a Milan, capital de la moda y el diseño.", en: "Trip to Milan, capital of fashion and design." },
-        activities: { es: ["Duomo de Milan", "Galeria Vittorio Emanuele", "La Ultima Cena"], en: ["Milan Cathedral", "Galleria Vittorio Emanuele", "The Last Supper"] }
+        title: { es: "Milan", en: "Milan", pt: "Milão" },
+        description: { es: "Viaje a Milan, capital de la moda y el diseño.", en: "Trip to Milan, capital of fashion and design.", pt: "Viagem a Milão, capital da moda e do design." },
+        activities: { es: ["Duomo de Milan", "Galeria Vittorio Emanuele", "La Ultima Cena"], en: ["Milan Cathedral", "Galleria Vittorio Emanuele", "The Last Supper"], pt: ["Duomo de Milão", "Galeria Vittorio Emanuele", "A Última Ceia"] }
       },
       {
         day: 9,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight." },
-        activities: { es: ["Check-out", "Tiempo libre", "Vuelo de regreso"], en: ["Check-out", "Free time", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight.", pt: "Transfer ao aeroporto para o voo de retorno." },
+        activities: { es: ["Check-out", "Tiempo libre", "Vuelo de regreso"], en: ["Check-out", "Free time", "Return flight"], pt: ["Check-out", "Tempo livre", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Italia?", en: "Do I need a visa to travel to Italy?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Italia sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Italy without a visa for up to 90 days for tourism." }
+        question: { es: "Necesito visa para viajar a Italia?", en: "Do I need a visa to travel to Italy?", pt: "Preciso de visto para viajar para a Itália?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Italia sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Italy without a visa for up to 90 days for tourism.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar na Itália sem visto por até 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Italia?", en: "When is the best time to visit Italy?" },
-        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Italia?", en: "When is the best time to visit Italy?", pt: "Qual é a melhor época para visitar a Itália?" },
+        answer: { es: "La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales. El verano puede ser muy caluroso y concurrido.", en: "Spring (April-June) and autumn (September-October) are ideal. Summer can be very hot and crowded.", pt: "A primavera (abril-junho) e o outono (setembro-outubro) são ideais. O verão pode ser muito quente e lotado." }
       },
       {
-        question: { es: "Como me muevo entre ciudades en Italia?", en: "How do I get around between cities in Italy?" },
-        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rápida y cómoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably." }
+        question: { es: "Como me muevo entre ciudades en Italia?", en: "How do I get around between cities in Italy?", pt: "Como me desloco entre cidades na Itália?" },
+        answer: { es: "Los trenes de alta velocidad (Frecciarossa) conectan las principales ciudades de manera rápida y cómoda.", en: "High-speed trains (Frecciarossa) connect major cities quickly and comfortably.", pt: "Os trens de alta velocidade (Frecciarossa) conectam as principais cidades de forma rápida e confortável." }
       },
       {
-        question: { es: "Es caro comer en Italia?", en: "Is eating in Italy expensive?" },
-        answer: { es: "Hay opciones para todos los presupuestos. Los trattorias locales ofrecen comida autentica a precios razonables.", en: "There are options for all budgets. Local trattorias offer authentic food at reasonable prices." }
+        question: { es: "Es caro comer en Italia?", en: "Is eating in Italy expensive?", pt: "É caro comer na Itália?" },
+        answer: { es: "Hay opciones para todos los presupuestos. Los trattorias locales ofrecen comida autentica a precios razonables.", en: "There are options for all budgets. Local trattorias offer authentic food at reasonable prices.", pt: "Há opções para todos os orçamentos. As trattorias locais oferecem comida autêntica a preços razoáveis." }
       }
     ],
-    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October" },
+    bestTimeToVisit: { es: "Abril a Junio y Septiembre a Octubre", en: "April to June and September to October", pt: "Abril a Junho e Setembro a Outubro" },
     currency: "EUR",
-    language: { es: "Italiano", en: "Italian" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Italiano", en: "Italian", pt: "Italiano" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
     slug: "spain",
-    name: { es: "España", en: "Spain" },
+    name: { es: "España", en: "Spain", pt: "Espanha" },
     heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=800&auto=format&fit=crop",
@@ -323,131 +333,136 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "España es un pais vibrante que combina historia, cultura, gastronomía y vida nocturna como ningun otro. Desde la arquitectura de Gaudi en Barcelona hasta el flamenco apasionado de Sevilla, pasando por los museos de Madrid y las playas de la Costa del Sol, España ofrece experiencias inolvidables. Disfruta de tapas, sangria, y la calidez de su gente en uno de los destinos favoritos de los viajeros latinoamericanos.",
-      en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations."
+      en: "Spain is a vibrant country that combines history, culture, gastronomy, and nightlife like no other. From Gaudi's architecture in Barcelona to the passionate flamenco of Seville, through Madrid's museums and Costa del Sol beaches, Spain offers unforgettable experiences. Enjoy tapas, sangria, and the warmth of its people in one of Latin American travelers' favorite destinations.",
+      pt: "A Espanha é um país vibrante que combina história, cultura, gastronomia e vida noturna como nenhum outro. Da arquitetura de Gaudí em Barcelona ao flamenco apaixonado de Sevilha, passando pelos museus de Madri e pelas praias da Costa del Sol, a Espanha oferece experiências inesquecíveis. Desfrute de tapas, sangria e o calor de seu povo em um dos destinos favoritos dos viajantes latino-americanos."
     },
     highlights: {
       es: ["Sagrada Familia en Barcelona", "Alhambra de Granada", "Museo del Prado en Madrid", "Flamenco en Sevilla", "Playas de la Costa Brava", "San Sebastian y su gastronomía"],
-      en: ["Sagrada Familia in Barcelona", "Alhambra of Granada", "Prado Museum in Madrid", "Flamenco in Seville", "Costa Brava beaches", "San Sebastian gastronomy"]
+      en: ["Sagrada Familia in Barcelona", "Alhambra of Granada", "Prado Museum in Madrid", "Flamenco in Seville", "Costa Brava beaches", "San Sebastian gastronomy"],
+      pt: ["Sagrada Família em Barcelona", "Alhambra de Granada", "Museu do Prado em Madri", "Flamenco em Sevilha", "Praias da Costa Brava", "San Sebastián e sua gastronomia"]
     },
     packages: [
       {
         id: "espana-clasica",
-        name: { es: "España Clásica", en: "Classic Spain" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "España Clásica", en: "Classic Spain", pt: "Espanha Clássica" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "1,799",
         taxes: "360",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "AVE entre ciudades", "Guia en español", "Espectaculo flamenco"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "AVE between cities", "Spanish-speaking guide", "Flamenco show"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "AVE between cities", "Spanish-speaking guide", "Flamenco show"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã diário", "AVE entre cidades", "Guia em espanhol", "Show de flamenco"]
         }
       },
       {
         id: "espana-andalucia",
-        name: { es: "Andalucia Mágica", en: "Mágical Andalusia" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Andalucia Mágica", en: "Mágical Andalusia", pt: "Andaluzia Mágica" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,599",
         taxes: "320",
         includes: {
           es: ["Vuelos internacionales", "Hoteles con encanto", "Desayuno", "Coche de alquiler", "Entradas Alhambra", "Tour de tapas"],
-          en: ["International flights", "Charming hotels", "Breakfast", "Rental car", "Alhambra tickets", "Tapas tour"]
+          en: ["International flights", "Charming hotels", "Breakfast", "Rental car", "Alhambra tickets", "Tapas tour"],
+          pt: ["Voos internacionais", "Hotéis charmosos", "Café da manhã", "Carro alugado", "Ingressos Alhambra", "Tour de tapas"]
         }
       },
       {
         id: "espana-completa",
-        name: { es: "Gran Tour de Espana", en: "Grand Tour of Spain" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour de Espana", en: "Grand Tour of Spain", pt: "Grande Tour da Espanha" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "2,899",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Trenes AVE", "Tours exclusivos", "Experiencias únicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "AVE trains", "Exclusive tours", "Unique experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "AVE trains", "Exclusive tours", "Unique experiences"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "Trens AVE", "Tours exclusivos", "Experiências únicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Madrid", en: "Arrival in Madrid" },
-        description: { es: "Bienvenida en Madrid, la vibrante capital de España.", en: "Welcome to Madrid, Spain's vibrant capital." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Gran Via"], en: ["Airport pickup", "Hotel check-in", "Gran Via walk"] }
+        title: { es: "Llegada a Madrid", en: "Arrival in Madrid", pt: "Chegada em Madri" },
+        description: { es: "Bienvenida en Madrid, la vibrante capital de España.", en: "Welcome to Madrid, Spain's vibrant capital.", pt: "Boas-vindas em Madri, a vibrante capital da Espanha." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Paseo por Gran Via"], en: ["Airport pickup", "Hotel check-in", "Gran Via walk"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Passeio pela Gran Vía"] }
       },
       {
         day: 2,
-        title: { es: "Madrid Monumental", en: "Monumental Madrid" },
-        description: { es: "Descubre el Palacio Real, la Plaza Mayor y el Museo del Prado.", en: "Discover the Royal Palace, Plaza Mayor, and Prado Museum." },
-        activities: { es: ["Palacio Real", "Plaza Mayor", "Museo del Prado"], en: ["Royal Palace", "Plaza Mayor", "Prado Museum"] }
+        title: { es: "Madrid Monumental", en: "Monumental Madrid", pt: "Madri Monumental" },
+        description: { es: "Descubre el Palacio Real, la Plaza Mayor y el Museo del Prado.", en: "Discover the Royal Palace, Plaza Mayor, and Prado Museum.", pt: "Descubra o Palácio Real, a Plaza Mayor e o Museu do Prado." },
+        activities: { es: ["Palacio Real", "Plaza Mayor", "Museo del Prado"], en: ["Royal Palace", "Plaza Mayor", "Prado Museum"], pt: ["Palácio Real", "Plaza Mayor", "Museu do Prado"] }
       },
       {
         day: 3,
-        title: { es: "Toledo", en: "Toledo" },
-        description: { es: "Excursion a Toledo, la ciudad de las tres culturas.", en: "Excursion to Toledo, the city of three cultures." },
-        activities: { es: ["Catedral de Toledo", "Sinagoga", "Alcazar"], en: ["Toledo Cathedral", "Synagogue", "Alcazar"] }
+        title: { es: "Toledo", en: "Toledo", pt: "Toledo" },
+        description: { es: "Excursion a Toledo, la ciudad de las tres culturas.", en: "Excursion to Toledo, the city of three cultures.", pt: "Excursão a Toledo, a cidade das três culturas." },
+        activities: { es: ["Catedral de Toledo", "Sinagoga", "Alcazar"], en: ["Toledo Cathedral", "Synagogue", "Alcazar"], pt: ["Catedral de Toledo", "Sinagoga", "Alcázar"] }
       },
       {
         day: 4,
-        title: { es: "Sevilla", en: "Seville" },
-        description: { es: "Viaje en AVE a Sevilla, corazon de Andalucia.", en: "AVE train to Seville, heart of Andalusia." },
-        activities: { es: ["AVE a Sevilla", "Catedral y Giralda", "Barrio Santa Cruz"], en: ["AVE to Seville", "Cathedral and Giralda", "Santa Cruz quarter"] }
+        title: { es: "Sevilla", en: "Seville", pt: "Sevilha" },
+        description: { es: "Viaje en AVE a Sevilla, corazon de Andalucia.", en: "AVE train to Seville, heart of Andalusia.", pt: "Viagem de AVE para Sevilha, coração da Andaluzia." },
+        activities: { es: ["AVE a Sevilla", "Catedral y Giralda", "Barrio Santa Cruz"], en: ["AVE to Seville", "Cathedral and Giralda", "Santa Cruz quarter"], pt: ["AVE para Sevilha", "Catedral e Giralda", "Bairro de Santa Cruz"] }
       },
       {
         day: 5,
-        title: { es: "Sevilla y Flamenco", en: "Seville and Flamenco" },
-        description: { es: "Real Alcazar por la manana y espectaculo flamenco por la noche.", en: "Royal Alcazar in the morning and flamenco show at night." },
-        activities: { es: ["Real Alcazar", "Plaza de Espana", "Tablao flamenco"], en: ["Royal Alcazar", "Plaza de España", "Flamenco tablao"] }
+        title: { es: "Sevilla y Flamenco", en: "Seville and Flamenco", pt: "Sevilha e Flamenco" },
+        description: { es: "Real Alcazar por la manana y espectaculo flamenco por la noche.", en: "Royal Alcazar in the morning and flamenco show at night.", pt: "Real Alcázar pela manhã e show de flamenco à noite." },
+        activities: { es: ["Real Alcazar", "Plaza de Espana", "Tablao flamenco"], en: ["Royal Alcazar", "Plaza de España", "Flamenco tablao"], pt: ["Real Alcázar", "Plaza de España", "Tablao flamenco"] }
       },
       {
         day: 6,
-        title: { es: "Granada", en: "Granada" },
-        description: { es: "Viaje a Granada para visitar la majestuosa Alhambra.", en: "Trip to Granada to visit the majestic Alhambra." },
-        activities: { es: ["Viaje a Granada", "Alhambra", "Generalife"], en: ["Trip to Granada", "Alhambra", "Generalife"] }
+        title: { es: "Granada", en: "Granada", pt: "Granada" },
+        description: { es: "Viaje a Granada para visitar la majestuosa Alhambra.", en: "Trip to Granada to visit the majestic Alhambra.", pt: "Viagem a Granada para visitar a majestosa Alhambra." },
+        activities: { es: ["Viaje a Granada", "Alhambra", "Generalife"], en: ["Trip to Granada", "Alhambra", "Generalife"], pt: ["Viagem a Granada", "Alhambra", "Generalife"] }
       },
       {
         day: 7,
-        title: { es: "Barcelona", en: "Barcelona" },
-        description: { es: "Vuelo a Barcelona, la capital catalana.", en: "Flight to Barcelona, the Catalan capital." },
-        activities: { es: ["Vuelo a Barcelona", "Las Ramblas", "Barrio Gotico"], en: ["Flight to Barcelona", "Las Ramblas", "Gothic Quarter"] }
+        title: { es: "Barcelona", en: "Barcelona", pt: "Barcelona" },
+        description: { es: "Vuelo a Barcelona, la capital catalana.", en: "Flight to Barcelona, the Catalan capital.", pt: "Voo para Barcelona, a capital catalã." },
+        activities: { es: ["Vuelo a Barcelona", "Las Ramblas", "Barrio Gotico"], en: ["Flight to Barcelona", "Las Ramblas", "Gothic Quarter"], pt: ["Voo para Barcelona", "Las Ramblas", "Bairro Gótico"] }
       },
       {
         day: 8,
-        title: { es: "Barcelona Gaudi", en: "Barcelona Gaudi" },
-        description: { es: "Descubre las obras maestras de Antoni Gaudi.", en: "Discover Antoni Gaudi's masterpieces." },
-        activities: { es: ["Sagrada Familia", "Park Guell", "Casa Batllo"], en: ["Sagrada Familia", "Park Guell", "Casa Batllo"] }
+        title: { es: "Barcelona Gaudi", en: "Barcelona Gaudi", pt: "Barcelona Gaudí" },
+        description: { es: "Descubre las obras maestras de Antoni Gaudi.", en: "Discover Antoni Gaudi's masterpieces.", pt: "Descubra as obras-primas de Antoni Gaudí." },
+        activities: { es: ["Sagrada Familia", "Park Guell", "Casa Batllo"], en: ["Sagrada Familia", "Park Guell", "Casa Batllo"], pt: ["Sagrada Família", "Park Güell", "Casa Batlló"] }
       },
       {
         day: 9,
-        title: { es: "Costa Brava", en: "Costa Brava" },
-        description: { es: "Excursion opcional a la hermosa Costa Brava.", en: "Optional excursion to the beautiful Costa Brava." },
-        activities: { es: ["Tossa de Mar", "Platja d'Aro", "Tiempo libre"], en: ["Tossa de Mar", "Platja d'Aro", "Free time"] }
+        title: { es: "Costa Brava", en: "Costa Brava", pt: "Costa Brava" },
+        description: { es: "Excursion opcional a la hermosa Costa Brava.", en: "Optional excursion to the beautiful Costa Brava.", pt: "Excursão opcional à bela Costa Brava." },
+        activities: { es: ["Tossa de Mar", "Platja d'Aro", "Tiempo libre"], en: ["Tossa de Mar", "Platja d'Aro", "Free time"], pt: ["Tossa de Mar", "Platja d'Aro", "Tempo livre"] }
       },
       {
         day: 10,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Tiempo libre y traslado al aeropuerto.", en: "Free time and airport transfer." },
-        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Tiempo libre y traslado al aeropuerto.", en: "Free time and airport transfer.", pt: "Tempo livre e transfer ao aeroporto." },
+        activities: { es: ["Compras", "Check-out", "Vuelo de regreso"], en: ["Shopping", "Check-out", "Return flight"], pt: ["Compras", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Espana?", en: "Do I need a visa to travel to Spain?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a España sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism." }
+        question: { es: "Necesito visa para viajar a Espana?", en: "Do I need a visa to travel to Spain?", pt: "Preciso de visto para viajar para a Espanha?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a España sin visa por hasta 90 dias para turismo.", en: "Citizens of most Latin American countries can enter Spain without a visa for up to 90 days for tourism.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar na Espanha sem visto por até 90 dias para turismo." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?" },
-        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south." }
+        question: { es: "Cual es la mejor epoca para visitar Espana?", en: "When is the best time to visit Spain?", pt: "Qual é a melhor época para visitar a Espanha?" },
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para playas pero muy caluroso en el sur.", en: "Spring and autumn are ideal. Summer is perfect for beaches but very hot in the south.", pt: "Primavera e outono são ideais. O verão é perfeito para praias, mas muito quente no sul." }
       },
       {
-        question: { es: "Es facil comúnicarse en español?", en: "Is it easy to commúnicate in Spanish?" },
-        answer: { es: "Si, el español es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home." }
+        question: { es: "Es facil comúnicarse en español?", en: "Is it easy to commúnicate in Spanish?", pt: "É fácil se comunicar em espanhol?" },
+        answer: { es: "Si, el español es el idioma oficial. Los latinoamericanos se sentiran como en casa.", en: "Yes, Spanish is the official language. Latin Americans will feel right at home.", pt: "Sim, o espanhol é o idioma oficial. Os latino-americanos se sentirão em casa." }
       },
       {
-        question: { es: "Como es la gastronomía española?", en: "What is Spanish gastronomy like?" },
-        answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties." }
+        question: { es: "Como es la gastronomía española?", en: "What is Spanish gastronomy like?", pt: "Como é a gastronomia espanhola?" },
+        answer: { es: "España es famosa por sus tapas, paella, jamon iberico, y vinos. Cada region tiene sus especialidades.", en: "Spain is famous for tapas, paella, Iberian ham, and wines. Each region has its specialties.", pt: "A Espanha é famosa por suas tapas, paella, presunto ibérico e vinhos. Cada região tem suas especialidades." }
       }
     ],
-    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
+    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November", pt: "Março a Junho e Setembro a Novembro" },
     currency: "EUR",
-    language: { es: "Español", en: "Spanish" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Español", en: "Spanish", pt: "Espanhol" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
     slug: "germany",
@@ -573,11 +588,11 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     bestTimeToVisit: { es: "Mayo a Octubre y Diciembre", en: "May to October and December" },
     currency: "EUR",
     language: { es: "Aleman", en: "German" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
     slug: "portugal",
-    name: { es: "Portugal", en: "Portugal" },
+    name: { es: "Portugal", en: "Portugal", pt: "Portugal" },
     heroImage: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=60&w=800&auto=format&fit=crop",
@@ -587,117 +602,122 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Portugal es un tesoro escondido de Europa, con una historia maritima fascinante, playas impresionantes y una gastronomía deliciosa. Desde los azulejos de Lisboa hasta los vinos de Oporto, pasando por los acantilados del Algarve y los palacios de Sintra, Portugal encanta con su autenticidad y hospitalidad. Descubre el pais de los navegantes, el fado melancolico y los pasteles de nata.",
-      en: "Portugal is a hidden treasure of Europe, with fascinating maritime history, stunning beaches, and delicious gastronomy. From Lisbon's tiles to Porto's wines, through the Algarve cliffs and Sintra palaces, Portugal charms with its authenticity and hospitality. Discover the land of navigators, melancholic fado, and pastel de nata."
+      en: "Portugal is a hidden treasure of Europe, with fascinating maritime history, stunning beaches, and delicious gastronomy. From Lisbon's tiles to Porto's wines, through the Algarve cliffs and Sintra palaces, Portugal charms with its authenticity and hospitality. Discover the land of navigators, melancholic fado, and pastel de nata.",
+      pt: "Portugal é um tesouro escondido da Europa, com uma história marítima fascinante, praias deslumbrantes e uma gastronomia deliciosa. Dos azulejos de Lisboa aos vinhos do Porto, passando pelas falésias do Algarve e pelos palácios de Sintra, Portugal encanta com sua autenticidade e hospitalidade. Descubra o país dos navegadores, o fado melancólico e os pastéis de nata."
     },
     highlights: {
       es: ["Torre de Belem en Lisboa", "Bodegas de Oporto", "Playas del Algarve", "Palacios de Sintra", "Fado tradicional", "Gastronomía portuguesa"],
-      en: ["Belem Tower in Lisbon", "Porto wine cellars", "Algarve beaches", "Sintra palaces", "Traditional fado", "Portuguese gastronomy"]
+      en: ["Belem Tower in Lisbon", "Porto wine cellars", "Algarve beaches", "Sintra palaces", "Traditional fado", "Portuguese gastronomy"],
+      pt: ["Torre de Belém em Lisboa", "Caves do vinho do Porto", "Praias do Algarve", "Palácios de Sintra", "Fado tradicional", "Gastronomia portuguesa"]
     },
     packages: [
       {
         id: "portugal-esencial",
-        name: { es: "Portugal Esencial", en: "Essential Portugal" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Portugal Esencial", en: "Essential Portugal", pt: "Portugal Essencial" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,499",
         taxes: "300",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Traslados", "Guia en español", "Espectaculo de fado"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Fado show"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Transfers", "Spanish-speaking guide", "Fado show"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã diário", "Transfers", "Guia em espanhol", "Show de fado"]
         }
       },
       {
         id: "portugal-algarve",
-        name: { es: "Portugal y Algarve", en: "Portugal and Algarve" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Portugal y Algarve", en: "Portugal and Algarve", pt: "Portugal e Algarve" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Coche de alquiler", "Tour de vinos", "Excursion en barco"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Rental car", "Wine tour", "Boat excursion"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Rental car", "Wine tour", "Boat excursion"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã", "Carro alugado", "Tour de vinhos", "Excursão de barco"]
         }
       },
       {
         id: "portugal-completo",
-        name: { es: "Gran Tour de Portugal", en: "Grand Tour of Portugal" },
-        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights" },
+        name: { es: "Gran Tour de Portugal", en: "Grand Tour of Portugal", pt: "Grande Tour de Portugal" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
         price: "2,499",
         taxes: "450",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Tours premium", "Experiencias gastronomicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Premium tours", "Gastronomic experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Premium tours", "Gastronomic experiences"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "Todas as transferências", "Tours premium", "Experiências gastronômicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Lisboa", en: "Arrival in Lisbon" },
-        description: { es: "Bienvenida en Lisboa, la ciudad de las siete colinas.", en: "Welcome to Lisbon, the city of seven hills." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Alfama"], en: ["Airport pickup", "Hotel check-in", "Alfama neighborhood"] }
+        title: { es: "Llegada a Lisboa", en: "Arrival in Lisbon", pt: "Chegada em Lisboa" },
+        description: { es: "Bienvenida en Lisboa, la ciudad de las siete colinas.", en: "Welcome to Lisbon, the city of seven hills.", pt: "Boas-vindas em Lisboa, a cidade das sete colinas." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Alfama"], en: ["Airport pickup", "Hotel check-in", "Alfama neighborhood"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Bairro de Alfama"] }
       },
       {
         day: 2,
-        title: { es: "Lisboa Monumental", en: "Monumental Lisbon" },
-        description: { es: "Explora los monumentos emblematicos de Lisboa.", en: "Explore Lisbon's emblematic monuments." },
-        activities: { es: ["Torre de Belem", "Monasterio Jeronimos", "Pasteis de Belem"], en: ["Belem Tower", "Jeronimos Monastery", "Pasteis de Belem"] }
+        title: { es: "Lisboa Monumental", en: "Monumental Lisbon", pt: "Lisboa Monumental" },
+        description: { es: "Explora los monumentos emblematicos de Lisboa.", en: "Explore Lisbon's emblematic monuments.", pt: "Explore os monumentos emblemáticos de Lisboa." },
+        activities: { es: ["Torre de Belem", "Monasterio Jeronimos", "Pasteis de Belem"], en: ["Belem Tower", "Jeronimos Monastery", "Pasteis de Belem"], pt: ["Torre de Belém", "Mosteiro dos Jerónimos", "Pastéis de Belém"] }
       },
       {
         day: 3,
-        title: { es: "Sintra", en: "Sintra" },
-        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's mágical palaces." },
-        activities: { es: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"], en: ["Pena Palace", "Quinta da Regaleira", "Cabo da Roca"] }
+        title: { es: "Sintra", en: "Sintra", pt: "Sintra" },
+        description: { es: "Excursion a los palacios magicos de Sintra.", en: "Excursion to Sintra's mágical palaces.", pt: "Excursão aos palácios mágicos de Sintra." },
+        activities: { es: ["Palacio da Pena", "Quinta da Regaleira", "Cabo da Roca"], en: ["Pena Palace", "Quinta da Regaleira", "Cabo da Roca"], pt: ["Palácio da Pena", "Quinta da Regaleira", "Cabo da Roca"] }
       },
       {
         day: 4,
-        title: { es: "Oporto", en: "Porto" },
-        description: { es: "Viaje en tren a la encantadora ciudad de Oporto.", en: "Train journey to the charming city of Porto." },
-        activities: { es: ["Tren a Oporto", "Ribeira", "Torre dos Clerigos"], en: ["Train to Porto", "Ribeira", "Clerigos Tower"] }
+        title: { es: "Oporto", en: "Porto", pt: "Porto" },
+        description: { es: "Viaje en tren a la encantadora ciudad de Oporto.", en: "Train journey to the charming city of Porto.", pt: "Viagem de trem para a encantadora cidade do Porto." },
+        activities: { es: ["Tren a Oporto", "Ribeira", "Torre dos Clerigos"], en: ["Train to Porto", "Ribeira", "Clerigos Tower"], pt: ["Trem para o Porto", "Ribeira", "Torre dos Clérigos"] }
       },
       {
         day: 5,
-        title: { es: "Bodegas de Oporto", en: "Porto Wineries" },
-        description: { es: "Visita las famosas bodegas de vino de Oporto.", en: "Visit Porto's famous wine cellars." },
-        activities: { es: ["Bodegas en Gaia", "Cata de vino", "Libreria Lello"], en: ["Gaia cellars", "Wine tasting", "Lello Bookstore"] }
+        title: { es: "Bodegas de Oporto", en: "Porto Wineries", pt: "Caves do Porto" },
+        description: { es: "Visita las famosas bodegas de vino de Oporto.", en: "Visit Porto's famous wine cellars.", pt: "Visite as famosas caves de vinho do Porto." },
+        activities: { es: ["Bodegas en Gaia", "Cata de vino", "Libreria Lello"], en: ["Gaia cellars", "Wine tasting", "Lello Bookstore"], pt: ["Caves em Gaia", "Degustação de vinho", "Livraria Lello"] }
       },
       {
         day: 6,
-        title: { es: "Valle del Duero", en: "Douro Valley" },
-        description: { es: "Excursion al pintoresco Valle del Duero.", en: "Excursion to the picturesque Douro Valley." },
-        activities: { es: ["Crucero por el Duero", "Vinedos", "Almuerzo tipico"], en: ["Douro cruise", "Vineyards", "Typical lunch"] }
+        title: { es: "Valle del Duero", en: "Douro Valley", pt: "Vale do Douro" },
+        description: { es: "Excursion al pintoresco Valle del Duero.", en: "Excursion to the picturesque Douro Valley.", pt: "Excursão ao pitoresco Vale do Douro." },
+        activities: { es: ["Crucero por el Duero", "Vinedos", "Almuerzo tipico"], en: ["Douro cruise", "Vineyards", "Typical lunch"], pt: ["Cruzeiro pelo Douro", "Vinhedos", "Almoço típico"] }
       },
       {
         day: 7,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight." },
-        activities: { es: ["Tiempo libre", "Check-out", "Vuelo de regreso"], en: ["Free time", "Check-out", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Traslado al aeropuerto para el vuelo de regreso.", en: "Transfer to airport for return flight.", pt: "Transfer ao aeroporto para o voo de retorno." },
+        activities: { es: ["Tiempo libre", "Check-out", "Vuelo de regreso"], en: ["Free time", "Check-out", "Return flight"], pt: ["Tempo livre", "Check-out", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Portugal?", en: "Do I need a visa to travel to Portugal?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Portugal sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Portugal without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Portugal?", en: "Do I need a visa to travel to Portugal?", pt: "Preciso de visto para viajar para Portugal?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Portugal sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Portugal without a visa for up to 90 days.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar em Portugal sem visto por até 90 dias." }
       },
       {
-        question: { es: "Es facil entender el portugues?", en: "Is Portuguese easy to understand?" },
-        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan español.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish." }
+        question: { es: "Es facil entender el portugues?", en: "Is Portuguese easy to understand?", pt: "É fácil entender o português?" },
+        answer: { es: "El portugues europeo difiere del brasileno pero es comprensible. Muchos portugueses hablan español.", en: "European Portuguese differs from Brazilian but is understandable. Many Portuguese speak Spanish.", pt: "O português europeu difere do brasileiro, mas é compreensível. Muitos portugueses falam espanhol." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Portugal?", en: "When is the best time to visit Portugal?" },
-        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded." }
+        question: { es: "Cual es la mejor epoca para visitar Portugal?", en: "When is the best time to visit Portugal?", pt: "Qual é a melhor época para visitar Portugal?" },
+        answer: { es: "Primavera y otoño son ideales. El verano es perfecto para el Algarve pero puede estar muy concurrido.", en: "Spring and autumn are ideal. Summer is perfect for the Algarve but can be crowded.", pt: "Primavera e outono são ideais. O verão é perfeito para o Algarve, mas pode estar muito lotado." }
       },
       {
-        question: { es: "Portugal es un destino economico?", en: "Is Portugal an affordable destination?" },
-        answer: { es: "Portugal es uno de los destinos más economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money." }
+        question: { es: "Portugal es un destino economico?", en: "Is Portugal an affordable destination?", pt: "Portugal é um destino econômico?" },
+        answer: { es: "Portugal es uno de los destinos más economicos de Europa occidental, con excelente relacion calidad-precio.", en: "Portugal is one of the most affordable destinations in Western Europe, with excellent value for money.", pt: "Portugal é um dos destinos mais econômicos da Europa Ocidental, com excelente relação custo-benefício." }
       }
     ],
-    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November" },
+    bestTimeToVisit: { es: "Marzo a Junio y Septiembre a Noviembre", en: "March to June and September to November", pt: "Março a Junho e Setembro a Novembro" },
     currency: "EUR",
-    language: { es: "Portugues", en: "Portuguese" },
-    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
+    language: { es: "Portugues", en: "Portuguese", pt: "Português" },
+    visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
     slug: "greece",
-    name: { es: "Grecia", en: "Greece" },
+    name: { es: "Grecia", en: "Greece", pt: "Grécia" },
     heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=800&auto=format&fit=crop",
@@ -707,118 +727,123 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Grecia es la cuna de la civilizacion occidental, hogar de los dioses del Olimpo y las islas más hermosas del Mediterraneo. Desde la Acropolis de Atenas hasta las cupulas azules de Santorini, pasando por las playas de Mykonos y las ruinas de Delfos, Grecia ofrece historia, cultura y belleza natural incomparables. Vive la experiencia griega con su hospitalidad legendaria, su cocina mediterranea y sus atardeceres magicos.",
-      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and mágical sunsets."
+      en: "Greece is the cradle of Western civilization, home to the gods of Olympus and the most beautiful islands in the Mediterranean. From the Athens Acropolis to Santorini's blue domes, through Mykonos beaches and Delphi ruins, Greece offers unparalleled history, culture, and natural beauty. Experience Greek legendary hospitality, Mediterranean cuisine, and mágical sunsets.",
+      pt: "A Grécia é o berço da civilização ocidental, lar dos deuses do Olimpo e das ilhas mais belas do Mediterrâneo. Da Acrópole de Atenas às cúpulas azuis de Santorini, passando pelas praias de Mykonos e as ruínas de Delfos, a Grécia oferece história, cultura e beleza natural incomparáveis. Viva a experiência grega com sua hospitalidade lendária, culinária mediterrânea e pores do sol mágicos."
     },
     highlights: {
       es: ["Acropolis de Atenas", "Santorini y sus atardeceres", "Playas de Mykonos", "Meteora", "Delfos y Olimpia", "Gastronomía griega"],
-      en: ["Athens Acropolis", "Santorini sunsets", "Mykonos beaches", "Meteora", "Delphi and Olympia", "Greek gastronomy"]
+      en: ["Athens Acropolis", "Santorini sunsets", "Mykonos beaches", "Meteora", "Delphi and Olympia", "Greek gastronomy"],
+      pt: ["Acrópole de Atenas", "Santorini e seus entardeceres", "Praias de Mykonos", "Meteora", "Delfos e Olímpia", "Gastronomia grega"]
     },
     packages: [
       {
         id: "grecia-clasica",
-        name: { es: "Grecia Clásica", en: "Classic Greece" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Grecia Clásica", en: "Classic Greece", pt: "Grécia Clássica" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,799",
         taxes: "360",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno diario", "Ferry a islas", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Daily breakfast", "Island ferry", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Daily breakfast", "Island ferry", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã diário", "Ferry para ilhas", "Guia em espanhol", "Ingressos principais"]
         }
       },
       {
         id: "grecia-islas",
-        name: { es: "Islas Griegas", en: "Greek Islands" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Islas Griegas", en: "Greek Islands", pt: "Ilhas Gregas" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,299",
         taxes: "420",
         includes: {
           es: ["Vuelos internacionales", "Hoteles con vistas", "Desayuno", "Ferries entre islas", "Tour en catamaran", "Cena romántica"],
-          en: ["International flights", "Hotels with views", "Breakfast", "Inter-island ferries", "Catamaran tour", "Romantic dinner"]
+          en: ["International flights", "Hotels with views", "Breakfast", "Inter-island ferries", "Catamaran tour", "Romantic dinner"],
+          pt: ["Voos internacionais", "Hotéis com vista", "Café da manhã", "Ferries entre ilhas", "Tour de catamarã", "Jantar romântico"]
         }
       },
       {
         id: "grecia-completa",
-        name: { es: "Gran Tour de Grecia", en: "Grand Tour of Greece" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour de Grecia", en: "Grand Tour of Greece", pt: "Grande Tour da Grécia" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "3,199",
         taxes: "520",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Todos los traslados", "Crucero por islas", "Experiencias únicas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Island cruise", "Unique experiences"]
+          en: ["International flights", "4-5 star hotels", "Half board", "All transfers", "Island cruise", "Unique experiences"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "Todas as transferências", "Cruzeiro pelas ilhas", "Experiências únicas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Atenas", en: "Arrival in Athens" },
-        description: { es: "Bienvenida en Atenas, cuna de la democracia.", en: "Welcome to Athens, birthplace of democracy." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Plaka"], en: ["Airport pickup", "Hotel check-in", "Plaka neighborhood"] }
+        title: { es: "Llegada a Atenas", en: "Arrival in Athens", pt: "Chegada em Atenas" },
+        description: { es: "Bienvenida en Atenas, cuna de la democracia.", en: "Welcome to Athens, birthplace of democracy.", pt: "Boas-vindas em Atenas, berço da democracia." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Barrio de Plaka"], en: ["Airport pickup", "Hotel check-in", "Plaka neighborhood"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Bairro de Plaka"] }
       },
       {
         day: 2,
-        title: { es: "Atenas Antigua", en: "Ancient Athens" },
-        description: { es: "Explora la Acropolis y el Partenon.", en: "Explore the Acropolis and Parthenon." },
-        activities: { es: ["Acropolis", "Partenon", "Museo de la Acropolis"], en: ["Acropolis", "Parthenon", "Acropolis Museum"] }
+        title: { es: "Atenas Antigua", en: "Ancient Athens", pt: "Atenas Antiga" },
+        description: { es: "Explora la Acropolis y el Partenon.", en: "Explore the Acropolis and Parthenon.", pt: "Explore a Acrópole e o Partenon." },
+        activities: { es: ["Acropolis", "Partenon", "Museo de la Acropolis"], en: ["Acropolis", "Parthenon", "Acropolis Museum"], pt: ["Acrópole", "Partenon", "Museu da Acrópole"] }
       },
       {
         day: 3,
-        title: { es: "Delfos", en: "Delphi" },
-        description: { es: "Excursion al Oraculo de Delfos.", en: "Excursion to the Oracle of Delphi." },
-        activities: { es: ["Santuario de Apolo", "Teatro antiguo", "Museo de Delfos"], en: ["Apollo Sanctuary", "Ancient theater", "Delphi Museum"] }
+        title: { es: "Delfos", en: "Delphi", pt: "Delfos" },
+        description: { es: "Excursion al Oraculo de Delfos.", en: "Excursion to the Oracle of Delphi.", pt: "Excursão ao Oráculo de Delfos." },
+        activities: { es: ["Santuario de Apolo", "Teatro antiguo", "Museo de Delfos"], en: ["Apollo Sanctuary", "Ancient theater", "Delphi Museum"], pt: ["Santuário de Apolo", "Teatro antigo", "Museu de Delfos"] }
       },
       {
         day: 4,
-        title: { es: "Santorini", en: "Santorini" },
-        description: { es: "Vuelo a la espectacular isla de Santorini.", en: "Flight to spectacular Santorini island." },
-        activities: { es: ["Vuelo a Santorini", "Oia", "Atardecer famoso"], en: ["Flight to Santorini", "Oia", "Famous sunset"] }
+        title: { es: "Santorini", en: "Santorini", pt: "Santorini" },
+        description: { es: "Vuelo a la espectacular isla de Santorini.", en: "Flight to spectacular Santorini island.", pt: "Voo para a espetacular ilha de Santorini." },
+        activities: { es: ["Vuelo a Santorini", "Oia", "Atardecer famoso"], en: ["Flight to Santorini", "Oia", "Famous sunset"], pt: ["Voo para Santorini", "Oia", "Pôr do sol famoso"] }
       },
       {
         day: 5,
-        title: { es: "Santorini Completo", en: "Full Santorini" },
-        description: { es: "Explora los pueblos y playas de Santorini.", en: "Explore Santorini's villages and beaches." },
-        activities: { es: ["Fira", "Playa Roja", "Bodega local"], en: ["Fira", "Red Beach", "Local winery"] }
+        title: { es: "Santorini Completo", en: "Full Santorini", pt: "Santorini Completo" },
+        description: { es: "Explora los pueblos y playas de Santorini.", en: "Explore Santorini's villages and beaches.", pt: "Explore as vilas e praias de Santorini." },
+        activities: { es: ["Fira", "Playa Roja", "Bodega local"], en: ["Fira", "Red Beach", "Local winery"], pt: ["Fira", "Praia Vermelha", "Vinícola local"] }
       },
       {
         day: 6,
-        title: { es: "Tour en Catamaran", en: "Catamaran Tour" },
-        description: { es: "Navegacion por la caldera de Santorini.", en: "Sailing around Santorini's caldera." },
-        activities: { es: ["Tour en catamaran", "Aguas termales", "Almuerzo a bordo"], en: ["Catamaran tour", "Hot springs", "Lunch on board"] }
+        title: { es: "Tour en Catamaran", en: "Catamaran Tour", pt: "Tour de Catamarã" },
+        description: { es: "Navegacion por la caldera de Santorini.", en: "Sailing around Santorini's caldera.", pt: "Navegação pela caldeira de Santorini." },
+        activities: { es: ["Tour en catamaran", "Aguas termales", "Almuerzo a bordo"], en: ["Catamaran tour", "Hot springs", "Lunch on board"], pt: ["Tour de catamarã", "Águas termais", "Almoço a bordo"] }
       },
       {
         day: 7,
-        title: { es: "Mykonos", en: "Mykonos" },
-        description: { es: "Ferry a la vibrante isla de Mykonos.", en: "Ferry to vibrant Mykonos island." },
-        activities: { es: ["Ferry a Mykonos", "Pequena Venecia", "Molinos de viento"], en: ["Ferry to Mykonos", "Little Venice", "Windmills"] }
+        title: { es: "Mykonos", en: "Mykonos", pt: "Mykonos" },
+        description: { es: "Ferry a la vibrante isla de Mykonos.", en: "Ferry to vibrant Mykonos island.", pt: "Ferry para a vibrante ilha de Mykonos." },
+        activities: { es: ["Ferry a Mykonos", "Pequena Venecia", "Molinos de viento"], en: ["Ferry to Mykonos", "Little Venice", "Windmills"], pt: ["Ferry para Mykonos", "Pequena Veneza", "Moinhos de vento"] }
       },
       {
         day: 8,
-        title: { es: "Playas de Mykonos", en: "Mykonos Beaches" },
-        description: { es: "Disfruta de las famosas playas de Mykonos.", en: "Enjoy Mykonos' famous beaches." },
-        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomía griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"] }
+        title: { es: "Playas de Mykonos", en: "Mykonos Beaches", pt: "Praias de Mykonos" },
+        description: { es: "Disfruta de las famosas playas de Mykonos.", en: "Enjoy Mykonos' famous beaches.", pt: "Desfrute das famosas praias de Mykonos." },
+        activities: { es: ["Paradise Beach", "Super Paradise", "Gastronomía griega"], en: ["Paradise Beach", "Super Paradise", "Greek gastronomy"], pt: ["Paradise Beach", "Super Paradise", "Gastronomia grega"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Grecia?", en: "Do I need a visa to travel to Greece?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Grecia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Greece without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Grecia?", en: "Do I need a visa to travel to Greece?", pt: "Preciso de visto para viajar para a Grécia?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Grecia sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Greece without a visa for up to 90 days.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar na Grécia sem visto por até 90 dias." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar las islas griegas?", en: "When is the best time to visit the Greek islands?" },
-        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero más turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices." }
+        question: { es: "Cual es la mejor epoca para visitar las islas griegas?", en: "When is the best time to visit the Greek islands?", pt: "Qual é a melhor época para visitar as ilhas gregas?" },
+        answer: { es: "Mayo a octubre es ideal. Julio y agosto tienen el mejor clima pero más turistas y precios altos.", en: "May to October is ideal. July and August have the best weather but more tourists and higher prices.", pt: "Maio a outubro é ideal. Julho e agosto têm o melhor clima, mas mais turistas e preços mais altos." }
       },
       {
-        question: { es: "Como me muevo entre las islas?", en: "How do I get around between islands?" },
-        answer: { es: "Los ferries son el medio principal. Hay opciones rápidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands." }
+        question: { es: "Como me muevo entre las islas?", en: "How do I get around between islands?", pt: "Como me desloco entre as ilhas?" },
+        answer: { es: "Los ferries son el medio principal. Hay opciones rápidas y economicas. Tambien vuelos entre islas principales.", en: "Ferries are the main means. There are fast and budget options. Also flights between main islands.", pt: "Os ferries são o meio principal. Há opções rápidas e econômicas. Também voos entre as principais ilhas." }
       },
       {
-        question: { es: "Es caro visitar Grecia?", en: "Is Greece expensive to visit?" },
-        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son más caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland." }
+        question: { es: "Es caro visitar Grecia?", en: "Is Greece expensive to visit?", pt: "É caro visitar a Grécia?" },
+        answer: { es: "Grecia ofrece opciones para todos los presupuestos. Las islas turisticas como Santorini son más caras que el continente.", en: "Greece offers options for all budgets. Tourist islands like Santorini are more expensive than the mainland.", pt: "A Grécia oferece opções para todos os orçamentos. As ilhas turísticas como Santorini são mais caras que o continente." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October" },
+    bestTimeToVisit: { es: "Mayo a Octubre", en: "May to October", pt: "Maio a Outubro" },
     currency: "EUR",
-    language: { es: "Griego", en: "Greek" },
+    language: { es: "Griego", en: "Greek", pt: "Grego" },
     visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days" }
   },
   {

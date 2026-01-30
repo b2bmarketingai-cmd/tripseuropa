@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -261,7 +262,19 @@ export default function PackagePage() {
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="page-package">
       <Header />
-      
+      <Breadcrumbs
+        items={[
+          {
+            label: lang === "es" ? "Paquetes" : lang === "en" ? "Packages" : "Pacotes",
+            href: "/packages"
+          },
+          {
+            label: pkg.title[lang],
+            href: `/package/${packageSlug}`
+          }
+        ]}
+      />
+
       <main className="flex-1">
         <section 
           className="relative h-[50vh] min-h-[400px] bg-cover bg-center"

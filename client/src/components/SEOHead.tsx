@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import SchemaMarkup from "./SchemaMarkup";
 
 interface SEOHeadProps {
   title: string;
@@ -213,7 +214,7 @@ export function SEOHead({
     };
   }, [title, description, keywords, image, url, type, locale, publishedTime, modifiedTime, author, noIndex, alternateUrls]);
 
-  return null;
+  return <SchemaMarkup type="travelagency" />;
 }
 
 export function HomePageSEO() {

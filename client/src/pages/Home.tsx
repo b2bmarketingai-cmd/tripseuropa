@@ -1,32 +1,35 @@
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
 import { HomePageSEO } from "@/components/SEOHead";
-import { Chatbot } from "@/components/Chatbot";
-import { ContactForm } from "@/components/ContactForm";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { HeroFlightSearch } from "@/components/HeroFlightSearch";
-import { SmartSearchBar } from "@/components/SmartSearchBar";
-import { FAQAccordion } from "@/components/FAQAccordion";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { TopOffers } from "@/components/TopOffers";
-import { ReserveSpot } from "@/components/ReserveSpot";
-import { Favorites } from "@/components/Favorites";
-import { SpecialOffers } from "@/components/SpecialOffers";
-import { UrgencyBanner } from "@/components/UrgencyBanner";
-import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { TravelerStories } from "@/components/TravelerStories";
-import { TrustpilotReviews } from "@/components/TrustpilotReviews";
-import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
 import { DestinationGrid } from "@/components/DestinationGrid";
-import { ContactSupportModal } from "@/components/ContactSupportModal";
-import { BlogHighlights } from "@/components/BlogHighlights";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import { FloatingContactButtons } from "@/components/support";
+
+// Lazy load non-critical below-the-fold components
+const Chatbot = lazy(() => import("@/components/Chatbot").then(m => ({ default: m.Chatbot })));
+const ContactForm = lazy(() => import("@/components/ContactForm").then(m => ({ default: m.ContactForm })));
+const SmartSearchBar = lazy(() => import("@/components/SmartSearchBar").then(m => ({ default: m.SmartSearchBar })));
+const FAQAccordion = lazy(() => import("@/components/FAQAccordion").then(m => ({ default: m.FAQAccordion })));
+const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const ReserveSpot = lazy(() => import("@/components/ReserveSpot").then(m => ({ default: m.ReserveSpot })));
+const Favorites = lazy(() => import("@/components/Favorites").then(m => ({ default: m.Favorites })));
+const SpecialOffers = lazy(() => import("@/components/SpecialOffers").then(m => ({ default: m.SpecialOffers })));
+const BestPriceGuarantee = lazy(() => import("@/components/BestPriceGuarantee").then(m => ({ default: m.BestPriceGuarantee })));
+const NewsletterSignup = lazy(() => import("@/components/NewsletterSignup").then(m => ({ default: m.NewsletterSignup })));
+const TravelerStories = lazy(() => import("@/components/TravelerStories").then(m => ({ default: m.TravelerStories })));
+const TrustpilotReviews = lazy(() => import("@/components/TrustpilotReviews").then(m => ({ default: m.TrustpilotReviews })));
+const PromotionalVideoBanner = lazy(() => import("@/components/PromotionalVideoBanner").then(m => ({ default: m.PromotionalVideoBanner })));
+const BlogHighlights = lazy(() => import("@/components/BlogHighlights").then(m => ({ default: m.BlogHighlights })));
+const SEOContent = lazy(() => import("@/components/SEOContent"));
+const FloatingContactButtons = lazy(() => import("@/components/support").then(m => ({ default: m.FloatingContactButtons })));
 
 export default function Home() {
   const { language } = useI18n();
@@ -84,86 +87,94 @@ export default function Home() {
       <HeroFlightSearch />
       <TopOffers />
       <DestinationGrid />
-      <ReserveSpot />
-      <SpecialOffers />
-      <Favorites />
-      <WhyChooseUs />
-      <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <SmartSearchBar variant="hero" />
-        </div>
-      </section>
-      <BestPriceGuarantee />
-      <BlogHighlights />
-      <NewsletterSignup />
-      <TrustpilotReviews />
-      <PromotionalVideoBanner />
-      <TravelerStories />
-      <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4" data-testid="badge-contact">{c.ctaBadge}</Badge>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4" data-testid="text-contact-title">
-              {c.ctaTitle}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
-              {c.ctaSubtitle}
-            </p>
+
+      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+        <ReserveSpot />
+        <SpecialOffers />
+        <Favorites />
+        <WhyChooseUs />
+        <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <SmartSearchBar variant="hero" />
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-start gap-4" data-testid="contact-phone">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.callUs}</h3>
-                  <p className="text-xl font-bold text-primary">{c.phone}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4" data-testid="contact-email">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.email}</h3>
-                  <p className="text-primary">info@tripseuropa.com</p>
-                  <p className="text-primary">agente@tripseuropa.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4" data-testid="contact-office">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.office}</h3>
-                  <p className="text-muted-foreground">{c.address}</p>
-                </div>
-              </div>
-
-              <a 
-                href="https://api.whatsapp.com/send?phone=34611105448" 
-                className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
-                data-testid="link-whatsapp"
-              >
-                <SiWhatsapp className="w-5 h-5" />
-                {c.whatsapp}
-              </a>
+        </section>
+        <BestPriceGuarantee />
+        <BlogHighlights />
+        <SEOContent />
+        <NewsletterSignup />
+        <TrustpilotReviews />
+        <PromotionalVideoBanner />
+        <TravelerStories />
+        <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" data-testid="badge-contact">{c.ctaBadge}</Badge>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4" data-testid="text-contact-title">
+                {c.ctaTitle}
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
+                {c.ctaSubtitle}
+              </p>
             </div>
 
-            <div>
-              <ContactForm variant="page" title={c.formTitle} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-8">
+                <div className="flex items-start gap-4" data-testid="contact-phone">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">{c.callUs}</h3>
+                    <p className="text-xl font-bold text-primary">{c.phone}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4" data-testid="contact-email">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">{c.email}</h3>
+                    <p className="text-primary">info@tripseuropa.com</p>
+                    <p className="text-primary">agente@tripseuropa.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4" data-testid="contact-office">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">{c.office}</h3>
+                    <p className="text-muted-foreground">{c.address}</p>
+                  </div>
+                </div>
+
+                <a
+                  href="https://api.whatsapp.com/send?phone=34611105448"
+                  className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
+                  data-testid="link-whatsapp"
+                >
+                  <SiWhatsapp className="w-5 h-5" />
+                  {c.whatsapp}
+                </a>
+              </div>
+
+              <div>
+                <ContactForm variant="page" title={c.formTitle} />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <FAQAccordion />
+        </section>
+        <FAQAccordion />
+      </Suspense>
+
       <Footer />
-      <Chatbot />
-      <FloatingContactButtons />
+
+      <Suspense fallback={null}>
+        <Chatbot />
+        <FloatingContactButtons />
+      </Suspense>
       <TravelAgencySchema />
       <WebsiteSchema />
       <FAQSchema questions={[

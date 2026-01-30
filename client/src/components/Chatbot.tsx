@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { useChatbot } from "@/hooks/use-chatbot";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
+import { fastdom } from "@/lib/fastdom";
 
 const WHATSAPP_NUMBER = "34611105448";
 const PHONE_NUMBER = "+34 611 105 448";
@@ -76,11 +77,18 @@ export function Chatbot() {
   const { messages, sendMessage, isStreaming } = useChatbot();
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (!messagesEndRef.current) return;
+
+    // Use FastDOM to prevent forced reflows
+    fastdom.mutate(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    });
   };
 
   useEffect(() => {
-    scrollToBottom();
+    if (messages.length > 0) {
+      scrollToBottom();
+    }
   }, [messages]);
 
   const handleSubmit = async (e: React.FormEvent) => {

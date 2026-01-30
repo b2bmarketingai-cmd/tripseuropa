@@ -27,7 +27,8 @@ function ScrollToTop() {
 }
 
 import Home from "@/pages/Home";
-import NotFound from "@/pages/not-found";
+import NotFound from "@/pages/NotFound";
+import SkipToContent from "@/components/SkipToContent";
 
 const Login = lazy(() => import("@/pages/Login"));
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
@@ -99,7 +100,8 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
 
 function Router() {
   return (
-    <Switch>
+    <main id="main-content" role="main">
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/tools" component={Tools} />
@@ -323,6 +325,7 @@ function Router() {
       {/* Fallback */}
       <Route component={NotFound} />
     </Switch>
+    </main>
   );
 }
 
@@ -332,6 +335,7 @@ function App() {
       <I18nProvider>
         <ABTestingProvider>
           <TooltipProvider>
+            <SkipToContent />
             <ScrollToTop />
             <Toaster />
             <Suspense fallback={<LoadingFallback />}>

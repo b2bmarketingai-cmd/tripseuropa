@@ -97,13 +97,13 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-12">
           
           <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-2">
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-destinations-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-destinations-heading">
               {t("footer.destinations")}
             </h4>
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-2">
               {destinations.map((dest, index) => (
                 <li key={index}>
-                  <Link href={dest.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
+                  <Link href={dest.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
                     {dest.name[language as "es" | "en" | "pt"] || dest.name.es}
                   </Link>
                 </li>
@@ -112,13 +112,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-services-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-services-heading">
               {t("footer.services")}
             </h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link href={service.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
+                  <Link href={service.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
                     {t(service.nameKey)}
                   </Link>
                 </li>
@@ -127,19 +127,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-company-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-company-heading">
               {t("footer.company")}
             </h4>
             <ul className="space-y-2">
               {company.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
+                  <Link href={item.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
                     {t(item.nameKey)}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/travel-assistant" className="text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
+                <Link href="/travel-assistant" className="text-white/90 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
                   {language === "es" ? "Sofia Agente de Viajes" : language === "pt" ? "Sofia Agente de Viagens" : "Sofia Travel Agent"}
                 </Link>
               </li>
@@ -147,13 +147,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90">
               {language === "es" ? "Viaja desde" : language === "pt" ? "Viaje a partir de" : "Travel from"}
             </h4>
             <ul className="space-y-2">
               {countries.map((country, index) => (
                 <li key={index}>
-                  <Link href={country.href} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
+                  <Link href={country.href} className="text-white/90 hover:text-accent transition-colors text-sm flex items-center gap-2">
                     <span className="text-xs bg-white/10 px-1 rounded font-mono">{country.code}</span>
                     {country.name[language as "es" | "en" | "pt"] || country.name.es}
                   </Link>
@@ -181,19 +181,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-contact-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-contact-heading">
               {t("footer.contact")}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
                 <a href="tel:+34611105448" className="hover:text-accent">+34 611 105 448</a>
               </li>
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 <a href="mailto:info@tripseuropa.com" className="hover:text-accent">info@tripseuropa.com</a>
               </li>
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 <a href="mailto:agente@tripseuropa.com" className="hover:text-accent">agente@tripseuropa.com</a>
               </li>

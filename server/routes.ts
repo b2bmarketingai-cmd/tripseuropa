@@ -29,12 +29,16 @@ export async function registerRoutes(
   // 3. Application Routes
 
   // -- Flights (Mock) --
+  // ⚠️ WARNING: This endpoint returns MOCK DATA for demonstration purposes
+  // For production use, implement real flight search API integration (Amadeus, Skyscanner, etc.)
+  // See FLIGHT_API_INTEGRATION.md for implementation guide
   app.post(api.flights.search.path, async (req, res) => {
     try {
       const input = api.flights.search.input.parse(req.body);
-      
-      // MOCK FLIGHT DATA
-      // In a real app, this would call Amadeus API
+
+      // MOCK FLIGHT DATA - Replace with real API call
+      // TODO: Integrate with Amadeus Flight Offers Search API
+      // Documentation: https://developers.amadeus.com/self-service/category/flights
       const mockFlights = [
         {
           id: "FL001",
@@ -153,20 +157,34 @@ export async function registerRoutes(
     try {
       const input = api.leads.create.input.parse(req.body);
       const lead = await storage.createLead(input);
-      
+
       // Send email notification to all recipients
-      sendContactFormEmail({
-        name: input.name,
-        email: input.email,
-        phone: input.phone,
-        originCountry: input.originCountry,
-        serviceInterest: input.serviceInterest,
-        message: input.message
-      }).catch(err => {
-        console.error('Failed to send contact form email:', err);
-      });
-      
-      res.status(201).json(lead);
+      // IMPORTANT: Email sending errors are now properly handled
+      try {
+        await sendContactFormEmail({
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          originCountry: input.originCountry,
+          serviceInterest: input.serviceInterest,
+          message: input.message
+        });
+
+        // Success: both lead saved and email sent
+        res.status(201).json({
+          ...lead,
+          emailSent: true
+        });
+      } catch (emailErr) {
+        console.error('Failed to send contact form email:', emailErr);
+
+        // Lead saved but email failed - return with warning
+        res.status(201).json({
+          ...lead,
+          emailSent: false,
+          warning: 'Lead saved but notification email could not be sent'
+        });
+      }
     } catch (err) {
        if (err instanceof z.ZodError) {
         return res.status(400).json({
@@ -182,17 +200,32 @@ export async function registerRoutes(
   app.post("/api/newsletter/subscribe", async (req, res) => {
     try {
       const { email } = req.body;
-      
+
       if (!email || !email.includes("@")) {
         return res.status(400).json({ message: "Email invalido" });
       }
 
       // Send email notification
-      sendNewsletterNotificationEmail(email).catch(err => {
-        console.error('Failed to send newsletter notification email:', err);
-      });
-      
-      res.status(200).json({ success: true, message: "Suscripcion exitosa" });
+      // IMPORTANT: Email sending errors are now properly handled
+      try {
+        await sendNewsletterNotificationEmail(email);
+
+        // Success: email sent
+        res.status(200).json({
+          success: true,
+          message: "Suscripcion exitosa",
+          emailSent: true
+        });
+      } catch (emailErr) {
+        console.error('Failed to send newsletter notification email:', emailErr);
+
+        // Email failed - return error to user
+        res.status(500).json({
+          success: false,
+          message: "Error al procesar la suscripcion. Por favor intenta de nuevo.",
+          emailSent: false
+        });
+      }
     } catch (err) {
       console.error('Newsletter subscription error:', err);
       res.status(500).json({ message: "Error al procesar la suscripcion" });

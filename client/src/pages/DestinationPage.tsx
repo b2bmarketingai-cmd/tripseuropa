@@ -4,6 +4,7 @@ import { getDestinationBySlug } from "@/lib/destinationsData";
 import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -43,7 +44,12 @@ export default function DestinationPage() {
   const destination = getDestinationBySlug(slug || "");
   // Content supports es/en/pt, destination data uses es/en with pt fallback to es
   const contentLang = language as "es" | "en" | "pt";
-  const dataLang = (destination && destination.name[contentLang as keyof typeof destination.name] ? contentLang : "es") as "es" | "en";
+  // Check if PT translation exists in destination data, fallback to ES if not
+  const dataLang = contentLang === "pt" && destination?.name?.pt
+    ? "pt"
+    : contentLang === "pt"
+      ? "es"  // Fallback PT → ES when PT translation doesn't exist yet
+      : (contentLang as "es" | "en" | "pt");
   
   
   if (!destination) {
@@ -232,6 +238,18 @@ export default function DestinationPage() {
       />
       <FAQSchema faqs={faqsForSchema} />
       <Header />
+      <Breadcrumbs
+        items={[
+          {
+            label: contentLang === "es" ? "Destinos" : contentLang === "pt" ? "Destinos" : "Destinations",
+            href: "/destinations"
+          },
+          {
+            label: destination.name[dataLang],
+            href: `/destination/${slug}`
+          }
+        ]}
+      />
       <section 
         className="relative min-h-[500px] flex items-center justify-center"
         data-testid="section-destination-hero"

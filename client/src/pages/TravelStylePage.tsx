@@ -77,30 +77,30 @@ const CONTENT = {
   },
   pt: {
     back: "Voltar",
-    packages: "Pacotes Disponiveis",
+    packages: "Pacotes Disponíveis",
     from: "A partir de",
     perPerson: "por pessoa",
-    selectPackage: "Solicitar Informacoes",
+    selectPackage: "Solicitar Informações",
     itinerary: "Roteiro de Exemplo",
     day: "Dia",
     faqs: "Perguntas Frequentes",
     contactForm: "Solicite Sua Viagem",
-    contactDescription: "Preencha o formulario e um consultor entrara em contato em ate 24 horas",
+    contactDescription: "Preencha o formulário e um consultor entrará em contato em até 24 horas",
     name: "Nome completo",
     email: "Email",
     phone: "Telefone",
-    travelers: "Numero de viajantes",
+    travelers: "Número de viajantes",
     travelDate: "Data de viagem desejada",
-    message: "Comentarios adicionais",
-    submit: "Enviar Solicitacao",
+    message: "Comentários adicionais",
+    submit: "Enviar Solicitação",
     submitting: "Enviando...",
     bestFor: "Ideal Para",
-    idealDuration: "Duracao Recomendada",
-    highlights: "O Que Esta Incluido",
+    idealDuration: "Duração Recomendada",
+    highlights: "O Que Está Incluído",
     whatsapp: "Contatar via WhatsApp",
     call: "Ligar agora",
-    notFound: "Estilo de viagem nao encontrado",
-    backHome: "Voltar ao inicio"
+    notFound: "Estilo de viagem não encontrado",
+    backHome: "Voltar ao início"
   }
 };
 
@@ -108,7 +108,7 @@ export default function TravelStylePage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useI18n();
   const contentLang = language as "es" | "en" | "pt";
-  const dataLang = language === "pt" ? "es" : (language as "es" | "en");
+  const dataLang = language as "es" | "en" | "pt";
   const content = CONTENT[contentLang];
   const travelStyle = getTravelStyleBySlug(slug || "");
   
