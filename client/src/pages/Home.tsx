@@ -1,17 +1,16 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
 import { HomePageSEO } from "@/components/SEOHead";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import { HeroFlightSearch } from "@/components/HeroFlightSearch";
-import { TopOffers } from "@/components/TopOffers";
-import { DestinationGrid } from "@/components/DestinationGrid";
 import { UrgencyBanner } from "@/components/UrgencyBanner";
-import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
+
+// Near-fold components - lazy loaded but fetched early
+const HeroFlightSearch = lazy(() => import("@/components/HeroFlightSearch").then(m => ({ default: m.HeroFlightSearch })));
+const TopOffers = lazy(() => import("@/components/TopOffers").then(m => ({ default: m.TopOffers })));
+const DestinationGrid = lazy(() => import("@/components/DestinationGrid").then(m => ({ default: m.DestinationGrid })));
 
 // Lazy load non-critical below-the-fold components
 const Chatbot = lazy(() => import("@/components/Chatbot").then(m => ({ default: m.Chatbot })));
@@ -31,8 +30,22 @@ const BlogHighlights = lazy(() => import("@/components/BlogHighlights").then(m =
 const SEOContent = lazy(() => import("@/components/SEOContent"));
 const FloatingContactButtons = lazy(() => import("@/components/support").then(m => ({ default: m.FloatingContactButtons })));
 
+// Lazy load icons to reduce main bundle
+const ContactIcons = lazy(() => import("@/components/ContactIcons"));
+
 export default function Home() {
   const { language } = useI18n();
+  const [showIdleComponents, setShowIdleComponents] = useState(false);
+
+  // Defer Chatbot and FloatingContactButtons until browser is idle
+  useEffect(() => {
+    const loadIdle = () => setShowIdleComponents(true);
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(loadIdle, { timeout: 4000 });
+    } else {
+      setTimeout(loadIdle, 3000);
+    }
+  }, []);
 
   const content = {
     es: {
@@ -84,10 +97,15 @@ export default function Home() {
       <UrgencyBanner />
       <Header />
       <HeroCarousel />
-      <HeroFlightSearch />
-      <TopOffers />
-      <DestinationGrid />
 
+      {/* Near-fold components - lazy but fetched early */}
+      <Suspense fallback={<div className="h-48 loading-skeleton" />}>
+        <HeroFlightSearch />
+        <TopOffers />
+        <DestinationGrid />
+      </Suspense>
+
+      {/* Below-fold components - lazy loaded on scroll */}
       <Suspense fallback={<div className="h-96 loading-skeleton" />}>
         <ReserveSpot />
         <SpecialOffers />
@@ -102,79 +120,30 @@ export default function Home() {
         <BlogHighlights />
         <SEOContent />
         <NewsletterSignup />
+      </Suspense>
+
+      {/* Heavy third-party components - separate Suspense boundary */}
+      <Suspense fallback={<div className="h-64 loading-skeleton" />}>
         <TrustpilotReviews />
         <PromotionalVideoBanner />
         <TravelerStories />
-        <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" data-testid="badge-contact">{c.ctaBadge}</Badge>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4" data-testid="text-contact-title">
-                {c.ctaTitle}
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
-                {c.ctaSubtitle}
-              </p>
-            </div>
+      </Suspense>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="space-y-8">
-                <div className="flex items-start gap-4" data-testid="contact-phone">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground">{c.callUs}</h3>
-                    <p className="text-xl font-bold text-primary">{c.phone}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4" data-testid="contact-email">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground">{c.email}</h3>
-                    <p className="text-primary">info@tripseuropa.com</p>
-                    <p className="text-primary">agente@tripseuropa.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4" data-testid="contact-office">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground">{c.office}</h3>
-                    <p className="text-muted-foreground">{c.address}</p>
-                  </div>
-                </div>
-
-                <a
-                  href="https://api.whatsapp.com/send?phone=34611105448"
-                  className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
-                  data-testid="link-whatsapp"
-                >
-                  <SiWhatsapp className="w-5 h-5" />
-                  {c.whatsapp}
-                </a>
-              </div>
-
-              <div>
-                <ContactForm variant="page" title={c.formTitle} />
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Contact section with lazy icons */}
+      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+        <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
         <FAQAccordion />
       </Suspense>
 
       <Footer />
 
-      <Suspense fallback={null}>
-        <Chatbot />
-        <FloatingContactButtons />
-      </Suspense>
+      {/* Chatbot & floating buttons - deferred until browser is idle */}
+      {showIdleComponents && (
+        <Suspense fallback={null}>
+          <Chatbot />
+          <FloatingContactButtons />
+        </Suspense>
+      )}
       <TravelAgencySchema />
       <WebsiteSchema />
       <FAQSchema questions={[
