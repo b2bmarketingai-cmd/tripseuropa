@@ -208,7 +208,9 @@ function Router() {
       <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
       <Route path="/pt-br/blog" component={Blog} />
       <Route path="/pt-br/blog/:country" component={Blog} />
-      
+      <Route path="/pt-br/forum" component={Forum} />
+      <Route path="/pt-br/foro" component={Forum} />
+
       {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
       <Route path="/es-ar/" component={Home} />
@@ -232,7 +234,9 @@ function Router() {
       <Route path="/es-pe/ofertas/:slug" component={OfferPage} />
       <Route path="/es-pe/blog" component={Blog} />
       <Route path="/es-pe/blog/:country" component={Blog} />
-      
+      <Route path="/es-pe/forum" component={Forum} />
+      <Route path="/es-pe/foro" component={Forum} />
+
       {/* Spanish Panama (es-pa) */}
       <Route path="/es-pa" component={Home} />
       <Route path="/es-pa/" component={Home} />
@@ -256,7 +260,9 @@ function Router() {
       <Route path="/es-cr/ofertas/:slug" component={OfferPage} />
       <Route path="/es-cr/blog" component={Blog} />
       <Route path="/es-cr/blog/:country" component={Blog} />
-      
+      <Route path="/es-cr/forum" component={Forum} />
+      <Route path="/es-cr/foro" component={Forum} />
+
       {/* Spanish Dominican Republic (es-do) */}
       <Route path="/es-do" component={Home} />
       <Route path="/es-do/" component={Home} />

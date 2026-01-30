@@ -22,23 +22,45 @@ app.use((req, res, next) => {
   // Prevent MIME type sniffing
   res.setHeader('X-Content-Type-Options', 'nosniff');
 
-  // Referrer policy
+  // Referrer policy - Enhanced for privacy
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-  // Permissions policy
-  res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
-
-  // Content Security Policy (basic)
+  // Permissions policy - Restrictive by default
   res.setHeader(
-    'Content-Security-Policy',
-    "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-    "font-src 'self' https://fonts.gstatic.com; " +
-    "img-src 'self' data: https: http:; " +
-    "connect-src 'self' https://api.openai.com https://www.google-analytics.com; " +
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com;"
+    'Permissions-Policy',
+    'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=(self)'
   );
+
+  // Strict Transport Security - Force HTTPS
+  res.setHeader(
+    'Strict-Transport-Security',
+    'max-age=31536000; includeSubDomains; preload'
+  );
+
+  // Content Security Policy - Enhanced security
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com https://static.cloudflareinsights.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com data:",
+    "img-src 'self' data: https: http: blob:",
+    "connect-src 'self' https://api.openai.com https://www.google-analytics.com https://api.perplexity.ai wss:",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'self'",
+    "upgrade-insecure-requests"
+  ].join('; ');
+
+  res.setHeader('Content-Security-Policy', csp);
+
+  // Cache Control for static assets (will be overridden for specific routes)
+  if (req.url.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  } else {
+    res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate');
+  }
 
   next();
 });
