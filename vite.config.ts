@@ -28,6 +28,24 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ["console.log", "console.info", "console.debug"],
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "ui-icons": ["lucide-react"],
+          forms: ["react-hook-form", "zod"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
