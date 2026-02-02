@@ -243,6 +243,7 @@ export function Chatbot() {
               className="bg-accent text-primary shrink-0"
               disabled={!input.trim() || isStreaming}
               data-testid="button-chatbot-send"
+              aria-label="Enviar mensaje"
             >
               <Send className="w-4 h-4" />
             </Button>

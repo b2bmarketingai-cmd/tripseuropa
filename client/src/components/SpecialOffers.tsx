@@ -8,49 +8,49 @@ import { useI18n } from "@/lib/i18n";
 const OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Bellezas de Europa", en: "Beauties of Europe", pt: "Belezas da Europa" },
     price: "2,399",
     taxes: "799",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Europa Magnifica", en: "Magnificent Europe", pt: "Europa Magnifica" },
     price: "1,999",
     taxes: "799",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Magia Turca", en: "Turkish Magic", pt: "Magia Turca" },
     price: "699",
     taxes: "999",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Turquia con Islas Griegas", en: "Turkey with Greek Islands", pt: "Turquia com Ilhas Gregas" },
     price: "1,399",
     taxes: "999",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Encantos de Europa", en: "European Charms", pt: "Encantos da Europa" },
     price: "1,899",
     taxes: "799",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai", pt: "Turquia, Egito e Dubai" },
     price: "1,999",
     taxes: "999",
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=40&w=400&auto=format&fit=crop&fm=webp",
     title: { es: "Orlando y Europa", en: "Orlando and Europe", pt: "Orlando e Europa" },
     price: "999",
     taxes: "399",
@@ -121,6 +121,7 @@ export function SpecialOffers() {
               onClick={() => scroll("left")}
               className="border-white/30 text-white hover:bg-white/10"
               data-testid="button-offers-prev"
+              aria-label="Ver ofertas anteriores"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -130,6 +131,7 @@ export function SpecialOffers() {
               onClick={() => scroll("right")}
               className="border-white/30 text-white hover:bg-white/10"
               data-testid="button-offers-next"
+              aria-label="Ver siguientes ofertas"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>

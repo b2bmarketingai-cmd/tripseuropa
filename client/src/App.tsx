@@ -461,9 +461,11 @@ function App() {
           <TooltipProvider>
             <ScrollToTop />
             <Toaster />
-            <Suspense fallback={<LoadingFallback />}>
-              <Router />
-            </Suspense>
+            <main id="main-content" role="main">
+              <Suspense fallback={<LoadingFallback />}>
+                <Router />
+              </Suspense>
+            </main>
           </TooltipProvider>
         </ABTestingProvider>
       </I18nProvider>

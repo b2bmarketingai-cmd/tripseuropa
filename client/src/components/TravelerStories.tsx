@@ -144,6 +144,7 @@ export function TravelerStories() {
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 rounded-full"
             onClick={goToPrevious}
             data-testid="button-story-prev"
+            aria-label="Ver historia anterior"
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
@@ -196,6 +197,7 @@ export function TravelerStories() {
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 rounded-full"
             onClick={goToNext}
             data-testid="button-story-next"
+            aria-label="Ver siguiente historia"
           >
             <ChevronRight className="w-5 h-5" />
           </Button>
