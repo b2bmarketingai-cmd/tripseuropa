@@ -206,7 +206,7 @@ export default function DestinationPage() {
   const travelStylesByGroup = TRAVEL_STYLE_DATA.filter(ts => ts.category === "group");
 
   
-  const destinationUrl = `https://tripseuropa.co/destinos/${slug}`;
+  const destinationUrl = `https://tripseuropa.com/destinos/${slug}`;
   const hreflangUrls = generateCountryHreflangUrls(`/destinos/${slug}`);
   
   const faqsForSchema = destination.faqs.map(faq => ({
@@ -226,8 +226,8 @@ export default function DestinationPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Inicio", url: "https://tripseuropa.co" },
-          { name: "Destinos", url: "https://tripseuropa.co/destinos" },
+          { name: "Inicio", url: "https://tripseuropa.com" },
+          { name: "Destinos", url: "https://tripseuropa.com/destinos" },
           { name: destination.name[dataLang] || destination.name["es"], url: destinationUrl }
         ]}
       />

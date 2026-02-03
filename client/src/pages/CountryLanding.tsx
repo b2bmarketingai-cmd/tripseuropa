@@ -254,7 +254,7 @@ export default function CountryLanding() {
         title={`${content.heroTitle} | Trips Europa`}
         description={content.heroSubtitle}
         keywords={`viajes europa ${config.name}, paquetes europa ${config.name}, vuelos europa ${config.capitalCity}`}
-        url={`https://tripseuropa.co/desde/${countryCode.toLowerCase()}`}
+        url={`https://tripseuropa.com/desde/${countryCode.toLowerCase()}`}
         alternateUrls={hreflangUrls}
       />
 

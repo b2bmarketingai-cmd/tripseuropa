@@ -72,9 +72,9 @@ export function OrganizationSchema() {
     "@type": "TravelAgency",
     "name": "Trips Europa",
     "description": "Agencia de viajes especializada en paquetes turisticos a Europa desde Latinoamerica",
-    "url": "https://tripseuropa.co",
-    "logo": "https://tripseuropa.co/favicon.png",
-    "image": "https://tripseuropa.co/og-image.jpg",
+    "url": "https://tripseuropa.com",
+    "logo": "https://tripseuropa.com/favicon.png",
+    "image": "https://tripseuropa.com/og-image.jpg",
     "telephone": "+34-611-105-448",
     "email": "info@tripseuropa.com",
     "address": {

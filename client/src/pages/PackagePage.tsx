@@ -267,21 +267,21 @@ export default function PackagePage() {
         title={`${pkg.title[lang]} - Trips Europa`}
         description={pkg.description[lang]}
         keywords={`paquete ${pkg.title[lang]}, viaje europa ${pkg.days} dias, tour europa`}
-        url={`https://tripseuropa.co/paquetes/${slug}`}
+        url={`https://tripseuropa.com/paquetes/${slug}`}
         image={pkg.image}
       />
       <BreadcrumbSchema
         items={[
-          { name: getHomeLabel(lang), url: "https://tripseuropa.co" },
-          { name: lang === "es" ? "Paquetes" : lang === "pt" ? "Pacotes" : "Packages", url: "https://tripseuropa.co/packages" },
-          { name: pkg.title[lang], url: `https://tripseuropa.co/paquetes/${slug}` }
+          { name: getHomeLabel(lang), url: "https://tripseuropa.com" },
+          { name: lang === "es" ? "Paquetes" : lang === "pt" ? "Pacotes" : "Packages", url: "https://tripseuropa.com/packages" },
+          { name: pkg.title[lang], url: `https://tripseuropa.com/paquetes/${slug}` }
         ]}
       />
       <ProductSchema
         name={pkg.title[lang]}
         description={pkg.description[lang]}
         image={pkg.image}
-        url={`https://tripseuropa.co/paquetes/${slug}`}
+        url={`https://tripseuropa.com/paquetes/${slug}`}
         price={pkg.price}
       />
       <Header />

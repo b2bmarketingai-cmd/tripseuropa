@@ -47,7 +47,7 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     "headline": title,
     "description": description,
     "image": image,
-    "url": `https://tripseuropa.co/blog/post/${slug}`,
+    "url": `https://tripseuropa.com/blog/post/${slug}`,
     "datePublished": isoDate,
     "dateModified": isoDate,
     "author": hasPersonAuthor ? {
@@ -56,19 +56,19 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     } : {
       "@type": "Organization",
       "name": "Trips Europa",
-      "url": "https://tripseuropa.co"
+      "url": "https://tripseuropa.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Trips Europa",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://tripseuropa.co/favicon.png"
+        "url": "https://tripseuropa.com/favicon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://tripseuropa.co/blog/post/${slug}`
+      "@id": `https://tripseuropa.com/blog/post/${slug}`
     }
   };
   
@@ -121,7 +121,7 @@ export default function BlogPost() {
         title={title}
         description={excerpt}
         keywords={post.keywords.join(", ")}
-        url={`https://tripseuropa.co/blog/post/${postSlug}`}
+        url={`https://tripseuropa.com/blog/post/${postSlug}`}
         image={post.image}
         type="article"
         publishedTime={isoDate}
@@ -138,9 +138,9 @@ export default function BlogPost() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Inicio", url: "https://tripseuropa.co" },
-          { name: "Blog", url: "https://tripseuropa.co/blog" },
-          { name: title, url: `https://tripseuropa.co/blog/post/${postSlug}` }
+          { name: "Inicio", url: "https://tripseuropa.com" },
+          { name: "Blog", url: "https://tripseuropa.com/blog" },
+          { name: title, url: `https://tripseuropa.com/blog/post/${postSlug}` }
         ]}
       />
       <Header />

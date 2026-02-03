@@ -13,12 +13,12 @@ export default function TermsConditions() {
         title="Terminos y Condiciones de Uso"
         description="Lee nuestros terminos y condiciones de servicio para la reserva de paquetes turisticos a Europa. Politicas de pago, cancelacion y modificaciones."
         keywords="terminos condiciones trips europa, politicas pago, cancelacion viajes"
-        url="https://tripseuropa.co/terminos-condiciones"
+        url="https://tripseuropa.com/terminos-condiciones"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Inicio", url: "https://tripseuropa.co" },
-          { name: "Terminos y Condiciones", url: "https://tripseuropa.co/terminos-condiciones" }
+          { name: "Inicio", url: "https://tripseuropa.com" },
+          { name: "Terminos y Condiciones", url: "https://tripseuropa.com/terminos-condiciones" }
         ]}
       />
       <Header />

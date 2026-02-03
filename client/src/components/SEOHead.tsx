@@ -15,7 +15,7 @@ interface SEOHeadProps {
   alternateUrls?: { hreflang: string; href: string }[];
 }
 
-const BASE_URL = "https://tripseuropa.co";
+const BASE_URL = "https://tripseuropa.comm";
 
 export const countryHreflangs = [
   { code: 'BR', hreflang: 'pt-BR', urlPrefix: '/pt-br' },
@@ -128,8 +128,8 @@ export function SEOHead({
   title,
   description,
   keywords,
-  image = "https://tripseuropa.co/og-image.jpg",
-  url = "https://tripseuropa.co",
+  image = "https://tripseuropa.com/og-image.jpg",
+  url = "https://tripseuropa.com",
   type = "website",
   locale = "es_CO",
   publishedTime,
@@ -223,7 +223,7 @@ export function HomePageSEO() {
       title="Viajes a Europa desde Latinoamérica - Paquetes Todo Incluido"
       description="Trips Europa: Agencia de viajes premium especializada en paquetes turísticos a Europa desde Colombia, México, Brasil, Panamá y Argentina. Vuelos, hoteles 5 estrellas, tours en español y asistencia visa Schengen. Desde $1,200 USD."
       keywords="viajes a europa, paquetes europa, viaje europa desde colombia, europa desde mexico, tours europa español, visa schengen, luna de miel europa, vuelos europa latinoamérica"
-      url="https://tripseuropa.co"
+      url="https://tripseuropa.com"
       alternateUrls={hreflangUrls}
     />
   );
@@ -236,7 +236,7 @@ export function PackagesPageSEO() {
       title="Paquetes de Viaje a Europa - Tours Todo Incluido desde $1,200"
       description="Descubre nuestros paquetes de viaje a Europa: París romántico, circuito imperial, islas griegas, y más. Vuelos, hoteles 4-5 estrellas, tours guiados en español. Pagos en cuotas disponibles."
       keywords="paquetes viaje europa, tours europa, circuito europeo, luna de miel paris, islas griegas paquete, europa todo incluido"
-      url="https://tripseuropa.co/packages"
+      url="https://tripseuropa.com/packages"
       alternateUrls={hreflangUrls}
     />
   );
@@ -249,7 +249,7 @@ export function BlogPageSEO() {
       title="Blog de Viajes - Guías, Consejos y Tips para Europa"
       description="Guías completas para tu viaje a Europa: cómo tramitar visa Schengen, presupuestos reales, itinerarios por ciudad, consejos de viajeros latinoamericanos."
       keywords="blog viajes europa, guía visa schengen, presupuesto europa, itinerario paris, consejos viaje europa"
-      url="https://tripseuropa.co/blog"
+      url="https://tripseuropa.com/blog"
       alternateUrls={hreflangUrls}
     />
   );
@@ -262,7 +262,7 @@ export function ColombiaPageSEO() {
       title="Viajes a Europa desde Colombia - Paquetes con Visa Schengen"
       description="Viaja a Europa desde Colombia con Trips Europa. Asistencia completa visa Schengen, vuelos desde Bogotá y Medellín, paquetes desde $4,299,000 COP. Tours en español garantizados."
       keywords="viajes europa desde colombia, visa schengen colombianos, paquetes europa colombia, vuelos bogotá europa"
-      url="https://tripseuropa.co/desde-colombia"
+      url="https://tripseuropa.com/desde-colombia"
       locale="es_CO"
       alternateUrls={hreflangUrls}
     />
@@ -276,7 +276,7 @@ export function MexicoPageSEO() {
       title="Viajes a Europa desde México - Paquetes sin Visa hasta 12 MSI"
       description="Viaja a Europa desde México SIN VISA. Paquetes turísticos desde $22,999 MXN con vuelos desde CDMX. Pagos hasta 12 meses sin intereses. Tours en español."
       keywords="viajes europa desde méxico, mexicanos europa sin visa, paquetes europa méxico, vuelos cdmx europa"
-      url="https://tripseuropa.co/desde-mexico"
+      url="https://tripseuropa.com/desde-mexico"
       locale="es_MX"
       alternateUrls={hreflangUrls}
     />
@@ -290,7 +290,7 @@ export function BrazilPageSEO() {
       title="Viagens para Europa do Brasil - Pacotes sem Visto"
       description="Viaje para Europa do Brasil SEM VISTO. Pacotes turísticos desde R$5,999. Voos diretos de São Paulo e Rio. Guias em português. Até 10x sem juros."
       keywords="viagem europa brasil, brasileiros europa sem visto, pacotes europa brasil, voos são paulo europa"
-      url="https://tripseuropa.co/desde-brasil"
+      url="https://tripseuropa.com/desde-brasil"
       locale="pt_BR"
       alternateUrls={hreflangUrls}
     />
@@ -304,7 +304,7 @@ export function PanamaPageSEO() {
       title="Viajes a Europa desde Panamá - Hub Aéreo Copa Airlines"
       description="Viaja a Europa desde Panamá con las mejores conexiones de Copa Airlines. Paquetes desde $1,199 USD. Sin visa para panameños. Tours VIP en español."
       keywords="viajes europa desde panamá, panameños europa, paquetes europa panamá, vuelos copa airlines europa"
-      url="https://tripseuropa.co/desde-panama"
+      url="https://tripseuropa.com/desde-panama"
       locale="es_PA"
       alternateUrls={hreflangUrls}
     />
@@ -318,7 +318,7 @@ export function ArgentinaPageSEO() {
       title="Viajes a Europa desde Argentina - Tours Ciudadanía y Turismo"
       description="Viaja a Europa desde Argentina SIN VISA. Paquetes desde $1,399 USD. Tours de ciudadanía italiana y española. Vuelos desde Buenos Aires. 12 cuotas sin interés."
       keywords="viajes europa desde argentina, argentinos europa sin visa, tour ciudadanía italia, paquetes europa argentina"
-      url="https://tripseuropa.co/desde-argentina"
+      url="https://tripseuropa.com/desde-argentina"
       locale="es_AR"
       alternateUrls={hreflangUrls}
     />
@@ -332,7 +332,7 @@ export function PeruPageSEO() {
       title="Viajes a Europa desde Perú - Paquetes Todo Incluido"
       description="Viaja a Europa desde Perú con Trips Europa. Paquetes turísticos desde Lima, vuelos directos, hoteles 4-5 estrellas y tours guiados en español."
       keywords="viajes europa desde perú, peruanos europa, paquetes europa perú, vuelos lima europa"
-      url="https://tripseuropa.co/desde-peru"
+      url="https://tripseuropa.com/desde-peru"
       locale="es_PE"
       alternateUrls={hreflangUrls}
     />
@@ -346,7 +346,7 @@ export function CostaRicaPageSEO() {
       title="Viajes a Europa desde Costa Rica - Paquetes Todo Incluido"
       description="Viaja a Europa desde Costa Rica SIN VISA. Paquetes turísticos desde San José, vuelos directos, hoteles de lujo y experiencias únicas. Tours en español."
       keywords="viajes europa desde costa rica, costarricenses europa, paquetes europa costa rica, vuelos san josé europa"
-      url="https://tripseuropa.co/desde-costa-rica"
+      url="https://tripseuropa.com/desde-costa-rica"
       locale="es_CR"
       alternateUrls={hreflangUrls}
     />
@@ -360,7 +360,7 @@ export function DestinationsPageSEO() {
       title="Destinos Europa - Ciudades y Países para Visitar"
       description="Explora los mejores destinos de Europa: París, Roma, Barcelona, Londres, Ámsterdam y más. Guías completas, paquetes turísticos y consejos de viaje."
       keywords="destinos europa, ciudades europa, viajes europa, turismo europa, países europeos"
-      url="https://tripseuropa.co/destinos"
+      url="https://tripseuropa.com/destinos"
       alternateUrls={hreflangUrls}
     />
   );
@@ -373,7 +373,7 @@ export function ContactPageSEO() {
       title="Contacto - Cotiza tu Viaje a Europa"
       description="Contáctanos para cotizar tu viaje a Europa. Respuesta en 24 horas. Asesoría personalizada, pagos flexibles y tours en español."
       keywords="contacto trips europa, cotizar viaje europa, agencia viajes europa"
-      url="https://tripseuropa.co/contact"
+      url="https://tripseuropa.com/contact"
       alternateUrls={hreflangUrls}
     />
   );
@@ -386,7 +386,7 @@ export function TestimonialsPageSEO() {
       title="Testimonios - Viajeros Satisfechos"
       description="Lee las experiencias de viajeros latinoamericanos que viajaron a Europa con Trips Europa. Historias reales, fotos y recomendaciones."
       keywords="testimonios trips europa, opiniones viajes europa, experiencias viajeros europa"
-      url="https://tripseuropa.co/testimonios"
+      url="https://tripseuropa.com/testimonios"
       alternateUrls={hreflangUrls}
     />
   );
