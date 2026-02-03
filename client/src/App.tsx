@@ -399,6 +399,42 @@ function Router() {
       <Route path="/es/caribe" component={Home} />
       <Route path="/es/caribe/" component={Home} />
       <Route path="/es/caribe/destinos" component={Destinations} />
+      <Route path="/es/caribe/destinos/:slug" component={DestinationPage} />
+      <Route path="/es/caribe/viajes-europa-desde-caribe" component={BlogCaribe} />
+      <Route path="/es/caribe/paquetes" component={Packages} />
+      <Route path="/es/caribe/blog" component={Blog} />
+      <Route path="/es/caribe/blog/:country" component={Blog} />
+      
+      {/* Country-specific SEO landing pages */}
+      <Route path="/es-co/viajes-europa-desde-colombia" component={FromColombia} />
+      <Route path="/es-co/visa-schengen-colombianos" component={VisaRequirements} />
+      <Route path="/es-co/europa-15-dias" component={Packages} />
+      <Route path="/es-co/europa-familiar" component={Packages} />
+      <Route path="/es-co/seguros-viaje-europa" component={Insurance} />
+      
+      <Route path="/es-pe/viajes-europa-desde-peru" component={FromPeru} />
+      <Route path="/es-pe/visa-schengen-peruanos" component={VisaRequirements} />
+      <Route path="/es-pe/europa-15-dias" component={Packages} />
+      <Route path="/es-pe/europa-familiar" component={Packages} />
+      <Route path="/es-pe/seguros-viaje-europa" component={Insurance} />
+      
+      <Route path="/es-cr/viajes-europa-desde-costa-rica" component={FromCostaRica} />
+      <Route path="/es-cr/visa-schengen" component={VisaRequirements} />
+      <Route path="/es-cr/europa-15-dias" component={Packages} />
+      <Route path="/es-cr/seguros-viaje-europa" component={Insurance} />
+      
+      <Route path="/es-ar/viajes-europa-desde-argentina" component={FromArgentina} />
+      <Route path="/es-ar/europa-15-dias" component={Packages} />
+      <Route path="/es-ar/seguros-viaje-europa" component={Insurance} />
+      
+      <Route path="/es-mx/viajes-europa-desde-mexico" component={FromMexico} />
+      <Route path="/es-mx/visa-schengen-mexicanos" component={VisaRequirements} />
+      <Route path="/es-mx/europa-15-dias" component={Packages} />
+      <Route path="/es-mx/seguros-viaje-europa" component={Insurance} />
+      
+      <Route path="/es-pa/viajes-europa-desde-panama" component={FromPanama} />
+      <Route path="/es-pa/europa-15-dias" component={Packages} />
+      <Route path="/es-pa/seguros-viaje-europa" component={Insurance} />
       
       {/* English routes */}
       <Route path="/en" component={Home} />
@@ -433,6 +469,37 @@ function Router() {
       <Route path="/en-mx/destinations/:slug" component={DestinationPage} />
       <Route path="/en-mx/experiences/:slug" component={ExperiencePage} />
       <Route path="/en-mx/packages/:slug" component={PackagePage} />
+      
+      {/* English Brazil (en-br) */}
+      <Route path="/en-br" component={Home} />
+      <Route path="/en-br/" component={Home} />
+      <Route path="/en-br/destinations" component={Destinations} />
+      <Route path="/en-br/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-br/packages" component={Packages} />
+      <Route path="/en-br/packages/:slug" component={PackagePage} />
+      <Route path="/en-br/experiences/:slug" component={ExperiencePage} />
+      <Route path="/en-br/blog" component={Blog} />
+      <Route path="/en-br/blog/post/:slug" component={BlogPost} />
+      <Route path="/en-br/contact" component={Contact} />
+      <Route path="/en-br/about" component={About} />
+      <Route path="/en-br/travel-insurance-europe" component={Insurance} />
+      <Route path="/en-br/family-trip-europe" component={Packages} />
+      <Route path="/en-br/services/flights" component={Flights} />
+      <Route path="/en-br/services/hotels" component={Hotels} />
+      <Route path="/en-br/services/packages" component={PackagesService} />
+      <Route path="/en-br/services/insurance" component={Insurance} />
+      
+      {/* English Peru (en-pe) */}
+      <Route path="/en-pe" component={Home} />
+      <Route path="/en-pe/destinations" component={Destinations} />
+      <Route path="/en-pe/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-pe/packages" component={Packages} />
+      
+      {/* English Costa Rica (en-cr) */}
+      <Route path="/en-cr" component={Home} />
+      <Route path="/en-cr/destinations" component={Destinations} />
+      <Route path="/en-cr/destinations/:slug" component={DestinationPage} />
+      <Route path="/en-cr/packages" component={Packages} />
       
       {/* Route Pages (Origin-Destination) */}
       <Route path="/routes/:route" component={RouteTemplate} />

@@ -175,6 +175,7 @@ function generateHreflangLinks(path: string, language: 'es' | 'en' | 'pt' = 'es'
   
   const enPath = path === "/" ? "" : (path.startsWith("/destinos") ? path.replace("/destinos", "/destinations") : path);
   links.push(`    <xhtml:link rel="alternate" hreflang="en" href="${DOMAIN}/en${enPath}" />`);
+  links.push(`    <xhtml:link rel="alternate" hreflang="en-BR" href="${DOMAIN}/en-br${enPath}" />`);
   links.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${DOMAIN}${path}" />`);
   
   return links.join('\n');
@@ -280,6 +281,55 @@ ${generateHreflangLinks('/destinos')}
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/destinations</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/packages</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/blog</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/contact</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/travel-insurance-europe</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>${DOMAIN}/en-br/family-trip-europe</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>

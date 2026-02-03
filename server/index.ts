@@ -11,6 +11,74 @@ const __dirname = process.cwd();
 
 const app = express();
 
+// Trust proxy for correct protocol detection behind reverse proxies
+app.set('trust proxy', true);
+
+// WWW to non-WWW redirect and HTTP to HTTPS redirect (for production)
+app.use((req, res, next) => {
+  const host = req.get('host') || '';
+  const isProduction = process.env.NODE_ENV === 'production' || 
+    host.endsWith('tripseuropa.com') || 
+    host.endsWith('tripseuropa.co') ||
+    host.endsWith('.replit.app');
+  
+  // Redirect www to non-www and ensure HTTPS in production
+  if (host.startsWith('www.')) {
+    const newHost = host.replace('www.', '');
+    return res.redirect(301, `https://${newHost}${req.originalUrl}`);
+  }
+  
+  // Force HTTPS in production
+  if (isProduction && req.protocol === 'http') {
+    return res.redirect(301, `https://${host}${req.originalUrl}`);
+  }
+  
+  // Redirect legacy query param URLs to proper paths
+  if (req.query.lang) {
+    const lang = req.query.lang as string;
+    const path = req.path;
+    
+    // Build the correct language prefix
+    let langPrefix = '';
+    if (lang === 'en') langPrefix = '/en';
+    else if (lang === 'pt' || lang === 'pt-br') langPrefix = '/pt-br';
+    else if (lang === 'es') langPrefix = ''; // Spanish is default
+    
+    // Handle common paths
+    if (langPrefix && (path === '/destinos' || path === '/destinations')) {
+      return res.redirect(301, `${langPrefix}/destinations`);
+    }
+    if (langPrefix && (path === '/paquetes' || path === '/packages')) {
+      return res.redirect(301, `${langPrefix}/packages`);
+    }
+    if (langPrefix && path === '/blog') {
+      return res.redirect(301, `${langPrefix}/blog`);
+    }
+    if (langPrefix && path === '/contact') {
+      return res.redirect(301, `${langPrefix}/contact`);
+    }
+  }
+  
+  // Redirect /blog/:slug to /blog/post/:slug for canonical consistency (all locales)
+  const blogCategories = ['colombia', 'argentina', 'peru', 'panama', 'costa-rica', 'dominicana', 'caribe', 'mexico', 'brasil', 'post'];
+  
+  // Root /blog/:slug
+  const blogMatch = req.path.match(/^\/blog\/([a-z0-9-]+)$/);
+  if (blogMatch && !blogCategories.includes(blogMatch[1])) {
+    return res.redirect(301, `/blog/post/${blogMatch[1]}`);
+  }
+  
+  // Locale-specific blog redirects: /es/blog/:slug, /en/blog/:slug, /pt-br/blog/:slug, etc.
+  const localeBlogMatch = req.path.match(/^\/(es|en|pt-br|es-co|es-mx|es-ar|es-pe|es-cr|es-pa|es-do|en-br|en-ar|en-co|en-mx)\/blog\/([a-z0-9-]+)$/);
+  if (localeBlogMatch && !blogCategories.includes(localeBlogMatch[2])) {
+    const locale = localeBlogMatch[1];
+    const slug = localeBlogMatch[2];
+    return res.redirect(301, `/${locale}/blog/post/${slug}`);
+  }
+  
+  next();
+});
+
 // Enable GZIP compression for all responses
 app.use(compression());
 
