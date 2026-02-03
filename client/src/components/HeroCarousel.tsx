@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
@@ -6,8 +6,7 @@ import { Link } from "wouter";
 const CAROUSEL_SLIDES = [
   {
     id: 1,
-    imageBase:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=800&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
     title: {
       es: "Gran Tour de Europa",
       en: "Grand Tour of Europe",
@@ -25,8 +24,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 2,
-    imageBase:
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=800&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
     title: {
       es: "Europa Clasica",
       en: "Classic Europe",
@@ -44,8 +42,7 @@ const CAROUSEL_SLIDES = [
   },
   {
     id: 3,
-    imageBase:
-      "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=800&auto=format&fit=crop",
+    imageBase: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017",
     title: {
       es: "España, Portugal y Marruecos",
       en: "Spain, Portugal and Morocco",
@@ -106,11 +103,12 @@ function getResponsiveImageUrl(base: string, isMobile: boolean): string {
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false); // Start paused for LCP
   const [isMobile, setIsMobile] = useState(() => {
     if (typeof window === "undefined") return false;
     return window.matchMedia("(max-width: 767px)").matches;
   });
+  const autoplayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { language } = useI18n();
   const langPrefix =
     language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
@@ -130,16 +128,24 @@ export function HeroCarousel() {
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    // Clear any existing timer before setting new one
+    if (autoplayTimerRef.current) {
+      clearTimeout(autoplayTimerRef.current);
+    }
+    autoplayTimerRef.current = setTimeout(() => setIsAutoPlaying(true), 10000);
   };
+
+  // Start autoplay after 6 seconds delay for LCP measurement
+  useEffect(() => {
+    const timer = setTimeout(() => setIsAutoPlaying(true), 6000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    // Delay first auto-rotation by 6 seconds to allow LCP measurement
-    const initialDelay = currentSlide === 0 ? 6000 : 5000;
-    const interval = setInterval(nextSlide, initialDelay);
+    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, nextSlide, currentSlide]);
+  }, [isAutoPlaying, nextSlide]);
 
   const currentContent = CAROUSEL_SLIDES[currentSlide];
 
@@ -191,8 +197,8 @@ export function HeroCarousel() {
           )}
           alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
           className="w-full h-full object-cover"
-          width={1200}
-          height={700}
+          width={isMobile ? 600 : 1200}
+          height={isMobile ? 350 : 700}
           loading="eager"
           // @ts-ignore
           fetchpriority="high"
