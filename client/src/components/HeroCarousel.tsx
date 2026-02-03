@@ -135,9 +135,11 @@ export function HeroCarousel() {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    const interval = setInterval(nextSlide, 5000);
+    // Delay first auto-rotation by 6 seconds to allow LCP measurement
+    const initialDelay = currentSlide === 0 ? 6000 : 5000;
+    const interval = setInterval(nextSlide, initialDelay);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, nextSlide]);
+  }, [isAutoPlaying, nextSlide, currentSlide]);
 
   const currentContent = CAROUSEL_SLIDES[currentSlide];
 

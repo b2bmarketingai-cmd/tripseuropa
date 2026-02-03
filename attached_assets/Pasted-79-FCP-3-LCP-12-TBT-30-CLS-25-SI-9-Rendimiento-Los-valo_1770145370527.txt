@@ -1,0 +1,286 @@
+79
+FCP
++3
+LCP
++12
+TBT
++30
+CLS
++25
+SI
++9
+Rendimiento
+Los valores son estimaciones y pueden variar. La puntuación del rendimiento se calcula directamente a partir de estas métricas.Ver calculadora.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Métricas
+Ampliar vista
+First Contentful Paint
+3,5 s
+Renderizado del mayor elemento con contenido
+4,1 s
+Total Blocking Time
+50 ms
+Cambios de diseño acumulados
+0
+Speed Index
+3,5 s
+Captured at 3 feb 2026, 14:01 GMT-5
+Moto G Power emulado with Lighthouse 13.0.1
+Sesión de una sola página
+Carga inicial de la página
+Limitación de 4G lenta
+Using HeadlessChromium 137.0.7151.119 with lr
+Ver gráfico de rectángulos
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Mostrar auditorías relacionadas con:
+
+All
+
+FCP
+
+LCP
+
+TBT
+Estadísticas
+Redistribución forzada
+Se produce un reflow forzado cuando JavaScript consulta propiedades geométricas (como offsetWidth) después de que los estilos hayan sido invalidados por un cambio en el estado del DOM. Esto puede provocar un rendimiento deficiente. Consulta más información sobre los reflows forzados y las posibles mitigaciones.Sin puntuar
+Llamada a función principal
+Tiempo total de redistribución
+/assets/react-ven….js:2:8889(tripseuropa.com)
+109 ms
+Fuente
+Tiempo total de redistribución
+/assets/index-B8R3lVbv.js:2:530491(tripseuropa.com)
+46 ms
+[sin asignación]
+29 ms
+/assets/Chatbot-DO9cvHa5.js:1:2001(tripseuropa.com)
+59 ms
+/assets/Trustpilo….js:1:10127(tripseuropa.com)
+3 ms
+/assets/Trustpilo….js:1:16855(tripseuropa.com)
+1 ms
+Descubrimiento de solicitudes de LCP
+Optimiza el LCP haciendo descubrible la imagen de LCP desde el HTML directamente y evita la carga en diferidoLCPSin puntuar
+carga en diferido no aplicada
+fetchpriority=high applied
+La solicitud es visible en el documento inicial
+Europa Clasica
+<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&amp;w=800&amp;auto=…" alt="Europa Clasica" class="w-full h-full object-cover" width="1200" height="700" loading="eager" fetchpriority="high" decoding="sync" crossorigin="anonymous" referrerpolicy="no-referrer">
+Árbol de dependencia de red
+Evita encadenar solicitudes críticas reduciendo la longitud de las cadenas, disminuyendo el tamaño de los recursos o posponiendo la descarga de recursos innecesarios para mejorar la carga de la página.LCPSin puntuar
+Latencia de ruta crítica máxima: 187 ms
+Navegación inicial
+https://tripseuropa.com - 50 ms, 2,59 KiB
+/assets/index-B8R3lVbv.js(tripseuropa.com) - 183 ms, 140,48 KiB
+/assets/index-DJnMwclq.css(tripseuropa.com) - 187 ms, 20,41 KiB
+Orígenes preconectados
+Las sugerencias para establecer conexión previamente ayudan al navegador a establecer una conexión antes de que se cargue la página, lo que ahorra tiempo al hacer la primera solicitud a ese origen. A continuación se indican los orígenes con los que la página ha establecido conexión previamente.
+No hay orígenes con los que se haya establecido conexión previamente
+Candidatos para establecer conexión previamente
+Añade sugerencias para establecer conexión previamente con tus orígenes más importantes, pero intenta usar 4 como máximo.
+No hay más orígenes que sean buenos candidatos para establecer conexión previamente
+Solicitudes que bloquean el renderizado
+Las solicitudes están bloqueando el renderizado inicial de la página, lo que puede retrasar el LCP. Si se posponen o se insertan, estas solicitudes de red pueden salir de la ruta crítica.LCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Duración
+tripseuropa.com Propio
+20,4 KiB	460 ms
+/assets/index-DJnMwclq.css(tripseuropa.com)
+20,4 KiB
+460 ms
+Desglose de LCP
+Cada subparte tiene estrategias de mejora específicas. Lo ideal es que la mayor parte del tiempo de LCP se dedique a cargar los recursos, no a los retrasos.LCPSin puntuar
+Subparte
+Duración
+Time to First Byte
+0 ms
+Retraso de carga de recursos
+410 ms
+Duración de la carga del recurso
+40 ms
+Retraso de renderizado de elementos
+50 ms
+Europa Clasica
+<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&amp;w=800&amp;auto=…" alt="Europa Clasica" class="w-full h-full object-cover" width="1200" height="700" loading="eager" fetchpriority="high" decoding="sync" crossorigin="anonymous" referrerpolicy="no-referrer">
+Terceros
+El código de terceros puede afectar mucho a la velocidad de carga. Reduce y aplaza la carga del código de terceros para priorizar el contenido de tu página.Sin puntuar
+Tercero
+Tamaño de la transferencia
+Tiempo del hilo principal
+Google Fonts cdn 
+69 KiB	0 ms
+…v40/nuFiD-vYS….woff2(fonts.gstatic.com)
+38 KiB
+0 ms
+…v25/S6u9w4BMU….woff2(fonts.gstatic.com)
+15 KiB
+0 ms
+…v25/S6uyw4BMU….woff2(fonts.gstatic.com)
+14 KiB
+0 ms
+/css2?family=…(fonts.googleapis.com)
+1 KiB
+0 ms
+unsplash.com
+2273 KiB	0 ms
+/photo-151…-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+256 KiB
+0 ms
+/photo-153…-13e3e96b5017?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+212 KiB
+0 ms
+/photo-152…-060bdaf4fe1b?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+200 KiB
+0 ms
+/photo-151…-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+145 KiB
+0 ms
+/photo-149…-5b9627545d1a?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+140 KiB
+0 ms
+/photo-153…-13e3e96b5017?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+123 KiB
+0 ms
+/photo-155…-74d7acaacd8b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+112 KiB
+0 ms
+/photo-153…-a5f1f91d3b99?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+109 KiB
+0 ms
+/photo-146…-9661b134dd2b?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+104 KiB
+0 ms
+/photo-153…-92b9be482077?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+96 KiB
+0 ms
+/photo-149…-5b9627545d1a?w=800&auto=format&fit=crop(images.unsplash.com)
+92 KiB
+0 ms
+/photo-150…-7d83a16ee930?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+91 KiB
+0 ms
+/photo-151…-59663e0ac1ad?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+91 KiB
+0 ms
+/photo-154…-2d8bd64b4a9b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+86 KiB
+0 ms
+/photo-154…-ec64e4d95325?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+84 KiB
+0 ms
+/photo-146…-9661b134dd2b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+82 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=40&w=1200&auto=format&fit=crop(images.unsplash.com)
+47 KiB
+0 ms
+/photo-157…-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+45 KiB
+0 ms
+/photo-151…-a0e668c92439?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+42 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+38 KiB
+0 ms
+/photo-155…-c0197dd311b5?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+29 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=…(images.unsplash.com)
+25 KiB
+0 ms
+/photo-150…-3e91760cbb34?q=60&w=600&auto=format&fit=crop(images.unsplash.com)
+25 KiB
+0 ms
+flagcdn.com
+2 KiB	0 ms
+/w40/us.png(flagcdn.com)
+1 KiB
+0 ms
+/w40/co.png(flagcdn.com)
+1 KiB
+0 ms
+ipapi.co
+2 KiB	0 ms
+/json/(ipapi.co)
+2 KiB
+0 ms
+Estas estadísticas también están disponibles en el panel Rendimiento de Chrome DevTools. Graba una traza para ver información más detallada.
+Diagnósticos
+Reduce el contenido JavaScript que no se use Ahorro estimado de 60 KiB
+Reduce el contenido JavaScript que no se use y retrasa la carga de secuencias de comandos hasta que se necesiten. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de JavaScript que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+tripseuropa.com Propio
+139,1 KiB	60,4 KiB
+/assets/index-B8R3lVbv.js(tripseuropa.com)
+139,1 KiB
+60,4 KiB
+Reduce el contenido CSS que no se use Ahorro estimado de 15 KiB
+Reduce las reglas que no se usen de las hojas de estilo y retrasa las reglas CSS que no se utilicen para el contenido de la parte visible a primera vista. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de CSS que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+tripseuropa.com Propio
+19,3 KiB	15,4 KiB
+/assets/index-DJnMwclq.css(tripseuropa.com)
+19,3 KiB
+15,4 KiB
+Evita cargas útiles de red de gran tamaño Tamaño total: 2675 KiB
+Si la carga útil de la red es muy grande, los usuarios consumen más datos móviles y las páginas tardan más en cargarse. Consulta cómo reducir el tamaño de la carga útilSin puntuar
+URL
+Tamaño de la transferencia
+unsplash.com
+944,9 KiB
+/photo-151…-78bda8ba0e5b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+144,9 KiB
+/photo-153…-13e3e96b5017?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+122,7 KiB
+/photo-155…-74d7acaacd8b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+111,8 KiB
+/photo-153…-a5f1f91d3b99?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+109,0 KiB
+/photo-153…-92b9be482077?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+96,1 KiB
+/photo-149…-5b9627545d1a?w=800&auto=format&fit=crop(images.unsplash.com)
+92,1 KiB
+/photo-150…-7d83a16ee930?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+91,3 KiB
+/photo-151…-59663e0ac1ad?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+90,8 KiB
+/photo-154…-2d8bd64b4a9b?q=60&w=800&auto=format&fit=crop(images.unsplash.com)
+86,2 KiB
+tripseuropa.com Propio
+140,5 KiB
+/assets/index-B8R3lVbv.js(tripseuropa.com)
+140,5 KiB
+Evita tareas largas del hilo principal 3 tareas largas encontradas
+Enumera las tareas más largas del hilo principal, lo que es útil para identificar las que más contribuyen a la latencia. Consulta cómo evitar tareas largas del hilo principalTBTSin puntuar
+URL
+Hora de inicio
+Duración
+tripseuropa.com Propio
+206 ms
+/assets/react-ven….js(tripseuropa.com)
+3772 ms
+96 ms
+/assets/index-B8R3lVbv.js(tripseuropa.com)
+769 ms
+56 ms
+/assets/react-ven….js(tripseuropa.com)
+5582 ms
+54 ms

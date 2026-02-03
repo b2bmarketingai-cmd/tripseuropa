@@ -8,7 +8,7 @@ import { useI18n } from "@/lib/i18n";
 const OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=40&w=400&auto=format&fit=crop",
     title: { es: "Viviendo Europa", en: "Living Europe", pt: "Vivendo a Europa" },
     price: "1,699",
     taxes: "799",
@@ -17,7 +17,7 @@ const OFFERS = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=400&auto=format&fit=crop",
     title: { es: "Europa Clasica", en: "Classic Europe", pt: "Europa Classica" },
     price: "1,999",
     taxes: "799",
@@ -26,7 +26,7 @@ const OFFERS = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop",
     title: { es: "Turquia y Dubai", en: "Turkey and Dubai", pt: "Turquia e Dubai" },
     price: "999",
     taxes: "999",
@@ -35,7 +35,7 @@ const OFFERS = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=400&auto=format&fit=crop",
     title: { es: "Gran Tour de Europa", en: "Grand Tour of Europe", pt: "Grande Tour pela Europa" },
     price: "1,899",
     taxes: "799",
@@ -44,7 +44,7 @@ const OFFERS = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&auto=format&fit=crop",
     title: { es: "Mega Europa Barcelona", en: "Mega Europe Barcelona", pt: "Mega Europa Barcelona" },
     price: "1,499",
     taxes: "799",
@@ -53,7 +53,7 @@ const OFFERS = [
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=40&w=400&auto=format&fit=crop",
     title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai", pt: "Turquia, Egito e Dubai" },
     price: "1,999",
     taxes: "999",
@@ -62,7 +62,7 @@ const OFFERS = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=40&w=400&auto=format&fit=crop",
     title: { es: "Magia Italiana", en: "Italian Magic", pt: "Magia Italiana" },
     price: "1,299",
     taxes: "799",
@@ -71,7 +71,7 @@ const OFFERS = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=40&w=400&auto=format&fit=crop",
     title: { es: "Viva Europa", en: "Viva Europe", pt: "Viva Europa" },
     price: "1,599",
     taxes: "799",
@@ -80,7 +80,7 @@ const OFFERS = [
   },
   {
     id: 9,
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=60&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=40&w=400&auto=format&fit=crop",
     title: { es: "Escapada a Grecia", en: "Greece Getaway", pt: "Escapada para a Grecia" },
     price: "1,199",
     taxes: "799",

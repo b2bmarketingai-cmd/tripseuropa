@@ -8,7 +8,7 @@ import { openWhatsAppQuote } from "@/lib/whatsapp";
 const PACKAGES = [
   {
     id: "TE-001",
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=400&auto=format&fit=crop",
     title: { es: "Sinfonia Europea", en: "European Symphony", pt: "Sinfonia Europeia" },
     destinations: { es: "Roma, Paris, Madrid y Barcelona", en: "Rome, Paris, Madrid and Barcelona", pt: "Roma, Paris, Madrid e Barcelona" },
     price: "2,799",
@@ -17,7 +17,7 @@ const PACKAGES = [
   },
   {
     id: "TE-002",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=40&w=400&auto=format&fit=crop",
     title: { es: "España y Marruecos", en: "Spain and Morocco", pt: "Espanha e Marrocos" },
     destinations: { es: "Madrid, Sevilla, Marrakech y Barcelona", en: "Madrid, Seville, Marrakech and Barcelona", pt: "Madrid, Sevilha, Marrakech e Barcelona" },
     price: "2,899",
@@ -26,7 +26,7 @@ const PACKAGES = [
   },
   {
     id: "TE-003",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop",
     title: { es: "Grecia Magica", en: "Magical Greece", pt: "Grecia Magica" },
     destinations: { es: "Atenas, Santorini y Mykonos", en: "Athens, Santorini and Mykonos", pt: "Atenas, Santorini e Mykonos" },
     price: "3,199",
@@ -35,7 +35,7 @@ const PACKAGES = [
   },
   {
     id: "TE-004",
-    image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=40&w=400&auto=format&fit=crop",
     title: { es: "Capitales Europeas", en: "European Capitals", pt: "Capitais Europeias" },
     destinations: { es: "Londres, Paris, Amsterdam y Berlin", en: "London, Paris, Amsterdam and Berlin", pt: "Londres, Paris, Amsterda e Berlim" },
     price: "3,499",
@@ -44,7 +44,7 @@ const PACKAGES = [
   },
   {
     id: "TE-005",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&auto=format&fit=crop",
     title: { es: "Benelux Express", en: "Benelux Express", pt: "Benelux Express" },
     destinations: { es: "Amsterdam, Bruselas y Brujas", en: "Amsterdam, Brussels and Bruges", pt: "Amsterda, Bruxelas e Bruges" },
     price: "2,199",
@@ -53,7 +53,7 @@ const PACKAGES = [
   },
   {
     id: "TE-006",
-    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=60&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=40&w=400&auto=format&fit=crop",
     title: { es: "Europa Central", en: "Central Europe", pt: "Europa Central" },
     destinations: { es: "Viena, Praga, Budapest y Munich", en: "Vienna, Prague, Budapest and Munich", pt: "Viena, Praga, Budapeste e Munique" },
     price: "2,999",
