@@ -27,6 +27,88 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// SEO Redirects: Canonical URL handling, slug aliases, and query param fixes
+app.use((req, res, next) => {
+  const host = req.headers.host || '';
+  const path = req.path;
+  const query = req.query;
+
+  // 1. Redirect www to non-www (301 permanent)
+  if (host.startsWith('www.')) {
+    const newHost = host.replace('www.', '');
+    const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+    return res.redirect(301, `${protocol}://${newHost}${req.originalUrl}`);
+  }
+
+  // 2. Redirect HTTP to HTTPS (when behind proxy)
+  const forwardedProto = req.headers['x-forwarded-proto'];
+  if (forwardedProto === 'http' && process.env.NODE_ENV === 'production') {
+    return res.redirect(301, `https://${host}${req.originalUrl}`);
+  }
+
+  // 3. Redirect query parameter lang to path-based locale
+  if (query.lang && typeof query.lang === 'string') {
+    const lang = query.lang.toLowerCase();
+    const cleanPath = path.replace(/\/$/, '') || '/';
+    const langMap: Record<string, string> = {
+      'en': '/en',
+      'es': '/es',
+      'pt': '/pt-br',
+      'pt-br': '/pt-br'
+    };
+    const prefix = langMap[lang];
+    if (prefix) {
+      // Remove lang from query and redirect
+      const newPath = cleanPath === '/' ? prefix : `${prefix}${cleanPath}`;
+      return res.redirect(301, newPath);
+    }
+  }
+
+  // 4. Spanish destination slug aliases → English slugs
+  const slugAliases: Record<string, string> = {
+    'belgica': 'belgium',
+    'francia': 'france',
+    'alemania': 'germany',
+    'italia': 'italy',
+    'espana': 'spain',
+    'holanda': 'netherlands',
+    'suiza': 'switzerland',
+    'austria': 'austria',
+    'grecia': 'greece',
+    'portugal': 'portugal',
+    'irlanda': 'ireland',
+    'escocia': 'scotland',
+    'croacia': 'croatia',
+    'hungria': 'hungary',
+    'republica-checa': 'czech-republic',
+    'noruega': 'norway',
+    'suecia': 'sweden',
+    'dinamarca': 'denmark',
+    'finlandia': 'finland',
+    'turquia': 'turkey'
+  };
+
+  // Check if path contains a destination slug that needs aliasing
+  const destinoMatch = path.match(/\/(destinos|destinations)\/([^\/]+)/);
+  if (destinoMatch) {
+    const slug = destinoMatch[2].toLowerCase();
+    if (slugAliases[slug]) {
+      const newPath = path.replace(`/${destinoMatch[2]}`, `/${slugAliases[slug]}`);
+      return res.redirect(301, newPath);
+    }
+  }
+
+  // 5. Fix blog URL pattern: /blog/slug → /blog/post/slug
+  const blogMatch = path.match(/^(\/(?:es|en|pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-br|en-co|en-mx)?)?\/blog\/([^\/]+)$/);
+  if (blogMatch && blogMatch[2] !== 'post' && !['colombia', 'argentina', 'peru', 'panama', 'costa-rica', 'dominicana', 'caribe', 'mexico', 'brasil'].includes(blogMatch[2])) {
+    const prefix = blogMatch[1] || '';
+    const slug = blogMatch[2];
+    return res.redirect(301, `${prefix}/blog/post/${slug}`);
+  }
+
+  next();
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",
