@@ -146,3 +146,41 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Performance optimizations - content-visibility for lazy sections */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+.lazy-section-tall {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Reduce layout thrashing */
+.contain-layout {
+  contain: layout style;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Skeleton loading animation optimized */
+.loading-skeleton {
+  background: linear-gradient(90deg,
+    hsl(var(--muted-foreground) / 0.08) 25%,
+    hsl(var(--muted-foreground) / 0.12) 50%,
+    hsl(var(--muted-foreground) / 0.08) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

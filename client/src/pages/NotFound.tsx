@@ -4,7 +4,16 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Home, Search, ArrowLeft } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { errorTranslations, t } from "@/lib/translations";
+
+const errorTranslations = {
+  pageNotFound: { es: "Página No Encontrada", en: "Page Not Found", pt: "Página Não Encontrada" },
+  pageNotFoundDesc: { es: "Lo sentimos, la página que buscas no existe o ha sido movida.", en: "Sorry, the page you are looking for does not exist or has been moved.", pt: "Desculpe, a página que você procura não existe ou foi movida." },
+  backToHome: { es: "Volver al Inicio", en: "Back to Home", pt: "Voltar ao Início" }
+};
+
+const t = (translations: Record<string, Record<string, string>>, key: string, lang: string): string => {
+  return translations[key]?.[lang] || translations[key]?.es || key;
+};
 
 /**
  * 404 Not Found Page
@@ -59,22 +68,22 @@ export default function NotFound() {
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link href="/packages">
-                <Button variant="link" className="text-accent hover:text-accent/80">
+                <Button variant="ghost" className="text-accent hover:text-accent/80">
                   {lang === 'es' ? 'Paquetes' : lang === 'en' ? 'Packages' : 'Pacotes'}
                 </Button>
               </Link>
               <Link href="/blog">
-                <Button variant="link" className="text-accent hover:text-accent/80">
+                <Button variant="ghost" className="text-accent hover:text-accent/80">
                   Blog
                 </Button>
               </Link>
               <Link href="/about">
-                <Button variant="link" className="text-accent hover:text-accent/80">
+                <Button variant="ghost" className="text-accent hover:text-accent/80">
                   {lang === 'es' ? 'Nosotros' : lang === 'en' ? 'About Us' : 'Sobre Nós'}
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="link" className="text-accent hover:text-accent/80">
+                <Button variant="ghost" className="text-accent hover:text-accent/80">
                   {lang === 'es' ? 'Contacto' : lang === 'en' ? 'Contact' : 'Contato'}
                 </Button>
               </Link>

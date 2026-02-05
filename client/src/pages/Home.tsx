@@ -105,35 +105,41 @@ export default function Home() {
         <DestinationGrid />
       </Suspense>
 
-      {/* Below-fold components - lazy loaded on scroll */}
-      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
-        <ReserveSpot />
-        <SpecialOffers />
-        <Favorites />
-        <WhyChooseUs />
-        <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <SmartSearchBar variant="hero" />
-          </div>
-        </section>
-        <BestPriceGuarantee />
-        <BlogHighlights />
-        <SEOContent />
-        <NewsletterSignup />
-      </Suspense>
+      {/* Below-fold components - lazy loaded with content-visibility optimization */}
+      <div className="lazy-section-tall">
+        <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+          <ReserveSpot />
+          <SpecialOffers />
+          <Favorites />
+          <WhyChooseUs />
+          <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <SmartSearchBar variant="hero" />
+            </div>
+          </section>
+          <BestPriceGuarantee />
+          <BlogHighlights />
+          <SEOContent />
+          <NewsletterSignup />
+        </Suspense>
+      </div>
 
-      {/* Heavy third-party components - separate Suspense boundary */}
-      <Suspense fallback={<div className="h-64 loading-skeleton" />}>
-        <TrustpilotReviews />
-        <PromotionalVideoBanner />
-        <TravelerStories />
-      </Suspense>
+      {/* Heavy third-party components - separate Suspense with content-visibility */}
+      <div className="lazy-section">
+        <Suspense fallback={<div className="h-64 loading-skeleton" />}>
+          <TrustpilotReviews />
+          <PromotionalVideoBanner />
+          <TravelerStories />
+        </Suspense>
+      </div>
 
       {/* Contact section with lazy icons */}
-      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
-        <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
-        <FAQAccordion />
-      </Suspense>
+      <div className="lazy-section-tall">
+        <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+          <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
+          <FAQAccordion />
+        </Suspense>
+      </div>
 
       <Footer />
 
@@ -157,33 +163,3 @@ export default function Home() {
   );
 }
 
-function WhatsAppButton() {
-  return (
-    <a
-      href="https://api.whatsapp.com/send?phone=34611105448"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"
-      aria-label="WhatsApp"
-      data-testid="button-whatsapp-float"
-    >
-      <SiWhatsapp className="w-7 h-7 text-white" />
-    </a>
-  );
-}
-
-function SupportButton() {
-  return (
-    <ContactSupportModal
-      trigger={
-        <button
-          className="fixed bottom-6 left-6 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors z-50"
-          aria-label="Support"
-          data-testid="button-support-float"
-        >
-          <Phone className="w-6 h-6 text-primary-foreground" />
-        </button>
-      }
-    />
-  );
-}

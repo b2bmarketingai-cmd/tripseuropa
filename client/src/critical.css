@@ -121,19 +121,26 @@ img {
 /* Loading state */
 .loading-skeleton {
   background: linear-gradient(90deg,
-    hsl(var(--muted-foreground) / 0.1) 25%,
-    hsl(var(--muted-foreground) / 0.15) 50%,
-    hsl(var(--muted-foreground) / 0.1) 75%
+    hsl(var(--muted-foreground) / 0.08) 25%,
+    hsl(var(--muted-foreground) / 0.12) 50%,
+    hsl(var(--muted-foreground) / 0.08) 75%
   );
   background-size: 200% 100%;
   animation: loading 1.5s ease-in-out infinite;
 }
 
 @keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Content visibility for lazy sections - reduces initial render cost */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+.lazy-section-tall {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }

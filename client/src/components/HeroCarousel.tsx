@@ -141,8 +141,9 @@ export function HeroCarousel() {
           height={1080}
           className="w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
           decoding="sync"
+          // @ts-ignore - fetchpriority is a valid HTML attribute
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>
