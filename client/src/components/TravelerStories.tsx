@@ -14,7 +14,7 @@ const STORIES = [
       en: "In Paris we didn't stop the whole trip. We had a full schedule of activities like visiting the Eiffel Tower, the Louvre and walking along the Champs-Elysees. An experience we will remember forever.",
       pt: "Em Paris nao paramos durante toda a viagem. Tinhamos uma agenda completa de atividades como visitar a Torre Eiffel, o Louvre e passear pelos Campos Eliseos. Uma experiencia que lembraremos para sempre."
     },
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&auto=format&fit=crop",
     author: "Maria Gonzalez",
     authorCity: "Ciudad de Mexico",
     rating: 5,
@@ -29,7 +29,7 @@ const STORIES = [
       en: "Rome exceeded all my expectations. The Colosseum, the Vatican, the squares and Italian food. Every corner has history and magic. Trips Europa organized everything perfectly.",
       pt: "Roma superou todas as minhas expectativas. O Coliseu, o Vaticano, as pracas e a comida italiana. Cada canto tem historia e magia. Trips Europa organizou tudo perfeitamente."
     },
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&auto=format&fit=crop",
     author: "Carlos Rodriguez",
     authorCity: "Bogota",
     rating: 5,
@@ -44,7 +44,7 @@ const STORIES = [
       en: "Barcelona captivated us with its Gaudi architecture, Las Ramblas and its beaches. The Sagrada Familia tour was incredible. A destination that combines culture, history and fun.",
       pt: "Barcelona nos encantou com sua arquitetura de Gaudi, Las Ramblas e suas praias. O tour pela Sagrada Familia foi incrivel. Um destino que combina cultura, historia e diversao."
     },
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&auto=format&fit=crop",
     author: "Ana Martinez",
     authorCity: "Lima",
     rating: 5,
@@ -59,7 +59,7 @@ const STORIES = [
       en: "The sunsets in Santorini are magical. The white houses with blue domes, the crystal-clear sea and Greek hospitality made this trip unforgettable.",
       pt: "Os pores do sol em Santorini sao magicos. As casas brancas com cupulas azuis, o mar cristalino e a hospitalidade grega tornaram esta viagem inesquecivel."
     },
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&auto=format&fit=crop",
     author: "Roberto Silva",
     authorCity: "Sao Paulo",
     rating: 5,
@@ -74,7 +74,7 @@ const STORIES = [
       en: "Exploring Amsterdam by bike was a unique experience. The canals, museums like Van Gogh and the relaxed atmosphere of the city completely won us over.",
       pt: "Explorar Amsterdam de bicicleta foi uma experiencia unica. Os canais, museus como o Van Gogh e o ambiente relaxado da cidade nos conquistaram completamente."
     },
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=400&auto=format&fit=crop",
     author: "Laura Fernandez",
     authorCity: "Buenos Aires",
     rating: 5,
@@ -89,7 +89,7 @@ const STORIES = [
       en: "London perfectly blends traditional with modern. Buckingham Palace, Big Ben and free museums left us amazed. A city you must visit.",
       pt: "Londres mistura perfeitamente o tradicional com o moderno. O Palacio de Buckingham, o Big Ben e os museus gratuitos nos deixaram maravilhados. Uma cidade que voce deve visitar."
     },
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&auto=format&fit=crop",
     author: "Pedro Gomez",
     authorCity: "Santiago",
     rating: 5,

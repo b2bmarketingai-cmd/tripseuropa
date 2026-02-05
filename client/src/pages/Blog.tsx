@@ -16,11 +16,11 @@ import { useToast } from "@/hooks/use-toast";
 const BLOG_CATEGORIES = [
   { id: "all", label: { es: "Todos", en: "All", pt: "Todos" }, icon: BookOpen },
   { id: "destinos", label: { es: "Destinos", en: "Destinations", pt: "Destinos" }, icon: MapPin },
-  { id: "planificacion", label: { es: "Planificacion", en: "Planning", pt: "Planejamento" }, icon: Plane },
+  { id: "planificacion", label: { es: "Planificación", en: "Planning", pt: "Planejamento" }, icon: Plane },
   { id: "lujo", label: { es: "Lujo", en: "Luxury", pt: "Luxo" }, icon: Heart },
   { id: "dinero", label: { es: "Dinero", en: "Money", pt: "Dinheiro" }, icon: CreditCard },
   { id: "consejos", label: { es: "Consejos", en: "Tips", pt: "Dicas" }, icon: TrendingUp },
-  { id: "gastronomia", label: { es: "Gastronomia", en: "Gastronomy", pt: "Gastronomia" }, icon: Utensils },
+  { id: "gastronomia", label: { es: "Gastronomía", en: "Gastronomy", pt: "Gastronomia" }, icon: Utensils },
 ];
 
 const BLOG_POSTS = [

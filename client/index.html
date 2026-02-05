@@ -1,58 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+    <meta name="description" content="Descubre Europa con Trips Europa - Paquetes turísticos personalizados, ofertas exclusivas y experiencias inolvidables en los mejores destinos europeos. Viaja desde Latinoamérica con los mejores precios." />
     <meta name="theme-color" content="#c9a227" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="TripsEuropa - Descubre experiencias únicas de viaje en Europa. Tours personalizados, guías expertos y los mejores destinos europeos al mejor precio. Reserva ahora tu próxima aventura."
-    />
-    <meta
-      name="keywords"
-      content="viajes europa, tours europa, vacaciones europa, paquetes turisticos europa"
-    />
-    <meta name="author" content="TripsEuropa" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tripseuropa.com/" />
-    <meta
-      property="og:title"
-      content="TripsEuropa - Experiencias de Viaje en Europa"
-    />
-    <meta
-      property="og:description"
-      content="Descubre experiencias únicas de viaje en Europa con TripsEuropa"
-    />
-    <meta property="og:image" content="https://tripseuropa.com/logo.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://tripseuropa.com/" />
-    <meta
-      property="twitter:title"
-      content="TripsEuropa - Experiencias de Viaje en Europa"
-    />
-    <meta
-      property="twitter:description"
-      content="Descubre experiencias únicas de viaje en Europa con TripsEuropa"
-    />
-    <meta property="twitter:image" content="https://tripseuropa.com/logo.png" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://tripseuropa.com/" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Favicon - Avion Dorado Trips Europa (PERMANENTE - NO QUITAR) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -62,42 +17,69 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Preconnect to critical origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://images.unsplash.com" />
+    <!-- DNS Prefetch + Preconnect to critical third-party origins -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://ipapi.co">
+    <link rel="dns-prefetch" href="https://flagcdn.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="preconnect" href="https://ipapi.co" crossorigin>
+    <link rel="preconnect" href="https://flagcdn.com" crossorigin>
 
-    <!-- Preload LCP hero image - matches HeroCarousel first slide (Paris) -->
-    <link
-      rel="preload"
-      as="image"
-      href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=600&auto=format&fit=crop"
-      fetchpriority="high"
-      media="(max-width: 767px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=1200&auto=format&fit=crop"
-      fetchpriority="high"
-      media="(min-width: 768px)"
-    />
+    <!-- Preload LCP hero image - WebP format for smallest size -->
+    <link rel="preload" as="image" type="image/webp" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=50&auto=format&fit=crop&fm=webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" type="image/webp" href="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=60&auto=format&fit=crop&fm=webp" media="(min-width: 769px)" fetchpriority="high">
 
-    <!-- Load only essential fonts (Playfair Display + Lato) with display=swap -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
-    /></noscript>
+    <!-- Critical inline CSS for instant first paint - optimized for LCP -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;-webkit-text-size-adjust:100%}
+      body{min-height:100vh;background:#fff;color:#1a1a2e}
+      #root{min-height:100vh}
+      img{max-width:100%;height:auto;display:block}
+      .hero-shell{min-height:600px;background:#1a1a2e;position:relative;display:flex;align-items:center;overflow:hidden;contain:layout style paint}
+      .hero-shell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:auto}
+      .hero-shell .overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,26,46,.9) 0%,rgba(26,26,46,.6) 50%,rgba(26,26,46,.4) 100%)}
+      .hero-shell .content{position:relative;z-index:10;padding:4rem 1rem;max-width:42rem;color:#fff}
+      .hero-shell h1{font-size:2.25rem;font-weight:700;line-height:1.1;margin-bottom:.5rem;color:#c9a227}
+      .hero-shell p{font-size:1.125rem;opacity:.85}
+      .nav-shell{height:72px;background:#1a1a2e;contain:layout style}
+      .loading-skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+      @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+      @media(min-width:768px){.hero-shell{min-height:700px}.hero-shell h1{font-size:3.75rem}.hero-shell .content{padding:6rem 2rem}}
+    </style>
+
+    <!-- Fonts loaded non-render-blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap&subset=latin"></noscript>
+
+    <title>Viajes a Europa desde Latinoamerica - Paquetes Todo Incluido | Trips Europa</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell for instant FCP + LCP while React hydrates -->
+      <div class="nav-shell" aria-hidden="true"></div>
+      <div class="hero-shell" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=50&auto=format&fit=crop&fm=webp"
+          srcset="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&q=40&auto=format&fit=crop&fm=webp 400w, https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=50&auto=format&fit=crop&fm=webp 800w, https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=60&auto=format&fit=crop&fm=webp 1200w"
+          sizes="100vw"
+          alt="Gran Tour de Europa - Paris, Torre Eiffel"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>Gran Tour de Europa</h1>
+          <p>Paris, Roma, Madrid y mas</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

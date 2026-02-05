@@ -2,29 +2,17 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/support";
 import { SEOHead } from "@/components/SEOHead";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
-import { Link, useParams, useLocation } from "wouter";
-import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection, type BlogFAQ, type MultiLangText, type MultiLangArray } from "@/lib/blogData";
+import { Link, useParams } from "wouter";
+import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
 import { BreadcrumbSchema } from "@/components/SEOSchemas";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-
-function getTextForLang(text: MultiLangText, lang: string): string {
-  if (lang === 'pt' && text.pt) return text.pt;
-  if (lang === 'en') return text.en;
-  return text.es;
-}
-
-function getArrayForLang(arr: MultiLangArray | undefined, lang: string): string[] {
-  if (!arr) return [];
-  if (lang === 'pt' && arr.pt) return arr.pt;
-  if (lang === 'en') return arr.en;
-  return arr.es;
-}
 
 function parseSpanishDate(dateStr: string): string {
   const months: Record<string, string> = {
@@ -59,7 +47,7 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     "headline": title,
     "description": description,
     "image": image,
-    "url": `https://tripseuropa.com/blog/post/${slug}`,
+    "url": `https://tripseuropa.co/blog/post/${slug}`,
     "datePublished": isoDate,
     "dateModified": isoDate,
     "author": hasPersonAuthor ? {
@@ -68,19 +56,19 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
     } : {
       "@type": "Organization",
       "name": "Trips Europa",
-      "url": "https://tripseuropa.com"
+      "url": "https://tripseuropa.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Trips Europa",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://tripseuropa.com/favicon.png"
+        "url": "https://tripseuropa.co/favicon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://tripseuropa.com/blog/post/${slug}`
+      "@id": `https://tripseuropa.co/blog/post/${slug}`
     }
   };
   
@@ -95,17 +83,21 @@ function ArticleSchema({ title, description, image, slug, date, author }: {
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const [location] = useLocation();
-  
-  const getLanguageFromPath = (): string => {
-    if (location.startsWith('/pt-br')) return 'pt';
-    if (location.startsWith('/en')) return 'en';
+  const { language } = useI18n();
+
+  // Detect language from URL path for proper PT-BR rendering
+  const getLanguageFromPath = (): "es" | "en" | "pt" => {
+    if (typeof window !== 'undefined') {
+      const pathname = window.location.pathname;
+      if (pathname.startsWith('/pt-br')) return 'pt';
+      if (pathname.startsWith('/en')) return 'en';
+    }
     return 'es';
   };
-  
-  const language = getLanguageFromPath();
-  const langPrefix = language === "es" ? "" : language === "pt" ? "/pt-br" : `/${language}`;
-  
+
+  // Use URL-based language detection instead of i18n context
+  const currentLanguage = getLanguageFromPath();
+
   const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
   const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
   const post = fullPost || simplePost;
@@ -117,7 +109,7 @@ export default function BlogPost() {
         <main className="container mx-auto px-4 py-16 text-center" data-testid="section-not-found">
           <h1 className="text-3xl font-display text-accent mb-4" data-testid="text-not-found-title">Articulo No Encontrado</h1>
           <p className="text-muted-foreground mb-8" data-testid="text-not-found-message">El articulo que buscas no existe o ha sido movido.</p>
-          <Link href={`${langPrefix}/blog`}>
+          <Link href="/blog">
             <Button variant="outline" data-testid="button-not-found-back">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al Blog
@@ -130,8 +122,8 @@ export default function BlogPost() {
     );
   }
 
-  const title = (post.title as Record<string, string>)[language] || post.title.es;
-  const excerpt = (post.excerpt as Record<string, string>)[language] || post.excerpt.es;
+  const title = (post.title as Record<string, string>)[currentLanguage] || post.title.es;
+  const excerpt = (post.excerpt as Record<string, string>)[currentLanguage] || post.excerpt.es;
   const postSlug = fullPost?.slug || post.id;
   const isoDate = parseSpanishDate(post.date);
 
@@ -141,7 +133,7 @@ export default function BlogPost() {
         title={title}
         description={excerpt}
         keywords={post.keywords.join(", ")}
-        url={`https://tripseuropa.com/blog/post/${postSlug}`}
+        url={`https://tripseuropa.co/blog/post/${postSlug}`}
         image={post.image}
         type="article"
         publishedTime={isoDate}
@@ -158,20 +150,28 @@ export default function BlogPost() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Inicio", url: "https://tripseuropa.com" },
-          { name: "Blog", url: "https://tripseuropa.com/blog" },
-          { name: title, url: `https://tripseuropa.com/blog/post/${postSlug}` }
+          { name: "Inicio", url: "https://tripseuropa.co" },
+          { name: "Blog", url: "https://tripseuropa.co/blog" },
+          { name: title, url: `https://tripseuropa.co/blog/post/${postSlug}` }
         ]}
       />
       <Header />
-      <Breadcrumbs items={[
-        { label: "Blog", href: `${langPrefix}/blog` },
-        { label: title }
-      ]} />
-      <main className="pt-8">
+      <Breadcrumbs
+        items={[
+          {
+            label: "Blog",
+            href: "/blog"
+          },
+          {
+            label: title,
+            href: `/blog/post/${postSlug}`
+          }
+        ]}
+      />
+      <main className="pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
           <div className="mb-8">
-            <Link href={`${langPrefix}/blog`}>
+            <Link href="/blog">
               <Button variant="ghost" size="sm" className="mb-4" data-testid="button-back-blog">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver al Blog
@@ -179,7 +179,7 @@ export default function BlogPost() {
             </Link>
             
             <Badge variant="secondary" className="mb-4" data-testid="badge-post-category">
-              {(post.categoryLabel as Record<string, string>)[language] || post.categoryLabel.es}
+              {(post.categoryLabel as Record<string, string>)[currentLanguage] || post.categoryLabel.es}
             </Badge>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-accent mb-4 leading-tight" data-testid="text-post-title">
@@ -217,13 +217,13 @@ export default function BlogPost() {
 
             {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
               <section key={index} className="mb-10" data-testid={`section-content-${index}`}>
-                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{getTextForLang(section.title, language)}</h2>
+                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{section.title}</h2>
                 
-                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{getTextForLang(section.content, language)}</p>
+                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{section.content}</p>
                 
-                {section.list && getArrayForLang(section.list, language).length > 0 && (
+                {section.list && (
                   <ul className="list-disc pl-6 space-y-2 text-foreground" data-testid={`list-section-${index}`}>
-                    {getArrayForLang(section.list, language).map((item: string, i: number) => (
+                    {section.list.map((item: string, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
@@ -233,15 +233,13 @@ export default function BlogPost() {
 
             {fullPost?.faqs && fullPost.faqs.length > 0 && (
               <section className="mt-12" data-testid="section-faq">
-                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">
-                  {language === 'pt' ? 'Perguntas Frequentes' : language === 'en' ? 'Frequently Asked Questions' : 'Preguntas Frecuentes'}
-                </h2>
+                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">Preguntas Frecuentes</h2>
                 <div className="space-y-4">
-                  {fullPost.faqs.map((faq: BlogFAQ, index: number) => (
+                  {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
                     <Card key={index} data-testid={`card-faq-${index}`}>
                       <CardContent className="p-4">
-                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{getTextForLang(faq.question, language)}</h3>
-                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{getTextForLang(faq.answer, language)}</p>
+                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{faq.question}</h3>
+                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{faq.answer}</p>
                       </CardContent>
                     </Card>
                   ))}

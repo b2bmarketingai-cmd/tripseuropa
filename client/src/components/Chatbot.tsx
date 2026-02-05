@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { useChatbot } from "@/hooks/use-chatbot";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n";
+import { fastdom } from "@/lib/fastdom";
 
 const WHATSAPP_NUMBER = "34611105448";
 const PHONE_NUMBER = "+34 611 105 448";
@@ -76,8 +77,10 @@ export function Chatbot() {
   const { messages, sendMessage, isStreaming } = useChatbot();
 
   const scrollToBottom = () => {
-    // Use requestAnimationFrame to avoid forced reflow
-    requestAnimationFrame(() => {
+    if (!messagesEndRef.current) return;
+
+    // Use FastDOM to prevent forced reflows
+    fastdom.mutate(() => {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     });
   };
@@ -248,9 +251,8 @@ export function Chatbot() {
               className="bg-accent text-primary shrink-0"
               disabled={!input.trim() || isStreaming}
               data-testid="button-chatbot-send"
-              aria-label="Enviar mensaje"
             >
-              <Send className="w-4 h-4" aria-hidden="true" />
+              <Send className="w-4 h-4" />
             </Button>
           </form>
           <p className="text-[10px] text-muted-foreground text-center mt-2">

@@ -1,39 +1,51 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
 import { HomePageSEO } from "@/components/SEOHead";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import { HeroFlightSearch } from "@/components/HeroFlightSearch";
-import { Badge } from "@/components/ui/badge";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { useI18n } from "@/lib/i18n";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { SiWhatsapp } from "react-icons/si";
-import { FloatingContactButtons } from "@/components/support";
 
+// Near-fold components - lazy loaded but fetched early
+const HeroFlightSearch = lazy(() => import("@/components/HeroFlightSearch").then(m => ({ default: m.HeroFlightSearch })));
+const TopOffers = lazy(() => import("@/components/TopOffers").then(m => ({ default: m.TopOffers })));
+const DestinationGrid = lazy(() => import("@/components/DestinationGrid").then(m => ({ default: m.DestinationGrid })));
+
+// Lazy load non-critical below-the-fold components
 const Chatbot = lazy(() => import("@/components/Chatbot").then(m => ({ default: m.Chatbot })));
 const ContactForm = lazy(() => import("@/components/ContactForm").then(m => ({ default: m.ContactForm })));
 const SmartSearchBar = lazy(() => import("@/components/SmartSearchBar").then(m => ({ default: m.SmartSearchBar })));
 const FAQAccordion = lazy(() => import("@/components/FAQAccordion").then(m => ({ default: m.FAQAccordion })));
 const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
-const TopOffers = lazy(() => import("@/components/TopOffers").then(m => ({ default: m.TopOffers })));
 const ReserveSpot = lazy(() => import("@/components/ReserveSpot").then(m => ({ default: m.ReserveSpot })));
 const Favorites = lazy(() => import("@/components/Favorites").then(m => ({ default: m.Favorites })));
 const SpecialOffers = lazy(() => import("@/components/SpecialOffers").then(m => ({ default: m.SpecialOffers })));
-const UrgencyBanner = lazy(() => import("@/components/UrgencyBanner").then(m => ({ default: m.UrgencyBanner })));
 const BestPriceGuarantee = lazy(() => import("@/components/BestPriceGuarantee").then(m => ({ default: m.BestPriceGuarantee })));
 const NewsletterSignup = lazy(() => import("@/components/NewsletterSignup").then(m => ({ default: m.NewsletterSignup })));
 const TravelerStories = lazy(() => import("@/components/TravelerStories").then(m => ({ default: m.TravelerStories })));
 const TrustpilotReviews = lazy(() => import("@/components/TrustpilotReviews").then(m => ({ default: m.TrustpilotReviews })));
 const PromotionalVideoBanner = lazy(() => import("@/components/PromotionalVideoBanner").then(m => ({ default: m.PromotionalVideoBanner })));
-const DestinationGrid = lazy(() => import("@/components/DestinationGrid").then(m => ({ default: m.DestinationGrid })));
-const ContactSupportModal = lazy(() => import("@/components/ContactSupportModal").then(m => ({ default: m.ContactSupportModal })));
 const BlogHighlights = lazy(() => import("@/components/BlogHighlights").then(m => ({ default: m.BlogHighlights })));
-const SEOContent = lazy(() => import("@/components/SEOContent").then(m => ({ default: m.SEOContent })));
+const SEOContent = lazy(() => import("@/components/SEOContent"));
+const FloatingContactButtons = lazy(() => import("@/components/support").then(m => ({ default: m.FloatingContactButtons })));
 
+// Lazy load icons to reduce main bundle
+const ContactIcons = lazy(() => import("@/components/ContactIcons"));
 
 export default function Home() {
   const { language } = useI18n();
+  const [showIdleComponents, setShowIdleComponents] = useState(false);
+
+  // Defer Chatbot and FloatingContactButtons until browser is idle
+  useEffect(() => {
+    const loadIdle = () => setShowIdleComponents(true);
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(loadIdle, { timeout: 4000 });
+    } else {
+      setTimeout(loadIdle, 3000);
+    }
+  }, []);
 
   const content = {
     es: {
@@ -82,96 +94,56 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col w-full overflow-x-hidden">
       <HomePageSEO />
-      <Suspense fallback={null}><UrgencyBanner /></Suspense>
+      <UrgencyBanner />
       <Header />
       <HeroCarousel />
-      <HeroFlightSearch />
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-100" />}><TopOffers /></Suspense>
-      <Suspense fallback={<div className="min-h-[500px] bg-gray-50" />}><DestinationGrid /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-primary" />}><ReserveSpot /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-900" />}><SpecialOffers /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><Favorites /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-white" />}><WhyChooseUs /></Suspense>
-      <Suspense fallback={<div className="min-h-[200px] bg-[#d5b034]" />}>
+
+      {/* Near-fold components - lazy but fetched early */}
+      <Suspense fallback={<div className="h-48 loading-skeleton" />}>
+        <HeroFlightSearch />
+        <TopOffers />
+        <DestinationGrid />
+      </Suspense>
+
+      {/* Below-fold components - lazy loaded on scroll */}
+      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+        <ReserveSpot />
+        <SpecialOffers />
+        <Favorites />
+        <WhyChooseUs />
         <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
           <div className="container mx-auto px-4 max-w-4xl">
             <SmartSearchBar variant="hero" />
           </div>
         </section>
+        <BestPriceGuarantee />
+        <BlogHighlights />
+        <SEOContent />
+        <NewsletterSignup />
       </Suspense>
-      <Suspense fallback={<div className="min-h-[300px] bg-white" />}><BestPriceGuarantee /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><BlogHighlights /></Suspense>
-      <Suspense fallback={<div className="min-h-[200px] bg-primary" />}><NewsletterSignup /></Suspense>
-      <Suspense fallback={<div className="min-h-[300px] bg-gray-50" />}><TrustpilotReviews /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-900" />}><PromotionalVideoBanner /></Suspense>
-      <Suspense fallback={<div className="min-h-[400px] bg-gray-50" />}><TravelerStories /></Suspense>
-      <section className="py-16 bg-gray-50 dark:bg-gray-900" data-testid="section-contact">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4" data-testid="badge-contact">{c.ctaBadge}</Badge>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4" data-testid="text-contact-title">
-              {c.ctaTitle}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
-              {c.ctaSubtitle}
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-start gap-4" data-testid="contact-phone">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.callUs}</h3>
-                  <p className="text-xl font-bold text-primary">{c.phone}</p>
-                </div>
-              </div>
+      {/* Heavy third-party components - separate Suspense boundary */}
+      <Suspense fallback={<div className="h-64 loading-skeleton" />}>
+        <TrustpilotReviews />
+        <PromotionalVideoBanner />
+        <TravelerStories />
+      </Suspense>
 
-              <div className="flex items-start gap-4" data-testid="contact-email">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.email}</h3>
-                  <p className="text-primary">info@tripseuropa.com</p>
-                  <p className="text-primary">agente@tripseuropa.com</p>
-                </div>
-              </div>
+      {/* Contact section with lazy icons */}
+      <Suspense fallback={<div className="h-96 loading-skeleton" />}>
+        <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
+        <FAQAccordion />
+      </Suspense>
 
-              <div className="flex items-start gap-4" data-testid="contact-office">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">{c.office}</h3>
-                  <p className="text-muted-foreground">{c.address}</p>
-                </div>
-              </div>
-
-              <a 
-                href="https://api.whatsapp.com/send?phone=34611105448" 
-                className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
-                data-testid="link-whatsapp"
-              >
-                <SiWhatsapp className="w-5 h-5" />
-                {c.whatsapp}
-              </a>
-            </div>
-
-            <div>
-              <Suspense fallback={<div className="min-h-[400px] bg-white rounded-lg" />}>
-                <ContactForm variant="page" title={c.formTitle} />
-              </Suspense>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Suspense fallback={<div className="min-h-[300px] bg-gray-50" />}><FAQAccordion /></Suspense>
       <Footer />
-      <Suspense fallback={null}><Chatbot /></Suspense>
-      <FloatingContactButtons />
+
+      {/* Chatbot & floating buttons - deferred until browser is idle */}
+      {showIdleComponents && (
+        <Suspense fallback={null}>
+          <Chatbot />
+          <FloatingContactButtons />
+        </Suspense>
+      )}
       <TravelAgencySchema />
       <WebsiteSchema />
       <FAQSchema questions={[

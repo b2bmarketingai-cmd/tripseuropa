@@ -1,110 +1,67 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
-import path from "path";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { testDatabaseConnection } from "./db";
-
-// Use process.cwd() for production compatibility (works in both ESM and CJS)
-const __dirname = process.cwd();
+import { serveSitemap } from "./sitemap";
 
 const app = express();
-
-// Trust proxy for correct protocol detection behind reverse proxies
-app.set('trust proxy', true);
-
-// WWW to non-WWW redirect and HTTP to HTTPS redirect (for production)
-app.use((req, res, next) => {
-  const host = req.get('host') || '';
-  const isProduction = process.env.NODE_ENV === 'production' || 
-    host.endsWith('tripseuropa.com') || 
-    host.endsWith('tripseuropa.co') ||
-    host.endsWith('.replit.app');
-  
-  // Redirect www to non-www and ensure HTTPS in production
-  if (host.startsWith('www.')) {
-    const newHost = host.replace('www.', '');
-    return res.redirect(301, `https://${newHost}${req.originalUrl}`);
-  }
-  
-  // Force HTTPS in production
-  if (isProduction && req.protocol === 'http') {
-    return res.redirect(301, `https://${host}${req.originalUrl}`);
-  }
-  
-  // Redirect legacy query param URLs to proper paths
-  if (req.query.lang) {
-    const lang = req.query.lang as string;
-    const path = req.path;
-    
-    // Build the correct language prefix
-    let langPrefix = '';
-    if (lang === 'en') langPrefix = '/en';
-    else if (lang === 'pt' || lang === 'pt-br') langPrefix = '/pt-br';
-    else if (lang === 'es') langPrefix = ''; // Spanish is default
-    
-    // Handle common paths
-    if (langPrefix && (path === '/destinos' || path === '/destinations')) {
-      return res.redirect(301, `${langPrefix}/destinations`);
-    }
-    if (langPrefix && (path === '/paquetes' || path === '/packages')) {
-      return res.redirect(301, `${langPrefix}/packages`);
-    }
-    if (langPrefix && path === '/blog') {
-      return res.redirect(301, `${langPrefix}/blog`);
-    }
-    if (langPrefix && path === '/contact') {
-      return res.redirect(301, `${langPrefix}/contact`);
-    }
-  }
-  
-  // Redirect /blog/:slug to /blog/post/:slug for canonical consistency (all locales)
-  const blogCategories = ['colombia', 'argentina', 'peru', 'panama', 'costa-rica', 'dominicana', 'caribe', 'mexico', 'brasil', 'post'];
-  
-  // Root /blog/:slug
-  const blogMatch = req.path.match(/^\/blog\/([a-z0-9-]+)$/);
-  if (blogMatch && !blogCategories.includes(blogMatch[1])) {
-    return res.redirect(301, `/blog/post/${blogMatch[1]}`);
-  }
-  
-  // Locale-specific blog redirects: /es/blog/:slug, /en/blog/:slug, /pt-br/blog/:slug, etc.
-  const localeBlogMatch = req.path.match(/^\/(es|en|pt-br|es-co|es-mx|es-ar|es-pe|es-cr|es-pa|es-do|en-br|en-ar|en-co|en-mx)\/blog\/([a-z0-9-]+)$/);
-  if (localeBlogMatch && !blogCategories.includes(localeBlogMatch[2])) {
-    const locale = localeBlogMatch[1];
-    const slug = localeBlogMatch[2];
-    return res.redirect(301, `/${locale}/blog/post/${slug}`);
-  }
-  
-  next();
-});
 
 // Enable GZIP compression for all responses
 app.use(compression());
 
-// Security headers middleware
-app.use((_req, res, next) => {
-  // Content Security Policy - balanced for functionality and security
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' https://js.stripe.com; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-    "font-src 'self' https://fonts.gstatic.com; " +
-    "img-src 'self' data: blob: https:; " +
-    "connect-src 'self' https://api.stripe.com https://api.openai.com https://ipapi.co https://*.replit.dev https://*.replit.app wss://*.replit.dev; " +
-    "frame-src 'self' https://js.stripe.com; " +
-    "object-src 'none'; " +
-    "base-uri 'self'"
-  );
-  // HTTP Strict Transport Security
-  res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+// Security Headers Middleware
+app.use((req, res, next) => {
+  // Prevent XSS attacks
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+
   // Prevent clickjacking
-  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+
   // Prevent MIME type sniffing
-  res.setHeader("X-Content-Type-Options", "nosniff");
-  // Referrer Policy
-  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+
+  // Referrer policy - Enhanced for privacy
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // Permissions policy - Restrictive by default
+  res.setHeader(
+    'Permissions-Policy',
+    'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=(self)'
+  );
+
+  // Strict Transport Security - Force HTTPS
+  res.setHeader(
+    'Strict-Transport-Security',
+    'max-age=31536000; includeSubDomains; preload'
+  );
+
+  // Content Security Policy - Enhanced security
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com https://static.cloudflareinsights.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com data:",
+    "img-src 'self' data: https: http: blob:",
+    "connect-src 'self' https://api.openai.com https://www.google-analytics.com https://api.perplexity.ai wss:",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'self'",
+    "upgrade-insecure-requests"
+  ].join('; ');
+
+  res.setHeader('Content-Security-Policy', csp);
+
+  // Cache Control for static assets (will be overridden for specific routes)
+  if (req.url.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  } else {
+    res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate');
+  }
+
   next();
 });
 
@@ -173,57 +130,6 @@ app.get("/ready", (_req, res) => {
   }
 });
 
-// SEO: Serve sitemap XML files - check both dist/public and client/public
-app.get("/sitemap*.xml", (req, res) => {
-  const prodPath = path.join(__dirname, "dist/public", req.path);
-  const devPath = path.join(__dirname, "client/public", req.path);
-  res.setHeader("Content-Type", "application/xml");
-  
-  // Try production path first, then development path
-  res.sendFile(prodPath, (err) => {
-    if (err) {
-      res.sendFile(devPath, (devErr) => {
-        if (devErr) {
-          res.status(404).send("Sitemap not found");
-        }
-      });
-    }
-  });
-});
-
-app.get("/sitemaps/*", (req, res) => {
-  const prodPath = path.join(__dirname, "dist/public", req.path);
-  const devPath = path.join(__dirname, "client/public", req.path);
-  res.setHeader("Content-Type", "application/xml");
-  
-  res.sendFile(prodPath, (err) => {
-    if (err) {
-      res.sendFile(devPath, (devErr) => {
-        if (devErr) {
-          res.status(404).send("Sitemap not found");
-        }
-      });
-    }
-  });
-});
-
-// SEO: Serve robots.txt
-app.get("/robots.txt", (_req, res) => {
-  const prodPath = path.join(__dirname, "dist/public/robots.txt");
-  const devPath = path.join(__dirname, "client/public/robots.txt");
-  res.setHeader("Content-Type", "text/plain");
-  
-  res.sendFile(prodPath, (err) => {
-    if (err) {
-      res.sendFile(devPath, (devErr) => {
-        if (devErr) {
-          res.status(404).send("robots.txt not found");
-        }
-      });
-    }
-  });
-});
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -253,12 +159,16 @@ app.use((req, res, next) => {
 async function startServer() {
   try {
     log("Starting server initialization...");
-    
+
     // Test database connection before starting
     const dbConnected = await testDatabaseConnection();
     if (!dbConnected) {
       log("Warning: Database connection failed, some features may not work");
     }
+
+    // Serve sitemap.xml for SEO
+    app.get('/sitemap.xml', serveSitemap);
+    log("Sitemap route registered at /sitemap.xml");
 
     await registerRoutes(httpServer, app);
 

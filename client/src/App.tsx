@@ -7,7 +7,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
 import { ABTestingProvider } from "@/lib/abTesting";
-import { SkipToContent } from "@/components/SkipToContent";
 
 function LoadingFallback() {
   return (
@@ -28,7 +27,8 @@ function ScrollToTop() {
 }
 
 import Home from "@/pages/Home";
-import NotFound from "@/pages/not-found";
+import NotFound from "@/pages/NotFound";
+import SkipToContent from "@/components/SkipToContent";
 
 const Login = lazy(() => import("@/pages/Login"));
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
@@ -92,7 +92,7 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
   }
 
   if (!isAuthenticated) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/api/login" />;
   }
 
   return <Component />;
@@ -100,7 +100,8 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
 
 function Router() {
   return (
-    <Switch>
+    <main id="main-content" role="main">
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/tools" component={Tools} />
@@ -171,77 +172,6 @@ function Router() {
       {/* Dynamic Country Landing Pages */}
       <Route path="/desde/:country" component={CountryLanding} />
       
-      {/* Simple Language Prefix Routes (/es, /en) */}
-      {/* Spanish (es) */}
-      <Route path="/es" component={Home} />
-      <Route path="/es/" component={Home} />
-      <Route path="/es/destinations" component={Destinations} />
-      <Route path="/es/destinations/:slug" component={DestinationPage} />
-      <Route path="/es/destinos" component={Destinations} />
-      <Route path="/es/destinos/:slug" component={DestinationPage} />
-      <Route path="/es/packages" component={Packages} />
-      <Route path="/es/paquetes" component={Packages} />
-      <Route path="/es/paquetes/:slug" component={PackagePage} />
-      <Route path="/es/experiencias/:slug" component={ExperiencePage} />
-      <Route path="/es/ofertas/:slug" component={OfferPage} />
-      <Route path="/es/blog" component={Blog} />
-      <Route path="/es/blog/post/:slug" component={BlogPost} />
-      <Route path="/es/blog/:country" component={Blog} />
-      <Route path="/es/contact" component={Contact} />
-      <Route path="/es/about" component={About} />
-      <Route path="/es/travel-assistant" component={TravelAssistant} />
-      <Route path="/es/asistente" component={TravelAssistant} />
-      <Route path="/es/rewards" component={Rewards} />
-      <Route path="/es/travel-style/:slug" component={TravelStylePage} />
-      <Route path="/es/ofertas-ultima-hora" component={LastMinuteOffers} />
-      <Route path="/es/last-minute-offers" component={LastMinuteOffers} />
-      <Route path="/es/services/vuelos" component={Flights} />
-      <Route path="/es/services/flights" component={Flights} />
-      <Route path="/es/services/hoteles" component={Hotels} />
-      <Route path="/es/services/hotels" component={Hotels} />
-      <Route path="/es/services/paquetes" component={PackagesService} />
-      <Route path="/es/services/packages" component={PackagesService} />
-      <Route path="/es/services/tours" component={Tours} />
-      <Route path="/es/services/seguros" component={Insurance} />
-      <Route path="/es/services/insurance" component={Insurance} />
-      <Route path="/es/services/esim" component={ESim} />
-      <Route path="/es/esim" component={ESim} />
-      <Route path="/es/privacy" component={Privacy} />
-      <Route path="/es/testimonios" component={Testimonials} />
-      <Route path="/es/forum" component={Forum} />
-      <Route path="/es/foro" component={Forum} />
-      <Route path="/es/agentes/registro" component={Contact} />
-      
-      {/* English (en) */}
-      <Route path="/en" component={Home} />
-      <Route path="/en/" component={Home} />
-      <Route path="/en/destinations" component={Destinations} />
-      <Route path="/en/destinations/:slug" component={DestinationPage} />
-      <Route path="/en/packages" component={Packages} />
-      <Route path="/en/paquetes/:slug" component={PackagePage} />
-      <Route path="/en/experiencias/:slug" component={ExperiencePage} />
-      <Route path="/en/ofertas/:slug" component={OfferPage} />
-      <Route path="/en/blog" component={Blog} />
-      <Route path="/en/blog/post/:slug" component={BlogPost} />
-      <Route path="/en/blog/:country" component={Blog} />
-      <Route path="/en/contact" component={Contact} />
-      <Route path="/en/about" component={About} />
-      <Route path="/en/travel-assistant" component={TravelAssistant} />
-      <Route path="/en/rewards" component={Rewards} />
-      <Route path="/en/travel-style/:slug" component={TravelStylePage} />
-      <Route path="/en/last-minute-offers" component={LastMinuteOffers} />
-      <Route path="/en/services/flights" component={Flights} />
-      <Route path="/en/services/hotels" component={Hotels} />
-      <Route path="/en/services/packages" component={PackagesService} />
-      <Route path="/en/services/tours" component={Tours} />
-      <Route path="/en/services/insurance" component={Insurance} />
-      <Route path="/en/services/esim" component={ESim} />
-      <Route path="/en/esim" component={ESim} />
-      <Route path="/en/privacy" component={Privacy} />
-      <Route path="/en/testimonials" component={Testimonials} />
-      <Route path="/en/forum" component={Forum} />
-      <Route path="/en/agents/register" component={Contact} />
-      
       {/* Country-Specific SEO Routes (hreflang targeting) */}
       {/* Spanish Colombia (es-co) */}
       <Route path="/es-co" component={Home} />
@@ -272,69 +202,15 @@ function Router() {
       <Route path="/pt-br/" component={Home} />
       <Route path="/pt-br/destinos" component={Destinations} />
       <Route path="/pt-br/destinos/:slug" component={DestinationPage} />
-      <Route path="/pt-br/destinations" component={Destinations} />
-      <Route path="/pt-br/destinations/:slug" component={DestinationPage} />
-      <Route path="/pt-br/packages" component={Packages} />
       <Route path="/pt-br/paquetes" component={Packages} />
-      <Route path="/pt-br/pacotes" component={Packages} />
       <Route path="/pt-br/experiencias/:slug" component={ExperiencePage} />
-      <Route path="/pt-br/experiences/:slug" component={ExperiencePage} />
       <Route path="/pt-br/paquetes/:slug" component={PackagePage} />
-      <Route path="/pt-br/packages/:slug" component={PackagePage} />
       <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
       <Route path="/pt-br/blog" component={Blog} />
-      <Route path="/pt-br/blog/post/:slug" component={BlogPost} />
-      <Route path="/pt-br/blog/colombia" component={BlogColombia} />
-      <Route path="/pt-br/blog/argentina" component={BlogArgentina} />
-      <Route path="/pt-br/blog/peru" component={BlogPeru} />
-      <Route path="/pt-br/blog/panama" component={BlogPanama} />
-      <Route path="/pt-br/blog/costa-rica" component={BlogCostaRica} />
-      <Route path="/pt-br/blog/dominicana" component={BlogDominicana} />
-      <Route path="/pt-br/blog/caribe" component={BlogCaribe} />
-      <Route path="/pt-br/blog/mexico" component={BlogMexico} />
-      <Route path="/pt-br/blog/brasil" component={BlogBrasil} />
       <Route path="/pt-br/blog/:country" component={Blog} />
-      <Route path="/pt-br/rewards" component={Rewards} />
-      <Route path="/pt-br/recompensas" component={Rewards} />
-      <Route path="/pt-br/contact" component={Contact} />
-      <Route path="/pt-br/contato" component={Contact} />
-      <Route path="/pt-br/about" component={About} />
-      <Route path="/pt-br/sobre" component={About} />
-      <Route path="/pt-br/travel-assistant" component={TravelAssistant} />
-      <Route path="/pt-br/assistente" component={TravelAssistant} />
-      <Route path="/pt-br/services/voos" component={Flights} />
-      <Route path="/pt-br/services/flights" component={Flights} />
-      <Route path="/pt-br/services/hoteis" component={Hotels} />
-      <Route path="/pt-br/services/hotels" component={Hotels} />
-      <Route path="/pt-br/services/pacotes" component={PackagesService} />
-      <Route path="/pt-br/services/packages" component={PackagesService} />
-      <Route path="/pt-br/services/tours" component={Tours} />
-      <Route path="/pt-br/services/seguros" component={Insurance} />
-      <Route path="/pt-br/services/insurance" component={Insurance} />
-      <Route path="/pt-br/services/esim" component={ESim} />
-      <Route path="/pt-br/esim" component={ESim} />
-      <Route path="/pt-br/privacy" component={Privacy} />
-      <Route path="/pt-br/privacidade" component={Privacy} />
-      <Route path="/pt-br/policies" component={Policies} />
-      <Route path="/pt-br/tools" component={Tools} />
-      <Route path="/pt-br/ferramentas" component={Tools} />
       <Route path="/pt-br/forum" component={Forum} />
       <Route path="/pt-br/foro" component={Forum} />
-      <Route path="/pt-br/testimonios" component={Testimonials} />
-      <Route path="/pt-br/depoimentos" component={Testimonials} />
-      <Route path="/pt-br/travel-style/:slug" component={TravelStylePage} />
-      <Route path="/pt-br/estilo-viagem/:slug" component={TravelStylePage} />
-      <Route path="/pt-br/last-minute" component={LastMinuteOffers} />
-      <Route path="/pt-br/last-minute-offers" component={LastMinuteOffers} />
-      <Route path="/pt-br/ofertas-ultima-hora" component={LastMinuteOffers} />
-      <Route path="/pt-br/vacaciones-europa" component={VacacionesEuropa} />
-      <Route path="/pt-br/ferias-europa" component={VacacionesEuropa} />
-      <Route path="/pt-br/requisitos-visa" component={VisaRequirements} />
-      <Route path="/pt-br/visa-requirements" component={VisaRequirements} />
-      <Route path="/pt-br/condiciones-venta" component={CondicionesVenta} />
-      <Route path="/pt-br/cookies" component={CookiesPage} />
-      <Route path="/pt-br/terminos-condiciones" component={TermsConditions} />
-      
+
       {/* Spanish Argentina (es-ar) */}
       <Route path="/es-ar" component={Home} />
       <Route path="/es-ar/" component={Home} />
@@ -358,7 +234,9 @@ function Router() {
       <Route path="/es-pe/ofertas/:slug" component={OfferPage} />
       <Route path="/es-pe/blog" component={Blog} />
       <Route path="/es-pe/blog/:country" component={Blog} />
-      
+      <Route path="/es-pe/forum" component={Forum} />
+      <Route path="/es-pe/foro" component={Forum} />
+
       {/* Spanish Panama (es-pa) */}
       <Route path="/es-pa" component={Home} />
       <Route path="/es-pa/" component={Home} />
@@ -382,7 +260,9 @@ function Router() {
       <Route path="/es-cr/ofertas/:slug" component={OfferPage} />
       <Route path="/es-cr/blog" component={Blog} />
       <Route path="/es-cr/blog/:country" component={Blog} />
-      
+      <Route path="/es-cr/forum" component={Forum} />
+      <Route path="/es-cr/foro" component={Forum} />
+
       {/* Spanish Dominican Republic (es-do) */}
       <Route path="/es-do" component={Home} />
       <Route path="/es-do/" component={Home} />
@@ -399,42 +279,6 @@ function Router() {
       <Route path="/es/caribe" component={Home} />
       <Route path="/es/caribe/" component={Home} />
       <Route path="/es/caribe/destinos" component={Destinations} />
-      <Route path="/es/caribe/destinos/:slug" component={DestinationPage} />
-      <Route path="/es/caribe/viajes-europa-desde-caribe" component={BlogCaribe} />
-      <Route path="/es/caribe/paquetes" component={Packages} />
-      <Route path="/es/caribe/blog" component={Blog} />
-      <Route path="/es/caribe/blog/:country" component={Blog} />
-      
-      {/* Country-specific SEO landing pages */}
-      <Route path="/es-co/viajes-europa-desde-colombia" component={FromColombia} />
-      <Route path="/es-co/visa-schengen-colombianos" component={VisaRequirements} />
-      <Route path="/es-co/europa-15-dias" component={Packages} />
-      <Route path="/es-co/europa-familiar" component={Packages} />
-      <Route path="/es-co/seguros-viaje-europa" component={Insurance} />
-      
-      <Route path="/es-pe/viajes-europa-desde-peru" component={FromPeru} />
-      <Route path="/es-pe/visa-schengen-peruanos" component={VisaRequirements} />
-      <Route path="/es-pe/europa-15-dias" component={Packages} />
-      <Route path="/es-pe/europa-familiar" component={Packages} />
-      <Route path="/es-pe/seguros-viaje-europa" component={Insurance} />
-      
-      <Route path="/es-cr/viajes-europa-desde-costa-rica" component={FromCostaRica} />
-      <Route path="/es-cr/visa-schengen" component={VisaRequirements} />
-      <Route path="/es-cr/europa-15-dias" component={Packages} />
-      <Route path="/es-cr/seguros-viaje-europa" component={Insurance} />
-      
-      <Route path="/es-ar/viajes-europa-desde-argentina" component={FromArgentina} />
-      <Route path="/es-ar/europa-15-dias" component={Packages} />
-      <Route path="/es-ar/seguros-viaje-europa" component={Insurance} />
-      
-      <Route path="/es-mx/viajes-europa-desde-mexico" component={FromMexico} />
-      <Route path="/es-mx/visa-schengen-mexicanos" component={VisaRequirements} />
-      <Route path="/es-mx/europa-15-dias" component={Packages} />
-      <Route path="/es-mx/seguros-viaje-europa" component={Insurance} />
-      
-      <Route path="/es-pa/viajes-europa-desde-panama" component={FromPanama} />
-      <Route path="/es-pa/europa-15-dias" component={Packages} />
-      <Route path="/es-pa/seguros-viaje-europa" component={Insurance} />
       
       {/* English routes */}
       <Route path="/en" component={Home} />
@@ -470,37 +314,6 @@ function Router() {
       <Route path="/en-mx/experiences/:slug" component={ExperiencePage} />
       <Route path="/en-mx/packages/:slug" component={PackagePage} />
       
-      {/* English Brazil (en-br) */}
-      <Route path="/en-br" component={Home} />
-      <Route path="/en-br/" component={Home} />
-      <Route path="/en-br/destinations" component={Destinations} />
-      <Route path="/en-br/destinations/:slug" component={DestinationPage} />
-      <Route path="/en-br/packages" component={Packages} />
-      <Route path="/en-br/packages/:slug" component={PackagePage} />
-      <Route path="/en-br/experiences/:slug" component={ExperiencePage} />
-      <Route path="/en-br/blog" component={Blog} />
-      <Route path="/en-br/blog/post/:slug" component={BlogPost} />
-      <Route path="/en-br/contact" component={Contact} />
-      <Route path="/en-br/about" component={About} />
-      <Route path="/en-br/travel-insurance-europe" component={Insurance} />
-      <Route path="/en-br/family-trip-europe" component={Packages} />
-      <Route path="/en-br/services/flights" component={Flights} />
-      <Route path="/en-br/services/hotels" component={Hotels} />
-      <Route path="/en-br/services/packages" component={PackagesService} />
-      <Route path="/en-br/services/insurance" component={Insurance} />
-      
-      {/* English Peru (en-pe) */}
-      <Route path="/en-pe" component={Home} />
-      <Route path="/en-pe/destinations" component={Destinations} />
-      <Route path="/en-pe/destinations/:slug" component={DestinationPage} />
-      <Route path="/en-pe/packages" component={Packages} />
-      
-      {/* English Costa Rica (en-cr) */}
-      <Route path="/en-cr" component={Home} />
-      <Route path="/en-cr/destinations" component={Destinations} />
-      <Route path="/en-cr/destinations/:slug" component={DestinationPage} />
-      <Route path="/en-cr/packages" component={Packages} />
-      
       {/* Route Pages (Origin-Destination) */}
       <Route path="/routes/:route" component={RouteTemplate} />
       
@@ -518,6 +331,7 @@ function Router() {
       {/* Fallback */}
       <Route component={NotFound} />
     </Switch>
+    </main>
   );
 }
 
@@ -531,9 +345,7 @@ function App() {
             <ScrollToTop />
             <Toaster />
             <Suspense fallback={<LoadingFallback />}>
-              <main id="main-content" role="main">
-                <Router />
-              </main>
+              <Router />
             </Suspense>
           </TooltipProvider>
         </ABTestingProvider>

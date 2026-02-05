@@ -1,10 +1,10 @@
-import { useParams, Link, useLocation } from "wouter";
+import { useParams, Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { getDestinationBySlug } from "@/lib/destinationsData";
 import { TRAVEL_STYLE_DATA } from "@/lib/travelStyleData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -40,18 +40,16 @@ import { BreadcrumbSchema, TouristDestinationSchema, FAQSchema } from "@/compone
 
 export default function DestinationPage() {
   const { slug } = useParams<{ slug: string }>();
-  const [location] = useLocation();
-  
-  const getLanguageFromPath = (): "es" | "en" | "pt" => {
-    if (location.startsWith('/pt-br')) return 'pt';
-    if (location.startsWith('/en')) return 'en';
-    return 'es';
-  };
-  
-  const currentLang = getLanguageFromPath();
+  const { language } = useI18n();
   const destination = getDestinationBySlug(slug || "");
-  const contentLang = currentLang;
-  const dataLang = (destination && destination.name[contentLang as keyof typeof destination.name] ? contentLang : "es") as "es" | "en";
+  // Content supports es/en/pt, destination data uses es/en with pt fallback to es
+  const contentLang = language as "es" | "en" | "pt";
+  // Check if PT translation exists in destination data, fallback to ES if not
+  const dataLang = contentLang === "pt" && destination?.name?.pt
+    ? "pt"
+    : contentLang === "pt"
+      ? "es"  // Fallback PT → ES when PT translation doesn't exist yet
+      : (contentLang as "es" | "en" | "pt");
   
   
   if (!destination) {
@@ -210,16 +208,16 @@ export default function DestinationPage() {
   const hreflangUrls = generateCountryHreflangUrls(`/destinos/${slug}`);
   
   const faqsForSchema = destination.faqs.map(faq => ({
-    question: faq.question[dataLang] || faq.question["es"],
-    answer: faq.answer[dataLang] || faq.answer["es"]
+    question: faq.question[dataLang],
+    answer: faq.answer[dataLang]
   }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEOHead
-        title={`${destination.name[dataLang] || destination.name["es"]} - Guia de Viaje Completa`}
-        description={destination.description[dataLang] || destination.description["es"]}
-        keywords={`viajes ${destination.name[dataLang] || destination.name["es"]}, turismo ${destination.name[dataLang] || destination.name["es"]}, paquetes ${destination.name[dataLang] || destination.name["es"]}, que ver ${destination.name[dataLang] || destination.name["es"]}`}
+        title={`${destination.name[dataLang]} - Guia de Viaje Completa`}
+        description={destination.description[dataLang]}
+        keywords={`viajes ${destination.name[dataLang]}, turismo ${destination.name[dataLang]}, paquetes ${destination.name[dataLang]}, que ver ${destination.name[dataLang]}`}
         url={destinationUrl}
         image={destination.heroImage}
         alternateUrls={hreflangUrls}
@@ -228,22 +226,30 @@ export default function DestinationPage() {
         items={[
           { name: "Inicio", url: "https://tripseuropa.co" },
           { name: "Destinos", url: "https://tripseuropa.co/destinos" },
-          { name: destination.name[dataLang] || destination.name["es"], url: destinationUrl }
+          { name: destination.name[dataLang], url: destinationUrl }
         ]}
       />
       <TouristDestinationSchema
-        name={destination.name[dataLang] || destination.name["es"]}
-        description={destination.description[dataLang] || destination.description["es"]}
+        name={destination.name[dataLang]}
+        description={destination.description[dataLang]}
         url={destinationUrl}
         image={destination.heroImage}
-        attractions={(destination.highlights[dataLang] || destination.highlights["es"] || []).slice(0, 5).map(h => ({ name: h }))}
+        attractions={destination.highlights[dataLang].slice(0, 5).map(h => ({ name: h }))}
       />
       <FAQSchema faqs={faqsForSchema} />
       <Header />
-      <Breadcrumbs items={[
-        { label: currentLang === 'pt' ? "Destinos" : currentLang === 'en' ? "Destinations" : "Destinos", href: `${currentLang === 'es' ? '' : currentLang === 'pt' ? '/pt-br' : '/en'}/destinos` },
-        { label: destination.name[dataLang] || destination.name["es"] }
-      ]} />
+      <Breadcrumbs
+        items={[
+          {
+            label: contentLang === "es" ? "Destinos" : contentLang === "pt" ? "Destinos" : "Destinations",
+            href: "/destinations"
+          },
+          {
+            label: destination.name[dataLang],
+            href: `/destination/${slug}`
+          }
+        ]}
+      />
       <section 
         className="relative min-h-[500px] flex items-center justify-center"
         data-testid="section-destination-hero"
@@ -251,7 +257,7 @@ export default function DestinationPage() {
         <div className="absolute inset-0">
           <img
             src={destination.heroImage}
-            alt={destination.name[dataLang] || destination.name["es"]}
+            alt={destination.name[dataLang]}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/40"></div>
@@ -263,10 +269,10 @@ export default function DestinationPage() {
             className="text-5xl md:text-7xl font-display font-bold text-accent mb-6"
             data-testid="text-destination-title"
           >
-            {destination.name[dataLang] || destination.name["es"]}
+            {destination.name[dataLang]}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            {destination.description[dataLang] || destination.description["es"]}
+            {destination.description[dataLang]}
           </p>
         </div>
       </section>
@@ -277,7 +283,7 @@ export default function DestinationPage() {
             {c.highlights}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {(destination.highlights[dataLang] || destination.highlights["es"] || []).map((highlight, idx) => (
+            {destination.highlights[dataLang].map((highlight, idx) => (
               <div 
                 key={idx}
                 className="bg-card rounded-md p-4 text-center shadow-sm"
@@ -306,11 +312,11 @@ export default function DestinationPage() {
                 )}
                 <CardHeader>
                   <CardTitle className="text-xl font-display text-accent">
-                    {pkg.name[dataLang] || pkg.name["es"]}
+                    {pkg.name[dataLang]}
                   </CardTitle>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Clock className="w-4 h-4" />
-                    <span className="text-sm">{pkg.duration[dataLang] || pkg.duration["es"]}</span>
+                    <span className="text-sm">{pkg.duration[dataLang]}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -326,7 +332,7 @@ export default function DestinationPage() {
                   <div className="mb-6">
                     <p className="text-sm font-medium mb-2">{c.includes}:</p>
                     <ul className="space-y-1">
-                      {(pkg.includes[dataLang] || pkg.includes["es"] || []).map((item, i) => (
+                      {pkg.includes[dataLang].map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
                           <Check className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
                           <span>{item}</span>
@@ -369,11 +375,11 @@ export default function DestinationPage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-display font-bold text-accent mb-1">
-                    {c.day} {day.day}: {day.title[dataLang] || day.title["es"]}
+                    {c.day} {day.day}: {day.title[dataLang]}
                   </h3>
-                  <p className="text-muted-foreground mb-3">{day.description[dataLang] || day.description["es"]}</p>
+                  <p className="text-muted-foreground mb-3">{day.description[dataLang]}</p>
                   <div className="flex flex-wrap gap-2">
-                    {(day.activities[dataLang] || day.activities["es"] || []).map((activity, i) => (
+                    {day.activities[dataLang].map((activity, i) => (
                       <Badge key={i} variant="secondary" className="text-xs">
                         {activity}
                       </Badge>
@@ -400,7 +406,7 @@ export default function DestinationPage() {
               >
                 <img
                   src={img}
-                  alt={`${destination.name[dataLang] || destination.name["es"]} ${idx + 1}`}
+                  alt={`${destination.name[dataLang]} ${idx + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -419,7 +425,7 @@ export default function DestinationPage() {
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-8 h-8 text-accent mx-auto mb-3" />
                 <p className="font-medium mb-1">{c.bestTime}</p>
-                <p className="text-sm text-muted-foreground">{destination.bestTimeToVisit[dataLang] || destination.bestTimeToVisit["es"]}</p>
+                <p className="text-sm text-muted-foreground">{destination.bestTimeToVisit[dataLang]}</p>
               </CardContent>
             </Card>
             <Card>
@@ -433,14 +439,14 @@ export default function DestinationPage() {
               <CardContent className="pt-6 text-center">
                 <Globe className="w-8 h-8 text-accent mx-auto mb-3" />
                 <p className="font-medium mb-1">{c.language}</p>
-                <p className="text-sm text-muted-foreground">{destination.language[dataLang] || destination.language["es"]}</p>
+                <p className="text-sm text-muted-foreground">{destination.language[dataLang]}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
                 <FileText className="w-8 h-8 text-accent mx-auto mb-3" />
                 <p className="font-medium mb-1">{c.visa}</p>
-                <p className="text-sm text-muted-foreground">{destination.visaInfo[dataLang] || destination.visaInfo["es"]}</p>
+                <p className="text-sm text-muted-foreground">{destination.visaInfo[dataLang]}</p>
               </CardContent>
             </Card>
           </div>
@@ -457,10 +463,10 @@ export default function DestinationPage() {
               {destination.faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`faq-${idx}`}>
                   <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="font-medium">{faq.question[dataLang] || faq.question["es"]}</span>
+                    <span className="font-medium">{faq.question[dataLang]}</span>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-muted-foreground">{faq.answer[dataLang] || faq.answer["es"]}</p>
+                    <p className="text-muted-foreground">{faq.answer[dataLang]}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -504,21 +510,21 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[dataLang] || style.name["es"]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[dataLang] || style.name["es"]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {(style.description[dataLang] || style.description["es"]).slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {style.idealDuration[dataLang] || style.idealDuration["es"]}
+                            {style.idealDuration[dataLang]}
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
                             {c.viewMore}
@@ -540,21 +546,21 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[dataLang] || style.name["es"]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[dataLang] || style.name["es"]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {(style.description[dataLang] || style.description["es"]).slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {c.idealFor}: {(style.bestFor[dataLang] || style.bestFor["es"]).slice(0, 25)}...
+                            {c.idealFor}: {style.bestFor[dataLang].slice(0, 25)}...
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
                             {c.viewMore}
@@ -586,21 +592,21 @@ export default function DestinationPage() {
                       <div className="aspect-video relative overflow-hidden">
                         <img 
                           src={style.heroImage} 
-                          alt={style.name[dataLang] || style.name["es"]}
+                          alt={style.name[dataLang]}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <h3 className="absolute bottom-3 left-3 right-3 text-white font-display font-bold text-lg" data-testid={`text-travel-style-name-${style.slug}`}>
-                          {style.name[dataLang] || style.name["es"]}
+                          {style.name[dataLang]}
                         </h3>
                       </div>
                       <CardContent className="pt-4">
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                          {(style.description[dataLang] || style.description["es"]).slice(0, 100)}...
+                          {style.description[dataLang].slice(0, 100)}...
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {c.idealFor}: {(style.bestFor[dataLang] || style.bestFor["es"]).slice(0, 25)}...
+                            {c.idealFor}: {style.bestFor[dataLang].slice(0, 25)}...
                           </Badge>
                           <span className="text-sm text-accent flex items-center gap-1">
                             {c.viewMore}

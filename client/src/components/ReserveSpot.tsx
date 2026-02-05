@@ -8,42 +8,42 @@ import { useI18n } from "@/lib/i18n";
 const PACKAGES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Europa Clasica Smart", en: "Classic Europe Smart", pt: "Europa Classica Smart" },
     price: "1,699",
     taxes: "799",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Estrellas de Europa Smart", en: "Stars of Europe Smart", pt: "Estrelas da Europa Smart" },
     price: "2,399",
     taxes: "799",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Magia Italiana", en: "Italian Magic", pt: "Magia Italiana" },
     price: "1,299",
     taxes: "799",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Viva Europa", en: "Viva Europe", pt: "Viva Europa" },
     price: "1,599",
     taxes: "799",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Bellezas de Europa", en: "Beauties of Europe", pt: "Belezas da Europa" },
     price: "2,399",
     taxes: "799",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Europa Magnifica", en: "Magnificent Europe", pt: "Europa Magnifica" },
     price: "1,999",
     taxes: "799",
@@ -113,18 +113,16 @@ export function ReserveSpot() {
               variant="outline"
               onClick={() => scroll("left")}
               data-testid="button-reserve-prev"
-              aria-label="Ver destinos anteriores"
             >
-              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+              <ChevronLeft className="w-5 h-5" />
             </Button>
             <Button
               size="icon"
               variant="outline"
               onClick={() => scroll("right")}
               data-testid="button-reserve-next"
-              aria-label="Ver siguientes destinos"
             >
-              <ChevronRight className="w-5 h-5" aria-hidden="true" />
+              <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
         </div>

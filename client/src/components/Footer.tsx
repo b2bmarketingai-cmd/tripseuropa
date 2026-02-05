@@ -7,19 +7,6 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const { t, language } = useI18n();
-
-  const getLocalizedPath = (path: string) => {
-    if (!path) return '/';
-    if (path.startsWith('http') || path.startsWith('tel:') || path.startsWith('mailto:')) return path;
-    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
-    const match = currentPath.match(/^\/(es|en|pt-br|[a-z]{2}-[a-z]{2})/);
-    const prefix = match ? match[0] : '';
-
-    if (prefix && path.startsWith('/') && !path.startsWith(prefix)) {
-      return `${prefix}${path === '/' ? '' : path}`;
-    }
-    return path;
-  };
   
   const mainNav = [
     { name: { es: "Destinos", en: "Destinations", pt: "Destinos" }, href: "/destinations", icon: Map },
@@ -97,7 +84,7 @@ export function Footer() {
           {mainNav.map((item, index) => (
             <Link 
               key={index} 
-              href={getLocalizedPath(item.href)} 
+              href={item.href} 
               className="flex items-center gap-2 text-[#d5b034] hover:text-[#f0d060] hover:drop-shadow-[0_0_8px_rgba(213,176,52,0.6)] transition-all duration-300 text-sm md:text-base font-medium"
               data-testid={`link-footer-nav-${index}`}
             >
@@ -110,13 +97,13 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-12">
           
           <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-2">
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-destinations-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-destinations-heading">
               {t("footer.destinations")}
             </h4>
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-2">
               {destinations.map((dest, index) => (
                 <li key={index}>
-                  <Link href={getLocalizedPath(dest.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
+                  <Link href={dest.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-dest-${dest.href.split('/').pop()}`}>
                     {dest.name[language as "es" | "en" | "pt"] || dest.name.es}
                   </Link>
                 </li>
@@ -125,13 +112,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-services-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-services-heading">
               {t("footer.services")}
             </h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link href={getLocalizedPath(service.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
+                  <Link href={service.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-service-${index}`}>
                     {t(service.nameKey)}
                   </Link>
                 </li>
@@ -140,19 +127,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-company-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-company-heading">
               {t("footer.company")}
             </h4>
             <ul className="space-y-2">
               {company.map((item, index) => (
                 <li key={index}>
-                  <Link href={getLocalizedPath(item.href)} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
+                  <Link href={item.href} className="text-white/90 hover:text-accent transition-colors text-sm" data-testid={`link-footer-company-${index}`}>
                     {t(item.nameKey)}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={getLocalizedPath("/travel-assistant")} className="text-white/60 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
+                <Link href="/travel-assistant" className="text-white/90 hover:text-accent transition-colors text-sm" data-testid="link-footer-ai-assistant">
                   {language === "es" ? "Sofia Agente de Viajes" : language === "pt" ? "Sofia Agente de Viagens" : "Sofia Travel Agent"}
                 </Link>
               </li>
@@ -160,13 +147,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90">
               {language === "es" ? "Viaja desde" : language === "pt" ? "Viaje a partir de" : "Travel from"}
             </h4>
             <ul className="space-y-2">
               {countries.map((country, index) => (
                 <li key={index}>
-                  <Link href={getLocalizedPath(country.href)} className="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2">
+                  <Link href={country.href} className="text-white/90 hover:text-accent transition-colors text-sm flex items-center gap-2">
                     <span className="text-xs bg-white/10 px-1 rounded font-mono">{country.code}</span>
                     {country.name[language as "es" | "en" | "pt"] || country.name.es}
                   </Link>
@@ -176,7 +163,7 @@ export function Footer() {
             
             <div className="mt-6 pt-4 border-t border-white/10">
               <Link 
-                href={getLocalizedPath("/requisitos-visa")}
+                href="/requisitos-visa"
                 className="flex items-center gap-2 text-sm text-[#d4af37] hover:text-[#f0d060] transition-colors font-medium"
                 data-testid="link-visa-requirements"
               >
@@ -194,19 +181,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/60" data-testid="text-footer-contact-heading">
+            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider text-white/90" data-testid="text-footer-contact-heading">
               {t("footer.contact")}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
                 <a href="tel:+34611105448" className="hover:text-accent">+34 611 105 448</a>
               </li>
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 <a href="mailto:info@tripseuropa.com" className="hover:text-accent">info@tripseuropa.com</a>
               </li>
-              <li className="flex items-center gap-2 text-white/60">
+              <li className="flex items-center gap-2 text-white/90">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
                 <a href="mailto:agente@tripseuropa.com" className="hover:text-accent">agente@tripseuropa.com</a>
               </li>
@@ -325,7 +312,7 @@ export function Footer() {
             <VisitorCounter />
           </div>
           <div className="flex gap-4 text-xs text-white/40 flex-wrap justify-center">
-            <Link href={getLocalizedPath("/privacy")} className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">{t("footer.privacy")}</Link>
           </div>
         </div>
       </div>

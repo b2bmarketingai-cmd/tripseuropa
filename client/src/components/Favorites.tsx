@@ -8,42 +8,42 @@ import { useI18n } from "@/lib/i18n";
 const FAVORITES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Escapada a Grecia", en: "Greece Getaway", pt: "Escapada para a Grecia" },
     price: "599",
     taxes: "399",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Turquia, Egipto y Dubai", en: "Turkey, Egypt and Dubai", pt: "Turquia, Egito e Dubai" },
     price: "1,999",
     taxes: "999",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Descubre Portugal", en: "Discover Portugal", pt: "Descubra Portugal" },
     price: "1,299",
     taxes: "799",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Visita Madrid", en: "Visit Madrid", pt: "Visite Madrid" },
     price: "1,599",
     taxes: "799",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Escandinavia Magica", en: "Magical Scandinavia", pt: "Escandinavia Magica" },
     price: "2,199",
     taxes: "899",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=40&w=400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=35&w=400&fm=webp&auto=format&fit=crop",
     title: { es: "Roma y Florencia", en: "Rome and Florence", pt: "Roma e Florenca" },
     price: "999",
     taxes: "699",
@@ -113,18 +113,16 @@ export function Favorites() {
               variant="outline"
               onClick={() => scroll("left")}
               data-testid="button-favorites-prev"
-              aria-label="Ver favoritos anteriores"
             >
-              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+              <ChevronLeft className="w-5 h-5" />
             </Button>
             <Button
               size="icon"
               variant="outline"
               onClick={() => scroll("right")}
               data-testid="button-favorites-next"
-              aria-label="Ver siguientes favoritos"
             >
-              <ChevronRight className="w-5 h-5" aria-hidden="true" />
+              <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
         </div>

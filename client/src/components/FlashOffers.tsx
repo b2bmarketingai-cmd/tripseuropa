@@ -9,45 +9,45 @@ import { Link } from "wouter";
 const FLASH_OFFERS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Paris y Castillos del Loira", en: "Paris and Loire Castles", pt: "Paris e Castelos do Loire" },
-    country: { es: "Francia en 8 Dias", en: "France in 8 Days", pt: "Franca em 8 Dias" },
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=35&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Paris y Castillos del Loira", en: "Paris and Loire Castles" },
+    country: { es: "Francia en 8 Dias", en: "France in 8 Days" },
     currentPrice: 999,
     originalPrice: 2499,
     discount: 60,
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Roma, Florencia y Venecia", en: "Rome, Florence and Venice", pt: "Roma, Florenca e Veneza" },
-    country: { es: "Italia en 10 Dias", en: "Italy in 10 Days", pt: "Italia em 10 Dias" },
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=35&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Roma, Florencia y Venecia", en: "Rome, Florence and Venice" },
+    country: { es: "Italia en 10 Dias", en: "Italy in 10 Days" },
     currentPrice: 1299,
     originalPrice: 2899,
     discount: 55,
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Islas Griegas y Atenas", en: "Greek Islands and Athens", pt: "Ilhas Gregas e Atenas" },
-    country: { es: "Grecia en 12 Dias", en: "Greece in 12 Days", pt: "Grecia em 12 Dias" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=35&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Islas Griegas y Atenas", en: "Greek Islands and Athens" },
+    country: { es: "Grecia en 12 Dias", en: "Greece in 12 Days" },
     currentPrice: 1449,
     originalPrice: 3199,
     discount: 55,
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Barcelona y Costa Brava", en: "Barcelona and Costa Brava", pt: "Barcelona e Costa Brava" },
-    country: { es: "España en 7 Dias", en: "Spain in 7 Days", pt: "Espanha em 7 Dias" },
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=35&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Barcelona y Costa Brava", en: "Barcelona and Costa Brava" },
+    country: { es: "España en 7 Dias", en: "Spain in 7 Days" },
     currentPrice: 799,
     originalPrice: 1899,
     discount: 58,
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Alpes Suizos Panoramicos", en: "Panoramic Swiss Alps", pt: "Alpes Suicos Panoramicos" },
-    country: { es: "Suiza en 9 Dias", en: "Switzerland in 9 Days", pt: "Suica em 9 Dias" },
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=35&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Alpes Suizos Panoramicos", en: "Panoramic Swiss Alps" },
+    country: { es: "Suiza en 9 Dias", en: "Switzerland in 9 Days" },
     currentPrice: 1599,
     originalPrice: 3499,
     discount: 54,
@@ -56,8 +56,7 @@ const FLASH_OFFERS = [
 
 export function FlashOffers() {
   const { language } = useI18n();
-  const lang = language as "es" | "en" | "pt";
-  const langPrefix = lang === "es" ? "" : lang === "pt" ? "/pt-br" : `/${lang}`;
+  const lang = language as "es" | "en";
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -86,14 +85,6 @@ export function FlashOffers() {
       from: "From",
       off: "off",
       viewAll: "View offers",
-    },
-    pt: {
-      title: "Ofertas Relampago",
-      subtitle: "60% de desconto nos melhores do ano",
-      countdown: "3 dias restantes",
-      from: "A partir de",
-      off: "off",
-      viewAll: "Ver ofertas",
     },
   };
 
@@ -140,7 +131,7 @@ export function FlashOffers() {
           {FLASH_OFFERS.map((offer) => (
             <Link 
               key={offer.id} 
-              href={`${langPrefix}/packages/${offer.id}`}
+              href={`/packages/${offer.id}`}
               className="block flex-shrink-0 w-[280px] group"
               style={{ scrollSnapAlign: "start" }}
               data-testid={`link-flash-offer-${offer.id}`}
@@ -181,7 +172,7 @@ export function FlashOffers() {
         </div>
 
         <div className="text-center mt-8">
-          <Link href={`${langPrefix}/packages`}>
+          <Link href="/packages">
             <Button 
               size="lg" 
               className="bg-accent text-primary font-bold hover:bg-accent/90 px-8"

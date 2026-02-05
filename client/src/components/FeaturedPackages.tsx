@@ -4,58 +4,59 @@ import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "wouter";
 import { openWhatsAppQuote } from "@/lib/whatsapp";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const PACKAGES = [
   {
     id: "TE-001",
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Sinfonia Europea", en: "European Symphony", pt: "Sinfonia Europeia" },
-    destinations: { es: "Roma, Paris, Madrid y Barcelona", en: "Rome, Paris, Madrid and Barcelona", pt: "Roma, Paris, Madrid e Barcelona" },
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Sinfonia Europea", en: "European Symphony" },
+    destinations: { es: "Roma, Paris, Madrid y Barcelona", en: "Rome, Paris, Madrid and Barcelona" },
     price: "2,799",
     days: 15,
     nights: 13,
   },
   {
     id: "TE-002",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=40&w=400&auto=format&fit=crop",
-    title: { es: "España y Marruecos", en: "Spain and Morocco", pt: "Espanha e Marrocos" },
-    destinations: { es: "Madrid, Sevilla, Marrakech y Barcelona", en: "Madrid, Seville, Marrakech and Barcelona", pt: "Madrid, Sevilha, Marrakech e Barcelona" },
+    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "España y Marruecos", en: "Spain and Morocco" },
+    destinations: { es: "Madrid, Sevilla, Marrakech y Barcelona", en: "Madrid, Seville, Marrakech and Barcelona" },
     price: "2,899",
     days: 14,
     nights: 12,
   },
   {
     id: "TE-003",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Grecia Magica", en: "Magical Greece", pt: "Grecia Magica" },
-    destinations: { es: "Atenas, Santorini y Mykonos", en: "Athens, Santorini and Mykonos", pt: "Atenas, Santorini e Mykonos" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Grecia Magica", en: "Magical Greece" },
+    destinations: { es: "Atenas, Santorini y Mykonos", en: "Athens, Santorini and Mykonos" },
     price: "3,199",
     days: 12,
     nights: 10,
   },
   {
     id: "TE-004",
-    image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Capitales Europeas", en: "European Capitals", pt: "Capitais Europeias" },
-    destinations: { es: "Londres, Paris, Amsterdam y Berlin", en: "London, Paris, Amsterdam and Berlin", pt: "Londres, Paris, Amsterda e Berlim" },
+    image: "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Capitales Europeas", en: "European Capitals" },
+    destinations: { es: "Londres, Paris, Amsterdam y Berlin", en: "London, Paris, Amsterdam and Berlin" },
     price: "3,499",
     days: 17,
     nights: 15,
   },
   {
     id: "TE-005",
-    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Benelux Express", en: "Benelux Express", pt: "Benelux Express" },
-    destinations: { es: "Amsterdam, Bruselas y Brujas", en: "Amsterdam, Brussels and Bruges", pt: "Amsterda, Bruxelas e Bruges" },
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Benelux Express", en: "Benelux Express" },
+    destinations: { es: "Amsterdam, Bruselas y Brujas", en: "Amsterdam, Brussels and Bruges" },
     price: "2,199",
     days: 10,
     nights: 8,
   },
   {
     id: "TE-006",
-    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=40&w=400&auto=format&fit=crop",
-    title: { es: "Europa Central", en: "Central Europe", pt: "Europa Central" },
-    destinations: { es: "Viena, Praga, Budapest y Munich", en: "Vienna, Prague, Budapest and Munich", pt: "Viena, Praga, Budapeste e Munique" },
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=40&w=400&fm=webp&auto=format&fit=crop",
+    title: { es: "Europa Central", en: "Central Europe" },
+    destinations: { es: "Viena, Praga, Budapest y Munich", en: "Vienna, Prague, Budapest and Munich" },
     price: "2,999",
     days: 14,
     nights: 12,
@@ -64,8 +65,7 @@ const PACKAGES = [
 
 export function FeaturedPackages() {
   const { language } = useI18n();
-  const lang = language as "es" | "en" | "pt";
-  const langPrefix = lang === "es" ? "" : lang === "pt" ? "/pt-br" : `/${lang}`;
+  const lang = language as "es" | "en";
 
   const content = {
     es: {
@@ -88,16 +88,6 @@ export function FeaturedPackages() {
       viewMore: "View more",
       viewAll: "View all packages",
     },
-    pt: {
-      title: "Pacotes em Destaque 2025",
-      subtitle: "Descubra nossas ofertas exclusivas para explorar os destinos mais fascinantes da Europa",
-      from: "A partir de",
-      currency: "USD",
-      perPerson: "Por pessoa",
-      quote: "Solicitar Orcamento",
-      viewMore: "Ver mais",
-      viewAll: "Ver todos os pacotes",
-    },
   };
 
   return (
@@ -114,11 +104,12 @@ export function FeaturedPackages() {
           {PACKAGES.map((pkg) => (
             <Card key={pkg.id} className="overflow-hidden group" data-testid={`card-package-${pkg.id}`}>
               <div className="relative aspect-[16/10]">
-                <img
+                <OptimizedImage
                   src={pkg.image}
                   alt={pkg.title[lang]}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  objectFit="cover"
                 />
                 <Badge className="absolute top-4 left-4 bg-primary text-white">
                   {pkg.id}
@@ -148,7 +139,7 @@ export function FeaturedPackages() {
                   >
                     {content[lang].quote}
                   </Button>
-                  <Link href={`${langPrefix}/packages/${pkg.id}`}>
+                  <Link href={`/packages/${pkg.id}`}>
                     <Button variant="outline" data-testid={`button-view-${pkg.id}`}>
                       {content[lang].viewMore}
                     </Button>
@@ -160,7 +151,7 @@ export function FeaturedPackages() {
         </div>
 
         <div className="text-center mt-10">
-          <Link href={`${langPrefix}/packages`}>
+          <Link href="/packages">
             <Button variant="outline" size="lg" data-testid="button-view-all-packages">
               {content[lang].viewAll}
             </Button>

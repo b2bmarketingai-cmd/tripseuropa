@@ -1,7 +1,84 @@
+# robots.txt para tripseuropa.com
+# Optimizado para SEO máximo en Google (ES, EN, PT)
+
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api
-Disallow: /private
 
+# Permitir crawling de todos los recursos importantes
+Allow: /destinations/
+Allow: /destinos/
+Allow: /packages/
+Allow: /paquetes/
+Allow: /blog/
+Allow: /es/
+Allow: /en/
+Allow: /pt-br/
+Allow: /es-mx/
+Allow: /es-co/
+Allow: /es-ar/
+Allow: /es-pe/
+Allow: /es-pa/
+Allow: /es-cr/
+
+# Bloquear páginas administrativas y de desarrollo
+Disallow: /api/
+Disallow: /admin/
+Disallow: /app/
+Disallow: /tools/
+Disallow: /_next/
+Disallow: /private/
+
+# Bloquear parámetros de búsqueda y tracking
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*?*ref=
+
+# Permitir explícitamente sitemap
+Allow: /sitemap.xml
+Allow: /sitemap-*.xml
+
+# Sitemaps principales
 Sitemap: https://tripseuropa.com/sitemap.xml
+Sitemap: https://tripseuropa.com/sitemap-es.xml
+Sitemap: https://tripseuropa.com/sitemap-en.xml
+Sitemap: https://tripseuropa.com/sitemap-pt.xml
+Sitemap: https://tripseuropa.com/sitemap-destinations.xml
+Sitemap: https://tripseuropa.com/sitemap-blog.xml
+
+# Crawl-delay para bots agresivos (no Google)
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Permitir bots de redes sociales
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Googlebot específico (máxima prioridad)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Host preferido
+Host: https://tripseuropa.com
