@@ -56,11 +56,21 @@ const CAROUSEL_SLIDES = [
   },
 ];
 
+// Generate optimized image URL - must match index.html preload exactly for LCP
+const getImageUrl = (baseUrl: string, width: number, quality: number) =>
+  `${baseUrl}?w=${width}&q=${quality}&auto=format&fit=crop&fm=webp`;
+
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isHydrated, setIsHydrated] = useState(false);
   const { language } = useI18n();
   const lang = language as "es" | "en" | "pt";
+
+  // Mark hydrated after first render - prevents flash during React takeover
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
@@ -73,10 +83,10 @@ export function HeroCarousel() {
   };
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || !isHydrated) return;
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, nextSlide]);
+  }, [isAutoPlaying, isHydrated, nextSlide]);
 
   const currentContent = CAROUSEL_SLIDES[currentSlide];
 
@@ -121,10 +131,10 @@ export function HeroCarousel() {
       data-testid="section-hero-carousel"
     >
       <div className="absolute inset-0">
-        {/* LCP Image - Native img for fastest detection by browser preload scanner */}
+        {/* LCP Image - URLs must exactly match index.html preload for instant LCP */}
         <img
-          src={`${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1200&q=60&auto=format&fit=crop&fm=webp`}
-          srcSet={`${CAROUSEL_SLIDES[currentSlide].imageBase}?w=400&q=40&auto=format&fit=crop&fm=webp 400w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=800&q=50&auto=format&fit=crop&fm=webp 800w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1200&q=60&auto=format&fit=crop&fm=webp 1200w, ${CAROUSEL_SLIDES[currentSlide].imageBase}?w=1920&q=60&auto=format&fit=crop&fm=webp 1920w`}
+          src={getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 800, 50)}
+          srcSet={`${getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 400, 40)} 400w, ${getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 800, 50)} 800w, ${getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 1200, 60)} 1200w`}
           sizes="100vw"
           alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
           width={1920}
@@ -133,7 +143,6 @@ export function HeroCarousel() {
           loading="eager"
           fetchpriority="high"
           decoding="sync"
-          style={{ contentVisibility: 'auto' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30"></div>

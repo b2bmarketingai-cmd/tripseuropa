@@ -38,11 +38,23 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.trace'],
-        passes: 2,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.trace', 'console.warn'],
+        passes: 3,
+        unsafe: true,
+        unsafe_arrows: true,
+        unsafe_math: true,
+        dead_code: true,
+        collapse_vars: true,
+        reduce_vars: true,
+        inline: 2,
       },
       mangle: {
         safari10: true,
+        properties: false,
+      },
+      format: {
+        comments: false,
+        ecma: 2020,
       },
     },
     rollupOptions: {
