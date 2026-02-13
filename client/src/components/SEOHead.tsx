@@ -19,15 +19,15 @@ interface SEOHeadProps {
 const BASE_URL = "https://tripseuropa.com";
 
 export const countryHreflangs = [
-  { code: "BR", hreflang: "pt-BR", urlPrefix: "/pt-br" },
-  { code: "MX", hreflang: "es-MX", urlPrefix: "/es-mx" },
-  { code: "CO", hreflang: "es-CO", urlPrefix: "/es-co" },
-  { code: "AR", hreflang: "es-AR", urlPrefix: "/es-ar" },
-  { code: "PE", hreflang: "es-PE", urlPrefix: "/es-pe" },
-  { code: "PA", hreflang: "es-PA", urlPrefix: "/es-pa" },
-  { code: "CR", hreflang: "es-CR", urlPrefix: "/es-cr" },
-  { code: "DO", hreflang: "es-DO", urlPrefix: "/es-do" },
-  { code: "CB", hreflang: "es", urlPrefix: "/es/caribe" },
+  { code: "BR", hreflang: "pt-BR", urlPrefix: "" },
+  { code: "MX", hreflang: "es-MX", urlPrefix: "" },
+  { code: "CO", hreflang: "es-CO", urlPrefix: "" },
+  { code: "AR", hreflang: "es-AR", urlPrefix: "" },
+  { code: "PE", hreflang: "es-PE", urlPrefix: "" },
+  { code: "PA", hreflang: "es-PA", urlPrefix: "" },
+  { code: "CR", hreflang: "es-CR", urlPrefix: "" },
+  { code: "DO", hreflang: "es-DO", urlPrefix: "" },
+  { code: "CB", hreflang: "es", urlPrefix: "" },
 ];
 
 export function generateHreflangUrls(
