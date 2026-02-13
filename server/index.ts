@@ -94,6 +94,23 @@ export function log(message: string, source = "express") {
   console.log(`${formattedTime} [${source}] ${message}`);
 }
 
+// 301 Redirects for broken URLs indexed by Google Search Console
+// Fix: /es-br -> /pt-br (Brazil uses Portuguese prefix)
+app.get('/es-br', (_req, res) => res.redirect(301, '/pt-br'));
+app.get('/es-br/*', (req, res) => res.redirect(301, `/pt-br${req.path.slice(6)}`));
+
+// Fix: /es-caribe -> / (no es-caribe route exists)
+app.get('/es-caribe', (_req, res) => res.redirect(301, '/'));
+app.get('/es-caribe/*', (_req, res) => res.redirect(301, '/'));
+
+// Fix: /pt-br/pt-br/... chain (duplicated prefix from old hreflang bug)
+app.use((req, res, next) => {
+  if (/^\/pt-br(\/pt-br)+/.test(req.path)) {
+    return res.redirect(301, '/pt-br');
+  }
+  next();
+});
+
 // Health check endpoint - must be registered before other middleware
 let isServerReady = false;
 
