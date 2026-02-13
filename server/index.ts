@@ -104,9 +104,12 @@ app.get('/es-caribe', (_req, res) => res.redirect(301, '/'));
 app.get('/es-caribe/*', (_req, res) => res.redirect(301, '/'));
 
 // Fix: /pt-br/pt-br/... chain (duplicated prefix from old hreflang bug)
+// Preserves any trailing subpath after stripping repeated /pt-br segments
 app.use((req, res, next) => {
-  if (/^\/pt-br(\/pt-br)+/.test(req.path)) {
-    return res.redirect(301, '/pt-br');
+  const match = req.path.match(/^(\/pt-br)(\/pt-br)+(\/.*)?$/);
+  if (match) {
+    const remaining = match[3] || '';
+    return res.redirect(301, `/pt-br${remaining}`);
   }
   next();
 });
