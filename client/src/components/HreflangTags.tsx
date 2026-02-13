@@ -1,50 +1,38 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect, useRef } from "react";
 import { useLocation } from "wouter";
 
-/**
- * HreflangTags Component
- *
- * Adds hreflang meta tags for international SEO.
- * Helps search engines understand which language versions exist for each page.
- *
- * @see https://developers.google.com/search/docs/specialty/international/localized-versions
- */
 export function HreflangTags() {
   const [location] = useLocation();
   const baseUrl = "https://tripseuropa.com";
+  const createdElements = useRef<HTMLLinkElement[]>([]);
 
-  // Remove language prefix from current path to get base path
   const basePath = location.replace(/^\/(es|en|pt|pt-br)/, '');
 
-  return (
-    <Helmet>
-      {/* Spanish version */}
-      <link
-        rel="alternate"
-        hreflang="es"
-        href={`${baseUrl}/es${basePath}`}
-      />
+  useEffect(() => {
+    createdElements.current.forEach(el => el.remove());
+    createdElements.current = [];
 
-      {/* English version */}
-      <link
-        rel="alternate"
-        hreflang="en"
-        href={`${baseUrl}/en${basePath}`}
-      />
+    const hreflangs = [
+      { hreflang: "es", href: `${baseUrl}/es${basePath}` },
+      { hreflang: "en", href: `${baseUrl}/en${basePath}` },
+      { hreflang: "pt-BR", href: `${baseUrl}/pt-br${basePath}` },
+      { hreflang: "x-default", href: `${baseUrl}${basePath || '/'}` },
+    ];
 
-      {/* Portuguese (Brazil) version */}
-      <link
-        rel="alternate"
-        hreflang="pt-BR"
-        href={`${baseUrl}/pt-br${basePath}`}
-      />
+    hreflangs.forEach(({ hreflang, href }) => {
+      const link = document.createElement("link");
+      link.rel = "alternate";
+      link.hreflang = hreflang;
+      link.href = href;
+      document.head.appendChild(link);
+      createdElements.current.push(link);
+    });
 
-      {/* Default fallback (x-default) */}
-      <link
-        rel="alternate"
-        hreflang="x-default"
-        href={`${baseUrl}${basePath || '/'}`}
-      />
-    </Helmet>
-  );
+    return () => {
+      createdElements.current.forEach(el => el.remove());
+      createdElements.current = [];
+    };
+  }, [location, basePath]);
+
+  return null;
 }
