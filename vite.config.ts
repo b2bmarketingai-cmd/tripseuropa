@@ -36,9 +36,14 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ["console.log", "console.info", "console.debug"],
+        unsafe: false,
+        unsafe_arrows: false,
       },
     },
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: "no-external",
+      },
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
@@ -51,88 +56,13 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
     cssCodeSplit: true,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.trace', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_arrows: true,
-        unsafe_math: true,
-        dead_code: true,
-        collapse_vars: true,
-        reduce_vars: true,
-        inline: 2,
-      },
-      mangle: {
-        safari10: true,
-        properties: false,
-      },
-      format: {
-        comments: false,
-        ecma: 2020,
-      },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // React core - loaded first, cached long-term
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-helmet-async') || id.includes('scheduler')) {
-              return 'react-vendor';
-            }
-            // UI components
-            if (id.includes('@radix-ui')) {
-              return 'ui';
-            }
-            // Icons - deferred
-            if (id.includes('lucide-react') || id.includes('react-icons')) {
-              return 'icons';
-            }
-            // Forms - only on form pages
-            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
-              return 'forms';
-            }
-            // Animations - deferred
-            if (id.includes('framer-motion')) {
-              return 'animations';
-            }
-            // Carousel - isolated to reduce reflow impact
-            if (id.includes('embla-carousel')) {
-              return 'carousel';
-            }
-            return 'vendor';
-          }
-          // Split large static data into separate lazy chunks
-          if (id.includes('blogData') || id.includes('BlogPostsSimple')) {
-            return 'blogData';
-          }
-          if (id.includes('destinationsData')) {
-            return 'destinationsData';
-          }
-          if (id.includes('travelStyleData')) {
-            return 'travelStyleData';
-          }
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-      },
-    },
-    chunkSizeWarningLimit: 600,
-    target: 'es2020',
-    reportCompressedSize: true,
   },
   server: {
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
+    host: "0.0.0.0",
+    port: 5000,
+    strictPort: true,
+    hmr: {
+      clientPort: 443,
     },
   },
 });
