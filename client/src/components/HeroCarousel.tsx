@@ -176,7 +176,7 @@ export function HeroCarousel() {
         srcSet={`${getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 800, 50)} 800w, ${getImageUrl(CAROUSEL_SLIDES[currentSlide].imageBase, 1200, 60)} 1200w`}
         sizes="100vw"
         alt={CAROUSEL_SLIDES[currentSlide].title[lang]}
-        fetchPriority={currentSlide === 0 ? "high" : undefined}
+        {...(currentSlide === 0 ? { fetchpriority: "high" } : {})}
         loading={currentSlide === 0 ? "eager" : "lazy"}
         decoding="async"
         width={1200}

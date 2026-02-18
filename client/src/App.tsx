@@ -1,5 +1,5 @@
 import { Switch, Route, Redirect, useLocation } from "wouter";
-import { useEffect, Suspense, lazy } from "react";
+import { useEffect, Suspense, lazy, Component, type ReactNode, type ErrorInfo } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,6 +7,39 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
 import { ABTestingProvider } from "@/lib/abTesting";
+
+class ErrorBoundary extends Component<{children: ReactNode}, {hasError: boolean; error: Error | null}> {
+  constructor(props: {children: ReactNode}) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    const el = document.createElement('div');
+    el.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;padding:2rem;background:#1a1a2e;color:#ff6b6b;font-family:monospace;z-index:999999;overflow:auto;font-size:14px;white-space:pre-wrap';
+    el.textContent = 'REACT RENDER ERROR:\n' + error.message + '\n\n' + (error.stack || '') + '\n\nComponent Stack:' + (errorInfo.componentStack || '');
+    document.body.appendChild(el);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{padding: '2rem', color: '#ff6b6b', fontFamily: 'monospace', background: '#1a1a2e', minHeight: '100vh', whiteSpace: 'pre-wrap'}}>
+          <h1 style={{color: '#d4af37', marginBottom: '1rem'}}>Something went wrong</h1>
+          <p>{this.state.error?.message}</p>
+          <button onClick={() => window.location.reload()} style={{marginTop: '1rem', padding: '0.5rem 1rem', background: '#d4af37', color: '#1a1a2e', border: 'none', borderRadius: '4px', cursor: 'pointer'}}>
+            Reload Page
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function LoadingFallback() {
   return (
@@ -337,20 +370,22 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <I18nProvider>
-        <ABTestingProvider>
-          <TooltipProvider>
-            <SkipToContent />
-            <ScrollToTop />
-            <Toaster />
-            <Suspense fallback={<LoadingFallback />}>
-              <Router />
-            </Suspense>
-          </TooltipProvider>
-        </ABTestingProvider>
-      </I18nProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <I18nProvider>
+          <ABTestingProvider>
+            <TooltipProvider>
+              <SkipToContent />
+              <ScrollToTop />
+              <Toaster />
+              <Suspense fallback={<LoadingFallback />}>
+                <Router />
+              </Suspense>
+            </TooltipProvider>
+          </ABTestingProvider>
+        </I18nProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 

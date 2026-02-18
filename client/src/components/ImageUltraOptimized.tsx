@@ -103,7 +103,7 @@ const ImageUltraOptimized = memo<ImageUltraOptimizedProps>(({
             width={width}
             height={height}
             loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : 'auto'}
+            {...{fetchpriority: priority ? 'high' : 'auto'}}
             decoding={priority ? 'sync' : 'async'}
             className="w-full h-full object-cover"
             style={{
