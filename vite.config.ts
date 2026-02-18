@@ -27,37 +27,17 @@ export default defineConfig({
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
+    dedupe: ["react", "react-dom"],
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    minify: "terser",
-    sourcemap: false,
-    cssCodeSplit: true,
-    chunkSizeWarningLimit: 600,
-    target: "es2020",
-    reportCompressedSize: true,
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: [
-          "console.log",
-          "console.info",
-          "console.debug",
-          "console.trace",
-          "console.warn",
-        ],
-        passes: 3,
-        unsafe: false,
-        unsafe_arrows: false,
-        unsafe_math: false,
-        dead_code: true,
-        collapse_vars: true,
-        reduce_vars: true,
-        inline: 2,
-      },
+    target: "es2020",
+    minify: "esbuild",
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 600,
+    reportCompressedSize: true,
       mangle: {
         safari10: true,
         properties: false,
@@ -72,17 +52,21 @@ export default defineConfig({
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
             if (
-              id.includes("react") ||
-              id.includes("react-dom") ||
-              id.includes("react-helmet-async") ||
-              id.includes("scheduler")
+              id.includes("/react/") ||
+              id.includes("/react-dom/") ||
+              id.includes("/react-dom.") ||
+              id.includes("scheduler") ||
+              id.includes("react-helmet-async")
             ) {
               return "react-vendor";
             }
             if (id.includes("@radix-ui")) {
               return "ui";
             }
-            if (id.includes("lucide-react") || id.includes("react-icons")) {
+            if (
+              id.includes("lucide-react") ||
+              id.includes("react-icons")
+            ) {
               return "icons";
             }
             if (
@@ -100,7 +84,10 @@ export default defineConfig({
             }
             return "vendor";
           }
-          if (id.includes("blogData") || id.includes("BlogPostsSimple")) {
+          if (
+            id.includes("blogData") ||
+            id.includes("BlogPostsSimple")
+          ) {
             return "blogData";
           }
           if (id.includes("destinationsData")) {
@@ -114,18 +101,9 @@ export default defineConfig({
         entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash].[ext]",
       },
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-      },
     },
   },
   server: {
-    headers: {
-      "Cross-Origin-Opener-Policy": "same-origin",
-      "Cross-Origin-Embedder-Policy": "require-corp",
-      "X-Content-Type-Options": "nosniff",
-    },
     fs: {
       strict: true,
       deny: ["**/.?*"],
