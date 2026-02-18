@@ -6,12 +6,29 @@ export function criticalCssPlugin(): Plugin {
   let isBuild = false;
   return {
     name: 'vite-plugin-critical-css',
+    configureServer(server) {
+      server.middlewares.use((req: any, res: any, next: any) => {
+        const origEnd = res.end;
+        res.end = function (...args: any[]) {
+          const ct = res.getHeader('content-type');
+          if (ct && typeof ct === 'string' && ct.includes('text/html')) {
+            res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+            res.setHeader('Pragma', 'no-cache');
+            res.setHeader('Expires', '0');
+          }
+          return origEnd.apply(this, args);
+        };
+        next();
+      });
+    },
     config(config: UserConfig, { command }) {
       isBuild = command === 'build';
 
+      if (!config.resolve) config.resolve = {};
+      config.resolve.dedupe = ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'];
+
       if (!isBuild) {
         if (!config.optimizeDeps) config.optimizeDeps = {};
-        config.optimizeDeps.force = true;
       }
 
       if (isBuild) {

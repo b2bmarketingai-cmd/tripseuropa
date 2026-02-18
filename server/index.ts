@@ -11,6 +11,19 @@ const app = express();
 // Enable GZIP compression for all responses
 app.use(compression());
 
+// Prevent browser caching of HTML pages in development
+if (process.env.NODE_ENV === "development") {
+  app.use((req, res, next) => {
+    if (req.accepts("html") && !req.path.match(/\.\w+$/)) {
+      res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+      res.setHeader("Pragma", "no-cache");
+      res.setHeader("Expires", "0");
+      res.setHeader("Surrogate-Control", "no-store");
+    }
+    next();
+  });
+}
+
 // Security Headers Middleware
 app.use((req, res, next) => {
   // Prevent XSS attacks
