@@ -19,10 +19,7 @@ class ErrorBoundary extends Component<{children: ReactNode}, {hasError: boolean;
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const el = document.createElement('div');
-    el.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;padding:2rem;background:#1a1a2e;color:#ff6b6b;font-family:monospace;z-index:999999;overflow:auto;font-size:14px;white-space:pre-wrap';
-    el.textContent = 'REACT RENDER ERROR:\n' + error.message + '\n\n' + (error.stack || '') + '\n\nComponent Stack:' + (errorInfo.componentStack || '');
-    document.body.appendChild(el);
+    console.error('React render error:', error.message, errorInfo.componentStack);
   }
 
   render() {

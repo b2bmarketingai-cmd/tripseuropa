@@ -3,32 +3,42 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
 export function criticalCssPlugin(): Plugin {
+  let isBuild = false;
   return {
     name: 'vite-plugin-critical-css',
-    apply: 'build',
-    config(config: UserConfig) {
-      const output = config.build?.rollupOptions?.output;
-      if (output && !Array.isArray(output) && typeof output.manualChunks === 'function') {
-        output.manualChunks = (id: string) => {
-          if (id.includes("node_modules")) {
-            if (
-              id.includes("/react/") ||
-              id.includes("/react-dom/") ||
-              id.includes("/react-dom.") ||
-              id.includes("/scheduler/")
-            ) {
-              return "react-vendor";
+    config(config: UserConfig, { command }) {
+      isBuild = command === 'build';
+
+      if (!isBuild) {
+        if (!config.optimizeDeps) config.optimizeDeps = {};
+        config.optimizeDeps.force = true;
+      }
+
+      if (isBuild) {
+        const output = config.build?.rollupOptions?.output;
+        if (output && !Array.isArray(output) && typeof output.manualChunks === 'function') {
+          output.manualChunks = (id: string) => {
+            if (id.includes("node_modules")) {
+              if (
+                id.includes("/react/") ||
+                id.includes("/react-dom/") ||
+                id.includes("/react-dom.") ||
+                id.includes("/scheduler/")
+              ) {
+                return "react-vendor";
+              }
             }
-          }
-          if (id.includes("blogData") || id.includes("BlogPostsSimple")) return "blogData";
-          if (id.includes("destinationsData")) return "destinationsData";
-          if (id.includes("travelStyleData")) return "travelStyleData";
-        };
+            if (id.includes("blogData") || id.includes("BlogPostsSimple")) return "blogData";
+            if (id.includes("destinationsData")) return "destinationsData";
+            if (id.includes("travelStyleData")) return "travelStyleData";
+          };
+        }
       }
     },
     transformIndexHtml: {
       order: 'post',
       handler(html) {
+        if (!isBuild) return html;
         try {
           const criticalCssPath = resolve(process.cwd(), 'client/src/critical.css');
           const criticalCss = readFileSync(criticalCssPath, 'utf-8');

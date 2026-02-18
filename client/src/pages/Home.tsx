@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
@@ -6,38 +6,31 @@ import { HomePageSEO } from "@/components/SEOHead";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { useI18n } from "@/lib/i18n";
-
-// Near-fold components - lazy loaded but fetched early
-const HeroFlightSearch = lazy(() => import("@/components/HeroFlightSearch").then(m => ({ default: m.HeroFlightSearch })));
-const TopOffers = lazy(() => import("@/components/TopOffers").then(m => ({ default: m.TopOffers })));
-const DestinationGrid = lazy(() => import("@/components/DestinationGrid").then(m => ({ default: m.DestinationGrid })));
-
-// Lazy load non-critical below-the-fold components
-const Chatbot = lazy(() => import("@/components/Chatbot").then(m => ({ default: m.Chatbot })));
-const ContactForm = lazy(() => import("@/components/ContactForm").then(m => ({ default: m.ContactForm })));
-const SmartSearchBar = lazy(() => import("@/components/SmartSearchBar").then(m => ({ default: m.SmartSearchBar })));
-const FAQAccordion = lazy(() => import("@/components/FAQAccordion").then(m => ({ default: m.FAQAccordion })));
-const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
-const ReserveSpot = lazy(() => import("@/components/ReserveSpot").then(m => ({ default: m.ReserveSpot })));
-const Favorites = lazy(() => import("@/components/Favorites").then(m => ({ default: m.Favorites })));
-const SpecialOffers = lazy(() => import("@/components/SpecialOffers").then(m => ({ default: m.SpecialOffers })));
-const BestPriceGuarantee = lazy(() => import("@/components/BestPriceGuarantee").then(m => ({ default: m.BestPriceGuarantee })));
-const NewsletterSignup = lazy(() => import("@/components/NewsletterSignup").then(m => ({ default: m.NewsletterSignup })));
-const TravelerStories = lazy(() => import("@/components/TravelerStories").then(m => ({ default: m.TravelerStories })));
-const TrustpilotReviews = lazy(() => import("@/components/TrustpilotReviews").then(m => ({ default: m.TrustpilotReviews })));
-const PromotionalVideoBanner = lazy(() => import("@/components/PromotionalVideoBanner").then(m => ({ default: m.PromotionalVideoBanner })));
-const BlogHighlights = lazy(() => import("@/components/BlogHighlights").then(m => ({ default: m.BlogHighlights })));
-const SEOContent = lazy(() => import("@/components/SEOContent"));
-const FloatingContactButtons = lazy(() => import("@/components/support").then(m => ({ default: m.FloatingContactButtons })));
-
-// Lazy load icons to reduce main bundle
-const ContactIcons = lazy(() => import("@/components/ContactIcons"));
+import { HeroFlightSearch } from "@/components/HeroFlightSearch";
+import { TopOffers } from "@/components/TopOffers";
+import { DestinationGrid } from "@/components/DestinationGrid";
+import { Chatbot } from "@/components/Chatbot";
+import { ContactForm } from "@/components/ContactForm";
+import { SmartSearchBar } from "@/components/SmartSearchBar";
+import { FAQAccordion } from "@/components/FAQAccordion";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { ReserveSpot } from "@/components/ReserveSpot";
+import { Favorites } from "@/components/Favorites";
+import { SpecialOffers } from "@/components/SpecialOffers";
+import { BestPriceGuarantee } from "@/components/BestPriceGuarantee";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { TravelerStories } from "@/components/TravelerStories";
+import { TrustpilotReviews } from "@/components/TrustpilotReviews";
+import { PromotionalVideoBanner } from "@/components/PromotionalVideoBanner";
+import { BlogHighlights } from "@/components/BlogHighlights";
+import SEOContent from "@/components/SEOContent";
+import { FloatingContactButtons } from "@/components/support";
+import ContactIcons from "@/components/ContactIcons";
 
 export default function Home() {
   const { language } = useI18n();
   const [showIdleComponents, setShowIdleComponents] = useState(false);
 
-  // Defer Chatbot and FloatingContactButtons until browser is idle
   useEffect(() => {
     const loadIdle = () => setShowIdleComponents(true);
     if ('requestIdleCallback' in window) {
@@ -98,57 +91,44 @@ export default function Home() {
       <Header />
       <HeroCarousel />
 
-      {/* Near-fold components - lazy but fetched early */}
-      <Suspense fallback={<div className="h-48 loading-skeleton" />}>
-        <HeroFlightSearch />
-        <TopOffers />
-        <DestinationGrid />
-      </Suspense>
+      <HeroFlightSearch />
+      <TopOffers />
+      <DestinationGrid />
 
-      {/* Below-fold components - lazy loaded with content-visibility optimization */}
       <div className="lazy-section-tall">
-        <Suspense fallback={<div className="h-96 loading-skeleton" />}>
-          <ReserveSpot />
-          <SpecialOffers />
-          <Favorites />
-          <WhyChooseUs />
-          <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
-            <div className="container mx-auto px-4 max-w-4xl">
-              <SmartSearchBar variant="hero" />
-            </div>
-          </section>
-          <BestPriceGuarantee />
-          <BlogHighlights />
-          <SEOContent />
-          <NewsletterSignup />
-        </Suspense>
+        <ReserveSpot />
+        <SpecialOffers />
+        <Favorites />
+        <WhyChooseUs />
+        <section className="py-12 bg-[#d5b034]" data-testid="section-smart-search">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <SmartSearchBar variant="hero" />
+          </div>
+        </section>
+        <BestPriceGuarantee />
+        <BlogHighlights />
+        <SEOContent />
+        <NewsletterSignup />
       </div>
 
-      {/* Heavy third-party components - separate Suspense with content-visibility */}
       <div className="lazy-section">
-        <Suspense fallback={<div className="h-64 loading-skeleton" />}>
-          <TrustpilotReviews />
-          <PromotionalVideoBanner />
-          <TravelerStories />
-        </Suspense>
+        <TrustpilotReviews />
+        <PromotionalVideoBanner />
+        <TravelerStories />
       </div>
 
-      {/* Contact section with lazy icons */}
       <div className="lazy-section-tall">
-        <Suspense fallback={<div className="h-96 loading-skeleton" />}>
-          <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
-          <FAQAccordion />
-        </Suspense>
+        <ContactIcons content={c} contactForm={<ContactForm variant="page" title={c.formTitle} />} />
+        <FAQAccordion />
       </div>
 
       <Footer />
 
-      {/* Chatbot & floating buttons - deferred until browser is idle */}
       {showIdleComponents && (
-        <Suspense fallback={null}>
+        <>
           <Chatbot />
           <FloatingContactButtons />
-        </Suspense>
+        </>
       )}
       <TravelAgencySchema />
       <WebsiteSchema />
@@ -162,4 +142,3 @@ export default function Home() {
     </div>
   );
 }
-
