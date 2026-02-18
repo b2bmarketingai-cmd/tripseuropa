@@ -60,27 +60,11 @@
   </head>
   <body>
     <script>
-      window.__REACT_STATUS = 'loading';
+      window.__APP_LOADED = false;
       window.addEventListener('error', function(e) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:16px;background:#d00;color:#fff;font-family:monospace;z-index:999999;font-size:13px;white-space:pre-wrap;max-height:50vh;overflow:auto';
-        d.textContent = 'JS ERROR: ' + e.message + ' | File: ' + (e.filename||'unknown') + ':' + (e.lineno||0);
-        document.body.appendChild(d);
+        if (window.__APP_LOADED) return;
+        console.error('App load error:', e.message, e.filename, e.lineno);
       });
-      window.addEventListener('unhandledrejection', function(e) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;bottom:0;left:0;right:0;padding:16px;background:#c50;color:#fff;font-family:monospace;z-index:999999;font-size:13px;white-space:pre-wrap;max-height:50vh;overflow:auto';
-        d.textContent = 'PROMISE: ' + (e.reason && e.reason.stack ? e.reason.stack : String(e.reason));
-        document.body.appendChild(d);
-      });
-      setTimeout(function() {
-        if (window.__REACT_STATUS !== 'mounted') {
-          var d = document.createElement('div');
-          d.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:16px;background:#b00;color:#fff;font-family:monospace;z-index:999999;font-size:13px';
-          d.textContent = 'REACT DID NOT MOUNT after 10s. Status: ' + window.__REACT_STATUS;
-          document.body.appendChild(d);
-        }
-      }, 10000);
     </script>
     <div id="root">
       <!-- Static shell for instant FCP + LCP while React hydrates -->
