@@ -37,16 +37,6 @@ export default defineConfig({
     minify: "esbuild",
     cssCodeSplit: true,
     chunkSizeWarningLimit: 600,
-    reportCompressedSize: true,
-      mangle: {
-        safari10: true,
-        properties: false,
-      },
-      format: {
-        comments: false,
-        ecma: 2020,
-      },
-    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -60,42 +50,16 @@ export default defineConfig({
             ) {
               return "react-vendor";
             }
-            if (id.includes("@radix-ui")) {
-              return "ui";
-            }
-            if (
-              id.includes("lucide-react") ||
-              id.includes("react-icons")
-            ) {
-              return "icons";
-            }
-            if (
-              id.includes("react-hook-form") ||
-              id.includes("zod") ||
-              id.includes("@hookform")
-            ) {
-              return "forms";
-            }
-            if (id.includes("framer-motion")) {
-              return "animations";
-            }
-            if (id.includes("embla-carousel")) {
-              return "carousel";
-            }
+            if (id.includes("@radix-ui")) return "ui";
+            if (id.includes("lucide-react") || id.includes("react-icons")) return "icons";
+            if (id.includes("react-hook-form") || id.includes("zod") || id.includes("@hookform")) return "forms";
+            if (id.includes("framer-motion")) return "animations";
+            if (id.includes("embla-carousel")) return "carousel";
             return "vendor";
           }
-          if (
-            id.includes("blogData") ||
-            id.includes("BlogPostsSimple")
-          ) {
-            return "blogData";
-          }
-          if (id.includes("destinationsData")) {
-            return "destinationsData";
-          }
-          if (id.includes("travelStyleData")) {
-            return "travelStyleData";
-          }
+          if (id.includes("blogData") || id.includes("BlogPostsSimple")) return "blogData";
+          if (id.includes("destinationsData")) return "destinationsData";
+          if (id.includes("travelStyleData")) return "travelStyleData";
         },
         chunkFileNames: "assets/[name]-[hash].js",
         entryFileNames: "assets/[name]-[hash].js",
