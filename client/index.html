@@ -59,20 +59,6 @@
     <title>Viajes a Europa desde Latinoamerica - Paquetes Todo Incluido | Trips Europa</title>
   </head>
   <body>
-    <script>
-      window.addEventListener('error', function(e) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:16px;background:#d00;color:#fff;font-family:monospace;z-index:999999;font-size:13px;white-space:pre-wrap;max-height:50vh;overflow:auto';
-        d.textContent = 'ERROR: ' + e.message + '\nFile: ' + e.filename + '\nLine: ' + e.lineno + ':' + e.colno;
-        document.body.appendChild(d);
-      });
-      window.addEventListener('unhandledrejection', function(e) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;bottom:0;left:0;right:0;padding:16px;background:#c50;color:#fff;font-family:monospace;z-index:999999;font-size:13px;white-space:pre-wrap;max-height:50vh;overflow:auto';
-        d.textContent = 'PROMISE: ' + (e.reason && e.reason.stack ? e.reason.stack : String(e.reason));
-        document.body.appendChild(d);
-      });
-    </script>
     <div id="root">
       <!-- Static shell for instant FCP + LCP while React hydrates -->
       <div class="nav-shell" aria-hidden="true"></div>
