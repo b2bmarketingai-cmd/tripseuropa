@@ -73,6 +73,9 @@ export function Favorites() {
       currency: "USD",
       taxes: "+ IMP",
       perPerson: "Por persona en habitacion doble",
+      prevLabel: "Destino favorito anterior",
+      nextLabel: "Siguiente destino favorito",
+      bookLabel: "Ver oferta",
     },
     en: {
       badge: "Favorites",
@@ -81,6 +84,9 @@ export function Favorites() {
       currency: "USD",
       taxes: "+ Taxes",
       perPerson: "Per person in double room",
+      prevLabel: "Previous favorite destination",
+      nextLabel: "Next favorite destination",
+      bookLabel: "View offer",
     },
     pt: {
       badge: "Favoritos",
@@ -89,87 +95,91 @@ export function Favorites() {
       currency: "USD",
       taxes: "+ Taxas",
       perPerson: "Por pessoa em quarto duplo",
+      prevLabel: "Destino favorito anterior",
+      nextLabel: "Proximo destino favorito",
+      bookLabel: "Ver oferta",
     },
   };
 
   const c = content[lang] || content.es;
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-800" data-testid="section-favorites">
+    <section className="py-12 bg-white dark:bg-gray-950" data-testid="section-favorites" aria-label={c.badge}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
-            <Heart className="w-6 h-6 text-red-500" />
-            <div>
-              <Badge variant="secondary" className="mb-1">{c.badge}</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-favorites-title">
-                {c.title}
-              </h2>
-            </div>
+          <div>
+            <Badge className="mb-2 bg-accent/10 text-accent-foreground border-accent/20">
+              <Heart className="w-3 h-3 mr-1" aria-hidden="true" />
+              {c.badge}
+            </Badge>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-primary">{c.title}</h2>
           </div>
           <div className="flex gap-2">
             <Button
-              size="icon"
               variant="outline"
+              size="icon"
               onClick={() => scroll("left")}
               data-testid="button-favorites-prev"
+              aria-label={c.prevLabel}
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4" aria-hidden="true" />
             </Button>
             <Button
-              size="icon"
               variant="outline"
+              size="icon"
               onClick={() => scroll("right")}
               data-testid="button-favorites-next"
+              aria-label={c.nextLabel}
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" aria-hidden="true" />
             </Button>
           </div>
         </div>
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
-          style={{ scrollSnapType: "x mandatory" }}
+          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4"
+          role="list"
+          aria-label={c.title}
         >
           {FAVORITES.map((fav) => {
             const title = fav.title[lang] || fav.title.es;
-            const whatsappMessage = `Hola! Me interesa el paquete "${title}" desde ${fav.price}${c.currency}. Me gustaria mas informacion.`;
+            const whatsappMessage = `Hola! Me interesa el paquete "${title}" - Paquete ID ${fav.id} desde ${fav.price}${c.currency}. Me gustaria mas informacion.`;
             const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
             return (
-              <a
-                key={fav.id}
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0"
-                style={{ scrollSnapAlign: "start" }}
-              >
-                <Card
-                  className="w-[260px] overflow-hidden hover-elevate cursor-pointer"
-                  data-testid={`card-favorite-${fav.id}`}
-                >
-                  <div className="relative bg-gray-300">
-                    <img
-                      src={fav.image}
-                      alt={title}
-                      className="w-full h-[320px] object-cover"
-                      loading="lazy"
-                      crossOrigin="anonymous"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <h3 className="font-display font-bold text-lg mb-2 text-accent">{title}</h3>
-                      <p className="text-white/70 text-sm">{c.from}</p>
-                      <div className="flex items-baseline gap-1 flex-wrap">
-                        <span className="text-xl font-bold text-accent">{fav.price}{c.currency}</span>
-                      </div>
-                      <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
-                    </div>
+              <Card key={fav.id} className="flex-shrink-0 w-72 overflow-hidden hover:shadow-xl transition-shadow" role="listitem">
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={fav.image}
+                    alt={title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="288"
+                    height="160"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display font-bold text-primary mb-2">{title}</h3>
+                  <p className="text-xs text-gray-600 mb-1">{c.from}</p>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-bold text-accent">${fav.price}</span>
+                    <span className="text-sm text-gray-500">{c.currency}</span>
                   </div>
-                </Card>
-              </a>
+                  <p className="text-xs text-gray-500 mt-1">{c.perPerson}</p>
+                  <div className="mt-3">
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 bg-accent text-primary text-xs font-bold px-3 py-2 rounded-md hover:bg-accent/90 transition-colors w-full justify-center"
+                      aria-label={`${c.bookLabel}: ${title} ${c.from} $${fav.price} ${c.currency}`}
+                    >
+                      <Heart className="w-3 h-3" aria-hidden="true" />
+                      {c.bookLabel}
+                    </a>
+                  </div>
+                </div>
+              </Card>
             );
           })}
         </div>
