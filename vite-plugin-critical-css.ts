@@ -29,6 +29,43 @@ export function criticalCssPlugin(): Plugin {
 
       if (!isBuild) {
         if (!config.optimizeDeps) config.optimizeDeps = {};
+        config.optimizeDeps.noDiscovery = true;
+        config.optimizeDeps.include = [
+          'react',
+          'react-dom',
+          'react-dom/client',
+          'react/jsx-runtime',
+          'react/jsx-dev-runtime',
+          'wouter',
+          '@tanstack/react-query',
+          'react-hook-form',
+          '@hookform/resolvers/zod',
+          'zod',
+          'drizzle-orm',
+          'drizzle-orm/pg-core',
+          'drizzle-zod',
+          'class-variance-authority',
+          'clsx',
+          'tailwind-merge',
+          'lucide-react',
+          'react-icons/si',
+          'date-fns',
+          'date-fns/locale',
+          'react-day-picker',
+          '@radix-ui/react-accordion',
+          '@radix-ui/react-aspect-ratio',
+          '@radix-ui/react-avatar',
+          '@radix-ui/react-dialog',
+          '@radix-ui/react-dropdown-menu',
+          '@radix-ui/react-label',
+          '@radix-ui/react-popover',
+          '@radix-ui/react-scroll-area',
+          '@radix-ui/react-select',
+          '@radix-ui/react-slot',
+          '@radix-ui/react-tabs',
+          '@radix-ui/react-toast',
+          '@radix-ui/react-tooltip',
+        ];
       }
 
       if (isBuild) {
