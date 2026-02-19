@@ -80,6 +80,9 @@ export function SpecialOffers() {
       currency: "USD",
       taxes: "+ IMP",
       perPerson: "Por persona en habitacion doble",
+      prevLabel: "Oferta anterior",
+      nextLabel: "Siguiente oferta",
+      bookNow: "Cotizar ahora",
     },
     en: {
       badge: "Seasonal Offers",
@@ -88,6 +91,9 @@ export function SpecialOffers() {
       currency: "USD",
       taxes: "+ Taxes",
       perPerson: "Per person in double room",
+      prevLabel: "Previous offer",
+      nextLabel: "Next offer",
+      bookNow: "Get a quote",
     },
     pt: {
       badge: "Ofertas de Temporada",
@@ -96,54 +102,58 @@ export function SpecialOffers() {
       currency: "USD",
       taxes: "+ Taxas",
       perPerson: "Por pessoa em quarto duplo",
+      prevLabel: "Oferta anterior",
+      nextLabel: "Proxima oferta",
+      bookNow: "Solicitar cotacao",
     },
   };
 
   const c = content[lang] || content.es;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-primary via-primary/95 to-primary" data-testid="section-special-offers">
+    <section className="py-12 bg-primary" data-testid="section-special-offers" aria-label={c.badge}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
-            <Zap className="w-6 h-6 text-accent" />
-            <div>
-              <Badge className="bg-accent text-primary mb-1">{c.badge}</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-accent" data-testid="text-offers-title">
-                {c.title}
-              </h2>
-            </div>
+          <div>
+            <Badge className="mb-2 bg-accent/20 text-accent border-accent/30">
+              <Zap className="w-3 h-3 mr-1" />
+              {c.badge}
+            </Badge>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-white">{c.title}</h2>
           </div>
           <div className="flex gap-2">
             <Button
-              size="icon"
               variant="outline"
+              size="icon"
               onClick={() => scroll("left")}
               className="border-white/30 text-white hover:bg-white/10"
               data-testid="button-offers-prev"
+              aria-label={c.prevLabel}
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4" aria-hidden="true" />
             </Button>
             <Button
-              size="icon"
               variant="outline"
+              size="icon"
               onClick={() => scroll("right")}
               className="border-white/30 text-white hover:bg-white/10"
               data-testid="button-offers-next"
+              aria-label={c.nextLabel}
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" aria-hidden="true" />
             </Button>
           </div>
         </div>
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
-          style={{ scrollSnapType: "x mandatory" }}
+          className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+          role="list"
+          aria-label={c.title}
         >
           {OFFERS.map((offer) => {
             const title = offer.title[lang] || offer.title.es;
-            const whatsappMessage = `Hola! Me interesa la oferta "${title}" desde ${offer.price}${c.currency}. Me gustaria mas informacion.`;
+            const whatsappMessage = `Hola! Me interesa la oferta "${title}" - Oferta ID ${offer.id} desde ${offer.price}${c.currency}. Me gustaria mas informacion.`;
             const whatsappUrl = `https://api.whatsapp.com/send?phone=34611105448&text=${encodeURIComponent(whatsappMessage)}`;
             return (
               <a
@@ -153,28 +163,28 @@ export function SpecialOffers() {
                 rel="noopener noreferrer"
                 className="flex-shrink-0"
                 style={{ scrollSnapAlign: "start" }}
+                aria-label={`${c.bookNow}: ${title} ${c.from} $${offer.price} ${c.currency}`}
+                role="listitem"
               >
-                <Card
-                  className="w-[280px] overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover-elevate cursor-pointer"
-                  data-testid={`card-seasonal-offer-${offer.id}`}
-                >
-                  <div className="relative aspect-[4/3] bg-gray-300">
+                <Card className="w-72 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
+                  <div className="relative h-40 overflow-hidden">
                     <img
                       src={offer.image}
                       alt={title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       loading="lazy"
-                      crossOrigin="anonymous"
-                      referrerPolicy="no-referrer"
+                      width="288"
+                      height="160"
                     />
                   </div>
-                  <div className="p-4 text-white">
-                    <h3 className="font-display font-bold text-lg mb-2 text-accent">{title}</h3>
-                    <p className="text-white/70 text-sm">{c.from}</p>
-                    <div className="flex items-baseline gap-1 flex-wrap">
-                      <span className="text-xl font-bold text-accent">{offer.price}{c.currency}</span>
+                  <div className="p-4">
+                    <h3 className="font-display font-bold text-primary mb-2">{title}</h3>
+                    <p className="text-xs text-gray-600 mb-1">{c.from}</p>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-2xl font-bold text-accent">${offer.price}</span>
+                      <span className="text-sm text-gray-500">{c.currency}</span>
                     </div>
-                    <p className="text-white/60 text-xs mt-1">{c.perPerson}</p>
+                    <p className="text-xs text-gray-500 mt-1">{c.perPerson}</p>
                   </div>
                 </Card>
               </a>
