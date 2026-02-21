@@ -126,9 +126,43 @@ function ProtectedRoute({ component: Comp }: { component: React.ComponentType })
   return <Comp />;
 }
 
+function MalformedLangRedirect() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const malformedPattern = /^\/((?:pt|en|es)(?:-br(?:-br)+))(\/.+)?$/;
+    const invalidLangPattern = /^\/(en-br|es-br)(\/.+)?$/;
+    
+    let match = location.match(malformedPattern);
+    if (match) {
+      const prefix = match[1];
+      const rest = match[2] || '';
+      let cleanPrefix = "es";
+      if (prefix.startsWith("pt")) cleanPrefix = "pt-br";
+      else if (prefix.startsWith("en")) cleanPrefix = "en";
+      else if (prefix.startsWith("es")) cleanPrefix = "es";
+      window.location.replace(`/${cleanPrefix}${rest}`);
+      return;
+    }
+    
+    match = location.match(invalidLangPattern);
+    if (match) {
+      const prefix = match[1];
+      const rest = match[2] || '';
+      let cleanPrefix = "es";
+      if (prefix === "en-br") cleanPrefix = "en";
+      else if (prefix === "es-br") cleanPrefix = "es";
+      window.location.replace(`/${cleanPrefix}${rest}`);
+    }
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
     <main id="main-content" role="main">
+      <MalformedLangRedirect />
       <Switch>
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
@@ -301,6 +335,7 @@ function Router() {
       <Route path="/en/destinations/:slug" component={DestinationPage} />
       <Route path="/en/experiences/:slug" component={ExperiencePage} />
       <Route path="/en/packages/:slug" component={PackagePage} />
+      <Route path="/en/blog" component={Blog} />
       <Route path="/en/blog/:country" component={Blog} />
       <Route path="/en/blog/post/:slug" component={BlogPost} />
 

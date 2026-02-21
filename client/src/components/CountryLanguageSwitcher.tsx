@@ -72,7 +72,7 @@ export function CountryLanguageSwitcher() {
 
     // Navigate to localized URL
     const currentPath = location;
-    const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+    const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
     const langPrefix = country.lang === "pt" ? "/pt-br" : `/${country.lang}`;
     window.location.href = `${langPrefix}${pathWithoutLang}`;
   };

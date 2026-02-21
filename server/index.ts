@@ -119,17 +119,37 @@ app.get("/es-br/*", (req, res) =>
   res.redirect(301, `/pt-br${req.path.slice(6)}`),
 );
 
+// Fix: /en-br -> /en (invalid language prefix)
+app.get("/en-br", (_req, res) => res.redirect(301, "/en"));
+app.get("/en-br/*", (req, res) =>
+  res.redirect(301, `/en${req.path.slice(6)}`),
+);
+
 // Fix: /es-caribe -> / (no es-caribe route exists)
 app.get("/es-caribe", (_req, res) => res.redirect(301, "/"));
 app.get("/es-caribe/*", (_req, res) => res.redirect(301, "/"));
 
 // Fix: /pt-br/pt-br/... chain (duplicated prefix from old hreflang bug)
-// Preserves any trailing subpath after stripping repeated /pt-br segments
 app.use((req, res, next) => {
   const match = req.path.match(/^(\/pt-br)(\/pt-br)+(\/.*)?$/);
   if (match) {
     const remaining = match[3] || "";
     return res.redirect(301, `/pt-br${remaining}`);
+  }
+  next();
+});
+
+// Fix: Malformed language prefixes with repeated -br (e.g. /pt-br-br-br/blog -> /pt-br/blog)
+app.use((req, res, next) => {
+  const malformedMatch = req.path.match(/^\/((?:pt|en|es)(?:-br){2,})(\/.*)?$/);
+  if (malformedMatch) {
+    const prefix = malformedMatch[1];
+    const rest = malformedMatch[2] || '';
+    let cleanPrefix = 'es';
+    if (prefix.startsWith('pt')) cleanPrefix = 'pt-br';
+    else if (prefix.startsWith('en')) cleanPrefix = 'en';
+    const query = req.originalUrl.includes('?') ? req.originalUrl.substring(req.originalUrl.indexOf('?')) : '';
+    return res.redirect(301, `/${cleanPrefix}${rest}${query}`);
   }
   next();
 });

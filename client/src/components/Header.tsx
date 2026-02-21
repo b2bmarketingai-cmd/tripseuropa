@@ -477,7 +477,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/es${pathWithoutLang}`;
                       setLanguage("es");
                       window.location.href = newPath;
@@ -491,7 +491,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/en${pathWithoutLang}`;
                       setLanguage("en");
                       window.location.href = newPath;
@@ -505,7 +505,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/pt-br${pathWithoutLang}`;
                       setLanguage("pt");
                       window.location.href = newPath;
@@ -543,7 +543,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/es${pathWithoutLang}`;
                       setLanguage("es");
                       window.location.href = newPath;
@@ -556,7 +556,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/en${pathWithoutLang}`;
                       setLanguage("en");
                       window.location.href = newPath;
@@ -569,7 +569,7 @@ export function Header() {
                   <DropdownMenuItem
                     onClick={() => {
                       const currentPath = location;
-                      const pathWithoutLang = currentPath.replace(/^\/(es|en|pt|pt-br)/, '');
+                      const pathWithoutLang = currentPath.replace(/^\/(pt-br|es-co|es-mx|es-ar|es-pe|es-pa|es-cr|es-do|en-co|en-mx|en-ar|es\/caribe|es|en|pt)(?:(-br)*)/, '');
                       const newPath = `/pt-br${pathWithoutLang}`;
                       setLanguage("pt");
                       window.location.href = newPath;
