@@ -152,17 +152,17 @@ app.use((req, res, next) => {
   next();
 });
 
-// Fix: Malformed language prefixes with repeated -br (e.g. /pt-br-br-br/blog -> /pt-br/blog)
+// Fix: Malformed language prefixes with repeated -br (e.g. /pt-br-br-br/blog -> /pt-br/blog, /es-br-br-br/blog -> /blog)
 app.use((req, res, next) => {
   const malformedMatch = req.path.match(/^\/((?:pt|en|es)(?:-br){2,})(\/.*)?$/);
   if (malformedMatch) {
     const prefix = malformedMatch[1];
     const rest = malformedMatch[2] || '';
-    let cleanPrefix = 'es';
-    if (prefix.startsWith('pt')) cleanPrefix = 'pt-br';
-    else if (prefix.startsWith('en')) cleanPrefix = 'en';
+    let cleanPrefix = '';
+    if (prefix.startsWith('pt')) cleanPrefix = '/pt-br';
+    else if (prefix.startsWith('en')) cleanPrefix = '/en';
     const query = req.originalUrl.includes('?') ? req.originalUrl.substring(req.originalUrl.indexOf('?')) : '';
-    return res.redirect(301, `/${cleanPrefix}${rest}${query}`);
+    return res.redirect(301, `${cleanPrefix}${rest}${query}` || '/');
   }
   next();
 });

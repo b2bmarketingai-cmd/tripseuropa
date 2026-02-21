@@ -240,6 +240,7 @@ function Router() {
       <Route path="/es-co/paquetes/:slug" component={PackagePage} />
       <Route path="/es-co/ofertas/:slug" component={OfferPage} />
       <Route path="/es-co/blog" component={Blog} />
+      <Route path="/es-co/blog/post/:slug" component={BlogPost} />
       <Route path="/es-co/blog/:country" component={Blog} />
 
       <Route path="/es-mx" component={Home} />
@@ -251,18 +252,35 @@ function Router() {
       <Route path="/es-mx/paquetes/:slug" component={PackagePage} />
       <Route path="/es-mx/ofertas/:slug" component={OfferPage} />
       <Route path="/es-mx/blog" component={Blog} />
+      <Route path="/es-mx/blog/post/:slug" component={BlogPost} />
       <Route path="/es-mx/blog/:country" component={Blog} />
 
       <Route path="/pt-br" component={Home} />
       <Route path="/pt-br/" component={Home} />
       <Route path="/pt-br/destinos" component={Destinations} />
       <Route path="/pt-br/destinos/:slug" component={DestinationPage} />
+      <Route path="/pt-br/destinations" component={Destinations} />
+      <Route path="/pt-br/destinations/:slug" component={DestinationPage} />
       <Route path="/pt-br/paquetes" component={Packages} />
+      <Route path="/pt-br/packages" component={Packages} />
       <Route path="/pt-br/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/pt-br/experiences/:slug" component={ExperiencePage} />
       <Route path="/pt-br/paquetes/:slug" component={PackagePage} />
+      <Route path="/pt-br/packages/:slug" component={PackagePage} />
       <Route path="/pt-br/ofertas/:slug" component={OfferPage} />
       <Route path="/pt-br/blog" component={Blog} />
+      <Route path="/pt-br/blog/post/:slug" component={BlogPost} />
       <Route path="/pt-br/blog/:country" component={Blog} />
+      <Route path="/pt-br/rewards" component={Rewards} />
+      <Route path="/pt-br/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/pt-br/travel-advisor" component={TravelAdvisor} />
+      <Route path="/pt-br/travel-assistant" component={TravelAssistant} />
+      <Route path="/pt-br/asistente" component={TravelAssistant} />
+      <Route path="/pt-br/contact" component={Contact} />
+      <Route path="/pt-br/about" component={About} />
+      <Route path="/pt-br/privacy" component={Privacy} />
+      <Route path="/pt-br/testimonios" component={Testimonials} />
+      <Route path="/pt-br/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/pt-br/forum" component={Forum} />
       <Route path="/pt-br/foro" component={Forum} />
 
@@ -275,6 +293,7 @@ function Router() {
       <Route path="/es-ar/paquetes/:slug" component={PackagePage} />
       <Route path="/es-ar/ofertas/:slug" component={OfferPage} />
       <Route path="/es-ar/blog" component={Blog} />
+      <Route path="/es-ar/blog/post/:slug" component={BlogPost} />
       <Route path="/es-ar/blog/:country" component={Blog} />
 
       <Route path="/es-pe" component={Home} />
@@ -286,6 +305,7 @@ function Router() {
       <Route path="/es-pe/paquetes/:slug" component={PackagePage} />
       <Route path="/es-pe/ofertas/:slug" component={OfferPage} />
       <Route path="/es-pe/blog" component={Blog} />
+      <Route path="/es-pe/blog/post/:slug" component={BlogPost} />
       <Route path="/es-pe/blog/:country" component={Blog} />
       <Route path="/es-pe/forum" component={Forum} />
       <Route path="/es-pe/foro" component={Forum} />
@@ -299,6 +319,7 @@ function Router() {
       <Route path="/es-pa/paquetes/:slug" component={PackagePage} />
       <Route path="/es-pa/ofertas/:slug" component={OfferPage} />
       <Route path="/es-pa/blog" component={Blog} />
+      <Route path="/es-pa/blog/post/:slug" component={BlogPost} />
       <Route path="/es-pa/blog/:country" component={Blog} />
 
       <Route path="/es-cr" component={Home} />
@@ -310,6 +331,7 @@ function Router() {
       <Route path="/es-cr/paquetes/:slug" component={PackagePage} />
       <Route path="/es-cr/ofertas/:slug" component={OfferPage} />
       <Route path="/es-cr/blog" component={Blog} />
+      <Route path="/es-cr/blog/post/:slug" component={BlogPost} />
       <Route path="/es-cr/blog/:country" component={Blog} />
       <Route path="/es-cr/forum" component={Forum} />
       <Route path="/es-cr/foro" component={Forum} />
@@ -323,6 +345,7 @@ function Router() {
       <Route path="/es-do/paquetes/:slug" component={PackagePage} />
       <Route path="/es-do/ofertas/:slug" component={OfferPage} />
       <Route path="/es-do/blog" component={Blog} />
+      <Route path="/es-do/blog/post/:slug" component={BlogPost} />
       <Route path="/es-do/blog/:country" component={Blog} />
 
       <Route path="/es/caribe" component={Home} />
@@ -336,8 +359,14 @@ function Router() {
       <Route path="/en/experiences/:slug" component={ExperiencePage} />
       <Route path="/en/packages/:slug" component={PackagePage} />
       <Route path="/en/blog" component={Blog} />
-      <Route path="/en/blog/:country" component={Blog} />
       <Route path="/en/blog/post/:slug" component={BlogPost} />
+      <Route path="/en/blog/:country" component={Blog} />
+      <Route path="/en/rewards" component={Rewards} />
+      <Route path="/en/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/en/travel-advisor" component={TravelAdvisor} />
+      <Route path="/en/contact" component={Contact} />
+      <Route path="/en/about" component={About} />
+      <Route path="/en/privacy" component={Privacy} />
 
       <Route path="/en-ar" component={Home} />
       <Route path="/en-ar/" component={Home} />
@@ -345,6 +374,9 @@ function Router() {
       <Route path="/en-ar/destinations/:slug" component={DestinationPage} />
       <Route path="/en-ar/experiences/:slug" component={ExperiencePage} />
       <Route path="/en-ar/packages/:slug" component={PackagePage} />
+      <Route path="/en-ar/blog" component={Blog} />
+      <Route path="/en-ar/blog/post/:slug" component={BlogPost} />
+      <Route path="/en-ar/blog/:country" component={Blog} />
 
       <Route path="/en-co" component={Home} />
       <Route path="/en-co/" component={Home} />
@@ -352,6 +384,9 @@ function Router() {
       <Route path="/en-co/destinations/:slug" component={DestinationPage} />
       <Route path="/en-co/experiences/:slug" component={ExperiencePage} />
       <Route path="/en-co/packages/:slug" component={PackagePage} />
+      <Route path="/en-co/blog" component={Blog} />
+      <Route path="/en-co/blog/post/:slug" component={BlogPost} />
+      <Route path="/en-co/blog/:country" component={Blog} />
 
       <Route path="/en-mx" component={Home} />
       <Route path="/en-mx/" component={Home} />
@@ -359,6 +394,9 @@ function Router() {
       <Route path="/en-mx/destinations/:slug" component={DestinationPage} />
       <Route path="/en-mx/experiences/:slug" component={ExperiencePage} />
       <Route path="/en-mx/packages/:slug" component={PackagePage} />
+      <Route path="/en-mx/blog" component={Blog} />
+      <Route path="/en-mx/blog/post/:slug" component={BlogPost} />
+      <Route path="/en-mx/blog/:country" component={Blog} />
 
       <Route path="/routes/:route" component={RouteTemplate} />
 
