@@ -1,0 +1,72 @@
+AUDITORÍA COMPLETA - ERRORES CRÍTICOS DETECTADOS EN TRIPSEUROPA.COM
+
+He hecho una auditoría completa del sitio y encontré los siguientes errores 404 URGENTES que deben corregirse en App.tsx:
+
+**PROBLEMA 1 - Rutas en español faltantes (404):**
+- /paquetes → 404 (solo existe /packages, pero el menú y footer usan /paquetes)
+- /contacto → 404 (solo existe /contact)
+- /nosotros → 404 (solo existe /about)
+- /herramientas → 404 (solo existe /tools)
+
+**PROBLEMA 2 - Prefijo /es/ genérico causando 404:**
+- /es/paquetes → 404
+- /es/contacto → 404
+- /es/nosotros → 404
+- /es/herramientas → 404
+
+**SOLUCIÓN REQUERIDA en client/src/App.tsx:**
+
+Añadir en el Router estas rutas adicionales (alias en español):
+
+```
+<Route path="/paquetes" component={Packages} />
+<Route path="/contacto" component={Contact} />
+<Route path="/nosotros" component={About} />
+<Route path="/herramientas" component={Tools} />
+<Route path="/sobre-nosotros" component={About} />
+```
+
+También añadir soporte completo para prefijo /es/ genérico (igual que /es-co, /es-mx etc):
+```
+<Route path="/es" component={Home} />
+<Route path="/es/" component={Home} />
+<Route path="/es/destinos" component={Destinations} />
+<Route path="/es/destinos/:slug" component={DestinationPage} />
+<Route path="/es/paquetes" component={Packages} />
+<Route path="/es/paquetes/:slug" component={PackagePage} />
+<Route path="/es/contacto" component={Contact} />
+<Route path="/es/nosotros" component={About} />
+<Route path="/es/blog" component={Blog} />
+<Route path="/es/blog/:country" component={Blog} />
+<Route path="/es/blog/post/:slug" component={BlogPost} />
+<Route path="/es/experiencias/:slug" component={ExperiencePage} />
+<Route path="/es/ofertas/:slug" component={OfferPage} />
+<Route path="/es/ofertas-ultima-hora" component={LastMinuteOffers} />
+<Route path="/es/herramientas" component={Tools} />
+<Route path="/es/foro" component={Forum} />
+<Route path="/es/forum" component={Forum} />
+<Route path="/es/requisitos-visa" component={VisaRequirements} />
+<Route path="/es/esim" component={ESim} />
+<Route path="/es/rewards" component={Rewards} />
+<Route path="/es/testimonios" component={Testimonials} />
+<Route path="/es/privacy" component={Privacy} />
+<Route path="/es/cookies" component={CookiesPage} />
+<Route path="/es/terminos-condiciones" component={TermsConditions} />
+<Route path="/es/condiciones-venta" component={CondicionesVenta} />
+```
+
+También verificar en server/index.ts que existan redirects 301 para:
+- /es/* que redirige correctamente al español base
+
+**TAMBIÉN:** Verificar que el footer y los menús de navegación usen las rutas correctas. El footer actualmente tiene links rotos a /paquetes, /contacto y /nosotros. Si esas páginas ahora tienen rutas definidas, debería funcionar. Si el footer usa esas URLs, déjalas como están.
+
+Después de hacer los cambios, verificar que estas URLs respondan 200:
+- /paquetes
+- /contacto
+- /nosotros
+- /es/paquetes
+- /es/contacto
+- /es/blog
+- /es/destinos
+
+Publicar cuando todo esté verificado.

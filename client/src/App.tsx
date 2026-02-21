@@ -209,7 +209,12 @@ function Router() {
       <Route path="/foro" component={Forum} />
       <Route path="/comunidad" component={Forum} />
       <Route path="/contact" component={Contact} />
+      <Route path="/contacto" component={Contact} />
       <Route path="/about" component={About} />
+      <Route path="/nosotros" component={About} />
+      <Route path="/sobre-nosotros" component={About} />
+      <Route path="/paquetes" component={Packages} />
+      <Route path="/herramientas" component={Tools} />
       <Route path="/testimonios" component={Testimonials} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/condiciones-venta" component={CondicionesVenta} />
@@ -351,6 +356,43 @@ function Router() {
       <Route path="/es/caribe" component={Home} />
       <Route path="/es/caribe/" component={Home} />
       <Route path="/es/caribe/destinos" component={Destinations} />
+
+      <Route path="/es" component={Home} />
+      <Route path="/es/" component={Home} />
+      <Route path="/es/destinos" component={Destinations} />
+      <Route path="/es/destinos/:slug" component={DestinationPage} />
+      <Route path="/es/destinations" component={Destinations} />
+      <Route path="/es/destinations/:slug" component={DestinationPage} />
+      <Route path="/es/paquetes" component={Packages} />
+      <Route path="/es/paquetes/:slug" component={PackagePage} />
+      <Route path="/es/contacto" component={Contact} />
+      <Route path="/es/contact" component={Contact} />
+      <Route path="/es/nosotros" component={About} />
+      <Route path="/es/about" component={About} />
+      <Route path="/es/blog" component={Blog} />
+      <Route path="/es/blog/post/:slug" component={BlogPost} />
+      <Route path="/es/blog/:country" component={Blog} />
+      <Route path="/es/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es/experiences/:slug" component={ExperiencePage} />
+      <Route path="/es/ofertas/:slug" component={OfferPage} />
+      <Route path="/es/ofertas-ultima-hora" component={LastMinuteOffers} />
+      <Route path="/es/herramientas" component={Tools} />
+      <Route path="/es/tools" component={Tools} />
+      <Route path="/es/foro" component={Forum} />
+      <Route path="/es/forum" component={Forum} />
+      <Route path="/es/requisitos-visa" component={VisaRequirements} />
+      <Route path="/es/esim" component={ESim} />
+      <Route path="/es/rewards" component={Rewards} />
+      <Route path="/es/testimonios" component={Testimonials} />
+      <Route path="/es/privacy" component={Privacy} />
+      <Route path="/es/cookies" component={CookiesPage} />
+      <Route path="/es/terminos-condiciones" component={TermsConditions} />
+      <Route path="/es/condiciones-venta" component={CondicionesVenta} />
+      <Route path="/es/travel-advisor" component={TravelAdvisor} />
+      <Route path="/es/travel-assistant" component={TravelAssistant} />
+      <Route path="/es/asistente" component={TravelAssistant} />
+      <Route path="/es/vacaciones-europa" component={VacacionesEuropa} />
+      <Route path="/es/travel-style/:slug" component={TravelStylePage} />
 
       <Route path="/en" component={Home} />
       <Route path="/en/" component={Home} />
