@@ -11,6 +11,7 @@ import { translateText, translateBatch, auditSpanishContent, localizationConfigs
 import { researchKeywords, generateContentBrief, analyzeCompetitor, countryConfigs } from "./perplexity";
 import { generateSEOContent, translateContent, generateSchemaMarkup } from "./content-generator";
 import { registerSitemapRoutes } from "./sitemaps";
+import { registerGeminiRoutes } from "./gemini-images";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -25,6 +26,9 @@ export async function registerRoutes(
   
   // 2. SEO Sitemaps
   registerSitemapRoutes(app);
+  
+  // 3. Gemini Image Generation
+  registerGeminiRoutes(app);
 
   // 3. Application Routes
 

@@ -98,7 +98,25 @@ export default function BlogPost() {
   // Use URL-based language detection instead of i18n context
   const currentLanguage = getLanguageFromPath();
 
-  const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => p.slug === slug || p.id === slug);
+  const getText = (obj: any): string => {
+    if (!obj) return '';
+    if (typeof obj === 'string') return obj;
+    return obj[currentLanguage] || obj.es || obj.en || '';
+  };
+  const getList = (obj: any): string[] => {
+    if (!obj) return [];
+    if (Array.isArray(obj)) return obj;
+    return obj[currentLanguage] || obj.es || obj.en || [];
+  };
+
+  const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => {
+    if (p.slug === slug || p.id === slug) return true;
+    if (p.slugs) {
+      const slugVal = p.slugs[currentLanguage] || p.slugs.es;
+      if (slugVal === slug) return true;
+    }
+    return false;
+  });
   const simplePost = !fullPost ? BLOG_POSTS_SIMPLE.find((p: SimpleBlogPost) => p.id === slug) : null;
   const post = fullPost || simplePost;
   
@@ -122,8 +140,8 @@ export default function BlogPost() {
     );
   }
 
-  const title = (post.title as Record<string, string>)[currentLanguage] || post.title.es;
-  const excerpt = (post.excerpt as Record<string, string>)[currentLanguage] || post.excerpt.es;
+  const title = getText(post.title);
+  const excerpt = getText(post.excerpt);
   const postSlug = fullPost?.slug || post.id;
   const isoDate = parseSpanishDate(post.date);
 
@@ -215,31 +233,44 @@ export default function BlogPost() {
               {excerpt}
             </p>
 
-            {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => (
-              <section key={index} className="mb-10" data-testid={`section-content-${index}`}>
-                <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{section.title}</h2>
-                
-                <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{section.content}</p>
-                
-                {section.list && (
-                  <ul className="list-disc pl-6 space-y-2 text-foreground" data-testid={`list-section-${index}`}>
-                    {section.list.map((item: string, i: number) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            ))}
+            {fullPost?.sections && fullPost.sections.map((section: BlogSection, index: number) => {
+              const sectionTitle = getText(section.title);
+              const sectionContent = getText(section.content);
+              const sectionList = getList(section.list);
+              return (
+                <section key={index} className="mb-10" data-testid={`section-content-${index}`}>
+                  <h2 className="text-2xl font-display text-accent mb-4" data-testid={`text-section-title-${index}`}>{sectionTitle}</h2>
+                  
+                  {section.image && (
+                    <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-4">
+                      <img src={section.image} alt={sectionTitle} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                  )}
+                  
+                  <p className="text-foreground leading-relaxed mb-4 whitespace-pre-line" data-testid={`text-section-content-${index}`}>{sectionContent}</p>
+                  
+                  {sectionList.length > 0 && (
+                    <ul className="list-disc pl-6 space-y-2 text-foreground" data-testid={`list-section-${index}`}>
+                      {sectionList.map((item: string, i: number) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              );
+            })}
 
             {fullPost?.faqs && fullPost.faqs.length > 0 && (
               <section className="mt-12" data-testid="section-faq">
-                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">Preguntas Frecuentes</h2>
+                <h2 className="text-2xl font-display text-accent mb-6" data-testid="text-faq-title">
+                  {currentLanguage === 'en' ? 'Frequently Asked Questions' : currentLanguage === 'pt' ? 'Perguntas Frequentes' : 'Preguntas Frecuentes'}
+                </h2>
                 <div className="space-y-4">
-                  {fullPost.faqs.map((faq: { question: string; answer: string }, index: number) => (
+                  {fullPost.faqs.map((faq: { question: any; answer: any }, index: number) => (
                     <Card key={index} data-testid={`card-faq-${index}`}>
                       <CardContent className="p-4">
-                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{faq.question}</h3>
-                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{faq.answer}</p>
+                        <h3 className="font-semibold text-foreground mb-2" data-testid={`text-faq-question-${index}`}>{getText(faq.question)}</h3>
+                        <p className="text-muted-foreground" data-testid={`text-faq-answer-${index}`}>{getText(faq.answer)}</p>
                       </CardContent>
                     </Card>
                   ))}

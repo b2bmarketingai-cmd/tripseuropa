@@ -7610,6 +7610,16 @@ export function getBlogPostBySlug(slug: string, language: "es" | "en" | "pt" = "
   });
 }
 
+import { BLOG_POSTS_EXPANDED } from './blogDataExpanded';
+
+const existingIds = new Set(BLOG_POSTS_DATA.map(p => p.id));
+for (const post of BLOG_POSTS_EXPANDED) {
+  if (!existingIds.has(post.id)) {
+    BLOG_POSTS_DATA.push(post);
+    existingIds.add(post.id);
+  }
+}
+
 export function getLocalizedBlogSlug(post: BlogPostData, language: "es" | "en" | "pt"): string {
   if (post.slugs && post.slugs[language]) {
     return post.slugs[language];

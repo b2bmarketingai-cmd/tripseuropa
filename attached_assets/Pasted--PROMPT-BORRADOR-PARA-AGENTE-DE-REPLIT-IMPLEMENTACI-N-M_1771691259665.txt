@@ -1,0 +1,216 @@
+## PROMPT BORRADOR PARA AGENTE DE REPLIT — IMPLEMENTACIÓN MASIVA DE BLOGS MULTILINGÜE
+
+***
+
+```
+MISIÓN CRÍTICA: Implementar todos los blogs de viajes de los PDFs adjuntos en el sistema de blog de tripseuropa.com en 3 idiomas con imágenes generadas por Gemini API.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔑 CREDENCIAL GEMINI API
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+API KEY: AIzaSyDy4DXC4lILtY_psc2bWxNYB0JZZ5dP9h0
+Modelo imágenes: gemini-2.0-flash-preview-image-generation
+Endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-preview-image-generation:generateContent
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 ARCHIVOS A MODIFICAR / CREAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. client/src/data/blogPosts.ts (o el archivo donde están definidos los posts)
+2. client/src/data/blogPostsEn.ts (inglés)
+3. client/src/data/blogPostsPt.ts (portugués)
+4. server/routes.ts o server/blog-routes.ts (rutas)
+5. client/public/images/blog/ (carpeta para imágenes generadas)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🌐 URLS OBJETIVO (NO MODIFICAR)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Español ES  → https://tripseuropa.com/blog
+• Inglés EN   → https://tripseuropa.com/en/blog
+• Portugués   → https://tripseuropa.com/pt-br/blog
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 INSTRUCCIONES GENERALES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1 — ESTRUCTURA DE DATOS DE CADA BLOG POST
+Cada blog post debe tener EXACTAMENTE esta estructura (NO alterar slugs, títulos ni metadescripciones de los PDFs):
+
+{
+  id: [número único incremental],
+  slug: "[slug-exacto-del-pdf]",
+  lang: "es" | "en" | "pt",
+  title: "[título exacto del PDF]",
+  metaDescription: "[meta descripción ampliada del PDF]",
+  category: "[categoría según el bloque del PDF]",
+  keywords: "[palabras clave del PDF]",
+  content: "[texto completo expandido mínimo 800 palabras basado en el título y meta descripción]",
+  imageUrl: "/images/blog/[slug].webp",
+  imageAlt: "[descripción alt accesible de la imagen]",
+  publishDate: "2026-02-21",
+  readTime: [número entre 5-12] 
+}
+
+PASO 2 — GENERACIÓN DE IMÁGENES CON GEMINI API
+Para CADA blog post, genera una imagen usando la API de Gemini con este código:
+
+async function generateBlogImage(blogTitle: string, slug: string): Promise<string> {
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-preview-image-generation:generateContent?key=AIzaSyDy4DXC4lILtY_psc2bWxNYB0JZZ5dP9h0`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{
+            text: `Professional travel photography for a European travel blog. Topic: ${blogTitle}. Style: bright, inspiring, high quality travel photo, no text overlays, no logos, realistic photography style, 16:9 ratio, vibrant colors.`
+          }]
+        }],
+        generationConfig: {
+          responseModalities: ["IMAGE"],
+          imageSizeConfig: { width: 1200, height: 675 }
+        }
+      })
+    }
+  );
+  
+  const data = await response.json();
+  const imageBase64 = data.candidates[0].content.parts[0].inlineData.data;
+  const imagePath = `client/public/images/blog/${slug}.webp`;
+  
+  // Guardar imagen en sistema de archivos
+  const fs = require('fs');
+  fs.mkdirSync('client/public/images/blog', { recursive: true });
+  fs.writeFileSync(imagePath, Buffer.from(imageBase64, 'base64'));
+  
+  return `/images/blog/${slug}.webp`;
+}
+
+IMPORTANTE: Generar la imagen ANTES de guardar el post. Si la API falla, usar imagen de fallback de Unsplash relacionada al tema.
+
+PASO 3 — LISTA COMPLETA DE BLOGS A IMPLEMENTAR
+
+━━━━━━━━━━━━━━
+📗 BLOQUE ES — ESPAÑOL (client/src/data/blogPosts.ts)
+URL: https://tripseuropa.com/blog/[slug]
+━━━━━━━━━━━━━━
+
+BLOQUE 1 — Destinos Clásicos:
+1.  slug: "guia-completa-paris-que-ver-en-3-5-y-7-dias"
+    title: "Guía Completa de París: Qué Ver en 3, 5 y 7 Días"
+    category: "Destinos Clásicos"
+
+2.  slug: "roma-en-un-fin-de-semana-el-itinerario-expres"
+    title: "Roma en un Fin de Semana: El Itinerario Exprés"
+    category: "Destinos Clásicos"
+
+3.  slug: "los-10-mejores-museos-de-europa-que-no-te-puedes-perder"
+    title: "Los 10 Mejores Museos de Europa que No Te Puedes Perder"
+    category: "Destinos Clásicos"
+
+4.  slug: "londres-mas-alla-de-big-ben-barrios-hipsters-y-ocultos"
+    title: "Londres Más Allá de Big Ben: Barrios Hipsters y Ocultos"
+    category: "Destinos Clásicos"
+
+5.  slug: "madrid-y-barcelona-la-dicotomia-espanola"
+    title: "Madrid y Barcelona: La Dicotomía Española"
+    category: "Destinos Clásicos"
+
+6.  slug: "el-amor-en-venecia-guia-para-parejas-y-luna-de-miel"
+    title: "El Amor en Venecia: Guía para Parejas y Luna de Miel"
+    category: "Destinos Clásicos"
+
+7.  slug: "zurich-y-los-alpes-suizos-naturaleza-pura"
+    title: "Zúrich y los Alpes Suizos: Naturaleza Pura"
+    category: "Destinos Clásicos"
+
+8.  slug: "amsterdam-sin-multitudes-secretos-de-la-ciudad-de-los-canales"
+    title: "Ámsterdam sin Multitudes: Secretos de la Ciudad de los Canales"
+    category: "Destinos Clásicos"
+
+9.  slug: "la-costa-azul-francesa-niza-cannes-y-monaco"
+    title: "La Costa Azul Francesa: Niza, Cannes y Mónaco"
+    category: "Destinos Clásicos"
+
+10. slug: "budapest-la-perla-del-danubio"
+    title: "Budapest: La Perla del Danubio"
+    category: "Destinos Clásicos"
+
+BLOQUE 2 — Paquetes Todo Incluido:
+11. slug: "europa-en-15-dias-el-circuito-perfecto-para-primerizos"
+12. slug: "vale-la-pena-un-paquete-todo-incluido-a-europa"
+13. slug: "circuitos-por-europa-2026-novedades-y-rutas"
+14. slug: "viajes-en-grupo-a-europa-por-que-son-la-opcion-mas-segura"
+15. slug: "europa-de-lujo-hoteles-5-estrellas-y-experiencias-vip"
+16. slug: "europa-con-ninos-el-paquete-familiar-ideal"
+17. slug: "europa-para-seniors-ritmo-tranquilo-y-comodidad"
+18. slug: "comparativa-circuito-por-el-oeste-vs-circuito-por-el-este"
+19. slug: "paquetes-a-europa-desde-mexico-salidas-garantizadas"
+20. slug: "paquetes-a-europa-desde-colombia-conectando-dos-mundos"
+
+BLOQUE 3 — Consejos Prácticos:
+21. slug: "etias-2026-todo-lo-que-necesitas-saber-sobre-el-nuevo-visado"
+22. slug: "maletas-de-mano-vs-equipaje-facturado-que-llevar"
+23. slug: "el-eurail-pass-es-la-mejor-opcion-para-moverse"
+24. slug: "presupuesto-real-cuanto-cuesta-un-viaje-a-europa"
+25. slug: "seguro-de-viaje-a-europa-por-que-es-obligatorio"
+26. slug: "cuando-viajar-a-europa-guia-por-temporadas"
+27. slug: "comida-en-europa-consejos-para-ahorrar-sin-dejar-de-comer-bien"
+28. slug: "moneda-y-pagos-usar-tarjeta-o-efectivo"
+29. slug: "como-llegar-al-centro-de-europa-desde-el-aeropuerto"
+30. slug: "idioma-en-europa-sobrevivir-sin-saber-ingles"
+
+BLOQUE 4 — Experiencias Únicas:
+31. slug: "los-mercados-navidenos-mas-magicos-de-europa"
+32. slug: "ruta-del-vino-las-bodegas-de-burdeos-y-la-toscana"
+33. slug: "la-ruta-de-los-castillos-de-neuschwanstein-a-loira"
+34. slug: "oktoberfest-en-munich-la-fiesta-de-la-cerveza"
+35. slug: "europa-gotica-una-ruta-por-la-edad-media"
+36. slug: "cruceros-por-el-mediterraneo-costa-griega-e-italiana"
+37. slug: "buscando-la-aurora-boreal-en-escandinavia"
+38. slug: "carnaval-de-venecia-mascaras-y-misterio"
+39. slug: "playas-de-europa-mas-alla-del-mediterraneo"
+40. slug: "tours-gastronomicos-tapas-en-espana-y-pasta-en-italia"
+
+BLOQUE 5 — Destinos Emergentes:
+41. slug: "croacia-el-adriatico-azul"
+42. slug: "eslovenia-el-tesoro-oculto-de-europa"
+43. slug: "praga-ciudad-de-los-cien-campanarios"
+44. slug: "viena-musica-cafe-e-imperialismo"
+45. slug: "polonia-historia-y-resiliencia-en-varsovia-y-cracovia"
+46. slug: "hungria-mas-alla-de-budapest-el-lago-balaton"
+47. slug: "rumania-tierra-de-dracula-y-montanas"
+48. slug: "albania-la-riviera-olvidada"
+
+BLOQUE 12 — Destinos Profundos:
+49. slug: "grecia-islas-continente-ruta-completa"
+50. slug: "estambul-capadocia-dos-mundos-turquia"
+51. slug: "london-alrededores-stonehenge-bath"
+52. slug: "paises-bajos-mas-alla-amsterdam"
+53. slug: "finlandia-tierra-lagos-aurora"
+54. slug: "belgica-bruges-gante-bruselas-ruta"
+55. slug: "republica-checa-praga-karlovy-vary"
+56. slug: "hungria-budapest-lago-balaton"
+57. slug: "polonia-cracovia-minas-sal-wieliczka"
+58. slug: "irlanda-dublin-cork-anillo-kerry"
+
+BLOQUE 17 — Cultura y Costumbres:
+59. slug: "propinas-en-europa-cuanto-y-a-quien"
+60. slug: "el-horario-europeo-la-siesta-y-las-cenas-tardias"
+61. slug: "etiqueta-en-los-museos-y-catedrales"
+62. slug: "aprender-frases-basicas-en-5-idiomas-europeos"
+63. slug: "la-cultura-de-la-cerveza-en-alemania-y-belgica"
+64. slug: "el-arte-de-la-sobremesa-en-espana-e-italia"
+65. slug: "fiestas-locales-que-debes-conocer"
+66. slug: "moda-y-estilo-en-europa-como-vestir"
+67. slug: "el-concepto-de-tiempo-en-el-sur-vs-el-norte"
+68. slug: "historia-resumida-de-la-union-europea"
+
+BLOQUE 18 — Cierre y CTA:
+69. slug: "por-que-elegir-trips-europa-para-tu-proxima-aventura"
+70. slug: "ofertas-de-ultima-hora-para-viajar-a-europa"
+71. slug: "regala-un-viaje-a-europa-la-experiencia-perfecta"
+72. slug: "programa-de-lealtad-trips-europa-viaja-mas-paga-menos"
+73. slug: "trabaja-con-nosotros-se-un-distribuidor"
+74. slug: "agenda-tu-asesoria-personalizada-gratuita"
+75. slug: "preguntas-frecuentes-sobre-trips-europa"
+76. slug: "nuestro-comprom

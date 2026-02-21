@@ -119,7 +119,14 @@ All sitemaps include proper hreflang tags for:
 - **BlogFAQ interface**: Uses MultiLangText for question/answer
 - **BlogPostData interface**: Full trilingual support with slugs, title, excerpt, categoryLabel, sections, faqs
 - **Translation count**: 2,534+ Portuguese translations added
-- **All 119 blog posts** have complete Spanish, English, and Brazilian Portuguese content
+- **Blog Data Sources**:
+  - `client/src/lib/blogData.ts` - 118 original trilingual blog posts
+  - `client/src/lib/blogDataExpanded.ts` - 140 new trilingual posts (13 themed groups)
+  - `client/src/pages/BlogPostsSimple.tsx` - 68 simple blog posts
+- **Total**: ~258 blog posts with complete Spanish, English, and Brazilian Portuguese content
+- **Blog Groups**: Classic Destinations, All-Inclusive Packages, Practical Tips, Unique Experiences, Emerging Destinations, PT Neighborhoods, PT Gastronomy, PT Transport, PT Events, Budget/Psychology, Culture/Heritage, EN Logistics, Safety/Wellness
+- **Image Strategy**: Unsplash high-quality photos for all blog posts; Gemini API endpoint available at `/api/generate-blog-image` for custom generation
+- **Multilingual Routing**: Slug-based lookup supports /blog/{es-slug}, /en/blog/{en-slug}, /pt-br/blog/{pt-slug}
 
 ## Branding Assets (PERMANENTE - NO MODIFICAR)
 

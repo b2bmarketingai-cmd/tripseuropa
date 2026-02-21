@@ -1,0 +1,289 @@
+Continuando el prompt completo desde donde quedó:
+
+***
+
+```
+17. slug: "plaka-bairro-antigo-atenas"
+    title: "Plaka: O Bairro Antigo de Atenas"
+
+18. slug: "uptown-area-dourada-dublin"
+    title: "Uptown: A Área Dourada de Dublin"
+
+19. slug: "la-ribera-embaixador-bilbau"
+    title: "La Ribera: O Embaixador de Bilbau"
+
+20. slug: "gamla-stan-cidade-velha-estocolmo"
+    title: "Gamla Stan: A Cidade Velha de Estocolmo"
+
+BLOQUE 22 — Gastronomia Extrema:
+21. slug: "rota-camembert-normandia"
+    title: "A Rota do Camembert na Normandia"
+
+22. slug: "churros-chocolate-madrid-porras"
+    title: "Churros com Chocolate em Madrid vs. Porras"
+
+23. slug: "pate-campagne-adegas-lyon"
+    title: "O Paté de Campagne nas Adegas de Lyon"
+
+24. slug: "tapas-sevilha-bar-bar"
+    title: "Tapas em Sevilha: De Bar em Bar"
+
+25. slug: "ceviche-lisboa-influencia-portuguesa"
+    title: "O Ceviche em Lisboa: Influência Portuguesa"
+
+26. slug: "currywurst-berlim-preco-unidade"
+    title: "O Currywurst de Berlim: O Preço da Unidade"
+
+27. slug: "haggis-neeps-tatties-escocia"
+    title: "Haggis, Neeps e Tatties: O Prato Nacional Escocês"
+
+28. slug: "pasta-carbonara-origem-romano"
+    title: "A Pasta alla Carbonara: A Origem Romana"
+
+29. slug: "vinhos-douro-porto"
+    title: "Os Vinhos do Douro no Porto"
+
+30. slug: "piperade-culinaria-basca-san-sebastian"
+    title: "O Piperade: A Culinária Basca em San Sebastián"
+
+31. slug: "burek-balcanes-pacote-fillo"
+    title: "O Burek dos Balcãs"
+
+32. slug: "surstromming-suecia-peixe-fermentado"
+    title: "O Surströmming: O Peixe Fermentado da Suécia"
+
+33. slug: "baklava-imperio-otomano-turquia-grecia"
+    title: "Baklava: A Sobremesa do Império Otomano"
+
+34. slug: "pizza-napolitana-verdade-massa"
+    title: "A Pizza Napolitana: A Verdade da Massa"
+
+35. slug: "gazpacho-andaluzia-frio-refrescante"
+    title: "O Gazpacho: Frio e Refrescante na Andaluzia"
+
+36. slug: "trufas-negras-perigord"
+    title: "As Trufas Negras do Périgord"
+
+37. slug: "fish-and-chips-semente-batata"
+    title: "O Fish and Chips: A Semente da Batata"
+
+38. slug: "prosciutto-parma-sal-ventos"
+    title: "O Prosciutto di Parma: O Sal dos Ventos"
+
+39. slug: "crepes-bretanha-salgadas-doces"
+    title: "As Crepes da Bretanha: Salgadas e Doces"
+
+BLOQUE 23 — Transporte e Logística:
+40. slug: "navegando-metro-moscou-circulo"
+    title: "Navegando o Metro de Moscovo: O Círculo"
+
+41. slug: "conduzir-esquerda-reino-unido-dicas"
+    title: "Conduzir à Esquerda: Dicas para o Reino Unido"
+
+42. slug: "tgv-bala-francesa"
+    title: "O TGV: A Bala Francesa"
+
+43. slug: "trens-cog-railway-suica"
+    title: "Os Trens Cog Railway da Suíça"
+
+44. slug: "funiculares-lisboa-transporte-vertical"
+    title: "Os Funiculares de Lisboa: Transporte Vertical"
+
+45. slug: "vaporettos-veneza-onibus-mar"
+    title: "Vaporettos em Veneza: O Ônibus do Mar"
+
+46. slug: "u-bahn-munique-metro-alemao"
+    title: "O U-Bahn de Munique: O Metrô Alemão"
+
+47. slug: "eurotunnel-shuttle-carros-mar"
+    title: "O Eurotunnel Shuttle: Carros sob o Mar"
+
+48. slug: "ferry-irlanda-franca-brittany"
+    title: "O Ferry da Irlanda à França: Brittany Ferries"
+
+49. slug: "viagens-onibus-noturno-eurolines"
+    title: "Viagens de Ônibus Noturno: Eurolines"
+
+50. slug: "aluguel-bicicleta-amsterda-ov-fiets"
+    title: "Aluguel de Bicicleta em Amesterdão: A OV-fiets"
+
+51. slug: "voos-low-cost-ryanair-bagagem"
+    title: "Os Voos Low Cost Ryanair e as Regras de Bagagem"
+
+52. slug: "onibus-100-turistico-berlim"
+    title: "O Ônibus 100: O Turístico de Berlim"
+
+53. slug: "travelcard-londres-cartoes-zonas"
+    title: "O Travelcard de Londres: Cartões e Zonas"
+
+54. slug: "boat-budapest-rio-danubio"
+    title: "O Boat Bus de Budapeste: O Rio Danúbio"
+
+55. slug: "acesso-centro-cidades-cdg-fiumicino"
+    title: "Acesso ao Centro de Cidades: CDG, Fiumicino, Heathrow"
+
+56. slug: "aluguel-carro-manual-europa"
+    title: "Aluguel de Carro Manual na Europa"
+
+57. slug: "transporte-grecia-ktel-ferries"
+    title: "O Transporte na Grécia: KTEL e Ferries"
+
+58. slug: "rede-trens-alta-velocidade-ave-espanha"
+    title: "A Rede de Trens de Alta Velocidade AVE em Espanha"
+
+59. slug: "eletricos-praga-visita-historica"
+    title: "Os Elétricos de Praga: Uma Visita Histórica"
+
+BLOQUE 24 — Eventos e Temporadas:
+60. slug: "batalha-laranjas-ivrea-italia"
+    title: "A Batalha das Laranjas em Ivrea, Itália"
+
+61. slug: "festival-luz-lyon-fete-lumieres"
+    title: "O Festival da Luz de Lyon: Fête des Lumières"
+
+62. slug: "procissao-santos-semana-santa-sevilha"
+    title: "A Procissão dos Santos em Sevilha"
+
+63. slug: "festival-cannes-tapete-vermelho"
+    title: "O Festival de Cannes: Tapete Vermelho e Estrelas"
+
+64. slug: "queima-bruxas-edimburgo-bonfire-night"
+    title: "A Queima das Bruxas em Edimburgo"
+
+65. slug: "mercado-musica-innsbruck"
+    title: "O Mercado da Música em Innsbruck"
+
+66. slug: "festival-flores-madeira"
+    title: "Festival das Flores na Madeira"
+
+67. slug: "regata-san-remo-italia"
+    title: "A Regata de San Remo na Itália"
+
+68. slug: "festa-cerveja-praga"
+    title: "A Festa da Cerveja em Praga: České Pivní Světové"
+
+69. slug: "festival-lavanda-valensole-franca"
+    title: "Festival dos Campos de Lavanda em Valensole, França"
+
+70. slug: "noite-museus-europa-long-night"
+    title: "A Noite dos Museus na Europa: Long Night of Museums"
+
+71. slug: "palio-siena-corrida-medieval"
+    title: "O Palio de Siena: Uma Corrida Medieval"
+
+72. slug: "festival-cinema-veneza"
+    title: "O Festival de Cinema de Veneza"
+
+BLOQUE 16 — Segurança e Saúde:
+73. slug: "evitar-carteiristas-em-paris-e-roma"
+    title: "Evitar Carteiristas em Paris e Roma"
+
+74. slug: "kit-de-primeiros-socorros-de-viagem-que-medicamentos-levar"
+    title: "Kit de Primeiros Socorros de Viagem: Que Medicamentos Levar"
+
+75. slug: "seguros-medicos-o-que-cobrir-e-o-que-nao"
+    title: "Seguros Médicos: O Que Cobrir e O Que Não"
+
+76. slug: "comida-vegana-e-vegetariana-na-europa"
+    title: "Comida Vegana e Vegetariana na Europa"
+
+77. slug: "manter-se-em-forma-enquanto-viaja"
+    title: "Manter-se em Forma Enquanto Viaja"
+
+78. slug: "agua-potavel-na-europa-pode-beber-da-torneira"
+    title: "Água Potável na Europa: Pode Beber da Torneira?"
+
+79. slug: "o-que-fazer-se-perder-o-passaporte"
+    title: "O Que Fazer se Perder o Passaporte"
+
+80. slug: "vacinas-e-saude-para-viajar-para-a-europa"
+    title: "Vacinas e Saúde para Viajar para a Europa"
+
+81. slug: "gestao-do-stress-e-ansiedade-em-voos-longos"
+    title: "Gestão do Stress e Ansiedade em Voos Longos"
+
+82. slug: "acidentes-no-exterior-como-agir"
+    title: "Acidentes no Exterior: Como Agir"
+
+BLOQUE 17 — Cultura e Costumes:
+83. slug: "gorjetas-na-europa-quanto-e-a-quem"
+    title: "Gorjetas na Europa: Quanto e a Quem"
+
+84. slug: "o-horario-europeu-a-sesta-e-os-jantares-tardios"
+    title: "O Horário Europeu: A Sesta e os Jantares Tardios"
+
+85. slug: "etiqueta-nos-museus-e-catedrais"
+    title: "Etiqueta nos Museus e Catedrais"
+
+86. slug: "aprender-frases-basicas-em-5-idiomas-europeus"
+    title: "Aprender Frases Básicas em 5 Idiomas Europeus"
+
+87. slug: "a-cultura-da-cerveja-na-alemanha-e-belgica"
+    title: "A Cultura da Cerveja na Alemanha e Bélgica"
+
+88. slug: "a-arte-da-sobremesa-em-espanha-e-italia"
+    title: "A Arte da Sobremesa em Espanha e Itália"
+
+89. slug: "festas-locais-que-deve-conhecer"
+    title: "Festas Locais que Deve Conhecer"
+
+90. slug: "moda-e-estilo-na-europa-como-vestir"
+    title: "Moda e Estilo na Europa: Como Vestir"
+
+91. slug: "o-conceito-de-tempo-no-sul-vs-no-norte"
+    title: "O Conceito de Tempo no Sul vs. no Norte"
+
+92. slug: "historia-resumida-da-uniao-europeia"
+    title: "História Resumida da União Europeia"
+
+BLOQUE 18 — Encerramento e CTA:
+93. slug: "por-que-escolher-a-trips-europa-para-a-sua-proxima-aventura"
+    title: "Por Que Escolher a Trips Europa para a sua Próxima Aventura"
+
+94. slug: "ofertas-de-ultima-hora-para-viajar-para-a-europa"
+    title: "Ofertas de Última Hora para Viajar para a Europa"
+
+95. slug: "ofereca-uma-viagem-a-europa-a-experiencia-perfeita"
+    title: "Ofereça uma Viagem à Europa: A Experiência Perfeita"
+
+96. slug: "programa-de-fidelidade-trips-europa-viaje-mais-pague-menos"
+    title: "Programa de Fidelidade Trips Europa: Viaje Mais, Pague Menos"
+
+97. slug: "trabalhe-conosco-seja-um-distribuidor"
+    title: "Trabalhe Connosco: Seja um Distribuidor"
+
+98. slug: "agende-a-sua-assessoria-personalizada-gratuita"
+    title: "Agende a sua Assessoria Personalizada Gratuita"
+
+99. slug: "perguntas-frequentes-sobre-a-trips-europa"
+    title: "Perguntas Frequentes sobre a Trips Europa"
+
+100. slug: "o-nosso-compromisso-com-a-sustentabilidade"
+     title: "O Nosso Compromisso com a Sustentabilidade"
+
+101. slug: "reviva-a-sua-viagem-carregue-a-sua-historia-no-blog"
+     title: "Reviva a sua Viagem: Carregue a sua História no Blog"
+
+102. slug: "europa-espera-por-si-a-sua-aventura-comeca-aqui"
+     title: "A Europa Espera por si: A sua Aventura Começa Aqui"
+
+BLOQUE 25 — Orçamento e Finanças:
+103. slug: "comer-menos-10-capitais-europa"
+     title: "Comer por Menos de 10€ nas Capitais"
+
+104. slug: "atmosferas-sem-comisiones-secreto"
+     title: "Caixas Automáticos sem Comissões: O Segredo"
+
+105. slug: "impuesto-turista-city-tax-evitar"
+     title: "O Imposto ao Turista: City Tax e Como Evitá-lo"
+
+106. slug: "gratuidade-museus-primeiro-domingo-mes"
+     title: "Gratuidade em Museus: Primeiro Domingo do Mês"
+
+107. slug: "comprar-agua-supermercado-kiosco"
+     title: "Comprar Água no Supermercado vs. Quiosque"
+
+108. slug: "transporte-publico-tarjetas-diarias-billetes"
+     title: "Transporte Público: Cartões Diários vs. Bilhetes Simples"
+
+109. slug: "descuentos-estudiant

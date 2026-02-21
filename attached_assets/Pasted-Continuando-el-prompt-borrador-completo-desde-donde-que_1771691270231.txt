@@ -1,0 +1,256 @@
+Continuando el prompt borrador completo desde donde quedó:
+
+***
+
+Continuación del PROMPT BORRADOR PARA AGENTE DE REPLIT:
+
+```
+76. slug: "nuestro-compromiso-con-la-sostenibilidad"
+77. slug: "revive-tu-viaje-sube-tu-historia-al-blog"
+78. slug: "europa-te-espera-tu-aventura-comienza-aqui"
+
+BLOQUE 19 — Pueblos y Destinos Menores:
+79. slug: "hallstatt-pueblo-cuento-austria"
+80. slug: "sintra-pena-fantasia-portugal"
+
+BLOQUE 20 — Listas y Miscelánea:
+81. slug: "10-mitos-europa-olvidar"
+82. slug: "7-lugares-mas-fotogenicos-instagram"
+83. slug: "5-libros-haran-querer-viajar-europa"
+84. slug: "peliculas-filmadas-europa-ver-antes"
+85. slug: "nunca-empacar-multa-europa"
+86. slug: "hacer-amigos-albergue-timido"
+87. slug: "mejores-regalos-traer-europa"
+88. slug: "un-dia-vida-guia-trips-europa"
+89. slug: "viaje-vida-empezar-planificar-hoy"
+90. slug: "100-cosas-gratis-hacer-europa"
+91. slug: "arte-picnic-parques-europeos"
+92. slug: "ultimo-dia-sobrevivir-regreso-casa"
+
+BLOQUE 25 — Presupuesto y Finanzas:
+93. slug: "comer-menos-10-capitales-europa"
+94. slug: "atmosferas-sin-comisiones-secreto"
+95. slug: "impuesto-turista-city-tax-evitar"
+96. slug: "gratuidad-museos-primer-domingo-mes"
+97. slug: "comprar-agua-supermercado-kiosco"
+98. slug: "transporte-publico-tarjetas-diarias-billetes"
+99. slug: "descuentos-estudiantiles-que-edad"
+100. slug: "apps-cashback-compras-europa"
+101. slug: "comprar-vino-supermercado-habitacion"
+102. slug: "evitar-restaurantes-5-idiomas"
+103. slug: "presupuesto-diario-realista-ciudad"
+104. slug: "aprovechar-happy-hours-aperitivo"
+105. slug: "seguro-cancelacion-vale-pena-extra"
+106. slug: "trueque-monedas-dolar-euro"
+
+BLOQUE 26 — Psicología del Viaje:
+107. slug: "superando-miedo-volar-tecnicas-reales"
+108. slug: "sindrome-paris-no-perfecto"
+109. slug: "viaje-duelo-sanar-europa"
+110. slug: "soledad-vs-soledad-elegida"
+111. slug: "choque-cultural-inverso-extraar-extranjero"
+112. slug: "empoderamiento-femenino-viajando-sola"
+113. slug: "conectando-extranos-arte-conversacion"
+114. slug: "efecto-dopamina-viaje"
+115. slug: "desintoxicacion-digital-desconectar-redes"
+
+━━━━━━━━━━━━━━
+📘 BLOQUE EN — INGLÉS (client/src/data/blogPostsEn.ts)
+URL: https://tripseuropa.com/en/blog/[slug]
+━━━━━━━━━━━━━━
+
+BLOQUE 1 — Classic Destinations:
+1.  slug: "complete-paris-guide-what-to-see-in-3-5-and-7-days"
+    title: "Complete Guide to Paris: What to See in 3, 5, and 7 Days"
+    category: "Classic Destinations"
+
+2.  slug: "rome-in-a-weekend-the-express-itinerary"
+    title: "Rome in a Weekend: The Express Itinerary"
+
+3.  slug: "the-10-best-museums-in-europe-you-cant-miss"
+    title: "The 10 Best Museums in Europe You Can't Miss"
+
+4.  slug: "london-beyond-big-ben-hipster-and-hidden-neighborhoods"
+    title: "London Beyond Big Ben: Hipster and Hidden Neighborhoods"
+
+5.  slug: "madrid-and-barcelona-the-spanish-dichotomy"
+    title: "Madrid and Barcelona: The Spanish Dichotomy"
+
+6.  slug: "love-in-venice-guide-for-couples-and-honeymoons"
+    title: "Love in Venice: Guide for Couples and Honeymoons"
+
+7.  slug: "zurich-and-the-swiss-alps-pure-nature"
+    title: "Zurich and the Swiss Alps: Pure Nature"
+
+8.  slug: "amsterdam-without-crowds-secrets-of-the-canal-city"
+    title: "Amsterdam Without Crowds: Secrets of the Canal City"
+
+9.  slug: "the-french-riviera-nice-cannes-and-monaco"
+    title: "The French Riviera: Nice, Cannes, and Monaco"
+
+10. slug: "budapest-the-pearl-of-the-danube"
+    title: "Budapest: The Pearl of the Danube"
+
+BLOQUE 2 — All-Inclusive Packages:
+11. slug: "europe-in-15-days-the-perfect-circuit-for-first-timers"
+12. slug: "is-an-all-inclusive-package-to-europe-worth-it"
+13. slug: "european-circuits-2026-news-and-routes"
+14. slug: "group-travel-to-europe-why-is-it-the-safest-option"
+15. slug: "luxury-europe-5-star-hotels-and-vip-experiences"
+16. slug: "europe-with-children-the-ideal-family-package"
+17. slug: "europe-for-seniors-relaxed-pace-and-comfort"
+18. slug: "comparison-western-circuit-vs-eastern-circuit"
+19. slug: "packages-to-europe-from-mexico-guaranteed-departures"
+20. slug: "packages-to-europe-from-colombia-connecting-two-worlds"
+
+BLOQUE 3 — Practical Tips:
+21. slug: "etias-2026-everything-you-need-to-know-about-the-new-visa"
+22. slug: "carry-on-vs-checked-luggage-what-to-bring"
+23. slug: "the-eurail-pass-is-it-the-best-option-to-get-around"
+24. slug: "real-budget-how-much-does-a-trip-to-europe-cost"
+25. slug: "travel-insurance-to-europe-why-is-it-mandatory"
+26. slug: "when-to-travel-to-europe-guide-by-seasons"
+27. slug: "food-in-europe-tips-to-save-without-stopping-eating-well"
+28. slug: "currency-and-payments-use-card-or-cash"
+29. slug: "how-to-get-to-downtown-europe-from-the-airport"
+30. slug: "language-in-europe-surviving-without-knowing-english"
+
+BLOQUE 4 — Unique Experiences:
+31. slug: "the-most-magical-christmas-markets-in-europe"
+32. slug: "wine-route-the-wineries-of-bordeaux-and-tuscany"
+33. slug: "the-castle-route-from-neuschwanstein-to-the-loire"
+34. slug: "oktoberfest-in-munich-the-beer-festival"
+35. slug: "gothic-europe-a-route-through-the-middle-ages"
+36. slug: "mediterranean-cruises-greek-and-italian-coasts"
+37. slug: "hunting-the-northern-lights-in-scandinavia"
+38. slug: "venice-carnival-masks-and-mystery"
+39. slug: "europes-beaches-beyond-the-mediterranean"
+40. slug: "gastronomic-tours-tapas-in-spain-and-pasta-in-italy"
+
+BLOQUE 5 — Emerging Destinations:
+41. slug: "croatia-the-adriatic-blue"
+42. slug: "slovenia-europes-hidden-treasure"
+43. slug: "prague-city-of-a-hundred-spires"
+44. slug: "vienna-music-coffee-and-imperialism"
+45. slug: "poland-history-and-resilience-in-warsaw-and-krakow"
+46. slug: "hungary-beyond-budapest-lake-balaton"
+47. slug: "romania-land-of-dracula-and-mountains"
+48. slug: "albania-the-forgotten-riviera"
+
+BLOQUE 12 — Deep Destinations:
+49. slug: "greece-islands-mainland-complete-route"
+50. slug: "istanbul-cappadocia-two-worlds-turkey"
+51. slug: "london-surroundings-stonehenge-bath"
+52. slug: "netherlands-beyond-amsterdam"
+53. slug: "finland-land-lakes-aurora"
+54. slug: "belgium-bruges-ghent-brussels-route"
+55. slug: "czech-republic-prague-karlovy-vary"
+56. slug: "hungary-budapest-lake-balaton"
+57. slug: "poland-krakow-salt-mines-wieliczka"
+58. slug: "ireland-dublin-cork-ring-kerry"
+
+BLOQUE 13 — Logistics & Transport:
+59. slug: "guide-eurail-pass-worth-it"
+60. slug: "driving-europe-traffic-rules-tolls"
+61. slug: "low-cost-flights-ryanair-easyjet"
+62. slug: "art-transfers-airports-europe"
+63. slug: "public-transport-capitals-metro-bus"
+64. slug: "car-rental-automatic-manual-europe"
+65. slug: "night-trains-hotel-wheels"
+66. slug: "crossing-channel-eurotunnel"
+67. slug: "traveling-sports-equipment-golf-ski"
+68. slug: "uber-taxi-when-use-europe"
+
+BLOQUE 17 — Culture & Customs:
+69. slug: "tipping-in-europe-how-much-and-to-whom"
+70. slug: "the-european-schedule-the-siesta-and-late-dinners"
+71. slug: "etiquette-in-museums-and-cathedrals"
+72. slug: "learning-basic-phrases-in-5-european-languages"
+73. slug: "beer-culture-in-germany-and-belgium"
+74. slug: "the-art-of-sobremesa-in-spain-and-italy"
+75. slug: "local-festivals-you-should-know"
+76. slug: "fashion-and-style-in-europe-how-to-dress"
+77. slug: "the-concept-of-time-in-the-south-vs-the-north"
+78. slug: "brief-history-of-the-european-union"
+
+BLOQUE 18 — Closing & CTA:
+79. slug: "why-choose-trips-europa-for-your-next-adventure"
+80. slug: "last-minute-offers-to-travel-to-europe"
+81. slug: "gift-a-trip-to-europe-the-perfect-experience"
+82. slug: "trips-europa-loyalty-program-travel-more-pay-less"
+83. slug: "work-with-us-be-a-distributor"
+84. slug: "schedule-your-free-personalized-advice"
+85. slug: "faq-about-trips-europa"
+86. slug: "our-commitment-to-sustainability"
+87. slug: "relive-your-trip-upload-your-story-to-the-blog"
+88. slug: "europe-awaits-your-adventure-begins-here"
+
+BLOQUE 16 — Safety & Health:
+89. slug: "avoiding-pickpockets-in-paris-and-rome"
+90. slug: "travel-first-aid-kit-what-medicines-to-carry"
+91. slug: "medical-insurance-what-it-covers-and-what-it-doesnt"
+92. slug: "vegan-and-vegetarian-food-in-europe"
+93. slug: "staying-fit-while-traveling"
+94. slug: "drinking-water-in-europe-can-you-drink-from-the-tap"
+95. slug: "what-to-do-if-you-lose-your-passport"
+96. slug: "vaccines-and-health-for-traveling-to-europe"
+97. slug: "stress-and-anxiety-management-on-long-flights"
+98. slug: "accidents-abroad-how-to-act"
+
+━━━━━━━━━━━━━━
+📙 BLOQUE PT — PORTUGUÉS (client/src/data/blogPostsPt.ts)
+URL: https://tripseuropa.com/pt-br/blog/[slug]
+━━━━━━━━━━━━━━
+
+BLOQUE 21 — Bairros e Cidades:
+1.  slug: "trastevere-noite-alma-autentica-roma"
+    title: "Trastevere Noite: A Alma Autêntica de Roma"
+    category: "Bairros e Cidades"
+
+2.  slug: "shoreditch-arte-rua-londres"
+    title: "Shoreditch: A Arte de Rua de Londres"
+
+3.  slug: "le-marais-paris-chic-judeu"
+    title: "Le Marais: O Paris Chic e Judeu"
+
+4.  slug: "kreuzberg-contracultura-berlim"
+    title: "Kreuzberg: A Contracultura de Berlim"
+
+5.  slug: "alfama-labirinto-lisboa"
+    title: "Alfama: O Labirinto de Lisboa"
+
+6.  slug: "jordaan-canais-amsterda"
+    title: "The Jordaan: Os Canais de Amesterdão"
+
+7.  slug: "el-born-barcelona-medieval"
+    title: "El Born: O Medieval de Barcelona"
+
+8.  slug: "montmartre-alem-pintores-paris"
+    title: "Montmartre: Além dos Pintores"
+
+9.  slug: "dorsoduro-veneza-vinhos"
+    title: "Dorsoduro: O Veneza dos Vinhos"
+
+10. slug: "notting-hill-cores-portobello-londres"
+    title: "Notting Hill: Cores e Portobello"
+
+11. slug: "letna-pulmao-praga"
+    title: "Letenˇ: O Pulmão de Praga"
+
+12. slug: "vesterbro-copenhague-cool"
+    title: "Vesterbro: Copenhague Cool"
+
+13. slug: "graca-vila-poetas-lisboa"
+    title: "Graça: A Vila dos Poetas em Lisboa"
+
+14. slug: "el-rastro-mercado-domingo-madrid"
+    title: "El Rastro: O Mercado Dominicano de Madrid"
+
+15. slug: "knez-mihailova-avenida-belgrado"
+    title: "Knez Mihailova: A Avenida Principal de Belgrado"
+
+16. slug: "nyhavn-porto-colorido-copenhague"
+    title: "Nyhavn: O Porto Colorido de Copenhague"
+
+17. slug: "plaka-bairro-antigo-atenas"
+    title: "Plaka:
