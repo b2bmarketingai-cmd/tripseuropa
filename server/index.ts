@@ -176,9 +176,20 @@ app.get("/blog/post/budapest-ba%C3%B1os-termales", (_req, res) => res.redirect(3
 app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));
 app.get("/testimonials", (_req, res) => res.redirect(301, "/testimonios"));
 
-// Fix: /es-caribe -> / (no es-caribe route exists)
-app.get("/es-caribe", (_req, res) => res.redirect(301, "/"));
-app.get("/es-caribe/*", (_req, res) => res.redirect(301, "/"));
+// Fix: /es-caribe -> /es-cb (Caribbean locale)
+app.get("/es-caribe", (_req, res) => res.redirect(301, "/es-cb"));
+app.get("/es-caribe/*", (req, res) => res.redirect(301, `/es-cb${req.path.slice(10)}`));
+
+// Fix: /es/caribe -> /es-cb (old Caribbean URL pattern)
+app.get("/es/caribe", (_req, res) => res.redirect(301, "/es-cb"));
+app.get("/es/caribe/*", (req, res) => res.redirect(301, `/es-cb${req.path.slice(10)}`));
+
+// Redirect /terms -> /terminos-condiciones, /politica-cancelacion -> /terminos-condiciones
+app.get("/terms", (_req, res) => res.redirect(301, "/terminos-condiciones"));
+app.get("/politica-cancelacion", (_req, res) => res.redirect(301, "/condiciones-venta"));
+
+// Redirect /offers/:slug -> /ofertas/:slug
+app.get("/offers/:slug", (req, res) => res.redirect(301, `/ofertas/${req.params.slug}`));
 
 // Fix: /pt-br/pt-br/... chain (duplicated prefix from old hreflang bug)
 app.use((req, res, next) => {

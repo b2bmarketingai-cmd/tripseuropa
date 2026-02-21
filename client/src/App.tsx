@@ -378,9 +378,17 @@ function Router() {
       <Route path="/es-do/blog/post/:slug" component={BlogPost} />
       <Route path="/es-do/blog/:country" component={Blog} />
 
-      <Route path="/es/caribe" component={Home} />
-      <Route path="/es/caribe/" component={Home} />
-      <Route path="/es/caribe/destinos" component={Destinations} />
+      <Route path="/es-cb" component={Home} />
+      <Route path="/es-cb/" component={Home} />
+      <Route path="/es-cb/destinos" component={Destinations} />
+      <Route path="/es-cb/destinos/:slug" component={DestinationPage} />
+      <Route path="/es-cb/paquetes" component={Packages} />
+      <Route path="/es-cb/experiencias/:slug" component={ExperiencePage} />
+      <Route path="/es-cb/paquetes/:slug" component={PackagePage} />
+      <Route path="/es-cb/ofertas/:slug" component={OfferPage} />
+      <Route path="/es-cb/blog" component={Blog} />
+      <Route path="/es-cb/blog/post/:slug" component={BlogPost} />
+      <Route path="/es-cb/blog/:country" component={Blog} />
 
       <Route path="/es" component={Home} />
       <Route path="/es/" component={Home} />

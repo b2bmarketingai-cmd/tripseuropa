@@ -25,7 +25,7 @@ export const countryConfigs: CountryConfig[] = [
   { code: 'PA', hreflang: 'es-PA', urlPrefix: '/es-pa', currency: 'USD', language: 'es', priority: 0.85, name: 'Panamá', nameEn: 'Panama', destinations: 25, hasEnglish: false },
   { code: 'CR', hreflang: 'es-CR', urlPrefix: '/es-cr', currency: 'CRC', language: 'es', priority: 0.85, name: 'Costa Rica', nameEn: 'Costa Rica', destinations: 25, hasEnglish: false },
   { code: 'DO', hreflang: 'es-DO', urlPrefix: '/es-do', currency: 'DOP', language: 'es', priority: 0.85, name: 'República Dominicana', nameEn: 'Dominican Republic', destinations: 25, hasEnglish: false },
-  { code: 'CB', hreflang: 'es', urlPrefix: '/es/caribe', currency: 'USD', language: 'es', priority: 0.80, name: 'Caribe', nameEn: 'Caribbean', destinations: 20, hasEnglish: false },
+  { code: 'CB', hreflang: 'es', urlPrefix: '/es-cb', currency: 'USD', language: 'es', priority: 0.80, name: 'Caribe', nameEn: 'Caribbean', destinations: 20, hasEnglish: false },
 ];
 
 const europeanDestinations = [
@@ -136,7 +136,7 @@ const experiences = [
   { slug: 'primavera-europa', name: 'Primavera en Europa', nameEn: 'Spring in Europe', namePt: 'Primavera na Europa' },
   { slug: 'otono-europa', name: 'Otoño en Europa', nameEn: 'Autumn in Europe', namePt: 'Outono na Europa' },
   { slug: 'navidad-europa', name: 'Navidad en Europa', nameEn: 'Christmas in Europe', namePt: 'Natal na Europa' },
-  { slug: 'año-nuevo-europa', name: 'Año Nuevo en Europa', nameEn: 'New Year in Europe', namePt: 'Ano Novo na Europa' },
+  { slug: 'ano-nuevo-europa', name: 'Año Nuevo en Europa', nameEn: 'New Year in Europe', namePt: 'Ano Novo na Europa' },
   { slug: 'gastronomia-europa', name: 'Gastronomía Europea', nameEn: 'European Gastronomy', namePt: 'Gastronomia Europeia' },
   { slug: 'arte-cultura', name: 'Arte y Cultura', nameEn: 'Art and Culture', namePt: 'Arte e Cultura' },
   { slug: 'aventura-naturaleza', name: 'Aventura y Naturaleza', nameEn: 'Adventure and Nature', namePt: 'Aventura e Natureza' },
@@ -175,7 +175,6 @@ function generateHreflangLinks(path: string, language: 'es' | 'en' | 'pt' = 'es'
   
   const enPath = path === "/" ? "" : (path.startsWith("/destinos") ? path.replace("/destinos", "/destinations") : path);
   links.push(`    <xhtml:link rel="alternate" hreflang="en" href="${DOMAIN}/en${enPath}" />`);
-  links.push(`    <xhtml:link rel="alternate" hreflang="en-BR" href="${DOMAIN}/en-br${enPath}" />`);
   links.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${DOMAIN}${path}" />`);
   
   return links.join('\n');
@@ -191,7 +190,6 @@ export function generateSitemapIndex(): string {
     'sitemap-co-mexico-es.xml',
     'sitemap-co-mexico-en.xml',
     'sitemap-co-brasil-pt.xml',
-    'sitemap-co-brasil-en.xml',
     'sitemap-co-argentina-es.xml',
     'sitemap-co-argentina-en.xml',
     'sitemap-co-peru-es.xml',
@@ -283,54 +281,6 @@ ${generateHreflangLinks('/destinos')}
     <priority>0.60</priority>
   </url>
 
-  <url>
-    <loc>${DOMAIN}/en-br</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/destinations</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/packages</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/blog</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/contact</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/travel-insurance-europe</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>${DOMAIN}/en-br/family-trip-europe</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
 
   <url>
     <loc>${DOMAIN}/services/vuelos</loc>
@@ -567,12 +517,13 @@ export function generateEuropeDestinationsSitemap(language: 'es' | 'en' | 'pt'):
   
   let urls = '';
   const destPath = isEnglish ? 'destinations' : 'destinos';
+  const langPrefix = isEnglish ? '/en' : (isPtBr ? '/pt-br' : '');
 
   europeanDestinations.forEach(dest => {
     const destName = isEnglish ? dest.nameEn : (isPtBr ? dest.namePt : dest.name);
     urls += `
   <url>
-    <loc>${DOMAIN}/${destPath}/${dest.slug}</loc>
+    <loc>${DOMAIN}${langPrefix}/${destPath}/${dest.slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -593,7 +544,7 @@ ${generateHreflangLinks(`/destinos/${dest.slug}`, language)}
     
     urls += `
   <url>
-    <loc>${DOMAIN}/${destPath}/${city.slug}</loc>
+    <loc>${DOMAIN}${langPrefix}/${destPath}/${city.slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -801,7 +752,7 @@ export function generatePackagesSitemap(): string {
     
     urls += `
   <url>
-    <loc>${DOMAIN}/packages/${pkg.slug}</loc>
+    <loc>${DOMAIN}/en/packages/${pkg.slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${pkg.priority}</priority>
@@ -927,7 +878,7 @@ export function generateLegalSitemap(): string {
   </url>
 
   <url>
-    <loc>${DOMAIN}/terms</loc>
+    <loc>${DOMAIN}/terminos-condiciones</loc>
     <lastmod>${today}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
@@ -948,7 +899,7 @@ export function generateLegalSitemap(): string {
   </url>
 
   <url>
-    <loc>${DOMAIN}/politica-cancelacion</loc>
+    <loc>${DOMAIN}/condiciones-venta</loc>
     <lastmod>${today}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.35</priority>
@@ -984,7 +935,6 @@ Sitemap: ${DOMAIN}/sitemaps/sitemap-co-argentina-en.xml
 
 # SITEMAPS POR PAÍS - PORTUGUÉS
 Sitemap: ${DOMAIN}/sitemaps/sitemap-co-brasil-pt.xml
-Sitemap: ${DOMAIN}/sitemaps/sitemap-co-brasil-en.xml
 
 # SITEMAPS DE DESTINOS EUROPEOS
 Sitemap: ${DOMAIN}/sitemaps/sitemap-destinos-europa-es.xml
@@ -1033,7 +983,6 @@ export function registerSitemapRoutes(app: Express): void {
     'sitemap-co-mexico-es.xml': { code: 'MX', lang: 'es' },
     'sitemap-co-mexico-en.xml': { code: 'MX', lang: 'en' },
     'sitemap-co-brasil-pt.xml': { code: 'BR', lang: 'pt' },
-    'sitemap-co-brasil-en.xml': { code: 'BR', lang: 'en' },
     'sitemap-co-argentina-es.xml': { code: 'AR', lang: 'es' },
     'sitemap-co-argentina-en.xml': { code: 'AR', lang: 'en' },
     'sitemap-co-peru-es.xml': { code: 'PE', lang: 'es' },
