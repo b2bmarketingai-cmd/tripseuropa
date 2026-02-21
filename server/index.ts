@@ -128,6 +128,35 @@ app.get("/en-br/*", (req, res) =>
 // /es/ prefix is valid - Spanish generic prefix served by SPA router
 // Note: /es-co, /es-mx etc. are valid country prefixes handled by other routes
 
+// Redirect old /destination/ URLs (indexed by Google) to /destinos/
+app.get("/destination/:slug", (req, res) => {
+  const slugMap: Record<string, string> = {
+    "italia": "italy", "espana": "spain", "francia": "france", "grecia": "greece",
+    "portugal": "portugal", "alemania": "germany", "suiza": "switzerland",
+    "reino-unido": "united-kingdom", "paises-bajos": "netherlands", "belgica": "belgium",
+    "austria": "austria", "republica-checa": "czech-republic", "turquia": "turkey",
+    "croacia": "croatia", "polonia": "poland", "hungria": "hungary"
+  };
+  const resolved = slugMap[req.params.slug] || req.params.slug;
+  res.redirect(301, `/destinos/${resolved}`);
+});
+
+// Redirect old /package/ URLs to /paquetes/
+app.get("/package/:slug", (req, res) => res.redirect(301, `/paquetes/${req.params.slug}`));
+
+// Redirect bare country URLs to /desde- format
+app.get("/colombia", (_req, res) => res.redirect(301, "/desde-colombia"));
+app.get("/mexico", (_req, res) => res.redirect(301, "/desde-mexico"));
+app.get("/brasil", (_req, res) => res.redirect(301, "/desde-brasil"));
+app.get("/argentina", (_req, res) => res.redirect(301, "/desde-argentina"));
+app.get("/peru", (_req, res) => res.redirect(301, "/desde-peru"));
+app.get("/panama", (_req, res) => res.redirect(301, "/desde-panama"));
+app.get("/costa-rica", (_req, res) => res.redirect(301, "/desde-costa-rica"));
+
+// Redirect old English-only URLs
+app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));
+app.get("/testimonials", (_req, res) => res.redirect(301, "/testimonios"));
+
 // Fix: /es-caribe -> / (no es-caribe route exists)
 app.get("/es-caribe", (_req, res) => res.redirect(301, "/"));
 app.get("/es-caribe/*", (_req, res) => res.redirect(301, "/"));

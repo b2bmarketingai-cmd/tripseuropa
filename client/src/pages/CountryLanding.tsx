@@ -227,9 +227,30 @@ const countryContent: Record<string, {
   },
 };
 
+const COUNTRY_PARAM_MAP: Record<string, string> = {
+  "COLOMBIA": "CO",
+  "MEXICO": "MX",
+  "MÉXICO": "MX",
+  "BRASIL": "BR",
+  "BRAZIL": "BR",
+  "ARGENTINA": "AR",
+  "PERU": "PE",
+  "PERÚ": "PE",
+  "PANAMA": "PA",
+  "PANAMÁ": "PA",
+  "COSTA-RICA": "CR",
+  "COSTARICA": "CR",
+  "DOMINICANA": "DO",
+  "REPUBLICA-DOMINICANA": "DO",
+  "DOMINICAN": "DO",
+  "CARIBE": "CB",
+  "CARIBBEAN": "CB",
+};
+
 export default function CountryLanding() {
   const params = useParams();
-  const countryCode = (params.country || "CO").toUpperCase();
+  const rawCountry = (params.country || "CO").toUpperCase();
+  const countryCode = COUNTRY_PARAM_MAP[rawCountry] || rawCountry;
   const { t, language } = useI18n();
 
   const { data: countryConfig } = useQuery<CountryConfig>({

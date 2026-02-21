@@ -111,8 +111,8 @@ export default function FromMexico() {
   const { language } = useI18n();
 
   const content = {
-    badge: { es: "Viajes desde Mexico", en: "Travel from Mexico" },
-    h1: { es: "Tours a Europa desde Mexico", en: "Tours to Europe from Mexico" },
+    badge: { es: "Viajes desde México", en: "Travel from Mexico" },
+    h1: { es: "Tours a Europa desde México", en: "Tours to Europe from Mexico" },
     subtitle: { es: "Paquetes exclusivos con salidas desde Ciudad de Mexico, Cancun, Guadalajara, Monterrey y principales ciudades mexicanas. Vuelos directos, hoteles 4-5 estrellas, guias en espanol.", en: "Exclusive packages departing from Mexico City, Cancun, Guadalajara, Monterrey and major Mexican cities. Direct flights, 4-5 star hotels, Spanish-speaking guides." },
     stats: {
       travelers: { es: "8.9M viajeros mexicanos/año", en: "8.9M Mexican travelers/year" },
@@ -123,7 +123,7 @@ export default function FromMexico() {
     whatsapp: { es: "WhatsApp Mexico", en: "WhatsApp Mexico" },
     packages: { es: "Paquetes Populares desde Mexico", en: "Popular Packages from Mexico" },
     testimonials: { es: "Lo que dicen nuestros viajeros mexicanos", en: "What our Mexican travelers say" },
-    faq: { es: "Preguntas Frecuentes - Viajes desde Mexico", en: "FAQ - Travel from Mexico" },
+    faq: { es: "Preguntas Frecuentes - Viajes desde México", en: "FAQ - Travel from Mexico" },
     noVisa: { es: "Mexicanos NO necesitan visa!", en: "Mexicans do NOT need visa!" },
     noVisaDesc: { es: "Hasta 90 dias en Europa sin visa. Solo pasaporte vigente.", en: "Up to 90 days in Europe without visa. Just valid passport." },
     msi: { es: "Hasta 12 MSI", en: "Up to 12 months no interest" },
@@ -368,8 +368,8 @@ export default function FromMexico() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "TravelAgency",
-          "name": "Trips Europa - Viajes desde Mexico",
-          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde Mexico. Vuelos, hoteles, tours y guias en espanol.",
+          "name": "Trips Europa - Viajes desde México",
+          "description": "Agencia de viajes especializada en paquetes turísticos a Europa desde México. Vuelos, hoteles, tours y guias en español.",
           "url": "https://tripseuropa.com/desde-mexico",
           "areaServed": {
             "@type": "Country",

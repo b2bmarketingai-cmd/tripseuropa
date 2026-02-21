@@ -1,0 +1,166 @@
+# AUDITORÍA COMPLETA DE URLs — tripseuropa.com
+**Fecha:** 21 de febrero de 2026 | Auditadas: 70+ URLs
+
+***
+
+## 🔴 CATEGORÍA 1: DESTINOS — "Destino no encontrado" (en footer pero sin datos en BD)
+
+Estas URLs están en el footer y son accesibles como ruta, pero muestran "Destino no encontrado" porque no tienen datos cargados en la base de datos:
+
+| URL | Estado | Problema |
+|-----|--------|---------|
+| `/destinos/dinamarca` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/hungria` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/polonia` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/suecia` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/noruega` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/rumania` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/estados-balticos` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/finlandia` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/islandia` | ❌ Sin contenido | "Destino no encontrado" |
+| `/destinos/chipre` | ❌ Sin contenido | "Destino no encontrado" |
+
+***
+
+## 🔴 CATEGORÍA 2: SITEMAP.XML — URLs incorrectas (404 real)
+
+El sitemap usa rutas que **no existen en el sitio**. Google las indexa pero dan 404:
+
+| URL en sitemap | Estado | URL correcta |
+|----------------|--------|--------------|
+| `/destination/italia` | ❌ 404 | `/destinos/italia` |
+| `/destination/espana` | ❌ 404 | `/destinos/espana` |
+| `/destination/francia` | ❌ 404 | `/destinos/francia` |
+| `/destination/grecia` | ❌ 404 | `/destinos/grecia` |
+| `/destination/portugal` | ❌ 404 | `/destinos/portugal` |
+| `/destination/alemania` | ❌ 404 | `/destinos/alemania` |
+| `/destination/suiza` | ❌ 404 | `/destinos/suiza` |
+| `/destination/reino-unido` | ❌ 404 | `/destinos/reino-unido` |
+| `/destination/paises-bajos` | ❌ 404 | `/destinos/holanda` |
+| `/destination/belgica` | ❌ 404 | `/destinos/belgica` |
+| `/destination/austria` | ❌ 404 | `/destinos/austria` |
+| `/destination/republica-checa` | ❌ 404 | `/destinos/republica-checa` |
+| `/destination/turquia` | ❌ 404 | No existe |
+| `/destination/croacia` | ❌ 404 | `/destinos/croacia` |
+| `/destination/polonia` | ❌ 404 | Sin datos |
+| `/destination/hungria` | ❌ 404 | Sin datos |
+| `/package/capitales-europeas` | ❌ 404 | `/paquetes/capitales-europeas` |
+| `/package/europa-10-dias` | ❌ 404 | `/paquetes/europa-10-dias` |
+| `/package/mediterranean-delight` | ❌ 404 | No existe |
+| `/package/alpine-adventure` | ❌ 404 | No existe |
+| `/package/iberian-explorer` | ❌ 404 | No existe |
+| `/package/greek-islands` | ❌ 404 | No existe |
+| `/package/northern-lights` | ❌ 404 | No existe |
+| `/package/eastern-europe` | ❌ 404 | No existe |
+| `/package/best-of-europe` | ❌ 404 | No existe |
+| `/colombia` | ❌ 404 | `/desde-colombia` |
+| `/mexico` | ❌ 404 | `/desde-mexico` |
+| `/brasil` | ❌ 404 | `/desde-brasil` |
+| `/argentina` | ❌ 404 | `/desde-argentina` |
+| `/peru` | ❌ 404 | `/desde-peru` |
+| `/panama` | ❌ 404 | `/desde-panama` |
+| `/costa-rica` | ❌ 404 | `/desde-costa-rica` |
+| `/chile` | ❌ 404 | No existe |
+| `/ecuador` | ❌ 404 | No existe |
+| `/venezuela` | ❌ 404 | No existe |
+| `/last-minute` | ❌ 404 | `/ofertas-ultima-hora` |
+| `/testimonials` | ❌ 404 | `/testimonios` |
+| `/destinations` | ❌ 404 | `/destinos` |
+
+***
+
+## 🔴 CATEGORÍA 3: BLOG POSTS — "Artículo No Encontrado"
+
+Todos los blog posts del sitemap y los links internos dan error:
+
+| URL | Estado |
+|-----|--------|
+| `/blog/post/mejor-epoca-visitar-europa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/documentos-necesarios-viajar-europa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/presupuesto-viaje-europa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/visa-schengen-guia-completa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/mejores-destinos-europa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/consejos-primera-vez-europa` | ❌ "Artículo No Encontrado" |
+| `/blog/post/visa-schengen-latinoamerica` | ❌ "Artículo No Encontrado" |
+
+**Causa:** La base de datos no tiene ningún blog post registrado con esos slugs.
+
+***
+
+## 🔴 CATEGORÍA 4: TRAVEL STYLE — "Estilo de viaje no encontrado"
+
+Todos los slugs de Travel Style dan error (menú principal está afectado):
+
+| URL | Estado |
+|-----|--------|
+| `/travel-style/lujo` | ❌ "Estilo de viaje no encontrado" |
+| `/travel-style/aventura` | ❌ "Estilo de viaje no encontrado" |
+| `/travel-style/cultural` | ❌ "Estilo de viaje no encontrado" |
+| `/travel-style/romantico` | ❌ "Estilo de viaje no encontrado" |
+| `/travel-style/familiar` | ❌ "Estilo de viaje no encontrado" |
+
+**Causa:** La BD no tiene datos de estilos de viaje cargados.
+
+***
+
+## 🟠 CATEGORÍA 5: PÁGINAS CON CONTENIDO INCORRECTO / INCOMPLETO
+
+| URL | Problema |
+|-----|---------|
+| `/desde/dominicana` | ⚠️ Muestra siempre "Viaja a Europa desde **Colombia**" — el CountryLanding no adapta el contenido por país |
+| `/desde/caribe` | ⚠️ Igual que arriba: muestra "desde Colombia" en lugar de desde Caribe |
+| `/desde-mexico` | ⚠️ Título sin acento: "Viajes desde Mexico" (falta tilde en México) |
+| `/desde-argentina` | ⚠️ Título genérico sin SEO específico para Argentina |
+| `/desde-peru` | ⚠️ Título genérico — mismo problema |
+| `/desde-panama` | ⚠️ Título genérico — mismo problema |
+| `/desde-brasil` | ⚠️ Título genérico — mismo problema |
+| `/desde-costa-rica` | ⚠️ Título genérico — mismo problema |
+| `/destinos/belgica` | ⚠️ Sin acento: aparece como "Belgica" en lugar de "Bélgica" |
+
+***
+
+## 🟠 CATEGORÍA 6: SITEMAP.XML — Problemas generales
+
+El sitemap completo está **desactualizado y con rutas incorrectas**:
+- Usa `/destination/` en lugar de `/destinos/` [tripseuropa](https://tripseuropa.com/sitemap.xml)
+- Usa `/package/` en lugar de `/paquetes/` [tripseuropa](https://tripseuropa.com/sitemap.xml)
+- Incluye URLs de países inexistentes (`/chile`, `/ecuador`, `/venezuela`) [tripseuropa](https://tripseuropa.com/sitemap.xml)
+- No incluye destinos con datos reales (Escocia, Albania, etc.)
+- No incluye páginas funcionales del sitio (foro, esim, requisitos-visa, rewards)
+- Blog posts listados no existen en la base de datos [tripseuropa](https://tripseuropa.com/sitemap.xml)
+
+***
+
+## ✅ URLs QUE FUNCIONAN CORRECTAMENTE
+
+| URL | Estado |
+|-----|--------|
+| `/` (Home) | ✅ OK |
+| `/destinos` | ✅ OK |
+| `/packages` y `/paquetes` | ✅ OK |
+| `/blog` | ✅ OK |
+| `/blog/colombia`, `/blog/mexico`, `/blog/argentina`, `/blog/peru`, `/blog/panama`, `/blog/costa-rica`, `/blog/brasil`, `/blog/dominicana`, `/blog/caribe` | ✅ OK |
+| `/contact` | ✅ OK |
+| `/about` | ✅ OK |
+| `/destinos/francia`, `/destinos/italia`, `/destinos/espana`, `/destinos/alemania`, `/destinos/portugal`, `/destinos/grecia`, `/destinos/suiza`, `/destinos/austria`, `/destinos/reino-unido`, `/destinos/croacia`, `/destinos/albania`, `/destinos/irlanda`, `/destinos/republica-checa`, `/destinos/holanda`, `/destinos/belgica`, `/destinos/escocia` | ✅ OK |
+| `/desde-colombia` | ✅ OK |
+| `/services/vuelos`, `/services/hoteles`, `/services/tours`, `/services/seguros`, `/services/esim` | ✅ OK |
+| `/ofertas-ultima-hora` | ✅ OK |
+| `/esim`, `/requisitos-visa`, `/foro`, `/tools` | ✅ OK |
+| `/testimonios`, `/rewards`, `/vacaciones-europa` | ✅ OK |
+| `/travel-advisor`, `/asistente` | ✅ OK |
+| `/cookies`, `/terminos-condiciones`, `/condiciones-venta`, `/privacy` | ✅ OK |
+
+***
+
+## 📋 RESUMEN DE PRIORIDADES PARA REPARACIÓN
+
+| Prioridad | Problema | Cantidad de URLs afectadas |
+|-----------|---------|--------------------------|
+| 🔴 CRÍTICO | Sitemap.xml con rutas incorrectas | ~35 URLs |
+| 🔴 CRÍTICO | Blog posts sin datos en BD | 7+ artículos |
+| 🔴 CRÍTICO | Travel Style sin datos en BD | 5+ estilos |
+| 🔴 ALTA | Destinos del footer sin contenido (BD vacía) | 10 países |
+| 🟠 MEDIA | CountryLanding template muestra siempre Colombia | 2+ páginas |
+| 🟠 MEDIA | Páginas "desde" con contenido genérico | 6 países |
+| 🟡 BAJA | Tildes faltantes en textos (México, Bélgica) | Múltiples |

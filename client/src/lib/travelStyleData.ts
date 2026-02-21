@@ -611,6 +611,30 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
   }
 ];
 
+const TRAVEL_STYLE_ALIASES: Record<string, string> = {
+  "lujo": "luxury",
+  "aventura": "adventure",
+  "cultural": "culture",
+  "romantico": "couples",
+  "familiar": "family",
+  "playa": "beach",
+  "cruceros": "cruises",
+  "luna-de-miel": "honeymoon",
+  "naturaleza": "nature",
+  "solo": "solo",
+  "senior": "senior",
+  "amigos": "friends-private",
+  "verano": "summer",
+  "invierno": "winter",
+  "primavera": "spring",
+  "otono": "fall",
+  "navidad": "christmas",
+  "pascua": "easter",
+  "safari": "safari",
+  "multi-pais": "multi-country",
+};
+
 export function getTravelStyleBySlug(slug: string): TravelStyleData | undefined {
-  return TRAVEL_STYLE_DATA.find(ts => ts.slug === slug);
+  const resolved = TRAVEL_STYLE_ALIASES[slug] || slug;
+  return TRAVEL_STYLE_DATA.find(ts => ts.slug === resolved);
 }
