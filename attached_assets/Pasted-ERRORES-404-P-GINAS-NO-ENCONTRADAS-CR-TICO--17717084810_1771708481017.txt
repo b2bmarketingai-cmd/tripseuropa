@@ -1,0 +1,46 @@
+ERRORES 404 - PÁGINAS NO ENCONTRADAS (CRÍTICO)
+================================================================================
+
+1. https://tripseuropa.com/estilo-de-viaje
+   ├─ Tipo: Error 404
+   ├─ Severidad: ALTA
+   ├─ Ubicación: Menú principal de navegación
+   └─ Descripción: La página principal del menú "Estilo de viaje" no existe.
+      El botón en el menú principal lleva a una página rota, lo que genera 
+      una mala experiencia de usuario.
+
+2. https://tripseuropa.com/ofertas
+   ├─ Tipo: Error 404
+   ├─ Severidad: ALTA
+   ├─ Ubicación: Menú principal de navegación
+   └─ Descripción: La página principal del menú "Ofertas" no existe.
+      Aunque los subenlaces funcionan, el enlace principal del menú está roto.
+
+3. https://tripseuropa.com/faq
+   ├─ Tipo: Error 404
+   ├─ Severidad: MEDIA
+   ├─ Ubicación: Enlace directo
+   └─ Descripción: La página de Preguntas Frecuentes (FAQ) no existe.
+      Esto es importante para la atención al cliente.
+
+PROBLEMAS DE USABILIDAD - ENLACES NO FUNCIONALES
+================================================================================
+
+El menú desplegable "Destinos" tiene 14 países que aparecen como texto 
+pero NO tienen enlaces funcionales. Las páginas existen, pero no están 
+vinculadas en el menú:
+
+1.  Grecia          → https://tripseuropa.com/destinations/greece
+2.  Hungría         → https://tripseuropa.com/destinations/hungary
+3.  Irlanda         → https://tripseuropa.com/destinations/ireland
+4.  Islandia        → https://tripseuropa.com/destinations/iceland
+5.  Italia          → https://tripseuropa.com/destinations/italy
+6.  Noruega         → https://tripseuropa.com/destinations/norway
+7.  Países Bajos    → https://tripseuropa.com/destinations/netherlands
+8.  Polonia         → https://tripseuropa.com/destinations/poland
+9.  Portugal        → https://tripseuropa.com/destinations/portugal
+10. Reino Unido     → https://tripseuropa.com/destinations/united-kingdom
+11. República Checa → https://tripseuropa.com/destinations/czech-republic
+12. Rumania         → https://tripseuropa.com/destinations/romania
+13. Suecia          → https://tripseuropa.com/destinations/sweden
+14. Suiza           → https://tripseuropa.com/destinations/switzerland

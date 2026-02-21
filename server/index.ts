@@ -153,9 +153,21 @@ app.get("/peru", (_req, res) => res.redirect(301, "/desde-peru"));
 app.get("/panama", (_req, res) => res.redirect(301, "/desde-panama"));
 app.get("/costa-rica", (_req, res) => res.redirect(301, "/desde-costa-rica"));
 app.get("/venezuela", (_req, res) => res.redirect(301, "/desde-venezuela"));
+app.get("/chile", (_req, res) => res.redirect(301, "/desde-chile"));
+app.get("/ecuador", (_req, res) => res.redirect(301, "/desde-ecuador"));
 
 app.get("/blog/spain", (_req, res) => res.redirect(301, "/destinos/spain"));
 app.get("/uk", (_req, res) => res.redirect(301, "/destinos/united-kingdom"));
+app.get("/destinations/uk", (_req, res) => res.redirect(301, "/destinations/united-kingdom"));
+
+app.get("/estilo-de-viaje", (_req, res) => res.redirect(301, "/estilos-de-viaje"));
+
+app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) => res.redirect(301, "/blog/mejor-epoca-europa"));
+app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) => res.redirect(301, "/blog/documentos-viajar-europa"));
+app.get("/blog/post/presupuesto-viaje-europa", (_req, res) => res.redirect(301, "/blog/presupuesto-viaje-europa-2026"));
+app.get("/blog/post/visa-schengen-guia-completa", (_req, res) => res.redirect(301, "/blog/visa-schengen-colombianos"));
+app.get("/blog/post/mejores-destinos-europa", (_req, res) => res.redirect(301, "/blog/mejores-destinos-europa-presupuesto"));
+app.get("/blog/post/consejos-primera-vez-europa", (_req, res) => res.redirect(301, "/blog/primera-vez-europa"));
 
 // Redirect old English-only URLs
 app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));

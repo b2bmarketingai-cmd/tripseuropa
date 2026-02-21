@@ -112,6 +112,11 @@ import TermsConditions from "@/pages/TermsConditions";
 import ExperiencePage from "@/pages/ExperiencePage";
 import PackagePage from "@/pages/PackagePage";
 import OfferPage from "@/pages/OfferPage";
+import FromChile from "@/pages/FromChile";
+import FromEcuador from "@/pages/FromEcuador";
+import TravelStylesLanding from "@/pages/TravelStylesLanding";
+import OffersLanding from "@/pages/OffersLanding";
+import FAQPage from "@/pages/FAQPage";
 
 function ProtectedRoute({ component: Comp }: { component: React.ComponentType }) {
   const { isAuthenticated, isLoading } = useAuth();
@@ -235,6 +240,16 @@ function Router() {
       <Route path="/desde-peru" component={FromPeru} />
       <Route path="/desde-costa-rica" component={FromCostaRica} />
       <Route path="/desde-venezuela" component={FromVenezuela} />
+      <Route path="/desde-chile" component={FromChile} />
+      <Route path="/desde-ecuador" component={FromEcuador} />
+
+      <Route path="/travel-styles" component={TravelStylesLanding} />
+      <Route path="/estilos-de-viaje" component={TravelStylesLanding} />
+
+      <Route path="/ofertas" component={OffersLanding} />
+      <Route path="/deals" component={OffersLanding} />
+      <Route path="/faq" component={FAQPage} />
+      <Route path="/preguntas-frecuentes" component={FAQPage} />
 
       <Route path="/desde/:country" component={CountryLanding} />
 
@@ -290,6 +305,10 @@ function Router() {
       <Route path="/pt-br/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/pt-br/forum" component={Forum} />
       <Route path="/pt-br/foro" component={Forum} />
+      <Route path="/pt-br/ofertas" component={OffersLanding} />
+      <Route path="/pt-br/faq" component={FAQPage} />
+      <Route path="/pt-br/estilos-de-viagem" component={TravelStylesLanding} />
+      <Route path="/pt-br/travel-styles" component={TravelStylesLanding} />
 
       <Route path="/es-ar" component={Home} />
       <Route path="/es-ar/" component={Home} />
@@ -395,6 +414,9 @@ function Router() {
       <Route path="/es/asistente" component={TravelAssistant} />
       <Route path="/es/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/es/travel-style/:slug" component={TravelStylePage} />
+      <Route path="/es/ofertas" component={OffersLanding} />
+      <Route path="/es/faq" component={FAQPage} />
+      <Route path="/es/preguntas-frecuentes" component={FAQPage} />
 
       <Route path="/en" component={Home} />
       <Route path="/en/" component={Home} />
@@ -411,6 +433,9 @@ function Router() {
       <Route path="/en/contact" component={Contact} />
       <Route path="/en/about" component={About} />
       <Route path="/en/privacy" component={Privacy} />
+      <Route path="/en/deals" component={OffersLanding} />
+      <Route path="/en/faq" component={FAQPage} />
+      <Route path="/en/travel-styles" component={TravelStylesLanding} />
 
       <Route path="/en-ar" component={Home} />
       <Route path="/en-ar/" component={Home} />

@@ -511,14 +511,13 @@ ${generateHreflangLinks('/', language)}
 
   europeanDestinations.forEach(dest => {
     const destName = isEnglish ? dest.nameEn : (isPtBr ? dest.namePt : dest.name);
-    const destSlug = isEnglish ? dest.slug : dest.slugEs;
     urls += `
   <url>
-    <loc>${DOMAIN}${urlPrefix}/${destPath}/${destSlug}</loc>
+    <loc>${DOMAIN}${urlPrefix}/${destPath}/${dest.slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${(config.priority - 0.05).toFixed(2)}</priority>
-${generateHreflangLinks(`/destinos/${dest.slugEs}`, language)}
+${generateHreflangLinks(`/destinos/${dest.slug}`, language)}
     <image:image>
       <image:loc>${DOMAIN}/images/${dest.slug}-principal.jpg</image:loc>
       <image:title>${escapeXml(destName)} - ${isEnglish ? `Travel from ${config.nameEn}` : isPtBr ? `Viagens desde ${config.name}` : `Viajes desde ${config.name}`}</image:title>
@@ -571,15 +570,13 @@ export function generateEuropeDestinationsSitemap(language: 'es' | 'en' | 'pt'):
 
   europeanDestinations.forEach(dest => {
     const destName = isEnglish ? dest.nameEn : (isPtBr ? dest.namePt : dest.name);
-    const destSlug = isEnglish ? dest.slug : dest.slugEs;
-    
     urls += `
   <url>
-    <loc>${DOMAIN}/${destPath}/${destSlug}</loc>
+    <loc>${DOMAIN}/${destPath}/${dest.slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-${generateHreflangLinks(`/destinos/${dest.slugEs}`, language)}
+${generateHreflangLinks(`/destinos/${dest.slug}`, language)}
     <image:image>
       <image:loc>${DOMAIN}/images/${dest.slug}-principal.jpg</image:loc>
       <image:title>${escapeXml(destName)}</image:title>
@@ -669,7 +666,7 @@ export function generateImagesSitemap(): string {
   europeanDestinations.forEach(dest => {
     urls += `
   <url>
-    <loc>${DOMAIN}/destinos/${dest.slugEs}</loc>
+    <loc>${DOMAIN}/destinos/${dest.slug}</loc>
     <image:image>
       <image:loc>${DOMAIN}/images/${dest.slug}-principal.jpg</image:loc>
       <image:title>${escapeXml(dest.name)} - Destino turístico en Europa</image:title>

@@ -222,6 +222,125 @@ const packages: Record<string, {
       en: ["Flights", "Seafront hotels", "Island ferry", "Breakfast", "Boat excursions"],
       pt: ["Voos", "Hoteis a beira-mar", "Ferry entre ilhas", "Cafe da manha", "Excursoes de barco"]
     }
+  },
+  "mediterranean-delight": {
+    title: { es: "Delicias del Mediterraneo", en: "Mediterranean Delight", pt: "Delicias do Mediterraneo" },
+    description: {
+      es: "Saborea lo mejor del Mediterraneo: gastronomia, cultura y playas paradisiacas",
+      en: "Savor the best of the Mediterranean: gastronomy, culture and paradise beaches",
+      pt: "Saboreie o melhor do Mediterraneo: gastronomia, cultura e praias paradisiacas"
+    },
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&q=60",
+    days: 10,
+    price: 2900,
+    destinations: ["Roma", "Costa Amalfitana", "Sicilia", "Santorini"],
+    includes: {
+      es: ["Vuelos", "Hoteles boutique", "Tours gastronomicos", "Ferry entre islas", "Desayunos y cenas"],
+      en: ["Flights", "Boutique hotels", "Food tours", "Island ferry", "Breakfast and dinners"],
+      pt: ["Voos", "Hoteis boutique", "Tours gastronomicos", "Ferry entre ilhas", "Cafe da manha e jantares"]
+    }
+  },
+  "alpine-adventure": {
+    title: { es: "Aventura Alpina", en: "Alpine Adventure", pt: "Aventura Alpina" },
+    description: {
+      es: "Conquista los Alpes con paisajes de montana, lagos cristalinos y pueblos encantadores",
+      en: "Conquer the Alps with mountain landscapes, crystal lakes and charming villages",
+      pt: "Conquiste os Alpes com paisagens de montanha, lagos cristalinos e vilas encantadoras"
+    },
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=60",
+    days: 10,
+    price: 3100,
+    destinations: ["Zurich", "Interlaken", "Innsbruck", "Chamonix"],
+    includes: {
+      es: ["Vuelos", "Hoteles de montana", "Tren panoramico", "Excursiones guiadas", "Desayunos"],
+      en: ["Flights", "Mountain hotels", "Panoramic train", "Guided excursions", "Breakfast"],
+      pt: ["Voos", "Hoteis de montanha", "Trem panoramico", "Excursoes guiadas", "Cafe da manha"]
+    }
+  },
+  "iberian-explorer": {
+    title: { es: "Explorador Iberico", en: "Iberian Explorer", pt: "Explorador Iberico" },
+    description: {
+      es: "Descubre la Peninsula Iberica: Espana y Portugal en un viaje unico",
+      en: "Discover the Iberian Peninsula: Spain and Portugal in one unique trip",
+      pt: "Descubra a Peninsula Iberica: Espanha e Portugal em uma viagem unica"
+    },
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=60",
+    days: 12,
+    price: 2700,
+    destinations: ["Madrid", "Barcelona", "Lisboa", "Porto", "Sevilla"],
+    includes: {
+      es: ["Vuelos", "Hoteles 4 estrellas", "AVE y tren", "Tours guiados", "Desayunos"],
+      en: ["Flights", "4-star hotels", "High-speed train", "Guided tours", "Breakfast"],
+      pt: ["Voos", "Hoteis 4 estrelas", "AVE e trem", "Tours guiados", "Cafe da manha"]
+    }
+  },
+  "greek-islands": {
+    title: { es: "Islas Griegas", en: "Greek Islands", pt: "Ilhas Gregas" },
+    description: {
+      es: "Navega por las islas mas bellas de Grecia: Santorini, Mykonos y Creta",
+      en: "Sail through Greece's most beautiful islands: Santorini, Mykonos and Crete",
+      pt: "Navegue pelas ilhas mais belas da Grecia: Santorini, Mykonos e Creta"
+    },
+    image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&q=60",
+    days: 10,
+    price: 2800,
+    destinations: ["Atenas", "Santorini", "Mykonos", "Creta"],
+    includes: {
+      es: ["Vuelos", "Hoteles con vista al mar", "Ferry entre islas", "Tours en barco", "Desayunos"],
+      en: ["Flights", "Sea view hotels", "Island ferry", "Boat tours", "Breakfast"],
+      pt: ["Voos", "Hoteis com vista para o mar", "Ferry entre ilhas", "Tours de barco", "Cafe da manha"]
+    }
+  },
+  "northern-lights": {
+    title: { es: "Auroras Boreales", en: "Northern Lights", pt: "Auroras Boreais" },
+    description: {
+      es: "Vive la magia de las auroras boreales en Escandinavia e Islandia",
+      en: "Experience the magic of Northern Lights in Scandinavia and Iceland",
+      pt: "Viva a magia das auroras boreais na Escandinavia e Islandia"
+    },
+    image: "https://images.unsplash.com/photo-1504829857797-dab3bf379b30?w=1200&q=60",
+    days: 8,
+    price: 3500,
+    destinations: ["Reikiavik", "Tromso", "Rovaniemi"],
+    includes: {
+      es: ["Vuelos", "Hoteles con vista", "Tour auroras boreales", "Excursiones glaciares", "Desayunos y cenas"],
+      en: ["Flights", "View hotels", "Northern lights tour", "Glacier excursions", "Breakfast and dinners"],
+      pt: ["Voos", "Hoteis com vista", "Tour auroras boreais", "Excursoes glaciares", "Cafe da manha e jantares"]
+    }
+  },
+  "eastern-europe": {
+    title: { es: "Europa del Este", en: "Eastern Europe", pt: "Europa Oriental" },
+    description: {
+      es: "Explora las joyas ocultas de Europa del Este: Praga, Budapest y mas",
+      en: "Explore Eastern Europe's hidden gems: Prague, Budapest and more",
+      pt: "Explore as joias ocultas da Europa Oriental: Praga, Budapeste e mais"
+    },
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1200&q=60",
+    days: 12,
+    price: 2400,
+    destinations: ["Praga", "Budapest", "Cracovia", "Viena"],
+    includes: {
+      es: ["Vuelos", "Hoteles centricos", "Tours guiados", "Crucero por el Danubio", "Desayunos"],
+      en: ["Flights", "Central hotels", "Guided tours", "Danube cruise", "Breakfast"],
+      pt: ["Voos", "Hoteis centrais", "Tours guiados", "Cruzeiro pelo Danubio", "Cafe da manha"]
+    }
+  },
+  "best-of-europe": {
+    title: { es: "Lo Mejor de Europa", en: "Best of Europe", pt: "O Melhor da Europa" },
+    description: {
+      es: "Un recorrido por los destinos mas iconicos del continente europeo",
+      en: "A tour through Europe's most iconic destinations",
+      pt: "Um passeio pelos destinos mais iconicos do continente europeu"
+    },
+    image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=1200&q=60",
+    days: 18,
+    price: 3800,
+    destinations: ["Paris", "Londres", "Roma", "Barcelona", "Amsterdam", "Praga"],
+    includes: {
+      es: ["Vuelos premium", "Hoteles 4-5 estrellas", "Trenes de alta velocidad", "Tours exclusivos", "Desayunos y cenas selectas"],
+      en: ["Premium flights", "4-5 star hotels", "High-speed trains", "Exclusive tours", "Breakfast and select dinners"],
+      pt: ["Voos premium", "Hoteis 4-5 estrelas", "Trens de alta velocidade", "Tours exclusivos", "Cafe da manha e jantares selecionados"]
+    }
   }
 };
 
@@ -272,7 +391,7 @@ export default function PackagePage() {
           },
           {
             label: pkg.title[lang],
-            href: `/package/${packageSlug}`
+            href: `/paquetes/${slug}`
           }
         ]}
       />
