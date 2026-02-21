@@ -324,7 +324,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "spain",
     name: { es: "España", en: "Spain", pt: "Espanha" },
-    heroImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=60&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=60&w=800&auto=format&fit=crop",
@@ -1351,7 +1351,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "albania",
     name: { es: "Albania", en: "Albania" },
-    heroImage: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1603027617752-b29a9dce8592?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Albania, la joya escondida de los Balcanes, ofrece playas virgenes en la Riviera Albanesa, montanas majestuosas, ciudades patrimonio UNESCO como Berat y Gjirokaster, y una hospitalidad legendaria. Descubre ruinas antiguas, bunkers de la era comunista y una gastronomía mediterranea única.",
       en: "Albania, the hidden gem of the Balkans, offers pristine beaches on the Albanian Riviera, majestic mountains, UNESCO heritage cities like Berat and Gjirokaster, and legendary hospitality. Discover ancient ruins, communist-era bunkers, and unique Mediterranean cuisine."
@@ -1431,7 +1431,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "belgium",
     name: { es: "Bélgica", en: "Belgium" },
-    heroImage: "https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Belgica sorprende con sus ciudades medievales perfectamente conservadas, el chocolate más fino del mundo, cervezas artesanales únicas y arquitectura Art Nouveau. Desde la Grand Place de Bruselas hasta los canales románticos de Brujas, cada rincon cuenta historia.",
       en: "Belgium surprises with perfectly preserved medieval cities, the world's finest chocolate, unique craft beers, and Art Nouveau architecture. From Brussels' Grand Place to Bruges' romantic canals, every corner tells a story."
@@ -1776,7 +1776,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "romania",
     name: { es: "Rumania", en: "Romania" },
-    heroImage: "https://images.unsplash.com/photo-1585674364415-1e8c8d7de44b?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1584646098378-0874589d76b1?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Rumania fascina con la Transilvania de Dracula, castillos goticos entre montanas, pueblos sajones medievales y el delta del Danubio. Desde el Castillo de Bran hasta los monasterios pintados de Bucovina, descubre los Carpatos y su misterio.",
       en: "Romania fascinates with Dracula's Transylvania, Gothic castles among mountains, medieval Saxon villages, and the Danube Delta. From Bran Castle to Bucovina's painted monasteries, discover the Carpathians and their mystery."
@@ -1853,7 +1853,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "baltic-states",
     name: { es: "Estados Balticos", en: "Baltic States" },
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1565791380713-1756b9a05343?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Los Estados Balticos - Estonia, Letonia y Lituania - sorprenden con ciudades medievales como Tallin, Riga y Vilna, todas patrimonio UNESCO. Castillos, bosques infinitos, la herencia hanseática y la cultura única del Baltico esperan.",
       en: "The Baltic States - Estonia, Latvia, and Lithuania - surprise with medieval cities like Tallinn, Riga, and Vilnius, all UNESCO heritage. Castles, endless forests, Hanseatic heritage, and unique Baltic culture await."
@@ -1893,7 +1893,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "cyprus",
     name: { es: "Chipre", en: "Cyprus" },
-    heroImage: "https://images.unsplash.com/photo-1586768337645-81c3e6c6eb04?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Chipre, la isla de Afrodita, combina playas mediterraneas cristalinas, ruinas grecorromanas, montanas Troodos con monasterios bizantinos y pueblos tradicionales. La tercera isla más grande del Mediterraneo ofrece historia de 10,000 anos y hospitalidad chipriota.",
       en: "Cyprus, the island of Aphrodite, combines crystal Mediterranean beaches, Greco-Roman ruins, Troodos mountains with Byzantine monasteries, and traditional villages. The third-largest Mediterranean island offers 10,000 years of history and Cypriot hospitality."
@@ -1932,7 +1932,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   {
     slug: "scotland",
     name: { es: "Escocia", en: "Scotland" },
-    heroImage: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?w=1200&q=60",
+    heroImage: "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Escocia cautiva con las Highlands salvajes, castillos legendarios, lochs misteriosos como el Ness, Edimburgo medieval y la tradicion del whisky. Gaitas, tartanes y paisajes dramáticos crean una experiencia única en el norte de Gran Bretana.",
       en: "Scotland captivates with wild Highlands, legendary castles, mysterious lochs like Ness, medieval Edinburgh, and whisky tradition. Bagpipes, tartans, and dramatic landscapes create a unique experience in northern Britain."

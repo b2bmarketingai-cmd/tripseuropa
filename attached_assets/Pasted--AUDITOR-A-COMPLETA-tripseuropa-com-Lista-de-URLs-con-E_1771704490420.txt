@@ -1,0 +1,134 @@
+## AUDITORÍA COMPLETA — tripseuropa.com
+### Lista de URLs con Errores y Problemas
+
+***
+
+## 🔴 CRÍTICO — Error 404 / Página No Encontrada
+
+| URL | Problema |
+|-----|----------|
+| `/desde-venezuela` | **404** — Página no existe. Falta la ruta "Viajes desde Venezuela"  [tripseuropa](https://tripseuropa.com/desde-venezuela) |
+| `/travel-style/backpacker` | **404** — Ruta no definida. Devuelve "Estilo de viaje no encontrado"  [tripseuropa](https://tripseuropa.com/travel-style/backpacker) |
+| `/blog/spain` (y cualquier `/blog/:país-europeo`) | **404** — Formato de URL incorrecto. Las rutas correctas del blog son `/blog/post/:slug` y `/blog/:país-latinoamericano`  [tripseuropa](https://tripseuropa.com/blog/spain) |
+
+***
+
+## 🟠 ALTO — Imágenes Hero Incorrectas o Rotas
+
+### Páginas de Destinos
+| URL | Problema |
+|-----|----------|
+| `/destinations/spain` | Imagen hero **incorrecta**: manos de barista sirviendo café. No representa España  [tripseuropa](https://tripseuropa.com/destinations/spain) |
+| `/destinations/romania` | Imagen hero **rota**: fondo gris, sin imagen real  [tripseuropa](https://tripseuropa.com/destinations/romania) |
+| `/destinations/cyprus` | Imagen hero **rota**: fondo gris, sin imagen real  [tripseuropa](https://tripseuropa.com/destinations/cyprus) |
+| `/destinations/scotland` | Imagen hero **rota**: fondo oscuro, sin imagen real  [tripseuropa](https://tripseuropa.com/destinations/scotland) |
+| `/destinations/baltic-states` | Imagen hero **incorrecta**: primer plano de un hombre sonriendo. No representa los países bálticos  [tripseuropa](https://tripseuropa.com/destinations/baltic-states) |
+| `/destinations/belgium` | Imagen hero **incorrecta**: fondo negro con imagen de diente de león/fuego artificial. No representa Bélgica  [tripseuropa](https://tripseuropa.com/destinations/belgium) |
+| `/destinations/albania` | Imagen hero **cuestionable**: parece Tiflis (Georgia), no Albania  [tripseuropa](https://tripseuropa.com/destinations/albania) |
+
+### Páginas de Estilo de Viaje
+| URL | Problema |
+|-----|----------|
+| `/travel-style/easter` | Imagen hero **incorrecta**: pizza. Nada que ver con Semana Santa  [tripseuropa](https://tripseuropa.com/travel-style/easter) |
+| `/travel-style/couples` | Imagen hero **incorrecta**: taza de té con hojas secas. No representa viajes románticos en pareja  [tripseuropa](https://tripseuropa.com/travel-style/couples) |
+| `/travel-style/senior` | Imagen hero **incorrecta**: stupa budista en Asia (Nepal/Tibet). No es Europa ni viajes senior  [tripseuropa](https://tripseuropa.com/travel-style/senior) |
+| `/travel-style/luxury` | Imagen hero **incorrecta**: resort tropical con palmeras (Maldivas/Caribe). No es lujo europeo  [tripseuropa](https://tripseuropa.com/travel-style/luxury) |
+| `/travel-style/family` | Imagen hero **cuestionable**: personas en bosque nocturno con hoguera. Inquietante para viajes familiares  [tripseuropa](https://tripseuropa.com/travel-style/family) |
+
+### Páginas de Blog por País
+| URL | Problema |
+|-----|----------|
+| `/blog/dominicana` | Imagen hero **rota**: ícono de imagen rota visible, fondo negro  [tripseuropa](https://tripseuropa.com/blog/dominicana) |
+| `/blog/brasil` | Imagen hero **incorrecta**: muestra el Coliseo de Roma (Italia), no Brasil  [tripseuropa](https://tripseuropa.com/blog/brasil) |
+| `/blog/argentina` | Imagen hero **incorrecta**: Coliseo de Roma reutilizado (misma imagen que Brasil)  [tripseuropa](https://tripseuropa.com/blog/argentina) |
+| `/blog/peru` | Imagen hero **incorrecta**: Gran Vía de Madrid reutilizada  [tripseuropa](https://tripseuropa.com/blog/peru) |
+| `/blog/costa-rica` | Imagen hero **incorrecta**: Gran Vía de Madrid (misma imagen que Perú y Colombia)  [tripseuropa](https://tripseuropa.com/blog/costa-rica) |
+| `/blog/panama` | Imagen hero **incorrecta**: teclado de laptop con videoconferencia. Sin relación con viajes  [tripseuropa](https://tripseuropa.com/blog/panama) |
+| `/blog/caribe` | Imagen hero **incorrecta**: buzo/submarinista bajo el agua con peces  [tripseuropa](https://tripseuropa.com/blog/caribe) |
+
+### Páginas Desde-*
+| URL | Problema |
+|-----|----------|
+| `/desde-colombia` | Imagen hero **oscurísima** (casi negra): patrón de tablero o estadio apenas visible  [tripseuropa](https://tripseuropa.com/desde-colombia) |
+| `/desde-mexico` | Imagen hero **oscurísima** (casi negra): fondo prácticamente negro  [tripseuropa](https://tripseuropa.com/desde-mexico) |
+| `/desde-panama` | Imagen hero **oscurísima** (casi negra): sin imagen real visible  [tripseuropa](https://tripseuropa.com/desde-panama) |
+| `/desde-peru` | Imagen hero **oscurísima** (casi negra): ciudad de noche muy oscura  [tripseuropa](https://tripseuropa.com/desde-peru) |
+| `/desde-argentina` | Imagen hero **oscurísima** (casi negra): sin imagen distinguible  [tripseuropa](https://tripseuropa.com/desde-argentina) |
+| `/desde-brasil` | Imagen hero **oscurísima** (casi negra): posiblemente Cristo Redentor pero imperceptible  [tripseuropa](https://tripseuropa.com/desde-brasil) |
+| `/desde-costa-rica` | Imagen hero **oscurísima** (casi negra)  [tripseuropa](https://tripseuropa.com/desde-costa-rica) |
+
+### Otras Páginas
+| URL | Problema |
+|-----|----------|
+| `/forum` | Imagen hero **incorrecta**: pantalla de laptop con dashboard digital. No representa comunidad de viajeros  [tripseuropa](https://tripseuropa.com/forum) |
+| `/ofertas-ultima-hora` | Imagen hero **muy oscura**: ala de avión apenas visible  [tripseuropa](https://tripseuropa.com/ofertas-ultima-hora) |
+
+***
+
+## 🟡 MEDIO — Meta Títulos Genéricos / SEO Deficiente
+
+Las siguientes páginas muestran el meta título genérico **"Viajes a Europa desde Latinoamerica - Paquetes Todo Incluido | Trips Europa"** en lugar de un título específico de cada página. Esto daña el SEO:
+
+| URL | Título correcto esperado |
+|-----|--------------------------|
+| `/travel-style/adventure` | "Viajes de Aventura a Europa..." |
+| `/travel-style/cultural` | "Viajes Culturales a Europa..." |
+| `/travel-style/couples` | "Viajes en Pareja a Europa..." |
+| `/travel-style/senior` | "Viajes para Seniors a Europa..." |
+| `/travel-style/easter` | "Semana Santa en Europa..." |
+| `/travel-style/family` | "Viajes en Familia a Europa..." |
+| `/travel-style/luxury` | "Viajes de Lujo a Europa..." |
+| `/travel-style/winter` | "Viajes de Invierno a Europa..." |
+| `/travel-style/summer` | "Viajes de Verano a Europa..." |
+| `/services/vuelos` | "Vuelos a Europa..." |
+| `/services/hoteles` | "Hoteles en Europa..." |
+| `/services/seguros` | "Seguros de Viaje para Europa..." |
+| `/rewards` | "TripsEuropa GO - Programa de Recompensas..." |
+| `/requisitos-visa` | "Requisitos de Visa Schengen..." |
+| `/testimonios` | "Testimonios y Opiniones..." |
+| `/tools` | "Herramientas de Viaje..." |
+| `/ofertas-ultima-hora` | "Ofertas de Última Hora a Europa..." |
+| `/desde-colombia` | "Viajes a Europa desde Colombia..." |
+| `/desde-mexico` | "Viajes a Europa desde México..." |
+| (y todas las páginas desde-*) | Título específico por país |
+
+***
+
+## 🟡 MEDIO — Rutas Duplicadas (Contenido Idéntico)
+
+| URLs | Problema |
+|------|----------|
+| `/destinations/uk` y `/destinations/united-kingdom` | **Contenido duplicado**: misma página "Reino Unido" accesible en 2 URLs. Problema de SEO (canibalización)  [tripseuropa](https://tripseuropa.com/destinations/uk) |
+
+***
+
+## 🟡 MEDIO — Slugs de URL en Idioma Incorrecto
+
+| Sección | Problema |
+|---------|----------|
+| Artículos de blog (categoría barrios): `/blog/post/bairros-paris-guia`, `/blog/post/bairros-barcelona-cultura`, `/blog/post/bairros-roma-historicos`, etc. | URLs en portugués (`bairros` = "barrios") para artículos en español. Inconsistente con el resto del sitio |
+| Artículos de transporte: `/blog/post/voos-brasil-europa-baratos`, `/blog/post/onibus-europa-flixbus`, `/blog/post/balsas-ilhas-gregas`, etc. | URLs en portugués para contenido en español |
+
+***
+
+## 🟡 MEDIO — Artículo con Contenido de Imagen Incorrecto (IA generada)
+
+| URL | Problema |
+|-----|----------|
+| `/blog/post/mejores-lugares-espana` | La infografía principal contiene nombres de ciudades generados por IA totalmente incorrectos: "Medana Rattes de Parm Dugria", "Sticidn 120a Geandia", "Megadal", "Guemem of Chadeal", "Margfia" — ninguno es un lugar real de España  [tripseuropa](https://tripseuropa.com/blog/post/mejores-lugares-espana) |
+
+***
+
+## 📊 RESUMEN EJECUTIVO
+
+| Categoría | Cantidad |
+|-----------|----------|
+| 🔴 Error 404 / Página no encontrada | **3 URLs** |
+| 🟠 Imágenes hero incorrectas o rotas | **20+ URLs** |
+| 🟡 Meta títulos genéricos (SEO) | **18+ URLs** |
+| 🟡 Contenido duplicado | **1 par de URLs** |
+| 🟡 Slugs en idioma incorrecto | **20+ artículos de blog** |
+| 🟡 Contenido de imagen con errores de IA | **1 artículo** |
+
+### URLs que SÍ funcionan correctamente ✅
+`/`, `/blog`, `/blog/post/*` (mayoría), `/destinations/france`, `/destinations/italy`, `/destinations/germany`, `/destinations/austria`, `/destinations/croatia`, `/destinations/denmark`, `/destinations/finland`, `/destinations/greece`, `/destinations/ireland`, `/destinations/netherlands`, `/destinations/norway`, `/destinations/poland`, `/destinations/portugal`, `/destinations/czech-republic`, `/destinations/sweden`, `/destinations/switzerland`, `/destinations/turkey`, `/destinations/hungary`, `/destinations/uk`, `/travel-style/adventure`, `/travel-style/winter`, `/travel-style/summer`, `/travel-style/cultural`, `/blog/colombia`, `/blog/mexico`, `/vacaciones-europa`, `/travel-assistant`, `/about`, `/contact`, `/packages`, `/services/vuelos`, `/services/hoteles`, `/services/seguros`, `/services/esim`, `/services/tours`, `/services/paquetes`, `/privacy`, `/policies`, `/testimonios`, `/requisitos-visa`, `/tools`, `/rewards`, `/forum`, `/destinations/iceland`

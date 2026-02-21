@@ -140,9 +140,9 @@ export default function FromMexico() {
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-mexico-hero">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <img 
-            src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1518638150340-f706e86654de?q=60&w=1200&auto=format&fit=crop" 
             alt="Mexico City" 
             className="w-full h-full object-cover"
           />

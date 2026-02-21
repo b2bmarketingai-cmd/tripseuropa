@@ -134,7 +134,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "easter",
     category: "season",
     name: { es: "Semana Santa en Europa", en: "Easter in Europe", pt: "Páscoa na Europa" },
-    heroImage: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la Semana Santa con tradiciones centenarias en Espana, Italia y mas. Procesiones, gastronomia especial y una atmosfera unica de espiritualidad y celebracion.",
       en: "Experience Easter with centuries-old traditions in Spain, Italy, and beyond. Processions, special gastronomy, and a unique atmosphere of spirituality and celebration.",
@@ -192,7 +192,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "christmas",
     category: "season",
     name: { es: "Navidad en Europa", en: "Christmas in Europe", pt: "Natal na Europa" },
-    heroImage: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Vive la magia navidena en los mercados mas encantadores de Europa. Desde Viena hasta Estrasburgo, descubre tradiciones, artesanias y sabores festivos.",
       en: "Experience the magic of Christmas in Europe's most charming markets. From Vienna to Strasbourg, discover traditions, crafts, and festive flavors.",
@@ -445,7 +445,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "luxury",
     category: "interest",
     name: { es: "Viajes de Lujo", en: "Luxury Trips", pt: "Viagens de Luxo" },
-    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Experimenta Europa con el maximo refinamiento. Hoteles 5 estrellas, restaurantes con estrella Michelin y experiencias exclusivas.",
       en: "Experience Europe with maximum refinement. 5-star hotels, Michelin-starred restaurants, and exclusive experiences.",
@@ -501,7 +501,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "family",
     category: "group",
     name: { es: "Viajes en Familia", en: "Family Trips", pt: "Viagens em Família" },
-    heroImage: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Crea recuerdos familiares inolvidables en Europa. Actividades para todas las edades, alojamientos familiares y ritmos adaptados a los mas pequenos.",
       en: "Create unforgettable family memories in Europe. Activities for all ages, family accommodations, and rhythms adapted for little ones.",
@@ -529,7 +529,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "couples",
     category: "group",
     name: { es: "Viajes en Pareja", en: "Couples Trips", pt: "Viagens a Dois" },
-    heroImage: "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Escapa con tu pareja a los destinos mas romanticos de Europa. Experiencias intimas, cenas a la luz de las velas y momentos inolvidables.",
       en: "Escape with your partner to Europe's most romantic destinations. Intimate experiences, candlelit dinners, and unforgettable moments.",
@@ -557,7 +557,7 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     slug: "senior",
     category: "group",
     name: { es: "Viajes para Seniors", en: "Senior Trips", pt: "Viagens para Seniores" },
-    heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=60&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=60&w=1200&auto=format&fit=crop",
     description: {
       es: "Viajes pensados para mayores de 55 anos. Ritmos relajados, comodidad premium y companeros de generacion para compartir experiencias.",
       en: "Trips designed for those over 55. Relaxed rhythms, premium comfort, and same-generation companions to share experiences.",

@@ -1,0 +1,135 @@
+# Auditoría Completa de URLs — tripseuropa.com
+
+He navegado **más de 80 URLs** del sitio de forma manual. A continuación la lista completa de errores y problemas encontrados por categoría:
+
+***
+
+## 🔴 ERROR CRÍTICO — Enlace con texto vacío (Home)
+
+| URL | Problema |
+|-----|----------|
+| `https://tripseuropa.com/` | La tarjeta de **Turquía** en el grid "¿Dónde Quieres Ir?" tiene el texto del país VACÍO (`[](https://tripseuropa.com/destinations/turkey)`) — se muestra sin nombre visible |
+
+***
+
+## 🔴 CONFLICTO DE RUTAS (URLs Duplicadas para el mismo destino)
+
+| URL 1 | URL 2 | Problema |
+|--------|--------|----------|
+| `/destinations/uk` | `/destinations/united-kingdom` | El home usa `/destinations/uk` pero el footer usa `/destinations/united-kingdom` — dos URLs diferentes para el mismo contenido. Sin redirección canónica |
+
+***
+
+## 🟠 IMÁGENES HERO ROTAS o COMPLETAMENTE INCORRECTAS
+
+### Destinos
+
+| URL | Problema |
+|-----|----------|
+| `/destinations/romania` | Imagen hero **rota** — solo muestra texto alt "Rumania" |
+| `/destinations/baltic-states` | Imagen hero **completamente incorrecta** — muestra la cara de un hombre sonriendo, no paisajes bálticos |
+| `/destinations/cyprus` | Imagen hero **rota** — solo muestra texto alt "Chipre", sin imagen |
+| `/destinations/scotland` | Imagen hero **rota** — fondo gris sin imagen real |
+
+### Travel Style (Estilo de Viaje)
+
+| URL | Problema |
+|-----|----------|
+| `/travel-style/easter` | Imagen hero **incorrecta** — muestra una pizza/comida italiana, no escenas de Semana Santa |
+| `/travel-style/christmas` | Imagen hero **rota** — fondo gris, muestra texto alt "Navidad en Europa" |
+| `/travel-style/couples` | Imagen hero **incorrecta** — muestra una taza de té/café, no una pareja viajando por Europa |
+| `/travel-style/senior` | Imagen hero **incorrecta** — muestra gente en montañas asiáticas con templo budista/Himalaya, no es Europa |
+
+### Blog por País de Origen
+
+| URL | Problema |
+|-----|----------|
+| `/blog/panama` | Imagen hero **incorrecta** — muestra personas en videollamada (laptop), no viajes |
+| `/blog/argentina` | Imagen hero **reutilizada** de Brasil/Italia (Coliseo) — no representa Argentina |
+| `/blog/peru` | Imagen hero **reutilizada** de España/Madrid — no representa Perú |
+| `/blog/costa-rica` | Imagen hero **reutilizada** de España/Madrid — igual que Colombia y Perú |
+| `/blog/dominicana` | Imagen hero **completamente rota** — fondo negro oscuro, imagen no carga |
+| `/blog/caribe` | Imagen hero **incorrecta** — muestra un buceador bajo el agua, no representa viajes del Caribe a Europa |
+
+### Páginas "Desde" (Landings por país)
+
+| URL | Problema |
+|-----|----------|
+| `/desde-colombia` | Imagen hero **incorrecta** — muestra un tablero de ajedrez de fondo |
+| `/desde-panama` | Imagen hero **rota** — fondo negro completamente vacío, sin imagen |
+| `/desde-mexico` | Imagen hero **extremadamente oscura** — casi invisible |
+| `/desde-brasil` | Imagen hero **muy oscura/difusa** — imagen del Cristo Redentor apenas perceptible |
+| `/desde-argentina` | Imagen hero **muy oscura** — casi invisible |
+| `/desde-peru` | Imagen hero **completamente oscura** — fondo negro, sin imagen visible |
+| `/desde-costa-rica` | Imagen hero **completamente oscura** — fondo negro, sin imagen visible |
+
+### Foro / Comunidad
+
+| URL | Problema |
+|-----|----------|
+| `/forum` | Imagen hero **incorrecta** — muestra una pantalla de computadora/diseño web, no una comunidad de viajeros |
+
+***
+
+## 🟡 PROBLEMAS DE CONTENIDO (Páginas que funcionan pero con contenido incompleto o incorrecto)
+
+| URL | Problema |
+|-----|----------|
+| `/about` | Contenido limitado — menciona solo "colombianos y venezolanos" pero el sitio sirve a toda Latinoamérica (Panamá, México, Brasil, Argentina, Perú, Costa Rica, Rep. Dominicana, Caribe) |
+| `/services/vuelos` | Título SEO genérico — usa el mismo title tag que la home en lugar de uno específico para vuelos |
+| `/services/hoteles` | Título SEO genérico — mismo problema |
+| `/services/paquetes` | Título SEO genérico — mismo problema |
+| `/services/tours` | Título SEO genérico — mismo problema |
+| `/services/seguros` | Título SEO genérico — mismo problema |
+| `/services/esim` | Título SEO genérico — mismo problema |
+
+***
+
+## 🟡 PÁGINAS SIN ENLACE EN EL MENÚ PRINCIPAL (Existen pero son inaccesibles para el usuario)
+
+Estas páginas están en el código (`App.tsx`) pero **no tienen ningún enlace visible en la navegación ni en el footer**:
+
+| URL | Estado |
+|-----|--------|
+| `/condiciones-venta` | ✅ Funciona pero sin enlace accesible |
+| `/cookies` | ✅ Funciona pero sin enlace accesible |
+| `/terminos-condiciones` | ✅ Funciona pero sin enlace accesible |
+| `/vacaciones-europa` | ✅ Funciona pero sin enlace accesible |
+| `/travel-advisor` | No verificado, sin enlace visible |
+| `/asistente` | Alias de `/travel-assistant`, sin enlace visible |
+
+***
+
+## ✅ URLs SIN ERRORES — FUNCIONAN CORRECTAMENTE
+
+| Categoría | URLs |
+|-----------|------|
+| **Navegación Principal** | `/`, `/destinations`, `/packages`, `/blog`, `/contact`, `/tools`, `/forum`, `/travel-assistant` |
+| **Destinos Principales** | `/destinations/spain`, `/destinations/france`, `/destinations/italy`, `/destinations/portugal`, `/destinations/greece`, `/destinations/germany`, `/destinations/netherlands`, `/destinations/switzerland`, `/destinations/croatia`, `/destinations/uk`, `/destinations/united-kingdom`, `/destinations/turkey` |
+| **Destinos Secundarios** | `/destinations/albania`, `/destinations/austria`, `/destinations/belgium`, `/destinations/czech-republic`, `/destinations/denmark`, `/destinations/finland`, `/destinations/hungary`, `/destinations/iceland`, `/destinations/ireland`, `/destinations/norway`, `/destinations/poland`, `/destinations/sweden` |
+| **Servicios** | `/services/vuelos`, `/services/hoteles`, `/services/paquetes`, `/services/tours`, `/services/seguros`, `/services/esim` |
+| **Travel Style** | `/travel-style/fall`, `/travel-style/summer`, `/travel-style/spring`, `/travel-style/winter`, `/travel-style/multi-country`, `/travel-style/beach`, `/travel-style/adventure`, `/travel-style/safari`, `/travel-style/cruises`, `/travel-style/honeymoon`, `/travel-style/nature`, `/travel-style/culture`, `/travel-style/luxury`, `/travel-style/solo`, `/travel-style/family`, `/travel-style/friends-private` |
+| **Blog por País** | `/blog/colombia`, `/blog/mexico`, `/blog/brasil` |
+| **Páginas Legales/Info** | `/about`, `/testimonios`, `/policies`, `/privacy`, `/requisitos-visa`, `/condiciones-venta`, `/cookies`, `/terminos-condiciones` |
+| **Ofertas** | `/ofertas-ultima-hora`, `/rewards`, `/packages?offer=invierno`, `/packages?offer=destacados` |
+| **Desde** | `/desde-colombia`, `/desde-mexico`, `/desde-brasil`, `/desde-argentina`, `/desde-peru`, `/desde-costa-rica`, `/desde-panama` *(funcionan pero con imágenes rotas)* |
+| **Blog Posts** | Todos los artículos individuales en `/blog/post/:slug` funcionan correctamente |
+
+***
+
+## 📊 Resumen Ejecutivo
+
+| Tipo de Error | Cantidad |
+|---------------|----------|
+| 🔴 Enlace con texto vacío | 1 |
+| 🔴 URLs duplicadas sin canonicalización | 1 par |
+| 🟠 Imágenes hero rotas o completamente incorrectas | 17 páginas |
+| 🟡 Páginas con contenido incompleto/incorrecto | 7 |
+| 🟡 Páginas sin enlace en menú/footer | 6 |
+| **Total de páginas con problemas** | **~30** |
+
+**Prioridad de corrección recomendada:**
+1. **Inmediata**: Imágenes hero negras/rotas en `/desde-panama`, `/desde-peru`, `/desde-costa-rica`, `/blog/dominicana`
+2. **Alta**: Imágenes incorrectas en `/destinations/baltic-states`, `/travel-style/easter`, `/travel-style/couples`, `/travel-style/senior`, `/blog/panama`
+3. **Media**: Agregar `canonical` entre `/destinations/uk` y `/destinations/united-kingdom`, corregir texto vacío de Turquía en home
+4. **Baja**: Añadir enlaces en footer/menú para páginas legales ocultas, unificar títulos SEO en páginas de servicios

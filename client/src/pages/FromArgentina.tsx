@@ -139,7 +139,7 @@ export default function FromArgentina() {
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-argentina-hero">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <img 
             src="https://images.unsplash.com/photo-1612294037637-ec328d0e075e?q=60&w=1200&auto=format&fit=crop" 
             alt="Buenos Aires Argentina" 

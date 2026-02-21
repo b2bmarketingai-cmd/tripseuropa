@@ -138,7 +138,7 @@ export default function FromBrazil() {
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-brazil-hero">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <img 
             src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=60&w=1200&auto=format&fit=crop" 
             alt="Rio de Janeiro Brasil" 

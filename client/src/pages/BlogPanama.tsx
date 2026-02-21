@@ -249,7 +249,7 @@ export default function BlogPanama() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-panama-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

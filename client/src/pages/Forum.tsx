@@ -150,7 +150,7 @@ export default function Forum() {
       <section className="relative py-24 bg-primary overflow-hidden" data-testid="section-forum-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

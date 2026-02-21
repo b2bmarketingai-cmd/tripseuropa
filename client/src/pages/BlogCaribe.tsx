@@ -263,7 +263,7 @@ export default function BlogCaribe() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-caribe-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

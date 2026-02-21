@@ -147,10 +147,10 @@ export default function FromColombia() {
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-colombia-hero">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <img 
-            src="https://images.unsplash.com/photo-1555992336-fb0d29498b13?q=60&w=1200&auto=format&fit=crop" 
-            alt="Bogota Colombia" 
+            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=60&w=1200&auto=format&fit=crop" 
+            alt="Cartagena Colombia" 
             className="w-full h-full object-cover"
           />
         </div>

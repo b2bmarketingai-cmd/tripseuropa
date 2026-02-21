@@ -249,7 +249,7 @@ export default function BlogDominicana() {
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-blog-dominicana-hero">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1580541631950-7282082b02fe?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

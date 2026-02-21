@@ -273,7 +273,7 @@ export default function LastMinuteOffers() {
       <section className="relative py-24 md:py-32 bg-primary overflow-hidden" data-testid="section-lastminute-hero">
         <div className="absolute inset-0 opacity-30">
           <img 
-            src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=60&w=1600&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?q=60&w=1200&auto=format&fit=crop" 
             alt="" 
             className="w-full h-full object-cover"
           />

@@ -135,9 +135,9 @@ export default function FromPanama() {
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-panama-hero">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <img 
-            src="https://images.unsplash.com/photo-1563721229246-c3c4be6fc4f9?q=60&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?q=60&w=1200&auto=format&fit=crop" 
             alt="Panama City" 
             className="w-full h-full object-cover"
           />
