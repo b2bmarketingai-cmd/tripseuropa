@@ -277,7 +277,7 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
   },
   {
     id: "visa-schengen-colombia-2025",
-    image: "https://images.unsplash.com/photo-1569254184391-fefaab4c4c22?q=60&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Guia Completa: Visa Schengen para Colombianos 2025", en: "Complete Guide: Schengen Visa for Colombians 2025", pt: "Guia Completo: Visto Schengen para Brasileiros 2025" },
     excerpt: { es: "Requisitos actualizados, documentos necesarios, costo, tiempo de tramite y consejos para aprobar tu visa Schengen desde Colombia.", en: "Updated requirements, necessary documents, cost, processing time and tips to get your Schengen visa from Colombia approved.", pt: "Requisitos atualizados, documentos necessários, custo, tempo de processamento e dicas para aprovar seu visto Schengen a partir do Brasil." },
     category: "planificacion",
@@ -721,7 +721,7 @@ export const BLOG_POSTS_SIMPLE: SimpleBlogPost[] = [
   },
   {
     id: "museo-louvre-guia",
-    image: "https://images.unsplash.com/photo-1499426600726-ac36d2d0c569?q=60&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=60&w=1200&auto=format&fit=crop",
     title: { es: "Museo del Louvre: Guia para No Perderte Nada", en: "Louvre Museum: Guide to Not Miss Anything", pt: "Museu do Louvre: Guia para Não Perder Nada" },
     excerpt: { es: "Mona Lisa, Venus de Milo y 35,000 obras. Como recorrerlo en 3 horas sin agotarte.", en: "Mona Lisa, Venus de Milo and 35,000 works. How to tour it in 3 hours without exhaustion.", pt: "Mona Lisa, Vênus de Milo e 35.000 obras. Como percorrê-lo em 3 horas sem se cansar." },
     category: "destinos",

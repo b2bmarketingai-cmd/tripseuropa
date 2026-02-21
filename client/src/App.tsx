@@ -117,6 +117,8 @@ import FromEcuador from "@/pages/FromEcuador";
 import TravelStylesLanding from "@/pages/TravelStylesLanding";
 import OffersLanding from "@/pages/OffersLanding";
 import FAQPage from "@/pages/FAQPage";
+import FromCaribe from "@/pages/FromCaribe";
+import FromRepublicaDominicana from "@/pages/FromRepublicaDominicana";
 
 function ProtectedRoute({ component: Comp }: { component: React.ComponentType }) {
   const { isAuthenticated, isLoading } = useAuth();
@@ -242,6 +244,8 @@ function Router() {
       <Route path="/desde-venezuela" component={FromVenezuela} />
       <Route path="/desde-chile" component={FromChile} />
       <Route path="/desde-ecuador" component={FromEcuador} />
+      <Route path="/desde-caribe" component={FromCaribe} />
+      <Route path="/desde-republica-dominicana" component={FromRepublicaDominicana} />
 
       <Route path="/travel-styles" component={TravelStylesLanding} />
       <Route path="/estilos-de-viaje" component={TravelStylesLanding} />

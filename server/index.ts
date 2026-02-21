@@ -162,12 +162,15 @@ app.get("/destinations/uk", (_req, res) => res.redirect(301, "/destinations/unit
 
 app.get("/estilo-de-viaje", (_req, res) => res.redirect(301, "/estilos-de-viaje"));
 
-app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) => res.redirect(301, "/blog/mejor-epoca-europa"));
-app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) => res.redirect(301, "/blog/documentos-viajar-europa"));
-app.get("/blog/post/presupuesto-viaje-europa", (_req, res) => res.redirect(301, "/blog/presupuesto-viaje-europa-2026"));
-app.get("/blog/post/visa-schengen-guia-completa", (_req, res) => res.redirect(301, "/blog/visa-schengen-colombianos"));
-app.get("/blog/post/mejores-destinos-europa", (_req, res) => res.redirect(301, "/blog/mejores-destinos-europa-presupuesto"));
-app.get("/blog/post/consejos-primera-vez-europa", (_req, res) => res.redirect(301, "/blog/primera-vez-europa"));
+app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) => res.redirect(301, "/blog/post/mejor-epoca-europa"));
+app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) => res.redirect(301, "/blog/post/documentos-viajar-europa"));
+app.get("/blog/post/presupuesto-viaje-europa", (_req, res) => res.redirect(301, "/blog/post/presupuesto-viaje-europa-2026"));
+app.get("/blog/post/visa-schengen-guia-completa", (_req, res) => res.redirect(301, "/blog/post/visa-schengen-colombianos"));
+app.get("/blog/post/mejores-destinos-europa", (_req, res) => res.redirect(301, "/blog/post/mejores-destinos-europa-presupuesto"));
+app.get("/blog/post/consejos-primera-vez-europa", (_req, res) => res.redirect(301, "/blog/post/primera-vez-europa"));
+app.get("/blog/post/visa-schengen-colombia-2025", (_req, res) => res.redirect(301, "/blog/post/visa-schengen-colombianos"));
+app.get("/blog/post/guia-viaje-espa%C3%B1a", (_req, res) => res.redirect(301, "/blog/post/guia-viaje-espana"));
+app.get("/blog/post/budapest-ba%C3%B1os-termales", (_req, res) => res.redirect(301, "/blog/post/budapest-banos-termales"));
 
 // Redirect old English-only URLs
 app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));
