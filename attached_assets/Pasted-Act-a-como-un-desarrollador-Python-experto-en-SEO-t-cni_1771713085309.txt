@@ -1,0 +1,247 @@
+Actúa como un desarrollador Python experto en SEO técnico y mantenimiento web, trabajando dentro de un proyecto en Replit.
+Tu tarea es generar y explicar código en Python que pueda ejecutarse en este Repl para:
+
+
+Leer todos los sitemaps de tripseuropa.com indicados abajo.
+
+
+Detectar todas las URLs que devuelven error 404.
+
+
+Proponer correcciones (URL nueva o redirección 301).
+
+
+Exportar un informe en CSV con las acciones recomendadas.
+
+
+Contexto del sitio y sitemaps
+La tarea de envío de sitemaps a Google Search Console está completamente finalizada para el dominio tripseuropa.com.
+Hay un total de 34 sitemaps, todos en estado “Correcto” en Google Search Console.
+Los sitemaps se dividen en:
+
+
+Sitemaps en el directorio /sitemaps/
+
+
+Sitemaps en la raíz del dominio
+
+
+Sitemaps en /sitemaps/ (cada uno accesible como https://tripseuropa.com/sitemaps/NOMBRE.xml):
+
+
+sitemap-co-dominicana-es.xml
+
+
+sitemap-co-costarica-es.xml
+
+
+sitemap-co-peru-es.xml
+
+
+sitemap-destinos-europa-es.xml
+
+
+sitemap-co-caribe-es.xml
+
+
+sitemap-co-panama-es.xml
+
+
+sitemap-co-argentina-en.xml
+
+
+sitemap-co-brasil-en.xml
+
+
+sitemap-co-colombia-en.xml
+
+
+sitemap-co-argentina-es.xml
+
+
+sitemap-co-colombia-es.xml
+
+
+sitemap-general.xml
+
+
+sitemap-co-mexico-es.xml
+
+
+sitemap-experiencias.xml
+
+
+sitemap-legales.xml
+
+
+sitemap-ofertas.xml
+
+
+sitemap-noticias.xml
+
+
+sitemap-blog-pt.xml
+
+
+sitemap-co-mexico-en.xml
+
+
+sitemap-blog-en.xml
+
+
+sitemap-imagenes.xml
+
+
+sitemap-paquetes.xml
+
+
+sitemap-co-brasil-pt.xml
+
+
+sitemap-destinos-europa-en.xml
+
+
+sitemap-destinos-europa-pt.xml
+
+
+sitemap-blog-es.xml
+
+
+Sitemaps en la raíz del dominio (accesibles como https://tripseuropa.com/NOMBRE.xml):
+
+
+sitemap.xml
+
+
+sitemap-index.xml
+
+
+sitemap-es.xml
+
+
+sitemap-en.xml
+
+
+sitemap-pt-br.xml
+
+
+sitemap-es-co.xml
+
+
+sitemap-es-mx.xml
+
+
+sitemap-es-ar.xml
+
+
+Objetivo principal
+Dentro de este Repl de Python, debes producir un script que:
+
+
+Descargue y parsee todos los XML de los sitemaps listados.
+
+
+Extraiga todas las URLs (<loc>) de cada sitemap.
+
+
+Haga peticiones HTTP a cada URL para obtener su status code (usando la librería requests).
+
+
+Identifique qué URLs devuelven 404.
+
+
+Para cada 404:
+
+
+Intenta deducir si existe una versión alternativa de la URL (por idioma o estructura similar), por ejemplo cambiando /es/, /en/, /pt/, o patrones de slug.
+
+
+Si encuentras una URL candidata válida (status 200), márcala como “redirección 301 sugerida”.
+
+
+Si no encuentras alternativa, sugiere redirigir a la categoría o sección más relevante (por ejemplo, destinos generales o página de país).
+
+
+
+
+Genere un archivo CSV llamado reporte_404_tripseuropa.csv en el directorio raíz del Repl, con las columnas:
+
+
+url_original_404
+
+
+url_sugerida
+
+
+accion (por ejemplo: redireccion_301, corregir_en_sitemap, crear_pagina_nueva)
+
+
+
+
+Muestre en consola un pequeño resumen:
+
+
+Total de URLs analizadas.
+
+
+Total de URLs 404 detectadas.
+
+
+Total de redirecciones 301 sugeridas.
+
+
+
+
+Requisitos técnicos del script
+
+
+Usa Python 3.
+
+
+Usa requests para las peticiones HTTP y manejo de códigos de estado.
+
+
+Usa xml.etree.ElementTree o una librería estándar para parsear los XML de sitemaps.
+
+
+Usa el módulo csv para generar el archivo CSV a partir de una lista de diccionarios o filas.
+
+
+Controla errores de tiempo de espera (timeout) y maneja excepciones para que el script no se detenga ante un fallo puntual.
+
+
+Permite configurar (en variables al inicio del script) un TIMEOUT y un pequeño SLEEP opcional entre peticiones para no saturar el servidor.
+
+
+Forma de entrega
+
+
+Primero, genera el código completo de Python que se pueda pegar y ejecutar tal cual en Replit.
+
+
+Incluye comentarios claros en el código indicando:
+
+
+Dónde está la lista de sitemaps.
+
+
+Dónde se configura el timeout y el sleep.
+
+
+Dónde se genera el CSV.
+
+
+
+
+Después del código, escribe un breve instructivo en texto plano con:
+
+
+Cómo instalar dependencias en Replit (por ejemplo: pip install requests si hace falta).
+
+
+Cómo ejecutar el script y dónde encontrar el CSV en el Repl.
+
+
+
+
+No devuelvas texto de relleno ni explicaciones teóricas largas: céntrate en producir código funcional y las instrucciones mínimas para ejecutarlo en Replit.
