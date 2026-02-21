@@ -466,7 +466,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "germany",
-    name: { es: "Alemania", en: "Germany" },
+    name: { es: "Alemania", en: "Germany", pt: "Alemanha" },
     heroImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=60&w=800&auto=format&fit=crop",
@@ -476,118 +476,123 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "Alemania combina modernidad con tradicion de manera única. Desde los castillos de cuento de hadas de Baviera hasta la vibrante vida cultural de Berlin, pasando por la romántica Ruta del Rin y los mercados navidenos más famosos del mundo, Alemania ofrece experiencias diversas. Descubre la eficiencia alemana, su cerveza legendaria, y paisajes que van desde los Alpes hasta el Mar del Norte.",
-      en: "Germany uniquely combines modernity with tradition. From Bavaria's fairy-tale castles to Berlin's vibrant cultural life, through the romantic Rhine Route and the world's most famous Christmas markets, Germany offers diverse experiences. Discover German efficiency, legendary beer, and landscapes ranging from the Alps to the North Sea."
+      en: "Germany uniquely combines modernity with tradition. From Bavaria's fairy-tale castles to Berlin's vibrant cultural life, through the romantic Rhine Route and the world's most famous Christmas markets, Germany offers diverse experiences. Discover German efficiency, legendary beer, and landscapes ranging from the Alps to the North Sea.",
+      pt: "A Alemanha combina modernidade com tradição de forma única. Dos castelos de contos de fadas da Baviera à vibrante vida cultural de Berlim, passando pela romântica Rota do Reno e os mercados natalinos mais famosos do mundo, a Alemanha oferece experiências diversas. Descubra a eficiência alemã, sua cerveja lendária e paisagens que vão dos Alpes ao Mar do Norte."
     },
     highlights: {
       es: ["Castillo de Neuschwanstein", "Puerta de Brandeburgo", "Selva Negra", "Ruta Romántica", "Mercados navidenos", "Cerveza y Oktoberfest"],
-      en: ["Neuschwanstein Castle", "Brandenburg Gate", "Black Forest", "Romantic Road", "Christmas markets", "Beer and Oktoberfest"]
+      en: ["Neuschwanstein Castle", "Brandenburg Gate", "Black Forest", "Romantic Road", "Christmas markets", "Beer and Oktoberfest"],
+      pt: ["Castelo de Neuschwanstein", "Portão de Brandemburgo", "Floresta Negra", "Rota Romântica", "Mercados natalinos", "Cerveja e Oktoberfest"]
     },
     packages: [
       {
         id: "alemania-esencial",
-        name: { es: "Alemania Esencial", en: "Essential Germany" },
-        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights" },
+        name: { es: "Alemania Esencial", en: "Essential Germany", pt: "Alemanha Essencial" },
+        duration: { es: "8 dias / 7 noches", en: "8 days / 7 nights", pt: "8 dias / 7 noites" },
         price: "1,899",
         taxes: "380",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno buffet", "Trenes ICE", "Guia en español", "Entradas principales"],
-          en: ["International flights", "4-star hotels", "Buffet breakfast", "ICE trains", "Spanish-speaking guide", "Main entrance tickets"]
+          en: ["International flights", "4-star hotels", "Buffet breakfast", "ICE trains", "Spanish-speaking guide", "Main entrance tickets"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã buffet", "Trens ICE", "Guia em espanhol", "Ingressos principais"]
         }
       },
       {
         id: "alemania-baviera",
-        name: { es: "Baviera Mágica", en: "Mágical Bavaria" },
-        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights" },
+        name: { es: "Baviera Mágica", en: "Mágical Bavaria", pt: "Baviera Mágica" },
+        duration: { es: "7 dias / 6 noches", en: "7 days / 6 nights", pt: "7 dias / 6 noites" },
         price: "1,699",
         taxes: "340",
         includes: {
           es: ["Vuelos internacionales", "Hoteles tipicos", "Desayuno", "Coche de alquiler", "Neuschwanstein", "Experiencia cervecera"],
-          en: ["International flights", "Typical hotels", "Breakfast", "Rental car", "Neuschwanstein", "Beer experience"]
+          en: ["International flights", "Typical hotels", "Breakfast", "Rental car", "Neuschwanstein", "Beer experience"],
+          pt: ["Voos internacionais", "Hotéis típicos", "Café da manhã", "Carro alugado", "Neuschwanstein", "Experiência cervejeira"]
         }
       },
       {
         id: "alemania-completa",
-        name: { es: "Gran Tour de Alemania", en: "Grand Tour of Germany" },
-        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights" },
+        name: { es: "Gran Tour de Alemania", en: "Grand Tour of Germany", pt: "Grande Tour da Alemanha" },
+        duration: { es: "12 dias / 11 noches", en: "12 days / 11 nights", pt: "12 dias / 11 noites" },
         price: "2,799",
         taxes: "480",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "Rail Pass", "Tours exclusivos", "Crucero por el Rin"],
-          en: ["International flights", "4-5 star hotels", "Half board", "Rail Pass", "Exclusive tours", "Rhine cruise"]
+          en: ["International flights", "4-5 star hotels", "Half board", "Rail Pass", "Exclusive tours", "Rhine cruise"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "Rail Pass", "Tours exclusivos", "Cruzeiro pelo Reno"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Munich", en: "Arrival in Munich" },
-        description: { es: "Bienvenida en Munich, capital de Baviera.", en: "Welcome to Munich, capital of Bavaria." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Marienplatz"], en: ["Airport pickup", "Hotel check-in", "Marienplatz"] }
+        title: { es: "Llegada a Munich", en: "Arrival in Munich", pt: "Chegada em Munique" },
+        description: { es: "Bienvenida en Munich, capital de Baviera.", en: "Welcome to Munich, capital of Bavaria.", pt: "Boas-vindas em Munique, capital da Baviera." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Marienplatz"], en: ["Airport pickup", "Hotel check-in", "Marienplatz"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Marienplatz"] }
       },
       {
         day: 2,
-        title: { es: "Munich y Cerveza", en: "Munich and Beer" },
-        description: { es: "Explora Munich y su famosa cultura cervecera.", en: "Explore Munich and its famous beer culture." },
-        activities: { es: ["Residenz", "Hofbrauhaus", "Jardin Ingles"], en: ["Residenz", "Hofbrauhaus", "English Garden"] }
+        title: { es: "Munich y Cerveza", en: "Munich and Beer", pt: "Munique e Cerveja" },
+        description: { es: "Explora Munich y su famosa cultura cervecera.", en: "Explore Munich and its famous beer culture.", pt: "Explore Munique e sua famosa cultura cervejeira." },
+        activities: { es: ["Residenz", "Hofbrauhaus", "Jardin Ingles"], en: ["Residenz", "Hofbrauhaus", "English Garden"], pt: ["Residenz", "Hofbräuhaus", "Jardim Inglês"] }
       },
       {
         day: 3,
-        title: { es: "Neuschwanstein", en: "Neuschwanstein" },
-        description: { es: "Excursion al castillo de cuento de hadas.", en: "Excursion to the fairy-tale castle." },
-        activities: { es: ["Castillo Neuschwanstein", "Hohenschwangau", "Fussen"], en: ["Neuschwanstein Castle", "Hohenschwangau", "Fussen"] }
+        title: { es: "Neuschwanstein", en: "Neuschwanstein", pt: "Neuschwanstein" },
+        description: { es: "Excursion al castillo de cuento de hadas.", en: "Excursion to the fairy-tale castle.", pt: "Excursão ao castelo de contos de fadas." },
+        activities: { es: ["Castillo Neuschwanstein", "Hohenschwangau", "Fussen"], en: ["Neuschwanstein Castle", "Hohenschwangau", "Fussen"], pt: ["Castelo Neuschwanstein", "Hohenschwangau", "Füssen"] }
       },
       {
         day: 4,
-        title: { es: "Selva Negra", en: "Black Forest" },
-        description: { es: "Viaje a la mágica region de la Selva Negra.", en: "Trip to the mágical Black Forest region." },
-        activities: { es: ["Cascadas Triberg", "Friburgo", "Pueblo tradicional"], en: ["Triberg Waterfalls", "Freiburg", "Traditional village"] }
+        title: { es: "Selva Negra", en: "Black Forest", pt: "Floresta Negra" },
+        description: { es: "Viaje a la mágica region de la Selva Negra.", en: "Trip to the mágical Black Forest region.", pt: "Viagem à mágica região da Floresta Negra." },
+        activities: { es: ["Cascadas Triberg", "Friburgo", "Pueblo tradicional"], en: ["Triberg Waterfalls", "Freiburg", "Traditional village"], pt: ["Cascatas de Triberg", "Friburgo", "Vila tradicional"] }
       },
       {
         day: 5,
-        title: { es: "Heidelberg", en: "Heidelberg" },
-        description: { es: "Descubre la romántica ciudad universitaria.", en: "Discover the romantic university city." },
-        activities: { es: ["Castillo Heidelberg", "Casco antiguo", "Puente viejo"], en: ["Heidelberg Castle", "Old town", "Old bridge"] }
+        title: { es: "Heidelberg", en: "Heidelberg", pt: "Heidelberg" },
+        description: { es: "Descubre la romántica ciudad universitaria.", en: "Discover the romantic university city.", pt: "Descubra a romântica cidade universitária." },
+        activities: { es: ["Castillo Heidelberg", "Casco antiguo", "Puente viejo"], en: ["Heidelberg Castle", "Old town", "Old bridge"], pt: ["Castelo de Heidelberg", "Centro histórico", "Ponte velha"] }
       },
       {
         day: 6,
-        title: { es: "Valle del Rin", en: "Rhine Valley" },
-        description: { es: "Crucero por el romántico Valle del Rin.", en: "Cruise through the romantic Rhine Valley." },
-        activities: { es: ["Crucero fluvial", "Castillos del Rin", "Cata de vinos"], en: ["River cruise", "Rhine castles", "Wine tasting"] }
+        title: { es: "Valle del Rin", en: "Rhine Valley", pt: "Vale do Reno" },
+        description: { es: "Crucero por el romántico Valle del Rin.", en: "Cruise through the romantic Rhine Valley.", pt: "Cruzeiro pelo romântico Vale do Reno." },
+        activities: { es: ["Crucero fluvial", "Castillos del Rin", "Cata de vinos"], en: ["River cruise", "Rhine castles", "Wine tasting"], pt: ["Cruzeiro fluvial", "Castelos do Reno", "Degustação de vinhos"] }
       },
       {
         day: 7,
-        title: { es: "Berlin", en: "Berlin" },
-        description: { es: "Viaje en tren de alta velocidad a Berlin.", en: "High-speed train to Berlin." },
-        activities: { es: ["Tren a Berlin", "Puerta de Brandeburgo", "Reichstag"], en: ["Train to Berlin", "Brandenburg Gate", "Reichstag"] }
+        title: { es: "Berlin", en: "Berlin", pt: "Berlim" },
+        description: { es: "Viaje en tren de alta velocidad a Berlin.", en: "High-speed train to Berlin.", pt: "Viagem de trem de alta velocidade para Berlim." },
+        activities: { es: ["Tren a Berlin", "Puerta de Brandeburgo", "Reichstag"], en: ["Train to Berlin", "Brandenburg Gate", "Reichstag"], pt: ["Trem para Berlim", "Portão de Brandemburgo", "Reichstag"] }
       },
       {
         day: 8,
-        title: { es: "Berlin Historico", en: "Historic Berlin" },
-        description: { es: "Explora la historia de Berlin dividido.", en: "Explore the history of divided Berlin." },
-        activities: { es: ["Muro de Berlin", "Checkpoint Charlie", "Isla de los Museos"], en: ["Berlin Wall", "Checkpoint Charlie", "Museum Island"] }
+        title: { es: "Berlin Historico", en: "Historic Berlin", pt: "Berlim Histórica" },
+        description: { es: "Explora la historia de Berlin dividido.", en: "Explore the history of divided Berlin.", pt: "Explore a história da Berlim dividida." },
+        activities: { es: ["Muro de Berlin", "Checkpoint Charlie", "Isla de los Museos"], en: ["Berlin Wall", "Checkpoint Charlie", "Museum Island"], pt: ["Muro de Berlim", "Checkpoint Charlie", "Ilha dos Museus"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar a Alemania?", en: "Do I need a visa to travel to Germany?" },
-        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Alemania sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Germany without a visa for up to 90 days." }
+        question: { es: "Necesito visa para viajar a Alemania?", en: "Do I need a visa to travel to Germany?", pt: "Preciso de visto para viajar para a Alemanha?" },
+        answer: { es: "Los ciudadanos de la mayoria de paises latinoamericanos pueden ingresar a Alemania sin visa por hasta 90 dias.", en: "Citizens of most Latin American countries can enter Germany without a visa for up to 90 days.", pt: "Cidadãos da maioria dos países latino-americanos podem entrar na Alemanha sem visto por até 90 dias." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar Alemania?", en: "When is the best time to visit Germany?" },
-        answer: { es: "Mayo a septiembre para buen clima. Diciembre para mercados navidenos y septiembre-octubre para Oktoberfest.", en: "May to September for good weather. December for Christmas markets and September-October for Oktoberfest." }
+        question: { es: "Cual es la mejor epoca para visitar Alemania?", en: "When is the best time to visit Germany?", pt: "Qual é a melhor época para visitar a Alemanha?" },
+        answer: { es: "Mayo a septiembre para buen clima. Diciembre para mercados navidenos y septiembre-octubre para Oktoberfest.", en: "May to September for good weather. December for Christmas markets and September-October for Oktoberfest.", pt: "Maio a setembro para bom clima. Dezembro para mercados natalinos e setembro-outubro para Oktoberfest." }
       },
       {
-        question: { es: "Es difícil el idioma aleman?", en: "Is German a difficult language?" },
-        answer: { es: "El aleman puede ser desafiante, pero en zonas turisticas muchos hablan ingles. Aprende frases basicas.", en: "German can be challenging, but many speak English in tourist areas. Learn basic phrases." }
+        question: { es: "Es difícil el idioma aleman?", en: "Is German a difficult language?", pt: "O idioma alemão é difícil?" },
+        answer: { es: "El aleman puede ser desafiante, pero en zonas turisticas muchos hablan ingles. Aprende frases basicas.", en: "German can be challenging, but many speak English in tourist areas. Learn basic phrases.", pt: "O alemão pode ser desafiador, mas em áreas turísticas muitos falam inglês. Aprenda frases básicas." }
       },
       {
-        question: { es: "Como es el transporte en Alemania?", en: "How is transportation in Germany?" },
-        answer: { es: "Alemania tiene excelente infraestructura. Los trenes ICE son puntuales y conectan todas las ciudades principales.", en: "Germany has excellent infrastructure. ICE trains are punctual and connect all major cities." }
+        question: { es: "Como es el transporte en Alemania?", en: "How is transportation in Germany?", pt: "Como é o transporte na Alemanha?" },
+        answer: { es: "Alemania tiene excelente infraestructura. Los trenes ICE son puntuales y conectan todas las ciudades principales.", en: "Germany has excellent infrastructure. ICE trains are punctual and connect all major cities.", pt: "A Alemanha tem excelente infraestrutura. Os trens ICE são pontuais e conectam todas as cidades principais." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Octubre y Diciembre", en: "May to October and December" },
+    bestTimeToVisit: { es: "Mayo a Octubre y Diciembre", en: "May to October and December", pt: "Maio a Outubro e Dezembro" },
     currency: "EUR",
-    language: { es: "Aleman", en: "German" },
+    language: { es: "Aleman", en: "German", pt: "Alemão" },
     visaInfo: { es: "No requiere visa para estancias hasta 90 dias", en: "No visa required for stays up to 90 days", pt: "Não requer visto para estadias de até 90 dias" }
   },
   {
@@ -1202,7 +1207,7 @@ export const DESTINATIONS_DATA: DestinationData[] = [
   },
   {
     slug: "united-kingdom",
-    name: { es: "Reino Unido", en: "United Kingdom" },
+    name: { es: "Reino Unido", en: "United Kingdom", pt: "Reino Unido" },
     heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=60&w=1200&auto=format&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=60&w=800&auto=format&fit=crop",
@@ -1212,131 +1217,136 @@ export const DESTINATIONS_DATA: DestinationData[] = [
     ],
     description: {
       es: "El Reino Unido combina tradicion monarquica con modernidad vibrante. Desde el icónica Londres con el Big Ben y el Palacio de Buckingham hasta los paisajes de las Tierras Altas escocesas, pasando por los castillos de Gales y la campiña inglesa, el Reino Unido ofrece experiencias diversas. Descubre la realeza, los pubs tradicionales, el te de la tarde y una escena cultural de clase mundial.",
-      en: "The United Kingdom combines monarchical tradition with vibrant modernity. From iconic London with Big Ben and Buckingham Palace to the Scottish Highlands landscapes, through Welsh castles and the English countryside, the UK offers diverse experiences. Discover royalty, traditional pubs, afternoon tea, and a world-class cultural scene."
+      en: "The United Kingdom combines monarchical tradition with vibrant modernity. From iconic London with Big Ben and Buckingham Palace to the Scottish Highlands landscapes, through Welsh castles and the English countryside, the UK offers diverse experiences. Discover royalty, traditional pubs, afternoon tea, and a world-class cultural scene.",
+      pt: "O Reino Unido combina tradição monárquica com modernidade vibrante. Da icônica Londres com o Big Ben e o Palácio de Buckingham às paisagens das Terras Altas escocesas, passando pelos castelos do País de Gales e pelo campo inglês, o Reino Unido oferece experiências diversas. Descubra a realeza, os pubs tradicionais, o chá da tarde e uma cena cultural de classe mundial."
     },
     highlights: {
       es: ["Big Ben y Parlamento", "Palacio de Buckingham", "Stonehenge", "Edimburgo y castillo", "Tierras Altas escocesas", "Oxford y Cambridge"],
-      en: ["Big Ben and Parliament", "Buckingham Palace", "Stonehenge", "Edinburgh and castle", "Scottish Highlands", "Oxford and Cambridge"]
+      en: ["Big Ben and Parliament", "Buckingham Palace", "Stonehenge", "Edinburgh and castle", "Scottish Highlands", "Oxford and Cambridge"],
+      pt: ["Big Ben e Parlamento", "Palácio de Buckingham", "Stonehenge", "Edimburgo e castelo", "Terras Altas escocesas", "Oxford e Cambridge"]
     },
     packages: [
       {
         id: "londres-express",
-        name: { es: "Londres Express", en: "London Express" },
-        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights" },
+        name: { es: "Londres Express", en: "London Express", pt: "Londres Express" },
+        duration: { es: "5 dias / 4 noches", en: "5 days / 4 nights", pt: "5 dias / 4 noites" },
         price: "1,499",
         taxes: "300",
         includes: {
           es: ["Vuelos internacionales", "Hotel 4 estrellas", "Desayuno ingles", "London Pass", "Guia en español", "Tour panoramico"],
-          en: ["International flights", "4-star hotel", "English breakfast", "London Pass", "Spanish-speaking guide", "Panoramic tour"]
+          en: ["International flights", "4-star hotel", "English breakfast", "London Pass", "Spanish-speaking guide", "Panoramic tour"],
+          pt: ["Voos internacionais", "Hotel 4 estrelas", "Café da manhã inglês", "London Pass", "Guia em espanhol", "Tour panorâmico"]
         }
       },
       {
         id: "uk-clasico",
-        name: { es: "Reino Unido Clásico", en: "Classic UK" },
-        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights" },
+        name: { es: "Reino Unido Clásico", en: "Classic UK", pt: "Reino Unido Clássico" },
+        duration: { es: "10 dias / 9 noches", en: "10 days / 9 nights", pt: "10 dias / 9 noites" },
         price: "2,499",
         taxes: "450",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayuno", "Trenes", "Stonehenge y Bath", "Edimburgo"],
-          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Stonehenge and Bath", "Edinburgh"]
+          en: ["International flights", "4-star hotels", "Breakfast", "Trains", "Stonehenge and Bath", "Edinburgh"],
+          pt: ["Voos internacionais", "Hotéis 4 estrelas", "Café da manhã", "Trens", "Stonehenge e Bath", "Edimburgo"]
         }
       },
       {
         id: "uk-completo",
-        name: { es: "Gran Tour del Reino Unido", en: "Grand Tour of UK" },
-        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights" },
+        name: { es: "Gran Tour del Reino Unido", en: "Grand Tour of UK", pt: "Grande Tour do Reino Unido" },
+        duration: { es: "14 dias / 13 noches", en: "14 days / 13 nights", pt: "14 dias / 13 noites" },
         price: "3,499",
         taxes: "550",
         includes: {
           es: ["Vuelos internacionales", "Hoteles 4-5 estrellas", "Media pension", "BritRail Pass", "Tours exclusivos", "Tierras Altas"],
-          en: ["International flights", "4-5 star hotels", "Half board", "BritRail Pass", "Exclusive tours", "Highlands"]
+          en: ["International flights", "4-5 star hotels", "Half board", "BritRail Pass", "Exclusive tours", "Highlands"],
+          pt: ["Voos internacionais", "Hotéis 4-5 estrelas", "Meia pensão", "BritRail Pass", "Tours exclusivos", "Terras Altas"]
         }
       }
     ],
     itinerary: [
       {
         day: 1,
-        title: { es: "Llegada a Londres", en: "Arrival in London" },
-        description: { es: "Bienvenida en Londres, la capital del Reino Unido.", en: "Welcome to London, the capital of the United Kingdom." },
-        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Piccadilly Circus"], en: ["Airport pickup", "Hotel check-in", "Piccadilly Circus"] }
+        title: { es: "Llegada a Londres", en: "Arrival in London", pt: "Chegada em Londres" },
+        description: { es: "Bienvenida en Londres, la capital del Reino Unido.", en: "Welcome to London, the capital of the United Kingdom.", pt: "Boas-vindas em Londres, a capital do Reino Unido." },
+        activities: { es: ["Recogida aeropuerto", "Check-in hotel", "Piccadilly Circus"], en: ["Airport pickup", "Hotel check-in", "Piccadilly Circus"], pt: ["Recolha no aeroporto", "Check-in no hotel", "Piccadilly Circus"] }
       },
       {
         day: 2,
-        title: { es: "Londres Clásico", en: "Classic London" },
-        description: { es: "Los iconos más famosos de Londres.", en: "London's most famous icons." },
-        activities: { es: ["Big Ben", "Abadia Westminster", "Cambio de guardia"], en: ["Big Ben", "Westminster Abbey", "Changing of the Guard"] }
+        title: { es: "Londres Clásico", en: "Classic London", pt: "Londres Clássica" },
+        description: { es: "Los iconos más famosos de Londres.", en: "London's most famous icons.", pt: "Os ícones mais famosos de Londres." },
+        activities: { es: ["Big Ben", "Abadia Westminster", "Cambio de guardia"], en: ["Big Ben", "Westminster Abbey", "Changing of the Guard"], pt: ["Big Ben", "Abadia de Westminster", "Troca da guarda"] }
       },
       {
         day: 3,
-        title: { es: "Torre y Museos", en: "Tower and Museums" },
-        description: { es: "Historia y cultura de clase mundial.", en: "World-class history and culture." },
-        activities: { es: ["Torre de Londres", "British Museum", "Covent Garden"], en: ["Tower of London", "British Museum", "Covent Garden"] }
+        title: { es: "Torre y Museos", en: "Tower and Museums", pt: "Torre e Museus" },
+        description: { es: "Historia y cultura de clase mundial.", en: "World-class history and culture.", pt: "História e cultura de classe mundial." },
+        activities: { es: ["Torre de Londres", "British Museum", "Covent Garden"], en: ["Tower of London", "British Museum", "Covent Garden"], pt: ["Torre de Londres", "British Museum", "Covent Garden"] }
       },
       {
         day: 4,
-        title: { es: "Stonehenge y Bath", en: "Stonehenge and Bath" },
-        description: { es: "Excursion al misterioso Stonehenge y la elegante Bath.", en: "Excursion to mysterious Stonehenge and elegant Bath." },
-        activities: { es: ["Stonehenge", "Termas romanas", "Ciudad de Bath"], en: ["Stonehenge", "Roman baths", "City of Bath"] }
+        title: { es: "Stonehenge y Bath", en: "Stonehenge and Bath", pt: "Stonehenge e Bath" },
+        description: { es: "Excursion al misterioso Stonehenge y la elegante Bath.", en: "Excursion to mysterious Stonehenge and elegant Bath.", pt: "Excursão ao misterioso Stonehenge e à elegante Bath." },
+        activities: { es: ["Stonehenge", "Termas romanas", "Ciudad de Bath"], en: ["Stonehenge", "Roman baths", "City of Bath"], pt: ["Stonehenge", "Termas romanas", "Cidade de Bath"] }
       },
       {
         day: 5,
-        title: { es: "Oxford", en: "Oxford" },
-        description: { es: "La prestigiosa ciudad universitaria.", en: "The prestigious university city." },
-        activities: { es: ["Colleges de Oxford", "Biblioteca Bodleian", "Harry Potter tour"], en: ["Oxford Colleges", "Bodleian Library", "Harry Potter tour"] }
+        title: { es: "Oxford", en: "Oxford", pt: "Oxford" },
+        description: { es: "La prestigiosa ciudad universitaria.", en: "The prestigious university city.", pt: "A prestigiosa cidade universitária." },
+        activities: { es: ["Colleges de Oxford", "Biblioteca Bodleian", "Harry Potter tour"], en: ["Oxford Colleges", "Bodleian Library", "Harry Potter tour"], pt: ["Colleges de Oxford", "Biblioteca Bodleian", "Tour Harry Potter"] }
       },
       {
         day: 6,
-        title: { es: "Edimburgo", en: "Edinburgh" },
-        description: { es: "Viaje en tren a la capital escocesa.", en: "Train journey to the Scottish capital." },
-        activities: { es: ["Tren a Edimburgo", "Royal Mile", "Castillo de Edimburgo"], en: ["Train to Edinburgh", "Royal Mile", "Edinburgh Castle"] }
+        title: { es: "Edimburgo", en: "Edinburgh", pt: "Edimburgo" },
+        description: { es: "Viaje en tren a la capital escocesa.", en: "Train journey to the Scottish capital.", pt: "Viagem de trem à capital escocesa." },
+        activities: { es: ["Tren a Edimburgo", "Royal Mile", "Castillo de Edimburgo"], en: ["Train to Edinburgh", "Royal Mile", "Edinburgh Castle"], pt: ["Trem para Edimburgo", "Royal Mile", "Castelo de Edimburgo"] }
       },
       {
         day: 7,
-        title: { es: "Tierras Altas", en: "Highlands" },
-        description: { es: "Excursion a las espectaculares Tierras Altas.", en: "Excursion to the spectacular Highlands." },
-        activities: { es: ["Lago Ness", "Glencoe", "Fort William"], en: ["Loch Ness", "Glencoe", "Fort William"] }
+        title: { es: "Tierras Altas", en: "Highlands", pt: "Terras Altas" },
+        description: { es: "Excursion a las espectaculares Tierras Altas.", en: "Excursion to the spectacular Highlands.", pt: "Excursão às espetaculares Terras Altas." },
+        activities: { es: ["Lago Ness", "Glencoe", "Fort William"], en: ["Loch Ness", "Glencoe", "Fort William"], pt: ["Lago Ness", "Glencoe", "Fort William"] }
       },
       {
         day: 8,
-        title: { es: "Whisky y Cultura", en: "Whisky and Culture" },
-        description: { es: "Descubre el whisky escoces y la cultura local.", en: "Discover Scotch whisky and local culture." },
-        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomía escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"] }
+        title: { es: "Whisky y Cultura", en: "Whisky and Culture", pt: "Whisky e Cultura" },
+        description: { es: "Descubre el whisky escoces y la cultura local.", en: "Discover Scotch whisky and local culture.", pt: "Descubra o whisky escocês e a cultura local." },
+        activities: { es: ["Destileria de whisky", "Museo Nacional", "Gastronomía escocesa"], en: ["Whisky distillery", "National Museum", "Scottish gastronomy"], pt: ["Destilaria de whisky", "Museu Nacional", "Gastronomia escocesa"] }
       },
       {
         day: 9,
-        title: { es: "York", en: "York" },
-        description: { es: "La ciudad medieval mejor conservada de Inglaterra.", en: "England's best-preserved medieval city." },
-        activities: { es: ["Tren a York", "Catedral de York", "The Shambles"], en: ["Train to York", "York Minster", "The Shambles"] }
+        title: { es: "York", en: "York", pt: "York" },
+        description: { es: "La ciudad medieval mejor conservada de Inglaterra.", en: "England's best-preserved medieval city.", pt: "A cidade medieval mais bem preservada da Inglaterra." },
+        activities: { es: ["Tren a York", "Catedral de York", "The Shambles"], en: ["Train to York", "York Minster", "The Shambles"], pt: ["Trem para York", "Catedral de York", "The Shambles"] }
       },
       {
         day: 10,
-        title: { es: "Regreso", en: "Return" },
-        description: { es: "Regreso a Londres y vuelo de vuelta.", en: "Return to London and flight home." },
-        activities: { es: ["Tren a Londres", "Tiempo libre", "Vuelo de regreso"], en: ["Train to London", "Free time", "Return flight"] }
+        title: { es: "Regreso", en: "Return", pt: "Retorno" },
+        description: { es: "Regreso a Londres y vuelo de vuelta.", en: "Return to London and flight home.", pt: "Retorno a Londres e voo de volta." },
+        activities: { es: ["Tren a Londres", "Tiempo libre", "Vuelo de regreso"], en: ["Train to London", "Free time", "Return flight"], pt: ["Trem para Londres", "Tempo livre", "Voo de retorno"] }
       }
     ],
     faqs: [
       {
-        question: { es: "Necesito visa para viajar al Reino Unido?", en: "Do I need a visa to travel to the UK?" },
-        answer: { es: "Depende de tu nacionalidad. Ciudadanos de algunos paises latinoamericanos necesitan visa. Verifica antes de viajar.", en: "It depends on your nationality. Citizens of some Latin American countries need a visa. Check before traveling." }
+        question: { es: "Necesito visa para viajar al Reino Unido?", en: "Do I need a visa to travel to the UK?", pt: "Preciso de visto para viajar ao Reino Unido?" },
+        answer: { es: "Depende de tu nacionalidad. Ciudadanos de algunos paises latinoamericanos necesitan visa. Verifica antes de viajar.", en: "It depends on your nationality. Citizens of some Latin American countries need a visa. Check before traveling.", pt: "Depende da sua nacionalidade. Cidadãos de alguns países latino-americanos precisam de visto. Verifique antes de viajar." }
       },
       {
-        question: { es: "Que moneda se usa en el Reino Unido?", en: "What currency is used in the UK?" },
-        answer: { es: "La Libra Esterlina (GBP). No se usa el Euro en el Reino Unido.", en: "The Pound Sterling (GBP). The Euro is not used in the UK." }
+        question: { es: "Que moneda se usa en el Reino Unido?", en: "What currency is used in the UK?", pt: "Qual moeda é usada no Reino Unido?" },
+        answer: { es: "La Libra Esterlina (GBP). No se usa el Euro en el Reino Unido.", en: "The Pound Sterling (GBP). The Euro is not used in the UK.", pt: "A Libra Esterlina (GBP). O Euro não é usado no Reino Unido." }
       },
       {
-        question: { es: "Cual es la mejor epoca para visitar?", en: "When is the best time to visit?" },
-        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is mágical for Christmas markets." }
+        question: { es: "Cual es la mejor epoca para visitar?", en: "When is the best time to visit?", pt: "Qual é a melhor época para visitar?" },
+        answer: { es: "Mayo a septiembre tiene mejor clima. Diciembre es magico por los mercados navidenos.", en: "May to September has better weather. December is mágical for Christmas markets.", pt: "Maio a setembro tem melhor clima. Dezembro é mágico pelos mercados natalinos." }
       },
       {
-        question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?" },
-        answer: { es: "Variable y lluvioso. Lleva siempre un paraguas y capas de ropa. Los veranos son templados.", en: "Variable and rainy. Always carry an umbrella and layers. Summers are mild." }
+        question: { es: "Como es el clima en el Reino Unido?", en: "What is the weather like in the UK?", pt: "Como é o clima no Reino Unido?" },
+        answer: { es: "Variable y lluvioso. Lleva siempre un paraguas y capas de ropa. Los veranos son templados.", en: "Variable and rainy. Always carry an umbrella and layers. Summers are mild.", pt: "Variável e chuvoso. Leve sempre um guarda-chuva e camadas de roupa. Os verões são amenos." }
       }
     ],
-    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September" },
+    bestTimeToVisit: { es: "Mayo a Septiembre", en: "May to September", pt: "Maio a Setembro" },
     currency: "GBP",
-    language: { es: "Ingles", en: "English" },
-    visaInfo: { es: "Algunos paises requieren visa - verificar antes de viajar", en: "Some countries require visa - check before traveling" }
+    language: { es: "Ingles", en: "English", pt: "Inglês" },
+    visaInfo: { es: "Algunos paises requieren visa - verificar antes de viajar", en: "Some countries require visa - check before traveling", pt: "Alguns países requerem visto - verificar antes de viajar" }
   },
   {
     slug: "albania",
@@ -2022,7 +2032,16 @@ const SLUG_ALIASES: Record<string, string> = {
   "republica-checa": "czech-republic",
   "irlanda": "ireland",
   "escocia": "scotland",
-  "turquia": "turkey"
+  "turquia": "turkey",
+  "uk": "united-kingdom",
+  "reino-unido": "united-kingdom",
+  "inglaterra": "united-kingdom",
+  "paises-bajos": "netherlands",
+  "alemanha": "germany",
+  "espanha": "spain",
+  "franca": "france",
+  "italia-pt": "italy",
+  "suica": "switzerland"
 };
 
 export function getDestinationBySlug(slug: string): DestinationData | undefined {
