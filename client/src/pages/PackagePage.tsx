@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
@@ -261,6 +262,7 @@ export default function PackagePage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="page-package">
+      <SEOHead title={`${pkg.title[lang]} - Viajes Europa`} description={pkg.description[lang]} />
       <Header />
       <Breadcrumbs
         items={[

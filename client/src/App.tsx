@@ -75,6 +75,7 @@ import FromBrazil from "@/pages/FromBrazil";
 import FromMexico from "@/pages/FromMexico";
 import FromPanama from "@/pages/FromPanama";
 import FromArgentina from "@/pages/FromArgentina";
+import FromVenezuela from "@/pages/FromVenezuela";
 import FromPeru from "@/pages/FromPeru";
 import FromCostaRica from "@/pages/FromCostaRica";
 import BlogColombia from "@/pages/BlogColombia";
@@ -233,6 +234,7 @@ function Router() {
       <Route path="/desde-argentina" component={FromArgentina} />
       <Route path="/desde-peru" component={FromPeru} />
       <Route path="/desde-costa-rica" component={FromCostaRica} />
+      <Route path="/desde-venezuela" component={FromVenezuela} />
 
       <Route path="/desde/:country" component={CountryLanding} />
 

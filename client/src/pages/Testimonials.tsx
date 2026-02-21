@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -88,6 +89,7 @@ export default function Testimonials() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Testimonios de Viajeros - Trips Europa" description="Lee las experiencias de viajeros latinoamericanos que viajaron a Europa con Trips Europa." />
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-testimonials-hero">

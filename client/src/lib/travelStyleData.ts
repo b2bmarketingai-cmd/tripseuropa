@@ -608,6 +608,37 @@ export const TRAVEL_STYLE_DATA: TravelStyleData[] = [
     ],
     bestFor: { es: "Grupos de amigos buscando exclusividad", en: "Friend groups seeking exclusivity", pt: "Grupos de amigos buscando exclusividade" },
     idealDuration: { es: "7-14 dias", en: "7-14 days", pt: "7-14 dias" }
+  },
+  {
+    slug: "backpacker",
+    category: "interest",
+    name: { es: "Mochilero por Europa", en: "Backpacking Europe", pt: "Mochilão pela Europa" },
+    heroImage: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=60&w=1200&auto=format&fit=crop",
+    description: {
+      es: "Vive Europa como un verdadero mochilero. Hostales con encanto, rutas alternativas, transporte economico y experiencias autenticas lejos de las rutas turisticas convencionales.",
+      en: "Experience Europe as a true backpacker. Charming hostels, alternative routes, budget transport, and authentic experiences away from conventional tourist paths.",
+      pt: "Viva a Europa como um verdadeiro mochileiro. Hostels charmosos, rotas alternativas, transporte economico e experiencias autenticas longe das rotas turisticas convencionais."
+    },
+    highlights: {
+      es: ["Hostales con encanto y bien ubicados", "Interrail y buses economicos", "Rutas alternativas y locales", "Presupuesto optimizado"],
+      en: ["Charming well-located hostels", "Interrail and budget buses", "Alternative local routes", "Optimized budget"],
+      pt: ["Hostels charmosos e bem localizados", "Interrail e onibus economicos", "Rotas alternativas e locais", "Orcamento otimizado"]
+    },
+    packages: [
+      { id: "bp-1", name: { es: "Ruta Mochilera Clasica", en: "Classic Backpacker Route", pt: "Rota Mochileira Classica" }, destination: "Multi-country", duration: { es: "21 dias", en: "21 days", pt: "21 dias" }, price: 1490, image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=60&w=800", highlights: { es: ["Paris", "Amsterdam", "Berlin", "Praga"], en: ["Paris", "Amsterdam", "Berlin", "Prague"], pt: ["Paris", "Amsterda", "Berlim", "Praga"] } },
+      { id: "bp-2", name: { es: "Balcanes Mochilero", en: "Balkans Backpacker", pt: "Balcas Mochileiro" }, destination: "Balkans", duration: { es: "15 dias", en: "15 days", pt: "15 dias" }, price: 990, image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=60&w=800", highlights: { es: ["Dubrovnik", "Kotor", "Mostar", "Sarajevo"], en: ["Dubrovnik", "Kotor", "Mostar", "Sarajevo"], pt: ["Dubrovnik", "Kotor", "Mostar", "Sarajevo"] } }
+    ],
+    sampleItinerary: [
+      { day: 1, title: { es: "Llegada y orientacion", en: "Arrival and orientation", pt: "Chegada e orientacao" }, description: { es: "Check-in en hostal, orientacion del barrio y cena en mercado local.", en: "Hostel check-in, neighborhood orientation, and dinner at local market.", pt: "Check-in no hostel, orientacao do bairro e jantar no mercado local." } },
+      { day: 2, title: { es: "Free walking tour", en: "Free walking tour", pt: "Free walking tour" }, description: { es: "Tour gratuito a pie para conocer la ciudad. Almuerzo en puesto callejero.", en: "Free walking tour to discover the city. Lunch at street food stall.", pt: "Tour gratuito a pe para conhecer a cidade. Almoco em barraca de rua." } },
+      { day: 3, title: { es: "Exploracion independiente", en: "Independent exploration", pt: "Exploracao independente" }, description: { es: "Dia libre para explorar museos gratuitos, parques y barrios alternativos.", en: "Free day to explore free museums, parks, and alternative neighborhoods.", pt: "Dia livre para explorar museus gratuitos, parques e bairros alternativos." } }
+    ],
+    faqs: [
+      { question: { es: "Cual es el presupuesto minimo diario?", en: "What's the minimum daily budget?", pt: "Qual e o orcamento minimo diario?" }, answer: { es: "Con hostales, comida local y transporte publico puedes viajar con 50-80 EUR al dia en Europa occidental y 30-50 EUR en Europa del este.", en: "With hostels, local food, and public transport you can travel for 50-80 EUR/day in Western Europe and 30-50 EUR in Eastern Europe.", pt: "Com hostels, comida local e transporte publico voce pode viajar com 50-80 EUR/dia na Europa ocidental e 30-50 EUR na Europa oriental." } },
+      { question: { es: "Es seguro viajar como mochilero en Europa?", en: "Is it safe to backpack in Europe?", pt: "E seguro viajar como mochileiro na Europa?" }, answer: { es: "Europa es uno de los continentes mas seguros. Toma precauciones basicas como en cualquier viaje y disfruta la aventura.", en: "Europe is one of the safest continents. Take basic precautions as with any trip and enjoy the adventure.", pt: "A Europa e um dos continentes mais seguros. Tome precaucoes basicas como em qualquer viagem e aproveite a aventura." } }
+    ],
+    bestFor: { es: "Jovenes aventureros con presupuesto ajustado", en: "Young adventurers on a tight budget", pt: "Jovens aventureiros com orcamento apertado" },
+    idealDuration: { es: "14-30 dias", en: "14-30 days", pt: "14-30 dias" }
   }
 ];
 
@@ -624,6 +655,8 @@ const TRAVEL_STYLE_ALIASES: Record<string, string> = {
   "solo": "solo",
   "senior": "senior",
   "amigos": "friends-private",
+  "mochilero": "backpacker",
+  "mochila": "backpacker",
   "verano": "summer",
   "invierno": "winter",
   "primavera": "spring",

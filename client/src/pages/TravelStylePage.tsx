@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -137,6 +138,7 @@ export default function TravelStylePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title={`${travelStyle.name[dataLang]} - Viajes Europa`} description={travelStyle.description?.[dataLang] || `${travelStyle.name[dataLang]} - Paquetes de viaje a Europa`} />
       <Header />
       
       <section 

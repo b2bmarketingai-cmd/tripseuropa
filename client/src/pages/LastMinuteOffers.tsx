@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -268,6 +269,7 @@ export default function LastMinuteOffers() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOHead title="Ofertas de Ultima Hora - Viajes a Europa" description="Las mejores ofertas de ultimo minuto para viajar a Europa. Descuentos exclusivos en paquetes, vuelos y hoteles." />
       <Header />
       
       <section className="relative py-24 md:py-32 bg-primary overflow-hidden" data-testid="section-lastminute-hero">

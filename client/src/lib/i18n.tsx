@@ -239,6 +239,9 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.blog": "Blog",
     "footer.testimonials": "Testimonios",
     "footer.careers": "Trabaja con Nosotros",
+    "footer.salesConditions": "Condiciones de Venta",
+    "footer.terms": "Terminos y Condiciones",
+    "footer.holidays": "Vacaciones Europa",
     
     // Footer payment
     "footer.paymentMethods": "Medios de Pago",
@@ -624,6 +627,9 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.blog": "Blog",
     "footer.testimonials": "Testimonials",
     "footer.careers": "Careers",
+    "footer.salesConditions": "Sales Conditions",
+    "footer.terms": "Terms & Conditions",
+    "footer.holidays": "European Holidays",
     
     // Footer payment
     "footer.paymentMethods": "Payment Methods",
@@ -1009,6 +1015,9 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.blog": "Blog",
     "footer.testimonials": "Depoimentos",
     "footer.careers": "Trabalhe Conosco",
+    "footer.salesConditions": "Condicoes de Venda",
+    "footer.terms": "Termos e Condicoes",
+    "footer.holidays": "Ferias Europa",
     
     // Footer payment
     "footer.paymentMethods": "Meios de Pagamento",

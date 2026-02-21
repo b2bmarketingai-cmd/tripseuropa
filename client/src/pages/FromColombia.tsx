@@ -2,7 +2,7 @@ import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/support";
-import { ColombiaPageSEO } from "@/components/SEOHead";
+import { SEOHead, ColombiaPageSEO } from "@/components/SEOHead";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/SEOSchema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -138,6 +138,7 @@ export default function FromColombia() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Viajes a Europa desde Colombia" description="Paquetes de viaje a Europa desde Colombia. Sin visa Schengen para colombianos. Vuelos desde Bogota." />
       <ColombiaPageSEO />
       <LocalBusinessSchema country="Colombia" city="Bogota" />
       <BreadcrumbSchema items={[

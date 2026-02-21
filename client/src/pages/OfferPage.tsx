@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -182,6 +183,7 @@ export default function OfferPage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="page-offer">
+      <SEOHead title={`${offer.title[lang]} - Viajes Europa`} description={offer.description[lang]} />
       <Header />
       
       <main className="flex-1">

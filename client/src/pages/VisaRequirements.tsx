@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -113,6 +114,7 @@ export default function VisaRequirements() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOHead title="Requisitos de Visa para Europa" description="Toda la informacion sobre visas Schengen para ciudadanos latinoamericanos que viajan a Europa." />
       <Header />
       
       <section className="relative py-24 md:py-32 bg-primary overflow-hidden" data-testid="section-visa-hero">

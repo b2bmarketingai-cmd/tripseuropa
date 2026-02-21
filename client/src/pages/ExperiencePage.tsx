@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -216,6 +217,7 @@ export default function ExperiencePage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" data-testid="page-experience">
+      <SEOHead title={`${experience.title[lang]} - Viajes Europa`} description={experience.description[lang]} />
       <Header />
       
       <main className="flex-1">

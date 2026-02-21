@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,6 +18,7 @@ export default function Tools() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Herramientas de Viaje" description="Herramientas utiles para planificar tu viaje a Europa: calculadora de presupuesto, clima, monedas y mas." />
       <Header />
       
       <main className="flex-1 pt-24 pb-16">

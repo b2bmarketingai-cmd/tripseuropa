@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
@@ -111,6 +112,7 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Politica de Privacidad" description="Politica de privacidad de Trips Europa. Proteccion de datos personales." />
       <Header />
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-privacy-hero">
         <div className="container mx-auto px-4 relative z-10 text-center">

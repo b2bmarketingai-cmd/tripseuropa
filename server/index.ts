@@ -152,6 +152,10 @@ app.get("/argentina", (_req, res) => res.redirect(301, "/desde-argentina"));
 app.get("/peru", (_req, res) => res.redirect(301, "/desde-peru"));
 app.get("/panama", (_req, res) => res.redirect(301, "/desde-panama"));
 app.get("/costa-rica", (_req, res) => res.redirect(301, "/desde-costa-rica"));
+app.get("/venezuela", (_req, res) => res.redirect(301, "/desde-venezuela"));
+
+app.get("/blog/spain", (_req, res) => res.redirect(301, "/destinos/spain"));
+app.get("/uk", (_req, res) => res.redirect(301, "/destinos/united-kingdom"));
 
 // Redirect old English-only URLs
 app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));

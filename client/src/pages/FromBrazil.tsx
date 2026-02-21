@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -135,6 +136,7 @@ export default function FromBrazil() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Viagens para Europa do Brasil" description="Pacotes de viagem para Europa saindo do Brasil. Sem visto Schengen. Voos de Sao Paulo." />
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-brazil-hero">

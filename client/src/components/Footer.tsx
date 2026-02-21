@@ -57,11 +57,15 @@ export function Footer() {
     { nameKey: "footer.service.esim", href: "/services/esim" },
   ];
 
-  const company = [
+  const company: { nameKey: string; href: string }[] = [
     { nameKey: "footer.aboutUs", href: "/about" },
     { nameKey: "footer.testimonials", href: "/testimonios" },
     { nameKey: "footer.policies", href: "/policies" },
     { nameKey: "footer.privacy", href: "/privacy" },
+    { nameKey: "footer.salesConditions", href: "/condiciones-venta" },
+    { nameKey: "footer.cookies", href: "/cookies" },
+    { nameKey: "footer.terms", href: "/terminos-condiciones" },
+    { nameKey: "footer.holidays", href: "/vacaciones-europa" },
   ];
 
   const countries = [

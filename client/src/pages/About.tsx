@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { useI18n } from "@/lib/i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -66,6 +67,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEOHead title="Sobre Nosotros - Agencia de Viajes a Europa" description="Trips Europa: Tu agencia de viajes especializada en Europa para viajeros latinoamericanos. Paquetes exclusivos, guias en espanol y experiencias unicas." />
       <Header />
       
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-about-hero">
@@ -85,10 +87,10 @@ export default function About() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-about-subtitle">
             {language === "es" 
-              ? "Desde 2016 ayudando a colombianos y venezolanos a descubrir la magia de Europa" 
+              ? "Desde 2016 ayudando a viajeros de Colombia, Mexico, Brasil, Argentina, Peru, Panama, Costa Rica, Venezuela y toda Latinoamerica a descubrir la magia de Europa" 
               : language === "pt"
-              ? "Desde 2016 ajudando colombianos e venezuelanos a descobrir a magia da Europa"
-              : "Since 2016 helping Colombians and Venezuelans discover the magic of Europe"}
+              ? "Desde 2016 ajudando viajantes da Colombia, Mexico, Brasil, Argentina, Peru, Panama, Costa Rica, Venezuela e toda a America Latina a descobrir a magia da Europa"
+              : "Since 2016 helping travelers from Colombia, Mexico, Brazil, Argentina, Peru, Panama, Costa Rica, Venezuela and all of Latin America discover the magic of Europe"}
           </p>
         </div>
       </section>
@@ -122,17 +124,17 @@ export default function About() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   {language === "es" 
-                    ? "Trips Europa nacio en 2016 cuando nuestra fundadora, Maria Rodriguez, regreso de su primer viaje a Europa completamente enamorada del continente. Vio la necesidad de una agencia que realmente entendiera las necesidades especificas de los viajeros latinoamericanos."
+                    ? "Trips Europa nacio en 2016 cuando nuestra fundadora, Maria Rodriguez, regreso de su primer viaje a Europa completamente enamorada del continente. Vio la necesidad de una agencia que realmente entendiera las necesidades especificas de los viajeros latinoamericanos: asesoria de visa, guias en espanol, vuelos desde sus paises y paquetes adaptados a sus presupuestos."
                     : language === "pt"
-                    ? "A Trips Europa nasceu em 2016 quando nossa fundadora, Maria Rodriguez, retornou de sua primeira viagem a Europa completamente apaixonada pelo continente. Ela viu a necessidade de uma agencia que realmente entendesse as necessidades especificas dos viajantes latino-americanos."
-                    : "Trips Europa was born in 2016 when our founder, Maria Rodriguez, returned from her first trip to Europe completely in love with the continent. She saw the need for an agency that truly understood the specific needs of Latin American travelers."}
+                    ? "A Trips Europa nasceu em 2016 quando nossa fundadora, Maria Rodriguez, retornou de sua primeira viagem a Europa completamente apaixonada pelo continente. Ela viu a necessidade de uma agencia que realmente entendesse as necessidades especificas dos viajantes latino-americanos: assessoria de visto, guias em espanhol, voos de seus paises e pacotes adaptados aos seus orcamentos."
+                    : "Trips Europa was born in 2016 when our founder, Maria Rodriguez, returned from her first trip to Europe completely in love with the continent. She saw the need for an agency that truly understood the specific needs of Latin American travelers: visa assistance, Spanish-speaking guides, flights from their countries, and packages adapted to their budgets."}
                 </p>
                 <p>
                   {language === "es" 
-                    ? "Desde entonces, hemos ayudado a mas de 5,000 familias a cumplir su sueño de conocer Europa, con un enfoque especial en la atencion personalizada y el acompanamiento en cada paso del proceso, desde la visa hasta el regreso a casa."
+                    ? "Desde entonces, hemos ayudado a mas de 5,000 familias de Colombia, Mexico, Brasil, Argentina, Peru, Panama, Costa Rica, Venezuela y Republica Dominicana a cumplir su sueño de conocer Europa. Nuestra presencia en 9 paises latinoamericanos nos permite ofrecer atencion personalizada y acompanamiento en cada paso del proceso."
                     : language === "pt"
-                    ? "Desde entao, ajudamos mais de 5.000 familias a realizar seu sonho de conhecer a Europa, com foco especial no atendimento personalizado e acompanhamento em cada etapa do processo, do visto ate o retorno para casa."
-                    : "Since then, we have helped more than 5,000 families fulfill their dream of visiting Europe, with a special focus on personalized attention and support at every step of the process, from visa to returning home."}
+                    ? "Desde entao, ajudamos mais de 5.000 familias da Colombia, Mexico, Brasil, Argentina, Peru, Panama, Costa Rica, Venezuela e Republica Dominicana a realizar seu sonho de conhecer a Europa. Nossa presenca em 9 paises latino-americanos nos permite oferecer atendimento personalizado e acompanhamento em cada etapa do processo."
+                    : "Since then, we have helped more than 5,000 families from Colombia, Mexico, Brazil, Argentina, Peru, Panama, Costa Rica, Venezuela and the Dominican Republic fulfill their dream of visiting Europe. Our presence in 9 Latin American countries allows us to offer personalized attention and support at every step of the process."}
                 </p>
               </div>
             </div>
@@ -205,6 +207,42 @@ export default function About() {
                   <p className="text-muted-foreground text-sm">{member.role[language]}</p>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white" data-testid="section-about-countries">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="bg-accent/20 text-accent border-accent/30 mb-4">
+              {language === "es" ? "Presencia en Latinoamerica" : language === "pt" ? "Presenca na America Latina" : "Latin American Presence"}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold">
+              {language === "es" ? "Servimos a Viajeros de 9 Paises" : language === "pt" ? "Atendemos Viajantes de 9 Paises" : "Serving Travelers from 9 Countries"}
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4">
+            {[
+              { code: "CO", name: "Colombia", href: "/desde-colombia" },
+              { code: "MX", name: "Mexico", href: "/desde-mexico" },
+              { code: "BR", name: "Brasil", href: "/desde-brasil" },
+              { code: "AR", name: "Argentina", href: "/desde-argentina" },
+              { code: "PE", name: "Peru", href: "/desde-peru" },
+              { code: "PA", name: "Panama", href: "/desde-panama" },
+              { code: "CR", name: "Costa Rica", href: "/desde-costa-rica" },
+              { code: "VE", name: "Venezuela", href: "/desde-venezuela" },
+              { code: "DO", name: language === "es" ? "Rep. Dominicana" : "Dominican Rep.", href: "/desde-dominicana" },
+            ].map((country, index) => (
+              <Link key={index} href={country.href}>
+                <Card className="text-center p-4 transition-shadow cursor-pointer" data-testid={`country-card-${index}`}>
+                  <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Globe className="w-5 h-5 text-accent" />
+                  </div>
+                  <p className="text-xs font-medium">{country.name}</p>
+                  <p className="text-[10px] text-muted-foreground">{country.code}</p>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

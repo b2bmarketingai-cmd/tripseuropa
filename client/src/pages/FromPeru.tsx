@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { FloatingContactButtons } from "@/components/support";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -141,6 +142,7 @@ export default function FromPeru() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOHead title="Viajes a Europa desde Peru" description="Paquetes de viaje a Europa desde Peru. Sin visa Schengen para peruanos. Vuelos desde Lima." />
       <Header />
 
       <section className="relative py-32 bg-primary overflow-hidden" data-testid="section-peru-hero">
