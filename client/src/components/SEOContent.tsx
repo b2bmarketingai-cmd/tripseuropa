@@ -28,7 +28,7 @@ export default function SEOContent() {
 
   const content = {
     es: {
-      h1: "Viajes a Europa desde Latinoamérica - Paquetes Turísticos 2025",
+      h1: "Viajes a Europa desde Latinoamérica - Paquetes Turísticos",
       h2Main: "Los Mejores Paquetes de Viaje a Europa con Todo Incluido",
       intro: `Descubre Europa con <strong>Trips Europa</strong>, la agencia de viajes líder en paquetes turísticos a Europa desde Latinoamérica.
       Ofrecemos viajes a Europa desde Colombia, México, Argentina, Brasil, Perú, Panamá y toda América Latina con <em>vuelos, hoteles 5 estrellas,
@@ -89,7 +89,7 @@ export default function SEOContent() {
     },
 
     en: {
-      h1: "European Travel Packages from Latin America - Tours 2025",
+      h1: "European Travel Packages from Latin America - Tours",
       h2Main: "Best All-Inclusive Europe Travel Packages",
       intro: `Discover Europe with <strong>Trips Europa</strong>, the leading travel agency in European tour packages from Latin America.
       We offer Europe travel from Colombia, Mexico, Argentina, Brazil, Peru, Panama and all of Latin America with <em>flights, 5-star hotels,
@@ -150,7 +150,7 @@ export default function SEOContent() {
     },
 
     pt: {
-      h1: "Viagens para Europa da América Latina - Pacotes Turísticos 2025",
+      h1: "Viagens para Europa da América Latina - Pacotes Turísticos",
       h2Main: "Melhores Pacotes de Viagem para Europa com Tudo Incluído",
       intro: `Descubra a Europa com <strong>Trips Europa</strong>, a agência de viagens líder em pacotes turísticos para a Europa da América Latina.
       Oferecemos viagens para Europa da Colômbia, México, Argentina, Brasil, Peru, Panamá e toda América Latina com <em>voos, hotéis 5 estrelas,
