@@ -125,6 +125,19 @@ app.get("/en-br/*", (req, res) =>
   res.redirect(301, `/en${req.path.slice(6)}`),
 );
 
+// Fix: /es/ -> / (Spanish is default language, no prefix needed)
+// Note: /es-co, /es-mx etc. are valid country prefixes handled by other routes
+app.use((req, res, next) => {
+  if (req.path === "/es" || req.path === "/es/") {
+    return res.redirect(301, "/");
+  }
+  const esMatch = req.path.match(/^\/es(\/[^-].*)$/);
+  if (esMatch) {
+    return res.redirect(301, esMatch[1]);
+  }
+  next();
+});
+
 // Fix: /es-caribe -> / (no es-caribe route exists)
 app.get("/es-caribe", (_req, res) => res.redirect(301, "/"));
 app.get("/es-caribe/*", (_req, res) => res.redirect(301, "/"));
