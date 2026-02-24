@@ -199,7 +199,7 @@ app.get("/destinations/uk", (_req, res) => res.redirect(301, "/destinations/unit
 
 app.get("/estilo-de-viaje", (_req, res) => res.redirect(301, "/estilos-de-viaje"));
 
-app.get("/blog/mejores-apps-viajeros", (_req, res) => res.redirect(301, "/blog/post/mejores-apps-viajeros"));
+app.get("/blog/mejores-apps-viajeros", (_req, res) => res.redirect(301, "/blog"));
 app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) => res.redirect(301, "/blog/post/mejor-epoca-europa"));
 app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) => res.redirect(301, "/blog/post/documentos-viajar-europa"));
 app.get("/blog/post/presupuesto-viaje-europa", (_req, res) => res.redirect(301, "/blog/post/presupuesto-viaje-europa-2026"));
