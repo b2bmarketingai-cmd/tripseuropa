@@ -27,6 +27,24 @@ app.use((req, res, next) => {
   next();
 });
 
+// SEO: Fix duplicate pages without canonical - redirect to canonical URLs
+// These URLs were detected by GSC as duplicates without canonical indication
+app.get('/es-co/paquetes', (_req, res) => res.redirect(301, '/paquetes'));
+app.get('/en/contact', (_req, res) => res.redirect(301, '/contact'));
+app.get('/en-co', (_req, res) => res.redirect(301, '/'));
+app.get('/experiences', (_req, res) => res.redirect(301, '/experiencias'));
+app.get('/es-co/destinos/:slug', (req, res) => res.redirect(301, `/destinos/${req.params.slug}`));
+app.get('/es-pe/destinos/:slug', (req, res) => res.redirect(301, `/destinos/${req.params.slug}`));
+app.get('/es-ar/vuelos/:slug', (req, res) => res.redirect(301, `/vuelos/${req.params.slug}`));
+app.get('/about', (_req, res) => res.redirect(301, '/sobre-nosotros'));
+// Fix: /destinos with ?lang= query string - redirect to canonical without query param
+app.get('/destinos', (req, res, next) => {
+  if (req.query.lang) {
+    return res.redirect(301, '/destinos');
+  }
+  next();
+});
+
 // Enable GZIP compression for all responses
 app.use(compression());
 
