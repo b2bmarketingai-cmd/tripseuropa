@@ -8,6 +8,25 @@ import { serveSitemap } from "./sitemap";
 
 const app = express();
 
+// SEO: Redirect www -> non-www and http -> https (301 permanent)
+app.use((req, res, next) => {
+  const host = req.headers.host || '';
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  
+  // Redirect www to non-www
+  if (host.startsWith('www.')) {
+    const newHost = host.slice(4);
+    return res.redirect(301, `https://${newHost}${req.originalUrl}`);
+  }
+  
+  // Redirect http to https in production
+  if (proto === 'http' && process.env.NODE_ENV === 'production') {
+    return res.redirect(301, `https://${host}${req.originalUrl}`);
+  }
+  
+  next();
+});
+
 // Enable GZIP compression for all responses
 app.use(compression());
 
