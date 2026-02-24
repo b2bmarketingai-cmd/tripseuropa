@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { TravelAgencySchema, WebsiteSchema, FAQSchema } from "@/components/SEOSchema";
+import { TravelAgencySchema, WebsiteSchema } from "@/components/SEOSchema";
 import { HomePageSEO } from "@/components/SEOHead";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { UrgencyBanner } from "@/components/UrgencyBanner";
@@ -132,13 +132,6 @@ export default function Home() {
       )}
       <TravelAgencySchema />
       <WebsiteSchema />
-      <FAQSchema questions={[
-        { question: "Necesito visa Schengen para viajar a Europa desde Latinoamerica?", answer: "Si, los ciudadanos de la mayoria de paises latinoamericanos necesitan visa Schengen. Te ayudamos con todo el proceso de solicitud." },
-        { question: "Cuanto cuesta un viaje a Europa?", answer: "Nuestros paquetes comienzan desde USD 999 por persona mas impuestos incluyendo hoteles y tours." },
-        { question: "Incluyen seguro de viaje los paquetes?", answer: "Si, todos nuestros paquetes incluyen seguro de viaje internacional con cobertura medica completa." },
-        { question: "Los tours incluyen guia en espanol?", answer: "Si, todos nuestros tours incluyen guias profesionales en espanol." },
-        { question: "Que formas de pago aceptan?", answer: "Aceptamos tarjetas de credito, transferencias bancarias y planes de financiamiento hasta 12 cuotas sin interes." }
-      ]} />
     </div>
   );
 }
