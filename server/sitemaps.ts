@@ -259,6 +259,12 @@ ${generateHreflangLinks('/destinos')}
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+      <url>
+      <loc>${DOMAIN}/paquetes</loc>
+      <lastmod>${today}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.90</priority>
+    </url>
 
   <url>
     <loc>${DOMAIN}/blog</loc>
