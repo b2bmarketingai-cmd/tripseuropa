@@ -268,6 +268,8 @@ function Router() {
       <Route path="/es-co/blog" component={Blog} />
       <Route path="/es-co/blog/post/:slug" component={BlogPost} />
       <Route path="/es-co/blog/:country" component={Blog} />
+        <Route path="/es-co/visa-schengen-colombianos" component={VisaRequirements} />
+        <Route path="/es-co/viajes-europa-desde-colombia" component={FromColombia} />
 
       <Route path="/es-mx" component={Home} />
       <Route path="/es-mx/" component={Home} />
@@ -339,6 +341,8 @@ function Router() {
       <Route path="/es-pe/blog/:country" component={Blog} />
       <Route path="/es-pe/forum" component={Forum} />
       <Route path="/es-pe/foro" component={Forum} />
+        <Route path="/es-pe/viajes-europa-desde-peru" component={FromPeru} />
+        <Route path="/es-pe/europa-15-dias" component={Packages} />
 
       <Route path="/es-pa" component={Home} />
       <Route path="/es-pa/" component={Home} />
@@ -365,6 +369,7 @@ function Router() {
       <Route path="/es-cr/blog/:country" component={Blog} />
       <Route path="/es-cr/forum" component={Forum} />
       <Route path="/es-cr/foro" component={Forum} />
+        <Route path="/es-cr/viajes-europa-desde-costa-rica" component={FromCostaRica} />
 
       <Route path="/es-do" component={Home} />
       <Route path="/es-do/" component={Home} />
@@ -389,6 +394,7 @@ function Router() {
       <Route path="/es-cb/blog" component={Blog} />
       <Route path="/es-cb/blog/post/:slug" component={BlogPost} />
       <Route path="/es-cb/blog/:country" component={Blog} />
+        <Route path="/es-cb/viajes-europa-desde-caribe" component={FromCaribe} />
 
       <Route path="/es" component={Home} />
       <Route path="/es/" component={Home} />
@@ -448,6 +454,9 @@ function Router() {
       <Route path="/en/deals" component={OffersLanding} />
       <Route path="/en/faq" component={FAQPage} />
       <Route path="/en/travel-styles" component={TravelStylesLanding} />
+        <Route path="/en/packages" component={Packages} />
+        <Route path="/en/travel-insurance-europe" component={Insurance} />
+        <Route path="/en/family-trip-europe" component={Packages} />
 
       <Route path="/en-ar" component={Home} />
       <Route path="/en-ar/" component={Home} />
