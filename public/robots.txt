@@ -82,3 +82,7 @@ Allow: /
 
 # Host preferido
 Host: https://tripseuropa.com
+
+# Sitemaps - CRÍTICO PARA INDEXACIÓN
+Sitemap: https://tripseuropa.com/sitemap.xml
+Sitemap: https://tripseuropa.com/sitemap-index.xml
