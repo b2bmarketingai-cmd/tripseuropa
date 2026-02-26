@@ -15,20 +15,15 @@ app.get("/__repl_health", (_req, res) => {
 // GZIP Compression - Nivel máximo para mejor performance
 app.use(compression({ level: 9, threshold: 0 }));
 
-// SEO: Redirect www -> non-www and http -> https (301 permanent)
+// SEO: Redirect www -> non-www (301 permanent)
+// Note: HTTPS termination is handled by Cloud Run/Replit proxy, not by the app
 app.use((req, res, next) => {
   const host = req.headers.host || "";
-  const proto = req.headers["x-forwarded-proto"] || req.protocol;
 
   // Redirect www to non-www
   if (host.startsWith("www.")) {
     const newHost = host.slice(4);
     return res.redirect(301, `https://${newHost}${req.originalUrl}`);
-  }
-
-  // Redirect http to https in production
-  if (proto === "http" && process.env.NODE_ENV === "production") {
-    return res.redirect(301, `https://${host}${req.originalUrl}`);
   }
 
   next();
@@ -119,7 +114,6 @@ app.use((req, res, next) => {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'self'",
-    "upgrade-insecure-requests",
   ].join("; ");
 
   res.setHeader("Content-Security-Policy", csp);
