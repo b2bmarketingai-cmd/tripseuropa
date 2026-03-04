@@ -1,85 +1,240 @@
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-export default function BlogUruguayEuropa() {
+const BlogUruguayEuropa: React.FC = () => {
 return (
   <>
     <Helmet>
-      <title>Viajes a Europa desde Uruguay 2026: Vuelos, Visa y los Mejores Destinos</title>
-      <meta name="description" content="Guía completa para viajar a Europa desde Uruguay en 2026. Vuelos desde Montevideo, visa Schengen, mejores destinos y presupuesto detallado." />
-      <meta name="keywords" content="viajes a Europa desde Uruguay, vuelos Montevideo Europa, visa Schengen Uruguay, paquetes Europa Uruguay 2026" />
-      <meta property="og:title" content="Viajes a Europa desde Uruguay 2026: Vuelos, Visa y los Mejores Destinos" />
-      <meta property="og:description" content="Guía completa para viajar a Europa desde Uruguay en 2026. Vuelos desde Montevideo, visa Schengen, mejores destinos y presupuesto detallado." />
-      <meta property="og:type" content="article" />
+      <title>Viaje de Uruguay a Europa 2025: Vuelos, Visa y Costos | TripsEuropa</title>
+      <meta name="description" content="Guía completa para viajar de Uruguay a Europa en 2025. Vuelos desde Montevideo, requisitos de visa Schengen, costos y los mejores destinos europeos para uruguayos." />
+      <meta name="keywords" content="viaje Uruguay Europa, vuelos Uruguay Europa, visa Schengen Uruguay, viajar de Uruguay a Europa, turismo Uruguay Europa 2025" />
       <link rel="canonical" href="https://tripseuropa.com/blog/uruguay-europa" />
+      <meta property="og:title" content="Viaje de Uruguay a Europa 2025: Vuelos, Visa y Costos" />
+      <meta property="og:description" content="Todo lo que necesitas saber para viajar de Uruguay a Europa: vuelos, visa Schengen, costos y destinos recomendados." />
+      <meta property="og:type" content="article" />
       <html lang="es" />
     </Helmet>
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <article>
-          <header className="mb-10">
-            <h1 className="text-4xl font-bold text-blue-900 mb-4">
-              Viajes a Europa desde Uruguay 2026
-            </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Uruguay, el pequeño gran país del Río de la Plata, tiene una fuerte tradición de viajes a Europa gracias a sus raíces europeas y su alto nivel de vida. Desde Montevideo, los uruguayos tienen acceso a vuelos directos y conexiones eficientes hacia los principales destinos del Viejo Continente. En 2026, viajar a Europa desde Uruguay es una experiencia enriquecedora con múltiples opciones de vuelos y paquetes turísticos.
-            </p>
-          </header>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Vuelos desde Montevideo a Europa</h2>
-            <p className="text-gray-700 leading-relaxed">El Aeropuerto Internacional de Carrasco en Montevideo es el principal punto de partida para los vuelos a Europa. Las aerolíneas que operan rutas desde Uruguay hacia Europa incluyen LATAM, Iberia, Air France, Lufthansa y KLM, generalmente con una escala en Buenos Aires, São Paulo o Lima. Los vuelos directos desde Buenos Aires (a solo 50 minutos de Montevideo) a Madrid duran aproximadamente 12-13 horas. También es posible volar desde el Aeropuerto de Punta del Este durante la temporada alta. Se recomienda reservar con 3 a 5 meses de anticipación para obtener las mejores tarifas.</p>
-          </section>
+    <article className="max-w-4xl mx-auto px-4 py-8">
+      <header className="mb-10">
+        <div className="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-2">Uruguay → Europa</div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Viaje de Uruguay a Europa 2025: Vuelos, Visa y Costos Reales
+        </h1>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          Uruguay, el pequeño gran país del Río de la Plata, tiene una de las tasas de viajeros internacionales más altas de América Latina. Descubre cómo planificar tu viaje a Europa desde Montevideo.
+        </p>
+      </header>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Visa Schengen para Uruguayos</h2>
-            <p className="text-gray-700 leading-relaxed">Los ciudadanos uruguayos tienen la ventaja de no necesitar visa Schengen para estancias de hasta 90 días en el espacio Schengen, gracias al acuerdo de exención de visas entre Uruguay y la Unión Europea. Solo necesitas pasaporte uruguayo vigente con al menos 3 meses de validez más allá de la fecha de regreso, seguro de viaje con cobertura mínima de €30,000, comprobante de hospedaje, itinerario de viaje y fondos suficientes para el período de estancia. Para estancias más largas, trabajo o estudios, sí se requiere visa específica.</p>
-          </section>
+      <section className="mb-10">
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Los uruguayos tienen una larga tradición de viajar a Europa, especialmente a España e Italia, países con los que comparten fuertes lazos culturales y familiares. Con pasaporte uruguayo, el proceso de visa es relativamente sencillo gracias a la buena reputación del país.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Esta guía te proporciona toda la información necesaria: vuelos desde el Aeropuerto Internacional de Carrasco (MVD), requisitos de visa Schengen, presupuesto estimado y los destinos más populares entre los viajeros uruguayos.
+        </p>
+      </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Destinos Favoritos de los Uruguayos en Europa</h2>
-            <p className="text-gray-700 leading-relaxed">España es el destino preferido por los uruguayos, especialmente Madrid, Barcelona y las regiones de donde provienen muchos de sus ancestros como Galicia, País Vasco y Cataluña. Italia es el segundo destino más visitado, con Roma, Venecia, Florencia y la Toscana como puntos imprescindibles. Portugal ofrece una experiencia auténtica y económica con Lisboa y Oporto. Francia con París es un clásico irresistible. Alemania atrae por su cultura y eficiencia. Los países nórdicos son cada vez más populares entre los uruguayos aventureros.</p>
-          </section>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Vuelos de Uruguay a Europa</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Desde Montevideo existen vuelos directos a Madrid con Iberia y Air Europa, lo que hace que Uruguay tenga una de las mejores conexiones aéreas con Europa de toda la región.
+        </p>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Presupuesto para Viajar a Europa desde Uruguay</h2>
-            <p className="text-gray-700 leading-relaxed">Un viaje de 2 semanas a Europa desde Uruguay puede costar entre $2,000 y $4,500 USD por persona. Los vuelos desde Montevideo a Europa oscilan entre $700 y $1,500 USD en clase económica. El hospedaje en hostales cuesta entre €20 y €40 por noche, mientras que hoteles de 3 estrellas van de €70 a €130. El presupuesto diario en Europa para comidas, transporte local y actividades es de aproximadamente €80 a €150. Los paquetes turísticos todo incluido pueden ofrecer mejor relación calidad-precio al combinar vuelos, hospedaje y tours.</p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Aeropuerto principal</h3>
+        <p className="text-gray-700 mb-4">
+          <strong>Aeropuerto Internacional de Carrasco (MVD)</strong> - Montevideo. Es el principal aeropuerto internacional del país.
+        </p>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Mejor Época para Viajar a Europa desde Uruguay</h2>
-            <p className="text-gray-700 leading-relaxed">La primavera europea (abril y mayo) y el otoño (septiembre y octubre) son las mejores épocas para viajar desde Uruguay, ya que ofrecen clima agradable, menos turistas y precios más accesibles. El verano europeo (junio a agosto) coincide con el invierno uruguayo, lo que lo convierte en una época ideal para escapar del frío. El invierno europeo (diciembre a febrero) es la temporada baja con precios reducidos, aunque las festividades navideñas en Europa son una experiencia única que vale la pena vivir al menos una vez.</p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Rutas principales</h3>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full border-collapse border border-gray-200 text-sm">
+            <thead>
+              <tr className="bg-blue-50">
+                <th className="border border-gray-200 px-4 py-2 text-left">Ruta</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Tipo</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Duración</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Precio aprox.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">Montevideo → Madrid</td>
+                <td className="border border-gray-200 px-4 py-2">Directo</td>
+                <td className="border border-gray-200 px-4 py-2">11-12 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 700-1.300</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">Montevideo → París</td>
+                <td className="border border-gray-200 px-4 py-2">1 escala</td>
+                <td className="border border-gray-200 px-4 py-2">14-18 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 750-1.400</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">Montevideo → Roma</td>
+                <td className="border border-gray-200 px-4 py-2">1 escala</td>
+                <td className="border border-gray-200 px-4 py-2">15-20 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 800-1.500</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">Montevideo → Londres</td>
+                <td className="border border-gray-200 px-4 py-2">1-2 escalas</td>
+                <td className="border border-gray-200 px-4 py-2">16-22 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 850-1.600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Tips Esenciales para Uruguayos Viajando a Europa</h2>
-            <p className="text-gray-700 leading-relaxed">Aprovecha que no necesitas visa Schengen para planificar tu viaje con mayor flexibilidad. Contrata un seguro de viaje internacional que cubra emergencias médicas, cancelaciones y pérdida de equipaje. Usa tarjetas de crédito o débito sin comisiones internacionales. El transporte público europeo es excelente: considera el Eurail Pass si planeas visitar varios países. Descarga aplicaciones útiles como Google Maps y apps de transporte local. Lleva adaptadores de corriente eléctrica ya que Europa usa enchufes tipo C y F. Considera volar desde Buenos Aires para tener más opciones de vuelos directos a Europa.</p>
-          </section>
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-4">
+          <p className="text-blue-800 font-semibold">Ventaja uruguaya:</p>
+          <p className="text-blue-700 text-sm">Uruguay tiene vuelos directos a Madrid con Iberia y Air Europa, lo que lo convierte en uno de los países de la región con mejor conectividad directa a Europa.</p>
+        </div>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Viajes a Europa desde Uruguay en Inglés y Portugués</h2>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Travel to Europe from Uruguay (English):</strong> Uruguay offers excellent connections to Europe, with Uruguayan citizens enjoying visa-free access to the Schengen area for up to 90 days. Flights from Montevideo connect through Buenos Aires, São Paulo, or Lima. Popular European destinations include Spain, Italy, France, and Portugal. Budget approximately $2,000-$4,500 USD for a 2-week trip including flights, accommodation, and daily expenses.
-            </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              <strong>Viagens à Europa desde o Uruguai (Português):</strong> O Uruguai oferece excelentes conexões para a Europa, com cidadãos uruguaios desfrutando de acesso sem visto à área Schengen por até 90 dias. Os voos de Montevidéu conectam através de Buenos Aires, São Paulo ou Lima. Os destinos europeus mais populares incluem Espanha, Itália, França e Portugal. Orçamento aproximado de $2.000 a $4.500 USD para uma viagem de 2 semanas incluindo voos, hospedagem e despesas diárias.
-            </p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Aerolíneas recomendadas</h3>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <li>Iberia (vuelo directo MVD-MAD)</li>
+          <li>Air Europa (vuelo directo MVD-MAD)</li>
+          <li>LATAM (vía São Paulo o Lima)</li>
+          <li>Aerolíneas Argentinas (vía Buenos Aires)</li>
+          <li>Air France (vía París)</li>
+          <li>KLM (vía Amsterdam)</li>
+        </ul>
+      </section>
 
-          <footer className="mt-12 p-6 bg-blue-900 text-white rounded-xl text-center">
-            <h3 className="text-xl font-bold mb-2">¿Listo para viajar a Europa desde Uruguay?</h3>
-            <p className="mb-4">Cotiza tu paquete personalizado y viaja con los mejores expertos en turismo europeo.</p>
-            <a
-              href="https://wa.me/573001234567?text=Hola,%20quiero%20información%20sobre%20viajes%20a%20Europa%20desde%20Uruguay"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cotizar por WhatsApp
-            </a>
-          </footer>
-        </article>
-      </div>
-    </div>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Visa Schengen para Uruguayos</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Los ciudadanos uruguayos necesitan visa Schengen para ingresar a Europa. Sin embargo, Uruguay tiene una de las tasas de aprobación más altas de la región gracias a su estabilidad económica y política.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Documentos necesarios</h3>
+        <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+          <li>Pasaporte uruguayo vigente (mínimo 6 meses)</li>
+          <li>Formulario de solicitud de visa Schengen</li>
+          <li>2 fotos recientes tamaño pasaporte</li>
+          <li>Seguro de viaje (cobertura mínima €30.000)</li>
+          <li>Reservas de vuelo y alojamiento</li>
+          <li>Extractos bancarios (últimos 3-6 meses)</li>
+          <li>Constancia de trabajo o actividad económica</li>
+          <li>Itinerario de viaje</li>
+        </ul>
+
+        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+          <h4 className="font-semibold text-gray-800 mb-2">Costos de la visa</h4>
+          <ul className="space-y-1 text-gray-700 text-sm">
+            <li><strong>Adultos:</strong> €80 (aprox. USD 87)</li>
+            <li><strong>Niños 6-12 años:</strong> €40</li>
+            <li><strong>Menores de 6 años:</strong> Gratuito</li>
+            <li><strong>Tiempo de procesamiento:</strong> 15-30 días hábiles</li>
+          </ul>
+        </div>
+
+        <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+          <p className="text-green-800 font-semibold">Buenas noticias:</p>
+          <p className="text-green-700 text-sm">Uruguay tiene negociaciones avanzadas para acuerdos de exención de visa con la UE. Consulta el estado actual antes de tu viaje.</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Presupuesto para el Viaje</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Vuelos (ida y vuelta)</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 700-1.300</p>
+            <p className="text-sm text-gray-500">Desde Montevideo</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Visa Schengen</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 90-120</p>
+            <p className="text-sm text-gray-500">Incluye tasas consulares</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Alojamiento (14 noches)</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 400-1.200</p>
+            <p className="text-sm text-gray-500">Hostel a hotel 3 estrellas</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Gastos diarios</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 50-100/día</p>
+            <p className="text-sm text-gray-500">Comida, transporte, entradas</p>
+          </div>
+        </div>
+
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+          <p className="font-semibold text-green-800 mb-1">Presupuesto total estimado (2 semanas):</p>
+          <p className="text-3xl font-bold text-green-700">USD 2.000 - 4.000</p>
+          <p className="text-sm text-green-600">Por persona, viaje completo</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Destinos Favoritos de los Uruguayos en Europa</h2>
+
+        <div className="space-y-4">
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇪🇸 España - El destino número uno</h3>
+            <p className="text-gray-700">Madrid, Barcelona, Sevilla y las Islas Canarias son los favoritos. La conexión cultural e histórica hace de España el destino más elegido por los uruguayos.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇮🇹 Italia - Las raíces europeas</h3>
+            <p className="text-gray-700">Muchos uruguayos tienen ascendencia italiana. Roma, Florencia, Venecia y el sur de Italia son destinos muy populares para quienes buscan sus raíces.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇫🇷 Francia - Cultura y gastronomía</h3>
+            <p className="text-gray-700">París es un destino clásico. La gastronomía francesa, los museos y la arquitectura atraen a muchos viajeros uruguayos sofisticados.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇵🇹 Portugal - El vecino atlántico</h3>
+            <p className="text-gray-700">Lisboa y Oporto son destinos en auge. Portugal ofrece excelente relación calidad-precio y una cultura muy cercana a la latinoamericana.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Consejos para Viajeros Uruguayos</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Mejor época</h4>
+            <p className="text-blue-700 text-sm">Primavera (abril-junio) y otoño (septiembre-octubre). Evita agosto por el calor y los precios altos.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Tarjeta de crédito</h4>
+            <p className="text-blue-700 text-sm">Avisa a tu banco antes de viajar. Las tarjetas uruguayas funcionan bien en Europa pero pueden tener comisiones por cambio de moneda.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">SIM europea</h4>
+            <p className="text-blue-700 text-sm">Compra una SIM europea al llegar para tener datos móviles económicos. Marcas como Lebara o Lycamobile son populares.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Pase de tren</h4>
+            <p className="text-blue-700 text-sm">El Eurail Pass es ideal para recorrer varios países. Compra con anticipación para mejores precios.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-3">¿Listo para tu viaje a Europa?</h2>
+        <p className="text-blue-100 mb-6">Compara vuelos desde Montevideo y encuentra las mejores ofertas para tu aventura europea.</p>
+        <a href="https://tripseuropa.com" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors">
+          Buscar vuelos ahora
+        </a>
+      </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Viaje de Uruguay a Europa 2025: Vuelos, Visa y Costos",
+        "description": "Guía completa para viajar de Uruguay a Europa en 2025.",
+        "author": { "@type": "Organization", "name": "TripsEuropa" },
+        "publisher": { "@type": "Organization", "name": "TripsEuropa" },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01"
+      })}} />
+    </article>
   </>
 );
-}
+};
+
+export default BlogUruguayEuropa;
