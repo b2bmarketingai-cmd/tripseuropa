@@ -31,7 +31,7 @@ import Vuelos from "@/pages/Vuelos";
 import Hoteles from "@/pages/Hoteles";
 import Seguros from "@/pages/Seguros";
 import Visas from "@/pages/Visas";
-import Traslados from "@/pages/Traslados";
+import Trasladados from "@/pages/Trasladados";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Privacidad from "@/pages/Privacidad";
@@ -57,113 +57,119 @@ import FromElSalvador from "@/pages/FromElSalvador";
 import FromNicaragua from "@/pages/FromNicaragua";
 import FromCuba from "@/pages/FromCuba";
 import FromRepublicaDominicana from "@/pages/FromRepublicaDominicana";
-import BlogColombiaEuropa from "@/pages/BlogColombiaEuropa";
-import BlogBrasilEuropa from "@/pages/BlogBrasilEuropa";
-import BlogColombiaEuropaPt from "@/pages/BlogColombiaEuropaPt";
-import BlogArgentinaEuropa from "@/pages/BlogArgentinaEuropa";
-import BlogPeruEuropa from "@/pages/BlogPeruEuropa";
-import BlogPanamaEuropa from "@/pages/BlogPanamaEuropa";
-import BlogCostaRicaEuropa from "@/pages/BlogCostaRicaEuropa";
-import BlogDominicanaEuropa from "@/pages/BlogDominicanaEuropa";
+import BlogColombia from "@/pages/BlogColombia";
+import BlogBrasil from "@/pages/BlogBrasil";
+import BlogArgentina from "@/pages/BlogArgentina";
+import BlogPeru from "@/pages/BlogPeru";
+import BlogPanama from "@/pages/BlogPanama";
+import BlogCostaRica from "@/pages/BlogCostaRica";
+import BlogDominicana from "@/pages/BlogDominicana";
 import BlogEspana from "@/pages/BlogEspana";
 import BlogFrancia from "@/pages/BlogFrancia";
 import BlogItalia from "@/pages/BlogItalia";
 import BlogPortugal from "@/pages/BlogPortugal";
 import BlogGrecia from "@/pages/BlogGrecia";
 import BlogAlemania from "@/pages/BlogAlemania";
-import BlogColombia from "@/pages/BlogColombia";
 import BlogMexico from "@/pages/BlogMexico";
-import BlogArgentina from "@/pages/BlogArgentina";
-import BlogBrasil from "@/pages/BlogBrasil";
+import BlogMexicoEuropa from "@/pages/BlogMexicoEuropa";
+import BlogChileEuropa from "@/pages/BlogChileEuropa";
+import BlogEcuadorEuropa from "@/pages/BlogEcuadorEuropa";
+import BlogVenezuelaEuropa from "@/pages/BlogVenezuelaEuropa";
+import BlogArgentinaEuropaPt from "@/pages/BlogArgentinaEuropaPt";
 
 function Router() {
-  return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/destinos" component={Destinos} />
-      <Route path="/paquetes" component={Paquetes} />
-      <Route path="/nosotros" component={Nosotros} />
-      <Route path="/contacto" component={Contacto} />
-      <Route path="/destinos/:id" component={DestinoDetalle} />
-      <Route path="/paquetes/:id" component={PaqueteDetalle} />
-      <Route path="/destinos/francia" component={Francia} />
-      <Route path="/destinos/italia" component={Italia} />
-      <Route path="/destinos/espana" component={Espana} />
-      <Route path="/destinos/grecia" component={Grecia} />
-      <Route path="/destinos/portugal" component={Portugal} />
-      <Route path="/destinos/alemania" component={Alemania} />
-      <Route path="/destinos/paises-nordicos" component={PaisesNordicos} />
-      <Route path="/destinos/europa-oriental" component={EuropaOriental} />
-      <Route path="/destinos/croacia" component={Croacia} />
-      <Route path="/destinos/suiza" component={Suiza} />
-      <Route path="/paquetes/europa-clasica" component={PaqueteEuropaClasica} />
-      <Route path="/paquetes/mediterraneo" component={PaqueteMediterraneo} />
-      <Route path="/paquetes/nordico" component={PaqueteNordico} />
-      <Route path="/paquetes/balcanes" component={PaqueteBalcanes} />
-      <Route path="/paquetes/iberia-francia" component={PaqueteIberiaFrancia} />
-      <Route path="/paquetes/gran-tour" component={PaqueteGranTour} />
-      <Route path="/servicios/vuelos" component={Vuelos} />
-      <Route path="/servicios/hoteles" component={Hoteles} />
-      <Route path="/servicios/seguros" component={Seguros} />
-      <Route path="/servicios/visas" component={Visas} />
-      <Route path="/servicios/traslados" component={Traslados} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/privacidad" component={Privacidad} />
-      <Route path="/terminos" component={Terminos} />
-      <Route path="/faq" component={FAQ} />
-      <Route path="/sitemap" component={Sitemap} />
-      <Route path="/desde/colombia" component={FromColombia} />
-      <Route path="/desde/brasil" component={FromBrasil} />
-      <Route path="/desde/argentina" component={FromArgentina} />
-      <Route path="/desde/mexico" component={FromMexico} />
-      <Route path="/desde/peru" component={FromPeru} />
-      <Route path="/desde/chile" component={FromChile} />
-      <Route path="/desde/ecuador" component={FromEcuador} />
-      <Route path="/desde/venezuela" component={FromVenezuela} />
-      <Route path="/desde/bolivia" component={FromBolivia} />
-      <Route path="/desde/paraguay" component={FromParaguay} />
-      <Route path="/desde/uruguay" component={FromUruguay} />
-      <Route path="/desde/panama" component={FromPanama} />
-      <Route path="/desde/costa-rica" component={FromCostaRica} />
-      <Route path="/desde/guatemala" component={FromGuatemala} />
-      <Route path="/desde/honduras" component={FromHonduras} />
-      <Route path="/desde/el-salvador" component={FromElSalvador} />
-      <Route path="/desde/nicaragua" component={FromNicaragua} />
-      <Route path="/desde/cuba" component={FromCuba} />
-      <Route path="/desde/republica-dominicana" component={FromRepublicaDominicana} />
-      <Route path="/blog/espana" component={BlogEspana} />
-      <Route path="/blog/francia" component={BlogFrancia} />
-      <Route path="/blog/italia" component={BlogItalia} />
-      <Route path="/blog/portugal" component={BlogPortugal} />
-      <Route path="/blog/grecia" component={BlogGrecia} />
-      <Route path="/blog/alemania" component={BlogAlemania} />
-      <Route path="/blog/colombia" component={BlogColombia} />
-      <Route path="/blog/mexico" component={BlogMexico} />
-      <Route path="/blog/argentina" component={BlogArgentina} />
-      <Route path="/blog/brasil" component={BlogBrasil} />
-      <Route path="/blog/colombia-europa" component={BlogColombiaEuropa} />
-      <Route path="/blog/brasil-europa" component={BlogBrasilEuropa} />
-      <Route path="/blog/colombia-europa-pt" component={BlogColombiaEuropaPt} />
-      <Route path="/blog/argentina-europa" component={BlogArgentinaEuropa} />
-      <Route path="/blog/peru-europa" component={BlogPeruEuropa} />
-      <Route path="/blog/panama-europa" component={BlogPanamaEuropa} />
-      <Route path="/blog/costa-rica-europa" component={BlogCostaRicaEuropa} />
-      <Route path="/blog/dominicana-europa" component={BlogDominicanaEuropa} />
-      <Route component={NotFound} />
-    </Switch>
-  );
+return (
+  <Switch>
+    <Route path="/" component={Home} />
+    <Route path="/destinos" component={Destinos} />
+    <Route path="/paquetes" component={Paquetes} />
+    <Route path="/nosotros" component={Nosotros} />
+    <Route path="/contacto" component={Contacto} />
+    <Route path="/destinos/:id" component={DestinoDetalle} />
+    <Route path="/paquetes/:id" component={PaqueteDetalle} />
+    <Route path="/destinos/francia" component={Francia} />
+    <Route path="/destinos/italia" component={Italia} />
+    <Route path="/destinos/espana" component={Espana} />
+    <Route path="/destinos/grecia" component={Grecia} />
+    <Route path="/destinos/portugal" component={Portugal} />
+    <Route path="/destinos/alemania" component={Alemania} />
+    <Route path="/destinos/paises-nordicos" component={PaisesNordicos} />
+    <Route path="/destinos/europa-oriental" component={EuropaOriental} />
+    <Route path="/destinos/croacia" component={Croacia} />
+    <Route path="/destinos/suiza" component={Suiza} />
+    <Route path="/paquetes/europa-clasica" component={PaqueteEuropaClasica} />
+    <Route path="/paquetes/mediterraneo" component={PaqueteMediterraneo} />
+    <Route path="/paquetes/nordico" component={PaqueteNordico} />
+    <Route path="/paquetes/balcanes" component={PaqueteBalcanes} />
+    <Route path="/paquetes/iberia-francia" component={PaqueteIberiaFrancia} />
+    <Route path="/paquetes/gran-tour" component={PaqueteGranTour} />
+    <Route path="/servicios/vuelos" component={Vuelos} />
+    <Route path="/servicios/hoteles" component={Hoteles} />
+    <Route path="/servicios/seguros" component={Seguros} />
+    <Route path="/servicios/visas" component={Visas} />
+    <Route path="/servicios/trasladados" component={Trasladados} />
+    <Route path="/blog" component={Blog} />
+    <Route path="/blog/:slug" component={BlogPost} />
+    <Route path="/privacidad" component={Privacidad} />
+    <Route path="/terminos" component={Terminos} />
+    <Route path="/faq" component={FAQ} />
+    <Route path="/sitemap" component={Sitemap} />
+    <Route path="/desde/colombia" component={FromColombia} />
+    <Route path="/desde/brasil" component={FromBrasil} />
+    <Route path="/desde/argentina" component={FromArgentina} />
+    <Route path="/desde/mexico" component={FromMexico} />
+    <Route path="/desde/peru" component={FromPeru} />
+    <Route path="/desde/chile" component={FromChile} />
+    <Route path="/desde/ecuador" component={FromEcuador} />
+    <Route path="/desde/venezuela" component={FromVenezuela} />
+    <Route path="/desde/bolivia" component={FromBolivia} />
+    <Route path="/desde/paraguay" component={FromParaguay} />
+    <Route path="/desde/uruguay" component={FromUruguay} />
+    <Route path="/desde/panama" component={FromPanama} />
+    <Route path="/desde/costa-rica" component={FromCostaRica} />
+    <Route path="/desde/guatemala" component={FromGuatemala} />
+    <Route path="/desde/honduras" component={FromHonduras} />
+    <Route path="/desde/el-salvador" component={FromElSalvador} />
+    <Route path="/desde/nicaragua" component={FromNicaragua} />
+    <Route path="/desde/cuba" component={FromCuba} />
+    <Route path="/desde/republica-dominicana" component={FromRepublicaDominicana} />
+    <Route path="/blog/espana" component={BlogEspana} />
+    <Route path="/blog/francia" component={BlogFrancia} />
+    <Route path="/blog/italia" component={BlogItalia} />
+    <Route path="/blog/portugal" component={BlogPortugal} />
+    <Route path="/blog/grecia" component={BlogGrecia} />
+    <Route path="/blog/alemania" component={BlogAlemania} />
+    <Route path="/blog/colombia" component={BlogColombia} />
+    <Route path="/blog/mexico" component={BlogMexico} />
+    <Route path="/blog/argentina" component={BlogArgentina} />
+    <Route path="/blog/brasil" component={BlogBrasil} />
+    <Route path="/blog/colombia-europa" component={BlogColombia} />
+    <Route path="/blog/brasil-europa" component={BlogBrasil} />
+    <Route path="/blog/colombia-europa-pt" component={BlogColombia} />
+    <Route path="/blog/argentina-europa" component={BlogArgentina} />
+    <Route path="/blog/peru-europa" component={BlogPeru} />
+    <Route path="/blog/panama-europa" component={BlogPanama} />
+    <Route path="/blog/costa-rica-europa" component={BlogCostaRica} />
+    <Route path="/blog/dominicana-europa" component={BlogDominicana} />
+    <Route path="/blog/mexico-europa" component={BlogMexicoEuropa} />
+    <Route path="/blog/chile-europa" component={BlogChileEuropa} />
+    <Route path="/blog/ecuador-europa" component={BlogEcuadorEuropa} />
+    <Route path="/blog/venezuela-europa" component={BlogVenezuelaEuropa} />
+    <Route path="/blog/argentina-europa-pt" component={BlogArgentinaEuropaPt} />
+    <Route component={NotFound} />
+  </Switch>
+);
 }
 
 function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
-  );
+return (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Router />
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 }
 
 export default App;
