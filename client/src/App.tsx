@@ -76,6 +76,12 @@ import BlogChileEuropa from "@/pages/BlogChileEuropa";
 import BlogEcuadorEuropa from "@/pages/BlogEcuadorEuropa";
 import BlogVenezuelaEuropa from "@/pages/BlogVenezuelaEuropa";
 import BlogArgentinaEuropaPt from "@/pages/BlogArgentinaEuropaPt";
+import BlogBoliviaEuropa from "@/pages/BlogBoliviaEuropa";
+import BlogUruguayEuropa from "@/pages/BlogUruguayEuropa";
+import BlogGuatemalaEuropa from "@/pages/BlogGuatemalaEuropa";
+import BlogNicaraguaEuropa from "@/pages/BlogNicaraguaEuropa";
+import BlogCubaEuropa from "@/pages/BlogCubaEuropa";
+import BlogPuertoRicoEuropa from "@/pages/BlogPuertoRicoEuropa";
 
 function Router() {
 return (
@@ -156,6 +162,12 @@ return (
     <Route path="/blog/ecuador-europa" component={BlogEcuadorEuropa} />
     <Route path="/blog/venezuela-europa" component={BlogVenezuelaEuropa} />
     <Route path="/blog/argentina-europa-pt" component={BlogArgentinaEuropaPt} />
+    <Route path="/blog/bolivia-europa" component={BlogBoliviaEuropa} />
+    <Route path="/blog/uruguay-europa" component={BlogUruguayEuropa} />
+    <Route path="/blog/guatemala-europa" component={BlogGuatemalaEuropa} />
+    <Route path="/blog/nicaragua-europa" component={BlogNicaraguaEuropa} />
+    <Route path="/blog/cuba-europa" component={BlogCubaEuropa} />
+    <Route path="/blog/puerto-rico-europa" component={BlogPuertoRicoEuropa} />
     <Route component={NotFound} />
   </Switch>
 );
