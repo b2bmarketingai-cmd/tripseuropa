@@ -1,85 +1,241 @@
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-export default function BlogCubaEuropa() {
+const BlogCubaEuropa: React.FC = () => {
 return (
   <>
     <Helmet>
-      <title>Viajes a Europa desde Cuba 2026: Vuelos, Visa Schengen y Mejores Destinos</title>
-      <meta name="description" content="Guía completa para viajar a Europa desde Cuba en 2026. Vuelos desde La Habana, visa Schengen, mejores destinos y presupuesto detallado para cubanos." />
-      <meta name="keywords" content="viajes a Europa desde Cuba, vuelos La Habana Europa, visa Schengen Cuba, paquetes Europa Cuba 2026" />
-      <meta property="og:title" content="Viajes a Europa desde Cuba 2026: Vuelos, Visa Schengen y Mejores Destinos" />
-      <meta property="og:description" content="Guía completa para viajar a Europa desde Cuba en 2026. Vuelos desde La Habana, visa Schengen, mejores destinos y presupuesto detallado para cubanos." />
-      <meta property="og:type" content="article" />
+      <title>Viaje de Cuba a Europa 2025: Vuelos, Visa y Costos | TripsEuropa</title>
+      <meta name="description" content="Guía completa para viajar de Cuba a Europa en 2025. Vuelos desde La Habana, requisitos de visa Schengen, costos y los mejores destinos europeos para cubanos." />
+      <meta name="keywords" content="viaje Cuba Europa, vuelos Cuba Europa, visa Schengen Cuba, viajar de Cuba a Europa, turismo Cuba Europa 2025" />
       <link rel="canonical" href="https://tripseuropa.com/blog/cuba-europa" />
+      <meta property="og:title" content="Viaje de Cuba a Europa 2025: Vuelos, Visa y Costos" />
+      <meta property="og:description" content="Todo lo que necesitas saber para viajar de Cuba a Europa: vuelos, visa Schengen, costos y destinos recomendados." />
+      <meta property="og:type" content="article" />
       <html lang="es" />
     </Helmet>
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <article>
-          <header className="mb-10">
-            <h1 className="text-4xl font-bold text-blue-900 mb-4">
-              Viajes a Europa desde Cuba 2026
-            </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Cuba, la perla del Caribe, tiene una relación histórica y cultural profunda con Europa, especialmente con España. Desde La Habana, los cubanos pueden acceder a vuelos directos y con conexión hacia los principales destinos europeos. En 2026, viajar a Europa desde Cuba requiere una planificación cuidadosa, especialmente en lo que respecta a los trámites de visa y la logística de vuelos, pero es completamente posible y vale cada esfuerzo.
-            </p>
-          </header>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Vuelos desde La Habana a Europa</h2>
-            <p className="text-gray-700 leading-relaxed">El Aeropuerto Internacional José Martí en La Habana es el principal punto de partida para los vuelos a Europa. Existen vuelos directos desde La Habana a Madrid operados por Iberia y Cubana de Aviación, con una duración de aproximadamente 9 a 10 horas. También hay vuelos directos a París (Air France) y a otras ciudades europeas con escala. Las conexiones más comunes son a través de Madrid, Ciudad de México, Cancún o Miami. Se recomienda reservar con 3 a 5 meses de anticipación para obtener las mejores tarifas, especialmente en temporada alta.</p>
-          </section>
+    <article className="max-w-4xl mx-auto px-4 py-8">
+      <header className="mb-10">
+        <div className="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-2">Cuba → Europa</div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Viaje de Cuba a Europa 2025: Vuelos, Visa Schengen y Costos
+        </h1>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          Desde la isla más grande del Caribe hasta los monumentos históricos de Europa — esta guía te explica todo lo que necesitas para planificar tu viaje desde Cuba al Viejo Continente.
+        </p>
+      </header>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Visa Schengen para Cubanos</h2>
-            <p className="text-gray-700 leading-relaxed">Los ciudadanos cubanos necesitan visa Schengen para ingresar a los países del espacio Schengen en Europa. El trámite debe realizarse en el consulado del país europeo que sea el destino principal o el primer punto de entrada. Los documentos requeridos incluyen pasaporte cubano vigente con al menos 6 meses de validez, formulario de solicitud completo, fotografías recientes tipo pasaporte, seguro de viaje con cobertura mínima de €30,000, comprobante de hospedaje, itinerario de viaje detallado, extractos bancarios o carta de invitación de familiar en Europa, carta de trabajo o estudios, y pago de la tasa consular (aproximadamente €80). El tiempo de procesamiento es de 15 a 30 días hábiles. En Cuba, los consulados europeos disponibles incluyen el de España, Francia, Alemania e Italia, entre otros.</p>
-          </section>
+      <section className="mb-10">
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Cuba tiene una relación histórica especial con Europa, especialmente con España. Cada año, miles de cubanos viajan al continente europeo por turismo, visitas familiares o negocios. Con la información correcta, planificar este viaje es más sencillo de lo que parece.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          En esta guía encontrarás información actualizada sobre vuelos desde el Aeropuerto Internacional José Martí (HAV), los requisitos de visa Schengen para pasaporte cubano, los costos reales del viaje y los destinos más populares entre los viajeros cubanos.
+        </p>
+      </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Destinos Favoritos de los Cubanos en Europa</h2>
-            <p className="text-gray-700 leading-relaxed">España es el destino preferido por los cubanos, especialmente Madrid y Barcelona, por los lazos históricos, culturales y familiares. Muchos cubanos tienen familiares en España, lo que facilita la visita. Italia atrae con Roma, Venecia y la Toscana. Portugal ofrece una experiencia auténtica y más económica con Lisboa y Oporto. Francia con París es un sueño para muchos viajeros cubanos. Alemania destaca por su cultura e historia. Rusia, aunque no es Schengen, también es un destino popular entre los cubanos por los lazos históricos.</p>
-          </section>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Vuelos de Cuba a Europa</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Desde La Habana existen conexiones directas a algunos destinos europeos, especialmente España. Esta es una ventaja significativa respecto a otros países de la región.
+        </p>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Presupuesto para Viajar a Europa desde Cuba</h2>
-            <p className="text-gray-700 leading-relaxed">Un viaje de 2 semanas a Europa desde Cuba puede costar entre $2,500 y $5,500 USD por persona todo incluido. Los vuelos directos desde La Habana a Madrid oscilan entre $600 y $1,400 USD en clase económica dependiendo de la temporada y la aerolínea. El hospedaje en hostales cuesta entre €20 y €40 por noche, mientras que hoteles de 3 estrellas van de €70 a €130. El presupuesto diario en Europa para comidas, transporte local y actividades es de aproximadamente €80 a €150. Muchos cubanos que viajan a Europa se hospedan con familiares, lo que reduce significativamente los costos.</p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Aeropuerto de salida</h3>
+        <p className="text-gray-700 mb-4">
+          <strong>Aeropuerto Internacional José Martí (HAV)</strong> - La Habana. Principal aeropuerto internacional de Cuba.
+        </p>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Mejor Época para Viajar a Europa desde Cuba</h2>
-            <p className="text-gray-700 leading-relaxed">La primavera europea (abril y mayo) y el otoño (septiembre y octubre) son las mejores épocas para viajar desde Cuba, ya que ofrecen clima agradable, menos turistas y precios más accesibles. El verano europeo (junio a agosto) es la temporada alta con clima cálido pero mayor afluencia de turistas y precios elevados. El invierno europeo (diciembre a febrero) es la temporada baja con precios reducidos, aunque las festividades navideñas en Europa son una experiencia única. Considera que el verano cubano (junio-agosto) es temporada de huracanes, por lo que viajar a Europa en esa época también te permite escapar del clima tropical.</p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Rutas principales</h3>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full border-collapse border border-gray-200 text-sm">
+            <thead>
+              <tr className="bg-blue-50">
+                <th className="border border-gray-200 px-4 py-2 text-left">Ruta</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Tipo</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Duración</th>
+                <th className="border border-gray-200 px-4 py-2 text-left">Precio aprox.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">La Habana → Madrid</td>
+                <td className="border border-gray-200 px-4 py-2">Directo / 1 escala</td>
+                <td className="border border-gray-200 px-4 py-2">9-14 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 500-1.000</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">La Habana → París</td>
+                <td className="border border-gray-200 px-4 py-2">1-2 escalas</td>
+                <td className="border border-gray-200 px-4 py-2">14-20 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 600-1.200</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">La Habana → Amsterdam</td>
+                <td className="border border-gray-200 px-4 py-2">1-2 escalas</td>
+                <td className="border border-gray-200 px-4 py-2">14-22 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 650-1.300</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">La Habana → Roma</td>
+                <td className="border border-gray-200 px-4 py-2">1-2 escalas</td>
+                <td className="border border-gray-200 px-4 py-2">14-22 horas</td>
+                <td className="border border-gray-200 px-4 py-2">USD 650-1.300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Tips Esenciales para Cubanos Viajando a Europa</h2>
-            <p className="text-gray-700 leading-relaxed">Tramita tu visa Schengen con suficiente anticipación y asegúrate de tener todos los documentos en orden. Si tienes familiares en Europa, una carta de invitación puede facilitar el proceso de visa. Contrata un seguro de viaje internacional que cubra emergencias médicas, cancelaciones y pérdida de equipaje. Usa tarjetas de crédito o débito internacionales para los gastos en Europa. El transporte público europeo es excelente: considera el Eurail Pass si planeas visitar varios países. Descarga aplicaciones útiles como Google Maps y Google Translate. Lleva adaptadores de corriente eléctrica ya que Europa usa enchufes tipo C y F.</p>
-          </section>
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-4">
+          <p className="text-blue-800 font-semibold">Ventaja cubana:</p>
+          <p className="text-blue-700 text-sm">Iberia opera vuelos directos entre La Habana y Madrid, lo que hace que España sea el destino europeo más accesible y económico desde Cuba.</p>
+        </div>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Viajes a Europa desde Cuba en Inglés y Portugués</h2>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Travel to Europe from Cuba (English):</strong> Cuba offers direct flights to Madrid (Iberia, Cubana) and Paris (Air France) from Havana's José Martí International Airport. Cuban citizens require a Schengen visa. Many Cubans have family in Spain, which can facilitate the visa process with an invitation letter. Popular European destinations include Spain, Italy, France, and Portugal. Budget approximately $2,500-$5,500 USD for a 2-week trip including flights, accommodation, and daily expenses.
-            </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              <strong>Viagens à Europa desde Cuba (Português):</strong> Cuba oferece voos diretos para Madri (Iberia, Cubana) e Paris (Air France) a partir do Aeroporto Internacional José Martí em Havana. Os cidadãos cubanos precisam de visto Schengen. Muitos cubanos têm família na Espanha, o que pode facilitar o processo de visto com uma carta de convite. Os destinos europeus mais populares incluem Espanha, Itália, França e Portugal. Orçamento aproximado de $2.500 a $5.500 USD para uma viagem de 2 semanas.
-            </p>
-          </section>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Aerolíneas principales</h3>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <li>Iberia (vuelos directos a Madrid)</li>
+          <li>Air Europa (La Habana - Madrid)</li>
+          <li>Cubana de Aviación (rutas internacionales)</li>
+          <li>Air France (vía París)</li>
+          <li>KLM (vía Amsterdam)</li>
+          <li>Copa Airlines (vía Panamá)</li>
+        </ul>
+      </section>
 
-          <footer className="mt-12 p-6 bg-blue-900 text-white rounded-xl text-center">
-            <h3 className="text-xl font-bold mb-2">¿Listo para viajar a Europa desde Cuba?</h3>
-            <p className="mb-4">Cotiza tu paquete personalizado y viaja con los mejores expertos en turismo europeo.</p>
-            <a
-              href="https://wa.me/573001234567?text=Hola,%20quiero%20información%20sobre%20viajes%20a%20Europa%20desde%20Cuba"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cotizar por WhatsApp
-            </a>
-          </footer>
-        </article>
-      </div>
-    </div>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Visa Schengen para Cubanos</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Los ciudadanos cubanos necesitan visa Schengen para visitar la mayoría de los países europeos. El proceso requiere documentación sólida y planificación anticipada.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-800 mb-3">Documentos requeridos</h3>
+        <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+          <li>Pasaporte cubano vigente (mínimo 6 meses de validez)</li>
+          <li>Formulario de solicitud de visa Schengen</li>
+          <li>2 fotos recientes tamaño pasaporte</li>
+          <li>Seguro de viaje con cobertura mínima de €30.000</li>
+          <li>Reservas de vuelo y alojamiento</li>
+          <li>Extractos bancarios o prueba de fondos suficientes</li>
+          <li>Carta de invitación (si aplica)</li>
+          <li>Itinerario de viaje detallado</li>
+          <li>Documentos que acrediten vínculos con Cuba (trabajo, familia, propiedad)</li>
+        </ul>
+
+        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+          <h4 className="font-semibold text-gray-800 mb-2">Costos de la visa</h4>
+          <ul className="space-y-1 text-gray-700 text-sm">
+            <li><strong>Adultos:</strong> €80 (aprox. USD 87)</li>
+            <li><strong>Niños 6-12 años:</strong> €40</li>
+            <li><strong>Menores de 6 años:</strong> Gratuito</li>
+            <li><strong>Tiempo de procesamiento:</strong> 15-30 días hábiles</li>
+          </ul>
+        </div>
+
+        <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+          <p className="text-yellow-800 font-semibold">Consejo importante:</p>
+          <p className="text-yellow-700 text-sm">Para cubanos con familiares en España, la carta de invitación notariada puede ser un factor determinante para la aprobación de la visa. Asegúrate de incluirla si aplica a tu caso.</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Presupuesto para el Viaje</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Vuelos (ida y vuelta)</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 500-1.000</p>
+            <p className="text-sm text-gray-500">Desde La Habana</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Visa Schengen</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 90-120</p>
+            <p className="text-sm text-gray-500">Incluye tasas consulares</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Alojamiento (14 noches)</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 400-1.200</p>
+            <p className="text-sm text-gray-500">Hostel a hotel 3 estrellas</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-2">Gastos diarios</h4>
+            <p className="text-2xl font-bold text-blue-600">USD 50-100/día</p>
+            <p className="text-sm text-gray-500">Comida, transporte, entradas</p>
+          </div>
+        </div>
+
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+          <p className="font-semibold text-green-800 mb-1">Presupuesto total estimado (2 semanas):</p>
+          <p className="text-3xl font-bold text-green-700">USD 1.600 - 3.500</p>
+          <p className="text-sm text-green-600">Por persona, viaje completo</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Destinos Favoritos de los Cubanos en Europa</h2>
+
+        <div className="space-y-4">
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇪🇸 España - El destino natural</h3>
+            <p className="text-gray-700">España es el destino más visitado por los cubanos, con vuelos directos desde La Habana. Madrid, Barcelona y las Islas Canarias son los favoritos. La comunidad cubana en España es numerosa.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇮🇹 Italia - Arte y pasión</h3>
+            <p className="text-gray-700">Roma, Florencia y Venecia fascinan a los viajeros cubanos. La similitud cultural latina hace que Italia sea un destino muy cómodo y emocionante.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇫🇷 Francia - Elegancia y cultura</h3>
+            <p className="text-gray-700">París es un sueño para muchos cubanos. La Torre Eiffel, el Louvre y la gastronomía francesa son experiencias que marcan para siempre.</p>
+          </div>
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">🇵🇹 Portugal - Cercanía y calidez</h3>
+            <p className="text-gray-700">Lisboa y Oporto son destinos cada vez más populares. Portugal ofrece una experiencia europea auténtica a precios más accesibles que otros países del oeste europeo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Consejos Prácticos para Cubanos</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Vuelo directo a Madrid</h4>
+            <p className="text-blue-700 text-sm">Aprovecha los vuelos directos La Habana-Madrid de Iberia y Air Europa. Es la ruta más conveniente y suele tener buenos precios.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Documentación sólida</h4>
+            <p className="text-blue-700 text-sm">Prepara una documentación muy completa para la visa. Los consulados europeos valoran especialmente los vínculos con Cuba y la solvencia económica.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Mejor época para viajar</h4>
+            <p className="text-blue-700 text-sm">Primavera (abril-junio) y otoño (septiembre-octubre) ofrecen el mejor clima y precios más bajos que el verano europeo.</p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Transporte en Europa</h4>
+            <p className="text-blue-700 text-sm">El tren es la mejor opción para moverse entre ciudades europeas. El Interrail pass puede ser económico si planeas visitar varios países.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-3">¡Europa te espera desde La Habana!</h2>
+        <p className="text-blue-100 mb-6">Compara vuelos desde Cuba y encuentra las mejores ofertas para tu viaje a Europa.</p>
+        <a href="https://tripseuropa.com" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors">
+          Buscar vuelos ahora
+        </a>
+      </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Viaje de Cuba a Europa 2025: Vuelos, Visa y Costos",
+        "description": "Guía completa para viajar de Cuba a Europa en 2025.",
+        "author": { "@type": "Organization", "name": "TripsEuropa" },
+        "publisher": { "@type": "Organization", "name": "TripsEuropa" },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01"
+      })}} />
+    </article>
   </>
 );
-}
+};
+
+export default BlogCubaEuropa;
