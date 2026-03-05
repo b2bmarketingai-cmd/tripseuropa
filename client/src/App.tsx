@@ -82,6 +82,24 @@ import BlogGuatemalaEuropa from "@/pages/BlogGuatemalaEuropa";
 import BlogNicaraguaEuropa from "@/pages/BlogNicaraguaEuropa";
 import BlogCubaEuropa from "@/pages/BlogCubaEuropa";
 import BlogPuertoRicoEuropa from "@/pages/BlogPuertoRicoEuropa";
+// Batch 5 imports
+import ColombiaToEurope2025ES from "@/pages/blog/ColombiaToEurope2025ES";
+import ColombiaToEurope2025EN from "@/pages/blog/ColombiaToEurope2025EN";
+import ColombiaToEurope2025PT from "@/pages/blog/ColombiaToEurope2025PT";
+import BrazilToEurope2025ES from "@/pages/blog/BrazilToEurope2025ES";
+import BrazilToEurope2025EN from "@/pages/blog/BrazilToEurope2025EN";
+import BrazilToEurope2025PT from "@/pages/blog/BrazilToEurope2025PT";
+import MexicoToEurope2025ES from "@/pages/blog/MexicoToEurope2025ES";
+import MexicoToEurope2025EN from "@/pages/blog/MexicoToEurope2025EN";
+import MexicoToEurope2025PT from "@/pages/blog/MexicoToEurope2025PT";
+import ArgentinaToEurope2025ES from "@/pages/blog/ArgentinaToEurope2025ES";
+import ArgentinaToEurope2025EN from "@/pages/blog/ArgentinaToEurope2025EN";
+import ArgentinaToEurope2025PT from "@/pages/blog/ArgentinaToEurope2025PT";
+import ChileToEurope2025ES from "@/pages/blog/ChileToEurope2025ES";
+import ParaguayToEurope2025ES from "@/pages/blog/ParaguayToEurope2025ES";
+import ParaguayToEurope2025PT from "@/pages/blog/ParaguayToEurope2025PT";
+import EuropeanGastronomy2025 from "@/pages/blog/EuropeanGastronomy2025";
+import ETIAS2025Guide from "@/pages/blog/ETIAS2025Guide";
 
 function Router() {
 return (
@@ -168,6 +186,24 @@ return (
     <Route path="/blog/nicaragua-europa" component={BlogNicaraguaEuropa} />
     <Route path="/blog/cuba-europa" component={BlogCubaEuropa} />
     <Route path="/blog/puerto-rico-europa" component={BlogPuertoRicoEuropa} />
+    {/* Batch 5 routes */}
+    <Route path="/blog/colombia-europa-2025-es" component={ColombiaToEurope2025ES} />
+    <Route path="/blog/colombia-europe-2025" component={ColombiaToEurope2025EN} />
+    <Route path="/blog/colombia-europa-2025-pt" component={ColombiaToEurope2025PT} />
+    <Route path="/blog/brasil-europa-2025-es" component={BrazilToEurope2025ES} />
+    <Route path="/blog/brazil-europe-2025" component={BrazilToEurope2025EN} />
+    <Route path="/blog/brasil-europa-2025-pt" component={BrazilToEurope2025PT} />
+    <Route path="/blog/mexico-europa-2025-es" component={MexicoToEurope2025ES} />
+    <Route path="/blog/mexico-europe-2025" component={MexicoToEurope2025EN} />
+    <Route path="/blog/mexico-europa-2025-pt" component={MexicoToEurope2025PT} />
+    <Route path="/blog/argentina-europa-2025-es" component={ArgentinaToEurope2025ES} />
+    <Route path="/blog/argentina-europe-2025" component={ArgentinaToEurope2025EN} />
+    <Route path="/blog/argentina-europa-2025-pt" component={ArgentinaToEurope2025PT} />
+    <Route path="/blog/chile-europa-2025-es" component={ChileToEurope2025ES} />
+    <Route path="/blog/paraguay-europa-2025-es" component={ParaguayToEurope2025ES} />
+    <Route path="/blog/paraguay-europa-2025-pt" component={ParaguayToEurope2025PT} />
+    <Route path="/blog/gastronomia-europea-2025" component={EuropeanGastronomy2025} />
+    <Route path="/blog/etias-2025-guide" component={ETIAS2025Guide} />
     <Route component={NotFound} />
   </Switch>
 );
