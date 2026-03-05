@@ -21,9 +21,6 @@ export default defineConfig({
         ]
       : []),
   ],
-  optimizeDeps: {
-    force: true,
-  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

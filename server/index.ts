@@ -8,6 +8,10 @@ import { serveSitemap } from "./sitemap";
 
 const app = express();
 
+// Health check endpoint (must be before HTTPS redirect middleware)
+app.get("/_health", (_req, res) => res.status(200).json({ status: "ok" }));
+app.get("/health", (_req, res) => res.status(200).json({ status: "ok" }));
+
 
 // SEO: Redirect www -> non-www and http -> https (301 permanent)
 app.use((req, res, next) => {
