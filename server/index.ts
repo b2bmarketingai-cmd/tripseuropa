@@ -8,47 +8,39 @@ import { serveSitemap } from "./sitemap";
 
 const app = express();
 
-app.get("/__repl_health", (_req, res) => {
-  res.status(200).send("OK");
-});
-
-// GZIP Compression - Nivel máximo para mejor performance
-app.use(compression({ level: 9, threshold: 0 }));
-
-// SEO: Redirect www -> non-www (301 permanent)
-// Note: HTTPS termination is handled by Cloud Run/Replit proxy, not by the app
+// SEO: Redirect www -> non-www and http -> https (301 permanent)
 app.use((req, res, next) => {
-  const host = req.headers.host || "";
-
+  const host = req.headers.host || '';
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  
   // Redirect www to non-www
-  if (host.startsWith("www.")) {
+  if (host.startsWith('www.')) {
     const newHost = host.slice(4);
     return res.redirect(301, `https://${newHost}${req.originalUrl}`);
   }
-
+  
+  // Redirect http to https in production
+  if (proto === 'http' && process.env.NODE_ENV === 'production') {
+    return res.redirect(301, `https://${host}${req.originalUrl}`);
+  }
+  
   next();
 });
 
 // SEO: Fix duplicate pages without canonical - redirect to canonical URLs
 // These URLs were detected by GSC as duplicates without canonical indication
-app.get("/es-co/paquetes", (_req, res) => res.redirect(301, "/paquetes"));
-app.get("/en/contact", (_req, res) => res.redirect(301, "/contact"));
-app.get("/en-co", (_req, res) => res.redirect(301, "/"));
-app.get("/experiences", (_req, res) => res.redirect(301, "/experiencias"));
-app.get("/es-co/destinos/:slug", (req, res) =>
-  res.redirect(301, `/destinos/${req.params.slug}`),
-);
-app.get("/es-pe/destinos/:slug", (req, res) =>
-  res.redirect(301, `/destinos/${req.params.slug}`),
-);
-app.get("/es-ar/vuelos/:slug", (req, res) =>
-  res.redirect(301, `/vuelos/${req.params.slug}`),
-);
-app.get("/about", (_req, res) => res.redirect(301, "/sobre-nosotros"));
+app.get('/es-co/paquetes', (_req, res) => res.redirect(301, '/paquetes'));
+app.get('/en/contact', (_req, res) => res.redirect(301, '/contact'));
+app.get('/en-co', (_req, res) => res.redirect(301, '/'));
+app.get('/experiences', (_req, res) => res.redirect(301, '/experiencias'));
+app.get('/es-co/destinos/:slug', (req, res) => res.redirect(301, `/destinos/${req.params.slug}`));
+app.get('/es-pe/destinos/:slug', (req, res) => res.redirect(301, `/destinos/${req.params.slug}`));
+app.get('/es-ar/vuelos/:slug', (req, res) => res.redirect(301, `/vuelos/${req.params.slug}`));
+app.get('/about', (_req, res) => res.redirect(301, '/sobre-nosotros'));
 // Fix: /destinos with ?lang= query string - redirect to canonical without query param
-app.get("/destinos", (req, res, next) => {
+app.get('/destinos', (req, res, next) => {
   if (req.query.lang) {
-    return res.redirect(301, "/destinos");
+    return res.redirect(301, '/destinos');
   }
   next();
 });
@@ -60,10 +52,7 @@ app.use(compression());
 if (process.env.NODE_ENV === "development") {
   app.use((req, res, next) => {
     if (req.accepts("html") && !req.path.match(/\.\w+$/)) {
-      res.setHeader(
-        "Cache-Control",
-        "no-store, no-cache, must-revalidate, proxy-revalidate",
-      );
+      res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
       res.setHeader("Pragma", "no-cache");
       res.setHeader("Expires", "0");
       res.setHeader("Surrogate-Control", "no-store");
@@ -114,6 +103,7 @@ app.use((req, res, next) => {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'self'",
+    "upgrade-insecure-requests",
   ].join("; ");
 
   res.setHeader("Content-Security-Policy", csp);
@@ -168,7 +158,9 @@ app.get("/es-br/*", (req, res) =>
 
 // Fix: /en-br -> /en (invalid language prefix)
 app.get("/en-br", (_req, res) => res.redirect(301, "/en"));
-app.get("/en-br/*", (req, res) => res.redirect(301, `/en${req.path.slice(6)}`));
+app.get("/en-br/*", (req, res) =>
+  res.redirect(301, `/en${req.path.slice(6)}`),
+);
 
 // /es/ prefix is valid - Spanish generic prefix served by SPA router
 // Note: /es-co, /es-mx etc. are valid country prefixes handled by other routes
@@ -176,31 +168,18 @@ app.get("/en-br/*", (req, res) => res.redirect(301, `/en${req.path.slice(6)}`));
 // Redirect old /destination/ URLs (indexed by Google) to /destinos/
 app.get("/destination/:slug", (req, res) => {
   const slugMap: Record<string, string> = {
-    italia: "italy",
-    espana: "spain",
-    francia: "france",
-    grecia: "greece",
-    portugal: "portugal",
-    alemania: "germany",
-    suiza: "switzerland",
-    "reino-unido": "united-kingdom",
-    "paises-bajos": "netherlands",
-    belgica: "belgium",
-    austria: "austria",
-    "republica-checa": "czech-republic",
-    turquia: "turkey",
-    croacia: "croatia",
-    polonia: "poland",
-    hungria: "hungary",
+    "italia": "italy", "espana": "spain", "francia": "france", "grecia": "greece",
+    "portugal": "portugal", "alemania": "germany", "suiza": "switzerland",
+    "reino-unido": "united-kingdom", "paises-bajos": "netherlands", "belgica": "belgium",
+    "austria": "austria", "republica-checa": "czech-republic", "turquia": "turkey",
+    "croacia": "croatia", "polonia": "poland", "hungria": "hungary"
   };
   const resolved = slugMap[req.params.slug] || req.params.slug;
   res.redirect(301, `/destinos/${resolved}`);
 });
 
 // Redirect old /package/ URLs to /paquetes/
-app.get("/package/:slug", (req, res) =>
-  res.redirect(301, `/paquetes/${req.params.slug}`),
-);
+app.get("/package/:slug", (req, res) => res.redirect(301, `/paquetes/${req.params.slug}`));
 
 // Redirect bare country URLs to /desde- format
 app.get("/colombia", (_req, res) => res.redirect(301, "/desde-colombia"));
@@ -216,73 +195,39 @@ app.get("/ecuador", (_req, res) => res.redirect(301, "/desde-ecuador"));
 
 app.get("/blog/spain", (_req, res) => res.redirect(301, "/destinos/spain"));
 app.get("/uk", (_req, res) => res.redirect(301, "/destinos/united-kingdom"));
-app.get("/destinations/uk", (_req, res) =>
-  res.redirect(301, "/destinations/united-kingdom"),
-);
+app.get("/destinations/uk", (_req, res) => res.redirect(301, "/destinations/united-kingdom"));
 
-app.get("/estilo-de-viaje", (_req, res) =>
-  res.redirect(301, "/estilos-de-viaje"),
-);
+app.get("/estilo-de-viaje", (_req, res) => res.redirect(301, "/estilos-de-viaje"));
 
-app.get("/blog/mejores-apps-viajeros", (_req, res) =>
-  res.redirect(301, "/blog"),
-);
-app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) =>
-  res.redirect(301, "/blog/post/mejor-epoca-europa"),
-);
-app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) =>
-  res.redirect(301, "/blog/post/documentos-viajar-europa"),
-);
-app.get("/blog/post/presupuesto-viaje-europa", (_req, res) =>
-  res.redirect(301, "/blog/post/presupuesto-viaje-europa-2026"),
-);
-app.get("/blog/post/visa-schengen-guia-completa", (_req, res) =>
-  res.redirect(301, "/blog/post/visa-schengen-colombianos"),
-);
-app.get("/blog/post/mejores-destinos-europa", (_req, res) =>
-  res.redirect(301, "/blog/post/mejores-destinos-europa-presupuesto"),
-);
-app.get("/blog/post/consejos-primera-vez-europa", (_req, res) =>
-  res.redirect(301, "/blog/post/primera-vez-europa"),
-);
-app.get("/blog/post/visa-schengen-colombia-2025", (_req, res) =>
-  res.redirect(301, "/blog/post/visa-schengen-colombianos"),
-);
-app.get("/blog/post/guia-viaje-espa%C3%B1a", (_req, res) =>
-  res.redirect(301, "/blog/post/guia-viaje-espana"),
-);
-app.get("/blog/post/budapest-ba%C3%B1os-termales", (_req, res) =>
-  res.redirect(301, "/blog/post/budapest-banos-termales"),
-);
+app.get("/blog/mejores-apps-viajeros", (_req, res) => res.redirect(301, "/blog"));
+app.get("/blog/post/mejor-epoca-visitar-europa", (_req, res) => res.redirect(301, "/blog/post/mejor-epoca-europa"));
+app.get("/blog/post/documentos-necesarios-viajar-europa", (_req, res) => res.redirect(301, "/blog/post/documentos-viajar-europa"));
+app.get("/blog/post/presupuesto-viaje-europa", (_req, res) => res.redirect(301, "/blog/post/presupuesto-viaje-europa-2026"));
+app.get("/blog/post/visa-schengen-guia-completa", (_req, res) => res.redirect(301, "/blog/post/visa-schengen-colombianos"));
+app.get("/blog/post/mejores-destinos-europa", (_req, res) => res.redirect(301, "/blog/post/mejores-destinos-europa-presupuesto"));
+app.get("/blog/post/consejos-primera-vez-europa", (_req, res) => res.redirect(301, "/blog/post/primera-vez-europa"));
+app.get("/blog/post/visa-schengen-colombia-2025", (_req, res) => res.redirect(301, "/blog/post/visa-schengen-colombianos"));
+app.get("/blog/post/guia-viaje-espa%C3%B1a", (_req, res) => res.redirect(301, "/blog/post/guia-viaje-espana"));
+app.get("/blog/post/budapest-ba%C3%B1os-termales", (_req, res) => res.redirect(301, "/blog/post/budapest-banos-termales"));
 
 // Redirect old English-only URLs
-app.get("/last-minute", (_req, res) =>
-  res.redirect(301, "/ofertas-ultima-hora"),
-);
+app.get("/last-minute", (_req, res) => res.redirect(301, "/ofertas-ultima-hora"));
 app.get("/testimonials", (_req, res) => res.redirect(301, "/testimonios"));
 
 // Fix: /es-caribe -> /es-cb (Caribbean locale)
 app.get("/es-caribe", (_req, res) => res.redirect(301, "/es-cb"));
-app.get("/es-caribe/*", (req, res) =>
-  res.redirect(301, `/es-cb${req.path.slice(10)}`),
-);
+app.get("/es-caribe/*", (req, res) => res.redirect(301, `/es-cb${req.path.slice(10)}`));
 
 // Fix: /es/caribe -> /es-cb (old Caribbean URL pattern)
 app.get("/es/caribe", (_req, res) => res.redirect(301, "/es-cb"));
-app.get("/es/caribe/*", (req, res) =>
-  res.redirect(301, `/es-cb${req.path.slice(10)}`),
-);
+app.get("/es/caribe/*", (req, res) => res.redirect(301, `/es-cb${req.path.slice(10)}`));
 
 // Redirect /terms -> /terminos-condiciones, /politica-cancelacion -> /terminos-condiciones
 app.get("/terms", (_req, res) => res.redirect(301, "/terminos-condiciones"));
-app.get("/politica-cancelacion", (_req, res) =>
-  res.redirect(301, "/condiciones-venta"),
-);
+app.get("/politica-cancelacion", (_req, res) => res.redirect(301, "/condiciones-venta"));
 
 // Redirect /offers/:slug -> /ofertas/:slug
-app.get("/offers/:slug", (req, res) =>
-  res.redirect(301, `/ofertas/${req.params.slug}`),
-);
+app.get("/offers/:slug", (req, res) => res.redirect(301, `/ofertas/${req.params.slug}`));
 
 // Fix: /pt-br/pt-br/... chain (duplicated prefix from old hreflang bug)
 app.use((req, res, next) => {
@@ -299,14 +244,12 @@ app.use((req, res, next) => {
   const malformedMatch = req.path.match(/^\/((?:pt|en|es)(?:-br){2,})(\/.*)?$/);
   if (malformedMatch) {
     const prefix = malformedMatch[1];
-    const rest = malformedMatch[2] || "";
-    let cleanPrefix = "";
-    if (prefix.startsWith("pt")) cleanPrefix = "/pt-br";
-    else if (prefix.startsWith("en")) cleanPrefix = "/en";
-    const query = req.originalUrl.includes("?")
-      ? req.originalUrl.substring(req.originalUrl.indexOf("?"))
-      : "";
-    return res.redirect(301, `${cleanPrefix}${rest}${query}` || "/");
+    const rest = malformedMatch[2] || '';
+    let cleanPrefix = '';
+    if (prefix.startsWith('pt')) cleanPrefix = '/pt-br';
+    else if (prefix.startsWith('en')) cleanPrefix = '/en';
+    const query = req.originalUrl.includes('?') ? req.originalUrl.substring(req.originalUrl.indexOf('?')) : '';
+    return res.redirect(301, `${cleanPrefix}${rest}${query}` || '/');
   }
   next();
 });
