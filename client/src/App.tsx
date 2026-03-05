@@ -119,23 +119,6 @@ import OffersLanding from "@/pages/OffersLanding";
 import FAQPage from "@/pages/FAQPage";
 import FromCaribe from "@/pages/FromCaribe";
 import FromRepublicaDominicana from "@/pages/FromRepublicaDominicana";
-import BalkansTravelGuide2025ES from "@/pages/blog/BalkansTravelGuide2025ES";
-import BalkansTravelGuide2025PT from "@/pages/blog/BalkansTravelGuide2025PT";
-import ElSalvadorToEurope2025 from "@/pages/blog/ElSalvadorToEurope2025";
-import ElSalvadorToEurope2025ES from "@/pages/blog/ElSalvadorToEurope2025ES";
-import ElSalvadorToEurope2025PT from "@/pages/blog/ElSalvadorToEurope2025PT";
-import ETIAS2025Guide from "@/pages/blog/ETIAS2025Guide";
-import ETIAS2025GuideES from "@/pages/blog/ETIAS2025GuideES";
-import ETIAS2025GuidePT from "@/pages/blog/ETIAS2025GuidePT";
-import EuropeanGastronomy2025 from "@/pages/blog/EuropeanGastronomy2025";
-import EuropeanGastronomy2025ES from "@/pages/blog/EuropeanGastronomy2025ES";
-import EuropeanGastronomy2025PT from "@/pages/blog/EuropeanGastronomy2025PT";
-import HondurasToEurope2025 from "@/pages/blog/HondurasToEurope2025";
-import HondurasToEurope2025ES from "@/pages/blog/HondurasToEurope2025ES";
-import HondurasToEurope2025PT from "@/pages/blog/HondurasToEurope2025PT";
-import ParaguayToEurope2025 from "@/pages/blog/ParaguayToEurope2025";
-import ParaguayToEurope2025ES from "@/pages/blog/ParaguayToEurope2025ES";
-import ParaguayToEurope2025PT from "@/pages/blog/ParaguayToEurope2025PT";
 
 function ProtectedRoute({ component: Comp }: { component: React.ComponentType }) {
   const { isAuthenticated, isLoading } = useAuth();
@@ -209,23 +192,6 @@ function Router() {
       <Route path="/blog/caribe" component={BlogCaribe} />
       <Route path="/blog/mexico" component={BlogMexico} />
       <Route path="/blog/brasil" component={BlogBrasil} />
-      <Route path="/blog/guia-viaje-balcanes-2025" component={BalkansTravelGuide2025ES} />
-      <Route path="/pt-br/blog/guia-viagem-balcas-2025" component={BalkansTravelGuide2025PT} />
-      <Route path="/blog/el-salvador-europa-2025" component={ElSalvadorToEurope2025ES} />
-      <Route path="/en/blog/el-salvador-europe-2025" component={ElSalvadorToEurope2025} />
-      <Route path="/pt-br/blog/el-salvador-europa-2025" component={ElSalvadorToEurope2025PT} />
-      <Route path="/blog/guia-etias-2025" component={ETIAS2025GuideES} />
-      <Route path="/en/blog/etias-guide-2025" component={ETIAS2025Guide} />
-      <Route path="/pt-br/blog/guia-etias-2025" component={ETIAS2025GuidePT} />
-      <Route path="/blog/gastronomia-europea-2025" component={EuropeanGastronomy2025ES} />
-      <Route path="/en/blog/european-gastronomy-2025" component={EuropeanGastronomy2025} />
-      <Route path="/pt-br/blog/gastronomia-europeia-2025" component={EuropeanGastronomy2025PT} />
-      <Route path="/blog/honduras-europa-2025" component={HondurasToEurope2025ES} />
-      <Route path="/en/blog/honduras-europe-2025" component={HondurasToEurope2025} />
-      <Route path="/pt-br/blog/honduras-europa-2025" component={HondurasToEurope2025PT} />
-      <Route path="/blog/paraguay-europa-2025" component={ParaguayToEurope2025ES} />
-      <Route path="/en/blog/paraguay-europe-2025" component={ParaguayToEurope2025} />
-      <Route path="/pt-br/blog/paraguai-europa-2025" component={ParaguayToEurope2025PT} />
       <Route path="/vacaciones-europa" component={VacacionesEuropa} />
       <Route path="/travel-advisor" component={TravelAdvisor} />
       <Route path="/travel-assistant" component={TravelAssistant} />
