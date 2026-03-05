@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
+import { BLOG_POSTS_EXPANDED } from "@/lib/blogDataExpanded";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
 import { ContactForm } from "@/components/ContactForm";
 import { BreadcrumbSchema } from "@/components/SEOSchemas";
@@ -109,7 +110,7 @@ export default function BlogPost() {
     return obj[currentLanguage] || obj.es || obj.en || [];
   };
 
-  const fullPost = BLOG_POSTS_DATA.find((p: BlogPostData) => {
+  const fullPost = [...BLOG_POSTS_DATA, ...BLOG_POSTS_EXPANDED].find((p: BlogPostData) => {
     if (p.slug === slug || p.id === slug) return true;
     if (p.slugs) {
       const slugVal = p.slugs[currentLanguage] || p.slugs.es;
