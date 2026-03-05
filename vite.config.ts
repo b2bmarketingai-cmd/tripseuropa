@@ -26,7 +26,6 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "client", "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
-      "react-helmet": "react-helmet-async",
     },
     dedupe: ["react", "react-dom"],
   },
@@ -67,10 +66,6 @@ export default defineConfig({
         assetFileNames: "assets/[name]-[hash].[ext]",
       },
     },
-  },
-  optimizeDeps: {
-    include: ["react-helmet", "prop-types", "react-side-effect", "react-fast-compare", "object-assign"],
-    force: true,
   },
   server: {
     fs: {

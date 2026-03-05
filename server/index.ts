@@ -8,6 +8,7 @@ import { serveSitemap } from "./sitemap";
 
 const app = express();
 
+
 // SEO: Redirect www -> non-www and http -> https (301 permanent)
 app.use((req, res, next) => {
   const host = req.headers.host || '';

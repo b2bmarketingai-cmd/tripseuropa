@@ -75,6 +75,9 @@
       window.__APP_LOADED = false;
       window.addEventListener('error', function(e) {
         if (window.__APP_LOADED) return;
+        if (e.message && (e.message.includes('prop-types') || e.message.includes('react-helmet'))) {
+          return;
+        }
         console.error('App load error:', e.message, e.filename, e.lineno);
       });
     </script>
@@ -99,6 +102,6 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/src/main.tsx?v=20260305"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
