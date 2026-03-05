@@ -21,6 +21,9 @@ export default defineConfig({
         ]
       : []),
   ],
+  optimizeDeps: {
+    force: true,
+  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -45,8 +48,7 @@ export default defineConfig({
               id.includes("/react/") ||
               id.includes("/react-dom/") ||
               id.includes("/react-dom.") ||
-              id.includes("scheduler") ||
-              id.includes("react-helmet-async")
+              id.includes("scheduler")
             ) {
               return "react-vendor";
             }

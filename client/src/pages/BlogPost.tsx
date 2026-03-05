@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
+import { ArrowLeft, User, Share2 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { BLOG_POSTS_DATA, type BlogPostData, type BlogSection } from "@/lib/blogData";
 import { BLOG_POSTS_SIMPLE, type SimpleBlogPost } from "@/pages/BlogPostsSimple";
@@ -204,18 +204,14 @@ export default function BlogPost() {
               {title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-6" data-testid="text-post-meta">
-              <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                <span data-testid="text-post-date">{post.date}</span>
-              </div>
-              {fullPost?.author && (
+            {fullPost?.author && (
+              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-6" data-testid="text-post-meta">
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
                   <span data-testid="text-post-author">{fullPost.author}</span>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
 
           <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-lg overflow-hidden mb-8">

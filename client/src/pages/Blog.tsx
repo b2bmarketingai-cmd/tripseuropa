@@ -918,9 +918,6 @@ From: Tripseuropa.com/blog`;
                     </Badge>
                   </div>
                   <CardContent className="p-5">
-                    <div className="text-sm text-muted-foreground mb-2">
-                      <span>{post.date}</span>
-                    </div>
                     <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors">
                       {post.title[language as "es" | "en" | "pt"] || post.title.es}
                     </h3>
@@ -1125,10 +1122,6 @@ From: Tripseuropa.com/blog`;
                       <Badge className="absolute top-4 left-4 bg-accent text-primary">{post.categoryLabel[language as "es" | "en" | "pt"] || post.categoryLabel.es}</Badge>
                     </div>
                     <CardContent className="p-6">
-                      <div className="text-sm text-muted-foreground mb-3">
-                        <span data-testid={`text-date-${post.id}`}>{post.date}</span>
-                      </div>
-                      
                       <h3 className="text-lg font-display font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors" data-testid={`text-title-${post.id}`}>
                         {post.title[language as "es" | "en" | "pt"] || post.title.es}
                       </h3>

@@ -75,11 +75,26 @@
       window.__APP_LOADED = false;
       window.addEventListener('error', function(e) {
         if (window.__APP_LOADED) return;
-        if (e.message && (e.message.includes('prop-types') || e.message.includes('react-helmet'))) {
-          return;
+        if (e.message && (e.message.includes('prop-types') || e.message.includes('react-helmet') || e.message.includes('does not provide an export'))) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          if (e.message.includes('does not provide an export') && !sessionStorage.getItem('_cache_bust')) {
+            sessionStorage.setItem('_cache_bust', Date.now().toString());
+            setTimeout(function() { window.location.href = window.location.pathname + '?_cb=' + Date.now(); }, 100);
+          }
+          return false;
         }
-        console.error('App load error:', e.message, e.filename, e.lineno);
-      });
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e.reason && e.reason.message && e.reason.message.includes('does not provide an export')) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          if (!sessionStorage.getItem('_cache_bust')) {
+            sessionStorage.setItem('_cache_bust', Date.now().toString());
+            setTimeout(function() { window.location.href = window.location.pathname + '?_cb=' + Date.now(); }, 100);
+          }
+        }
+      }, true);
     </script>
     <div id="root">
       <!-- Static shell for instant FCP + LCP while React hydrates -->
