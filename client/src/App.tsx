@@ -82,7 +82,6 @@ import BlogGuatemalaEuropa from "@/pages/BlogGuatemalaEuropa";
 import BlogNicaraguaEuropa from "@/pages/BlogNicaraguaEuropa";
 import BlogCubaEuropa from "@/pages/BlogCubaEuropa";
 import BlogPuertoRicoEuropa from "@/pages/BlogPuertoRicoEuropa";
-// Batch 5 imports
 import ColombiaToEurope2025ES from "@/pages/blog/ColombiaToEurope2025ES";
 import ColombiaToEurope2025EN from "@/pages/blog/ColombiaToEurope2025EN";
 import ColombiaToEurope2025PT from "@/pages/blog/ColombiaToEurope2025PT";
@@ -100,6 +99,12 @@ import ParaguayToEurope2025ES from "@/pages/blog/ParaguayToEurope2025ES";
 import ParaguayToEurope2025PT from "@/pages/blog/ParaguayToEurope2025PT";
 import EuropeanGastronomy2025 from "@/pages/blog/EuropeanGastronomy2025";
 import ETIAS2025Guide from "@/pages/blog/ETIAS2025Guide";
+import PeruToEurope2025ES from "@/pages/blog/PeruToEurope2025ES";
+import PeruToEurope2025EN from "@/pages/blog/PeruToEurope2025EN";
+import PeruToEurope2025PT from "@/pages/blog/PeruToEurope2025PT";
+import BoliviaToEurope2025ES from "@/pages/blog/BoliviaToEurope2025ES";
+import BoliviaToEurope2025EN from "@/pages/blog/BoliviaToEurope2025EN";
+import BoliviaToEurope2025PT from "@/pages/blog/BoliviaToEurope2025PT";
 
 function Router() {
 return (
@@ -186,7 +191,6 @@ return (
     <Route path="/blog/nicaragua-europa" component={BlogNicaraguaEuropa} />
     <Route path="/blog/cuba-europa" component={BlogCubaEuropa} />
     <Route path="/blog/puerto-rico-europa" component={BlogPuertoRicoEuropa} />
-    {/* Batch 5 routes */}
     <Route path="/blog/colombia-europa-2025-es" component={ColombiaToEurope2025ES} />
     <Route path="/blog/colombia-europe-2025" component={ColombiaToEurope2025EN} />
     <Route path="/blog/colombia-europa-2025-pt" component={ColombiaToEurope2025PT} />
@@ -204,6 +208,12 @@ return (
     <Route path="/blog/paraguay-europa-2025-pt" component={ParaguayToEurope2025PT} />
     <Route path="/blog/gastronomia-europea-2025" component={EuropeanGastronomy2025} />
     <Route path="/blog/etias-2025-guide" component={ETIAS2025Guide} />
+    <Route path="/blog/peru-europa-2025-es" component={PeruToEurope2025ES} />
+    <Route path="/blog/peru-europe-2025" component={PeruToEurope2025EN} />
+    <Route path="/blog/peru-europa-2025-pt" component={PeruToEurope2025PT} />
+    <Route path="/blog/bolivia-europa-2025-es" component={BoliviaToEurope2025ES} />
+    <Route path="/blog/bolivia-europe-2025" component={BoliviaToEurope2025EN} />
+    <Route path="/blog/bolivia-europa-2025-pt" component={BoliviaToEurope2025PT} />
     <Route component={NotFound} />
   </Switch>
 );
