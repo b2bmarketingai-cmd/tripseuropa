@@ -183,6 +183,7 @@ function Router() {
       <Route path="/packages" component={Packages} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/post/:slug" component={BlogPost} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/blog/colombia" component={BlogColombia} />
       <Route path="/blog/argentina" component={BlogArgentina} />
       <Route path="/blog/peru" component={BlogPeru} />
